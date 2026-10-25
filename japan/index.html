@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1a0a14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ian × Japan" />
+  <title>Ian × Japan 2026</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Zen+Maru+Gothic:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body data-theme="neon">
+  <div class="sky" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="top-row">
+      <a class="brand" href="../" aria-label="All trips"><span class="back">‹</span> Ian <span class="x">×</span> 日本</a>
+      <div class="clock" id="clock" title="Japan time"></div>
+    </div>
+    <nav class="days" id="dayStrip" aria-label="Trip days"></nav>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <button class="now-btn" id="nowBtn" hidden>⬇ Up next</button>
+
+  <nav class="tabs" aria-label="Sections">
+    <a href="#today" data-tab="today"><span>🗺️</span>Today</a>
+    <a href="#phrases" data-tab="phrases"><span>🗣️</span>Phrases</a>
+    <a href="#manners" data-tab="manners"><span>🙇</span>Manners</a>
+    <a href="#hotels" data-tab="hotels"><span>🏨</span>Hotels</a>
+    <a href="#sos" data-tab="sos"><span>🆘</span>SOS</a>
+  </nav>
+
+  <div class="overlay" id="overlay" hidden role="dialog" aria-modal="true">
+    <div class="overlay-card" id="overlayCard"></div>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="data.js?v=2"></script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
