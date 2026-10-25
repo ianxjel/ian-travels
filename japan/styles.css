@@ -517,3 +517,26 @@ details.cheat[open] summary::after { content: "－"; }
 .rx-trip a { padding: 5px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, var(--card2)); font-size: 13px; font-weight: 700; text-decoration: none; color: var(--ink); }
 .rx-tips { margin: 0; padding-left: 18px; font-size: 14.5px; }
 .rx-tips li { margin: 6px 0; }
+
+/* ask for it */
+.ask-here { margin-top: 12px; padding: 10px; border-radius: 16px; background: color-mix(in srgb, var(--accent2) 12%, var(--card2)); border: 1.5px solid color-mix(in srgb, var(--accent2) 45%, transparent); display: grid; gap: 8px; }
+.ask-h { font: 800 11px/1.3 var(--font-body); letter-spacing: .5px; text-transform: uppercase; color: var(--ink); padding: 0 2px; }
+.ask-h span { text-transform: none; letter-spacing: 0; font-weight: 700; color: var(--muted); }
+.ask-chip { display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 12px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+.show-btn { background: var(--accent2); color: #111; border-color: transparent; }
+.hear { display: flex; flex-wrap: wrap; gap: 5px; font-size: 12.5px; color: var(--muted); padding: 0 2px 2px; }
+.hear b { width: 100%; font: 800 11px/1.2 var(--font-body); text-transform: uppercase; letter-spacing: .4px; }
+.hear span { padding: 3px 8px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--ink); font-weight: 700; }
+.hear i { font-style: normal; color: var(--accent); }
+.overlay-card .ask-help { margin: 14px 0 4px; padding: 10px 12px; border-radius: 14px; background: #fff1d6; font: 700 15px/1.45 var(--font-jp); color: #3a2a00; }
+.overlay-card .ask-help small { display: block; font: 600 12.5px/1.3 var(--font-body); color: #7a6430; margin-top: 2px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; margin-top: 12px; }
+.tile { display: grid; justify-items: center; gap: 2px; padding: 10px 6px; border-radius: 14px; border: 2px solid #ece5d8; background: #fff; color: #1b1b1b; cursor: pointer; }
+.tile .t-e { font-size: 22px; line-height: 1.1; font-weight: 800; }
+.tile .t-jp { font: 700 16px/1.25 var(--font-jp); }
+.tile .t-en { font: 700 11.5px/1.2 var(--font-body); color: #777; }
+.tile.picked { border-color: #d0285f; background: #ffe8f0; box-shadow: 0 0 0 3px rgba(208,40,95,.2); }
+.write { margin-top: 12px; text-align: left; }
+.write .w-h { font: 700 15px/1.3 var(--font-jp); margin-bottom: 6px; }
+.write .w-h small { font: 600 12px var(--font-body); color: #888; }
+.write textarea { width: 100%; font: 700 24px/1.3 var(--font-body); padding: 10px 12px; border-radius: 14px; border: 2px solid #ece5d8; background: #fff; color: #1b1b1b; outline: none; resize: vertical; }

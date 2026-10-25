@@ -238,6 +238,7 @@
         <div class="step-head"><div class="time">${fmt12(s.t)}${s.ll ? `<button class="pin-no" data-flyto="${s.key}" aria-label="Show on map">${pinNo[s.key]}</button>` : ""}</div><h3>${esc(s.title)}</h3></div>
         ${s.how && s.how.length ? `<ol class="how">${s.how.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}
         ${s.tip ? `<div class="tip"><b>Heads-up:</b> ${esc(s.tip)}</div>` : ""}
+        ${askHere(s)}
         ${sayHere(s)}
         ${s.rx ? recipeTag(s.rx) : ""}
         <div class="step-actions">
@@ -296,6 +297,35 @@
         <button class="icon-btn sm" data-speak="${esc(p.jp)}" aria-label="Play">🔊</button>
         <button class="icon-btn sm" data-show="${p.id}" aria-label="Show big">⤢</button>
       </div>`).join("")}</div>`;
+  }
+  function askHere(s) {
+    if (!s.ask || !s.ask.length) return "";
+    return `<div class="ask-here"><div class="ask-h">🙋 Ask for it <span>— tap ⤢ and hand them your phone</span></div>${s.ask.map((a, i) => `
+      <div class="ask-chip">
+        <div class="sc-txt"><span class="sc-jp jp">${esc(a.jp)}</span><span class="sc-ro">${esc(a.ro)}</span><span class="sc-en">${esc(a.en)}</span></div>
+        <button class="icon-btn sm" data-speak="${esc(a.jp)}" aria-label="Play">🔊</button>
+        <button class="icon-btn sm show-btn" data-ask="${s.key}|${i}" aria-label="Show to staff">⤢</button>
+      </div>
+      ${(HEAR[a.hear] || []).length ? `<div class="hear"><b>Listen for:</b> ${HEAR[a.hear].slice(0, 5).map(h => `<span>${esc(h[1])} <i>${esc(h[2])}</i> = ${esc(h[3])}</span>`).join("")}</div>` : ""}`).join("")}</div>`;
+  }
+  function showAsk(key) {
+    const [sk, i] = key.split("|");
+    const [dayId, idx] = sk.split("-");
+    const day = DAYS.find(d => d.id === dayId);
+    const a = day && day.steps[+idx] && day.steps[+idx].ask[+i];
+    if (!a) return;
+    const tiles = HEAR[a.hear] || [];
+    const write = HEAR_WRITE.includes(a.hear);
+    const isStatement = a.hear === "none";
+    openOverlay(`<p class="big" style="font-size:clamp(26px,7.5vw,42px)">${esc(a.jp)}</p>
+      <div class="en">${esc(a.en)}</div>
+      ${isStatement ? "" : `<div class="ask-help">${esc(ASK_HELP.jp)}<small>${esc(ASK_HELP.en)}</small></div>`}
+      ${tiles.length ? `<div class="tiles" data-keep>${tiles.map(t => `<button class="tile" data-keep data-tile><span class="t-e">${esc(t[0])}</span><span class="t-jp">${esc(t[1])}</span><span class="t-en">${esc(t[3])}</span></button>`).join("")}</div>` : ""}
+      ${write ? `<div class="write" data-keep><div class="w-h">${esc(ASK_HELP.writeJp)} <small>${esc(ASK_HELP.writeEn)}</small></div><textarea data-keep rows="2" placeholder="✍️"></textarea></div>` : ""}
+      <div style="margin-top:14px" class="link-row" data-keep>
+        <button class="btn" data-keep data-speak="${esc(a.jp)}">🔊 Play question</button>
+        ${isStatement ? "" : `<button class="btn" data-keep data-speak="${esc(ASK_HELP.jp)}">🔊 “Please point”</button>`}
+      </div>`);
   }
   function photoLink(s) {
     const q = s.pic || (s.photo && s.place ? s.place + " photo ideas" : "");
@@ -611,6 +641,7 @@
     const h = location.hash.replace(/^#/, "") || "today";
     $("#nowBtn").hidden = true;
     $$(".confetti").forEach(c => c.remove());
+    $("#overlay").hidden = true;
     if (h.startsWith("day/")) { renderDay(h.slice(4)); setTab("today"); }
     else if (h === "food") { renderFood(); setTab("food"); }
     else if (h.startsWith("recipes")) { renderRecipes(h.split("/")[1]); setTab("recipes"); if (h.includes("/")) return; }
@@ -627,9 +658,12 @@
 
   /* ---------- Delegated events ---------- */
   document.addEventListener("click", e => {
-    const t = e.target.closest("[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
+    const tile = e.target.closest("[data-tile]");
+    if (tile) { $$(".tile").forEach(x => x.classList.toggle("picked", x === tile)); return; }
+    const t = e.target.closest("[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
+    if (t.dataset.ask) { showAsk(t.dataset.ask); return; }
     if (t.dataset.showtxt) { showPhrase(JSON.parse(t.dataset.showtxt)); return; }
     if (t.dataset.step) { e.preventDefault(); location.hash = "day/" + t.dataset.step.split("-")[0]; setTimeout(() => $("#s-" + t.dataset.step)?.scrollIntoView({ behavior: "smooth", block: "center" }), 120); return; }
     if (t.dataset.flyto) { flyTo(t.dataset.flyto); return; }
