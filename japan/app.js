@@ -179,6 +179,7 @@
     renderStrip(day.id);
 
     const steps = visibleSteps(day);
+    const pinNo = {}; let pn = 0; steps.forEach(x => { if (x.ll) pinNo[x.key] = ++pn; });
     const done = store.get("done", {});
     const nk = nextKey(day, steps);
     const doneCount = steps.filter(s => done[s.key]).length;
@@ -215,6 +216,17 @@
         </div></div>`;
     }
 
+    // map
+    const pinned = steps.filter(x => x.ll);
+    if (pinned.length && window.L) {
+      const areas = clusterAreas(pinned);
+      html += `<div class="section-title"><h2>Today's map</h2><span class="sub">tap a pin</span></div>
+        <div class="card mapcard">
+          ${areas.length > 1 ? `<div class="cats area-chips">${areas.map((a, i) => `<button data-area="${i}" class="${i === 0 ? "on" : ""}">📍 ${esc(a.label)}</button>`).join("")}</div>` : ""}
+          <div id="daymap" class="daymap"></div>
+          <div class="map-actions"><button class="btn" data-locate>🫵 Where am I?</button><button class="btn" data-fitall>🔎 Whole day</button></div>
+        </div>`;
+    }
     html += `<div class="progress"><span>${doneCount}/${steps.length} done</span><div class="bar"><i style="width:${steps.length ? (doneCount / steps.length) * 100 : 0}%"></i></div></div>`;
     html += `<div class="section-title"><h2>Step by step</h2><span class="sub">Japan time</span></div><div class="timeline">`;
 
@@ -223,11 +235,14 @@
       const isNext = s.key === nk;
       html += `<article class="card step ${isDone ? "done" : ""} ${isNext ? "next" : ""}" id="s-${s.key}">
         ${isNext ? `<span class="badge-next">Up next</span>` : ""}
-        <div class="step-head"><div class="time">${fmt12(s.t)}</div><h3>${esc(s.title)}</h3></div>
+        <div class="step-head"><div class="time">${fmt12(s.t)}${s.ll ? `<button class="pin-no" data-flyto="${s.key}" aria-label="Show on map">${pinNo[s.key]}</button>` : ""}</div><h3>${esc(s.title)}</h3></div>
         ${s.how && s.how.length ? `<ol class="how">${s.how.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}
         ${s.tip ? `<div class="tip"><b>Heads-up:</b> ${esc(s.tip)}</div>` : ""}
+        ${sayHere(s)}
+        ${s.rx ? recipeTag(s.rx) : ""}
         <div class="step-actions">
           ${s.place ? `<a class="btn primary" href="${mapsDir(s.place)}" target="_blank" rel="noopener">🧭 Directions</a>` : ""}
+          ${photoLink(s) ? `<a class="btn" href="${photoLink(s)}" target="_blank" rel="noopener">🖼️ Photo idea</a>` : ""}
           <button class="btn ${isDone ? "done-on" : ""}" data-done="${s.key}">${isDone ? "✅ Done" : "◻️ Mark done"}</button>
         </div>
       </article>`;
@@ -240,10 +255,10 @@
     html += `</div>`;
 
     // phrases for the day
-    const ps = (day.phrases || []).map(pid => PHRASES.find(p => p.id === pid)).filter(Boolean);
+    const pids = [...new Set([...steps.flatMap(x => x.say || []), ...(day.phrases || [])])];
+    const ps = pids.map(pid => PHRASES.find(p => p.id === pid)).filter(Boolean);
     if (ps.length) {
-      html += `<div class="section-title"><h2>Say it today</h2><a class="sub" href="#phrases">All phrases →</a></div>`;
-      html += ps.map(phraseCard).join("");
+      html += `<details class="card cheat"><summary>🗣️ All of today's phrases (${ps.length})</summary><div class="cheat-body">${ps.map(phraseCard).join("")}</div></details>`;
     }
 
     // notes
@@ -260,6 +275,7 @@
 
     view.innerHTML = html;
     loadWeather(day);
+    if (pinned.length && window.L) initMap(day, steps, pinNo, nk);
     if (day.confetti && !sessionStorage.getItem("confetti-" + day.id)) {
       sessionStorage.setItem("confetti-" + day.id, "1");
       confetti();
@@ -268,6 +284,102 @@
     const nb = $("#nowBtn");
     if (nk) { nb.hidden = false; nb.onclick = () => $("#s-" + nk)?.scrollIntoView({ behavior: "smooth", block: "center" }); }
     else nb.hidden = true;
+  }
+
+  /* ---------- Step helpers ---------- */
+  function sayHere(s) {
+    const ps = (s.say || []).map(id => PHRASES.find(p => p.id === id)).filter(Boolean);
+    if (!ps.length) return "";
+    return `<div class="say-here"><div class="say-h">🗣️ Say it here</div>${ps.map(p => `
+      <div class="say-chip">
+        <div class="sc-txt"><span class="sc-jp jp">${esc(p.jp)}</span><span class="sc-ro">${esc(p.ro)}</span><span class="sc-en">${esc(p.en)}</span></div>
+        <button class="icon-btn sm" data-speak="${esc(p.jp)}" aria-label="Play">🔊</button>
+        <button class="icon-btn sm" data-show="${p.id}" aria-label="Show big">⤢</button>
+      </div>`).join("")}</div>`;
+  }
+  function photoLink(s) {
+    const q = s.pic || (s.photo && s.place ? s.place + " photo ideas" : "");
+    return q ? `https://www.pinterest.com/search/pins/?q=${encodeURIComponent(q)}` : "";
+  }
+  function recipeTag(id) {
+    const r = (typeof RECIPES !== "undefined" ? RECIPES : []).find(x => x.id === id);
+    return r ? `<a class="rx-tag" href="#recipes/${r.id}">🎞️ X100VI: <b>${r.slot} · ${esc(r.name)}</b> (${esc(r.sim)})</a>` : "";
+  }
+
+  /* ---------- Map (Leaflet + CARTO tiles) ---------- */
+  let map = null, mapMarkers = {}, meMarker = null, mapAreas = [];
+  const distKm = (a, b) => {
+    const R = 6371, dLat = (b[0] - a[0]) * Math.PI / 180, dLon = (b[1] - a[1]) * Math.PI / 180;
+    const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * Math.PI / 180) * Math.cos(b[0] * Math.PI / 180) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(h));
+  };
+  function clusterAreas(pinned) {
+    const areas = [];
+    pinned.forEach(s => {
+      const a = areas.find(a => a.pts.some(p => distKm(p.ll, s.ll) < 30));
+      if (a) a.pts.push(s); else areas.push({ pts: [s] });
+    });
+    areas.forEach(a => { a.label = areaName(a.pts[0].ll); });
+    return areas;
+  }
+  function areaName(ll) {
+    const C = [["Tokyo", [35.68, 139.76]], ["Tokyo Bay", [35.63, 139.88]], ["Kyoto", [34.99, 135.76]], ["Uji", [34.89, 135.80]], ["Osaka", [34.69, 135.50]], ["Hiroshima", [34.39, 132.45]], ["Miyajima", [34.30, 132.31]], ["Mishima", [35.12, 138.91]], ["Kawaguchiko", [35.50, 138.77]], ["Narita", [35.77, 140.39]], ["Inagi", [35.62, 139.52]]];
+    return C.reduce((b, c) => distKm(ll, c[1]) < distKm(ll, b[1]) ? c : b)[0];
+  }
+  function initMap(day, steps, pinNo, nk) {
+    if (map) { map.remove(); map = null; }
+    mapMarkers = {}; meMarker = null;
+    const pinned = steps.filter(x => x.ll);
+    mapAreas = clusterAreas(pinned);
+    map = L.map("daymap", { zoomControl: false, attributionControl: true, scrollWheelZoom: false });
+    map.on("popupopen", e => {
+      const a = e.popup.getElement && e.popup.getElement().querySelector("[data-goto]");
+      if (a) a.onclick = ev => { ev.preventDefault(); ev.stopPropagation(); map.closePopup(); $("#s-" + a.dataset.goto)?.scrollIntoView({ behavior: "smooth", block: "center" }); };
+    });
+    L.control.zoom({ position: "topright" }).addTo(map);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      maxZoom: 19, subdomains: "abcd",
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    }).addTo(map);
+    const done = store.get("done", {});
+    mapAreas.forEach(a => {
+      if (a.pts.length > 1) L.polyline(a.pts.map(p => p.ll), { color: getComputedStyle(document.body).getPropertyValue("--accent").trim(), weight: 3, dashArray: "6 8", opacity: .8 }).addTo(map);
+    });
+    pinned.forEach(s => {
+      const icon = L.divIcon({ className: "", html: `<div class="map-pin ${done[s.key] ? "done" : ""} ${s.key === nk ? "next" : ""}">${pinNo[s.key]}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] });
+      const m = L.marker(s.ll, { icon }).addTo(map);
+      m.bindPopup(`<div class="pop"><b>${pinNo[s.key]}. ${esc(s.title)}</b><br><span>${fmt12(s.t)}</span><br>
+        ${s.place ? `<a href="${mapsDir(s.place)}" target="_blank" rel="noopener">🧭 Directions</a> · ` : ""}<a href="#" data-goto="${s.key}">⬇ See step</a></div>`);
+      mapMarkers[s.key] = m;
+    });
+    // start on the area containing the next step, else the first area
+    let start = 0;
+    if (nk) { const i = mapAreas.findIndex(a => a.pts.some(p => p.key === nk)); if (i >= 0) start = i; }
+    showArea(start);
+  }
+  function showArea(i) {
+    const a = mapAreas[i]; if (!a || !map) return;
+    $$(".area-chips button").forEach((b, j) => b.classList.toggle("on", j === i));
+    if (a.pts.length === 1) map.setView(a.pts[0].ll, 15);
+    else map.fitBounds(L.latLngBounds(a.pts.map(p => p.ll)), { padding: [36, 36], maxZoom: 16 });
+  }
+  function flyTo(key) {
+    const m = mapMarkers[key]; if (!m || !map) return;
+    $("#daymap").scrollIntoView({ behavior: "smooth", block: "center" });
+    const i = mapAreas.findIndex(a => a.pts.some(p => p.key === key));
+    $$(".area-chips button").forEach((b, j) => b.classList.toggle("on", j === i));
+    setTimeout(() => { map.flyTo(m.getLatLng(), 16, { duration: .8 }); m.openPopup(); }, 300);
+  }
+  function locateMe() {
+    if (!navigator.geolocation) { toast("Location isn't available"); return; }
+    toast("Finding you… 📡");
+    navigator.geolocation.getCurrentPosition(pos => {
+      const ll = [pos.coords.latitude, pos.coords.longitude];
+      if (!map) return;
+      if (meMarker) meMarker.setLatLng(ll);
+      else meMarker = L.marker(ll, { icon: L.divIcon({ className: "", html: '<div class="me-dot"></div>', iconSize: [20, 20], iconAnchor: [10, 10] }) }).addTo(map).bindPopup("You are here 💖");
+      map.flyTo(ll, 16); meMarker.openPopup();
+    }, () => toast("Couldn't get your location — check permissions"), { enableHighAccuracy: true, timeout: 12000 });
   }
 
   function confetti() {
@@ -284,6 +396,87 @@
     }
     document.body.appendChild(box);
     setTimeout(() => box.remove(), 6500);
+  }
+
+  /* ---------- Food ---------- */
+  async function foodImage(f) {
+    const key = "img:" + f.id;
+    const c = store.get(key);
+    if (c) return c;
+    const tryWiki = async (lang, title) => {
+      if (!title) return null;
+      const r = await fetch(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
+      if (!r.ok) return null;
+      const j = await r.json();
+      return (j.thumbnail && j.thumbnail.source) || (j.originalimage && j.originalimage.source) || null;
+    };
+    let src = null;
+    try { src = await tryWiki("ja", f.wiki); } catch {}
+    if (!src) { try { src = await tryWiki("en", f.enwiki); } catch {} }
+    if (src) store.set(key, src);
+    return src;
+  }
+  function renderFood() {
+    document.body.dataset.theme = DAYS[todayDayIndex()].theme;
+    renderStrip(null);
+    view.innerHTML = `
+      <div class="section-title" style="margin-top:6px"><h2>Food guide 🍜</h2><span class="sub">🔊 hear · ⤢ show</span></div>
+      <details class="card cheat"><summary>🧾 Ordering basics</summary><div class="cheat-body">
+        ${FOOD_ORDERING.map(o => `<div class="say-chip">
+          <div class="sc-txt"><span class="sc-jp jp">${esc(o.jp)}</span><span class="sc-ro">${esc(o.ro)}</span><span class="sc-en">${esc(o.en)}</span></div>
+          <button class="icon-btn sm" data-speak="${esc(o.jp)}" aria-label="Play">🔊</button>
+          <button class="icon-btn sm" data-showtxt="${esc(JSON.stringify(o))}" aria-label="Show big">⤢</button></div>`).join("")}
+        <p class="tip" style="margin-top:10px">Can't read the menu? Many places have plastic food models or photos — point and say “Kore kudasai” (this one, please). Google Translate's camera mode reads menus too.</p>
+      </div></details>
+      <div id="foods">${FOODS.map(f => `
+        <article class="card food" id="f-${f.id}">
+          <div class="food-img" data-img="${f.id}"><span class="food-emoji">${f.emoji}</span></div>
+          <div class="food-body">
+            <div class="food-top">
+              <div><h3>${esc(f.en)}</h3><div class="food-jp"><span class="jp">${esc(f.jp)}</span> · <b>${esc(f.ro)}</b></div></div>
+              <button class="icon-btn" data-speak="${esc(f.jp)}" aria-label="Play">🔊</button>
+            </div>
+            <p class="food-what">${esc(f.what)}</p>
+            <div class="order-box">
+              <div class="ob-h">How to order</div>
+              <div class="say-chip">
+                <div class="sc-txt"><span class="sc-jp jp">${esc(f.order.jp)}</span><span class="sc-ro">${esc(f.order.ro)}</span><span class="sc-en">${esc(f.order.en)}</span></div>
+                <button class="icon-btn sm" data-speak="${esc(f.order.jp)}" aria-label="Play">🔊</button>
+                <button class="icon-btn sm" data-showtxt="${esc(JSON.stringify(f.order))}" aria-label="Show big">⤢</button>
+              </div>
+            </div>
+            <p class="food-tip">💡 ${esc(f.tips)}</p>
+            <div class="food-foot"><span>📍 ${esc(f.where)}</span>
+              <a href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(f.jp + " " + f.en)}" target="_blank" rel="noopener">More photos ↗</a></div>
+          </div>
+        </article>`).join("")}</div>
+      <p class="foot">Photos from Wikipedia (CC licensed). Tap “More photos” for more examples.</p>`;
+    $$("[data-img]").forEach(async el => {
+      const f = FOODS.find(x => x.id === el.dataset.img);
+      const src = await foodImage(f);
+      if (src && el.isConnected) el.innerHTML = `<img src="${esc(src)}" alt="${esc(f.en)}" loading="lazy" onerror="this.remove()"><span class="food-emoji">${f.emoji}</span>`;
+    });
+  }
+
+  /* ---------- Recipes ---------- */
+  function renderRecipes(focus) {
+    document.body.dataset.theme = DAYS[todayDayIndex()].theme;
+    renderStrip(null);
+    const uses = {};
+    DAYS.forEach((d, di) => d.steps.forEach(s => { if (s.rx) (uses[s.rx] = uses[s.rx] || []).push({ d, di, s }); }));
+    view.innerHTML = `
+      <div class="section-title" style="margin-top:6px"><h2>X100VI recipes 🎞️</h2><span class="sub">C1–C7</span></div>
+      <details class="card cheat"><summary>⚙️ How to save + switch</summary><div class="cheat-body"><ul class="rx-tips">${RECIPE_TIPS.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div></details>
+      ${RECIPES.map(r => `
+        <article class="card recipe" id="rx-${r.id}">
+          <div class="rx-head"><span class="rx-slot">${r.slot}</span><div><h3>${r.emoji} ${esc(r.name)}</h3><div class="rx-sim">${esc(r.sim)}</div></div></div>
+          <p class="rx-vibe">${esc(r.vibe)}</p>
+          <table class="rx-table">${r.settings.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</table>
+          <div class="rx-use"><b>Best for</b>${r.use.map(u => `<span>${esc(u)}</span>`).join("")}</div>
+          ${uses[r.id] ? `<div class="rx-trip"><b>On your trip</b>${uses[r.id].map(u => `<a href="#day/${u.d.id}" data-step="${u.d.id}-${u.d.steps.indexOf(u.s)}">${u.d.emoji} ${u.d.dow} · ${esc(u.s.title)}</a>`).join("")}</div>` : ""}
+        </article>`).join("")}
+      <p class="foot">Recipes are starting points — adjust exposure comp to taste and check the histogram on the once-only shots.</p>`;
+    if (focus) setTimeout(() => $("#rx-" + focus)?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
   }
 
   /* ---------- Phrases ---------- */
@@ -395,12 +588,11 @@
   }
 
   /* ---------- SOS ---------- */
-  function renderSOS() {
-    document.body.dataset.theme = DAYS[todayDayIndex()].theme;
-    renderStrip(null);
+  function renderSOS(append) {
+    if (!append) { document.body.dataset.theme = DAYS[todayDayIndex()].theme; renderStrip(null); }
     const em = PHRASES.filter(p => p.cat === "Emergency");
-    view.innerHTML = `
-      <div class="section-title" style="margin-top:6px"><h2>Help + emergencies 🆘</h2><span class="sub">tap to call</span></div>
+    const sosHtml = `
+      <div class="section-title" id="sos" style="margin-top:${append ? 30 : 6}px"><h2>Help + emergencies 🆘</h2><span class="sub">tap to call</span></div>
       ${SOS.map(s => `<a class="card sos" href="tel:${s.num.replace(/[^0-9+]/g, "")}">
         <div><div class="lbl">${esc(s.label)}</div><div class="num">${esc(s.num)}</div><div class="nt">${esc(s.note)}</div></div>
         <span class="call">📞</span></a>`).join("")}
@@ -410,6 +602,7 @@
       </div>
       <div class="section-title"><h2>Emergency phrases</h2></div>
       ${em.map(phraseCard).join("")}`;
+    if (append) view.insertAdjacentHTML("beforeend", sosHtml); else view.innerHTML = sosHtml;
   }
 
   /* ---------- Router ---------- */
@@ -419,10 +612,12 @@
     $("#nowBtn").hidden = true;
     $$(".confetti").forEach(c => c.remove());
     if (h.startsWith("day/")) { renderDay(h.slice(4)); setTab("today"); }
+    else if (h === "food") { renderFood(); setTab("food"); }
+    else if (h.startsWith("recipes")) { renderRecipes(h.split("/")[1]); setTab("recipes"); if (h.includes("/")) return; }
+    else if (h === "help" || h === "hotels") { renderHotels(); renderSOS(true); setTab("help"); }
     else if (h === "phrases") { renderPhrases(); setTab("phrases"); }
     else if (h === "manners") { renderManners(); setTab("manners"); }
-    else if (h === "hotels") { renderHotels(); setTab("hotels"); }
-    else if (h === "sos") { renderSOS(); setTab("sos"); }
+    else if (h === "sos") { renderHotels(); renderSOS(true); setTab("help"); setTimeout(() => $("#sos")?.scrollIntoView(), 30); return; }
     else { renderDay(DAYS[todayDayIndex()].id); setTab("today"); }
     window.scrollTo(0, 0);
   }
@@ -432,9 +627,16 @@
 
   /* ---------- Delegated events ---------- */
   document.addEventListener("click", e => {
-    const t = e.target.closest("[data-speak],[data-show],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji]");
+    const t = e.target.closest("[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
+    if (t.dataset.showtxt) { showPhrase(JSON.parse(t.dataset.showtxt)); return; }
+    if (t.dataset.step) { e.preventDefault(); location.hash = "day/" + t.dataset.step.split("-")[0]; setTimeout(() => $("#s-" + t.dataset.step)?.scrollIntoView({ behavior: "smooth", block: "center" }), 120); return; }
+    if (t.dataset.flyto) { flyTo(t.dataset.flyto); return; }
+    if (t.dataset.area !== undefined) { showArea(+t.dataset.area); return; }
+    if (t.dataset.locate !== undefined) { locateMe(); return; }
+    if (t.dataset.fitall !== undefined) { if (map) map.fitBounds(L.latLngBounds(Object.values(mapMarkers).map(m => m.getLatLng())), { padding: [30, 30] }); $$(".area-chips button").forEach(b => b.classList.remove("on")); return; }
+    if (t.dataset.goto) { e.preventDefault(); map && map.closePopup(); $("#s-" + t.dataset.goto)?.scrollIntoView({ behavior: "smooth", block: "center" }); return; }
     if (t.dataset.show) { const p = PHRASES.find(x => x.id === t.dataset.show); if (p) showPhrase(p); return; }
     if (t.dataset.done) {
       const done = store.get("done", {});

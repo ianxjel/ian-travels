@@ -1,15 +1,17 @@
 /* Offline support: cache the app shell, keep fonts and the last weather forecast. */
-const VERSION = "ij-v2";
+const VERSION = "ij-v3";
 const SHELL = [
   "./",
   "index.html",
-  "styles.css?v=2",
-  "data.js?v=2",
-  "app.js?v=2",
+  "styles.css?v=3",
+  "data.js?v=3",
+  "app.js?v=3",
   "manifest.webmanifest",
   "icons/icon-192.png",
   "icons/icon-512.png",
   "icons/apple-touch-icon.png",
+  "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js",
 ];
 
 self.addEventListener("install", e => {
@@ -38,7 +40,7 @@ self.addEventListener("fetch", e => {
   }
 
   // Same-origin + Google Fonts: serve from cache, refresh in the background
-  if (url.origin === location.origin || /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname)) {
+  if (url.origin === location.origin || /fonts\.(googleapis|gstatic)\.com$|cdnjs\.cloudflare\.com$|basemaps\.cartocdn\.com$|upload\.wikimedia\.org$|wikipedia\.org$/.test(url.hostname)) {
     e.respondWith(
       caches.open(VERSION).then(async cache => {
         const hit = await cache.match(req, { ignoreSearch: url.origin === location.origin && req.mode === "navigate" });

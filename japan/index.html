@@ -15,7 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Zen+Maru+Gothic:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body data-theme="neon">
   <div class="sky" aria-hidden="true"></div>
@@ -34,10 +35,11 @@
 
   <nav class="tabs" aria-label="Sections">
     <a href="#today" data-tab="today"><span>🗺️</span>Today</a>
+    <a href="#food" data-tab="food"><span>🍜</span>Food</a>
     <a href="#phrases" data-tab="phrases"><span>🗣️</span>Phrases</a>
     <a href="#manners" data-tab="manners"><span>🙇</span>Manners</a>
-    <a href="#hotels" data-tab="hotels"><span>🏨</span>Hotels</a>
-    <a href="#sos" data-tab="sos"><span>🆘</span>SOS</a>
+    <a href="#recipes" data-tab="recipes"><span>🎞️</span>Recipes</a>
+    <a href="#help" data-tab="help"><span>🏨</span>Help</a>
   </nav>
 
   <div class="overlay" id="overlay" hidden role="dialog" aria-modal="true">
@@ -45,7 +47,8 @@
   </div>
   <div class="toast" id="toast" hidden></div>
 
-  <script src="data.js?v=2"></script>
-  <script src="app.js?v=2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="data.js?v=3"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>
