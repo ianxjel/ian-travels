@@ -540,3 +540,39 @@ details.cheat[open] summary::after { content: "－"; }
 .write .w-h { font: 700 15px/1.3 var(--font-jp); margin-bottom: 6px; }
 .write .w-h small { font: 600 12px var(--font-body); color: #888; }
 .write textarea { width: 100%; font: 700 24px/1.3 var(--font-body); padding: 10px 12px; border-radius: 14px; border: 2px solid #ece5d8; background: #fff; color: #1b1b1b; outline: none; resize: vertical; }
+
+/* media */
+.media-card { display: flex; align-items: center; gap: 14px; padding: 18px 16px; margin-top: 12px; text-decoration: none; color: var(--ink); }
+.media-card h3 { margin: 0; font: 700 19px/1.2 var(--font-head); }
+.media-card p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+.mc-e { font-size: 34px; flex: 0 0 auto; }
+.mc-go { margin-left: auto; font: 700 26px/1 var(--font-head); color: var(--accent); }
+.mc-1 { background: linear-gradient(135deg, color-mix(in srgb, #f3c969 18%, var(--card)), var(--card)); }
+.mc-2 { background: linear-gradient(135deg, color-mix(in srgb, #1db954 18%, var(--card)), var(--card)); }
+.mc-3 { background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 18%, var(--card)), var(--card)); }
+.media-back { margin-top: 4px; }
+.cat-h small { font: 700 12px var(--font-body); margin-left: 6px; }
+.playlist-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; text-decoration: none; color: var(--ink); background: linear-gradient(135deg, #1db95433, var(--card)); }
+.playlist-card b { display: block; font: 700 17px/1.2 var(--font-head); }
+.playlist-card span { font-size: 13px; color: var(--muted); }
+.song { display: flex; gap: 12px; padding: 12px 14px; margin-top: 10px; }
+.song.mine { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+.song-play { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: #1db954; color: #fff; text-decoration: none; font-size: 16px; }
+.song-txt { flex: 1; min-width: 0; }
+.song-t { font: 700 16.5px/1.25 var(--font-head); }
+.song-a { font-size: 13.5px; font-weight: 800; color: var(--accent); }
+.song-why { font-size: 14px; color: var(--muted); margin-top: 3px; }
+.song-foot { margin-top: 6px; font-size: 12.5px; font-weight: 800; color: var(--muted); }
+.song-day { margin-left: 4px; padding: 2px 8px; border-radius: 99px; background: var(--card2); text-decoration: none; color: var(--ink); }
+.mine-tag { display: inline-block; padding: 2px 7px; border-radius: 99px; background: var(--accent); color: var(--on-accent); font: 800 10px/1.3 var(--font-body); text-transform: uppercase; letter-spacing: .3px; vertical-align: middle; }
+.shot { display: flex; gap: 12px; padding: 12px 14px; margin-top: 10px; }
+.shot.got { opacity: .7; }
+.shot-check { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--card2); font-size: 22px; cursor: pointer; }
+.shot.got .shot-check { background: color-mix(in srgb, var(--accent2) 25%, var(--card2)); border-color: var(--accent2); }
+.shot-txt { flex: 1; min-width: 0; }
+.shot-t { font: 700 16px/1.25 var(--font-head); }
+.shot.got .shot-t { text-decoration: line-through; }
+.shot-how { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.shot-foot { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; font-size: 12.5px; font-weight: 800; }
+.shot-foot a { text-decoration: none; }
+.shot-foot span { color: var(--muted); }

@@ -1360,3 +1360,98 @@ const ASK_HELP = {
   writeJp: "ここに書いていただけますか？",
   writeEn: "Could you write it here?",
 };
+
+/* ---------------- SONGS ----------------
+   why: the Japan connection (no lyrics). mine: from Ian's top Spotify artists. day: suggested day to play it. */
+const SONG_SECTIONS = [
+  {
+    title: "From your top artists 💖", sub: "Real Japan connections only",
+    songs: [
+      { t: "bad idea", a: "Ariana Grande", y: 2019, mine: true, why: "Per Songfacts, the chorus slips in a Japanese-style nickname for Ari — a wink at her love of Japanese culture. She's played Japan on tour too.", day: "d2" },
+      { t: "SuperLove", a: "Charli xcx", y: 2013, mine: true, why: "The music video was shot around Tokyo — neon, arcades and city streets.", day: "d5" },
+      { t: "Say So", a: "Doja Cat", y: 2019, mine: true, why: "Its disco/city-pop sound sparked a viral Japanese-language version by singer Rainych. Search “Say So Japanese version.”", day: "d6" },
+      { t: "Japanese singles", a: "LE SSERAFIM", mine: true, why: "Members Sakura and Kazuha are Japanese, and the group releases Japanese-language versions of its hits.", day: "d6" },
+    ],
+  },
+  {
+    title: "Songs named for your stops 📍", sub: "Tokyo · Kyoto · Osaka · Japan",
+    songs: [
+      { t: "Tokyo Love Hotel", a: "Rina Sawayama", y: 2020, why: "Queer pop icon (Japanese-British) singing about Tokyo — your Ni-chome pre-game anthem.", day: "d5" },
+      { t: "Tokyo", a: "RM", y: 2018, why: "BTS's leader, on a quiet, late-night Tokyo mood.", day: "d1" },
+      { t: "Tokyo", a: "Bebe Rexha", why: "Big-pop Tokyo track.", day: "d5" },
+      { t: "Tokyo", a: "Imagine Dragons", why: "A Tokyo-titled cut from the band.", day: "d7" },
+      { t: "Tokyo", a: "Owl City", why: "Bubbly synth-pop love letter to the city.", day: "d3" },
+      { t: "Tokyo Nights", a: "Utada Hikaru", why: "J-pop royalty on Tokyo after dark.", day: "d1" },
+      { t: "Tokyo Highway", a: "Kyary Pamyu Pamyu", why: "Harajuku's pop princess, maximum kawaii.", day: "d3" },
+      { t: "Tokyo Drift (Fast & Furious)", a: "Teriyaki Boyz", y: 2006, why: "The movie anthem. Play it on the Yurikamome or a taxi ride.", day: "d3" },
+      { t: "Kyoto", a: "Phoebe Bridgers", y: 2020, why: "Named for the city — play it walking Ninenzaka.", day: "d7" },
+      { t: "大阪LOVER (Osaka LOVER)", a: "DREAMS COME TRUE", y: 2007, why: "Classic J-pop love song about Osaka.", day: "d8" },
+      { t: "Lost in Japan", a: "Shawn Mendes", y: 2018, why: "Pure travel-crush energy.", day: "d1" },
+      { t: "Big in Japan", a: "Alphaville", y: 1984, why: "The 80s synth classic.", day: "d11" },
+      { t: "Turning Japanese", a: "The Vapors", y: 1980, why: "New-wave earworm everyone knows.", day: "d11" },
+      { t: "Harajuku Girls", a: "Gwen Stefani", y: 2004, why: "Ode to Harajuku street style.", day: "d6" },
+      { t: "Rather Be", a: "Clean Bandit ft. Jess Glynne", y: 2014, why: "The music video is set in Tokyo.", day: "d5" },
+      { t: "Just Can't Get Enough", a: "The Black Eyed Peas", y: 2011, why: "Music video filmed in Tokyo.", day: "d5" },
+    ],
+  },
+  {
+    title: "The Japan soundtrack 🎌", sub: "J-pop + city pop for the trains",
+    songs: [
+      { t: "Plastic Love", a: "Mariya Takeuchi", y: 1984, why: "The city-pop anthem of Tokyo nightlife. Perfect for the Yamanote at night.", day: "d1" },
+      { t: "真夜中のドア (Stay With Me)", a: "Miki Matsubara", y: 1979, why: "The viral city-pop classic.", day: "d2" },
+      { t: "アイドル (Idol)", a: "YOASOBI", y: 2023, why: "The biggest J-pop hit of the decade — you'll hear it in every arcade.", day: "d6" },
+      { t: "死ぬのがいいわ (Shinunoga E-Wa)", a: "Fujii Kaze", y: 2020, why: "Sultry, jazzy, went global on TikTok. Night-out energy.", day: "d8" },
+      { t: "PONPONPON", a: "Kyary Pamyu Pamyu", y: 2011, why: "Hyper-colorful Harajuku pop — fits your hyperpop taste.", day: "d6" },
+      { t: "First Love", a: "Utada Hikaru", y: 1999, why: "Japan's best-selling album's title track. Fuji-sunset tearjerker.", day: "d10" },
+      { t: "ポリリズム (Polyrhythm)", a: "Perfume", y: 2007, why: "Electro-pop trio — if you like Ninajirachi or Frost Children, start here.", day: "d5" },
+    ],
+  },
+];
+
+/* ---------------- PHOTO IDEAS ---------------- */
+const PHOTO_IDEAS = [
+  { cat: "Signature shots", items: [
+    ["🎂", "Birthday portrait at Mediterranean Harbor", "Blue hour, volcano behind you, birthday sticker visible.", "d2"],
+    ["⛩️", "Walking away down the torii tunnel", "Look back over your shoulder at Fushimi Inari, 7 AM.", "d8"],
+    ["🗻", "Back-to-camera Fuji over the lake", "Oishi Park at sunset, 2–3x zoom so Fuji looks huge.", "d10"],
+    ["🌅", "Chūreitō Pagoda + Fuji", "From the deck above, you at the right edge of the frame.", "d11"],
+    ["🌆", "Shibuya Sky silhouette", "Sky Edge glass corner at sunset.", "d5"],
+    ["🏮", "Kaminarimon lantern from below", "Stand under it, phone low, looking up.", "d5"],
+    ["🦌", "Miyajima torii + a deer", "Sit on the shore with a deer wandering into frame.", "d9"],
+    ["🐙", "Glico pose on Ebisubashi", "Arms in a V, knee up, flash on.", "d8"],
+  ]},
+  { cat: "Fit checks + portraits", items: [
+    ["🪞", "Omokado mirror entrance", "Full-body in the kaleidoscope mirrors.", "d5"],
+    ["🛗", "Elevator mirror fit check", "Every night before going out — the photo-dump opener.", ""],
+    ["🌀", "teamLab mirror rooms", "Infinite reflections — white or light outfit.", "d3"],
+    ["🚶", "Candid walk past the camera", "Have them crouch, burst mode, you looking away. Pontochō, the Scramble, Gion.", ""],
+    ["👘", "Kimono rental portrait", "Asakusa or Ninenzaka — temple backdrop.", "d5"],
+    ["🎃", "Costume shot at the Haunted Mansion", "Centered, slightly low, moody.", "d4"],
+  ]},
+  { cat: "Night + flash", items: [
+    ["📸", "Direct flash in Golden Gai", "Lean in a lantern doorway. Alleys only, never inside bars.", "d5"],
+    ["🦖", "Godzilla peeking over Kabukichō", "From Central Road, flash on.", "d1"],
+    ["🐱", "3D cat billboard video", "Film 10 seconds — it moves.", "d1"],
+    ["🎡", "HEP FIVE red Ferris wheel", "Shot from the street below.", "d8"],
+    ["🌃", "Shinsekai neon + Tsūtenkaku", "Best direct-flash street of the trip.", "d9"],
+    ["🌈", "Kyoto Station staircase light-up", "Sit halfway up the 171 steps.", "d7"],
+  ]},
+  { cat: "Carousel details", items: [
+    ["🥪", "Konbini egg sando, held up", "The most-posted snack in Japan.", ""],
+    ["🍜", "Ramen from directly above", "Before the first slurp.", ""],
+    ["🥤", "Vending machines glowing at night", "Stand back and get a whole row.", ""],
+    ["🚄", "The shinkansen nose on the platform", "Shoot low from the front as it arrives.", "d7"],
+    ["🪟", "Fuji through the train window", "Lens flat on the glass.", "d7"],
+    ["🍰", "Pokémon Café plate flat-lay", "Overhead before you touch it.", "d6"],
+    ["🍓", "Strawberry daifuku cut in half", "The cross-section is the shot.", "d10"],
+    ["🎟️", "Tickets + passes on a table", "DisneySea, PokéPark, shinkansen tickets — trip receipts.", ""],
+    ["🔑", "Hotel key + window view", "First thing after check-in.", "d1"],
+  ]},
+  { cat: "Video clips (3–5 sec each)", items: [
+    ["🚦", "Scramble Crossing light change", "From the Starbucks side or Shibuya Sky.", "d6"],
+    ["🚃", "Train pulling into the platform", "Any station — reels love it.", "" ],
+    ["🌀", "Mewtwo tank slow pan", "Pokémon Center Shibuya.", "d6"],
+    ["🎆", "Disney night show", "One wide clip, then put the phone down.", "d2"],
+    ["♨️", "Onsen steam at dusk", "Only where photos are allowed (outside the bath).", "d10"],
+  ]},
+];

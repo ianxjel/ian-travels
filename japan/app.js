@@ -333,7 +333,7 @@
   }
   function recipeTag(id) {
     const r = (typeof RECIPES !== "undefined" ? RECIPES : []).find(x => x.id === id);
-    return r ? `<a class="rx-tag" href="#recipes/${r.id}">🎞️ X100VI: <b>${r.slot} · ${esc(r.name)}</b> (${esc(r.sim)})</a>` : "";
+    return r ? `<a class="rx-tag" href="#media/recipes/${r.id}">🎞️ X100VI: <b>${r.slot} · ${esc(r.name)}</b> (${esc(r.sim)})</a>` : "";
   }
 
   /* ---------- Map (Leaflet + CARTO tiles) ---------- */
@@ -488,14 +488,76 @@
     });
   }
 
+  /* ---------- Media hub ---------- */
+  function mediaHeader(title, sub) {
+    return `<div class="media-back"><a href="#media" class="btn">‹ Media</a></div>
+      <div class="section-title" style="margin-top:10px"><h2>${title}</h2><span class="sub">${sub || ""}</span></div>`;
+  }
+  function renderMedia() {
+    document.body.dataset.theme = DAYS[todayDayIndex()].theme;
+    renderStrip(null);
+    const shot = store.get("shots", {});
+    const total = PHOTO_IDEAS.reduce((a, c) => a + c.items.length, 0);
+    const got = Object.keys(shot).length;
+    const songs = SONG_SECTIONS.reduce((a, c) => a + c.songs.length, 0);
+    view.innerHTML = `
+      <div class="section-title" style="margin-top:6px"><h2>Media 🎬</h2><span class="sub">camera · music · shots</span></div>
+      <a class="card media-card mc-1" href="#media/recipes"><span class="mc-e">🎞️</span><div><h3>Camera recipes</h3><p>7 Fujifilm X100VI recipes (C1–C7) and where to use each on the trip.</p></div><span class="mc-go">›</span></a>
+      <a class="card media-card mc-2" href="#media/songs"><span class="mc-e">🎧</span><div><h3>Japan songs</h3><p>${songs} tracks about Tokyo, Kyoto, Osaka & Japan — starting with your top artists.</p></div><span class="mc-go">›</span></a>
+      <a class="card media-card mc-3" href="#media/photos"><span class="mc-e">📸</span><div><h3>Photo ideas</h3><p>Shot list to check off — ${got}/${total} captured.</p></div><span class="mc-go">›</span></a>`;
+  }
+
+  function renderSongs() {
+    document.body.dataset.theme = DAYS[todayDayIndex()].theme;
+    renderStrip(null);
+    const sp = q => `https://open.spotify.com/search/${encodeURIComponent(q)}`;
+    const dayChip = id => { const d = DAYS.find(x => x.id === id); return d ? `<a class="song-day" href="#day/${d.id}">${d.emoji} ${d.dow}</a>` : ""; };
+    view.innerHTML = mediaHeader("Japan songs 🎧", "tap ▶ for Spotify") + `
+      <a class="card playlist-card" href="https://open.spotify.com/playlist/4zADznAlkmmxRMoFLxBABS" target="_blank" rel="noopener">
+        <span class="mc-e">🎶</span><div><b>Tokyo Kyoto Osaka Vibes</b><span>A ready-made Spotify playlist for the trains</span></div><span class="mc-go">▶</span></a>
+      ${SONG_SECTIONS.map(sec => `
+        <div class="cat-h">${esc(sec.title)} <small>${esc(sec.sub)}</small></div>
+        ${sec.songs.map(x => `<div class="card song ${x.mine ? "mine" : ""}">
+          <a class="song-play" href="${sp(x.t + " " + x.a)}" target="_blank" rel="noopener" aria-label="Open in Spotify">▶</a>
+          <div class="song-txt">
+            <div class="song-t">${esc(x.t)}${x.mine ? ` <span class="mine-tag">your top artist</span>` : ""}</div>
+            <div class="song-a">${esc(x.a)}${x.y ? ` · ${x.y}` : ""}</div>
+            <div class="song-why">${esc(x.why)}</div>
+            ${x.day ? `<div class="song-foot">Play on ${dayChip(x.day)}</div>` : ""}
+          </div></div>`).join("")}`).join("")}
+      <p class="foot">Not much of your Spotify rotation (Ninajirachi, underscores, Tinashe, Zara Larsson, KATSEYE…) is about Japan — so those songs aren't forced in here.</p>`;
+  }
+
+  function renderPhotos() {
+    document.body.dataset.theme = DAYS[todayDayIndex()].theme;
+    renderStrip(null);
+    const shot = store.get("shots", {});
+    const total = PHOTO_IDEAS.reduce((a, c) => a + c.items.length, 0);
+    const got = Object.keys(shot).length;
+    const dayName = id => { const d = DAYS.find(x => x.id === id); return d ? `${d.emoji} ${d.dow} ${d.date.slice(5).replace("-", "/")}` : ""; };
+    view.innerHTML = mediaHeader("Photo ideas 📸", `${got}/${total} captured`) + `
+      <div class="progress" style="margin-top:0"><span>${got}/${total}</span><div class="bar"><i style="width:${(got / total) * 100}%"></i></div></div>
+      ${PHOTO_IDEAS.map((c, ci) => `
+        <div class="cat-h">${esc(c.cat)}</div>
+        ${c.items.map(([e, t, how, day], i) => {
+          const k = `${ci}-${i}`, on = !!shot[k];
+          return `<div class="card shot ${on ? "got" : ""}">
+            <button class="shot-check" data-shot="${k}" aria-label="Mark captured">${on ? "✅" : e}</button>
+            <div class="shot-txt"><div class="shot-t">${esc(t)}</div><div class="shot-how">${esc(how)}</div>
+              <div class="shot-foot">${day ? `<a href="#day/${day}">${dayName(day)}</a>` : `<span>Anytime</span>`}
+              <a href="https://www.pinterest.com/search/pins/?q=${encodeURIComponent(t + " Japan")}" target="_blank" rel="noopener">🖼️ Examples</a></div></div>
+          </div>`;
+        }).join("")}`).join("")}
+      <p class="foot">Every step's 📸 Photo op on the Today tab has its own 🖼️ Photo idea button too.</p>`;
+  }
+
   /* ---------- Recipes ---------- */
   function renderRecipes(focus) {
     document.body.dataset.theme = DAYS[todayDayIndex()].theme;
     renderStrip(null);
     const uses = {};
     DAYS.forEach((d, di) => d.steps.forEach(s => { if (s.rx) (uses[s.rx] = uses[s.rx] || []).push({ d, di, s }); }));
-    view.innerHTML = `
-      <div class="section-title" style="margin-top:6px"><h2>X100VI recipes 🎞️</h2><span class="sub">C1–C7</span></div>
+    view.innerHTML = mediaHeader("X100VI recipes 🎞️", "C1–C7") + `
       <details class="card cheat"><summary>⚙️ How to save + switch</summary><div class="cheat-body"><ul class="rx-tips">${RECIPE_TIPS.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div></details>
       ${RECIPES.map(r => `
         <article class="card recipe" id="rx-${r.id}">
@@ -644,7 +706,13 @@
     $("#overlay").hidden = true;
     if (h.startsWith("day/")) { renderDay(h.slice(4)); setTab("today"); }
     else if (h === "food") { renderFood(); setTab("food"); }
-    else if (h.startsWith("recipes")) { renderRecipes(h.split("/")[1]); setTab("recipes"); if (h.includes("/")) return; }
+    else if (h === "media") { renderMedia(); setTab("media"); }
+    else if (h === "media/songs") { renderSongs(); setTab("media"); }
+    else if (h === "media/photos") { renderPhotos(); setTab("media"); }
+    else if (h.startsWith("media/recipes") || h.startsWith("recipes")) {
+      const focus = h.startsWith("media/") ? h.split("/")[2] : h.split("/")[1];
+      renderRecipes(focus); setTab("media"); if (focus) return;
+    }
     else if (h === "help" || h === "hotels") { renderHotels(); renderSOS(true); setTab("help"); }
     else if (h === "phrases") { renderPhrases(); setTab("phrases"); }
     else if (h === "manners") { renderManners(); setTab("manners"); }
@@ -660,9 +728,14 @@
   document.addEventListener("click", e => {
     const tile = e.target.closest("[data-tile]");
     if (tile) { $$(".tile").forEach(x => x.classList.toggle("picked", x === tile)); return; }
-    const t = e.target.closest("[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
+    const t = e.target.closest("[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
+    if (t.dataset.shot) {
+      const shot = store.get("shots", {});
+      if (shot[t.dataset.shot]) delete shot[t.dataset.shot]; else shot[t.dataset.shot] = Date.now();
+      store.set("shots", shot); const y = scrollY; renderPhotos(); scrollTo(0, y); return;
+    }
     if (t.dataset.ask) { showAsk(t.dataset.ask); return; }
     if (t.dataset.showtxt) { showPhrase(JSON.parse(t.dataset.showtxt)); return; }
     if (t.dataset.step) { e.preventDefault(); location.hash = "day/" + t.dataset.step.split("-")[0]; setTimeout(() => $("#s-" + t.dataset.step)?.scrollIntoView({ behavior: "smooth", block: "center" }), 120); return; }
