@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Zen+Maru+Gothic:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body data-theme="neon">
   <div class="sky" aria-hidden="true"></div>
@@ -24,7 +24,7 @@
   <header class="top">
     <div class="top-row">
       <a class="brand" href="../" aria-label="All trips"><span class="back">‹</span> Ian <span class="x">×</span> 日本</a>
-      <div class="clock" id="clock" title="Japan time"></div>
+      <div class="top-right"><button class="safe-btn" id="safeBtn" type="button" aria-label="Family-friendly mode is off">🔥</button><div class="clock" id="clock" title="Japan time"></div></div>
     </div>
     <nav class="days" id="dayStrip" aria-label="Trip days"></nav>
   </header>
@@ -39,7 +39,7 @@
     <a href="#phrases" data-tab="phrases"><span>🗣️</span>Phrases</a>
     <a href="#manners" data-tab="manners"><span>🙇</span>Manners</a>
     <a href="#media" data-tab="media"><span>🎬</span>Media</a>
-    <a href="#help" data-tab="help"><span>🏨</span>Help</a>
+    <a href="#trip" data-tab="trip"><span>🧳</span>Trip</a>
   </nav>
 
   <div class="overlay" id="overlay" hidden role="dialog" aria-modal="true">
@@ -48,7 +48,7 @@
   <div class="toast" id="toast" hidden></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-  <script src="data.js?v=9"></script>
-  <script src="app.js?v=9"></script>
+  <script src="data.js?v=10"></script>
+  <script src="app.js?v=10"></script>
 </body>
 </html>

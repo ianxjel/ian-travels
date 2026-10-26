@@ -64,7 +64,7 @@ const HOTELS = {
 const DAYS = [
   /* ---------------- DAY 1 ---------------- */
   {
-    id: "d1", date: "2026-10-26", dow: "Mon", title: "Land in Tokyo", city: "Tokyo",
+    id: "d1", date: "2026-10-26", rain: "Omoide Yokochō's stalls are mostly covered and Shinjuku Station is all underground. Grab a ¥500–700 clear umbrella at any konbini.", home: {"after": "21:00", "note": "Ni-chome is around the corner from your hotel — walk home. In a taxi, say “Shinjuku-gyoenmae eki made” (to Shinjuku-gyoemmae Station)."}, safe: {"tagline": "Neon, yakitori smoke and your first night in Tokyo. Ease in."}, dow: "Mon", title: "Land in Tokyo", city: "Tokyo",
     theme: "neon", emoji: "🌃", deco: ["✈️", "🏮", "🌃", "✨", "🍢"],
     kicker: "Day 1 · Welcome to Japan",
     tagline: "Neon, yakitori smoke, and your first night in Ni-chome. Ease in, babe.",
@@ -121,7 +121,7 @@ const DAYS = [
         photo: "Walk toward the camera mid-alley glancing up at the lanterns, vertical, Night mode. Ask before shooting inside a stall.",
       },
       {
-        t: "21:30", title: "Easy Ni-chome intro", ask: [{"jp": "アイイロカフェはどこですか？", "ro": "Aiiro Kafe wa doko desu ka?", "en": "Where's Aiiro Cafe?", "hear": "dir"}, {"jp": "外国人でも入れますか？", "ro": "Gaikokujin demo hairemasu ka?", "en": "Can foreigners come in?", "hear": "full"}], ll: [35.6905, 139.7077], say: ["cover", "kanpai", "tonari", "namae"], rx: "neon", place: "Aiiro Cafe, Shinjuku 2-chome",
+        t: "21:30", title: "Easy Ni-chome intro", night: true, ask: [{"jp": "アイイロカフェはどこですか？", "ro": "Aiiro Kafe wa doko desu ka?", "en": "Where's Aiiro Cafe?", "hear": "dir"}, {"jp": "外国人でも入れますか？", "ro": "Gaikokujin demo hairemasu ka?", "en": "Can foreigners come in?", "hear": "full"}], ll: [35.6905, 139.7077], say: ["cover", "kanpai", "tonari", "namae"], rx: "neon", place: "Aiiro Cafe, Shinjuku 2-chome",
         how: [
           "Head back east: Marunouchi line to Shinjuku-sanchome, or just walk ~15 min. Ni-chome is literally around your hotel.",
           "Aiiro Cafe is the open-air corner bar on Naka-dori — grab a drink and people-watch.",
@@ -135,7 +135,7 @@ const DAYS = [
 
   /* ---------------- DAY 2 ---------------- */
   {
-    id: "d2", date: "2026-10-27", dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
+    id: "d2", date: "2026-10-27", rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
     theme: "disney", emoji: "🎂", deco: ["🎂", "✨", "🏰", "🎈", "🌊", "⭐"],
     kicker: "Day 2 · Happy 25th, Ian!",
     tagline: "The whole harbor is celebrating you today. Ears on, sticker on, main character energy on.",
@@ -194,7 +194,7 @@ const DAYS = [
         snack: "Hungry? Ichiran Shinjuku (solo-booth tonkotsu ramen, open 24 h) is a 10-min walk. Fill in the order sheet, press the button, ramen appears.",
       },
       {
-        t: "22:30", title: "Birthday drinks in Ni-chome 🎉", ask: [{"jp": "今日誕生日なんです！おすすめのお酒は？", "ro": "Kyō tanjōbi nan desu! Osusume no osake wa?", "en": "It's my birthday! What drink do you recommend?", "hear": "write"}], ll: [35.6908, 139.7079], say: ["tanjoubi", "kanpai", "taipu", "ogoru"], rx: "neon", place: "Eagle Tokyo, Shinjuku 2-chome",
+        t: "22:30", title: "Birthday drinks in Ni-chome 🎉", night: true, ask: [{"jp": "今日誕生日なんです！おすすめのお酒は？", "ro": "Kyō tanjōbi nan desu! Osusume no osake wa?", "en": "It's my birthday! What drink do you recommend?", "hear": "write"}], ll: [35.6908, 139.7079], say: ["tanjoubi", "kanpai", "taipu", "ogoru"], rx: "neon", place: "Eagle Tokyo, Shinjuku 2-chome",
         how: [
           "Start at Eagle Tokyo, then Bear Tokyo or KING TOKYO (go-gos + DJs).",
           "Tell the bartender: “Kyō wa tanjōbi desu!” (It's my birthday today!) — then “Kanpai!” (Cheers!)",
@@ -207,7 +207,7 @@ const DAYS = [
 
   /* ---------------- DAY 3 ---------------- */
   {
-    id: "d3", date: "2026-10-28", dow: "Wed", title: "PokéPark Kanto", city: "Tokyo",
+    id: "d3", date: "2026-10-28", rain: "PokéPark is mostly outdoors. Bring a poncho, or switch to Plan B (teamLab is indoors) — or make it an Ikebukuro day: Pokémon Center Mega Tokyo, Sunshine City and arcades.", home: {"after": "20:00", "note": "The Keio line runs late, but give yourself buffer: aim to leave Keio-Yomiuriland by ~22:00."}, dow: "Wed", title: "PokéPark Kanto", city: "Tokyo",
     theme: "poke", emoji: "⚡", deco: ["⚡", "🎒", "🌿", "🔴", "⭐", "🧢"],
     kicker: "Day 3 · Trainer mode",
     tagline: "Field notebook out, plush on your shoulder. Today you're a Pokémon Trainer, full stop.",
@@ -299,7 +299,7 @@ const DAYS = [
 
   /* ---------------- DAY 4 ---------------- */
   {
-    id: "d4", date: "2026-10-29", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
+    id: "d4", date: "2026-10-29", rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "20:30", "note": "Same as Tuesday: trains from Maihama until around midnight, but leave buffer for the long Tokyo Station transfer."}, dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
     theme: "spooky", emoji: "🎃", deco: ["🎃", "🏰", "🦇", "👻", "🍬", "🕸️"],
     kicker: "Day 4 · Spooky season, castle edition",
     tagline: "Villains, pumpkins and a castle at blue hour. Wear the costume one more time — it's allowed.",
@@ -340,7 +340,7 @@ const DAYS = [
         photo: "Stand dead-center on the path with the castle behind you, arms out or mid-jump. Burst mode, and have them crouch so the castle looks taller.",
       },
       {
-        t: "21:00", title: "Easy night", ll: [35.6906, 139.7082], say: ["hitori", "nama", "kakkoii"], rx: "neon", place: "Dragon Men, Shinjuku 2-chome",
+        t: "21:00", title: "Easy night", night: true, ll: [35.6906, 139.7082], say: ["hitori", "nama", "kakkoii"], rx: "neon", place: "Dragon Men, Shinjuku 2-chome",
         how: [
           "Train back the same way (~1 h).",
           "One drink at Dragon Men or Eagle Tokyo, or an early night. Three park days deserve a rest.",
@@ -352,7 +352,7 @@ const DAYS = [
 
   /* ---------------- DAY 5 ---------------- */
   {
-    id: "d5", date: "2026-10-30", dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
+    id: "d5", date: "2026-10-30", rain: "Shibuya Sky's open-air rooftop closes in heavy rain or strong wind (the indoor 46F deck stays open). Backup: the free Tokyo Metropolitan Government observatory in Shinjuku. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
     theme: "steamy", emoji: "💦", deco: ["💦", "🔥", "🍑", "🪩", "💋", "😈"],
     kicker: "Day 5 · Friday is for the boys",
     tagline: "Temples by day, Ni-chome by night. Hydrate, moisturize, and stay out till the trains restart.",
@@ -420,7 +420,7 @@ const DAYS = [
         photo: "Lantern alleys with direct flash ON (not Night mode) for the party-photo look. Shoot the alleys, never inside the bars.",
       },
       {
-        t: "23:30", title: "The big night 🪩", ask: [{"jp": "イーグル・ブルーはどこですか？", "ro": "Īguru Burū wa doko desu ka?", "en": "Where's Eagle Tokyo Blue?", "hear": "dir"}], ll: [35.6902, 139.7085], say: ["taipu", "kinniku", "odorou", "hotel", "kisu", "yametoku"], rx: "neon", place: "Eagle Tokyo Blue, Shinjuku 2-chome",
+        t: "23:30", title: "The big night 🪩", night: true, ask: [{"jp": "イーグル・ブルーはどこですか？", "ro": "Īguru Burū wa doko desu ka?", "en": "Where's Eagle Tokyo Blue?", "hear": "dir"}], ll: [35.6902, 139.7085], say: ["taipu", "kinniku", "odorou", "hotel", "kisu", "yametoku"], rx: "neon", place: "Eagle Tokyo Blue, Shinjuku 2-chome",
         how: [
           "Eagle Tokyo Blue or Bear Tokyo first (weekend DJs).",
           "After 1 AM: ArcH (SHOWER CANDY tonight) or AiSOTOPE Lounge (Akiba Night – Halloween).",
@@ -434,7 +434,7 @@ const DAYS = [
 
   /* ---------------- DAY 6 ---------------- */
   {
-    id: "d6", date: "2026-10-31", dow: "Sat", title: "Pokémon Tokyo + Halloween", city: "Tokyo",
+    id: "d6", date: "2026-10-31", rain: "Ikebukuro's Sunshine City, Shibuya PARCO and Takashimaya are all indoors — rain barely matters today. Shibuya streets get crowded on Halloween either way.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Pokémon Tokyo + Halloween", city: "Tokyo",
     theme: "ghost", emoji: "👻", deco: ["👻", "🎃", "⚡", "💜", "🍬", "🕯️"],
     kicker: "Day 6 · Ghost-type energy",
     tagline: "Merch haul by day, Pokémon Café dinner, then Ni-chome in costume until sunrise.",
@@ -489,7 +489,7 @@ const DAYS = [
         photo: "Overhead flat-lay of your food before the first bite, then a selfie with the costume + plate.",
       },
       {
-        t: "21:30", title: "Ni-chome Halloween 👻", ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 2-15-12 Shinjuku",
+        t: "21:30", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 2-15-12 Shinjuku",
         how: [
           "Ginza → Marunouchi line back to Shinjuku-sanchome (~25 min).",
           "Bar Blacknude's downstairs club (open from 7 PM tonight) → Eagle Tokyo Blue → after midnight, AiSOTOPE (RUSHCRUISE) or ArcH (Jimi-Halloween: dress as something boring 😂).",
@@ -503,7 +503,7 @@ const DAYS = [
 
   /* ---------------- DAY 7 ---------------- */
   {
-    id: "d7", date: "2026-11-01", dow: "Sun", title: "To Kyoto + Nintendo Museum", city: "Kyoto",
+    id: "d7", date: "2026-11-01", rain: "Kyoto temples look amazing in the rain, but Ninenzaka's stone slopes get slippery. Covered options: Nishiki Market, Kyoto Takashimaya (Nintendo KYOTO) and Kyoto Station.", home: {"after": "21:30", "note": "Kyoto buses and the Karasuma subway stop around 23:30. Taxis are easy to flag on Shijō-dōri — show the Kyoto hotel card."}, dow: "Sun", title: "To Kyoto + Nintendo Museum", city: "Kyoto",
     theme: "pixel", emoji: "🎮", deco: ["🎮", "⛩️", "🍄", "⭐", "🕹️", "🍁"],
     kicker: "Day 7 · Press Start in Kyoto",
     tagline: "Bullet train past Fuji, Nintendo's birthplace, and lantern-lit Gion at night.",
@@ -622,7 +622,7 @@ const DAYS = [
 
   /* ---------------- DAY 8 ---------------- */
   {
-    id: "d8", date: "2026-11-02", dow: "Mon", title: "Fushimi Inari + Uji → Osaka", city: "Kyoto → Osaka",
+    id: "d8", date: "2026-11-02", rain: "Fushimi Inari in light rain = moody, empty gate photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Fushimi Inari + Uji → Osaka", city: "Kyoto → Osaka",
     theme: "torii", emoji: "🦊", deco: ["⛩️", "🦊", "🍵", "🐙", "🌆", "⚡"],
     kicker: "Day 8 · Thousand gates to neon canals",
     tagline: "Dawn torii, real matcha, Pokémon Café Osaka, and a holiday-eve night in Doyama-cho.",
@@ -694,7 +694,7 @@ const DAYS = [
         snack: "Takoyaki at Kukuru or Wanaka (blow on it — the inside is lava). Kushikatsu rule: never double-dip in the shared sauce.",
       },
       {
-        t: "23:00", title: "Doyama-cho holiday-eve crawl", ask: [{"jp": "イーグル大阪はどこですか？", "ro": "Īguru Ōsaka wa doko desu ka?", "en": "Where's Eagle Osaka?", "hear": "dir"}], ll: [34.7048, 135.504], say: ["amerika", "nomou", "issho", "gaikokujin"], rx: "neon", place: "Doyama-cho, Kita-ku, Osaka",
+        t: "23:00", title: "Doyama-cho holiday-eve crawl", night: true, ask: [{"jp": "イーグル大阪はどこですか？", "ro": "Īguru Ōsaka wa doko desu ka?", "en": "Where's Eagle Osaka?", "hear": "dir"}], ll: [34.7048, 135.504], say: ["amerika", "nomou", "issho", "gaikokujin"], rx: "neon", place: "Doyama-cho, Kita-ku, Osaka",
         how: [
           "Midosuji line back to Umeda; Doyama-cho is ~5 min from your hotel.",
           "Eagle Osaka (free entry Mon–Thu, cashless) → Grand Slam (small, international) → Explosion (main club; check @explosion_osaka).",
@@ -707,7 +707,7 @@ const DAYS = [
 
   /* ---------------- DAY 9 ---------------- */
   {
-    id: "d9", date: "2026-11-03", dow: "Tue", title: "Hiroshima + Miyajima", city: "Hiroshima",
+    id: "d9", date: "2026-11-03", rain: "The Miyajima ferry runs in rain, and the torii looks dramatic in mist. If it pours: spend longer indoors at the Hiroshima Peace Memorial Museum and Okonomimura.", home: {"after": "19:30", "note": "Check the last shinkansen from Hiroshima back to Shin-Osaka in SmartEX and don't cut it close — it's the only way home tonight."}, dow: "Tue", title: "Hiroshima + Miyajima", city: "Hiroshima",
     theme: "sea", emoji: "🦌", deco: ["🦌", "🌊", "⛩️", "🍁", "🕊️", "🦪"],
     kicker: "Day 9 · Culture Day holiday",
     tagline: "A floating torii, wild deer, grilled oysters, and a quiet hour of remembrance at the Peace Park.",
@@ -789,7 +789,7 @@ const DAYS = [
 
   /* ---------------- DAY 10 ---------------- */
   {
-    id: "d10", date: "2026-11-04", dow: "Wed", title: "Osaka → Mt Fuji", city: "Mt Fuji",
+    id: "d10", date: "2026-11-04", rain: "Clouds hide Fuji? Check the Kawaguchiko live cam the night before. If the forecast is bad, consider Hakone instead (Hikari to Odawara) — great hot springs, less reliable Fuji views. Even cloudy, Kawaguchiko's autumn leaves and onsen are worth it.", cloudy: true, home: {"after": "18:30", "note": "Kawaguchiko's local buses stop early in the evening — plan a taxi back from dinner if your hotel isn't walkable."}, dow: "Wed", title: "Osaka → Mt Fuji", city: "Mt Fuji",
     theme: "fuji", emoji: "🗻", deco: ["🗻", "🍁", "♨️", "🌅", "🚄", "🍂"],
     kicker: "Day 10 · The mountain",
     tagline: "Bullet train, lake views, autumn leaves and a hot spring. Your one Fuji sunset — make it count.",
@@ -853,7 +853,7 @@ const DAYS = [
 
   /* ---------------- DAY 11 ---------------- */
   {
-    id: "d11", date: "2026-11-05", dow: "Thu", title: "Fuji sunrise → fly home", city: "Fuji → Narita",
+    id: "d11", date: "2026-11-05", rain: "Cloudy sunrise? Skip the lakeshore, sleep an extra hour, and still try Chūreitō around 7 AM — mornings are Fuji's clearest window. Don't change the 9:30 bus.", cloudy: true, dow: "Thu", title: "Fuji sunrise → fly home", city: "Fuji → Narita",
     theme: "sunrise", emoji: "🌅", deco: ["🌅", "🗻", "✈️", "💖", "🎒", "🏯"],
     kicker: "Day 11 · Sayonara (for now)",
     tagline: "Sunrise on Fuji, a pagoda, and one last konbini run. You did Japan, birthday boy.",
@@ -1121,7 +1121,7 @@ const MANNERS = [
     ],
   },
   {
-    emoji: "🏳️‍🌈", title: "Ni-chome + Doyama-cho 101",
+    emoji: "🏳️‍🌈", spicy: true, title: "Ni-chome + Doyama-cho 101",
     body: [
       "Most bars hold 10–15 people and charge a cover (¥1,000–2,000) that includes your first drink. Order at least one drink per visit.",
       "Each bar has a “type” (bears, muscle, twinks, older guys). Some upstairs bars are Japanese-only or type-only — a polite no is the format, not you. Ground-floor bars are open to everyone.",
@@ -1503,4 +1503,45 @@ const FAN_QUESTS = [
     { t: "Nintendo KYOTO + Nintendo Museum", where: "Kyoto Takashimaya S.C. · Ogura, Uji", when: "Sun Nov 1 (museum closed Nov 2–4)", day: "d7",
       what: "Already in your Kyoto day — keep the ticket alert running for the museum.", place: "Nintendo KYOTO", link: "https://museum-tickets.nintendo.com/en/calendar" },
   ]},
+];
+
+/* ---------------- STARTER LISTS (copied to the phone once, then editable) ---------------- */
+const TICKET_SEEDS = [
+  { title: "Visit Japan Web QR (immigration + customs)", date: "2026-10-26", when: "Mon Oct 26 · Haneda arrival" },
+  { title: "Tokyo DisneySea", date: "2026-10-27", when: "Tue Oct 27 · birthday!" },
+  { title: "PokéPark Kanto", date: "2026-10-28", when: "Wed Oct 28" },
+  { title: "Tokyo Disneyland", date: "2026-10-29", when: "Thu Oct 29" },
+  { title: "Shibuya Sky", date: "2026-10-30", when: "Fri Oct 30 · sunset slot" },
+  { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },
+  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · ~8:30 AM · seat E" },
+  { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
+  { title: "Pokémon Café Osaka", date: "2026-11-02", when: "Mon Nov 2 · 6:00 PM · arrive 10 min early" },
+  { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · ~9 AM out, ~6 PM back" },
+  { title: "Shinkansen Shin-Osaka → Mishima (Hikari)", date: "2026-11-04", when: "Wed Nov 4 · ~10:30 AM · seat E" },
+  { title: "Bus Mishima → Kawaguchiko", date: "2026-11-04", when: "Wed Nov 4 · ~12:45 PM" },
+  { title: "Bus Kawaguchiko → Busta Shinjuku", date: "2026-11-05", when: "Thu Nov 5 · 9:30 AM" },
+  { title: "Flight home UA868 → UA1875", date: "2026-11-05", when: "Thu Nov 5 · Narita T1 · 6:00 PM" },
+];
+
+const MERCH_SEEDS = [
+  { item: "DisneySea Halloween / anniversary popcorn bucket", where: "Tokyo DisneySea", day: "d2" },
+  { item: "PokéPark exclusives (Daisuki Shop)", where: "PokéPark Kanto", day: "d3" },
+  { item: "Disneyland Halloween ears or headband", where: "Tokyo Disneyland", day: "d4" },
+  { item: "Kirby Café THE STORE goods", where: "Tokyo Solamachi", day: "d5" },
+  { item: "Pokémon Center Skytree Town exclusives", where: "Tokyo Solamachi", day: "d5" },
+  { item: "Pokémon Center Mega Tokyo exclusives", where: "Sunshine City, Ikebukuro", day: "d6" },
+  { item: "Pikachu Sweets gift box", where: "Sunshine City, Ikebukuro", day: "d6" },
+  { item: "Pokémon Center Shibuya (Mewtwo) merch", where: "Shibuya PARCO 6F", day: "d6" },
+  { item: "Nintendo TOKYO exclusive-illustration goods", where: "Shibuya PARCO 6F", day: "d6" },
+  { item: "Ariana — petal (Japanese edition CD)", where: "Tower Records Shibuya", day: "d6" },
+  { item: "Pokémon Café Tokyo merch", where: "Nihonbashi Takashimaya", day: "d6" },
+  { item: "Nintendo Museum shop", where: "Ogura, Uji", day: "d7" },
+  { item: "Nintendo KYOTO / Pokémon Center Kyoto", where: "Kyoto Takashimaya S.C.", day: "d7" },
+  { item: "Uji matcha (powder tin or sweets)", where: "Uji", day: "d8" },
+  { item: "Pokémon Center Osaka DX + Café Osaka merch", where: "Daimaru Shinsaibashi 9F", day: "d8" },
+  { item: "My Hero Academia collab goods", where: "Umeda Sky Building 39F shop", day: "d8" },
+  { item: "Nintendo OSAKA exclusives", where: "Daimaru Umeda 13F", day: "d8" },
+  { item: "Momiji manjū gift box", where: "Miyajima", day: "d9" },
+  { item: "Fuji-shaped sweets / regional KitKats", where: "Kawaguchiko + Narita", day: "d10" },
+  { item: "Konbini snack haul for home", where: "Any konbini", day: "d11" },
 ];

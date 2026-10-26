@@ -1,11 +1,11 @@
 /* Offline support: cache the app shell, keep fonts and the last weather forecast. */
-const VERSION = "ij-v9";
+const VERSION = "ij-v10";
 const SHELL = [
   "./",
   "index.html",
-  "styles.css?v=9",
-  "data.js?v=9",
-  "app.js?v=9",
+  "styles.css?v=10",
+  "data.js?v=10",
+  "app.js?v=10",
   "manifest.webmanifest",
   "icons/icon-192.png",
   "icons/icon-512.png",
@@ -40,7 +40,7 @@ self.addEventListener("fetch", e => {
   }
 
   // Same-origin + Google Fonts: serve from cache, refresh in the background
-  if (url.origin === location.origin || /fonts\.(googleapis|gstatic)\.com$|cdnjs\.cloudflare\.com$|basemaps\.cartocdn\.com$|upload\.wikimedia\.org$|wikipedia\.org$/.test(url.hostname)) {
+  if (url.origin === location.origin || /fonts\.(googleapis|gstatic)\.com$|cdnjs\.cloudflare\.com$|basemaps\.cartocdn\.com$|upload\.wikimedia\.org$|wikipedia\.org$|open\.er-api\.com$/.test(url.hostname)) {
     e.respondWith(
       caches.open(VERSION).then(async cache => {
         const hit = await cache.match(req, { ignoreSearch: url.origin === location.origin && req.mode === "navigate" });
