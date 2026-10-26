@@ -135,7 +135,7 @@ const DAYS = [
 
   /* ---------------- DAY 2 ---------------- */
   {
-    id: "d2", date: "2026-10-27", prep: ["Log in to the PokéPark KANTO app and load your ticket — your name must match your passport", "Pack the plush (for the “heal”) and make sure a card is ready — PokéPark is cashless", "No tickets? Flip Wednesday to Plan B and book a teamLab time slot tonight", "Charge everything", "Alarm ~8:30 AM — leave at 9:30"], rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
+    id: "d2", date: "2026-10-27", prep: ["Book a teamLab Planets time slot for tomorrow morning if you haven't, and save the QR in Trip → Tickets", "Pack shorts or pants that roll up above the knee — teamLab has knee-deep water rooms", "Charge everything (teamLab + Odaiba are big photo days)", "Alarm ~8:30 AM — leave at 9:30"], rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
     theme: "disney", emoji: "🎂", deco: ["🎂", "✨", "🏰", "🎈", "🌊", "⭐"],
     kicker: "Day 2 · Happy 25th, Ian!",
     tagline: "The whole harbor is celebrating you today. Ears on, sticker on, main character energy on.",
@@ -207,66 +207,15 @@ const DAYS = [
 
   /* ---------------- DAY 3 ---------------- */
   {
-    id: "d3", date: "2026-10-28", prep: ["Costume + ears again for Disneyland", "Link your Disneyland ticket in the Disney app; decide on Premier Access for Beauty and the Beast", "Charge phone, power bank and camera batteries; poncho in the bag", "Alarm ~6:15 AM — leave at 7:00"], rain: "PokéPark is mostly outdoors. Bring a poncho, or switch to Plan B (teamLab is indoors) — or make it an Ikebukuro day: Pokémon Center Mega Tokyo, Sunshine City and arcades.", home: {"after": "20:00", "note": "The Keio line runs late, but give yourself buffer: aim to leave Keio-Yomiuriland by ~22:00."}, dow: "Wed", title: "PokéPark Kanto", city: "Tokyo",
-    theme: "poke", emoji: "⚡", deco: ["⚡", "🎒", "🌿", "🔴", "⭐", "🧢"],
-    kicker: "Day 3 · Trainer mode",
-    tagline: "Field notebook out, plush on your shoulder. Today you're a Pokémon Trainer, full stop.",
-    sleep: "shinjuku", wx: { lat: 35.625, lon: 139.518 },
-    phrases: ["photoplease", "kore", "card", "toire", "sumimasen"],
-    variants: {
-      q: "Did you get PokéPark tickets?",
-      a: "Yes — PokéPark! ⚡",
-      b: "No — teamLab + Odaiba 🌈",
-    },
+    id: "d3", date: "2026-10-28", prep: ["Costume + ears again for Disneyland", "Link your Disneyland ticket in the Disney app; decide on Premier Access for Beauty and the Beast", "Charge phone, power bank and camera batteries; poncho in the bag", "Alarm ~6:15 AM — leave at 7:00"], rain: "teamLab Planets is fully indoors. If it pours later, skip the seaside boardwalk and stay inside DiverCity Tokyo Plaza (food court + shops) — the Gundam still poses outside, rain or shine.", home: {"after": "20:00", "note": "You're back in Shinjuku early tonight — Ni-chome is around the corner from your hotel. Disneyland tomorrow means a 6:15 AM alarm."}, dow: "Wed", title: "teamLab + Odaiba", city: "Tokyo",
+    theme: "teamlab", emoji: "🌈", deco: ["🌈", "🪞", "🤖", "🌊", "✨", "💧"],
+    kicker: "Day 3 · Light, water + giant robots",
+    tagline: "Wade through glowing water rooms, meet a life-size Gundam, then watch the sun set over Rainbow Bridge.",
+    sleep: "shinjuku", wx: { lat: 35.645, lon: 139.79 },
+    phrases: ["yoyaku", "photoplease", "kirei", "hitotsu"],
     steps: [
       {
-        only: "a", t: "09:30", title: "Shinjuku → Keio-Yomiuriland", ask: [{"jp": "橋本行きは何番線ですか？", "ro": "Hashimoto-iki wa nanbansen desu ka?", "en": "Which platform for trains to Hashimoto?", "hear": "bansen"}, {"jp": "この電車は京王よみうりランドに止まりますか？", "ro": "Kono densha wa Keiō-Yomiuri-Rando ni tomarimasu ka?", "en": "Does this train stop at Keio-Yomiuriland?", "hear": "yesno"}], ll: [35.624, 139.518], say: ["konokippu", "norikae"], pic: "Yomiuriland gondola view", place: "Keio-yomiuriland Station",
-        how: [
-          "Walk ~10 min to Shinjuku Station and follow the “Keio Line” signs (west side).",
-          "Board a train bound for 橋本 Hashimoto. If yours goes to Takaosanguchi or Hachiōji instead, change at Chōfu to a Hashimoto train.",
-          "Get off at Keio-Yomiuriland (~35 min total).",
-          "Ride the Sky Shuttle gondola up to Yomiuriland.",
-        ],
-        snack: "PokéPark is cashless with long lines — buy breakfast and a drink at the station konbini before you board.",
-        photo: "From the gondola: the whole park and the forest below. Quick video out the window.",
-      },
-      {
-        only: "a", t: "10:30", title: "Through the gate, app open", ask: [{"jp": "ポケパークの入口はどこですか？", "ro": "Poke Pāku no iriguchi wa doko desu ka?", "en": "Where's the PokéPark entrance?", "hear": "dir"}, {"jp": "コインロッカーはどこですか？", "ro": "Koin rokkā wa doko desu ka?", "en": "Where are the coin lockers?", "hear": "dir"}], ll: [35.6253, 139.5139], say: ["yoyaku", "sumimasen"], place: "PokéPark Kanto, Yomiuriland",
-        how: [
-          "Join the PokéPark line at the Yomiuriland gate with the PokéPark KANTO app open and the ticket QR ready.",
-          "Lockers are on the Yomiuriland side, not inside PokéPark — stash anything big now.",
-        ],
-      },
-      {
-        only: "a", t: "10:45", title: "Reservation race 🏁", say: ["tanjoubi"], place: "",
-        how: [
-          "The second it opens: Playhouse first.",
-          "Then the Daisuki Shop.",
-          "Then enter the Gym show lottery.",
-        ],
-        tip: "Tell staff it's your birthday week for a sticker — the window covers your whole trip.",
-      },
-      {
-        only: "a", t: "12:00", title: "Pokémon Forest at your time slot", ask: [{"jp": "ここで写真を撮ってもいいですか？", "ro": "Koko de shashin o totte mo ii desu ka?", "en": "Can I take photos here?", "hear": "yesno"}], say: ["photoplease", "card"], pic: "PokePark Kanto Rhyhorn photo", rx: "reala", place: "",
-        how: [
-          "Head to the Forest at the time printed on your ticket.",
-          "Bring your plush to the Pokémon Center counter so staff can “heal” it.",
-        ],
-        photo: "Ride the Rhyhorn (officially allowed), field notebook in hand, plush on your shoulder. No photos on the 110-step stairway or during the Gym show.",
-        snack: "Eat in the park — cards only. Grab a themed snack early before lunch lines build.",
-      },
-      {
-        only: "a", t: "19:00", title: "Park closes → back to Shinjuku", quest: "⚔️ Attack on Titan “Guren no Yumiya” in SCREEN X — first-week Eren art-board gift ends Oct 29.", ll: [35.6896, 139.7006], say: ["oshiete", "hitori"], place: "Shinjuku Station",
-        how: [
-          "Gondola down, Keio line back toward Shinjuku (~35–45 min).",
-          "Rest up — Disneyland tomorrow.",
-        ],
-        snack: "Dinner: Fuunji's tsukemen (dipping ramen) near Shinjuku South Exit. Buy a ticket at the machine by the door, hand it over, wait for your seat.",
-      },
-
-      /* ---- Plan B ---- */
-      {
-        only: "b", t: "09:30", title: "Shinjuku → teamLab Planets", ask: [{"jp": "チームラボプラネッツはどっちですか？", "ro": "Chīmu Rabo Puranettsu wa dotchi desu ka?", "en": "Which way to teamLab Planets?", "hear": "dir"}, {"jp": "靴と荷物はどこに置きますか？", "ro": "Kutsu to nimotsu wa doko ni okimasu ka?", "en": "Where do I leave my shoes and bags?", "hear": "dir"}], ll: [35.6492, 139.7898], say: ["yoyaku", "norikae"], pic: "teamLab Planets men outfit photo", rx: "reala", place: "teamLab Planets TOKYO, Toyosu",
+        t: "09:30", title: "Shinjuku → teamLab Planets", ask: [{"jp": "チームラボプラネッツはどっちですか？", "ro": "Chīmu Rabo Puranettsu wa dotchi desu ka?", "en": "Which way to teamLab Planets?", "hear": "dir"}, {"jp": "靴と荷物はどこに置きますか？", "ro": "Kutsu to nimotsu wa doko ni okimasu ka?", "en": "Where do I leave my shoes and bags?", "hear": "dir"}], ll: [35.6492, 139.7898], say: ["yoyaku", "norikae"], pic: "teamLab Planets men outfit photo", rx: "reala", place: "teamLab Planets TOKYO, Toyosu",
         how: [
           "Marunouchi line from Shinjuku-gyoemmae to Ginza, walk to Ginza-itchōme and take the Yūrakuchō line to Toyosu (or just follow Google Maps).",
           "Switch to the Yurikamome line 1 stop to Shin-Toyosu; teamLab is a 1-min walk.",
@@ -276,7 +225,7 @@ const DAYS = [
         photo: "The mirror-floor rooms are the best mirror selfies of the whole trip. Stand still in the infinite light-crystal room and shoot wide.",
       },
       {
-        only: "b", t: "12:30", title: "Odaiba: Unicorn Gundam", ask: [{"jp": "ガンダムの変身は何時ですか？", "ro": "Gandamu no henshin wa nanji desu ka?", "en": "What time does the Gundam transform?", "hear": "time"}], ll: [35.6251, 139.7756], say: ["photoplease", "hitotsu"], pic: "Unicorn Gundam Odaiba photo low angle", rx: "classic", place: "DiverCity Tokyo Plaza, Odaiba",
+        t: "12:30", title: "Odaiba: Unicorn Gundam", ask: [{"jp": "ガンダムの変身は何時ですか？", "ro": "Gandamu no henshin wa nanji desu ka?", "en": "What time does the Gundam transform?", "hear": "time"}], ll: [35.6251, 139.7756], say: ["photoplease", "hitotsu"], pic: "Unicorn Gundam Odaiba photo low angle", rx: "classic", place: "DiverCity Tokyo Plaza, Odaiba",
         how: [
           "Yurikamome line from Shin-Toyosu to Daiba (~20 min). Sit in the front car — it's driverless, so you get the windshield view.",
           "The life-size Unicorn Gundam stands outside DiverCity Tokyo Plaza; it transforms at set times.",
@@ -285,14 +234,30 @@ const DAYS = [
         photo: "Shoot the Gundam from low with a 0.5x wide angle so it towers over you.",
       },
       {
-        only: "b", t: "16:15", title: "Sunset at Odaiba Seaside Park", ll: [35.6298, 139.7744], say: ["kirei"], pic: "Odaiba Rainbow Bridge sunset silhouette", rx: "velvia", place: "Odaiba Seaside Park",
+        t: "16:15", title: "Sunset at Odaiba Seaside Park", ll: [35.6298, 139.7744], say: ["kirei"], pic: "Odaiba Rainbow Bridge sunset silhouette", rx: "velvia", place: "Odaiba Seaside Park",
         how: [
           "Walk 10 min to the beach boardwalk. Sunset ~4:50 PM.",
           "Rainbow Bridge lights up just after.",
-          "Yurikamome back to Shimbashi, then the Ginza/Marunouchi lines home.",
         ],
         photo: "Silhouette on the boardwalk with Rainbow Bridge + Tokyo Tower behind. Lean on the railing, profile view.",
         tip: "Prefer the coast? Swap the whole day for Kamakura + Enoshima on the Odakyu line from Shinjuku: the Great Buddha, the seaside Enoden train and the famous Kamakurakōkōmae crossing.",
+      },
+      {
+        t: "17:30", title: "Back to Shinjuku + dinner", quest: "⚔️ Attack on Titan “Guren no Yumiya” is screening in SCREEN X / 4DX (TOHO Cinemas Ikebukuro and others) — the first-week Eren art-board gift ends tomorrow, Oct 29.", ll: [35.6896, 139.7006], say: ["hitori", "oshiete"], place: "Shinjuku Station",
+        how: [
+          "Yurikamome from Daiba to Shimbashi, then the Ginza line to Akasaka-mitsuke and the Marunouchi line to Shinjuku-gyoemmae (~45 min) — or just follow Google Maps.",
+          "Easy night: Disneyland tomorrow starts early.",
+        ],
+        snack: "Fūunji's tsukemen (dipping ramen) near Shinjuku South Exit: buy a ticket at the machine by the door, hand it over, wait for your seat.",
+      },
+      {
+        t: "18:45", title: "Okamalt — Ni-chome's LGBTQ book café", night: true, ask: [{"jp": "オカマルトはどこですか？", "ro": "Okamaruto wa doko desu ka?", "en": "Where's Okamalt?", "hear": "dir"}], ll: [35.691, 139.707], say: ["gaymanga", "cover"], place: "Okamalt, 2-18-10 Shinjuku, Tokyo",
+        how: [
+          "Walk to 2-18-10 Shinjuku (Shin-Chidorigai building, 2F) — a few minutes from your hotel.",
+          "Around ¥1,500 for 90 minutes, with a drink and snacks.",
+          "Open about 1–8 PM, closed Thursday to Saturday — so tonight is your Tokyo window. Listing info is older; confirm hours first.",
+        ],
+        spicy: "Shelves of vintage Barazoku (the magazine the word “bara” comes from), Tom of Finland art and gay culture books, run by a Ni-chome writer and drag legend. Still up for more? The Tokyo Gaysian Club Crawl (Airbnb) runs 9–11:30 PM tonight from the Ni-chome 7-Eleven — only if you can handle the 6:15 AM Disney alarm 😅",
       },
     ],
   },
@@ -1019,6 +984,7 @@ const PHRASES = [
   { id: "w-kuma", cat: "Scene words", jp: "クマ ／ 熊系", ro: "Kuma / Kuma-kei", en: "Bear / bear type", say: "koo-mah / koo-mah-kay" },
   { id: "w-gaisen", cat: "Scene words", jp: "ガイ専", ro: "Gaisen", en: "Into foreigners", say: "gai-sen", note: "“-sen” means “into.” Fuke-sen = into older guys, debu-sen = into bigger guys." },
   { id: "w-nonke", cat: "Scene words", jp: "ノンケ", ro: "Nonke", en: "Straight guy", say: "nohn-keh" },
+  { id: "gaymanga", cat: "Scene words", jp: "ゲイ漫画のコーナーはありますか？", ro: "Gei manga no kōnā wa arimasu ka?", en: "Is there a gay manga section?", say: "gay mahn-gah noh koh-nah wah ah-ree-mahs kah", note: "Japanese shops rarely say “bara” — the genre is ゲイ漫画 (gay manga), and the muscle style is ガチムチ系." },
   { id: "w-nichome", cat: "Scene words", jp: "二丁目", ro: "Ni-chōme", en: "Tokyo's gay district (Shinjuku 2-chōme)", say: "nee-choh-meh" },
 
   // Emergency
@@ -1177,7 +1143,7 @@ const RECIPES = [
     id: "reala", slot: "C4", name: "Reala Glow", emoji: "📸", sim: "Reala Ace",
     vibe: "True-to-life color and the most flattering skin. Your people, food and fit-check recipe.",
     settings: [["Film Simulation", "Reala Ace"], ["Grain", "Weak, Small"], ["Color Chrome Effect", "Weak"], ["Color Chrome FX Blue", "Off"], ["White Balance", "Auto, R +1, B −1"], ["Dynamic Range", "DR-Auto"], ["Highlight / Shadow", "0 / −1"], ["Color", "0"], ["Sharpness", "−1"], ["High ISO NR", "−4"], ["Clarity", "0"], ["ISO", "Auto, up to 6400"], ["Exposure comp", "+1/3"]],
-    use: ["Birthday portrait at Mediterranean Harbor", "Pokémon Café plates", "Mirror fit checks", "teamLab", "PokéPark", "Okonomiyaki on the griddle"],
+    use: ["Birthday portrait at Mediterranean Harbor", "Pokémon Café plates", "Mirror fit checks", "teamLab", "Okonomiyaki on the griddle"],
   },
   {
     id: "velvia", slot: "C5", name: "Vermilion + Fuji", emoji: "🗻", sim: "Velvia",
@@ -1381,8 +1347,8 @@ const SONG_SECTIONS = [
       { t: "BOA", a: "Megan Thee Stallion", y: 2024, mine: true, why: "One Piece references; in the video she cosplays Boa Hancock and runs through Gantz- and Dance Dance Revolution-inspired scenes.", day: "d5" },
       { t: "Opposite Day", a: "Megan Thee Stallion", mine: true, why: "Another One Piece reference.", day: "d9" },
       { t: "Girls in the Hood", a: "Megan Thee Stallion", y: 2020, mine: true, why: "Naruto reference.", day: "d8" },
-      { t: "Running Up (Freestyle)", a: "Megan Thee Stallion", mine: true, fan: "⚡ Pokémon", why: "Dragon Ball Z and Pokémon references.", day: "d3" },
-      { t: "Tuned In (Freestyle)", a: "Megan Thee Stallion", mine: true, fan: "⚡ Pokémon", why: "Pokémon reference — queue it for PokéPark.", day: "d3" },
+      { t: "Running Up (Freestyle)", a: "Megan Thee Stallion", mine: true, fan: "⚡ Pokémon", why: "Dragon Ball Z and Pokémon references.", day: "d6" },
+      { t: "Tuned In (Freestyle)", a: "Megan Thee Stallion", mine: true, fan: "⚡ Pokémon", why: "Pokémon reference — queue it for your Pokémon Center day.", day: "d6" },
     ],
   },
   {
@@ -1450,7 +1416,7 @@ const PHOTO_IDEAS = [
     ["🪟", "Fuji through the train window", "Lens flat on the glass.", "d7"],
     ["🍰", "Pokémon Café plate flat-lay", "Overhead before you touch it.", "d6"],
     ["🍓", "Strawberry daifuku cut in half", "The cross-section is the shot.", "d10"],
-    ["🎟️", "Tickets + passes on a table", "DisneySea, PokéPark, shinkansen tickets — trip receipts.", ""],
+    ["🎟️", "Tickets + passes on a table", "DisneySea, Disneyland, shinkansen tickets — trip receipts.", ""],
     ["🔑", "Hotel key + window view", "First thing after check-in.", "d1"],
   ]},
   { cat: "Video clips (3–5 sec each)", items: [
@@ -1495,6 +1461,15 @@ const FAN_QUESTS = [
       what: "Try osaka.kirbycafe-reserve.com for a cancellation before your 6 PM Pokémon Café. The winter menu starts Nov 11, after your trip.",
       place: "Kirby Cafe Osaka", link: "https://kirbycafe.jp/" },
   ]},
+  { fandom: "Bara + gay manga", emoji: "🍑", spicy: true, items: [
+    { t: "Okamalt — LGBTQ book café", where: "2-18-10 Shinjuku, 2F (Ni-chome, minutes from your hotel)", when: "About 1–8 PM, closed Thu–Sat · ~¥1,500 / 90 min with a drink", day: "d3",
+      what: "Vintage Barazoku (the magazine the word “bara” comes from), Tom of Finland art and gay culture books, run by a Ni-chome writer and drag icon. Info is from an older listing — confirm hours.",
+      place: "Okamalt, 2-18-10 Shinjuku, Tokyo", link: "https://www.timeout.com/tokyo/lgbtq/okamalt" },
+    { t: "Lumiere", where: "2-17-1 Shinjuku, Naka-dori (Ni-chome)", when: "Any Tokyo evening", day: "d1",
+      what: "The historic Ni-chome gay shop, known for its gay magazines.", place: "Lumiere, 2-17-1 Shinjuku, Tokyo", link: "https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%BC%E3%83%AB_(%E3%82%B2%E3%82%A4%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97)" },
+    { t: "Mandarake (secondhand manga + doujinshi)", where: "Nakano Broadway (1 stop from Shinjuku) · Shinsaibashi, Osaka", when: "Daytime", day: "d8",
+      what: "Japan's big secondhand manga chain. Ask for the gay manga section with the phrase “ゲイ漫画のコーナーはありますか？” — not every branch has one.", place: "Mandarake Nakano", link: "https://www.timeout.com/tokyo/shopping/nakano-broadway" },
+  ]},
   { fandom: "Nintendo", emoji: "🍄", items: [
     { t: "Nintendo TOKYO", where: "Shibuya PARCO 6F", when: "Already in your plan", day: "d6",
       what: "Official store with store-exclusive illustration merch (Mario, Zelda, Kirby, Splatoon, Animal Crossing).", place: "Nintendo TOKYO Shibuya PARCO", link: "" },
@@ -1509,7 +1484,7 @@ const FAN_QUESTS = [
 const TICKET_SEEDS = [
   { title: "Visit Japan Web QR (immigration + customs)", date: "2026-10-26", when: "Mon Oct 26 · Haneda arrival" },
   { title: "Tokyo DisneySea", date: "2026-10-27", when: "Tue Oct 27 · birthday!" },
-  { title: "PokéPark Kanto", date: "2026-10-28", when: "Wed Oct 28" },
+  { title: "teamLab Planets", date: "2026-10-28", when: "Wed Oct 28 · morning slot" },
   { title: "Tokyo Disneyland", date: "2026-10-29", when: "Thu Oct 29" },
   { title: "Shibuya Sky", date: "2026-10-30", when: "Fri Oct 30 · sunset slot" },
   { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },
@@ -1525,7 +1500,6 @@ const TICKET_SEEDS = [
 
 const MERCH_SEEDS = [
   { item: "DisneySea Halloween / anniversary popcorn bucket", where: "Tokyo DisneySea", day: "d2" },
-  { item: "PokéPark exclusives (Daisuki Shop)", where: "PokéPark Kanto", day: "d3" },
   { item: "Disneyland Halloween ears or headband", where: "Tokyo Disneyland", day: "d4" },
   { item: "Kirby Café THE STORE goods", where: "Tokyo Solamachi", day: "d5" },
   { item: "Pokémon Center Skytree Town exclusives", where: "Tokyo Solamachi", day: "d5" },

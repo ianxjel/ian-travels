@@ -45,6 +45,14 @@ body[data-theme="poke"] {
   --photo: rgba(42,117,187,.09); --snack: rgba(255,203,5,.22); --spicy: rgba(227,53,13,.1);
   --shadow: 0 8px 24px rgba(120,80,0,.12);
 }
+body[data-theme="teamlab"] {
+  --bg: #090d22; --bg2: #11173a; --card: #121a3d; --card2: #1a2350;
+  --ink: #f0f6ff; --muted: #a9b6e3;
+  --accent: #5ee7ff; --accent2: #ff7ad9; --on-accent: #06121f;
+  --banner: radial-gradient(70% 60% at 15% 20%, #ff7ad955 0%, transparent 60%), radial-gradient(60% 60% at 85% 30%, #5ee7ff55 0%, transparent 60%), radial-gradient(70% 70% at 50% 100%, #9b7bff66 0%, transparent 60%), linear-gradient(160deg, #1a1f5a 0%, #090d22 80%);
+  --glow: 0 0 26px rgba(94,231,255,.5);
+  --photo: rgba(255,122,217,.12); --snack: rgba(255,214,102,.12); --spicy: rgba(255,122,217,.18);
+}
 body[data-theme="spooky"] {
   --bg: #170d22; --bg2: #21122f; --card: #23142f; --card2: #2e1a3e;
   --ink: #fff2e2; --muted: #c9b2d6;

@@ -652,7 +652,7 @@
     document.body.dataset.theme = DAYS[todayDayIndex()].theme;
     renderStrip(null);
     const dayChip = id => { const d = DAYS.find(x => x.id === id); return d ? `<a class="song-day" href="#day/${d.id}">${d.emoji} ${d.dow} ${d.date.slice(5).replace("-", "/")}</a>` : ""; };
-    view.innerHTML = mediaHeader("Fan quests 🎮", "Oct 26 – Nov 5") + FAN_QUESTS.map(f => `
+    view.innerHTML = mediaHeader("Fan quests 🎮", "Oct 26 – Nov 5") + FAN_QUESTS.filter(f => !(f.spicy && isSafe())).map(f => `
       <div class="cat-h">${f.emoji} ${esc(f.fandom)}</div>
       ${f.items.map(q => `<div class="card quest-card">
         <div class="q-t">${esc(q.t)}</div>
@@ -1194,6 +1194,15 @@
   document.getElementById("safeBtn")?.addEventListener("click", () => { store.set("safe", !isSafe()); applySafe(); toast(isSafe() ? "Family-friendly mode on 😇" : "Family-friendly mode off 🔥"); rerender(route); });
 
   /* ---------- Boot ---------- */
+  // v15: PokéPark removed from the plan — tidy anything already saved on this phone
+  if (!store.get("mig:nopokepark", false)) {
+    const tk = store.get("tickets", null);
+    if (tk) { const kept = tk.filter(t => !/PokéPark/.test(t.title) || t.code || t.photo); if (!kept.some(t => /teamLab/.test(t.title))) kept.push({ id: "t-tl", title: "teamLab Planets", date: "2026-10-28", when: "Wed Oct 28 · morning slot", code: "", note: "", photo: false }); store.set("tickets", kept); }
+    const mm = store.get("merch", null);
+    if (mm) store.set("merch", mm.filter(x => !/PokéPark/.test(x.item) || x.bought || x.price || x.forWho));
+    try { localStorage.removeItem("ij:variant:d3"); } catch {}
+    store.set("mig:nopokepark", true);
+  }
   applySafe();
   const setTopH = () => document.documentElement.style.setProperty("--top-h", ($(".top")?.offsetHeight || 130) + "px");
   tickClock(); setInterval(tickClock, 30e3);
