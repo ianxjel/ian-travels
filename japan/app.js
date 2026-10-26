@@ -486,10 +486,16 @@
       if (a) a.onclick = ev => { ev.preventDefault(); ev.stopPropagation(); map.closePopup(); $("#s-" + a.dataset.goto)?.scrollIntoView({ behavior: "smooth", block: "center" }); };
     });
     L.control.zoom({ position: "topright" }).addTo(map);
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-      maxZoom: 19, subdomains: "abcd",
+    // CARTO basemap with Ian's API key; if keyed tiles ever fail, fall back to the public endpoint
+    const CARTO_KEY = "cb1_4uqn_1_7229d53060edc08327f1ec1b";
+    const tiles = L.tileLayer(`https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=${CARTO_KEY}`, {
+      maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
     }).addTo(map);
+    let tileErrs = 0;
+    tiles.on("tileerror", () => {
+      if (++tileErrs === 3) { tiles.options.subdomains = "abcd"; tiles.setUrl("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"); }
+    });
     const done = store.get("done", {});
     mapAreas.forEach(a => {
       if (a.pts.length > 1) L.polyline(a.pts.map(p => p.ll), { color: getComputedStyle(document.body).getPropertyValue("--accent").trim(), weight: 3, dashArray: "6 8", opacity: .8 }).addTo(map);
