@@ -351,22 +351,23 @@ const DAYS = [
         photo: "Stand dead-center on the path with the castle behind you, arms out or mid-jump. Burst mode, and have them crouch so the castle looks taller.",
       },
       {
-        t: "21:00", title: "Easy night", night: true, ll: [35.6906, 139.7082], say: ["hitori", "nama", "kakkoii"], rx: "neon", spicy: "Dragon Men's go-gos are the muscle show, and Eagle is the bear-and-daddy room. Pick your vibe 😏", place: "Dragon Men, Shinjuku 2-chome",
-        ride: [{"ln": "JE", "from": "JE07", "to": "JE01", "dir": "東京方面 (toward Tokyo)", "type": "Any train.", "wrong": "Next stop 新浦安 (JE08) = wrong way.", "min": 15, "exit": "Long walk → Marunouchi Line"}, {"ln": "M", "from": "M17", "to": "M09", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train. Get off one stop past your hotel for Ni-chome.", "wrong": "Next stop 大手町 = wrong way.", "min": 19, "exit": "Exits C5–C8 come up right at Ni-chome"}],
+        t: "21:00", title: "Disneyland → Ueno 🚃", night: true, ll: [35.7138, 139.7773], say: ["norikae", "nanban"], place: "Ueno Station, Tokyo",
+        ride: [{"ln": "JE", "from": "JE07", "to": "JE01", "dir": "東京方面 (toward Tokyo)", "type": "Any train.", "wrong": "Next stop 新浦安 Shin-urayasu (JE08) = wrong way.", "min": 15, "exit": "Follow the green Yamanote / light-blue Keihin-Tohoku signs (long walk from the Keiyo platforms)"}, {"ln": "JYE", "from": "JY01", "to": "JY05", "dir": "上野・池袋方面 (toward Ueno / Ikebukuro) — or the light-blue Keihin-Tohoku Line toward 大宮 Ōmiya; both stop at Ueno", "type": "Every Yamanote train stops at all 4 stops.", "wrong": "Next stop 有楽町 Yūrakuchō (JY30) = wrong way.", "min": 8, "exit": "Exit toward Shōwa-dōri (昭和通り口) — search 24会館 上野 in Google Maps"}],
         how: [
-          "Train back the same way (~1 h).",
-          "One drink at Dragon Men (go-go dancers, very foreigner-friendly) or Eagle Tokyo.",
-          "Thursday is drag night: Queen's Lounge at AiSOTOPE Lounge runs drag shows Wednesdays and Thursdays (about ¥3,000 with a drink, photo ID required).",
+          "Keiyo Line back to Tokyo Station, then just 4 stops north to Ueno (~45 min total).",
+          "Bring a change of clothes in your day bag if you might stay the night at the sauna.",
         ],
-        snack: "Late konbini run: Lawson's Karaage-kun (bite-size fried chicken) or a hot oden cup from the counter.",
+        snack: "Konbini stop near Ueno Station: Lawson's Karaage-kun or a hot oden cup from the counter.",
       },
       {
-        t: "22:30", title: "Post-Disney soak at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        t: "22:00", title: "Long night at 24 Kaikan Ueno 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.712, 139.779], say: ["shukuhaku", "kyukei", "kondomu2"], place: "24会館 上野 (24 Kaikan Ueno)",
         how: [
-          "Dragon Men → 24 Kaikan is about 2 minutes on foot.",
-          "Your legs will thank you after 15 hours at Disneyland. Tomorrow you sleep in.",
+          "It's on Shōwa-dōri, a short walk from Ueno Station's east side. Search 24会館 上野 in Google Maps.",
+          "After 9 PM it's about ¥2,800 for up to 14 hours, cash. English is spoken and the signs are in English too.",
+          "Tonight's the one to go long: Friday starts at 10 AM, and Asakusa is 5 minutes away.",
+          "Sleeping there? Ask for the overnight stay (宿泊). Or catch a taxi back to the hotel (~¥4,000–5,000).",
         ],
-        spicy: "Stay as late as you like: Friday starts at 10 AM.",
+        spicy: "Thursday + post-Disney legs + nowhere to be until 10 AM = the long sauna night you asked for 😏",
       },
     ],
   },
@@ -389,6 +390,7 @@ const DAYS = [
           "Exit 1 → Kaminarimon gate is right there.",
         ],
         snack: "Asakusa Kagetsudo's giant melon pan (crispy outside, fluffy inside), then ningyō-yaki and age-manjū on Nakamise street. Eat beside the stall — eating while walking is frowned on here.",
+        spicy: "Slept at 24 Kaikan Ueno? Skip the hotel route: Ginza Line G16 Ueno → G19 Asakusa (toward 浅草, 3 stops, ~5 min), Exit 1.",
       },
       {
         t: "11:00", title: "Senso-ji + Nakamise", ask: [{"jp": "予約なしで着物をレンタルできますか？", "ro": "Yoyaku nashi de kimono o rentaru dekimasu ka?", "en": "Can I rent a kimono without a reservation?", "hear": "yesno"}], ll: [35.7148, 139.7967], say: ["photook", "ikura"], pic: "Kaminarimon Asakusa men outfit photo", rx: "nostalgic", place: "Kaminarimon, Asakusa",
@@ -1718,8 +1720,8 @@ const FAN_QUESTS = [
     { t: "24 Kaikan Shinjuku", where: "2-13-1 Shinjuku, 2F (Ni-chome) · ~5 min from your hotel", when: "24/7 · ~¥2,500–3,900, more after 9 PM", day: "d1",
       what: "Tokyo's best-known gay sauna and the most foreigner-friendly: English signs, staff with basic English. Sauna, steam, jacuzzi, cold plunge, rooftop deck, cabins. Planned on nights 1–6.",
       place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo", link: "https://www.travelgay.com/venue/24-kaikan-shinjuku" },
-    { t: "24 Kaikan Ueno + Asakusa", where: "Ueno (Showa-dori) · Asakusa (2-29-16)", when: "~¥2,400 before 9 PM, ~¥2,800 after", day: "d5",
-      what: "Sister branches. Asakusa is a short walk from Senso-ji on Friday morning; Ueno has English signs too.", place: "24 Kaikan Ueno", link: "https://www.utopia-asia.com/tokysaun.htm" },
+    { t: "24 Kaikan Ueno + Asakusa", where: "Ueno (Showa-dori) · Asakusa (2-29-16)", when: "~¥2,400 before 9 PM, ~¥2,800 after", day: "d4",
+      what: "Sister branches. Ueno is your long Thursday night after Disneyland (English signs, English spoken). Asakusa is a short walk from Senso-ji on Friday morning.", place: "24 Kaikan Ueno", link: "https://www.utopia-asia.com/tokysaun.htm" },
     { t: "Jinya", where: "2-30-19 Ikebukuro", when: "Baths closed for cleaning 11 AM–3 PM · ~¥2,800", day: "d6",
       what: "Older Ikebukuro sauna with a long record of welcoming foreigners.", place: "Jinya, 2-30-19 Ikebukuro, Tokyo", link: "https://www.utopia-asia.com/tokysaun.htm" },
     { t: "Sauna Verde Club (unconfirmed)", where: "684 Higashishiokoji-cho, by Kyoto Station · next to your Kyoto hotel", when: "Hours not listed", day: "d7",
@@ -1875,4 +1877,5 @@ const LINES = {
   NEX: { name: "Narita Express (N'EX)", jp: "成田エクスプレス", color: "#c8102e", stops: [
     ["SJK", "新宿", "Shinjuku"], ["SBY", "渋谷", "Shibuya (some trains)"], ["SGW", "品川", "Shinagawa"], ["TKY", "東京", "Tokyo"],
     ["NRT2", "空港第2ビル", "Narita Airport T2·3"], ["NRT1", "成田空港", "Narita Airport T1"]] },
+  JYE: { name: "JR Yamanote Line", jp: "山手線", color: "#80c241", stops: [["JY01", "東京", "Tokyo"], ["JY02", "神田", "Kanda"], ["JY03", "秋葉原", "Akihabara"], ["JY04", "御徒町", "Okachimachi"], ["JY05", "上野", "Ueno"]] },
 };
