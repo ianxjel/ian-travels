@@ -518,11 +518,11 @@
       <a class="card playlist-card" href="https://open.spotify.com/playlist/4zADznAlkmmxRMoFLxBABS" target="_blank" rel="noopener">
         <span class="mc-e">🎶</span><div><b>Tokyo Kyoto Osaka Vibes</b><span>A ready-made Spotify playlist for the trains</span></div><span class="mc-go">▶</span></a>
       ${SONG_SECTIONS.map(sec => `
-        <div class="cat-h">${esc(sec.title)} <small>${esc(sec.sub)}</small></div>
+        <div class="cat-h">${esc(sec.title)} ${sec.sub ? `<small>${esc(sec.sub)}</small>` : ""}</div>
         ${sec.songs.map(x => `<div class="card song ${x.mine ? "mine" : ""}">
           <a class="song-play" href="${sp(x.t + " " + x.a)}" target="_blank" rel="noopener" aria-label="Open in Spotify">▶</a>
           <div class="song-txt">
-            <div class="song-t">${esc(x.t)}${x.mine ? ` <span class="mine-tag">you play them</span>` : ""}</div>
+            <div class="song-t">${esc(x.t)}${x.fan ? ` <span class="mine-tag">${esc(x.fan)}</span>` : ""}</div>
             <div class="song-a">${esc(x.a)}${x.y ? ` · ${x.y}` : ""}</div>
             <div class="song-why">${esc(x.why)}</div>
             ${x.day ? `<div class="song-foot">Play on ${dayChip(x.day)}</div>` : ""}

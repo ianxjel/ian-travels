@@ -1365,14 +1365,49 @@ const ASK_HELP = {
    why: the Japan connection (no lyrics). mine: from Ian's top Spotify artists. day: suggested day to play it. */
 const SONG_SECTIONS = [
   {
-    title: "From artists you play 💖", sub: "Real Japanese / Japan references only",
+    title: "🌸 Ariana Grande", sub: "",
     songs: [
       { t: "bad idea", a: "Ariana Grande", y: 2019, mine: true, why: "The chorus slips in a Japanese-style nickname for Ari — a nod to her love of Japanese culture (per Songfacts).", day: "d2" },
+    ],
+  },
+  {
+    title: "🐍 Megan Thee Stallion", sub: "the biggest otaku in your rotation",
+    songs: [
       { t: "Mamushi (feat. Yuki Chiba)", a: "Megan Thee Stallion", y: 2024, mine: true, why: "Largely performed in Japanese with Japanese rapper Yuki Chiba. The viral hook “Watashi wa star” means “I'm a star.” Mamushi is a Japanese pit viper.", day: "d5" },
-      { t: "Otaku Hot Girl", a: "Megan Thee Stallion", y: 2024, mine: true, why: "Packed with Jujutsu Kaisen and Naruto references and samples JJK's commercial-break music. Play it in Ikebukuro, Tokyo's anime hub.", day: "d6" },
-      { t: "Lost in Japan (Remix)", a: "Shawn Mendes & Zedd", y: 2018, mine: true, why: "Japan is in the title and the hook — and you follow Zedd.", day: "d1" },
+      { t: "Otaku Hot Girl", a: "Megan Thee Stallion", y: 2024, mine: true, why: "Jujutsu Kaisen and Naruto references, and it samples JJK's commercial-break music. Play it in Ikebukuro, Tokyo's anime hub.", day: "d6" },
+      { t: "Wanna Be", a: "GloRilla & Megan Thee Stallion", y: 2024, mine: true, fan: "⚔️ AOT", why: "Megan's verse pays homage to Attack on Titan — it set off a “Rumbling” among AOT fans.", day: "d3" },
+      { t: "HISS", a: "Megan Thee Stallion", y: 2024, mine: true, why: "References Tokyo Ghoul — an anime set in Tokyo.", day: "d6" },
+      { t: "BOA", a: "Megan Thee Stallion", y: 2024, mine: true, why: "One Piece references; in the video she cosplays Boa Hancock and runs through Gantz- and Dance Dance Revolution-inspired scenes.", day: "d5" },
+      { t: "Opposite Day", a: "Megan Thee Stallion", mine: true, why: "Another One Piece reference.", day: "d9" },
+      { t: "Girls in the Hood", a: "Megan Thee Stallion", y: 2020, mine: true, why: "Naruto reference.", day: "d8" },
+      { t: "Running Up (Freestyle)", a: "Megan Thee Stallion", mine: true, fan: "⚡ Pokémon", why: "Dragon Ball Z and Pokémon references.", day: "d3" },
+      { t: "Tuned In (Freestyle)", a: "Megan Thee Stallion", mine: true, fan: "⚡ Pokémon", why: "Pokémon reference — queue it for PokéPark.", day: "d3" },
+    ],
+  },
+  {
+    title: "😼 Doja Cat", sub: "",
+    songs: [
+      { t: "Kiss Me More (feat. Naomi Watanabe)", a: "Doja Cat", y: 2021, mine: true, why: "Japanese remix: Japanese comedian Naomi Watanabe raps her first-ever verse, with Japanese lyrics written by Awich in place of SZA's part.", day: "d5" },
+    ],
+  },
+  {
+    title: "💖 Nicki Minaj", sub: "",
+    songs: [
+      { t: "Itty Bitty Piggy", a: "Nicki Minaj", y: 2009, mine: true, why: "Name-checks her “Harajuku Barbie” persona — named for Tokyo's Harajuku street-style district.", day: "d5" },
+    ],
+  },
+  {
+    title: "🎧 Zedd", sub: "",
+    songs: [
+      { t: "Lost in Japan (Remix)", a: "Shawn Mendes & Zedd", y: 2018, mine: true, why: "Japan is in the title and the hook.", day: "d1" },
       { t: "Nakama (feat. Ai)", a: "Zedd", y: 2025, mine: true, why: "Ending theme of the anime Dragon Ball Daima, sung in Japanese and English. “Nakama” means your crew / comrades.", day: "d3" },
-      { t: "Boom Clap (Japanese version)", a: "Charli xcx", y: 2015, mine: true, why: "Charli re-recorded it (and “Break the Rules”) in Japanese for the Japan edition of SUCKER. Japan-only bonus — it may not stream in the US, so try YouTube.", day: "d5" },
+    ],
+  },
+  {
+    title: "💚 Charli xcx", sub: "",
+    songs: [
+      { t: "Boom Clap (Japanese version)", a: "Charli xcx", y: 2015, mine: true, why: "Re-recorded in Japanese for the Japan edition of SUCKER. Japan-only bonus — may not stream in the US, so try YouTube.", day: "d5" },
+      { t: "Break the Rules (Japanese version)", a: "Charli xcx", y: 2015, mine: true, why: "The other Japanese-language re-record from the Japan edition of SUCKER.", day: "d8" },
       { t: "Fancy", a: "Iggy Azalea ft. Charli xcx", y: 2014, mine: true, why: "Tokyo gets a shout-out in the lyrics.", day: "d5" },
     ],
   },
