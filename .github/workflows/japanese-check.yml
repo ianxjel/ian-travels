@@ -69,4 +69,5 @@ jobs:
           git push --force --quiet origin jp-report
 
       - name: Pass / fail
-        run: grep -q "RESULT: PASS" reading.md && grep -q "RESULT: PASS" lint.md
+        run: |
+          grep -q "RESULT: PASS" reading.md && grep -q "RESULT: PASS" lint.md
