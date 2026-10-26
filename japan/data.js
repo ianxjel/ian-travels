@@ -1367,6 +1367,7 @@ const SONG_SECTIONS = [
   {
     title: "🌸 Ariana Grande", sub: "",
     songs: [
+      { t: "ordinary things (feat. Nonna)", a: "Ariana Grande", y: 2024, mine: true, fan: "🗼 Tokyo", why: "The first verse is set in Tokyo — a couple out for a Japanese dinner there. From eternal sunshine; play it at your Omoide Yokochō dinner on night one.", day: "d1" },
       { t: "bad idea", a: "Ariana Grande", y: 2019, mine: true, why: "The chorus slips in a Japanese-style nickname for Ari — a nod to her love of Japanese culture (per Songfacts).", day: "d2" },
     ],
   },
