@@ -520,12 +520,12 @@
         ${sec.songs.map(x => `<div class="card song ${x.mine ? "mine" : ""}">
           <a class="song-play" href="${sp(x.t + " " + x.a)}" target="_blank" rel="noopener" aria-label="Open in Spotify">▶</a>
           <div class="song-txt">
-            <div class="song-t">${esc(x.t)}${x.mine ? ` <span class="mine-tag">your top artist</span>` : ""}</div>
+            <div class="song-t">${esc(x.t)}${x.mine ? ` <span class="mine-tag">you play them</span>` : ""}</div>
             <div class="song-a">${esc(x.a)}${x.y ? ` · ${x.y}` : ""}</div>
             <div class="song-why">${esc(x.why)}</div>
             ${x.day ? `<div class="song-foot">Play on ${dayChip(x.day)}</div>` : ""}
           </div></div>`).join("")}`).join("")}
-      <p class="foot">Not much of your Spotify rotation (Ninajirachi, underscores, Tinashe, Zara Larsson, KATSEYE…) is about Japan — so those songs aren't forced in here.</p>`;
+      <p class="foot">Pulled from the artists you play and follow on Spotify. Only songs that actually reference Japan — in the title, the lyrics, or sung in Japanese.</p>`;
   }
 
   function renderPhotos() {
