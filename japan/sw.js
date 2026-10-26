@@ -1,11 +1,11 @@
 /* Offline support: cache the app shell, keep fonts and the last weather forecast. */
-const VERSION = "ij-v19";
+const VERSION = "ij-v20";
 const SHELL = [
   "./",
   "index.html",
-  "styles.css?v=19",
-  "data.js?v=19",
-  "app.js?v=19",
+  "styles.css?v=20",
+  "data.js?v=20",
+  "app.js?v=20",
   "manifest.webmanifest",
   "icons/icon-192.png",
   "icons/icon-512.png",
@@ -15,7 +15,8 @@ const SHELL = [
 ];
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
+  // cache each file separately so one slow or blocked file can't stop the update from installing
+  e.waitUntil(caches.open(VERSION).then(c => Promise.allSettled(SHELL.map(u => c.add(u)))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", e => {
@@ -39,14 +40,36 @@ self.addEventListener("fetch", e => {
     return;
   }
 
-  // Same-origin + Google Fonts: serve from cache, refresh in the background
-  if (url.origin === location.origin || /fonts\.(googleapis|gstatic)\.com$|cdnjs\.cloudflare\.com$|basemaps\.cartocdn\.com$|upload\.wikimedia\.org$|wikipedia\.org$|open\.er-api\.com$/.test(url.hostname)) {
+  // Our own files (pages, data, code): network first so updates land right away; cache when offline
+  if (url.origin === location.origin) {
+    e.respondWith((async () => {
+      const cache = await caches.open(VERSION);
+      const nav = req.mode === "navigate";
+      try {
+        const r = await Promise.race([
+          fetch(nav ? req.url : req, { cache: "no-cache", credentials: "same-origin" }),
+          new Promise((_, no) => setTimeout(() => no(new Error("slow")), 4000)),
+        ]);
+        if (r && r.ok) cache.put(nav ? "index.html" : req, r.clone());
+        return r;
+      } catch {
+        return (await cache.match(nav ? "index.html" : req, { ignoreSearch: nav })) || (nav ? cache.match("./") : Response.error());
+      }
+    })());
+    return;
+  }
+
+  // Fonts, map tiles, Leaflet, images, exchange rate: serve from cache, refresh in the background
+  if (/fonts\.(googleapis|gstatic)\.com$|cdnjs\.cloudflare\.com$|basemaps\.cartocdn\.com$|upload\.wikimedia\.org$|wikipedia\.org$|open\.er-api\.com$/.test(url.hostname)) {
     e.respondWith(
       caches.open(VERSION).then(async cache => {
-        const hit = await cache.match(req, { ignoreSearch: url.origin === location.origin && req.mode === "navigate" });
+        const hit = await cache.match(req);
         const net = fetch(req).then(r => { if (r && (r.ok || r.type === "opaque")) cache.put(req, r.clone()); return r; }).catch(() => null);
-        return hit || (await net) || (req.mode === "navigate" ? cache.match("index.html") : Response.error());
+        return hit || (await net) || Response.error();
       })
     );
   }
 });
+
+// The 🔄 button asks a waiting update to take over immediately
+self.addEventListener("message", e => { if (e.data === "skip") self.skipWaiting(); });

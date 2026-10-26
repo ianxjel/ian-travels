@@ -1218,7 +1218,35 @@
   // refresh "up next" every 5 minutes on the day view
   setInterval(() => { if (/^#?(day\/|today|$)/.test(location.hash.replace("#", "")) && !document.activeElement?.matches("textarea,input")) { const y = scrollY; route(); scrollTo(0, y); } }, 5 * 60e3);
 
+  // 🔄 Get the latest version: drop cached copies of the site's own files, update the service worker, reload
+  async function hardRefresh() {
+    const btn = document.getElementById("refreshBtn");
+    btn?.classList.add("spin");
+    toast("Getting the latest version… 🔄");
+    try {
+      if ("caches" in window) {
+        for (const k of await caches.keys()) {
+          const c = await caches.open(k);
+          for (const r of await c.keys()) if (new URL(r.url).origin === location.origin) await c.delete(r);
+        }
+      }
+      const reg = "serviceWorker" in navigator ? await navigator.serviceWorker.getRegistration() : null;
+      if (reg) { await reg.update().catch(() => {}); reg.waiting?.postMessage("skip"); }
+    } catch {}
+    try { sessionStorage.setItem("ij:refreshed", "1"); } catch {}
+    const u = new URL(location.href); u.searchParams.set("r", Date.now()); location.replace(u.toString());
+  }
+  document.getElementById("refreshBtn")?.addEventListener("click", hardRefresh);
+  // tidy the ?r= cache-buster out of the address bar after a refresh
+  if (new URL(location.href).searchParams.has("r")) {
+    const u = new URL(location.href); u.searchParams.delete("r"); history.replaceState(null, "", u.pathname + u.search + u.hash);
+    let fresh = false; try { fresh = sessionStorage.getItem("ij:refreshed") === "1"; sessionStorage.removeItem("ij:refreshed"); } catch {}
+    if (fresh) setTimeout(() => toast("You're on the latest version ✨"), 400);
+  }
+
   if ("serviceWorker" in navigator && location.protocol === "https:") {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
+    const hadController = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then(reg => reg.update().catch(() => {})).catch(() => {});
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController) toast("Update installed ✨ Tap 🔄 to load it"); });
   }
 })();
