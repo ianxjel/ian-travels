@@ -147,7 +147,7 @@ const DAYS = [
 
   /* ---------------- DAY 2 ---------------- */
   {
-    id: "d2", date: "2026-10-27", prep: ["Book a teamLab Planets time slot for tomorrow morning if you haven't, and save the QR in Trip → Tickets", "Pack shorts or pants that roll up above the knee — teamLab has knee-deep water rooms", "Charge everything (teamLab + Odaiba are big photo days)", "Alarm ~8:30 AM — leave at 9:30"], rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
+    id: "d2", date: "2026-10-27", prep: ["Book a teamLab Planets slot around 11 AM if you haven't, and save the QR in Trip → Tickets", "Pack shorts or pants that roll up above the knee — teamLab has knee-deep water rooms", "Charge everything (teamLab + Odaiba are big photo days)", "No early alarm: ~9:45 AM, leave at 10:15 — stay out as late as you want tonight 🎂"], rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
     theme: "disney", emoji: "🎂", deco: ["🎂", "✨", "🏰", "🎈", "🌊", "⭐"],
     kicker: "Day 2 · Happy 25th, Ian!",
     tagline: "The whole harbor is celebrating you today. Ears on, sticker on, main character energy on.",
@@ -222,7 +222,7 @@ const DAYS = [
         how: [
           "A 2-minute walk from Eagle. Open 24/7.",
           "Prices go up after about 9 PM (roughly ¥2,500–3,900). Bring cash.",
-          "Tomorrow's teamLab slot is 9:30 AM, so give yourself 7 hours of sleep.",
+          "teamLab isn't until 11 AM tomorrow, so stay as long as you like.",
         ],
         spicy: "Birthday steam session. “今日誕生日なんです” (it's my birthday today) works here too 🎉",
       },
@@ -239,7 +239,7 @@ const DAYS = [
     phrases: ["yoyaku", "photoplease", "kirei", "hitotsu"],
     steps: [
       {
-        t: "09:30", title: "Shinjuku → teamLab Planets", ask: [{"jp": "チームラボプラネッツはどっちですか？", "ro": "Chīmu Rabo Puranettsu wa dotchi desu ka?", "en": "Which way to teamLab Planets?", "hear": "dir"}, {"jp": "靴と荷物はどこに置きますか？", "ro": "Kutsu to nimotsu wa doko ni okimasu ka?", "en": "Where do I leave my shoes and bags?", "hear": "dir"}], ll: [35.6492, 139.7898], say: ["yoyaku", "norikae"], pic: "teamLab Planets men outfit photo", rx: "reala", place: "teamLab Planets TOKYO, Toyosu",
+        t: "10:30", title: "Shinjuku → teamLab Planets", ask: [{"jp": "チームラボプラネッツはどっちですか？", "ro": "Chīmu Rabo Puranettsu wa dotchi desu ka?", "en": "Which way to teamLab Planets?", "hear": "dir"}, {"jp": "靴と荷物はどこに置きますか？", "ro": "Kutsu to nimotsu wa doko ni okimasu ka?", "en": "Where do I leave my shoes and bags?", "hear": "dir"}], ll: [35.6492, 139.7898], say: ["yoyaku", "norikae"], pic: "teamLab Planets men outfit photo", rx: "reala", place: "teamLab Planets TOKYO, Toyosu",
         ride: [{"ln": "M", "from": "M10", "to": "M16", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 14, "exit": "Walk underground to Ginza-itchōme (Yurakucho Line, ~5 min)"}, {"ln": "Y", "from": "Y19", "to": "Y22", "dir": "新木場方面 (toward Shin-kiba)", "type": "Every train.", "wrong": "Next stop 有楽町 Yūrakuchō (Y18) = wrong way.", "min": 6, "exit": "Follow ゆりかもめ Yurikamome signs"}, {"ln": "U", "from": "U16", "to": "U15", "dir": "新橋方面 (toward Shimbashi) — Toyosu is the end, so any train", "type": "Driverless — front car = best view.", "wrong": "", "min": 2, "exit": "teamLab Planets is a 1-min walk"}],
         how: [
           "Marunouchi line from Shinjuku-gyoemmae to Ginza, walk to Ginza-itchōme and take the Yūrakuchō line to Toyosu (or just follow Google Maps).",
@@ -250,7 +250,7 @@ const DAYS = [
         photo: "The mirror-floor rooms are the best mirror selfies of the whole trip. Stand still in the infinite light-crystal room and shoot wide.",
       },
       {
-        t: "12:30", title: "Odaiba: Unicorn Gundam", ask: [{"jp": "ガンダムの変身は何時ですか？", "ro": "Gandamu no henshin wa nanji desu ka?", "en": "What time does the Gundam transform?", "hear": "time"}], ll: [35.6251, 139.7756], say: ["photoplease", "hitotsu"], pic: "Unicorn Gundam Odaiba photo low angle", rx: "classic", place: "DiverCity Tokyo Plaza, Odaiba",
+        t: "13:30", title: "Odaiba: Unicorn Gundam", ask: [{"jp": "ガンダムの変身は何時ですか？", "ro": "Gandamu no henshin wa nanji desu ka?", "en": "What time does the Gundam transform?", "hear": "time"}], ll: [35.6251, 139.7756], say: ["photoplease", "hitotsu"], pic: "Unicorn Gundam Odaiba photo low angle", rx: "classic", place: "DiverCity Tokyo Plaza, Odaiba",
         ride: [{"ln": "U", "from": "U15", "to": "U07", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train. Sit up front!", "wrong": "Next stop 豊洲 Toyosu (U16) = wrong way.", "min": 20, "exit": "DiverCity Tokyo Plaza is a 5-min walk"}],
         how: [
           "Yurikamome line from Shin-Toyosu to Daiba (~20 min). Sit in the front car — it's driverless, so you get the windshield view.",
@@ -374,7 +374,7 @@ const DAYS = [
 
   /* ---------------- DAY 5 ---------------- */
   {
-    id: "d5", date: "2026-10-30", prep: ["Tomorrow is the LAST day of tax-free at the register: passport in your sling, ¥5,000+ per store", "Check the Pokémon Center Mega Tokyo site for timed entry", "Pokémon Café 7:15 PM: confirmation in Trip → Tickets; you leave the hotel at 6:25", "Halloween costume ready", "Look over your Trip → Merch list so the haul goes fast", "Big night tonight — water before bed 😅"], rain: "Shibuya Sky's open-air rooftop closes in heavy rain or strong wind (the indoor 46F deck stays open). Backup: the free Tokyo Metropolitan Government observatory in Shinjuku. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
+    id: "d5", date: "2026-10-30", prep: ["Tomorrow is the LAST day of tax-free at the register: passport in your sling, ¥5,000+ per store", "Check the Pokémon Center Mega Tokyo site for timed entry (you're going around 11:30)", "Pokémon Café 7:15 PM: confirmation in Trip → Tickets; you leave the hotel at 6:25", "Halloween costume ready", "Look over your Trip → Merch list so the haul goes fast", "Big night tonight — water before bed 😅 No alarm: Saturday starts at 11:30"], rain: "Shibuya Sky's open-air rooftop closes in heavy rain or strong wind (the indoor 46F deck stays open). Backup: the free Tokyo Metropolitan Government observatory in Shinjuku. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
     theme: "steamy", emoji: "💦", deco: ["💦", "🔥", "🍑", "🪩", "💋", "😈"],
     kicker: "Day 5 · Friday is for the boys",
     tagline: "Temples by day, Ni-chome by night. Hydrate, moisturize, and stay out till the trains restart.",
@@ -462,7 +462,7 @@ const DAYS = [
         how: [
           "When Eagle Blue winds down, 24 Kaikan is a 2-minute walk.",
           "Ask for the overnight stay (宿泊): about 12–14 hours with a locker, robe and towels, so you can sleep there. Guys come straight from the clubs at this hour.",
-          "Pokémon Center Mega Tokyo is at 10 AM, and your phone lives in the locker. Ask the desk to wake you: “8時に起こしてください” (Hachi-ji ni okoshite kudasai).",
+          "Pokémon Center Mega Tokyo isn't until 11:30, and your phone lives in the locker. Ask the desk to wake you: “10時に起こしてください” (Jū-ji ni okoshite kudasai).",
         ],
         spicy: "The classic Ni-chome ending: the club crowd moves to the sauna at this hour 🔥",
       },
@@ -471,7 +471,7 @@ const DAYS = [
 
   /* ---------------- DAY 6 ---------------- */
   {
-    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE TONIGHT — it ships from the front desk at 7:30 AM to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "SmartEX: Shinagawa → Kyoto ~8:30 AM, seat E, Suica linked", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Ikebukuro's Sunshine City, Shibuya PARCO and Takashimaya are all indoors — rain barely matters today. Shibuya streets get crowded on Halloween either way.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Pokémon Tokyo + Halloween", city: "Tokyo",
+    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "SmartEX: Shinagawa → Kyoto ~8:30 AM, seat E, Suica linked", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Ikebukuro's Sunshine City, Shibuya PARCO and Takashimaya are all indoors — rain barely matters today. Shibuya streets get crowded on Halloween either way.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Pokémon Tokyo + Halloween", city: "Tokyo",
     theme: "ghost", emoji: "👻", deco: ["👻", "🎃", "⚡", "💜", "🍬", "🕯️"],
     kicker: "Day 6 · Ghost-type energy",
     tagline: "Merch haul by day, Pokémon Café dinner, then Ni-chome in costume until sunrise.",
@@ -479,7 +479,7 @@ const DAYS = [
     phrases: ["menzei", "fukuro", "card", "kore", "kanpai", "kakkoii", "line", "hima"],
     steps: [
       {
-        t: "10:00", title: "Pokémon Center Mega Tokyo", ask: [{"jp": "サンシャインシティはどっちですか？", "ro": "Sanshain Shiti wa dotchi desu ka?", "en": "Which way to Sunshine City?", "hear": "dir"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.729, 139.7193], say: ["menzei", "fukuro", "card"], pic: "Pokemon Center Mega Tokyo photo", rx: "reala", place: "Pokemon Center Mega Tokyo, Sunshine City",
+        t: "11:30", title: "Pokémon Center Mega Tokyo", ask: [{"jp": "サンシャインシティはどっちですか？", "ro": "Sanshain Shiti wa dotchi desu ka?", "en": "Which way to Sunshine City?", "hear": "dir"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.729, 139.7193], say: ["menzei", "fukuro", "card"], pic: "Pokemon Center Mega Tokyo photo", rx: "reala", place: "Pokemon Center Mega Tokyo, Sunshine City",
         ride: [{"ln": "F", "from": "F13", "to": "F09", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Any train — all stop at Ikebukuro.", "wrong": "Next stop 北参道 Kita-sandō (F14) = wrong way.", "min": 10, "exit": "East Exit (東口) → Sunshine 60 Street"}],
         how: [
           "Fukutoshin line (brown) from Shinjuku-sanchome to Ikebukuro (~10 min, no transfer).",
@@ -491,7 +491,7 @@ const DAYS = [
         photo: "With the big statues at the entrance, plush in hand. Opening time = no crowds.",
       },
       {
-        t: "13:00", title: "Shibuya: Mewtwo + Nintendo Tokyo", quest: "🌸 Tower Records Shibuya (5 min walk) has Ariana's “Tower Love!” petal posters + a fan lottery. Buy the Japanese edition CD.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
+        t: "14:30", title: "Shibuya: Mewtwo + Nintendo Tokyo", quest: "🌸 Tower Records Shibuya (5 min walk) has Ariana's “Tower Love!” petal posters + a fan lottery. Buy the Japanese edition CD.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
         ride: [{"ln": "F", "from": "F09", "to": "F16", "dir": "渋谷・横浜・元町・中華街方面 (toward Shibuya)", "type": "Any train — all stop at Shibuya.", "wrong": "Next stop 要町 Kanamechō = wrong way.", "min": 15, "exit": "Follow signs to Shibuya PARCO (~7 min walk)"}],
         how: [
           "Fukutoshin line from Ikebukuro straight to Shibuya (~15 min).",
@@ -503,7 +503,7 @@ const DAYS = [
         tip: "Leave Shibuya by 5 PM. Street drinking is banned 6 PM–5 AM and the Halloween crowds get intense fast.",
       },
       {
-        t: "16:15", title: "Pride House Tokyo Legacy 🏳️‍🌈", night: true, ask: [{"jp": "見学してもいいですか？", "ro": "Kengaku shite mo ii desu ka?", "en": "Is it OK to look around?", "hear": "yesno"}], ll: [35.6886, 139.7128], say: ["arigatou"], place: "Pride House Tokyo Legacy, 1-2-9 Shinjuku, Tokyo",
+        t: "16:30", title: "Pride House Tokyo Legacy 🏳️‍🌈", night: true, ask: [{"jp": "見学してもいいですか？", "ro": "Kengaku shite mo ii desu ka?", "en": "Is it OK to look around?", "hear": "yesno"}], ll: [35.6886, 139.7128], say: ["arigatou"], place: "Pride House Tokyo Legacy, 1-2-9 Shinjuku, Tokyo",
         how: [
           "Japan's first permanent LGBTQ center, at 1-2-9 Shinjuku: a few minutes' walk from your hotel.",
           "Open 1–7 PM, closed Wednesdays and Thursdays, so today works.",
@@ -512,7 +512,7 @@ const DAYS = [
         spicy: "Ask the staff which Ni-chome Halloween parties they'd hit tonight. Local intel beats any guide.",
       },
       {
-        t: "17:00", title: "Rest + costume on", ll: [35.6888, 139.71], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        t: "17:15", title: "Rest + costume on", ll: [35.6888, 139.71], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
         ride: [{"ln": "F", "from": "F16", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Next stop 代官山 Daikanyama = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
         how: [
           "Fukutoshin line Shibuya → Shinjuku-sanchome (~10 min).",
@@ -552,7 +552,7 @@ const DAYS = [
       {
         t: "25:30", title: "Halloween nightcap at 24 Kaikan 👻🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
         how: [
-          "Only if your suitcase is packed. It ships at 7:30 AM and the alarm is 6:45 AM.",
+          "Only if the suitcase is already at the front desk. Sunday is the one early non-park morning (6:45 AM alarm for the Kyoto train).",
           "Lockers are small, so drop the costume at the hotel first (it's on the way).",
         ],
         spicy: "Halloween is the busiest night of the year in Ni-chome, and 24 Kaikan fills up after the streets do 👀",
@@ -707,7 +707,7 @@ const DAYS = [
 
   /* ---------------- DAY 8 ---------------- */
   {
-    id: "d8", date: "2026-11-02", prep: ["📦 PACK THE SUITCASE FOR THE FLIGHT — it ships to Narita at 8:15 AM (Yamato needs 2 days)", "Waybill: Narita Airport Terminal 1, flight UA868 on Thu Nov 5, pick up at the Yamato counter", "Keep OUT of the suitcase: 2 nights of clothes, a warm layer for the Fuji sunrise, passport, meds, chargers", "Anything you'll claim a tax refund on goes in your backpack, not the shipped suitcase", "SmartEX: Shin-Osaka ⇄ Hiroshima tickets (~9 AM out, ~6 PM back)", "Check tomorrow's Miyajima tide times", "Alarm ~7:30 AM"], rain: "Fushimi Inari in light rain = moody, empty gate photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Fushimi Inari + Uji → Osaka", city: "Kyoto → Osaka",
+    id: "d8", date: "2026-11-02", prep: ["📦 Suitcase handed to the front desk for Narita? (Yamato needs 2 days)", "Waybill: Narita Airport Terminal 1, flight UA868 on Thu Nov 5, pick up at the Yamato counter", "Keep OUT of the suitcase: 2 nights of clothes, a warm layer for the Fuji sunrise, passport, meds, chargers", "Anything you'll claim a tax refund on goes in your backpack, not the shipped suitcase", "SmartEX: Shin-Osaka ⇄ Hiroshima tickets (~10:30 AM out, ~7:15 PM back)", "Check tomorrow's Miyajima tide times", "Alarm ~9:00 AM — out as late as you want tonight"], rain: "Fushimi Inari in light rain = moody, empty gate photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Fushimi Inari + Uji → Osaka", city: "Kyoto → Osaka",
     theme: "torii", emoji: "🦊", deco: ["⛩️", "🦊", "🍵", "🐙", "🌆", "⚡"],
     kicker: "Day 8 · Thousand gates to neon canals",
     tagline: "Dawn torii, real matcha, Pokémon Café Osaka, and a holiday-eve night in Doyama-cho.",
@@ -759,6 +759,7 @@ const DAYS = [
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Your suitcase should be waiting. Check-in is from 3 PM.",
+          "Repack it for the flight now and hand it back to the front desk for Yamato to Narita (flight UA868, Thu Nov 5, Terminal 1, ~¥3,300). Then tonight and tomorrow morning are free.",
           "Nap before the long night — or see the Umeda Sky Building.",
         ],
         photo: "HEP FIVE's red Ferris wheel on the mall roof, shot from the street below (better after dark).",
@@ -800,7 +801,7 @@ const DAYS = [
           "It's in the middle of Doyama-cho (12-12 Doyamacho), about 5 minutes from your hotel.",
           "Open 24/7. A short stay is about ¥2,000–2,500, overnight about ¥2,500–3,000, with private rooms extra. Cash.",
           "Several floors: sauna, steam, baths, a dark room and cabins. Age limit is under 50, and ID may be checked, so bring your passport.",
-          "Tomorrow your suitcase ships at 8:15 AM. Pack it before you go out.",
+          "Your suitcase is already with the front desk and tomorrow's train isn't until 10:30, so stay out.",
         ],
         spicy: "Mostly local guys. Osaka guys are chattier than Tokyo guys, so a smile and “はじめまして” go a long way.",
       },
@@ -809,7 +810,7 @@ const DAYS = [
 
   /* ---------------- DAY 9 ---------------- */
   {
-    id: "d9", date: "2026-11-03", prep: ["Fuji hotel booked? Add it in Trip → Hotels (edit Fuji hotel)", "Tickets: Hikari (NOT Nozomi) Shin-Osaka → Mishima ~10:30, seat E + the Mishima → Kawaguchiko bus QR", "Check the Kawaguchiko live cam and forecast — flip the cloudy-Fuji plan only if you want to", "Warm layer at the top of the backpack", "Check out by ~9:30 AM"], rain: "The Miyajima ferry runs in rain, and the torii looks dramatic in mist. If it pours: spend longer indoors at the Hiroshima Peace Memorial Museum and Okonomimura.", home: {"after": "19:30", "note": "Check the last shinkansen from Hiroshima back to Shin-Osaka in SmartEX and don't cut it close — it's the only way home tonight."}, dow: "Tue", title: "Hiroshima + Miyajima", city: "Hiroshima",
+    id: "d9", date: "2026-11-03", prep: ["Fuji hotel booked? Add it in Trip → Hotels (edit Fuji hotel)", "Tickets: Hikari (NOT Nozomi) Shin-Osaka → Mishima ~10:30, seat E + the Mishima → Kawaguchiko bus QR", "Check the Kawaguchiko live cam and forecast — flip the cloudy-Fuji plan only if you want to", "Warm layer at the top of the backpack", "Check out by ~9:30 AM"], rain: "The Miyajima ferry runs in rain, and the torii looks dramatic in mist. If it pours: spend longer indoors at the Hiroshima Peace Memorial Museum and Okonomimura.", home: {"after": "20:00", "note": "Check the last shinkansen from Hiroshima back to Shin-Osaka in SmartEX and don't cut it close — it's the only way home tonight."}, dow: "Tue", title: "Hiroshima + Miyajima", city: "Hiroshima",
     theme: "sea", emoji: "🦌", deco: ["🦌", "🌊", "⛩️", "🍁", "🕊️", "🦪"],
     kicker: "Day 9 · Culture Day holiday",
     tagline: "A floating torii, wild deer, grilled oysters, and a quiet hour of remembrance at the Peace Park.",
@@ -817,24 +818,16 @@ const DAYS = [
     phrases: ["takkyubin", "konokippu", "doko", "oishii", "arigatou"],
     steps: [
       {
-        t: "08:15", title: "Ship your suitcase to Narita", ask: [{"jp": "成田空港の第1ターミナルに木曜日までに届きますか？", "ro": "Narita Kūkō no dai-ichi tāminaru ni mokuyōbi made ni todokimasu ka?", "en": "Will it reach Narita Terminal 1 by Thursday?", "hear": "deliver"}], say: ["takkyubin"], place: "",
-        how: [
-          "At the front desk: ship your suitcase to Narita Airport by Yamato. Give them flight UA868, Thu Nov 5, Terminal 1 (~¥3,300).",
-          "Keep a backpack with 2 nights of clothes + a warm layer for the Fuji sunrise.",
-        ],
-        tip: "Yamato needs it 2 days before your flight, so this has to happen this morning.",
-      },
-      {
-        t: "08:30", title: "Osaka → Hiroshima", ask: [{"jp": "広島行きの新幹線は何番線ですか？", "ro": "Hiroshima-iki no shinkansen wa nanbansen desu ka?", "en": "Which platform for the shinkansen to Hiroshima?", "hear": "bansen"}], say: ["nanban", "seki"], place: "Hiroshima Station",
+        t: "10:00", title: "Osaka → Hiroshima", ask: [{"jp": "広島行きの新幹線は何番線ですか？", "ro": "Hiroshima-iki no shinkansen wa nanbansen desu ka?", "en": "Which platform for the shinkansen to Hiroshima?", "hear": "bansen"}], say: ["nanban", "seki"], place: "Hiroshima Station",
         ride: [{"ln": "JA", "from": "A47", "to": "A46", "dir": "京都方面 (toward Kyoto) — JR Kyoto Line platforms", "type": "Any train stops at Shin-Osaka.", "wrong": "Next stop 塚本 Tsukamoto = wrong way (JR Kobe Line).", "min": 4, "exit": "Follow blue 新幹線 signs"}, {"ln": "SYS", "from": "SHO", "to": "HIJ", "dir": "博多・広島方面 (westbound)", "type": "Every Nozomi stops at Hiroshima.", "min": 85, "exit": "Follow signs to the JR Sanyo Line for Miyajima"}],
         how: [
           "JR Kyoto line from Osaka 1 stop to Shin-Osaka (~4 min).",
-          "~9:00 AM Nozomi to Hiroshima (~1 h 25) — tap the Suica linked to SmartEX.",
+          "~10:30 AM Nozomi to Hiroshima (~1 h 25) — tap the Suica linked to SmartEX.",
         ],
         snack: "Shin-Osaka ekiben: 551 Hōrai pork buns (Osaka's famous butaman) for the ride.",
       },
       {
-        t: "10:45", title: "To Miyajima", ask: [{"jp": "JRの宮島行きフェリーはどこですか？", "ro": "JR no Miyajima-iki ferī wa doko desu ka?", "en": "Where's the JR ferry to Miyajima?", "hear": "dir"}], ll: [34.3112, 132.3036], say: ["konokippu"], pic: "Miyajima ferry torii view", rx: "velvia", place: "Miyajimaguchi Ferry Terminal",
+        t: "12:15", title: "To Miyajima", ask: [{"jp": "JRの宮島行きフェリーはどこですか？", "ro": "JR no Miyajima-iki ferī wa doko desu ka?", "en": "Where's the JR ferry to Miyajima?", "hear": "dir"}], ll: [34.3112, 132.3036], say: ["konokippu"], pic: "Miyajima ferry torii view", rx: "velvia", place: "Miyajimaguchi Ferry Terminal",
         ride: [{"ln": "SL", "from": "HIR", "to": "MYJ", "dir": "岩国・大竹・南岩国方面 (westbound)", "type": "Local (普通) stops everywhere; Rapid also stops at Miyajimaguchi.", "wrong": "白市 Shiraichi / 西条 Saijō / 三原 Mihara on the sign, or next stop 天神川 Tenjingawa = wrong way.", "min": 27, "exit": "Walk 3 min to the JR ferry pier"}],
         how: [
           "JR Sanyo line (local toward Iwakuni) from Hiroshima to Miyajimaguchi (~30 min).",
@@ -844,7 +837,7 @@ const DAYS = [
         photo: "Stand on deck: the JR ferry swings close to the floating torii on the way over.",
       },
       {
-        t: "11:30", title: "Itsukushima Shrine + the deer", ask: [{"jp": "今日の満潮は何時ですか？", "ro": "Kyō no manchō wa nanji desu ka?", "en": "What time is high tide today?", "hear": "time"}], ll: [34.296, 132.3198], say: ["photoplease", "hitotsu", "oishii"], pic: "Miyajima torii men photo", rx: "velvia", place: "Itsukushima Shrine",
+        t: "13:00", title: "Itsukushima Shrine + the deer", ask: [{"jp": "今日の満潮は何時ですか？", "ro": "Kyō no manchō wa nanji desu ka?", "en": "What time is high tide today?", "hear": "time"}], ll: [34.296, 132.3198], say: ["photoplease", "hitotsu", "oishii"], pic: "Miyajima torii men photo", rx: "velvia", place: "Itsukushima Shrine",
         how: [
           "Check today's tide table: the torii “floats” near high tide; at low tide you can walk out to it.",
           "Walk the shrine's corridors over the water.",
@@ -855,7 +848,7 @@ const DAYS = [
         tip: "It's a national holiday — expect crowds. Eat early.",
       },
       {
-        t: "15:00", title: "Peace Memorial Park", ask: [{"jp": "原爆ドームまでお願いします", "ro": "Genbaku Dōmu made onegai shimasu", "en": "To the Atomic Bomb Dome, please (taxi)", "hear": "none"}], ll: [34.3955, 132.4536], say: ["taxi"], pic: "Atomic Bomb Dome river photo black and white", rx: "acros", place: "Atomic Bomb Dome, Hiroshima",
+        t: "16:15", title: "Peace Memorial Park", ask: [{"jp": "原爆ドームまでお願いします", "ro": "Genbaku Dōmu made onegai shimasu", "en": "To the Atomic Bomb Dome, please (taxi)", "hear": "none"}], ll: [34.3955, 132.4536], say: ["taxi"], pic: "Atomic Bomb Dome river photo black and white", rx: "acros", place: "Atomic Bomb Dome, Hiroshima",
         ride: [{"ln": "SL", "from": "MYJ", "to": "HIR", "dir": "広島・白市・西条方面 (toward Hiroshima)", "type": "Any train.", "wrong": "Next stop 前空 Maezora = wrong way.", "min": 27, "exit": "Taxi or tram to Genbaku-Dōmu-mae"}],
         how: [
           "Ferry back → JR to Hiroshima Station (~30 min).",
@@ -866,7 +859,7 @@ const DAYS = [
         tip: "Keep your voice low. Many visitors leave paper cranes at the Children's Peace Monument.",
       },
       {
-        t: "17:00", title: "Hiroshima okonomiyaki", ask: [{"jp": "一人ですが、座れますか？", "ro": "Hitori desu ga, suwaremasu ka?", "en": "Just me — can I sit?", "hear": "full"}], ll: [34.392, 132.461], say: ["hitori", "osusume", "gochisousama"], pic: "Hiroshima okonomiyaki griddle", rx: "reala", place: "Okonomimura, Hiroshima",
+        t: "18:00", title: "Hiroshima okonomiyaki", ask: [{"jp": "一人ですが、座れますか？", "ro": "Hitori desu ga, suwaremasu ka?", "en": "Just me — can I sit?", "hear": "full"}], ll: [34.392, 132.461], say: ["hitori", "osusume", "gochisousama"], pic: "Hiroshima okonomiyaki griddle", rx: "reala", place: "Okonomimura, Hiroshima",
         how: [
           "Walk ~15 min to Okonomimura near Hondōri: floors of tiny griddle counters.",
           "Sit at the counter and watch them build it.",
@@ -874,7 +867,7 @@ const DAYS = [
         snack: "Hiroshima-style okonomiyaki is layered with noodles (soba or udon) — order “soba-iri” with an egg on top. Eat it straight off the griddle with the little spatula.",
       },
       {
-        t: "18:00", title: "Shinkansen back to Osaka", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
+        t: "19:15", title: "Shinkansen back to Osaka", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
         ride: [{"ln": "SYS", "from": "HIJ", "to": "SHO", "dir": "新大阪・東京方面 (eastbound)", "type": "Every Nozomi stops at Shin-Osaka.", "min": 85, "exit": "Follow JR Kyoto Line signs"}, {"ln": "JA", "from": "A46", "to": "A47", "dir": "大阪・神戸方面 (toward Osaka)", "type": "Any train.", "wrong": "Next stop 東淀川 Higashi-Yodogawa = wrong way.", "min": 4, "exit": "Midosuji South Exit → hotel"}],
         how: [
           "Tram or taxi back to Hiroshima Station.",
