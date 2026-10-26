@@ -737,3 +737,25 @@ details.rainplan p { margin: 0; padding: 0 16px 14px; font-size: 14.5px; color: 
 .pi-box { flex: 0 0 auto; width: 22px; height: 22px; border-radius: 7px; border: 2px solid var(--muted); display: grid; place-items: center; font-weight: 900; font-size: 13px; margin-top: 1px; }
 .prep-item.on > span:last-child { text-decoration: line-through; opacity: .6; }
 .prep-item.on .pi-box { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+
+/* 🚆 Ride check */
+.rides { margin: 12px 0 2px; display: grid; gap: 10px; }
+.ride { border: 1.5px solid color-mix(in srgb, var(--c) 55%, var(--line)); border-left: 6px solid var(--c); border-radius: 14px; padding: 10px 12px; background: color-mix(in srgb, var(--c) 8%, var(--card)); }
+.ride-h { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 15px; }
+.ride-n { display: inline-grid; place-items: center; min-width: 24px; height: 24px; border-radius: 50%; background: var(--c); color: #fff; font-weight: 800; font-size: 13px; }
+.ride-jp { color: var(--muted); font-size: 14px; }
+.ride-min { margin-left: auto; font-size: 13px; color: var(--muted); }
+.ride-ft { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 8px 0 4px; font-weight: 700; font-size: 15px; }
+.ride-ft span { display: inline-flex; flex-direction: column; line-height: 1.15; }
+.ride-ft small, .ride-stops small { font-weight: 500; color: var(--muted); font-size: 12.5px; }
+.ride-arrow { font-size: 18px; color: var(--c); padding: 0 2px; }
+.stn { display: inline-grid; place-items: center; min-width: 40px; padding: 2px 5px; border: 2.5px solid var(--c); border-radius: 8px; background: #fff; color: #111; font: 800 12.5px/1.1 system-ui, sans-serif; letter-spacing: .02em; }
+.ride-row { display: flex; gap: 8px; font-size: 14.5px; margin-top: 5px; line-height: 1.35; }
+.ride-row.warn { color: color-mix(in srgb, #ff6b6b 70%, var(--ink)); }
+.ride-stops { margin-top: 8px; }
+.ride-stops summary { cursor: pointer; font-weight: 700; font-size: 14px; color: var(--c); filter: brightness(1.25); }
+.ride-stops ol { list-style: none; margin: 8px 0 0; padding: 0 0 0 6px; border-left: 3px solid var(--c); }
+.ride-stops li { display: flex; align-items: center; gap: 8px; padding: 4px 0 4px 10px; font-size: 14.5px; position: relative; }
+.ride-stops li span { font-weight: 600; }
+.ride-stops li em { margin-left: auto; font-style: normal; font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--c); color: #fff; }
+.ride-stops li.off { background: color-mix(in srgb, var(--c) 18%, transparent); border-radius: 8px; }

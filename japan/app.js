@@ -252,6 +252,32 @@
     return (upcoming || steps.find(s => !done[s.key]) || {}).key || null;
   }
 
+  /* 🚆 Ride check: line badge, from → to with station numbers, direction, wrong-way warning, collapsible stop list */
+  function legStops(l) {
+    const L = (typeof LINES !== "undefined" && LINES[l.ln]) || null;
+    if (!L) return [];
+    const st = L.stops, i = st.findIndex(x => x[0] === l.from), j = st.findIndex(x => x[0] === l.to);
+    if (i < 0 || j < 0) return [];
+    if (L.loop) return i <= j ? st.slice(i, j + 1) : st.slice(i).concat(st.slice(0, j + 1));
+    return i <= j ? st.slice(i, j + 1) : st.slice(j, i + 1).reverse();
+  }
+  function rideHtml(legs) {
+    return `<div class="rides">${legs.map((l, n) => {
+      const L = LINES[l.ln] || { name: l.ln, jp: "", color: "var(--accent)" };
+      const stops = legStops(l), first = stops[0], last = stops[stops.length - 1];
+      const code = c => /^[A-Z]{1,2}\d/.test(c) ? `<span class="stn" style="--c:${L.color}">${esc(c)}</span>` : "";
+      return `<div class="ride" style="--c:${L.color}">
+        <div class="ride-h"><span class="ride-n">${legs.length > 1 ? n + 1 : "🚆"}</span><b>${esc(L.name)}</b> <span class="ride-jp">${esc(L.jp)}</span>${l.min ? `<span class="ride-min">~${l.min} min</span>` : ""}</div>
+        ${first ? `<div class="ride-ft">${code(first[0])}<span>${esc(first[2])}<small>${esc(first[1])}</small></span><span class="ride-arrow">→</span>${code(last[0])}<span>${esc(last[2])}<small>${esc(last[1])}</small></span></div>` : ""}
+        <div class="ride-row">🧭 <span><b>Board:</b> ${esc(l.dir)}</span></div>
+        ${l.type ? `<div class="ride-row">🚉 <span>${esc(l.type)}</span></div>` : ""}
+        ${l.wrong ? `<div class="ride-row warn">⚠️ <span>${esc(l.wrong)}</span></div>` : ""}
+        ${stops.length > 1 ? `<details class="ride-stops"><summary>${stops.length - 1} stop${stops.length > 2 ? "s" : ""} · see every station</summary><ol>${stops.map((x, k) => `<li class="${k === 0 ? "on" : k === stops.length - 1 ? "off" : ""}">${code(x[0])}<span>${esc(x[2])}</span><small>${esc(x[1])}</small>${k === 0 ? `<em>board</em>` : k === stops.length - 1 ? `<em>get off</em>` : ""}</li>`).join("")}</ol></details>` : ""}
+        ${l.exit ? `<div class="ride-row">🚪 <span>${esc(l.exit)}</span></div>` : ""}
+      </div>`;
+    }).join("")}</div>`;
+  }
+
   function renderDay(id) {
     const idx = Math.max(0, DAYS.findIndex(d => d.id === id));
     const day = dv(DAYS[idx]);
@@ -330,6 +356,7 @@
         ${isNext ? `<span class="badge-next">Up next</span>` : ""}
         <div class="step-head"><div class="time">${fmt12(s.t)}${s.ll ? `<button class="pin-no" data-flyto="${s.key}" aria-label="Show on map">${pinNo[s.key]}</button>` : ""}</div><h3>${esc(s.title)}</h3></div>
         ${s.how && s.how.length ? `<ol class="how">${s.how.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}
+        ${s.ride ? rideHtml(s.ride) : ""}
         ${s.tip ? `<div class="tip"><b>Heads-up:</b> ${esc(s.tip)}</div>` : ""}
         ${askHere(s)}
         ${sayHere(s)}

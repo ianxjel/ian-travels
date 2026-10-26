@@ -91,6 +91,7 @@ const DAYS = [
       },
       {
         t: "17:00", title: "Train to Shinjuku", ask: [{"jp": "京急線の乗り場はどこですか？", "ro": "Keikyū-sen no noriba wa doko desu ka?", "en": "Where do I board the Keikyu Line?", "hear": "dir"}, {"jp": "山手線の新宿方面は何番線ですか？", "ro": "Yamanote-sen no Shinjuku hōmen wa nanbansen desu ka?", "en": "Which platform is the Yamanote Line toward Shinjuku?", "hear": "bansen"}], ll: [35.6913, 139.701], say: ["norikae", "nanban"], pic: "Shinjuku 3D cat billboard", rx: "neon", place: "Shinjuku Station East Exit",
+        ride: [{"ln": "KK", "from": "KK16", "to": "KK01", "dir": "品川・泉岳寺・押上・青砥・成田空港 方面 (toward Shinagawa — trains to Narita/Oshiage/Aoto/Sengakuji all go this way)", "type": "Any train type stops at Shinagawa. From Terminal 1·2 you start at KK17 — same direction.", "wrong": "横浜 Yokohama · 逗子・葉山 Zushi-Hayama · 三崎口 Misakiguchi · 浦賀 Uraga on the sign = wrong way. Get off at KK11 京急蒲田 Keikyū Kamata and switch to a train for 品川.", "min": 15, "exit": "Follow the green JR Yamanote Line signs"}, {"ln": "JY", "from": "JY25", "to": "JY17", "dir": "渋谷・新宿方面 (toward Shibuya / Shinjuku)", "type": "All Yamanote trains stop everywhere.", "wrong": "Next stop 高輪ゲートウェイ Takanawa Gateway (JY26) or 田町 Tamachi = wrong way. Get off and take the train on the other side.", "min": 20, "exit": "中央東口 Central East Exit"}],
         how: [
           "Follow the red “Keikyu Line” signs and tap Suica at the gate.",
           "Board any train whose sign says 品川 Shinagawa (Airport Limited Express is fastest, ~15 min).",
@@ -112,6 +113,7 @@ const DAYS = [
       },
       {
         t: "19:30", title: "Yakitori in Omoide Yokocho", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
+        ride: [{"ln": "M", "from": "M10", "to": "M08", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train stops at all three stations.", "wrong": "Next stop 四谷三丁目 Yotsuya-sanchōme (M11) = wrong way.", "min": 4, "exit": "西口 West Exit — Omoide Yokocho is along the tracks just north"}],
         how: [
           "Walk 1 min to Shinjuku-gyoemmae Station and take the Marunouchi line (red) 2 stops to Shinjuku.",
           "Follow signs for the West Exit (西口); the alley is just north of the exit, along the tracks.",
@@ -122,6 +124,7 @@ const DAYS = [
       },
       {
         t: "21:30", title: "Easy Ni-chome intro", night: true, ask: [{"jp": "アイイロカフェはどこですか？", "ro": "Aiiro Kafe wa doko desu ka?", "en": "Where's Aiiro Cafe?", "hear": "dir"}, {"jp": "外国人でも入れますか？", "ro": "Gaikokujin demo hairemasu ka?", "en": "Can foreigners come in?", "hear": "full"}], ll: [35.6905, 139.7077], say: ["cover", "kanpai", "w-profile", "namae"], rx: "neon", place: "Aiiro Cafe, Shinjuku 2-chome",
+        ride: [{"ln": "M", "from": "M08", "to": "M09", "dir": "池袋方面 (toward Ikebukuro)", "type": "Or just walk ~15 min east.", "wrong": "Next stop 西新宿 Nishi-shinjuku = wrong way.", "min": 2, "exit": "Exits C5–C8 come up right at Ni-chome"}],
         how: [
           "Head back east: Marunouchi line to Shinjuku-sanchome, or just walk ~15 min. Ni-chome is literally around your hotel.",
           "Aiiro Cafe is the open-air corner bar on Naka-dori — grab a drink and people-watch.",
@@ -162,6 +165,7 @@ const DAYS = [
       },
       {
         t: "07:00", title: "Shinjuku → DisneySea", ask: [{"jp": "京葉線はどっちですか？", "ro": "Keiyō-sen wa dotchi desu ka?", "en": "Which way is the Keiyo Line?", "hear": "dir"}, {"jp": "この電車は舞浜に止まりますか？", "ro": "Kono densha wa Maihama ni tomarimasu ka?", "en": "Does this train stop at Maihama?", "hear": "yesno"}], ll: [35.628, 139.886], say: ["norikae", "nanban"], pic: "Disney Resort Line Mickey window", rx: "pastel", place: "Tokyo DisneySea Station",
+        ride: [{"ln": "M", "from": "M10", "to": "M17", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train. No transfer.", "wrong": "Next stop 新宿三丁目 Shinjuku-sanchōme (M09) = wrong way.", "min": 17, "exit": "Follow the red/pink 京葉線 Keiyo Line signs (10–15 min walk underground)"}, {"ln": "JE", "from": "JE01", "to": "JE07", "dir": "蘇我・海浜幕張・新習志野・府中本町 方面 — every train from the Keiyo platforms at Tokyo goes your way", "type": "Local (各駅停車) and Rapid (快速) both stop at Maihama.", "wrong": "Tokyo is the end of the line, so you can't go the wrong way from here.", "min": 15, "exit": "South Exit → Resort Gateway Station"}, {"ln": "DR", "from": "RG", "to": "TDS", "dir": "Every monorail runs one way around the loop", "type": "¥300 — tap Suica. Mickey-shaped windows and straps!", "wrong": "", "min": 10, "exit": "Tokyo DisneySea Station → park gate"}],
         how: [
           "Walk 1 min to Shinjuku-gyoemmae Station. Marunouchi line (red) direct to Tokyo (~20 min, no transfer).",
           "At Tokyo Station, follow the red/pink “Keiyo Line” signs. It's a long 10–15 min underground walk with moving walkways — keep going.",
@@ -197,6 +201,7 @@ const DAYS = [
       },
       {
         t: "21:00", title: "Back to Shinjuku", ask: [{"jp": "新宿御苑前までの終電は何時ですか？", "ro": "Shinjuku-gyoenmae made no shūden wa nanji desu ka?", "en": "What time is the last train to Shinjuku-gyoemmae?", "hear": "time"}], ll: [35.6888, 139.71], say: ["oshiete"], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        ride: [{"ln": "DR", "from": "TDS", "to": "RG", "loop": true, "dir": "Next stop: Resort Gateway", "type": "¥300 — tap Suica.", "wrong": "", "min": 3, "exit": "Walk to JR Maihama Station"}, {"ln": "JE", "from": "JE07", "to": "JE01", "dir": "東京方面 (toward Tokyo)", "type": "Any train.", "wrong": "Next stop 新浦安 Shin-urayasu (JE08) = wrong way.", "min": 15, "exit": "Long walk → Marunouchi Line"}, {"ln": "M", "from": "M17", "to": "M10", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train.", "wrong": "Next stop 大手町 Ōtemachi = wrong way.", "min": 17, "exit": "Your hotel is 1 min from Exit 1"}],
         how: [
           "Monorail to Resort Gateway → Keiyo line to Tokyo → long walk → Marunouchi line to Shinjuku-gyoemmae (~1 h total).",
           "Quick costume change at the hotel.",
@@ -236,6 +241,7 @@ const DAYS = [
     steps: [
       {
         t: "09:30", title: "Shinjuku → teamLab Planets", ask: [{"jp": "チームラボプラネッツはどっちですか？", "ro": "Chīmu Rabo Puranettsu wa dotchi desu ka?", "en": "Which way to teamLab Planets?", "hear": "dir"}, {"jp": "靴と荷物はどこに置きますか？", "ro": "Kutsu to nimotsu wa doko ni okimasu ka?", "en": "Where do I leave my shoes and bags?", "hear": "dir"}], ll: [35.6492, 139.7898], say: ["yoyaku", "norikae"], pic: "teamLab Planets men outfit photo", rx: "reala", place: "teamLab Planets TOKYO, Toyosu",
+        ride: [{"ln": "M", "from": "M10", "to": "M16", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 14, "exit": "Walk underground to Ginza-itchōme (Yurakucho Line, ~5 min)"}, {"ln": "Y", "from": "Y19", "to": "Y22", "dir": "新木場方面 (toward Shin-kiba)", "type": "Every train.", "wrong": "Next stop 有楽町 Yūrakuchō (Y18) = wrong way.", "min": 6, "exit": "Follow ゆりかもめ Yurikamome signs"}, {"ln": "U", "from": "U16", "to": "U15", "dir": "新橋方面 (toward Shimbashi) — Toyosu is the end, so any train", "type": "Driverless — front car = best view.", "wrong": "", "min": 2, "exit": "teamLab Planets is a 1-min walk"}],
         how: [
           "Marunouchi line from Shinjuku-gyoemmae to Ginza, walk to Ginza-itchōme and take the Yūrakuchō line to Toyosu (or just follow Google Maps).",
           "Switch to the Yurikamome line 1 stop to Shin-Toyosu; teamLab is a 1-min walk.",
@@ -246,6 +252,7 @@ const DAYS = [
       },
       {
         t: "12:30", title: "Odaiba: Unicorn Gundam", ask: [{"jp": "ガンダムの変身は何時ですか？", "ro": "Gandamu no henshin wa nanji desu ka?", "en": "What time does the Gundam transform?", "hear": "time"}], ll: [35.6251, 139.7756], say: ["photoplease", "hitotsu"], pic: "Unicorn Gundam Odaiba photo low angle", rx: "classic", place: "DiverCity Tokyo Plaza, Odaiba",
+        ride: [{"ln": "U", "from": "U15", "to": "U07", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train. Sit up front!", "wrong": "Next stop 豊洲 Toyosu (U16) = wrong way.", "min": 20, "exit": "DiverCity Tokyo Plaza is a 5-min walk"}],
         how: [
           "Yurikamome line from Shin-Toyosu to Daiba (~20 min). Sit in the front car — it's driverless, so you get the windshield view.",
           "The life-size Unicorn Gundam stands outside DiverCity Tokyo Plaza; it transforms at set times.",
@@ -264,6 +271,7 @@ const DAYS = [
       },
       {
         t: "17:30", title: "Back to Shinjuku + dinner", quest: "⚔️ Attack on Titan “Guren no Yumiya” is screening in SCREEN X / 4DX (TOHO Cinemas Ikebukuro and others) — the first-week Eren art-board gift ends tomorrow, Oct 29.", ll: [35.6896, 139.7006], say: ["hitori", "oshiete"], place: "Shinjuku Station",
+        ride: [{"ln": "U", "from": "U07", "to": "U01", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train.", "wrong": "Next stop 東京国際クルーズターミナル (U08) = wrong way.", "min": 15, "exit": "Follow 銀座線 Ginza Line (orange) signs"}, {"ln": "G", "from": "G08", "to": "G05", "dir": "渋谷方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 銀座 Ginza (G09) = wrong way.", "min": 6, "exit": "Cross the platform at Akasaka-mitsuke to the red Marunouchi Line"}, {"ln": "M", "from": "M13", "to": "M10", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train.", "wrong": "Next stop 国会議事堂前 (M14) = wrong way.", "min": 6, "exit": "Back at your hotel station"}],
         how: [
           "Yurikamome from Daiba to Shimbashi, then the Ginza line to Akasaka-mitsuke and the Marunouchi line to Shinjuku-gyoemmae (~45 min) — or just follow Google Maps.",
           "Easy night: Disneyland tomorrow starts early.",
@@ -301,6 +309,7 @@ const DAYS = [
     steps: [
       {
         t: "07:00", title: "Shinjuku → Maihama", ask: [{"jp": "ディズニーランドの入口はどっちですか？", "ro": "Dizunīrando no iriguchi wa dotchi desu ka?", "en": "Which way to the Disneyland entrance?", "hear": "dir"}], ll: [35.6346, 139.8808], say: ["norikae", "atatame"], place: "Tokyo Disneyland",
+        ride: [{"ln": "M", "from": "M10", "to": "M17", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 17, "exit": "Follow the red/pink 京葉線 Keiyo Line signs (long walk)"}, {"ln": "JE", "from": "JE01", "to": "JE07", "dir": "Any train from the Keiyo platforms", "type": "Local and Rapid both stop at Maihama.", "wrong": "", "min": 15, "exit": "South Exit → Disneyland gate is a 5-min walk"}],
         how: [
           "Same as Tuesday: Marunouchi line from Shinjuku-gyoemmae to Tokyo (~20 min).",
           "Long walk to the Keiyo line → Maihama (~15 min).",
@@ -334,6 +343,7 @@ const DAYS = [
       },
       {
         t: "21:00", title: "Easy night", night: true, ll: [35.6906, 139.7082], say: ["hitori", "nama", "kakkoii"], rx: "neon", spicy: "Dragon Men's go-gos are the muscle show, and Eagle is the bear-and-daddy room. Pick your vibe 😏", place: "Dragon Men, Shinjuku 2-chome",
+        ride: [{"ln": "JE", "from": "JE07", "to": "JE01", "dir": "東京方面 (toward Tokyo)", "type": "Any train.", "wrong": "Next stop 新浦安 (JE08) = wrong way.", "min": 15, "exit": "Long walk → Marunouchi Line"}, {"ln": "M", "from": "M17", "to": "M09", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train. Get off one stop past your hotel for Ni-chome.", "wrong": "Next stop 大手町 = wrong way.", "min": 19, "exit": "Exits C5–C8 come up right at Ni-chome"}],
         how: [
           "Train back the same way (~1 h).",
           "One drink at Dragon Men (go-go dancers, very foreigner-friendly) or Eagle Tokyo.",
@@ -1684,3 +1694,37 @@ const MERCH_SEEDS = [
   { item: "Fuji-shaped sweets / regional KitKats", where: "Kawaguchiko + Narita", day: "d10" },
   { item: "Konbini snack haul for home", where: "Any konbini", day: "d11" },
 ];
+
+/* ---------------- Train lines + station numbers (for the 🚆 Ride check boxes) ----------------
+   stops are listed in line order; a leg's stops are sliced between its from/to codes. */
+const LINES = {
+  KK: { name: "Keikyu Line", jp: "京急線", color: "#e5171f", stops: [
+    ["KK01", "品川", "Shinagawa"], ["KK02", "北品川", "Kita-shinagawa"], ["KK03", "新馬場", "Shimbamba"], ["KK04", "青物横丁", "Aomono-yokochō"],
+    ["KK05", "鮫洲", "Samezu"], ["KK06", "立会川", "Tachiaigawa"], ["KK07", "大森海岸", "Ōmorikaigan"], ["KK08", "平和島", "Heiwajima"],
+    ["KK09", "大森町", "Ōmorimachi"], ["KK10", "梅屋敷", "Umeyashiki"], ["KK11", "京急蒲田", "Keikyū Kamata"], ["KK12", "糀谷", "Kōjiya"],
+    ["KK13", "大鳥居", "Ōtorii"], ["KK14", "穴守稲荷", "Anamori-inari"], ["KK15", "天空橋", "Tenkūbashi"], ["KK16", "羽田空港第3ターミナル", "Haneda Airport Terminal 3"],
+    ["KK17", "羽田空港第1・第2ターミナル", "Haneda Airport Terminal 1·2"]] },
+  JY: { name: "JR Yamanote Line", jp: "山手線", color: "#80c241", stops: [
+    ["JY13", "池袋", "Ikebukuro"], ["JY14", "目白", "Mejiro"], ["JY15", "高田馬場", "Takadanobaba"], ["JY16", "新大久保", "Shin-Ōkubo"],
+    ["JY17", "新宿", "Shinjuku"], ["JY18", "代々木", "Yoyogi"], ["JY19", "原宿", "Harajuku"], ["JY20", "渋谷", "Shibuya"],
+    ["JY21", "恵比寿", "Ebisu"], ["JY22", "目黒", "Meguro"], ["JY23", "五反田", "Gotanda"], ["JY24", "大崎", "Ōsaki"], ["JY25", "品川", "Shinagawa"]] },
+  M: { name: "Marunouchi Line", jp: "丸ノ内線", color: "#f62e36", stops: [
+    ["M08", "新宿", "Shinjuku"], ["M09", "新宿三丁目", "Shinjuku-sanchōme"], ["M10", "新宿御苑前", "Shinjuku-gyoemmae"], ["M11", "四谷三丁目", "Yotsuya-sanchōme"],
+    ["M12", "四ツ谷", "Yotsuya"], ["M13", "赤坂見附", "Akasaka-mitsuke"], ["M14", "国会議事堂前", "Kokkai-gijidōmae"], ["M15", "霞ケ関", "Kasumigaseki"],
+    ["M16", "銀座", "Ginza"], ["M17", "東京", "Tokyo"]] },
+  JE: { name: "JR Keiyo Line", jp: "京葉線", color: "#c9242f", stops: [
+    ["JE01", "東京", "Tokyo"], ["JE02", "八丁堀", "Hatchōbori"], ["JE03", "越中島", "Etchūjima"], ["JE04", "潮見", "Shiomi"],
+    ["JE05", "新木場", "Shin-kiba"], ["JE06", "葛西臨海公園", "Kasai-rinkai-kōen"], ["JE07", "舞浜", "Maihama"]] },
+  DR: { name: "Disney Resort Line", jp: "ディズニーリゾートライン", color: "#2fa9e0", loop: true, stops: [
+    ["RG", "リゾートゲートウェイ", "Resort Gateway"], ["TDL", "東京ディズニーランド・ステーション", "Tokyo Disneyland Station"],
+    ["BS", "ベイサイド", "Bayside"], ["TDS", "東京ディズニーシー・ステーション", "Tokyo DisneySea Station"]] },
+  G: { name: "Ginza Line", jp: "銀座線", color: "#ff9500", stops: [
+    ["G05", "赤坂見附", "Akasaka-mitsuke"], ["G06", "溜池山王", "Tameike-sannō"], ["G07", "虎ノ門", "Toranomon"], ["G08", "新橋", "Shimbashi"], ["G09", "銀座", "Ginza"]] },
+  Y: { name: "Yurakucho Line", jp: "有楽町線", color: "#c1a470", stops: [
+    ["Y18", "有楽町", "Yūrakuchō"], ["Y19", "銀座一丁目", "Ginza-itchōme"], ["Y20", "新富町", "Shintomichō"], ["Y21", "月島", "Tsukishima"], ["Y22", "豊洲", "Toyosu"]] },
+  U: { name: "Yurikamome", jp: "ゆりかもめ", color: "#1b8fd1", stops: [
+    ["U01", "新橋", "Shimbashi"], ["U02", "汐留", "Shiodome"], ["U03", "竹芝", "Takeshiba"], ["U04", "日の出", "Hinode"], ["U05", "芝浦ふ頭", "Shibaura-futō"],
+    ["U06", "お台場海浜公園", "Odaiba-kaihinkōen"], ["U07", "台場", "Daiba"], ["U08", "東京国際クルーズターミナル", "Tokyo Int'l Cruise Terminal"], ["U09", "テレコムセンター", "Telecom Center"],
+    ["U10", "青海", "Aomi"], ["U11", "東京ビッグサイト", "Tokyo Big Sight"], ["U12", "有明", "Ariake"], ["U13", "有明テニスの森", "Ariake-tennis-no-mori"],
+    ["U14", "市場前", "Shijō-mae"], ["U15", "新豊洲", "Shin-toyosu"], ["U16", "豊洲", "Toyosu"]] },
+};
