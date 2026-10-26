@@ -1137,6 +1137,75 @@ const PHRASES = [
   { id: "w-profile", cat: "Scene words", jp: "ラテン系のガチムチです。アメリカから旅行中です。", ro: "Raten-kei no gachimuchi desu. Amerika kara ryokō-chū desu.", en: "I'm a Latino gachimuchi guy, visiting from the US.", say: "rah-ten-kay noh gah-chee-moo-chee dess. ah-meh-ree-kah kah-rah ryoh-koh-choo dess", note: "Paste it into your 9Monsters/Grindr bio, or use it as your bar intro. Add ヒゲ (beard) and 体毛あり (hairy) as tags." },
   { id: "w-nichome", cat: "Scene words", jp: "二丁目", ro: "Ni-chōme", en: "Tokyo's gay district (Shinjuku 2-chōme)", say: "nee-choh-meh" },
 
+  // App chat 📱 — Grindr / 9Monsters / Jack'd. Every card has a 📋 button: copy, then paste into the chat.
+  // Your bio
+  { id: "a-bio", cat: "App chat 📱", sub: "Your bio", jp: "旅行で日本来てます！10/31まで東京🗼 遊べる人・飲める人募集〜 日本語ちょっとだけ😅 英語OK", ro: "Ryokō de Nihon kitemasu! Jūgatsu sanjūichi-nichi made Tōkyō. Asoberu hito, nomeru hito boshū~ Nihongo chotto dake. Eigo ōkē", en: "Visiting Japan! In Tokyo till 10/31. Looking for guys to hang out and drink with. Only a little Japanese, English OK", say: "ryoh-koh deh nee-hohn kee-teh-mahs", copy: "Visiting Japan 🇯🇵 in Tokyo till 10/31\nLooking for friends, drinks & fun 😉\n旅行で日本来てます！10/31まで東京🗼\n遊べる人・飲める人募集〜 日本語ちょっとだけ😅 英語OK", note: "📋 copies the full English + Japanese bio, ready to paste. 遊べる人 (people to play with) reads friendly-but-open on gay apps." },
+  { id: "a-bio-friends", cat: "App chat 📱", sub: "Your bio", jp: "旅行で日本に来てます🇯🇵 友達と楽しいこと探してます！", ro: "Ryokō de Nihon ni kitemasu. Tomodachi to tanoshii koto sagashitemasu!", en: "Visiting Japan — looking for friends and fun things to do!", say: "toh-moh-dah-chee toh tah-noh-shee koh-toh sah-gahsh-teh-mahs", note: "The softer, friends-first version." },
+  { id: "a-bio-kyoto", cat: "App chat 📱", sub: "Your bio", jp: "旅行中！11/1は京都、そのあと11/3まで大阪にいます", ro: "Ryokō-chū! Jūichigatsu tsuitachi wa Kyōto, sono ato jūichigatsu mikka made Ōsaka ni imasu", en: "Traveling! Kyoto on 11/1, then Osaka until 11/3", say: "ryoh-koh-choo! … oh-sah-kah nee ee-mahs", note: "Swap this in when you leave Tokyo — the grid changes with you." },
+  { id: "a-bio-doyama", cat: "App chat 📱", sub: "Your bio", jp: "堂山で飲める人募集〜", ro: "Dōyama de nomeru hito boshū~", en: "Looking for someone to drink with in Doyama", say: "doh-yah-mah deh noh-meh-roo hee-toh boh-shoo", note: "Doyama-cho is Osaka's gay bar area, ~5 min from your hotel." },
+  { id: "a-bio-lang", cat: "App chat 📱", sub: "Your bio", jp: "日本語は少しだけ。英語OK", ro: "Nihongo wa sukoshi dake. Eigo ōkē", en: "Only a little Japanese. English OK", say: "nee-hohn-goh wah soo-koh-shee dah-keh. ay-goh oh-kay" },
+
+  // Openers
+  { id: "a-yoroshiku", cat: "App chat 📱", sub: "Openers", jp: "よろしく！", ro: "Yoroshiku!", en: "Hey! (nice to e-meet you)", say: "yoh-roh-shee-koo", note: "The standard first message on Japanese apps — friendlier than a bare “hi”." },
+  { id: "a-hajime", cat: "App chat 📱", sub: "Openers", jp: "はじめまして！旅行で来てます", ro: "Hajimemashite! Ryokō de kitemasu", en: "Hi! I'm here on a trip", say: "hah-jee-meh-mahsh-teh! ryoh-koh deh kee-teh-mahs" },
+  { id: "a-nani", cat: "App chat 📱", sub: "Openers", jp: "何探してる？", ro: "Nani sagashiteru?", en: "What are you looking for?", say: "nah-nee sah-gahsh-teh-roo" },
+  { id: "a-mokuteki", cat: "App chat 📱", sub: "Openers", jp: "何目的？", ro: "Nani mokuteki?", en: "What are you on here for?", say: "nah-nee moh-koo-teh-kee", note: "Answers you'll get: 友達 (friends), 飲み (drinks), 恋人 (boyfriend), ヤリ目 (hookups)." },
+  { id: "a-nanzai", cat: "App chat 📱", sub: "Openers", jp: "何歳？", ro: "Nansai?", en: "How old are you?", say: "nahn-sai" },
+  { id: "a-kao", cat: "App chat 📱", sub: "Openers", jp: "顔写真ある？", ro: "Kao shashin aru?", en: "Got a face pic?", say: "kah-oh shah-sheen ah-roo", note: "Lots of Japanese profiles are faceless (顔出しNG) — asking is totally normal." },
+  { id: "a-shashin", cat: "App chat 📱", sub: "Openers", jp: "他の写真ある？", ro: "Hoka no shashin aru?", en: "More pics?", say: "hoh-kah noh shah-sheen ah-roo" },
+  { id: "a-koukan", cat: "App chat 📱", sub: "Openers", jp: "写真交換しない？", ro: "Shashin kōkan shinai?", en: "Want to swap pics?", say: "shah-sheen koh-kahn shee-nai" },
+  { id: "a-osusume", cat: "App chat 📱", sub: "Openers", jp: "おすすめのバーある？", ro: "Osusume no bā aru?", en: "Any bars you'd recommend?", say: "oh-soo-soo-meh noh bah ah-roo", note: "Great friends-first opener — locals love giving tips." },
+  { id: "a-annai", cat: "App chat 📱", sub: "Openers", jp: "二丁目を案内してくれない？", ro: "Ni-chōme o annai shite kurenai?", en: "Want to show me around Ni-chome?", say: "nee-choh-meh oh ahn-nai shteh koo-reh-nai" },
+
+  // Compliments
+  { id: "a-eroi", cat: "App chat 📱", sub: "Compliments", jp: "エロいね", ro: "Eroi ne", en: "You're sexy", say: "eh-roy neh" },
+  { id: "a-kakkoii", cat: "App chat 📱", sub: "Compliments", jp: "めっちゃかっこいい！", ro: "Metcha kakkoii!", en: "You're so hot!", say: "met-chah kahk-koh-ee" },
+  { id: "a-taipu", cat: "App chat 📱", sub: "Compliments", jp: "めっちゃタイプ", ro: "Metcha taipu", en: "You're totally my type", say: "met-chah tai-poo" },
+  { id: "a-karada", cat: "App chat 📱", sub: "Compliments", jp: "いい体してるね", ro: "Ii karada shiteru ne", en: "Nice body", say: "ee kah-rah-dah shteh-roo neh" },
+  { id: "a-kawaii", cat: "App chat 📱", sub: "Compliments", jp: "かわいいね", ro: "Kawaii ne", en: "You're cute", say: "kah-wai-ee neh" },
+
+  // Making plans
+  { id: "a-konya", cat: "App chat 📱", sub: "Making plans", jp: "今夜飲みに行く？", ro: "Kon'ya nomi ni iku?", en: "Are you going out tonight?", say: "kohn-yah noh-mee nee ee-koo" },
+  { id: "a-nichome", cat: "App chat 📱", sub: "Making plans", jp: "今日二丁目行く？", ro: "Kyō Ni-chōme iku?", en: "Going to Ni-chome today?", say: "kyoh nee-choh-meh ee-koo" },
+  { id: "a-nomou", cat: "App chat 📱", sub: "Making plans", jp: "一緒に飲もうよ", ro: "Issho ni nomō yo", en: "Let's grab a drink together", say: "ees-shoh nee noh-moh yoh" },
+  { id: "a-doko", cat: "App chat 📱", sub: "Making plans", jp: "今どこ？", ro: "Ima doko?", en: "Where are you now?", say: "ee-mah doh-koh" },
+  { id: "a-aeru", cat: "App chat 📱", sub: "Making plans", jp: "今から会える？", ro: "Ima kara aeru?", en: "Want to meet now?", say: "ee-mah kah-rah ah-eh-roo" },
+  { id: "a-nanji", cat: "App chat 📱", sub: "Making plans", jp: "何時がいい？", ro: "Nanji ga ii?", en: "What time works?", say: "nahn-jee gah ee" },
+  { id: "a-machiawase", cat: "App chat 📱", sub: "Making plans", jp: "どこで待ち合わせる？", ro: "Doko de machiawaseru?", en: "Where should we meet?", say: "doh-koh deh mah-chee-ah-wah-seh-roo" },
+  { id: "a-kafe", cat: "App chat 📱", sub: "Making plans", jp: "最初はバーかカフェで会おう", ro: "Saisho wa bā ka kafe de aō", en: "Let's meet at a bar or café first", say: "sai-shoh wah bah kah kah-feh deh ah-oh", note: "Smart first meet with anyone new — public, easy to leave." },
+  { id: "a-fuku", cat: "App chat 📱", sub: "Making plans", jp: "何着てる？", ro: "Nani kiteru?", en: "What are you wearing? (so I can spot you)", say: "nah-nee kee-teh-roo" },
+  { id: "a-tsuita", cat: "App chat 📱", sub: "Making plans", jp: "着いたよ！", ro: "Tsuita yo!", en: "I'm here!", say: "tsoo-ee-tah yoh" },
+  { id: "a-okureru", cat: "App chat 📱", sub: "Making plans", jp: "ごめん、10分遅れる", ro: "Gomen, juppun okureru", en: "Sorry, running 10 min late", say: "goh-men, joop-poon oh-koo-reh-roo" },
+  { id: "a-line", cat: "App chat 📱", sub: "Making plans", jp: "LINEかインスタ交換しない？", ro: "LINE ka insuta kōkan shinai?", en: "Want to swap LINE or Insta?", say: "line kah een-soo-tah koh-kahn shee-nai" },
+
+  // Hosting
+  { id: "a-basho", cat: "App chat 📱", sub: "Hosting", jp: "場所ある？", ro: "Basho aru?", en: "Do you host?", say: "bah-shoh ah-roo", note: "On profiles: 場所あり = can host, 場所なし = can't host." },
+  { id: "a-basho-aru", cat: "App chat 📱", sub: "Hosting", jp: "場所あるよ", ro: "Basho aru yo", en: "I can host", say: "bah-shoh ah-roo yoh", note: "Your hotels are booked for 1 — register a visitor at the front desk first (some charge a guest fee)." },
+  { id: "a-basho-nai", cat: "App chat 📱", sub: "Hosting", jp: "ごめん、場所ない", ro: "Gomen, basho nai", en: "Sorry, I can't host", say: "goh-men, bah-shoh nai" },
+  { id: "a-rabuho", cat: "App chat 📱", sub: "Hosting", jp: "ラブホ行く？", ro: "Rabuho iku?", en: "Want to go to a love hotel?", say: "rah-boo-hoh ee-koo", note: "Love hotels rent rooms by 休憩 (a few hours). Plenty in Kabukicho and Doyama — a local will know which ones are gay-friendly." },
+  { id: "a-chikai", cat: "App chat 📱", sub: "Hosting", jp: "近いね！", ro: "Chikai ne!", en: "You're close!", say: "chee-kai neh" },
+
+  // Into it
+  { id: "a-tachiuke", cat: "App chat 📱", sub: "Into it", jp: "タチ？ウケ？", ro: "Tachi? Uke?", en: "Top or bottom?", say: "tah-chee? oo-keh?" },
+  { id: "a-tachi", cat: "App chat 📱", sub: "Into it", jp: "タチです", ro: "Tachi desu", en: "I'm a top", say: "tah-chee dess" },
+  { id: "a-uke", cat: "App chat 📱", sub: "Into it", jp: "ウケです", ro: "Uke desu", en: "I'm a bottom", say: "oo-keh dess" },
+  { id: "a-riba", cat: "App chat 📱", sub: "Into it", jp: "リバです", ro: "Riba desu", en: "I'm vers", say: "ree-bah dess" },
+  { id: "a-gomu", cat: "App chat 📱", sub: "Into it", jp: "ゴム使う？", ro: "Gomu tsukau?", en: "Do you use condoms?", say: "goh-moo tsoo-kow" },
+  { id: "a-safe", cat: "App chat 📱", sub: "Into it", jp: "セーフでお願い", ro: "Sēfu de onegai", en: "Condoms only, please", say: "seh-foo deh oh-neh-gai", note: "セーフ (safe) means with a condom on Japanese profiles." },
+
+  // Saying no + staying safe
+  { id: "a-pasu", cat: "App chat 📱", sub: "Saying no + staying safe", jp: "ごめん、今日はパスで", ro: "Gomen, kyō wa pasu de", en: "Sorry, I'll pass today", say: "goh-men, kyoh wah pah-soo deh" },
+  { id: "a-taipujanai", cat: "App chat 📱", sub: "Saying no + staying safe", jp: "ごめん、タイプじゃないかも", ro: "Gomen, taipu ja nai kamo", en: "Sorry, I don't think you're my type", say: "goh-men, tai-poo jah nai kah-moh", note: "かも (maybe) keeps it gentle." },
+  { id: "a-kusuri", cat: "App chat 📱", sub: "Saying no + staying safe", jp: "クスリはなしで", ro: "Kusuri wa nashi de", en: "No drugs", say: "koo-soo-ree wah nah-shee deh", note: "Japan's drug laws are extremely strict, even for tourists — block anyone who brings it up." },
+  { id: "a-okane", cat: "App chat 📱", sub: "Saying no + staying safe", jp: "お金の話ならパス", ro: "Okane no hanashi nara pasu", en: "If this is about money, I'll pass", say: "oh-kah-neh noh hah-nah-shee nah-rah pah-soo", note: "For anyone asking for money, gift cards or a “bar” you have to pay to enter." },
+
+  // Words you'll see on profiles
+  { id: "a-w-yarimoku", cat: "App chat 📱", sub: "Words you'll see on profiles", jp: "ヤリ目", ro: "Yarimoku", en: "Here for hookups", say: "yah-ree-moh-koo" },
+  { id: "a-w-nomitomo", cat: "App chat 📱", sub: "Words you'll see on profiles", jp: "飲み友募集", ro: "Nomitomo boshū", en: "Looking for drinking buddies", say: "noh-mee-toh-moh boh-shoo" },
+  { id: "a-w-kaodashi", cat: "App chat 📱", sub: "Words you'll see on profiles", jp: "顔出しNG", ro: "Kaodashi enujī", en: "Won't show face pics publicly", say: "kah-oh-dah-shee en-oo-jee" },
+  { id: "a-w-toshiue", cat: "App chat 📱", sub: "Words you'll see on profiles", jp: "年上好き ／ 年下好き", ro: "Toshiue zuki / Toshishita zuki", en: "Into older guys / Into younger guys", say: "toh-shee-oo-eh zoo-kee / toh-shee-shtah zoo-kee" },
+  { id: "a-w-stats", cat: "App chat 📱", sub: "Words you'll see on profiles", jp: "175/80/30", ro: "", en: "Height (cm) / weight (kg) / age", say: "", note: "Japanese profiles list stats in this order. 175 cm ≈ 5'9\", 80 kg ≈ 176 lb." },
+
   // Emergency
   { id: "tasukete", cat: "Emergency", jp: "助けて！", ro: "Tasukete!", en: "Help!", say: "tah-soo-keh-teh" },
   { id: "byouin", cat: "Emergency", jp: "病院に連れて行ってください", ro: "Byōin ni tsurete itte kudasai", en: "Please take me to a hospital", say: "byoh-een nee tsoo-reh-teh eet-teh koo-dah-sai" },

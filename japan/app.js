@@ -12,7 +12,8 @@
   const esc = (s = "") => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   /* ---------- Family-friendly mode ---------- */
-  const SPICY_CATS = ["Flirting 💋", "Scene words"];
+  const SPICY_CATS = ["Flirting 💋", "Scene words", "App chat 📱"];
+  const APP_CAT = "App chat 📱";
   const isSafe = () => !!store.get("safe", false);
   const okPhrase = p => p && (!isSafe() || !SPICY_CATS.includes(p.cat));
   const dv = day => (isSafe() && day.safe ? { ...day, ...day.safe } : day);
@@ -746,11 +747,12 @@
       <div class="row">
         <div class="txt">
           <div class="jp">${esc(p.jp)}</div>
-          <div class="ro">${esc(p.ro)}</div>
+          ${p.ro ? `<div class="ro">${esc(p.ro)}</div>` : ""}
           <div class="en">${esc(p.en)}</div>
-          <div class="say">🗣️ ${esc(p.say)}</div>
+          ${p.say ? `<div class="say">🗣️ ${esc(p.say)}</div>` : ""}
         </div>
-        <div style="display:grid;gap:8px">
+        <div style="display:grid;gap:8px;${p.copy || p.cat === APP_CAT ? "grid-template-columns:repeat(2,42px);align-content:start" : ""}">
+          ${p.copy || p.cat === APP_CAT ? `<button class="icon-btn" data-clip="${esc(p.copy || p.jp)}" aria-label="Copy to paste in a chat">📋</button>` : ""}
           <button class="icon-btn" data-speak="${esc(p.jp)}" aria-label="Play pronunciation">🔊</button>
           <button class="icon-btn" data-show="${p.id}" aria-label="Show big to staff">⤢</button>
         </div>
@@ -778,10 +780,12 @@
     const q = phraseQ.trim().toLowerCase();
     const list = PHRASES.filter(okPhrase).filter(p => (phraseCat === "All" || p.cat === phraseCat) &&
       (!q || [p.jp, p.ro, p.en, p.note || ""].join(" ").toLowerCase().includes(q)));
-    let html = "", lastCat = "";
+    let html = "", lastCat = "", lastSub = "";
     list.forEach(p => {
-      if (phraseCat === "All" && !q && p.cat !== lastCat) { html += `<div class="cat-h">${esc(p.cat)}</div>`; lastCat = p.cat; }
-      else if (!html) html += `<div style="height:8px"></div>`;
+      if (phraseCat === "All" && !q && p.cat !== lastCat) { html += `<div class="cat-h">${esc(p.cat)}</div>`; lastCat = p.cat; if (p.cat === APP_CAT) html += `<p class="foot app-tip">📋 copies the Japanese — paste it straight into Grindr. To read a reply, long-press → Copy, then paste into Google Translate or DeepL.</p>`; }
+      else if (!html) html += phraseCat === APP_CAT && !q ? `<p class="foot app-tip">📋 copies the Japanese — paste it straight into Grindr. To read a reply, long-press → Copy, then paste into Google Translate or DeepL.</p>` : `<div style="height:8px"></div>`;
+      if (!q && p.sub && p.sub !== lastSub) html += `<div class="sub-h">${esc(p.sub)}</div>`;
+      lastSub = p.sub || "";
       html += phraseCard(p);
     });
     $("#plist").innerHTML = html || `<p class="foot">No match — try another word.</p>`;
@@ -1113,7 +1117,7 @@
   document.addEventListener("click", e => {
     const tile = e.target.closest("[data-tile]");
     if (tile) { $$(".tile").forEach(x => x.classList.toggle("picked", x === tile)); return; }
-    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
+    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-clip],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
     if (t.dataset.prep) {
@@ -1186,6 +1190,10 @@
       return;
     }
     if (t.dataset.taxi) { showHotel(hotel(t.dataset.taxi)); return; }
+    if (t.dataset.clip) {
+      navigator.clipboard?.writeText(t.dataset.clip).then(() => toast("Copied — paste it in the chat 📋"), () => toast("Couldn't copy"));
+      return;
+    }
     if (t.dataset.copy) {
       navigator.clipboard?.writeText(t.dataset.copy).then(() => toast("Address copied 📋"), () => toast("Couldn't copy"));
       return;
