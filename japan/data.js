@@ -129,6 +129,7 @@ const DAYS = [
           "Aiiro Cafe is the open-air corner bar on Naka-dori — grab a drink and people-watch.",
           "Then Eagle Tokyo for an easy, English-friendly vibe: bears, muscle and leather.",
           "Into daddies? GB is the quiet, English-speaking counter bar with an older crowd.",
+          "Taking someone home? Not to the APA (no visitors). Hotel Queen Annex is a gay-friendly love hotel right in Ni-chome.",
         ],
         spicy: "Mondays are quiet — perfect for scouting. Think of tonight as reconnaissance 👀. Cover is usually ¥1,000–2,000 with a drink; Eagle is cashless, smaller bars want cash.",
         snack: "Before bed: FamilyMart Famichiki (juicy fried chicken) or a 7-Eleven egg sando, plus a big water. Jet-lag insurance.",
@@ -450,9 +451,11 @@ const DAYS = [
       {
         t: "23:30", title: "The big night 🪩", night: true, ask: [{"jp": "イーグル・ブルーはどこですか？", "ro": "Īguru Burū wa doko desu ka?", "en": "Where's Eagle Tokyo Blue?", "hear": "dir"}], ll: [35.6902, 139.7085], say: ["taipu", "kinniku", "odorou", "hotel", "kisu", "yametoku"], rx: "neon", place: "Eagle Tokyo Blue, Shinjuku 2-chome",
         how: [
-          "Eagle Tokyo Blue or Bear Tokyo first (weekend DJs).",
+          "Eagle Tokyo Blue (hairy, beefy go-go dancers) or Bear Tokyo first (weekend DJs).",
+          "Go-go shows: Dragon Men's Dragon Master party has sets at 11 PM, 1 AM and 3 AM tonight. Tip in yen bills tucked into the waistband.",
           "After 1 AM: ArcH (SHOWER CANDY tonight) or AiSOTOPE Lounge for Akiba Night's 23rd-anniversary Halloween, a long-running anime/otaku gay night. Your MHA and AOT fandom fits right in.",
           "Clubs run till ~5 AM; trains restart around 5.",
+          "Want it straight to the point? Deep Throat Men (3F Wakatsuki Bldg, Kabukichō) is a foreigner-friendly cruising bar with English-speaking staff, 5 min from Golden Gai.",
         ],
         spicy: "Friday is the main event — the bear-and-muscle crowd is out in force at Eagle Blue. Bring ¥20,000+ cash for small bars, and if the night ends at 24 Kaikan, wear your locker key the way you mean it 😉. Stay out of any bar a Kabukichō tout steers you to. Poppers and cannabis are illegal in Japan — don't carry or accept any.",
         snack: "The 4 AM move: konbini onigiri + Pocari Sweat on the walk home. Your Saturday self will thank you.",
@@ -543,7 +546,7 @@ const DAYS = [
         ride: [{"ln": "G", "from": "G11", "to": "G09", "dir": "渋谷方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 三越前 Mitsukoshimae (G12) = wrong way.", "min": 4, "exit": "Follow the red Marunouchi Line signs"}, {"ln": "M", "from": "M16", "to": "M09", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train.", "wrong": "Next stop 東京 Tokyo (M17) = wrong way.", "min": 17, "exit": "Exits C5–C8 come up right at Ni-chome"}],
         how: [
           "Ginza → Marunouchi line back to Shinjuku-sanchome (~25 min).",
-          "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE 80th) or ArcH (Jimi-Halloween: dress as something boring 😂).",
+          "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE 80th) or ArcH (Jimi-Halloween: dress as something boring 😂).",
           "Drink inside the bars — parts of Shinjuku restrict street drinking tonight.",
         ],
         spicy: "The streets fill with costumes all night. Costume = instant conversation starter: compliment someone's look (“Kakkoii!” = you look cool!) and you're in. Ask before photographing anyone.",
@@ -1139,6 +1142,10 @@ const PHRASES = [
   { id: "shukuhaku", cat: "Scene words", jp: "宿泊でお願いします。", ro: "Shukuhaku de onegai shimasu.", en: "Overnight stay, please.", say: "shoo-koo-hah-koo deh oh-neh-gai shee-mahs" },
   { id: "kondomu2", cat: "Scene words", jp: "コンドームはありますか？", ro: "Kondōmu wa arimasu ka?", en: "Do you have condoms?", say: "kohn-doh-moo wah ah-ree-mahs kah", note: "Usually free at the front desk, but supplies and sizes vary — bring your own." },
   { id: "w-profile", cat: "Scene words", jp: "ラテン系のガチムチです。アメリカから旅行中です。", ro: "Raten-kei no gachimuchi desu. Amerika kara ryokō-chū desu.", en: "I'm a Latino gachimuchi guy, visiting from the US.", say: "rah-ten-kay noh gah-chee-moo-chee dess. ah-meh-ree-kah kah-rah ryoh-koh-choo dess", note: "Paste it into your 9Monsters/Grindr bio, or use it as your bar intro. Add ヒゲ (beard) and 体毛あり (hairy) as tags." },
+  { id: "prep", cat: "Flirting 💋", jp: "プレップ飲んでるよ。", ro: "Pureppu nonderu yo.", en: "I'm on PrEP.", say: "poo-rep-poo nohn-deh-roo yoh", note: "PrEP is less common in Japan, so plenty of guys still expect condoms." },
+  { id: "kensa", cat: "Flirting 💋", jp: "最近検査した？", ro: "Saikin kensa shita?", en: "Tested recently?", say: "sai-keen ken-sah shee-tah" },
+  { id: "ie", cat: "Flirting 💋", jp: "家、近い？", ro: "Ie, chikai?", en: "Is your place close?", say: "ee-eh, chee-kai", note: "Your APA room is off-limits to visitors, so his place or a love hotel it is." },
+  { id: "dansei", cat: "Scene words", jp: "男性同士でも大丈夫ですか？", ro: "Dansei dōshi demo daijōbu desu ka?", en: "Is it OK for two men? (at a love hotel)", say: "dahn-say doh-shee deh-moh dai-joh-boo dess kah" },
   { id: "w-nichome", cat: "Scene words", jp: "二丁目", ro: "Ni-chōme", en: "Tokyo's gay district (Shinjuku 2-chōme)", say: "nee-choh-meh" },
 
   // App chat 📱 — Grindr / 9Monsters / Jack'd. Every card has a 📋 button: copy, then paste into the chat.
@@ -1307,6 +1314,18 @@ const MANNERS = [
       "Never photograph geiko/maiko without permission; Gion's private alleys have fines.",
       "No photos inside Ni-chome bars, clubs or saunas — you'll be asked to leave.",
       "No posing in the road at Shibuya Crossing or Fujiyoshida's Honchō Street; shoot from the sidewalk.",
+    ],
+  },
+  {
+    emoji: "🔥", spicy: true, title: "Hookups + health on the road",
+    body: [
+      "<b>Where to go:</b> business hotels like your APAs generally don't allow visitors in your room (and the rooms are tiny). Go to his place, a sauna, a cruising bar, or a love hotel (ラブホ).",
+      "<b>Love hotels:</b> pay for a few hours (休憩, a “rest”) or the night (宿泊). Hotel Queen Annex in Ni-chome is known as gay-friendly. Elsewhere, ask “男性同士でも大丈夫ですか？” before you pay: some still refuse two men.",
+      "<b>PrEP:</b> take it at the same Japan time every day (13 hours ahead of Orlando). Japan allows up to a one-month supply of prescription meds without a permit; keep it in the labeled pharmacy bottle.",
+      "<b>PrEP doesn't cover syphilis, gonorrhea or chlamydia</b>, and syphilis in Japan has been at record highs. Condoms for anal; Japanese sizes run small, so bring your own (lube is easy to find at Don Quijote or any drugstore). If your doctor gave you doxy-PEP, pack it.",
+      "<b>Testing:</b> Shinjuku City runs free, anonymous HIV and syphilis tests in English by online reservation (call 03-5273-3859 to check tourists can book). Otherwise, test 2–3 weeks after you get home.",
+      "<b>No chems:</b> poppers, G, meth and cannabis are all illegal here, and arrests mean weeks of detention. Never take a drink you didn't see poured.",
+      "<b>Phones:</b> 9Monsters and Grindr are busiest; Japanese guys often keep face pics private until you chat. Ask before taking any photo of anyone.",
     ],
   },
   {
@@ -1730,6 +1749,21 @@ const FAN_QUESTS = [
     { t: "Eagle Osaka", where: "12-8 Doyama-cho, Osaka", when: "Cashless · free entry Mon–Thu", day: "d8", what: "Western Japan's biggest gay bar: a go-go dance floor downstairs and a lounge upstairs. A hotspot for bears and tourists.", place: "Eagle Osaka, 12-8 Doyamacho", link: "https://sushisandwich81.com/eagle-osaka-best-gay-bear-bar-in-osaka/" },
     { t: "Dungaree + Kuro", where: "Doyama-cho, Osaka", when: "Kuro: Mon–Sat 7 PM–2 AM", day: "d8", what: "Dungaree is “where Japanese bears go to play.” Kuro is Osaka's oldest gay bar, with a mature Japanese crowd; foreigners welcome.", place: "Doyama-cho, Kita-ku, Osaka", link: "https://www.travelgay.com/osaka-gay-bars" },
     { t: "Goli Macho", where: "5F Jewel Ebisu Bldg, 3-6 Ebisu-cho, Hiroshima", when: "Tue–Sat · opening time not listed", day: "d9", what: "Hiroshima's friendliest gay bar, with a mixed crowd. Only works if you take a later shinkansen back.", place: "Goli Macho, Hiroshima", link: "https://nomadicboys.com/gay-hiroshima/" },
+  ]},
+  { fandom: "Go-go boys + strip shows", emoji: "🍑", spicy: true, items: [
+    { t: "Dragon Master at Dragon Men", where: "2-11-4 Shinjuku (Ni-chome)", when: "Fri Oct 30 + Sat Oct 31 · go-go shows 11 PM, 1 AM, 3 AM", day: "d5", what: "Weekend party with a different go-go show at each set, guest DJs and happy hour 6–9 PM. Cash.", place: "Dragon Men, 2-11-4 Shinjuku", link: "https://www.gaytravel4u.com/event/dragon-men-presents/" },
+    { t: "Eagle Tokyo Blue", where: "2-11-21 Shinjuku (Ni-chome)", when: "Fri–Sun from 6 PM, Mon–Thu from 8 PM · ¥1,000–2,000", day: "d5", what: "Known for hairy, beefy go-go dancers — exactly your type of show.", place: "Eagle Tokyo Blue, 2-11-21 Shinjuku", link: "https://japangayguide.com/gogoboys/gogoboys-in-japan-best-clubs-2024/" },
+    { t: "Kingdom Tokyo", where: "2-10-7 Shinjuku (Ni-chome)", when: "Fri + Sat go-go × drag shows · ¥1,000–2,000", day: "d6", what: "Go-go boys plus drag on weekend nights; all-you-can-drink ¥1,500 from 6–10 PM.", place: "Kingdom Tokyo, 2-10-7 Shinjuku", link: "https://japangayguide.com/gogoboys/gogoboys-in-japan-best-clubs-2024/" },
+    { t: "Club Blacknude", where: "B1F, 2-15-12 Shinjuku", when: "Nightly · ¥1,500 with a drink", day: "d6", what: "Muscle bar with one or two go-go boys every night.", place: "Club Blacknude, 2-15-12 Shinjuku", link: "https://japangayguide.com/gogoboys/gogoboys-in-japan-best-clubs-2024/" },
+    { t: "Eagle Osaka dance floor", where: "12-8 Doyama-cho, Osaka", when: "Cashless", day: "d8", what: "Go-go dancers on the ground-floor dance floor.", place: "Eagle Osaka, 12-8 Doyamacho", link: "https://sushisandwich81.com/eagle-osaka-best-gay-bear-bar-in-osaka/" },
+  ]},
+  { fandom: "Cruise bars + love hotels", emoji: "🔥", spicy: true, items: [
+    { t: "Deep Throat Men", where: "3F Wakatsuki Bldg, Kabukichō, Shinjuku", when: "Nights · 20+", day: "d5", what: "Cruising bar where foreigners are welcome and staff speak English. 5 minutes from Golden Gai.", place: "Deep Throat Men, Kabukicho", link: "https://www.utopia-asia.com/tokysaun.htm" },
+    { t: "D-Light + The Boiler Room", where: "Ni-chome (Boiler Room: B1F)", when: "Nights · BUFF parties every two months", day: "d5", what: "Go-go bar connected to a basement cruising bar. Home of the BUFF muscle-to-bears fetish party (check @bufftyo for dates).", place: "D-Light, Shinjuku 2-chome", link: "https://www.gaytravel4u.com/event/buff-tokyo/" },
+    { t: "Men's Club MEAT", where: "1-13-4 Shinjuku · near your hotel", when: "Mon–Fri 3–10 PM, Sat 1–10 PM, Sun noon–9 PM", day: "d6", what: "Daytime-and-evening cruising club for guys in their 20s–40s. Good for a sleep-in day afternoon.", place: "Men's Club MEAT, 1-13-4 Shinjuku", link: "https://www.utopia-asia.com/tokysaun.htm" },
+    { t: "Rokuten", where: "4F Okuo Bldg, Kanda", when: "Check before going", day: "d5", what: "Fundoshi (traditional loincloth) cruising bar, described as foreigner-friendly.", place: "Rokuten, Kanda", link: "https://www.utopia-asia.com/tokysaun.htm" },
+    { t: "Hotel Queen Annex", where: "Ni-chome, Shinjuku", when: "24-hour front desk", day: "d1", what: "Big, bright love hotel in Ni-chome known as gay-friendly. Pay by the “rest” (a few hours) or the night.", place: "Hotel Queen Annex, Shinjuku", link: "https://japangayguide.com/travel-tips/our-favorite-tokyo-gay-love-hotels/" },
+    { t: "Glory Hole Osaka", where: "Near Namba / Dōtonbori", when: "Nights", day: "d8", what: "Osaka cruising bar. Reports say it's not especially foreigner-friendly, so try Daikichi first.", place: "Namba, Osaka", link: "https://www.utopia-asia.com/osaksaun.htm" },
   ]},
   { fandom: "Parties on your dates", emoji: "🪩", spicy: true, items: [
     { t: "Akiba Night 51 · Halloween + 23rd anniversary", where: "AiSOTOPE Lounge, Ni-chome", when: "Fri Oct 30 · 9 PM", day: "d5", what: "Long-running anime/otaku gay night. Photo ID required, 20+.", place: "AiSOTOPE Lounge, Shinjuku", link: "https://aisotope-lounge.net/" },
