@@ -215,13 +215,14 @@
     }
   }
 
+  // Weather never changes the plan by itself — it only shows a hint next to the Plan B switch.
   function wxPlan(day, w) {
-    const box = $("#wxplan");
-    if (!box || !day.rain) return;
+    const hint = $("#wxhint");
+    if (!hint || !day.rain) return;
     const wet = w.rain != null && w.rain >= 50;
     const cloudy = day.cloudy && w.cloud != null && w.cloud >= 70;
-    if (!wet && !cloudy) return;
-    box.innerHTML = `<div class="card wx-alert"><b>${wet ? `☔ Rain likely (${w.rain}%)` : `☁️ Fuji may hide (${Math.round(w.cloud)}% cloud)`} — Plan B</b><p>${esc(day.rain)}</p></div>`;
+    hint.textContent = wet ? `Forecast: ☔ ${w.rain}% rain — your call` : cloudy ? `Forecast: ☁️ ${Math.round(w.cloud)}% cloud — your call` : `Forecast looks fine`;
+    hint.classList.toggle("warn", wet || cloudy);
   }
 
   /* ---------- Day view ---------- */
@@ -275,11 +276,11 @@
         <div class="pills">
           ${day.wx ? `<span class="pill wx-loading" id="wx">🌡️ checking weather…</span>` : ""}
           ${h ? `<a class="pill" href="#trip/hotels">${h.emoji} Sleep: ${esc(h.name)}</a>` : `<span class="pill">✈️ Sleep: on the plane</span>`}
+          ${day.rain && store.get("planb:" + day.id, false) ? `<span class="pill">${day.cloudy ? "☁️" : "☔"} Plan B on</span>` : ""}
           ${ticketsFor(day.date).length ? `<a class="pill" href="#trip/tickets">🎟️ ${ticketsFor(day.date).length} ticket${ticketsFor(day.date).length > 1 ? "s" : ""} today</a>` : ""}
         </div>
       </section>
-      ${homeCard(day)}
-      <div id="wxplan"></div>`;
+      ${homeCard(day)}`;
 
     if (day.variants) {
       const v = dayVariant(day);
@@ -301,7 +302,14 @@
           <div class="map-actions"><button class="btn" data-locate>🫵 Where am I?</button><button class="btn" data-fitall>🔎 Whole day</button></div>
         </div>`;
     }
-    if (day.rain) html += `<details class="card rainplan"><summary>${day.cloudy ? "☁️ If Fuji hides" : "☔ If it rains"}</summary><p>${esc(day.rain)}</p></details>`;
+    if (day.rain) {
+      const on = !!store.get("planb:" + day.id, false);
+      html += `<div class="card rainplan ${on ? "on" : ""}">
+        <div class="rp-row"><div><b>${day.cloudy ? "☁️ Cloudy-Fuji plan" : "☔ Rain plan"}</b><small id="wxhint">${on ? "Plan B is on" : "Off — following the original plan"}</small></div>
+          <button class="switch ${on ? "on" : ""}" data-planb="${day.id}" aria-pressed="${on}" aria-label="Rain plan"><i></i></button></div>
+        ${on ? `<p>${esc(day.rain)}</p>` : ""}
+      </div>`;
+    }
     html += `<div class="progress"><span>${doneCount}/${steps.length} done</span><div class="bar"><i style="width:${steps.length ? (doneCount / steps.length) * 100 : 0}%"></i></div></div>`;
     html += `<div class="section-title"><h2>Step by step</h2><span class="sub">Japan time</span></div><div class="timeline">`;
 
@@ -1050,9 +1058,10 @@
   document.addEventListener("click", e => {
     const tile = e.target.closest("[data-tile]");
     if (tile) { $$(".tile").forEach(x => x.classList.toggle("picked", x === tile)); return; }
-    const t = e.target.closest("[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
+    const t = e.target.closest("[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
+    if (t.dataset.planb) { const k = "planb:" + t.dataset.planb; store.set(k, !store.get(k, false)); toast(store.get(k, false) ? "Plan B on ☔" : "Back to the original plan ☀️"); rerender(() => renderDay(t.dataset.planb)); return; }
     if (t.dataset.star) { const [d, n] = t.dataset.star.split("|"); const f = store.get("fav:" + d, {}) || {}; f.stars = f.stars === +n ? 0 : +n; store.set("fav:" + d, f); $$(`[data-star^="${d}|"]`).forEach((b, i) => b.classList.toggle("on", i < f.stars)); return; }
     if (t.dataset.jump) { $("#" + t.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
     if (t.dataset.cv) { const r = (store.get("fx", null) || { jpy: 150 }).jpy; $("#cv-jpy").value = t.dataset.cv; $("#cv-usd").value = (t.dataset.cv / r).toFixed(2); return; }
