@@ -4,7 +4,7 @@ import json, re, sys
 from fugashi import Tagger
 
 items = json.load(open(sys.argv[1], encoding="utf-8"))
-over = {k: v for k, v in json.load(open(sys.argv[2], encoding="utf-8")).items() if not k.startswith("_")}
+over = {k: v for k, v in json.load(open(sys.argv[2], encoding="utf-8")).items() if not k.startswith("_") and isinstance(v, str)}
 KEYS = sorted(over, key=len, reverse=True)
 STRIP_LATIN = ["ATM", "JR", "LINE"]
 tagger = Tagger()
@@ -39,7 +39,7 @@ def norm(r):
     for a, b in [('ā','a'),('ī','i'),('ū','u'),('ē','e'),('ō','o')]: r = r.replace(a, b)
     r = re.sub(r'[^a-z]', '', r).replace('wo', 'o').replace('ha', 'wa').replace('he', 'e')
     for _ in range(3):
-        for a, b in [('ou','o'),('oo','o'),('uu','u'),('aa','a'),('ii','i'),('ee','e')]: r = r.replace(a, b)
+        for a, b in [('ou','o'),('oo','o'),('uu','u'),('aa','a'),('ii','i'),('ei','e'),('ee','e')]: r = r.replace(a, b)
     return r
 def reading(text):
     for k in KEYS: text = text.replace(k, over[k])
