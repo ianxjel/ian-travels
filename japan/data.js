@@ -130,6 +130,15 @@ const DAYS = [
         spicy: "Mondays are quiet — perfect for scouting. Think of tonight as reconnaissance 👀. Cover is usually ¥1,000–2,000 with a drink; Eagle is cashless, smaller bars want cash.",
         snack: "Before bed: FamilyMart Famichiki (juicy fried chicken) or a 7-Eleven egg sando, plus a big water. Jet-lag insurance.",
       },
+      {
+        t: "22:45", title: "Jet-lag soak at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "gaikokujin"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        how: [
+          "From Aiiro Cafe, it's around the corner at 2-13-1 Shinjuku (2F). Your hotel is about 5 minutes away.",
+          "Shoes into a small locker at the door (keep a ¥10 or ¥100 coin), then pay at the desk. Ask for the short “rest” stay (休憩).",
+          "Keep it to an hour or so: the DisneySea alarm is 6:15 AM.",
+        ],
+        spicy: "Your first look at Tokyo's biggest gay sauna: sauna, steam, jacuzzi, cold plunge and a rooftop deck, with lots of foreign visitors and English signs. Tonight's just a soak to beat the jet lag 😉",
+      },
     ],
   },
 
@@ -202,6 +211,15 @@ const DAYS = [
         ],
         spicy: "Birthday boy rules: free pass to flirt shamelessly 😏 — the birthday line is the best icebreaker you'll get all trip. Watch your drink, and never accept a drink you didn't see poured.",
       },
+      {
+        t: "24:30", title: "Birthday nightcap at 24 Kaikan 🎂🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "tanjoubi"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        how: [
+          "A 2-minute walk from Eagle. Open 24/7.",
+          "Prices go up after about 9 PM (roughly ¥2,500–3,900). Bring cash.",
+          "Tomorrow's teamLab slot is 9:30 AM, so give yourself 7 hours of sleep.",
+        ],
+        spicy: "Birthday steam session. “今日誕生日なんです” (it's my birthday today) works here too 🎉",
+      },
     ],
   },
 
@@ -259,6 +277,14 @@ const DAYS = [
         ],
         spicy: "Shelves of vintage Barazoku (the magazine the word “bara” comes from), Tom of Finland art and gay culture books, run by a Ni-chome writer and drag legend. Still up for more? The Tokyo Gaysian Club Crawl (Airbnb) runs 9–11:30 PM tonight from the Ni-chome 7-Eleven — only if you can handle the 6:15 AM Disney alarm 😅",
       },
+      {
+        t: "20:30", title: "Early session at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "kondomu"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        how: [
+          "Okamalt → 24 Kaikan is a 3-minute walk through Ni-chome.",
+          "Out by 22:30: the Disneyland alarm is 6:15 AM tomorrow.",
+        ],
+        spicy: "Weeknight evenings are calmer: good for the sauna and the rooftop deck before it gets busy.",
+      },
     ],
   },
 
@@ -311,6 +337,14 @@ const DAYS = [
           "One drink at Dragon Men or Eagle Tokyo, or an early night. Three park days deserve a rest.",
         ],
         snack: "Late konbini run: Lawson's Karaage-kun (bite-size fried chicken) or a hot oden cup from the counter.",
+      },
+      {
+        t: "22:30", title: "Post-Disney soak at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        how: [
+          "Dragon Men → 24 Kaikan is about 2 minutes on foot.",
+          "Your legs will thank you after 15 hours at Disneyland. Tomorrow you sleep in.",
+        ],
+        spicy: "Stay as late as you like: Friday starts at 10 AM.",
       },
     ],
   },
@@ -394,6 +428,15 @@ const DAYS = [
         spicy: "Friday is the main event — the bear-and-muscle crowd is out in force at Eagle Blue. Bring ¥20,000+ cash for small bars, and if the night ends at 24 Kaikan, wear your locker key the way you mean it 😉. Stay out of any bar a Kabukichō tout steers you to. Poppers and cannabis are illegal in Japan — don't carry or accept any.",
         snack: "The 4 AM move: konbini onigiri + Pocari Sweat on the walk home. Your Saturday self will thank you.",
       },
+      {
+        t: "28:00", title: "After-club crash at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["shukuhaku", "kondomu"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        how: [
+          "When Eagle Blue winds down, 24 Kaikan is a 2-minute walk.",
+          "Ask for the overnight stay (宿泊): about 12–14 hours with a locker, robe and towels, so you can sleep there. Guys come straight from the clubs at this hour.",
+          "Pokémon Center Mega Tokyo is at 10 AM, and your phone lives in the locker. Ask the desk to wake you: “8時に起こしてください” (Hachi-ji ni okoshite kudasai).",
+        ],
+        spicy: "The classic Ni-chome ending: the club crowd moves to the sauna at this hour 🔥",
+      },
     ],
   },
 
@@ -462,6 +505,14 @@ const DAYS = [
         ],
         spicy: "The streets fill with costumes all night. Costume = instant conversation starter: compliment someone's look (“Kakkoii!” = you look cool!) and you're in. Ask before photographing anyone.",
         photo: "Street shots on Naka-dori with direct flash. Get a 5-second clip of the crowd — it'll be the Halloween reel opener.",
+      },
+      {
+        t: "25:30", title: "Halloween nightcap at 24 Kaikan 👻🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        how: [
+          "Only if your suitcase is packed. It ships at 7:30 AM and the alarm is 6:45 AM.",
+          "Lockers are small, so drop the costume at the hotel first (it's on the way).",
+        ],
+        spicy: "Halloween is the busiest night of the year in Ni-chome, and 24 Kaikan fills up after the streets do 👀",
       },
     ],
   },
@@ -582,6 +633,15 @@ const DAYS = [
         photo: "The Kyoto Station grand staircase light-up, right by your hotel: sit halfway up the 171 steps while the LEDs change color, shot from the bottom.",
         snack: "Kyoto Ramen Kōji on Kyoto Station's 10F: eight ramen shops from around Japan under one roof.",
       },
+      {
+        t: "21:30", title: "Sauna Verde Club (check it out first) 🧖", night: true, ask: [{"jp": "ここはゲイサウナですか？", "ro": "Koko wa gei sauna desu ka?", "en": "Is this a gay sauna?", "hear": "yesno"}, {"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.9879, 135.7608], say: ["kyukei", "gaikokujin"], place: "Sauna Verde Club, 684 Higashishiokoji-cho, Kyoto",
+        how: [
+          "It's on the same street as your hotel, by Kyoto Station: Shiokoji-dori, east of Higashinotoin.",
+          "One gay guide lists it as gay, but I couldn't confirm that, or the hours or price. Look in or ask at the desk before you pay.",
+          "Keep it short: you check out at 6:30 AM for Fushimi Inari.",
+        ],
+        spicy: "Kyoto's scene is small. If this one isn't it, Osaka's Doyama-cho is tomorrow night.",
+      },
     ],
   },
 
@@ -667,6 +727,16 @@ const DAYS = [
         ],
         spicy: "Tomorrow's a holiday, so Osaka's out tonight. Osaka guys are famously chattier than Tokyo — say hi first. Your hotel is a 5-minute stumble away 😉",
       },
+      {
+        t: "25:30", title: "Daikichi — Osaka's gay sauna 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["shukuhaku", "gaikokujin"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
+        how: [
+          "It's in the middle of Doyama-cho (12-12 Doyamacho), about 5 minutes from your hotel.",
+          "Open 24/7. A short stay is about ¥2,000–2,500, overnight about ¥2,500–3,000, with private rooms extra. Cash.",
+          "Several floors: sauna, steam, baths, a dark room and cabins. Age limit is under 50, and ID may be checked, so bring your passport.",
+          "Tomorrow your suitcase ships at 8:15 AM. Pack it before you go out.",
+        ],
+        spicy: "Mostly local guys. Osaka guys are chattier than Tokyo guys, so a smile and “はじめまして” go a long way.",
+      },
     ],
   },
 
@@ -748,6 +818,14 @@ const DAYS = [
         ],
         photo: "Shinsekai is the best direct-flash street of the trip: giant food signs, retro neon, Tsūtenkaku behind you.",
         snack: "Shinsekai kushikatsu (fried skewers) — again: no double-dipping.",
+      },
+      {
+        t: "23:30", title: "Last-night soak at Daikichi 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["kyukei"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
+        how: [
+          "From Shinsekai, take the Midosuji line to Umeda (about 15 min). Daikichi is a 5–10 minute walk from there.",
+          "Check out of the hotel by about 9:30 AM tomorrow for the Fuji train. No sauna in Kawaguchiko, so make this one count.",
+        ],
+        spicy: "Last sauna of the trip 🥲 Go big.",
       },
     ],
   },
@@ -985,6 +1063,10 @@ const PHRASES = [
   { id: "w-gaisen", cat: "Scene words", jp: "ガイ専", ro: "Gaisen", en: "Into foreigners", say: "gai-sen", note: "“-sen” means “into.” Fuke-sen = into older guys, debu-sen = into bigger guys." },
   { id: "w-nonke", cat: "Scene words", jp: "ノンケ", ro: "Nonke", en: "Straight guy", say: "nohn-keh" },
   { id: "gaymanga", cat: "Scene words", jp: "ゲイ漫画のコーナーはありますか？", ro: "Gei manga no kōnā wa arimasu ka?", en: "Is there a gay manga section?", say: "gay mahn-gah noh koh-nah wah ah-ree-mahs kah", note: "Japanese shops rarely say “bara” — the genre is ゲイ漫画 (gay manga), and the muscle style is ガチムチ系." },
+  { id: "gaikokujin", cat: "Scene words", jp: "外国人でも大丈夫ですか？", ro: "Gaikokujin demo daijōbu desu ka?", en: "Are foreigners OK?", say: "gai-koh-koo-jeen deh-moh dai-joh-boo dess kah", note: "Some saunas and bars are Japanese-only. A polite no isn't about you — bow, say arigatō, and go to the next one." },
+  { id: "kyukei", cat: "Scene words", jp: "休憩でお願いします。", ro: "Kyūkei de onegai shimasu.", en: "Just a short stay, please.", say: "kyoo-keh deh oh-neh-gai shee-mahs", note: "Saunas price by stay: 休憩 (kyūkei, a few hours) or 宿泊 (shukuhaku, overnight)." },
+  { id: "shukuhaku", cat: "Scene words", jp: "宿泊でお願いします。", ro: "Shukuhaku de onegai shimasu.", en: "Overnight stay, please.", say: "shoo-koo-hah-koo deh oh-neh-gai shee-mahs" },
+  { id: "kondomu", cat: "Scene words", jp: "コンドームはありますか？", ro: "Kondōmu wa arimasu ka?", en: "Do you have condoms?", say: "kohn-doh-moo wah ah-ree-mahs kah", note: "Usually free at the front desk, but supplies and sizes vary — bring your own." },
   { id: "w-nichome", cat: "Scene words", jp: "二丁目", ro: "Ni-chōme", en: "Tokyo's gay district (Shinjuku 2-chōme)", say: "nee-choh-meh" },
 
   // Emergency
@@ -1084,6 +1166,18 @@ const MANNERS = [
       "Never photograph geiko/maiko without permission; Gion's private alleys have fines.",
       "No photos inside Ni-chome bars, clubs or saunas — you'll be asked to leave.",
       "No posing in the road at Shibuya Crossing or Fujiyoshida's Honchō Street; shoot from the sidewalk.",
+    ],
+  },
+  {
+    emoji: "🧖", spicy: true, title: "Gay sauna 101",
+    body: [
+      "Shoes go in a small locker at the door (keep ¥10/¥100 coins). Pay at the desk or ticket machine, and swap your shoe key for a locker key on a wristband, a robe and towels.",
+      "<b>Shower and wash fully</b> before any bath or sauna, same as an onsen. Towel around your waist in the common areas unless it's a nude night.",
+      "Phones stay in the locker: no photos anywhere inside. Keep your voice low.",
+      "Consent is quiet but clear: a hand moved away or a step back means no — smile and move on. Same goes for you.",
+      "Some saunas are Japanese-only or have age/type rules. Ask “外国人でも大丈夫ですか？” at the desk; if it's a no, it's policy, not you.",
+      "Cash only at most. Bring your passport. Condoms are often at the desk — bring your own anyway.",
+      "Regular sento and hotel onsen are <b>not</b> cruising spots: straight guys, families, old men. Keep it completely respectable there.",
     ],
   },
   {
@@ -1306,6 +1400,7 @@ const FOOD_ORDERING = [
 const HEAR = {
   dir: [["⬆️", "まっすぐ", "massugu", "straight ahead"], ["➡️", "右", "migi", "right"], ["⬅️", "左", "hidari", "left"], ["🔼", "上の階", "ue no kai", "upstairs"], ["🔽", "下の階", "shita no kai", "downstairs"], ["🔄", "後ろ", "ushiro", "behind you"], ["👉", "あそこ", "asoko", "over there"], ["↔️", "向こう側", "mukō-gawa", "the other side"], ["🚪", "出口を出て", "deguchi o dete", "go out the exit"], ["🎫", "改札の中", "kaisatsu no naka", "inside the ticket gates"]],
   bansen: [["1", "1番線", "ichi-bansen", "platform 1"], ["2", "2番線", "ni-bansen", "platform 2"], ["3", "3番線", "san-bansen", "platform 3"], ["4", "4番線", "yon-bansen", "platform 4"], ["5", "5番線", "go-bansen", "platform 5"], ["6", "6番線", "roku-bansen", "platform 6"], ["7", "7番線", "nana-bansen", "platform 7"], ["8", "8番線", "hachi-bansen", "platform 8"], ["9", "9番線", "kyū-bansen", "platform 9"], ["10", "10番線", "jū-bansen", "platform 10"], ["11", "11番線", "jūichi-bansen", "platform 11"], ["12", "12番線", "jūni-bansen", "platform 12"], ["13", "13番線", "jūsan-bansen", "platform 13"], ["14", "14番線", "jūyon-bansen", "platform 14"], ["15", "15番線", "jūgo-bansen", "platform 15"], ["16", "16番線", "jūroku-bansen", "platform 16"]],
+  entry: [["⭕", "大丈夫です", "daijōbu desu", "yes, that's fine"], ["🙅", "日本人のみです", "Nihonjin nomi desu", "Japanese only"], ["🔞", "年齢制限があります", "nenrei seigen ga arimasu", "there's an age limit"], ["🪪", "身分証を見せてください", "mibunshō o misete kudasai", "show me your ID"], ["💴", "前払いです", "maebarai desu", "pay up front"]],
   yesno: [["⭕", "はい", "hai", "yes"], ["❌", "いいえ", "iie", "no"], ["👌", "大丈夫です", "daijōbu desu", "that's fine"], ["🙅", "だめです", "dame desu", "not allowed"], ["⏳", "少々お待ちください", "shōshō omachi kudasai", "one moment, please"]],
   full: [["⭕", "どうぞ", "dōzo", "come in / go ahead"], ["❌", "満席です", "manseki desu", "we're full"], ["⏳", "少々お待ちください", "shōshō omachi kudasai", "please wait a bit"], ["🙇", "ちょっと…", "chotto…", "sorry, not possible (polite no)"]],
   side: [["⬅️", "左側", "hidari-gawa", "left side"], ["➡️", "右側", "migi-gawa", "right side"], ["🪟", "窓側", "mado-gawa", "window side"]],
@@ -1469,6 +1564,19 @@ const FAN_QUESTS = [
       what: "The historic Ni-chome gay shop, known for its gay magazines.", place: "Lumiere, 2-17-1 Shinjuku, Tokyo", link: "https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%BC%E3%83%AB_(%E3%82%B2%E3%82%A4%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97)" },
     { t: "Mandarake (secondhand manga + doujinshi)", where: "Nakano Broadway (1 stop from Shinjuku) · Shinsaibashi, Osaka", when: "Daytime", day: "d8",
       what: "Japan's big secondhand manga chain. Ask for the gay manga section with the phrase “ゲイ漫画のコーナーはありますか？” — not every branch has one.", place: "Mandarake Nakano", link: "https://www.timeout.com/tokyo/shopping/nakano-broadway" },
+  ]},
+  { fandom: "Gay saunas", emoji: "🧖", spicy: true, items: [
+    { t: "24 Kaikan Shinjuku", where: "2-13-1 Shinjuku, 2F (Ni-chome) · ~5 min from your hotel", when: "24/7 · ~¥2,500–3,900, more after 9 PM", day: "d1",
+      what: "Tokyo's best-known gay sauna and the most foreigner-friendly: English signs, staff with basic English. Sauna, steam, jacuzzi, cold plunge, rooftop deck, cabins. Planned on nights 1–6.",
+      place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo", link: "https://www.travelgay.com/venue/24-kaikan-shinjuku" },
+    { t: "24 Kaikan Ueno + Asakusa", where: "Ueno (Showa-dori) · Asakusa (2-29-16)", when: "~¥2,400 before 9 PM, ~¥2,800 after", day: "d5",
+      what: "Sister branches. Asakusa is a short walk from Senso-ji on Friday morning; Ueno has English signs too.", place: "24 Kaikan Ueno", link: "https://www.utopia-asia.com/tokysaun.htm" },
+    { t: "Jinya", where: "2-30-19 Ikebukuro", when: "Baths closed for cleaning 11 AM–3 PM · ~¥2,800", day: "d6",
+      what: "Older Ikebukuro sauna with a long record of welcoming foreigners.", place: "Jinya, 2-30-19 Ikebukuro, Tokyo", link: "https://www.utopia-asia.com/tokysaun.htm" },
+    { t: "Sauna Verde Club (unconfirmed)", where: "684 Higashishiokoji-cho, by Kyoto Station · next to your Kyoto hotel", when: "Hours not listed", day: "d7",
+      what: "Listed by one gay guide as a gay sauna, but I couldn't confirm it. Check at the door before paying.", place: "Sauna Verde Club, Kyoto", link: "https://spartacus.gayguide.travel/saunas/kyoto/97733_Sauna+Verde+Club" },
+    { t: "Daikichi", where: "12-12 Doyamacho, Osaka · ~5 min from your hotel", when: "24/7 · ~¥2,000–3,000", day: "d8",
+      what: "Osaka's main gay sauna: several floors, sauna, steam, baths, dark room, cabins. Mostly locals, under-50s only, ID may be checked.", place: "Daikichi, 12-12 Doyamacho, Osaka", link: "https://www.travelgay.com/venue/daikishi-sauna" },
   ]},
   { fandom: "Nintendo", emoji: "🍄", items: [
     { t: "Nintendo TOKYO", where: "Shibuya PARCO 6F", when: "Already in your plan", day: "d6",

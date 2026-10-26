@@ -71,6 +71,7 @@
   const toMin = t => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
   const fmt12 = t => {
     let [h, m] = t.split(":").map(Number);
+    h = h % 24; // "24:30" = 12:30 AM after midnight
     const ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12;
     return `${h}:${String(m).padStart(2, "0")} ${ap}`;
   };
