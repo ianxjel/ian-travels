@@ -151,7 +151,7 @@ const DAYS = [
         snack: "Konbini breakfast on the way: an onigiri (pull tab 1 → 2 → 3 to unwrap the seaweed without tearing) and a tamago sando.",
       },
       {
-        t: "07:00", title: "Shinjuku → DisneySea", ask: [{"jp": "京葉線はどっちですか？", "ro": "Keiyō-sen wa dotchi desu ka?", "en": "Which way is the Keiyo Line?", "hear": "dir"}, {"jp": "舞浜に止まりますか？", "ro": "Maihama ni tomarimasu ka?", "en": "Does this stop at Maihama?", "hear": "yesno"}], ll: [35.628, 139.886], say: ["norikae", "nanban"], pic: "Disney Resort Line Mickey window", rx: "pastel", place: "Tokyo DisneySea Station",
+        t: "07:00", title: "Shinjuku → DisneySea", ask: [{"jp": "京葉線はどっちですか？", "ro": "Keiyō-sen wa dotchi desu ka?", "en": "Which way is the Keiyo Line?", "hear": "dir"}, {"jp": "この電車は舞浜に止まりますか？", "ro": "Kono densha wa Maihama ni tomarimasu ka?", "en": "Does this train stop at Maihama?", "hear": "yesno"}], ll: [35.628, 139.886], say: ["norikae", "nanban"], pic: "Disney Resort Line Mickey window", rx: "pastel", place: "Tokyo DisneySea Station",
         how: [
           "Walk 1 min to Shinjuku-gyoemmae Station. Marunouchi line (red) direct to Tokyo (~20 min, no transfer).",
           "At Tokyo Station, follow the red/pink “Keiyo Line” signs. It's a long 10–15 min underground walk with moving walkways — keep going.",
@@ -161,10 +161,10 @@ const DAYS = [
         photo: "The Disney Resort Line monorail has Mickey-shaped windows and hand straps — get a close-up with the bay behind.",
       },
       {
-        t: "08:30", title: "At the gate → Frozen Premier Access", ask: [{"jp": "誕生日シールはどこでもらえますか？", "ro": "Tanjōbi shīru wa doko de moraemasu ka?", "en": "Where can I get a birthday sticker?", "hear": "dir"}], ll: [35.6273, 139.8846], say: ["sticker", "tanjoubi"], place: "Tokyo DisneySea",
+        t: "08:30", title: "At the gate → Frozen Premier Access", ask: [{"jp": "バースデーシールはどこでもらえますか？", "ro": "Bāsudē shīru wa doko de moraemasu ka?", "en": "Where can I get a birthday sticker?", "hear": "dir"}], ll: [35.6273, 139.8846], say: ["sticker", "tanjoubi"], place: "Tokyo DisneySea",
         how: [
           "Scan in, then immediately buy Premier Access for Anna and Elsa's Frozen Journey in the app.",
-          "Ask any cast member for a birthday sticker: “Tanjōbi shīru, onegai shimasu.” (A birthday sticker, please.) Write your name on it — you'll get “Happy birthday!” all day.",
+          "Ask any cast member for a birthday sticker: “Bāsudē shīru o onegai shimasu.” (A birthday sticker, please.) Write your name on it — you'll get “Happy birthday!” all day.",
         ],
       },
       {
@@ -877,7 +877,7 @@ const DAYS = [
         photo: "Stand at the right edge of the frame, back to camera or in profile, with the pagoda + Fuji behind you. 2–3x zoom. Then Honchō Street's Fuji view — sidewalk only.",
       },
       {
-        t: "09:30", title: "Highway bus to Shinjuku", ask: [{"jp": "新宿行きのバスはここですか？", "ro": "Shinjuku-iki no basu wa koko desu ka?", "en": "Is this the stop for the bus to Shinjuku?", "hear": "yesno"}], ll: [35.4986, 138.7689], say: ["konokippu"], place: "Busta Shinjuku",
+        t: "09:30", title: "Highway bus to Shinjuku", ask: [{"jp": "新宿行きのバス乗り場はここですか？", "ro": "Shinjuku-iki no basu noriba wa koko desu ka?", "en": "Is this the stop for the bus to Shinjuku?", "hear": "yesno"}], ll: [35.4986, 138.7689], say: ["konokippu"], place: "Busta Shinjuku",
         how: [
           "Fujikyu train back to Kawaguchiko Station in time for the 9:30 bus — don't take a later one.",
           "Show your highway-buses.jp QR. ~1 h 45 to Busta Shinjuku.",
@@ -927,11 +927,11 @@ const PHRASES = [
   { id: "eigo", cat: "Basics", jp: "英語を話せますか？", ro: "Eigo o hanasemasu ka?", en: "Do you speak English?", say: "ay-go oh hah-nah-seh-mahs kah" },
   { id: "mata", cat: "Basics", jp: "また来ます！", ro: "Mata kimasu!", en: "I'll come back!", say: "mah-tah kee-mahs" },
 
-  { id: "yubi", cat: "Basics", jp: "指でさしてもらえますか？", ro: "Yubi de sashite moraemasu ka?", en: "Could you point (to it)?", say: "yoo-bee deh sah-shteh moh-rah-eh-mahs kah", note: "The magic follow-up when the answer is too fast. They'll point to the place or the answer." },
+  { id: "yubi", cat: "Basics", jp: "指さしてもらえますか？", ro: "Yubisashite moraemasu ka?", en: "Could you point (to it)?", say: "yoo-bee-sah-shteh moh-rah-eh-mahs kah", note: "The magic follow-up when the answer is too fast. They'll point to the place or the answer." },
   { id: "chizu", cat: "Basics", jp: "地図で見せてもらえますか？", ro: "Chizu de misete moraemasu ka?", en: "Could you show me on the map?", say: "chee-zoo deh mee-seh-teh moh-rah-eh-mahs kah", note: "Hand them your phone with Google Maps open." },
   { id: "kaite", cat: "Basics", jp: "書いてもらえますか？", ro: "Kaite moraemasu ka?", en: "Could you write it down?", say: "kai-teh moh-rah-eh-mahs kah", note: "Great for times, prices and platform numbers." },
   { id: "moichido", cat: "Basics", jp: "もう一度お願いします", ro: "Mō ichido onegai shimasu", en: "One more time, please", say: "moh ee-chee-doh oh-neh-gai shee-mahs" },
-  { id: "yukkuri", cat: "Basics", jp: "ゆっくりお願いします", ro: "Yukkuri onegai shimasu", en: "Slower, please", say: "yook-koo-ree oh-neh-gai shee-mahs" },
+  { id: "yukkuri", cat: "Basics", jp: "もう少しゆっくり話してください", ro: "Mō sukoshi yukkuri hanashite kudasai", en: "Could you speak a little slower?", say: "moh soo-koh-shee yook-koo-ree hah-nah-shteh koo-dah-sai" },
   { id: "oshiete", cat: "Basics", jp: "使い方を教えてください", ro: "Tsukaikata o oshiete kudasai", en: "Can you show me how to use this?", say: "tskai-kah-tah oh oh-shee-eh-teh koo-dah-sai", note: "For ticket machines, ramen vending machines, lockers, toilets with 20 buttons…" },
   { id: "yoyaku", cat: "Basics", jp: "予約しています。イアンです。", ro: "Yoyaku shite imasu. Ian desu.", en: "I have a reservation. I'm Ian.", say: "yoh-yah-koo shteh ee-mahs. ee-ahn dess", note: "Pokémon Café, Shibuya Sky, Nintendo Museum, hotels. Have the QR or email open." },
 
@@ -978,7 +978,7 @@ const PHRASES = [
   { id: "photoplease", cat: "Photos", jp: "写真を撮ってもらえますか？", ro: "Shashin o totte moraemasu ka?", en: "Could you take my photo?", say: "shah-sheen oh toht-teh moh-rah-eh-mahs kah", note: "Offer to take theirs first — works almost every time." },
   { id: "photook", cat: "Photos", jp: "写真を撮ってもいいですか？", ro: "Shashin o totte mo ii desu ka?", en: "May I take a photo?", say: "shah-sheen oh toht-teh moh ee dess kah" },
   { id: "kirei", cat: "Photos", jp: "きれい！", ro: "Kirei!", en: "Beautiful!", say: "kee-ray" },
-  { id: "sticker", cat: "Photos", jp: "誕生日シールお願いします", ro: "Tanjōbi shīru, onegai shimasu", en: "A birthday sticker, please (Disney)", say: "tahn-joh-bee shee-roo oh-neh-gai shee-mahs" },
+  { id: "sticker", cat: "Photos", jp: "バースデーシールをお願いします", ro: "Bāsudē shīru o onegai shimasu", en: "A birthday sticker, please (Disney)", say: "bah-soo-deh shee-roo oh oh-neh-gai shee-mahs", note: "Tokyo Disney calls it a バースデーシール (birthday sticker). Any cast member or Guest Relations has them." },
 
   // Night out
   { id: "kanpai", cat: "Night out", jp: "乾杯！", ro: "Kanpai!", en: "Cheers!", say: "kahn-pai", note: "Wait for everyone's glass before the first sip." },
@@ -1220,15 +1220,15 @@ const FOODS = [
     tips: "When you finish, ask for “sūpu wari” — they'll thin the leftover broth with soup so you can drink it.", where: "Fūunji, Shinjuku (Day 3)" },
   { id: "sushi", emoji: "🍣", en: "Sushi", jp: "寿司", ro: "sushi", wiki: "寿司", enwiki: "Sushi",
     what: "Vinegared rice with raw fish (nigiri) or rolled (maki).",
-    order: { jp: "おすすめを二貫ずつお願いします", ro: "Osusume o nikan zutsu onegai shimasu", en: "Two pieces of whatever you recommend" },
+    order: { jp: "おすすめを二貫ください", ro: "Osusume o nikan kudasai", en: "Two pieces of whatever you recommend" },
     tips: "Dip the fish side, not the rice, in soy sauce. Eat nigiri in one bite. “Sabi-nuki” = no wasabi.", where: "Uobei Shibuya conveyor sushi (Day 5)" },
   { id: "onigiri", emoji: "🍙", en: "Onigiri (rice ball)", jp: "おにぎり", ro: "onigiri", wiki: "おにぎり", enwiki: "Onigiri",
     what: "Rice triangle wrapped in seaweed with a filling. The konbini breakfast of champions.",
-    order: { jp: "ツナマヨと鮭、ください", ro: "Tsuna mayo to shake, kudasai", en: "Tuna-mayo and salmon, please" },
+    order: { jp: "ツナマヨと鮭をください", ro: "Tsuna mayo to shake o kudasai", en: "Tuna-mayo and salmon, please" },
     tips: "Unwrap: pull tab 1 down the middle, then corners 2 and 3. Fillings: tsuna mayo, shake (salmon), ume (sour plum — strong!).", where: "Any konbini, every morning" },
   { id: "yakitori", emoji: "🍢", en: "Yakitori", jp: "焼き鳥", ro: "yakitori", wiki: "焼き鳥", enwiki: "Yakitori",
     what: "Charcoal-grilled chicken skewers: thigh, meatballs, skin, hearts…",
-    order: { jp: "ねぎまとつくね、タレで二本ずつ", ro: "Negima to tsukune, tare de nihon zutsu", en: "Two each of chicken-leek and meatball, with sauce" },
+    order: { jp: "ねぎまとつくねを、タレで二本ずつお願いします", ro: "Negima to tsukune o, tare de nihon zutsu onegai shimasu", en: "Two each of chicken-leek and meatball, with sauce" },
     tips: "“Tare” = sweet glaze, “shio” = salt. Order a beer first and a few skewers at a time.", where: "Omoide Yokochō (Day 1)" },
   { id: "takoyaki", emoji: "🐙", en: "Takoyaki", jp: "たこ焼き", ro: "takoyaki", wiki: "たこ焼き", enwiki: "Takoyaki",
     what: "Crispy-gooey batter balls with octopus, topped with sauce, mayo and bonito flakes. Osaka's icon.",
@@ -1240,7 +1240,7 @@ const FOODS = [
     tips: "Eat it straight off the griddle with the little spatula (hera).", where: "Okonomimura, Hiroshima (Day 9)" },
   { id: "gyoza", emoji: "🥟", en: "Gyōza", jp: "餃子", ro: "gyōza", wiki: "餃子", enwiki: "Jiaozi",
     what: "Pan-fried pork dumplings with crispy bottoms.",
-    order: { jp: "餃子一人前と生ビール", ro: "Gyōza ichinin-mae to nama bīru", en: "One serving of gyoza and a draft beer" },
+    order: { jp: "餃子一人前と生ビールをください", ro: "Gyōza ichinin-mae to nama bīru o kudasai", en: "One serving of gyoza and a draft beer" },
     tips: "Mix soy sauce, vinegar and chili oil (rāyu) in the little dish to dip.", where: "Ramen shops and izakaya everywhere" },
   { id: "tonkatsu", emoji: "🐖", en: "Tonkatsu", jp: "とんかつ", ro: "tonkatsu", wiki: "とんかつ", enwiki: "Tonkatsu",
     what: "Panko-crusted fried pork cutlet with shredded cabbage, rice and miso soup.",
@@ -1292,11 +1292,11 @@ const FOODS = [
     tips: "Cut it in half for the photo — the strawberry cross-section is the shot.", where: "Kuromon Market (Day 10)" },
   { id: "oden", emoji: "🍢", en: "Oden", jp: "おでん", ro: "oden", wiki: "おでん", enwiki: "Oden",
     what: "Egg, daikon, fish cakes and tofu simmered in dashi. Konbini counters have it in cold months.",
-    order: { jp: "大根と卵、ください", ro: "Daikon to tamago, kudasai", en: "Daikon and egg, please" },
+    order: { jp: "大根と卵をください", ro: "Daikon to tamago o kudasai", en: "Daikon and egg, please" },
     tips: "Point at what you want in the pot; ask for “karashi” (mustard).", where: "Konbini counter, late night" },
   { id: "kushikatsu", emoji: "🍡", en: "Kushikatsu", jp: "串カツ", ro: "kushikatsu", wiki: "串カツ", enwiki: "Kushikatsu",
     what: "Deep-fried skewers of meat, veg and cheese. Osaka's drinking food.",
-    order: { jp: "おまかせ五本お願いします", ro: "Omakase gohon onegai shimasu", en: "Five chef's-choice skewers, please" },
+    order: { jp: "おまかせで五本お願いします", ro: "Omakase de gohon onegai shimasu", en: "Five chef's-choice skewers, please" },
     tips: "NO double-dipping in the shared sauce (二度づけ禁止). Use a cabbage leaf to scoop more sauce.", where: "Shinsekai (Day 9), Dotonbori (Day 8)" },
   { id: "momiji", emoji: "🍁", en: "Momiji manjū", jp: "もみじ饅頭", ro: "momiji manjū", wiki: "もみじ饅頭", enwiki: "Momiji manjū",
     what: "Maple-leaf sponge cakes filled with red bean or custard. Miyajima's sweet.",
@@ -1320,7 +1320,7 @@ const FOODS = [
     tips: "Canned versions at konbini (Strong Zero is 9% — careful).", where: "Izakaya + bars" },
   { id: "sake", emoji: "🍶", en: "Sake (nihonshu)", jp: "日本酒", ro: "nihonshu", wiki: "日本酒", enwiki: "Sake",
     what: "Rice wine, served cold (hiya), room temp or warm (atsukan).",
-    order: { jp: "おすすめの日本酒を冷やで", ro: "Osusume no nihonshu o hiya de", en: "Your recommended sake, chilled" },
+    order: { jp: "おすすめの日本酒を冷やでお願いします", ro: "Osusume no nihonshu o hiya de onegai shimasu", en: "Your recommended sake, chilled" },
     tips: "In Japan “sake” means alcohol in general; say “nihonshu” for rice wine.", where: "Pontochō (Day 7), izakaya" },
 ];
 
@@ -1338,7 +1338,7 @@ const FOOD_ORDERING = [
 /* ---------------- ANSWER TILES ----------------
    Shown with "Ask for it" questions so the person you ask can POINT at their answer. */
 const HEAR = {
-  dir: [["⬆️", "まっすぐ", "massugu", "straight ahead"], ["➡️", "右", "migi", "right"], ["⬅️", "左", "hidari", "left"], ["🔼", "上の階", "ue", "upstairs"], ["🔽", "下の階", "shita", "downstairs"], ["🔄", "後ろ", "ushiro", "behind you"], ["👉", "あそこ", "asoko", "over there"], ["↔️", "向こう側", "mukō-gawa", "the other side"], ["🚪", "出口を出て", "deguchi o dete", "go out the exit"], ["🎫", "改札の中", "kaisatsu no naka", "inside the ticket gates"]],
+  dir: [["⬆️", "まっすぐ", "massugu", "straight ahead"], ["➡️", "右", "migi", "right"], ["⬅️", "左", "hidari", "left"], ["🔼", "上の階", "ue no kai", "upstairs"], ["🔽", "下の階", "shita no kai", "downstairs"], ["🔄", "後ろ", "ushiro", "behind you"], ["👉", "あそこ", "asoko", "over there"], ["↔️", "向こう側", "mukō-gawa", "the other side"], ["🚪", "出口を出て", "deguchi o dete", "go out the exit"], ["🎫", "改札の中", "kaisatsu no naka", "inside the ticket gates"]],
   bansen: [["1", "1番線", "ichi-bansen", "platform 1"], ["2", "2番線", "ni-bansen", "platform 2"], ["3", "3番線", "san-bansen", "platform 3"], ["4", "4番線", "yon-bansen", "platform 4"], ["5", "5番線", "go-bansen", "platform 5"], ["6", "6番線", "roku-bansen", "platform 6"], ["7", "7番線", "nana-bansen", "platform 7"], ["8", "8番線", "hachi-bansen", "platform 8"], ["9", "9番線", "kyū-bansen", "platform 9"], ["10", "10番線", "jū-bansen", "platform 10"], ["11", "11番線", "jūichi-bansen", "platform 11"], ["12", "12番線", "jūni-bansen", "platform 12"], ["13", "13番線", "jūsan-bansen", "platform 13"], ["14", "14番線", "jūyon-bansen", "platform 14"], ["15", "15番線", "jūgo-bansen", "platform 15"], ["16", "16番線", "jūroku-bansen", "platform 16"]],
   yesno: [["⭕", "はい", "hai", "yes"], ["❌", "いいえ", "iie", "no"], ["👌", "大丈夫です", "daijōbu desu", "that's fine"], ["🙅", "だめです", "dame desu", "not allowed"], ["⏳", "少々お待ちください", "shōshō omachi kudasai", "one moment, please"]],
   full: [["⭕", "どうぞ", "dōzo", "come in / go ahead"], ["❌", "満席です", "manseki desu", "we're full"], ["⏳", "少々お待ちください", "shōshō omachi kudasai", "please wait a bit"], ["🙇", "ちょっと…", "chotto…", "sorry, not possible (polite no)"]],
@@ -1354,8 +1354,8 @@ const HEAR = {
 // Which answers need the "please write it here" box
 const HEAR_WRITE = ["time", "money", "write"];
 const ASK_HELP = {
-  jp: "すみません、日本語が少ししかわかりません。答えを指でさしてください。",
-  ro: "Sumimasen, nihongo ga sukoshi shika wakarimasen. Kotae o yubi de sashite kudasai.",
+  jp: "すみません、日本語が少ししかわかりません。答えを指さしてください。",
+  ro: "Sumimasen, nihongo ga sukoshi shika wakarimasen. Kotae o yubisashite kudasai.",
   en: "Sorry, I only understand a little Japanese. Please point to your answer.",
   writeJp: "ここに書いていただけますか？",
   writeEn: "Could you write it here?",
