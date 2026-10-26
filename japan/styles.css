@@ -714,3 +714,14 @@ details.rainplan p { margin: 0; padding: 0 16px 14px; font-size: 14.5px; color: 
 .clock { line-height: 1.25; }
 .home-time { font-weight: 800; color: var(--ink); opacity: .8; font-size: 12.5px; }
 .clock-sub { font-size: 12px; }
+
+/* tonight's prep */
+.prep { margin-top: 18px; padding: 14px 14px 10px; border-color: color-mix(in srgb, #7c8cff 55%, transparent); background: color-mix(in srgb, #7c8cff 10%, var(--card)); }
+.prep-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.prep-h b { font: 700 17px/1.2 var(--font-head); }
+.prep-h span { font: 800 13px var(--font-body); color: var(--muted); }
+.prep-next { font-size: 13px; font-weight: 800; color: var(--muted); margin: 4px 0 6px; }
+.prep-item { display: flex; gap: 10px; align-items: flex-start; width: 100%; text-align: left; padding: 9px 2px; border: 0; border-top: 1px dashed var(--line); background: none; cursor: pointer; font: 600 14.5px/1.4 var(--font-body); color: var(--ink); }
+.pi-box { flex: 0 0 auto; width: 22px; height: 22px; border-radius: 7px; border: 2px solid var(--muted); display: grid; place-items: center; font-weight: 900; font-size: 13px; margin-top: 1px; }
+.prep-item.on > span:last-child { text-decoration: line-through; opacity: .6; }
+.prep-item.on .pi-box { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }

@@ -348,6 +348,18 @@
     });
     html += `</div>`;
 
+    // tonight's prep for tomorrow
+    if (day.prep && day.prep.length) {
+      const nextDay = DAYS[idx + 1] ? dv(DAYS[idx + 1]) : null;
+      const pd = store.get("prep:" + day.id, {}) || {};
+      const nDone = day.prep.filter((_, i) => pd[i]).length;
+      html += `<div class="card prep" id="prep-${day.id}">
+        <div class="prep-h"><b>🌙 Tonight: prep for tomorrow</b><span>${nDone}/${day.prep.length}</span></div>
+        ${nextDay ? `<div class="prep-next">${nextDay.emoji} ${nextDay.dow} · ${esc(nextDay.title)}</div>` : ""}
+        ${day.prep.map((t, i) => `<button class="prep-item ${pd[i] ? "on" : ""}" data-prep="${day.id}|${i}"><span class="pi-box">${pd[i] ? "✓" : ""}</span><span>${esc(t)}</span></button>`).join("")}
+      </div>`;
+    }
+
     // phrases for the day
     const pids = [...new Set([...steps.flatMap(x => x.say || []), ...(day.phrases || [])])];
     const ps = pids.map(pid => PHRASES.find(p => p.id === pid)).filter(okPhrase);
@@ -1067,9 +1079,17 @@
   document.addEventListener("click", e => {
     const tile = e.target.closest("[data-tile]");
     if (tile) { $$(".tile").forEach(x => x.classList.toggle("picked", x === tile)); return; }
-    const t = e.target.closest("[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
+    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
+    if (t.dataset.prep) {
+      const [d, i] = t.dataset.prep.split("|"); const pd = store.get("prep:" + d, {}) || {};
+      if (pd[i]) delete pd[i]; else pd[i] = 1; store.set("prep:" + d, pd);
+      t.classList.toggle("on", !!pd[i]); t.querySelector(".pi-box").textContent = pd[i] ? "✓" : "";
+      const box = $("#prep-" + d); const day = DAYS.find(x => x.id === d);
+      if (box && day) box.querySelector(".prep-h span").textContent = `${Object.keys(pd).length}/${day.prep.length}`;
+      return;
+    }
     if (t.dataset.planb) { const k = "planb:" + t.dataset.planb; store.set(k, !store.get(k, false)); toast(store.get(k, false) ? "Plan B on ☔" : "Back to the original plan ☀️"); rerender(() => renderDay(t.dataset.planb)); return; }
     if (t.dataset.star) { const [d, n] = t.dataset.star.split("|"); const f = store.get("fav:" + d, {}) || {}; f.stars = f.stars === +n ? 0 : +n; store.set("fav:" + d, f); $$(`[data-star^="${d}|"]`).forEach((b, i) => b.classList.toggle("on", i < f.stars)); return; }
     if (t.dataset.jump) { $("#" + t.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
