@@ -121,7 +121,7 @@ const DAYS = [
         photo: "Walk toward the camera mid-alley glancing up at the lanterns, vertical, Night mode. Ask before shooting inside a stall.",
       },
       {
-        t: "21:30", title: "Easy Ni-chome intro", night: true, ask: [{"jp": "アイイロカフェはどこですか？", "ro": "Aiiro Kafe wa doko desu ka?", "en": "Where's Aiiro Cafe?", "hear": "dir"}, {"jp": "外国人でも入れますか？", "ro": "Gaikokujin demo hairemasu ka?", "en": "Can foreigners come in?", "hear": "full"}], ll: [35.6905, 139.7077], say: ["cover", "kanpai", "tonari", "namae"], rx: "neon", place: "Aiiro Cafe, Shinjuku 2-chome",
+        t: "21:30", title: "Easy Ni-chome intro", night: true, ask: [{"jp": "アイイロカフェはどこですか？", "ro": "Aiiro Kafe wa doko desu ka?", "en": "Where's Aiiro Cafe?", "hear": "dir"}, {"jp": "外国人でも入れますか？", "ro": "Gaikokujin demo hairemasu ka?", "en": "Can foreigners come in?", "hear": "full"}], ll: [35.6905, 139.7077], say: ["cover", "kanpai", "w-profile", "namae"], rx: "neon", place: "Aiiro Cafe, Shinjuku 2-chome",
         how: [
           "Head back east: Marunouchi line to Shinjuku-sanchome, or just walk ~15 min. Ni-chome is literally around your hotel.",
           "Aiiro Cafe is the open-air corner bar on Naka-dori — grab a drink and people-watch.",
@@ -1093,6 +1093,7 @@ const PHRASES = [
   { id: "kyukei", cat: "Scene words", jp: "休憩でお願いします。", ro: "Kyūkei de onegai shimasu.", en: "Just a short stay, please.", say: "kyoo-keh deh oh-neh-gai shee-mahs", note: "Saunas price by stay: 休憩 (kyūkei, a few hours) or 宿泊 (shukuhaku, overnight)." },
   { id: "shukuhaku", cat: "Scene words", jp: "宿泊でお願いします。", ro: "Shukuhaku de onegai shimasu.", en: "Overnight stay, please.", say: "shoo-koo-hah-koo deh oh-neh-gai shee-mahs" },
   { id: "kondomu2", cat: "Scene words", jp: "コンドームはありますか？", ro: "Kondōmu wa arimasu ka?", en: "Do you have condoms?", say: "kohn-doh-moo wah ah-ree-mahs kah", note: "Usually free at the front desk, but supplies and sizes vary — bring your own." },
+  { id: "w-profile", cat: "Scene words", jp: "ラテン系のガチムチです。アメリカから旅行中です。", ro: "Raten-kei no gachimuchi desu. Amerika kara ryokō-chū desu.", en: "I'm a Latino gachimuchi guy, visiting from the US.", say: "rah-ten-kay noh gah-chee-moo-chee dess. ah-meh-ree-kah kah-rah ryoh-koh-choo dess", note: "Paste it into your 9Monsters/Grindr bio, or use it as your bar intro. Add ヒゲ (beard) and 体毛あり (hairy) as tags." },
   { id: "w-nichome", cat: "Scene words", jp: "二丁目", ro: "Ni-chōme", en: "Tokyo's gay district (Shinjuku 2-chōme)", say: "nee-choh-meh" },
 
   // Emergency
@@ -1213,7 +1214,8 @@ const MANNERS = [
       "Each bar has a “type” (bears, muscle, twinks, older guys). Some upstairs bars are Japanese-only or type-only — a polite no is the format, not you. Ground-floor bars are open to everyone.",
       "Peak hours are 11 PM–3 AM; weekend clubs run to 5 AM.",
       "Apps: 9Monsters is the big local one, and Grindr and Scruff work too. Put ガイ専OK (into foreigners welcome) and your type tags in your profile.",
-      "Your types: Eagle Tokyo/Blue and Eagle Osaka for bears and daddies, Dragon Men and Blacknude for muscle, GB (Tokyo) and Kuro (Osaka) for an older crowd.",
+      "Your look: stocky muscle + full beard + body hair = ガチムチ (gachimuchi) / muscle cub, one of the most wanted types in the scene. Don't trim the body hair for this trip. A fitted tee or tank, and a harness for Eagle or BUFF, is all you need.",
+      "Your bars: Eagle Tokyo/Blue, Bear Tokyo and Eagle Osaka are your crowd (muscle cubs, bears, daddies). Dragon Men and Blacknude for muscle guys, GB (Tokyo) and Kuro (Osaka) for daddies.",
       "Skip any bar a street tout steers you to (especially Kabukichō).",
       "Poppers, cannabis and THC vapes are <b>illegal</b>, even to possess. Watch your drink; carry your passport.",
       "Condoms are free at the bigger saunas — use them; syphilis rates are high and PrEP doesn't cover it.",
@@ -1606,7 +1608,7 @@ const FAN_QUESTS = [
     { t: "Daikichi", where: "12-12 Doyamacho, Osaka · ~5 min from your hotel", when: "24/7 · ~¥2,000–3,000", day: "d8",
       what: "Osaka's main gay sauna: several floors, sauna, steam, baths, dark room, cabins. Mostly locals, under-50s only, ID may be checked.", place: "Daikichi, 12-12 Doyamacho, Osaka", link: "https://www.travelgay.com/venue/daikishi-sauna" },
   ]},
-  { fandom: "Your bars: muscle · bear · daddy", emoji: "🐻", spicy: true, items: [
+  { fandom: "Your bars: gachimuchi + muscle cub crowd", emoji: "🐻", spicy: true, items: [
     { t: "Eagle Tokyo + Eagle Tokyo Blue", where: "Ni-chome, Tokyo", when: "Nightly · cashless · ¥1,000–2,000", day: "d2", what: "Leather and bear bars with a mature, stocky and muscular crowd, multilingual staff, and locals and tourists mixing. BUFF parties (muscle guys to bears, fetish gear) run every two months; check @bufftyo.", place: "Eagle Tokyo, Shinjuku 2-chome", link: "https://sushisandwich81.com/eagle-tokyo-and-eagle-tokyo-blue/" },
     { t: "Dragon Men", where: "Ni-chome, Tokyo", when: "~¥2,000 with two drinks on weekends", day: "d4", what: "Go-go dancers and a big mix of Japanese regulars and visitors. Turns club-like after midnight.", place: "Dragon Men, Shinjuku 2-chome", link: "https://nightlifetokyo.com/en/tokyo/guides/lgbtq-nightlife-tokyo-ni-chome" },
     { t: "Bar Blacknude", where: "1F, 2-15-12 Shinjuku", when: "Mon–Sat 8 PM–1 AM, Sun 7 PM–midnight", day: "d6", what: "Muscle-staff bar; foreigners welcome.", place: "Bar Blacknude, 2-15-12 Shinjuku", link: "https://www.travelgay.com/tokyo-gay-bars" },

@@ -1,11 +1,11 @@
 /* Offline support: cache the app shell, keep fonts and the last weather forecast. */
-const VERSION = "ij-v18";
+const VERSION = "ij-v19";
 const SHELL = [
   "./",
   "index.html",
-  "styles.css?v=18",
-  "data.js?v=18",
-  "app.js?v=18",
+  "styles.css?v=19",
+  "data.js?v=19",
+  "app.js?v=19",
   "manifest.webmanifest",
   "icons/icon-192.png",
   "icons/icon-512.png",
