@@ -373,6 +373,7 @@ const DAYS = [
     steps: [
       {
         t: "10:00", title: "Sleep in, then Asakusa", ask: [{"jp": "雷門はどっちですか？", "ro": "Kaminarimon wa dotchi desu ka?", "en": "Which way to Kaminarimon gate?", "hear": "dir"}], ll: [35.7106, 139.7975], say: ["norikae", "hitotsu"], place: "Senso-ji, Asakusa",
+        ride: [{"ln": "M", "from": "M10", "to": "M13", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 8, "exit": "Cross the platform to the orange Ginza Line"}, {"ln": "G", "from": "G05", "to": "G19", "dir": "浅草方面 (toward Asakusa)", "type": "Every train. Asakusa is the last stop.", "wrong": "Next stop 青山一丁目 Aoyama-itchōme (G04) = wrong way.", "min": 25, "exit": "Exit 1 → Kaminarimon gate"}],
         how: [
           "Marunouchi line from Shinjuku-gyoemmae to Akasaka-mitsuke (~8 min).",
           "Cross the platform to the Ginza line (orange) and ride to the end: Asakusa (~25 min).",
@@ -391,6 +392,7 @@ const DAYS = [
       },
       {
         t: "13:30", title: "Skytree Town + Pokémon Center", quest: "⭐ Kirby Café + Kirby Café THE STORE are in Solamachi too. THE STORE is walk-in; the café needs a reservation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.7101, 139.8107], say: ["menzei", "fukuro"], pic: "Tokyo Skytree Sumida river photo", rx: "classic", place: "Tokyo Solamachi",
+        ride: [{"ln": "TS", "from": "TS01", "to": "TS02", "dir": "北千住・東武動物公園方面 — Asakusa is the end, so any local", "type": "Local (普通) trains stop at Tokyo Skytree; limited expresses don't.", "min": 3, "exit": "Follow signs to Tokyo Solamachi"}],
         how: [
           "Walk ~20 min across the Sumida River (Azuma-bashi bridge) or ride the Tobu Skytree line 1 stop to Tokyo Skytree.",
           "Pokémon Center Skytree Town is inside Tokyo Solamachi (4F).",
@@ -399,6 +401,7 @@ const DAYS = [
       },
       {
         t: "15:00", title: "Omotesando mirror entrance (on the way)", quest: "💥 My Hero Academia Café is a short walk away at BOX cafe&space Cue Plaza Harajuku (through Dec 20; book ahead).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
+        ride: [{"ln": "Z", "from": "Z14", "to": "Z02", "dir": "渋谷・中央林間方面 (toward Shibuya / Chūō-rinkan)", "type": "Every train stops everywhere on the Hanzomon Line.", "wrong": "Next stop 曳舟 Hikifune = wrong way (that's the Tobu Line).", "min": 30, "exit": "Exit A2 → Tokyu Plaza Omotesando"}],
         how: [
           "From Oshiage (Skytree) take the Hanzōmon line straight to Omotesando (~30 min).",
           "Exit A2; Tokyu Plaza's kaleidoscope mirror escalator is on the corner.",
@@ -407,6 +410,7 @@ const DAYS = [
       },
       {
         t: "16:15", title: "Shibuya Sky at sunset", ask: [{"jp": "渋谷スカイのチケット売り場は何階ですか？", "ro": "Shibuya Sukai no chiketto uriba wa nankai desu ka?", "en": "What floor is the Shibuya Sky ticket counter?", "hear": "kai"}, {"jp": "ロッカーはどこですか？", "ro": "Rokkā wa doko desu ka?", "en": "Where are the lockers?", "hear": "dir"}], ll: [35.6585, 139.7023], say: ["yoyaku", "photoplease"], pic: "Shibuya Sky sunset silhouette men", rx: "velvia", place: "Shibuya Sky",
+        ride: [{"ln": "Z", "from": "Z02", "to": "Z01", "dir": "渋谷・中央林間方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 青山一丁目 Aoyama-itchōme (Z03) = wrong way.", "min": 2, "exit": "Follow signs to Shibuya Scramble Square"}],
         how: [
           "Hanzōmon line 1 stop to Shibuya, follow signs to Shibuya Scramble Square.",
           "Ticket counter on 14F; the rooftop is 46F. Sunset ~4:50 PM.",
@@ -417,6 +421,7 @@ const DAYS = [
       },
       {
         t: "19:00", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        ride: [{"ln": "F", "from": "F16", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Trains for 横浜 Yokohama / 元町・中華街 Motomachi-Chūkagai use the same platforms — next stop 代官山 Daikanyama = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
         how: [
           "Fukutoshin line Shibuya → Shinjuku-sanchome (~10 min, no transfer).",
           "Nap 30 min. Shower. Outfit on.",
@@ -464,6 +469,7 @@ const DAYS = [
     steps: [
       {
         t: "10:00", title: "Pokémon Center Mega Tokyo", ask: [{"jp": "サンシャインシティはどっちですか？", "ro": "Sanshain Shiti wa dotchi desu ka?", "en": "Which way to Sunshine City?", "hear": "dir"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.729, 139.7193], say: ["menzei", "fukuro", "card"], pic: "Pokemon Center Mega Tokyo photo", rx: "reala", place: "Pokemon Center Mega Tokyo, Sunshine City",
+        ride: [{"ln": "F", "from": "F13", "to": "F09", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Any train — all stop at Ikebukuro.", "wrong": "Next stop 北参道 Kita-sandō (F14) = wrong way.", "min": 10, "exit": "East Exit (東口) → Sunshine 60 Street"}],
         how: [
           "Fukutoshin line (brown) from Shinjuku-sanchome to Ikebukuro (~10 min, no transfer).",
           "Take the East Exit and walk ~10 min down Sunshine 60 Street to Sunshine City.",
@@ -475,6 +481,7 @@ const DAYS = [
       },
       {
         t: "13:00", title: "Shibuya: Mewtwo + Nintendo Tokyo", quest: "🌸 Tower Records Shibuya (5 min walk) has Ariana's “Tower Love!” petal posters + a fan lottery. Buy the Japanese edition CD.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
+        ride: [{"ln": "F", "from": "F09", "to": "F16", "dir": "渋谷・横浜・元町・中華街方面 (toward Shibuya)", "type": "Any train — all stop at Shibuya.", "wrong": "Next stop 要町 Kanamechō = wrong way.", "min": 15, "exit": "Follow signs to Shibuya PARCO (~7 min walk)"}],
         how: [
           "Fukutoshin line from Ikebukuro straight to Shibuya (~15 min).",
           "Walk ~7 min to Shibuya PARCO; Pokémon Center Shibuya and Nintendo TOKYO are both on 6F.",
@@ -495,6 +502,7 @@ const DAYS = [
       },
       {
         t: "17:00", title: "Rest + costume on", ll: [35.6888, 139.71], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        ride: [{"ln": "F", "from": "F16", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Next stop 代官山 Daikanyama = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
         how: [
           "Fukutoshin line Shibuya → Shinjuku-sanchome (~10 min).",
           "Drop the merch, nap, costume on (wear it to the café for the Halloween photo).",
@@ -502,6 +510,7 @@ const DAYS = [
       },
       {
         t: "18:25", title: "Leave for Pokémon Café Tokyo", ask: [{"jp": "高島屋の新館はどっちですか？", "ro": "Takashimaya no shinkan wa dotchi desu ka?", "en": "Which way to Takashimaya's Annex building?", "hear": "dir"}], say: ["norikae", "doko"], place: "Nihonbashi Takashimaya S.C. Annex",
+        ride: [{"ln": "M", "from": "M10", "to": "M16", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 14, "exit": "Follow the orange Ginza Line signs"}, {"ln": "G", "from": "G09", "to": "G11", "dir": "浅草方面 (toward Asakusa)", "type": "Every train.", "wrong": "Next stop 新橋 Shimbashi (G08) = wrong way.", "min": 4, "exit": "Exit B2 → straight into Takashimaya"}],
         how: [
           "Marunouchi line from Shinjuku-gyoemmae to Ginza (~17 min).",
           "Change to the Ginza line (orange) 2 stops to Nihombashi.",
@@ -520,6 +529,7 @@ const DAYS = [
       },
       {
         t: "21:30", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 2-15-12 Shinjuku",
+        ride: [{"ln": "G", "from": "G11", "to": "G09", "dir": "渋谷方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 三越前 Mitsukoshimae (G12) = wrong way.", "min": 4, "exit": "Follow the red Marunouchi Line signs"}, {"ln": "M", "from": "M16", "to": "M09", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train.", "wrong": "Next stop 東京 Tokyo (M17) = wrong way.", "min": 17, "exit": "Exits C5–C8 come up right at Ni-chome"}],
         how: [
           "Ginza → Marunouchi line back to Shinjuku-sanchome (~25 min).",
           "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE 80th) or ArcH (Jimi-Halloween: dress as something boring 😂).",
@@ -564,6 +574,7 @@ const DAYS = [
       },
       {
         t: "07:45", title: "Shinjuku → Shinagawa", ask: [{"jp": "新幹線の乗り換え口はどこですか？", "ro": "Shinkansen no norikae-guchi wa doko desu ka?", "en": "Where's the transfer gate for the shinkansen?", "hear": "dir"}], ll: [35.6285, 139.7387], say: ["nanban", "hitotsu"], place: "Shinagawa Station",
+        ride: [{"ln": "JY", "from": "JY17", "to": "JY25", "dir": "渋谷・品川方面 (toward Shibuya / Shinagawa)", "type": "All Yamanote trains stop everywhere.", "wrong": "Next stop 新大久保 Shin-Ōkubo (JY16) = wrong way.", "min": 20, "exit": "Blue 新幹線 Shinkansen signs → tap the SmartEX-linked Suica"}],
         how: [
           "Walk ~10 min to Shinjuku Station, JR Yamanote line (green) toward Shibuya/Shinagawa (~20 min).",
           "At Shinagawa follow the blue “Shinkansen” signs and tap the Suica linked to SmartEX at the gate.",
@@ -572,6 +583,7 @@ const DAYS = [
       },
       {
         t: "08:30", title: "Nozomi to Kyoto (seat E)", ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
+        ride: [{"ln": "TKN", "from": "SGW", "to": "KYT", "dir": "新大阪・博多・広島方面 (westbound) — your car number is on your SmartEX ticket", "type": "Nozomi stops only at these stations before Kyoto.", "wrong": "A train whose next stop is 東京 Tokyo = wrong way (that's the other platform).", "min": 135, "exit": "烏丸中央口 Karasuma Central Gate (north side)"}],
         how: [
           "Find your car number on the platform floor markings and line up there.",
           "Sit in seat E — the window side that faces Mt Fuji.",
@@ -591,6 +603,7 @@ const DAYS = [
       /* ---- Plan A: museum ---- */
       {
         only: "a", t: "11:30", title: "Kintetsu → Nintendo Museum", ask: [{"jp": "近鉄線の乗り場はどこですか？", "ro": "Kintetsu-sen no noriba wa doko desu ka?", "en": "Where do I board the Kintetsu Line?", "hear": "dir"}, {"jp": "この電車は小倉に止まりますか？", "ro": "Kono densha wa Ogura ni tomarimasu ka?", "en": "Does this train stop at Ogura?", "hear": "yesno"}], ll: [34.8956, 135.786], say: ["yoyaku", "konokippu"], pic: "Nintendo Museum Kyoto photo", rx: "reala", place: "Nintendo Museum, Uji",
+        ride: [{"ln": "KB", "from": "B01", "to": "B10", "dir": "奈良・橿原神宮前・新田辺方面", "type": "⚠️ Only 普通 Local and 準急 Semi-Express stop at Ogura. 急行 Express and 特急 Limited Express skip it.", "min": 25, "exit": "Walk ~5 min to the Nintendo Museum"}],
         how: [
           "Back into Kyoto Station, follow signs to the Kintetsu Line (south side, Hachijō exit area).",
           "Ride the Kintetsu Kyoto Line to Ogura (小倉) — check the board that your train stops there (~20–30 min).",
@@ -602,6 +615,7 @@ const DAYS = [
       },
       {
         only: "a", t: "15:30", title: "Back → taxi to Kiyomizu-dera", ask: [{"jp": "清水寺までお願いします", "ro": "Kiyomizu-dera made onegai shimasu", "en": "To Kiyomizu-dera, please (taxi)", "hear": "none"}], say: ["taxi"], place: "Kiyomizu-dera",
+        ride: [{"ln": "KB", "from": "B10", "to": "B01", "dir": "京都方面 (toward Kyoto)", "type": "Any train that stops at Ogura goes all the way to Kyoto.", "wrong": "Next stop 伊勢田 Iseda = wrong way.", "min": 25, "exit": "Taxi stand on the north (Karasuma) side"}],
         how: [
           "Kintetsu back to Kyoto Station.",
           "Taxi from the north (Karasuma) side to Kiyomizu-dera (~15 min, ~¥1,800). It's open until 6 PM.",
@@ -611,6 +625,7 @@ const DAYS = [
       /* ---- Plan B: no museum ---- */
       {
         only: "b", t: "11:30", title: "Nishiki Market lunch crawl", ask: [{"jp": "これ一つ。ここで食べてもいいですか？", "ro": "Kore hitotsu. Koko de tabete mo ii desu ka?", "en": "One of these. Can I eat it here?", "hear": "yesno"}], ll: [35.005, 135.7649], say: ["hitotsu", "ikura", "oishii"], pic: "Nishiki Market food photo", rx: "nostalgic", place: "Nishiki Market, Kyoto",
+        ride: [{"ln": "KR", "from": "K11", "to": "K09", "dir": "国際会館方面 (toward Kokusaikaikan)", "type": "Every train.", "wrong": "Next stop 九条 Kujō (K12) = wrong way.", "min": 5, "exit": "Walk ~5 min east to Nishiki Market"}],
         how: [
           "Karasuma subway from Kyoto Station 2 stops to Shijō (~5 min).",
           "Walk ~5 min east to Nishiki Market.",
@@ -659,6 +674,7 @@ const DAYS = [
       },
       {
         t: "21:30", title: "Back to the hotel", ask: [{"jp": "京都駅までお願いします", "ro": "Kyōto-eki made onegai shimasu", "en": "To Kyoto Station, please (taxi)", "hear": "none"}], ll: [34.987, 135.7593], say: ["taxi"], pic: "Kyoto Station staircase night photo", rx: "neon", place: "Hotel Hokke Club Kyoto",
+        ride: [{"ln": "KR", "from": "K09", "to": "K11", "dir": "竹田方面 (toward Takeda)", "type": "Every train.", "wrong": "Next stop 烏丸御池 Karasuma-oike (K08) = wrong way.", "min": 5, "exit": "Karasuma Central Gate → hotel across the bus terminal"}],
         how: [
           "Taxi (~¥1,500) or walk ~10 min west to Shijō Station → Karasuma subway 2 stops to Kyoto.",
           "Check in and grab your backpack.",
@@ -689,6 +705,7 @@ const DAYS = [
     steps: [
       {
         t: "06:30", title: "Check out → Inari", ask: [{"jp": "奈良線は何番線ですか？", "ro": "Nara-sen wa nanbansen desu ka?", "en": "Which platform is the Nara Line?", "hear": "bansen"}, {"jp": "この電車は稲荷に止まりますか？", "ro": "Kono densha wa Inari ni tomarimasu ka?", "en": "Does this train stop at Inari?", "hear": "yesno"}], ll: [34.9671, 135.7727], say: ["checkout", "azukeru"], place: "Fushimi Inari Taisha",
+        ride: [{"ln": "JD", "from": "D01", "to": "D03", "dir": "奈良・城陽方面 — platforms 8–10. Kyoto is the end of the Nara Line", "type": "普通 Local and みやこ路快速 Miyakoji Rapid stop at Inari.", "min": 5, "exit": "The shrine gate is right across the street"}],
         how: [
           "Leave your backpack at the front desk.",
           "JR Nara line from Kyoto Station (platforms 8–10) 2 stops to Inari (~5 min). Any local train stops there.",
@@ -708,6 +725,7 @@ const DAYS = [
       },
       {
         t: "08:30", title: "Uji: Byōdō-in + matcha", ask: [{"jp": "平等院はどっちですか？", "ro": "Byōdōin wa dotchi desu ka?", "en": "Which way to Byōdō-in?", "hear": "dir"}], ll: [34.8892, 135.8077], say: ["osusume", "hitotsu"], pic: "Byodoin Phoenix Hall reflection photo", rx: "classic", place: "Byodo-in, Uji",
+        ride: [{"ln": "JD", "from": "D03", "to": "D09", "dir": "奈良・宇治方面 (toward Nara / Uji)", "type": "普通 Local and みやこ路快速 Miyakoji Rapid stop at Uji.", "wrong": "Next stop 東福寺 Tōfukuji (D02) = wrong way.", "min": 20, "exit": "Walk ~10 min to Byōdō-in"}],
         how: [
           "JR Nara line from Inari to Uji (~20 min).",
           "Walk ~10 min to Byōdō-in (opens 8:30).",
@@ -718,6 +736,7 @@ const DAYS = [
       },
       {
         t: "12:30", title: "Uji → Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
+        ride: [{"ln": "JD", "from": "D09", "to": "D01", "dir": "京都方面 (toward Kyoto)", "type": "Any train.", "wrong": "Next stop 新田 Shinden = wrong way.", "min": 20, "exit": "Grab your backpack at the hotel, then back to JR Kyoto"}, {"ln": "JA", "from": "A31", "to": "A47", "dir": "大阪・神戸・姫路方面 (westbound) — look for 新快速 Special Rapid", "type": "Special Rapid only stops at these 4 stations. Local and Rapid also work, just slower.", "wrong": "Next stop 山科 Yamashina = wrong way (eastbound).", "min": 30, "exit": "Midosuji South Exit → walk ~8 min to the hotel"}],
         how: [
           "JR Nara line back to Kyoto; grab your backpack at the hotel.",
           "JR Special Rapid (新快速) from Kyoto to Osaka (~30 min).",
@@ -735,6 +754,7 @@ const DAYS = [
       },
       {
         t: "17:00", title: "Pokémon Center Osaka DX", quest: "⭐ Kirby Café Osaka is also in Shinsaibashi — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
+        ride: [{"ln": "OM", "from": "M16", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 6, "exit": "Daimaru is connected to the station"}],
         how: [
           "Midosuji line (red) from Umeda to Shinsaibashi (~6 min). Daimaru is connected to the station.",
           "Pokémon Center Osaka DX and the café are on 9F.",
@@ -753,6 +773,7 @@ const DAYS = [
       },
       {
         t: "23:00", title: "Doyama-cho holiday-eve crawl", night: true, ask: [{"jp": "イーグル大阪はどこですか？", "ro": "Īguru Ōsaka wa doko desu ka?", "en": "Where's Eagle Osaka?", "hear": "dir"}], ll: [34.7048, 135.504], say: ["amerika", "nomou", "issho", "gaikokujin"], rx: "neon", place: "Doyama-cho, Kita-ku, Osaka",
+        ride: [{"ln": "OM", "from": "M19", "to": "M16", "dir": "千里中央・新大阪方面 (toward Senri-Chūō / Shin-Osaka)", "type": "Every train.", "wrong": "Next stop なんば Namba (M20) = wrong way.", "min": 6, "exit": "Doyama-cho is ~5 min from Umeda"}],
         how: [
           "Midosuji line back to Umeda; Doyama-cho is ~5 min from your hotel.",
           "Eagle Osaka (free entry Mon–Thu, cashless) → Grand Slam (small, international) → Explosion (main club; check @explosion_osaka).",
@@ -794,6 +815,7 @@ const DAYS = [
       },
       {
         t: "08:30", title: "Osaka → Hiroshima", ask: [{"jp": "広島行きの新幹線は何番線ですか？", "ro": "Hiroshima-iki no shinkansen wa nanbansen desu ka?", "en": "Which platform for the shinkansen to Hiroshima?", "hear": "bansen"}], say: ["nanban", "seki"], place: "Hiroshima Station",
+        ride: [{"ln": "JA", "from": "A47", "to": "A46", "dir": "京都方面 (toward Kyoto) — JR Kyoto Line platforms", "type": "Any train stops at Shin-Osaka.", "wrong": "Next stop 塚本 Tsukamoto = wrong way (JR Kobe Line).", "min": 4, "exit": "Follow blue 新幹線 signs"}, {"ln": "SYS", "from": "SHO", "to": "HIJ", "dir": "博多・広島方面 (westbound)", "type": "Every Nozomi stops at Hiroshima.", "min": 85, "exit": "Follow signs to the JR Sanyo Line for Miyajima"}],
         how: [
           "JR Kyoto line from Osaka 1 stop to Shin-Osaka (~4 min).",
           "~9:00 AM Nozomi to Hiroshima (~1 h 25) — tap the Suica linked to SmartEX.",
@@ -802,6 +824,7 @@ const DAYS = [
       },
       {
         t: "10:45", title: "To Miyajima", ask: [{"jp": "JRの宮島行きフェリーはどこですか？", "ro": "JR no Miyajima-iki ferī wa doko desu ka?", "en": "Where's the JR ferry to Miyajima?", "hear": "dir"}], ll: [34.3112, 132.3036], say: ["konokippu"], pic: "Miyajima ferry torii view", rx: "velvia", place: "Miyajimaguchi Ferry Terminal",
+        ride: [{"ln": "SL", "from": "HIR", "to": "MYJ", "dir": "岩国・大竹・南岩国方面 (westbound)", "type": "Local (普通) stops everywhere; Rapid also stops at Miyajimaguchi.", "wrong": "白市 Shiraichi / 西条 Saijō / 三原 Mihara on the sign, or next stop 天神川 Tenjingawa = wrong way.", "min": 27, "exit": "Walk 3 min to the JR ferry pier"}],
         how: [
           "JR Sanyo line (local toward Iwakuni) from Hiroshima to Miyajimaguchi (~30 min).",
           "Walk 3 min to the JR ferry pier — Suica works. ~10 min crossing.",
@@ -822,6 +845,7 @@ const DAYS = [
       },
       {
         t: "15:00", title: "Peace Memorial Park", ask: [{"jp": "原爆ドームまでお願いします", "ro": "Genbaku Dōmu made onegai shimasu", "en": "To the Atomic Bomb Dome, please (taxi)", "hear": "none"}], ll: [34.3955, 132.4536], say: ["taxi"], pic: "Atomic Bomb Dome river photo black and white", rx: "acros", place: "Atomic Bomb Dome, Hiroshima",
+        ride: [{"ln": "SL", "from": "MYJ", "to": "HIR", "dir": "広島・白市・西条方面 (toward Hiroshima)", "type": "Any train.", "wrong": "Next stop 前空 Maezora = wrong way.", "min": 27, "exit": "Taxi or tram to Genbaku-Dōmu-mae"}],
         how: [
           "Ferry back → JR to Hiroshima Station (~30 min).",
           "Taxi (~10 min) or streetcar line 2 or 6 to Genbaku-Dōmu-mae. Have coins ready in case your IC card isn't accepted.",
@@ -840,6 +864,7 @@ const DAYS = [
       },
       {
         t: "18:00", title: "Shinkansen back to Osaka", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
+        ride: [{"ln": "SYS", "from": "HIJ", "to": "SHO", "dir": "新大阪・東京方面 (eastbound)", "type": "Every Nozomi stops at Shin-Osaka.", "min": 85, "exit": "Follow JR Kyoto Line signs"}, {"ln": "JA", "from": "A46", "to": "A47", "dir": "大阪・神戸方面 (toward Osaka)", "type": "Any train.", "wrong": "Next stop 東淀川 Higashi-Yodogawa = wrong way.", "min": 4, "exit": "Midosuji South Exit → hotel"}],
         how: [
           "Tram or taxi back to Hiroshima Station.",
           "Nozomi to Shin-Osaka (~1 h 25), JR 1 stop to Osaka, walk ~8 min.",
@@ -848,6 +873,7 @@ const DAYS = [
       },
       {
         t: "21:30", title: "Last Osaka night", say: ["nama", "kanpai"], pic: "Shinsekai Osaka night flash photo", rx: "neon", place: "Shinsekai, Osaka",
+        ride: [{"ln": "OK", "from": "K12", "to": "K18", "dir": "天下茶屋方面 (toward Tengachaya)", "type": "Every train.", "wrong": "Next stop 天神橋筋六丁目 (K11) = wrong way.", "min": 12, "exit": "Shinsekai is right outside"}],
         how: [
           "Energy left? Shinsekai's retro neon around Tsūtenkaku tower (Sakaisuji line to Ebisuchō).",
           "Or one last round in Doyama-cho, 5 min from the hotel.",
@@ -858,6 +884,7 @@ const DAYS = [
       },
       {
         t: "23:30", title: "Last-night soak at Daikichi 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["kyukei"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
+        ride: [{"ln": "OM", "from": "M22", "to": "M16", "dir": "千里中央・新大阪方面 (toward Shin-Osaka)", "type": "Every train.", "wrong": "Next stop 天王寺 Tennōji (M23) = wrong way.", "min": 15, "exit": "Walk 5–10 min to Doyama-cho"}],
         how: [
           "From Shinsekai, take the Midosuji line to Umeda (about 15 min). Daikichi is a 5–10 minute walk from there.",
           "Check out of the hotel by about 9:30 AM tomorrow for the Fuji train. No sauna in Kawaguchiko, so make this one count.",
@@ -887,6 +914,7 @@ const DAYS = [
       },
       {
         t: "10:30", title: "Hikari to Mishima (seat E)", ask: [{"jp": "三島に止まるひかりは何番線ですか？", "ro": "Mishima ni tomaru Hikari wa nanbansen desu ka?", "en": "Which platform for the Hikari that stops at Mishima?", "hear": "bansen"}], ll: [35.1264, 138.911], say: ["seki", "nanban"], pic: "Mt Fuji from shinkansen Mishima", rx: "classic", place: "Mishima Station",
+        ride: [{"ln": "JA", "from": "A47", "to": "A46", "dir": "京都方面 (toward Kyoto)", "type": "Any train.", "wrong": "Next stop 塚本 Tsukamoto = wrong way.", "min": 4, "exit": "Follow blue 新幹線 signs"}, {"ln": "TKH", "from": "SHO", "to": "MSM", "dir": "東京方面 (eastbound) — must be ひかり HIKARI", "type": "Hikari stop patterns vary — these are the big ones. Check 三島 is on your train's list on the platform board.", "wrong": "のぞみ Nozomi does NOT stop at Mishima.", "min": 120, "exit": "South Exit (南口) → Fujikyu bus stop"}],
         how: [
           "Take a HIKARI (ひかり) — the Nozomi doesn't stop at Mishima.",
           "Seat E again for Fuji. ~2 h.",
@@ -950,6 +978,7 @@ const DAYS = [
       },
       {
         t: "07:00", title: "Chureito Pagoda", ask: [{"jp": "忠霊塔はどっちですか？", "ro": "Chūreitō wa dotchi desu ka?", "en": "Which way to Chūreitō Pagoda?", "hear": "dir"}], ll: [35.5013, 138.8019], say: ["photoplease"], pic: "Chureito Pagoda men photo", rx: "velvia", place: "Chureito Pagoda",
+        ride: [{"ln": "FJ", "from": "KWG", "to": "SYD", "dir": "大月方面 (toward Ōtsuki) — Kawaguchiko is the end, so any train", "type": "Local (普通) trains stop at Shimoyoshida; check the board for limited expresses.", "min": 15, "exit": "Walk up ~400 steps to the pagoda deck"}],
         how: [
           "Fujikyu train from Kawaguchiko to Shimoyoshida (~15 min).",
           "Walk up ~400 steps to the viewing deck above the pagoda.",
@@ -958,6 +987,7 @@ const DAYS = [
       },
       {
         t: "09:30", title: "Highway bus to Shinjuku", ask: [{"jp": "新宿行きのバス乗り場はここですか？", "ro": "Shinjuku-iki no basu noriba wa koko desu ka?", "en": "Is this the stop for the bus to Shinjuku?", "hear": "yesno"}], ll: [35.4986, 138.7689], say: ["konokippu"], place: "Busta Shinjuku",
+        ride: [{"ln": "FJ", "from": "SYD", "to": "KWG", "dir": "河口湖方面 (toward Kawaguchiko)", "type": "Any train.", "wrong": "Next stop isn't 月江寺 Gekkōji = wrong way.", "min": 15, "exit": "Bus stops are outside Kawaguchiko Station"}],
         how: [
           "Fujikyu train back to Kawaguchiko Station in time for the 9:30 bus — don't take a later one.",
           "Show your highway-buses.jp QR. ~1 h 45 to Busta Shinjuku.",
@@ -966,6 +996,7 @@ const DAYS = [
       },
       {
         t: "11:45", title: "Narita Express to the airport", ask: [{"jp": "成田エクスプレスの切符はどこで買えますか？", "ro": "Narita Ekusupuresu no kippu wa doko de kaemasu ka?", "en": "Where can I buy a Narita Express ticket?", "hear": "dir"}], ll: [35.6896, 139.7006], say: ["oshiete", "seki"], place: "Narita Airport Terminal 1",
+        ride: [{"ln": "NEX", "from": "SJK", "to": "NRT1", "dir": "成田空港方面 — every seat is reserved; your car + seat are on the ticket", "type": "At Tokyo the train joins another — just stay in your seat.", "wrong": "Get off at the LAST stop, 成田空港 Narita Airport (T1). 空港第2ビル is Terminal 2·3 — United is in T1.", "min": 80, "exit": "Terminal 1 → United check-in"}],
         how: [
           "Walk into JR Shinjuku and buy a Narita Express (N'EX) ticket at a JR machine — every seat is reserved (~¥3,300).",
           "~1 h 20 to Narita Airport Terminal 1 (United is in T1).",
@@ -1719,7 +1750,9 @@ const LINES = {
     ["RG", "リゾートゲートウェイ", "Resort Gateway"], ["TDL", "東京ディズニーランド・ステーション", "Tokyo Disneyland Station"],
     ["BS", "ベイサイド", "Bayside"], ["TDS", "東京ディズニーシー・ステーション", "Tokyo DisneySea Station"]] },
   G: { name: "Ginza Line", jp: "銀座線", color: "#ff9500", stops: [
-    ["G05", "赤坂見附", "Akasaka-mitsuke"], ["G06", "溜池山王", "Tameike-sannō"], ["G07", "虎ノ門", "Toranomon"], ["G08", "新橋", "Shimbashi"], ["G09", "銀座", "Ginza"]] },
+    ["G05", "赤坂見附", "Akasaka-mitsuke"], ["G06", "溜池山王", "Tameike-sannō"], ["G07", "虎ノ門", "Toranomon"], ["G08", "新橋", "Shimbashi"], ["G09", "銀座", "Ginza"],
+    ["G10", "京橋", "Kyōbashi"], ["G11", "日本橋", "Nihombashi"], ["G12", "三越前", "Mitsukoshimae"], ["G13", "神田", "Kanda"], ["G14", "末広町", "Suehirochō"],
+    ["G15", "上野広小路", "Ueno-hirokōji"], ["G16", "上野", "Ueno"], ["G17", "稲荷町", "Inarichō"], ["G18", "田原町", "Tawaramachi"], ["G19", "浅草", "Asakusa"]] },
   Y: { name: "Yurakucho Line", jp: "有楽町線", color: "#c1a470", stops: [
     ["Y18", "有楽町", "Yūrakuchō"], ["Y19", "銀座一丁目", "Ginza-itchōme"], ["Y20", "新富町", "Shintomichō"], ["Y21", "月島", "Tsukishima"], ["Y22", "豊洲", "Toyosu"]] },
   U: { name: "Yurikamome", jp: "ゆりかもめ", color: "#1b8fd1", stops: [
@@ -1727,4 +1760,41 @@ const LINES = {
     ["U06", "お台場海浜公園", "Odaiba-kaihinkōen"], ["U07", "台場", "Daiba"], ["U08", "東京国際クルーズターミナル", "Tokyo Int'l Cruise Terminal"], ["U09", "テレコムセンター", "Telecom Center"],
     ["U10", "青海", "Aomi"], ["U11", "東京ビッグサイト", "Tokyo Big Sight"], ["U12", "有明", "Ariake"], ["U13", "有明テニスの森", "Ariake-tennis-no-mori"],
     ["U14", "市場前", "Shijō-mae"], ["U15", "新豊洲", "Shin-toyosu"], ["U16", "豊洲", "Toyosu"]] },
+  TS: { name: "Tobu Skytree Line", jp: "東武スカイツリーライン", color: "#0f6cc3", stops: [["TS01", "浅草", "Asakusa"], ["TS02", "とうきょうスカイツリー", "Tokyo Skytree"]] },
+  Z: { name: "Hanzomon Line", jp: "半蔵門線", color: "#8f76d6", stops: [
+    ["Z01", "渋谷", "Shibuya"], ["Z02", "表参道", "Omotesandō"], ["Z03", "青山一丁目", "Aoyama-itchōme"], ["Z04", "永田町", "Nagatachō"], ["Z05", "半蔵門", "Hanzōmon"],
+    ["Z06", "九段下", "Kudanshita"], ["Z07", "神保町", "Jimbōchō"], ["Z08", "大手町", "Ōtemachi"], ["Z09", "三越前", "Mitsukoshimae"], ["Z10", "水天宮前", "Suitengūmae"],
+    ["Z11", "清澄白河", "Kiyosumi-shirakawa"], ["Z12", "住吉", "Sumiyoshi"], ["Z13", "錦糸町", "Kinshichō"], ["Z14", "押上〈スカイツリー前〉", "Oshiage (Skytree)"]] },
+  F: { name: "Fukutoshin Line", jp: "副都心線", color: "#9c5e31", stops: [
+    ["F09", "池袋", "Ikebukuro"], ["F10", "雑司が谷", "Zōshigaya"], ["F11", "西早稲田", "Nishi-waseda"], ["F12", "東新宿", "Higashi-shinjuku"],
+    ["F13", "新宿三丁目", "Shinjuku-sanchōme"], ["F14", "北参道", "Kita-sandō"], ["F15", "明治神宮前〈原宿〉", "Meiji-jingūmae (Harajuku)"], ["F16", "渋谷", "Shibuya"]] },
+  TKN: { name: "Tokaido Shinkansen · Nozomi", jp: "東海道新幹線 のぞみ", color: "#1a4fa0", stops: [
+    ["SGW", "品川", "Shinagawa"], ["SYH", "新横浜", "Shin-Yokohama"], ["NGY", "名古屋", "Nagoya"], ["KYT", "京都", "Kyoto"]] },
+  TKH: { name: "Tokaido Shinkansen · Hikari", jp: "東海道新幹線 ひかり", color: "#1a4fa0", stops: [
+    ["SHO", "新大阪", "Shin-Osaka"], ["KYT", "京都", "Kyoto"], ["NGY", "名古屋", "Nagoya"], ["SZK", "静岡", "Shizuoka"], ["MSM", "三島", "Mishima"]] },
+  SYS: { name: "Sanyo Shinkansen · Nozomi", jp: "山陽新幹線 のぞみ", color: "#1a4fa0", stops: [
+    ["SHO", "新大阪", "Shin-Osaka"], ["SKB", "新神戸", "Shin-Kobe"], ["OKY", "岡山", "Okayama"], ["FKY", "福山 (some trains)", "Fukuyama (some trains)"], ["HIJ", "広島", "Hiroshima"]] },
+  KB: { name: "Kintetsu Kyoto Line", jp: "近鉄京都線", color: "#e0262b", stops: [
+    ["B01", "京都", "Kyoto"], ["B02", "東寺", "Tōji"], ["B03", "十条", "Jūjō"], ["B04", "上鳥羽口", "Kamitobaguchi"], ["B05", "竹田", "Takeda"],
+    ["B06", "伏見", "Fushimi"], ["B07", "近鉄丹波橋", "Kintetsu-Tambabashi"], ["B08", "桃山御陵前", "Momoyama-goryōmae"], ["B09", "向島", "Mukaijima"], ["B10", "小倉", "Ogura"]] },
+  KR: { name: "Karasuma Line (Kyoto subway)", jp: "烏丸線", color: "#2a9d4a", stops: [["K09", "四条", "Shijō"], ["K10", "五条", "Gojō"], ["K11", "京都", "Kyoto"]] },
+  JD: { name: "JR Nara Line", jp: "奈良線", color: "#9a6b32", stops: [
+    ["D01", "京都", "Kyoto"], ["D02", "東福寺", "Tōfukuji"], ["D03", "稲荷", "Inari"], ["D04", "JR藤森", "JR Fujinomori"], ["D05", "桃山", "Momoyama"],
+    ["D06", "六地蔵", "Rokujizō"], ["D07", "木幡", "Kohata"], ["D08", "黄檗", "Ōbaku"], ["D09", "宇治", "Uji"]] },
+  JA: { name: "JR Kyoto Line · Special Rapid", jp: "JR京都線 新快速", color: "#0072bc", stops: [
+    ["A31", "京都", "Kyoto"], ["A38", "高槻", "Takatsuki"], ["A46", "新大阪", "Shin-Osaka"], ["A47", "大阪", "Osaka"]] },
+  OM: { name: "Midosuji Line (Osaka Metro)", jp: "御堂筋線", color: "#e5171f", stops: [
+    ["M16", "梅田", "Umeda"], ["M17", "淀屋橋", "Yodoyabashi"], ["M18", "本町", "Hommachi"], ["M19", "心斎橋", "Shinsaibashi"],
+    ["M20", "なんば", "Namba"], ["M21", "大国町", "Daikokuchō"], ["M22", "動物園前", "Dōbutsuen-mae"]] },
+  OK: { name: "Sakaisuji Line (Osaka Metro)", jp: "堺筋線", color: "#814721", stops: [
+    ["K12", "扇町", "Ōgimachi"], ["K13", "南森町", "Minami-morimachi"], ["K14", "北浜", "Kitahama"], ["K15", "堺筋本町", "Sakaisuji-hommachi"],
+    ["K16", "長堀橋", "Nagahoribashi"], ["K17", "日本橋", "Nippombashi"], ["K18", "恵美須町", "Ebisuchō"]] },
+  SL: { name: "JR Sanyo Line (local)", jp: "山陽本線", color: "#0072bc", stops: [
+    ["HIR", "広島", "Hiroshima"], ["SHK", "新白島", "Shin-Hakushima"], ["YKG", "横川", "Yokogawa"], ["NHR", "西広島", "Nishi-Hiroshima"], ["SIN", "新井口", "Shin-Inokuchi"],
+    ["ITK", "五日市", "Itsukaichi"], ["HTK", "廿日市", "Hatsukaichi"], ["MKS", "宮内串戸", "Miyauchi-Kushido"], ["AJN", "阿品", "Ajina"], ["MYJ", "宮島口", "Miyajimaguchi"]] },
+  FJ: { name: "Fujikyu Line", jp: "富士急行線", color: "#2b5fae", stops: [
+    ["KWG", "河口湖", "Kawaguchiko"], ["FQH", "富士急ハイランド", "Fuji-Q Highland"], ["FJS", "富士山", "Fujisan"], ["GKJ", "月江寺", "Gekkōji"], ["SYD", "下吉田", "Shimoyoshida"]] },
+  NEX: { name: "Narita Express (N'EX)", jp: "成田エクスプレス", color: "#c8102e", stops: [
+    ["SJK", "新宿", "Shinjuku"], ["SBY", "渋谷", "Shibuya (some trains)"], ["SGW", "品川", "Shinagawa"], ["TKY", "東京", "Tokyo"],
+    ["NRT2", "空港第2ビル", "Narita Airport T2·3"], ["NRT1", "成田空港", "Narita Airport T1"]] },
 };
