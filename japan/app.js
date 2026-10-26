@@ -125,7 +125,16 @@
     }
     document.body.classList.toggle("bday", bday);
     if (bday && !sessionStorage.getItem("bday-confetti")) { sessionStorage.setItem("bday-confetti", "1"); setTimeout(confetti, 400); }
-    $("#clock").innerHTML = `<b>${t}</b> 🇯🇵<br>${sub}`;
+    // Home time (Orlando) — Intl handles the EDT → EST switch on Nov 1 automatically
+    let home = "";
+    try {
+      const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit", weekday: "short", timeZoneName: "short" }).formatToParts(new Date());
+      const g = k => (parts.find(p => p.type === k) || {}).value || "";
+      const hr = +new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "numeric", hourCycle: "h23" }).format(new Date());
+      const asleep = hr >= 23 || hr < 7;
+      home = `<span class="home-time" title="Orlando time">🇺🇸 ${g("hour")}:${g("minute")} ${g("dayPeriod")} ${g("timeZoneName")}${asleep ? " 😴" : ""}</span>`;
+    } catch {}
+    $("#clock").innerHTML = `<b>${t}</b> 🇯🇵<br>${home}${home ? "<br>" : ""}<span class="clock-sub">${sub}</span>`;
   }
 
   /* ---------- Day strip ---------- */
@@ -1167,8 +1176,8 @@
   /* ---------- Boot ---------- */
   applySafe();
   const setTopH = () => document.documentElement.style.setProperty("--top-h", ($(".top")?.offsetHeight || 130) + "px");
-  setTopH(); window.addEventListener("resize", setTopH);
   tickClock(); setInterval(tickClock, 30e3);
+  setTopH(); window.addEventListener("resize", setTopH);
   route();
   // refresh "up next" every 5 minutes on the day view
   setInterval(() => { if (/^#?(day\/|today|$)/.test(location.hash.replace("#", "")) && !document.activeElement?.matches("textarea,input")) { const y = scrollY; route(); scrollTo(0, y); } }, 5 * 60e3);

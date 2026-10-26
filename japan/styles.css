@@ -710,3 +710,7 @@ details.rainplan p { margin: 0; padding: 0 16px 14px; font-size: 14.5px; color: 
 .rd-stars { color: #f5c451; font-size: 14px; letter-spacing: 1px; }
 .rd-txt p { margin: 4px 0 0; font-size: 13.5px; }
 .rd-txt p.muted { color: var(--muted); }
+
+.clock { line-height: 1.25; }
+.home-time { font-weight: 800; color: var(--ink); opacity: .8; font-size: 12.5px; }
+.clock-sub { font-size: 12px; }
