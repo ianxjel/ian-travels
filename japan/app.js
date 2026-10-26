@@ -250,6 +250,7 @@
       const mini = [];
       if (s.photo) mini.push(`<div class="mini photo"><span class="ico">📸</span><div><b>Photo op</b>${esc(s.photo)}</div></div>`);
       if (s.snack) mini.push(`<div class="mini snack"><span class="ico">🍙</span><div><b>Snack stop</b>${esc(s.snack)}</div></div>`);
+      if (s.quest) mini.push(`<a class="mini quest" href="#media/quests"><span class="ico">🎮</span><div><b>Fan quest</b>${esc(s.quest)}</div></a>`);
       if (s.spicy) mini.push(`<div class="mini spicy"><span class="ico">🔥</span><div><b>After dark</b>${esc(s.spicy)}</div></div>`);
       if (mini.length) html += `<div class="between">${mini.join("")}</div>`;
     });
@@ -503,7 +504,8 @@
     view.innerHTML = `
       <div class="section-title" style="margin-top:6px"><h2>Media 🎬</h2><span class="sub">camera · music · shots</span></div>
       <a class="card media-card mc-1" href="#media/recipes"><span class="mc-e">🎞️</span><div><h3>Camera recipes</h3><p>7 Fujifilm X100VI recipes (C1–C7) and where to use each on the trip.</p></div><span class="mc-go">›</span></a>
-      <a class="card media-card mc-2" href="#media/songs"><span class="mc-e">🎧</span><div><h3>Japan songs</h3><p>${songs} tracks about Tokyo, Kyoto, Osaka & Japan — starting with your top artists.</p></div><span class="mc-go">›</span></a>
+      <a class="card media-card mc-2" href="#media/songs"><span class="mc-e">🎧</span><div><h3>Japan songs</h3><p>${songs} tracks from artists you play that really reference Japan.</p></div><span class="mc-go">›</span></a>
+      <a class="card media-card mc-4" href="#media/quests"><span class="mc-e">🎮</span><div><h3>Fan quests</h3><p>Ariana, My Hero Academia, Attack on Titan, Kirby & Nintendo — what's on during your dates.</p></div><span class="mc-go">›</span></a>
       <a class="card media-card mc-3" href="#media/photos"><span class="mc-e">📸</span><div><h3>Photo ideas</h3><p>Shot list to check off — ${got}/${total} captured.</p></div><span class="mc-go">›</span></a>`;
   }
 
@@ -525,7 +527,22 @@
             <div class="song-why">${esc(x.why)}</div>
             ${x.day ? `<div class="song-foot">Play on ${dayChip(x.day)}</div>` : ""}
           </div></div>`).join("")}`).join("")}
-      <p class="foot">Pulled from the artists you play and follow on Spotify. Only songs that actually reference Japan — in the title, the lyrics, or sung in Japanese.</p>`;
+      <p class="foot">Only artists you play or follow on Spotify, and only songs that actually reference Japan — in the title, the lyrics, or sung in Japanese.</p>`;
+  }
+
+  function renderQuests() {
+    document.body.dataset.theme = DAYS[todayDayIndex()].theme;
+    renderStrip(null);
+    const dayChip = id => { const d = DAYS.find(x => x.id === id); return d ? `<a class="song-day" href="#day/${d.id}">${d.emoji} ${d.dow} ${d.date.slice(5).replace("-", "/")}</a>` : ""; };
+    view.innerHTML = mediaHeader("Fan quests 🎮", "Oct 26 – Nov 5") + FAN_QUESTS.map(f => `
+      <div class="cat-h">${f.emoji} ${esc(f.fandom)}</div>
+      ${f.items.map(q => `<div class="card quest-card">
+        <div class="q-t">${esc(q.t)}</div>
+        <div class="q-meta">📍 ${esc(q.where)}<br>🗓️ ${esc(q.when)}</div>
+        <p class="q-what">${esc(q.what)}</p>
+        <div class="q-foot">${q.day ? `Fits ${dayChip(q.day)}` : ""}
+          <span class="link-row">${q.place ? `<a class="btn sm-btn" href="${mapsDir(q.place)}" target="_blank" rel="noopener">🧭</a>` : ""}${q.link ? `<a class="btn sm-btn" href="${esc(q.link)}" target="_blank" rel="noopener">Info ↗</a>` : ""}</span></div>
+      </div>`).join("")}`).join("") + `<p class="foot">Checked Oct 25, 2026. Event pages can change — tap Info before you go. No Ariana concerts in Japan this tour.</p>`;
   }
 
   function renderPhotos() {
@@ -709,6 +726,7 @@
     else if (h === "media") { renderMedia(); setTab("media"); }
     else if (h === "media/songs") { renderSongs(); setTab("media"); }
     else if (h === "media/photos") { renderPhotos(); setTab("media"); }
+    else if (h === "media/quests") { renderQuests(); setTab("media"); }
     else if (h.startsWith("media/recipes") || h.startsWith("recipes")) {
       const focus = h.startsWith("media/") ? h.split("/")[2] : h.split("/")[1];
       renderRecipes(focus); setTab("media"); if (focus) return;

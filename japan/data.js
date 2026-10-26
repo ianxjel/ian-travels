@@ -256,7 +256,7 @@ const DAYS = [
         snack: "Eat in the park — cards only. Grab a themed snack early before lunch lines build.",
       },
       {
-        only: "a", t: "19:00", title: "Park closes → back to Shinjuku", ll: [35.6896, 139.7006], say: ["oshiete", "hitori"], place: "Shinjuku Station",
+        only: "a", t: "19:00", title: "Park closes → back to Shinjuku", quest: "⚔️ Attack on Titan “Guren no Yumiya” in SCREEN X — first-week Eren art-board gift ends Oct 29.", ll: [35.6896, 139.7006], say: ["oshiete", "hitori"], place: "Shinjuku Station",
         how: [
           "Gondola down, Keio line back toward Shinjuku (~35–45 min).",
           "Rest up — Disneyland tomorrow.",
@@ -378,7 +378,7 @@ const DAYS = [
         photo: "Under the giant red Kaminarimon lantern looking up, shot from low. From the temple grounds, line up the pagoda with Skytree behind it.",
       },
       {
-        t: "13:30", title: "Skytree Town + Pokémon Center", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.7101, 139.8107], say: ["menzei", "fukuro"], pic: "Tokyo Skytree Sumida river photo", rx: "classic", place: "Tokyo Solamachi",
+        t: "13:30", title: "Skytree Town + Pokémon Center", quest: "⭐ Kirby Café + Kirby Café THE STORE are in Solamachi too. THE STORE is walk-in; the café needs a reservation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.7101, 139.8107], say: ["menzei", "fukuro"], pic: "Tokyo Skytree Sumida river photo", rx: "classic", place: "Tokyo Solamachi",
         how: [
           "Walk ~20 min across the Sumida River (Azuma-bashi bridge) or ride the Tobu Skytree line 1 stop to Tokyo Skytree.",
           "Pokémon Center Skytree Town is inside Tokyo Solamachi (4F).",
@@ -386,7 +386,7 @@ const DAYS = [
         photo: "From Azuma-bashi bridge: Skytree + the golden Asahi building across the river.",
       },
       {
-        t: "15:00", title: "Omotesando mirror entrance (on the way)", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
+        t: "15:00", title: "Omotesando mirror entrance (on the way)", quest: "💥 My Hero Academia Café is a short walk away at BOX cafe&space Cue Plaza Harajuku (through Dec 20; book ahead).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
         how: [
           "From Oshiage (Skytree) take the Hanzōmon line straight to Omotesando (~30 min).",
           "Exit A2; Tokyu Plaza's kaleidoscope mirror escalator is on the corner.",
@@ -453,7 +453,7 @@ const DAYS = [
         photo: "With the big statues at the entrance, plush in hand. Opening time = no crowds.",
       },
       {
-        t: "13:00", title: "Shibuya: Mewtwo + Nintendo Tokyo", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
+        t: "13:00", title: "Shibuya: Mewtwo + Nintendo Tokyo", quest: "🌸 Tower Records Shibuya (5 min walk) has Ariana's “Tower Love!” petal posters + a fan lottery. Buy the Japanese edition CD.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
         how: [
           "Fukutoshin line from Ikebukuro straight to Shibuya (~15 min).",
           "Walk ~7 min to Shibuya PARCO; Pokémon Center Shibuya and Nintendo TOKYO are both on 6F.",
@@ -667,7 +667,7 @@ const DAYS = [
         tip: "Osaka switch: stand on the RIGHT side of escalators here (the opposite of Tokyo).",
       },
       {
-        t: "14:00", title: "Drop your bag in Umeda", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
+        t: "14:00", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (stickers, stamp rally, photo panels) + the MHA café under HEP FIVE's Ferris wheel. 🍄 Nintendo OSAKA is on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Your suitcase should be waiting. Check-in is from 3 PM.",
@@ -676,7 +676,7 @@ const DAYS = [
         photo: "HEP FIVE's red Ferris wheel on the mall roof, shot from the street below (better after dark).",
       },
       {
-        t: "17:00", title: "Pokémon Center Osaka DX", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
+        t: "17:00", title: "Pokémon Center Osaka DX", quest: "⭐ Kirby Café Osaka is also in Shinsaibashi — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
         how: [
           "Midosuji line (red) from Umeda to Shinsaibashi (~6 min). Daimaru is connected to the station.",
           "Pokémon Center Osaka DX and the café are on 9F.",
@@ -1372,38 +1372,8 @@ const SONG_SECTIONS = [
       { t: "Otaku Hot Girl", a: "Megan Thee Stallion", y: 2024, mine: true, why: "Packed with Jujutsu Kaisen and Naruto references and samples JJK's commercial-break music. Play it in Ikebukuro, Tokyo's anime hub.", day: "d6" },
       { t: "Lost in Japan (Remix)", a: "Shawn Mendes & Zedd", y: 2018, mine: true, why: "Japan is in the title and the hook — and you follow Zedd.", day: "d1" },
       { t: "Nakama (feat. Ai)", a: "Zedd", y: 2025, mine: true, why: "Ending theme of the anime Dragon Ball Daima, sung in Japanese and English. “Nakama” means your crew / comrades.", day: "d3" },
-      { t: "Boom Clap (Japanese version)", a: "Charli xcx", y: 2015, mine: true, why: "Charli re-recorded it (and “Break the Rules”) in Japanese for the Japan edition of SUCKER. A Japan-only bonus — it may not stream in the US, so try YouTube.", day: "d5" },
-      { t: "Say So (Japanese Version)", a: "Rainych", y: 2020, mine: true, why: "Doja Cat's hit, redone entirely in Japanese — the cover went viral and Doja shared it.", day: "d6" },
-    ],
-  },
-  {
-    title: "Songs named for your stops 📍", sub: "Tokyo · Kyoto · Osaka · Harajuku · Japan",
-    songs: [
-      { t: "Tokyo Love Hotel", a: "Rina Sawayama", y: 2020, why: "Japanese-British queer pop icon singing about Tokyo — your Ni-chome pre-game anthem.", day: "d5" },
-      { t: "Kyoto", a: "Phoebe Bridgers", y: 2020, why: "Named for the city — play it walking Ninenzaka.", day: "d7" },
-      { t: "大阪LOVER (Osaka LOVER)", a: "DREAMS COME TRUE", y: 2007, why: "A J-pop love song about Osaka — sung in Japanese.", day: "d8" },
-      { t: "Fancy", a: "Iggy Azalea ft. Charli xcx", y: 2014, why: "Tokyo gets a shout-out in the lyrics — and Charli's on it.", day: "d5" },
-      { t: "Harajuku Girls", a: "Gwen Stefani", y: 2004, why: "An ode to Harajuku, Tokyo's street-style neighborhood.", day: "d6" },
-      { t: "Tokyo", a: "Bebe Rexha", why: "Big-pop Tokyo track.", day: "d5" },
-      { t: "Tokyo", a: "Imagine Dragons", why: "A Tokyo-titled cut from the band.", day: "d7" },
-      { t: "Tokyo", a: "Owl City", why: "Bubbly synth-pop love letter to the city.", day: "d3" },
-      { t: "Tokyo Nights", a: "Utada Hikaru", why: "J-pop royalty on Tokyo after dark.", day: "d1" },
-      { t: "Tokyo Highway", a: "Kyary Pamyu Pamyu", why: "Harajuku's pop princess, maximum kawaii.", day: "d3" },
-      { t: "Tokyo Drift (Fast & Furious)", a: "Teriyaki Boyz", y: 2006, why: "The movie anthem, rapped in Japanese and English.", day: "d3" },
-      { t: "Big in Japan", a: "Alphaville", y: 1984, why: "The 80s synth classic.", day: "d11" },
-      { t: "Turning Japanese", a: "The Vapors", y: 1980, why: "New-wave earworm everyone knows.", day: "d11" },
-    ],
-  },
-  {
-    title: "The Japan soundtrack 🎌", sub: "Sung in Japanese — for the trains",
-    songs: [
-      { t: "Plastic Love", a: "Mariya Takeuchi", y: 1984, why: "The city-pop anthem of Tokyo nightlife. Perfect on the Yamanote at night.", day: "d1" },
-      { t: "真夜中のドア (Stay With Me)", a: "Miki Matsubara", y: 1979, why: "The viral city-pop classic.", day: "d2" },
-      { t: "アイドル (Idol)", a: "YOASOBI", y: 2023, why: "The biggest J-pop hit of the decade — you'll hear it in every arcade.", day: "d6" },
-      { t: "死ぬのがいいわ (Shinunoga E-Wa)", a: "Fujii Kaze", y: 2020, why: "Sultry, jazzy, went global on TikTok. Night-out energy.", day: "d8" },
-      { t: "PONPONPON", a: "Kyary Pamyu Pamyu", y: 2011, why: "Hyper-colorful Harajuku pop — fits your hyperpop side.", day: "d6" },
-      { t: "First Love", a: "Utada Hikaru", y: 1999, why: "Title track of Japan's best-selling album. Fuji-sunset tearjerker.", day: "d10" },
-      { t: "ポリリズム (Polyrhythm)", a: "Perfume", y: 2007, why: "Electro-pop trio — if you like Ninajirachi or Frost Children, start here.", day: "d5" },
+      { t: "Boom Clap (Japanese version)", a: "Charli xcx", y: 2015, mine: true, why: "Charli re-recorded it (and “Break the Rules”) in Japanese for the Japan edition of SUCKER. Japan-only bonus — it may not stream in the US, so try YouTube.", day: "d5" },
+      { t: "Fancy", a: "Iggy Azalea ft. Charli xcx", y: 2014, mine: true, why: "Tokyo gets a shout-out in the lyrics.", day: "d5" },
     ],
   },
 ];
@@ -1453,5 +1423,48 @@ const PHOTO_IDEAS = [
     ["🌀", "Mewtwo tank slow pan", "Pokémon Center Shibuya.", "d6"],
     ["🎆", "Disney night show", "One wide clip, then put the phone down.", "d2"],
     ["♨️", "Onsen steam at dusk", "Only where photos are allowed (outside the bath).", "d10"],
+  ]},
+];
+
+/* ---------------- FAN QUESTS (checked for Oct 26 – Nov 5, 2026) ---------------- */
+const FAN_QUESTS = [
+  { fandom: "Ariana Grande", emoji: "🌸", items: [
+    { t: "Tower Records “Tower Love!” × Ariana", where: "Tower Records Shibuya (and stores nationwide)", when: "Running since Sep 29, 2026", day: "d6",
+      what: "Tower's campaign for her album petal: B1-size posters in store, a fan lottery, and back-catalog promos. Grab the Japanese edition of petal (Japanese CDs come with an obi strip and often bonus tracks).",
+      place: "Tower Records Shibuya", link: "https://www.universal-music.co.jp/ariana-grande/news/2026-09-25/" },
+  ]},
+  { fandom: "My Hero Academia", emoji: "💥", items: [
+    { t: "MHA × Umeda Sky Building", where: "Kūchū Teien Observatory, 40F, Umeda Sky Building (15–20 min walk from your Osaka hotel)", when: "Oct 30 – Nov 30, 2026 · 9:30–22:30", day: "d8",
+      what: "Collab ticket ¥2,800: observatory entry + 2 random stickers + stamp rally (finish it for a glass magnet). Character photo panels, a ¥880 collab drink with a coaster, and goods in the 39F shop.",
+      place: "Umeda Sky Building", link: "https://event.amnibus.com/heroaca-skybldg/" },
+    { t: "My Hero Academia Café — WE ARE HERO HOLICS", where: "BOX cafe&space HEP FIVE, Osaka (under the red Ferris wheel, next to your hotel)", when: "Oct 22 – Dec 6, 2026", day: "d8",
+      what: "Themed menu for Deku, Bakugo, Todoroki and the class. Advance booking ¥715 includes a hologram sticker.",
+      place: "HEP FIVE Osaka", link: "https://animeanime.jp/article/2026/10/03/103463.html" },
+    { t: "Same café in Tokyo", where: "BOX cafe&space Cue Plaza Harajuku", when: "Oct 16 – Dec 20, 2026", day: "d5",
+      what: "Fits the Omotesando stop on Friday afternoon.", place: "Cue Plaza Harajuku", link: "https://animeanime.jp/article/2026/10/03/103463.html" },
+  ]},
+  { fandom: "Attack on Titan", emoji: "⚔️", items: [
+    { t: "Guren no Yumiya — SCREEN X / 4DX screening", where: "TOHO Cinemas Ikebukuro and other premium screens", when: "From Oct 23, 2026 · first-week gift Oct 23–29", day: "d3",
+      what: "Recap film of the anime shown only in SCREEN X, 4DX and ULTRA 4DX. First week: a free Eren mini shikishi (art board) while supplies last. Japanese audio — check if subtitled.",
+      place: "TOHO Cinemas Ikebukuro", link: "https://collabo-cafe.com/events/collabo/attack-on-titan-event-guren-screenx-nyujosha-tokuten-week1-2026/" },
+    { t: "Attack on Titan × Nijigen no Mori", where: "Awaji Island, Hyogo (a day trip from Osaka)", when: "Through Dec 13, 2026", day: "d9",
+      what: "A 1.2 km night forest walk with projection mapping following the story, plus a stamp rally and themed food. Night tickets ¥3,600–4,000. Only fits if you swap out the Hiroshima day.",
+      place: "Nijigen no Mori Awaji", link: "https://prtimes.jp/main/html/rd/p/000000817.000128966.html" },
+  ]},
+  { fandom: "Kirby", emoji: "⭐", items: [
+    { t: "Kirby Café Tokyo + THE STORE", where: "Tokyo Solamachi, Skytree Town", when: "Café needs a reservation · THE STORE is walk-in", day: "d5",
+      what: "Kirby-shaped food and desserts. Reservations open on the 10th of the prior month and sell out — check kirbycafe-reserve.com for cancellations. THE STORE (Kirby goods + Kirby-face buns) needs no booking, and you're already at Solamachi Friday.",
+      place: "Kirby Cafe Tokyo Solamachi", link: "https://kirbycafe.jp/" },
+    { t: "Kirby Café Osaka", where: "Shinsaibashi, Osaka (same area as Pokémon Café Osaka)", when: "Reservation only", day: "d8",
+      what: "Try osaka.kirbycafe-reserve.com for a cancellation before your 6 PM Pokémon Café. The winter menu starts Nov 11, after your trip.",
+      place: "Kirby Cafe Osaka", link: "https://kirbycafe.jp/" },
+  ]},
+  { fandom: "Nintendo", emoji: "🍄", items: [
+    { t: "Nintendo TOKYO", where: "Shibuya PARCO 6F", when: "Already in your plan", day: "d6",
+      what: "Official store with store-exclusive illustration merch (Mario, Zelda, Kirby, Splatoon, Animal Crossing).", place: "Nintendo TOKYO Shibuya PARCO", link: "" },
+    { t: "Nintendo OSAKA", where: "Daimaru Umeda 13F (a few minutes from your Osaka hotel)", when: "10:00–21:00", day: "d8",
+      what: "The other official store — same exclusive illustration goods. Easy stop when you drop your bags in Umeda.", place: "Nintendo OSAKA Daimaru Umeda", link: "https://jw-webmagazine.com/tips/nintendo-osaka" },
+    { t: "Nintendo KYOTO + Nintendo Museum", where: "Kyoto Takashimaya S.C. · Ogura, Uji", when: "Sun Nov 1 (museum closed Nov 2–4)", day: "d7",
+      what: "Already in your Kyoto day — keep the ticket alert running for the museum.", place: "Nintendo KYOTO", link: "https://museum-tickets.nintendo.com/en/calendar" },
   ]},
 ];

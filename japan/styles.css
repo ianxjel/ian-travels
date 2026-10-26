@@ -576,3 +576,12 @@ details.cheat[open] summary::after { content: "－"; }
 .shot-foot { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; font-size: 12.5px; font-weight: 800; }
 .shot-foot a { text-decoration: none; }
 .shot-foot span { color: var(--muted); }
+
+.mini.quest { background: color-mix(in srgb, var(--accent2) 14%, transparent); border-style: solid; border-color: color-mix(in srgb, var(--accent2) 45%, transparent); text-decoration: none; color: var(--ink); }
+.mc-4 { background: linear-gradient(135deg, color-mix(in srgb, #ff6b6b 18%, var(--card)), var(--card)); }
+.quest-card { padding: 14px 16px; margin-top: 10px; }
+.q-t { font: 700 17px/1.25 var(--font-head); }
+.q-meta { font-size: 13.5px; color: var(--muted); font-weight: 700; margin-top: 4px; line-height: 1.5; }
+.q-what { margin: 8px 0 0; font-size: 14.5px; }
+.q-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; font-size: 12.5px; font-weight: 800; color: var(--muted); flex-wrap: wrap; }
+.sm-btn { padding: 7px 11px; font-size: 13px; }
