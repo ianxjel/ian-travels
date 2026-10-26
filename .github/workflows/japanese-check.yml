@@ -1,0 +1,72 @@
+name: Japanese check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*/data.js"
+      - "tools/**"
+      - ".github/workflows/japanese-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Japanese tools (MeCab/UniDic + textlint)
+        run: |
+          pip install fugashi unidic-lite
+          npm install --no-save textlint textlint-rule-preset-japanese
+
+      - name: Extract every Japanese line
+        run: node tools/extract-jp.mjs japan/data.js > jp.json
+
+      - name: 1. Reading check
+        run: python tools/jp_check.py jp.json tools/jp-readings.json > reading.md
+
+      - name: 2. Style + typo check
+        run: |
+          node tools/to-md.mjs jp.json > jp-lines.md
+          npx textlint --config tools/textlintrc.json --format json jp-lines.md > lint.json || true
+          node tools/lint-report.mjs lint.json > lint.md
+
+      - name: Build report
+        run: |
+          {
+            echo "# Japanese check"
+            echo
+            echo "Commit \`${GITHUB_SHA::7}\` · $(date -u +'%Y-%m-%d %H:%M UTC')"
+            echo
+            cat reading.md
+            echo
+            cat lint.md
+          } > report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save report to the jp-report branch
+        run: |
+          cp report.md /tmp/report.md
+          git config user.name "japanese-check-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan jp-report
+          git rm -rf --quiet .
+          cp /tmp/report.md report.md
+          git add report.md
+          git commit --quiet -m "Japanese check report for ${GITHUB_SHA::7}"
+          git push --force --quiet origin jp-report
+
+      - name: Pass / fail
+        run: grep -q "RESULT: PASS" reading.md && grep -q "RESULT: PASS" lint.md
