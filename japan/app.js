@@ -1163,6 +1163,7 @@
     [/jungle cruise/i, 0, "Boat ride with a (Japanese) skipper spiel."],
   ];
   const rideInfo = name => { const m = RIDE_INFO.find(([re]) => re.test(name)); return m ? { thrill: m[1], desc: m[2] } : { thrill: 0, desc: "" }; };
+  const SINGLE_RIDER = /raging spirits|frozen journey|peter pan's never ?land|indiana jones|beauty and the beast|enchanted tale/i;
   const flames = n => n ? `<span class="thrill" title="Thrill level">${"🔥".repeat(n)}</span>` : "";
   let waitsTimer = null;
   async function fetchJSON(url, ms = 9000) {
@@ -1349,7 +1350,7 @@
       ${dpaHtml(key, rows)}
       ${left > 0 ? `<p class="muted">Park closes at ${fmt12(P.close)} — about <b>${Math.floor(left / 60)}h ${left % 60}m</b> left, roughly <b>${Math.max(1, Math.floor(left / (avg + 15)))} more rides</b> at today's pace.</p>` : `<p class="muted">Park hours are over for today.</p>`}
       ${rideCount ? `<p class="muted">✓ ${rideCount} ride${rideCount > 1 ? "s" : ""} done today — those (and your Premier Access rides) are skipped below.</p>` : ""}
-      ${bestPicks.length ? `<ol class="wbest">${bestPicks.map(r => `<li><span class="wnum ${waitClass(r.wait)}">${r.wait}<small>min</small></span><span>${esc(r.name)} ${flames(rideInfo(r.name).thrill)}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span></li>`).join("")}</ol>` : `<p>No new favorites are open right now — check the list below.</p>`}
+      ${bestPicks.length ? `<ol class="wbest">${bestPicks.map(r => `<li><span class="wnum ${waitClass(r.wait)}">${r.wait}<small>min</small></span><span>${esc(r.name)} ${flames(rideInfo(r.name).thrill)}${SINGLE_RIDER.test(r.name) ? ` <em class="wbadge single">👤 Single rider</em>` : ""}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span></li>`).join("")}</ol>` : `<p>No new favorites are open right now — check the list below.</p>`}
       ${paNow.length ? `<p class="wpa">🎟️ Premier Access on sale: ${paNow.map(r => `<b>${esc(r.name)}</b>${r.pa.start ? ` (${hhmm(r.pa.start)}${r.pa.end ? "–" + hhmm(r.pa.end) : ""})` : ""}`).join(", ")} — buy in the official app.</p>` : ""}
       ${nextShows.length ? `<p class="wpa">🎭 Next shows: ${nextShows.map(x => `<b>${esc(x.r.name)}</b> ${hhmm(x.t)}`).join(" · ")}</p>` : ""}
       ${key === "tds" ? `<p class="wpa">📸 Sunset ~4:50 PM → be at the Mediterranean Harbor railing by 4:30.</p>` : `<p class="wpa">📸 Sunset ~4:50 PM → Cinderella Castle from the hub for blue hour.</p>`}
@@ -1357,7 +1358,7 @@
     const row = r => { const cnt = Object.entries(rode).filter(([n]) => sameRide(n, r.name)).reduce((a, [, c]) => a + c, 0);
       return `<div class="wrow ${isPick(r) ? "pick" : ""} ${cnt ? "rode" : ""}">
         <span class="wnum ${waitClass(r.wait)}">${r.wait == null ? "—" : r.wait}<small>${r.wait == null ? "" : "min"}</small></span>
-        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${booked(r) ? `<em class="wbadge mine">Your DPA</em>` : r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}${cnt ? `<em class="wdone">✓ rode${cnt > 1 ? " ×" + cnt : ""}</em>` : ""} ${flames(rideInfo(r.name).thrill)}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span>
+        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${SINGLE_RIDER.test(r.name) ? `<em class="wbadge single">👤 Single rider</em>` : ""}${booked(r) ? `<em class="wbadge mine">Your DPA</em>` : r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}${cnt ? `<em class="wdone">✓ rode${cnt > 1 ? " ×" + cnt : ""}</em>` : ""} ${flames(rideInfo(r.name).thrill)}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span>
         ${cnt ? `<button class="btn sm ghost" data-unrode="${esc(r.name)}" type="button" aria-label="Undo">↺</button>` : ""}
         <button class="btn sm" data-rode="${esc(r.name)}" type="button">✓ Rode</button>
       </div>`; };

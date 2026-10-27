@@ -824,3 +824,5 @@ details.wlist summary { cursor: pointer; font-weight: 700; }
 .ttag.halloween { background: #e8742a; color: #fff; } .ttag.remember { background: #b43f8a; color: #fff; } .ttag["25th"], .ttag.jp { background: #2fa9e0; color: #fff; }
 .treat-why { margin: 4px 0; font-size: 14px; }
 .treat-where { margin: 2px 0 8px; font-size: 13px; color: var(--muted); }
+
+.wbadge.single { background: #6b5bd6; }
