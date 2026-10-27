@@ -148,7 +148,7 @@ const DAYS = [
 
   /* ---------------- DAY 2 ---------------- */
   {
-    id: "d2", date: "2026-10-27", prep: ["Book a teamLab Planets slot around 11 AM if you haven't, and save the QR in Trip → Tickets", "Pack shorts or pants that roll up above the knee — teamLab has knee-deep water rooms", "Charge everything (teamLab + Odaiba are big photo days)", "No early alarm: ~9:45 AM, leave at 10:15 — stay out as late as you want tonight 🎂"], rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
+    id: "d2", date: "2026-10-27", prep: ["Book a teamLab Planets slot around 11 AM if you haven't, and save the QR in Trip → Tickets", "Pack shorts or pants that roll up above the knee — teamLab has knee-deep water rooms", "Charge everything (teamLab + Odaiba are big photo days)", "No early alarm: ~9:45 AM, leave at 10:15 — stay out as late as you want tonight 🎂"], rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, park: "tds", dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
     theme: "disney", emoji: "🎂", deco: ["🎂", "✨", "🏰", "🎈", "🌊", "⭐"],
     kicker: "Day 2 · Happy 25th, Ian!",
     tagline: "The whole harbor is celebrating you today. Ears on, sticker on, main character energy on.",
@@ -192,12 +192,21 @@ const DAYS = [
         photo: "Halloween decor + the volcano behind you. Full-body costume shot from waist height (have them crouch a little).",
       },
       {
-        t: "17:15", title: "Blue hour at Mediterranean Harbor", ask: [{"jp": "夜のショーは何時からですか？", "ro": "Yoru no shō wa nanji kara desu ka?", "en": "What time does the night show start?", "hear": "time"}], ll: [35.6265, 139.8848], say: ["photoplease", "kirei"], pic: "Tokyo DisneySea Mount Prometheus night photo", rx: "reala", place: "Mediterranean Harbor, Tokyo DisneySea",
+        t: "16:30", title: "Blue hour at Mediterranean Harbor", ask: [{"jp": "夜のショーは何時からですか？", "ro": "Yoru no shō wa nanji kara desu ka?", "en": "What time does the night show start?", "hear": "time"}], ll: [35.6265, 139.8848], say: ["photoplease", "kirei"], pic: "Tokyo DisneySea Mount Prometheus night photo", rx: "reala", place: "Mediterranean Harbor, Tokyo DisneySea",
         how: [
           "Grab a railing spot along the harbor ~10 min before sunset (~4:50 PM); blue hour is the 20 minutes after.",
           "Stay for the night show and ride until the 9 PM close.",
         ],
         photo: "THE birthday shot: lean on the railing, body angled, look back at the camera with Mount Prometheus across the water. Birthday sticker + ears in frame. Shoot RAW + JPEG on the X100VI.",
+      },
+      {
+        t: "17:20", title: "Journey to the Center of the Earth 🌋", ll: [35.6261, 139.8853], say: ["photoplease"], place: "Journey to the Center of the Earth, Tokyo DisneySea",
+        how: [
+          "Your Premier Access window is 16:55–17:55. From the harbor it's a ~7 min walk into the volcano (Mysterious Island).",
+          "Open the app → Display code at the Premier Access entrance.",
+          "After dark: Soaring or Fantasy Springs standby, then the night show — check ⏱️ Live waits at the top of this day.",
+        ],
+        photo: "Mount Prometheus lit up after dark from the Mysterious Island bridge — rest the X100VI on the railing for a sharp night shot.",
       },
       {
         t: "21:00", title: "Back to Shinjuku", ask: [{"jp": "新宿御苑前までの終電は何時ですか？", "ro": "Shinjuku-gyoenmae made no shūden wa nanji desu ka?", "en": "What time is the last train to Shinjuku-gyoemmae?", "hear": "time"}], ll: [35.6888, 139.71], say: ["oshiete"], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
@@ -310,7 +319,7 @@ const DAYS = [
 
   /* ---------------- DAY 4 ---------------- */
   {
-    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "20:30", "note": "Same as Tuesday: trains from Maihama until around midnight, but leave buffer for the long Tokyo Station transfer."}, dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
+    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "20:30", "note": "Same as Tuesday: trains from Maihama until around midnight, but leave buffer for the long Tokyo Station transfer."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
     theme: "spooky", emoji: "🎃", deco: ["🎃", "🏰", "🦇", "👻", "🍬", "🕸️"],
     kicker: "Day 4 · Spooky season, castle edition",
     tagline: "Villains, pumpkins and a castle at blue hour. Wear the costume one more time — it's allowed.",

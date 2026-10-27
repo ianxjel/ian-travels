@@ -1,11 +1,11 @@
 /* Offline support: cache the app shell, keep fonts and the last weather forecast. */
-const VERSION = "ij-v28";
+const VERSION = "ij-v29";
 const SHELL = [
   "./",
   "index.html",
-  "styles.css?v=28",
-  "data.js?v=28",
-  "app.js?v=28",
+  "styles.css?v=29",
+  "data.js?v=29",
+  "app.js?v=29",
   "manifest.webmanifest",
   "icons/icon-192.png",
   "icons/icon-512.png",
@@ -31,8 +31,8 @@ self.addEventListener("fetch", e => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
 
-  // Weather: network first, fall back to the last copy
-  if (url.hostname === "api.open-meteo.com") {
+  // Weather + live Disney waits: network first, fall back to the last copy
+  if (url.hostname === "api.open-meteo.com" || url.hostname === "api.themeparks.wiki" || url.hostname === "queue-times.com") {
     e.respondWith(
       fetch(req).then(r => { const c = r.clone(); caches.open(VERSION).then(x => x.put(req, c)); return r; })
         .catch(() => caches.match(req))

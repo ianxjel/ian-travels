@@ -317,7 +317,8 @@
           ${ticketsFor(day.date).length ? `<a class="pill" href="#trip/tickets">🎟️ ${ticketsFor(day.date).length} ticket${ticketsFor(day.date).length > 1 ? "s" : ""} today</a>` : ""}
         </div>
       </section>
-      ${homeCard(day)}`;
+      ${homeCard(day)}
+      ${day.park ? `<a class="card waits-cta" href="#waits/${day.park}"><span class="wc-ico">⏱️</span><span><b>Live wait times + what to ride next</b><small>${day.park === "tds" ? "Tokyo DisneySea" : "Tokyo Disneyland"} · updates every 2 min</small></span><span class="wc-go">›</span></a>` : ""}`;
 
     if (day.variants) {
       const v = dayVariant(day);
@@ -1104,6 +1105,7 @@
       renderTrip(sec); setTab("trip"); if (sec) return;
     }
     else if (h === "recap") { renderRecap(); setTab("media"); }
+    else if (h === "waits" || h.startsWith("waits/")) { renderWaits(h.split("/")[1] || "tds"); setTab("today"); }
     else if (h === "phrases") { renderPhrases(); setTab("phrases"); }
     else if (h === "manners") { renderManners(); setTab("manners"); }
     else { renderDay(DAYS[todayDayIndex()].id); setTab("today"); }
@@ -1112,6 +1114,111 @@
   window.addEventListener("hashchange", route);
 
   const currentDayId = () => (location.hash.match(/^#day\/(\w+)/) || [])[1] || DAYS[todayDayIndex()].id;
+
+  /* ---------- ⏱️ Live Tokyo Disney wait times ---------- */
+  const PARKS = {
+    tds: { name: "Tokyo DisneySea", match: /disneysea/i, qt: 275, day: "d2", close: "21:00",
+      picks: /journey to the center|indiana jones|raging spirits|soaring|toy story|frozen|rapunzel|peter pan|tinker ?bell|sindbad|nemo|aquatopia|tower of terror|20,000 leagues|turtle talk/i },
+    tdl: { name: "Tokyo Disneyland", match: /disneyland/i, qt: 274, day: "d4", close: "21:00",
+      picks: /beauty and the beast|enchanted tale|haunted mansion|big thunder|splash mountain|hunny hunt|baymax|monsters|space mountain|pirates|jungle cruise|toon|roger rabbit|buzz/i },
+  };
+  let waitsTimer = null;
+  async function fetchJSON(url, ms = 9000) {
+    const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), ms);
+    try { const r = await fetch(url, { signal: ctl.signal, cache: "no-store" }); if (!r.ok) throw new Error(r.status); return await r.json(); }
+    finally { clearTimeout(t); }
+  }
+  async function waitsFromThemeParks(key) {
+    const P = PARKS[key]; const idKey = "tpw:" + key;
+    let id = store.get(idKey, null);
+    if (!id) {
+      const d = await fetchJSON("https://api.themeparks.wiki/v1/destinations");
+      const dest = (d.destinations || []).find(x => /tokyo disney/i.test(x.name || x.slug || ""));
+      const park = dest && (dest.parks || []).find(p => P.match.test(p.name));
+      if (!park) throw new Error("park not found");
+      id = park.id; store.set(idKey, id);
+    }
+    const live = await fetchJSON(`https://api.themeparks.wiki/v1/entity/${id}/live`);
+    return (live.liveData || []).filter(x => x.entityType === "ATTRACTION" || x.entityType === "SHOW").map(x => {
+      const q = x.queue || {}; const pa = q.PAID_RETURN_TIME || q.RETURN_TIME || null;
+      return {
+        name: x.name, type: x.entityType === "SHOW" ? "show" : "ride",
+        status: x.status, wait: q.STANDBY && typeof q.STANDBY.waitTime === "number" ? q.STANDBY.waitTime : null,
+        pa: pa && pa.state ? { state: pa.state, start: pa.returnStart, end: pa.returnEnd, price: pa.price && pa.price.amount ? pa.price.amount / (pa.price.currency === "JPY" ? 1 : 100) : null } : null,
+        shows: (x.showtimes || []).map(s => s.startTime).filter(Boolean),
+        updated: x.lastUpdated,
+      };
+    });
+  }
+  async function waitsFromQueueTimes(key) {
+    const d = await fetchJSON(`https://queue-times.com/parks/${PARKS[key].qt}/queue_times.json`);
+    const rides = [...(d.rides || []), ...((d.lands || []).flatMap(l => l.rides || []))];
+    return rides.map(r => ({ name: r.name, type: "ride", status: r.is_open ? "OPERATING" : "CLOSED", wait: r.is_open ? r.wait_time : null, pa: null, shows: [], updated: r.last_updated }));
+  }
+  const hhmm = iso => { try { return new Date(iso).toLocaleTimeString("en-US", { timeZone: "Asia/Tokyo", hour: "numeric", minute: "2-digit" }); } catch { return ""; } };
+  const waitClass = w => w == null ? "" : w <= 20 ? "w-low" : w <= 45 ? "w-mid" : "w-high";
+  function renderWaits(key) {
+    if (!PARKS[key]) key = "tds";
+    const P = PARKS[key]; const day = DAYS.find(d => d.id === P.day);
+    document.body.dataset.theme = day ? day.theme : DAYS[todayDayIndex()].theme;
+    renderStrip(P.day);
+    view.innerHTML = `
+      <div class="media-back"><a href="#day/${P.day}" class="btn">‹ ${day ? esc(day.title) : "Today"}</a></div>
+      <div class="section-title" style="margin-top:10px"><h2>⏱️ Live waits</h2><span class="sub" id="wUpd">loading…</span></div>
+      <div class="seg waits-seg">${Object.entries(PARKS).map(([k, p]) => `<a class="${k === key ? "on" : ""}" href="#waits/${k}">${k === "tds" ? "🌋 " : "🏰 "}${p.name.replace("Tokyo ", "")}</a>`).join("")}</div>
+      <div id="wPlan"></div>
+      <div class="waits-tools"><button class="btn" id="wRefresh" type="button">🔄 Refresh</button>
+        <label class="wsort"><input type="checkbox" id="wPicks" ${store.get("wPicks", false) ? "checked" : ""}> ⭐ My picks only</label></div>
+      <div id="wList"><div class="card muted">Loading live waits…</div></div>
+      <p class="mini-note">Wait times come from public feeds (themeparks.wiki / queue-times.com) and can lag a few minutes. The official Tokyo Disney Resort app is the final word, and it's where you buy Premier Access.</p>`;
+    const load = async () => {
+      let rows = null, src = "";
+      try { rows = await waitsFromThemeParks(key); src = "themeparks.wiki"; }
+      catch { try { rows = await waitsFromQueueTimes(key); src = "queue-times.com"; } catch {} }
+      if (!document.getElementById("wList")) return;
+      if (!rows || !rows.length) {
+        const cached = store.get("waits:" + key, null);
+        if (cached) { rows = cached.rows; src = "saved " + hhmm(cached.at); }
+        else { $("#wList").innerHTML = `<div class="card">Couldn't reach the live feed right now. Open the <b>Tokyo Disney Resort app</b> → Wait Times, then tap 🔄 here in a minute.</div>`; $("#wUpd").textContent = "offline"; return; }
+      } else store.set("waits:" + key, { rows, at: new Date().toISOString() });
+      paintWaits(key, rows, src);
+    };
+    $("#wRefresh").onclick = load;
+    $("#wPicks").onchange = e => { store.set("wPicks", e.target.checked); load(); };
+    load();
+    clearInterval(waitsTimer);
+    waitsTimer = setInterval(() => { if (location.hash.startsWith("#waits")) load(); else clearInterval(waitsTimer); }, 120e3);
+  }
+  function paintWaits(key, rows, src) {
+    const P = PARKS[key]; const picksOnly = store.get("wPicks", false);
+    const isPick = r => P.picks.test(r.name);
+    const open = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && (!picksOnly || isPick(r))).sort((a, b) => a.wait - b.wait);
+    const shows = rows.filter(r => r.type === "show" && r.shows.length && (!picksOnly || isPick(r)));
+    const down = rows.filter(r => r.type === "ride" && r.status !== "OPERATING" && (!picksOnly || isPick(r)));
+    // smart plan: best picks right now + time left
+    const nowM = jstMinutes(), closeM = toMin(P.close), left = closeM - nowM;
+    const bestPicks = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && isPick(r)).sort((a, b) => a.wait - b.wait).slice(0, 3);
+    const paNow = rows.filter(r => r.pa && /AVAILABLE/i.test(r.pa.state)).slice(0, 3);
+    const nextShows = shows.map(r => ({ r, t: r.shows.find(t => new Date(t) > new Date()) })).filter(x => x.t).sort((a, b) => new Date(a.t) - new Date(b.t)).slice(0, 2);
+    const avg = bestPicks.length ? bestPicks.reduce((a, r) => a + r.wait, 0) / bestPicks.length : 30;
+    $("#wPlan").innerHTML = `<div class="card wplan">
+      <h3>🧭 Your next moves</h3>
+      ${left > 0 ? `<p class="muted">Park closes at ${fmt12(P.close)} — about <b>${Math.floor(left / 60)}h ${left % 60}m</b> left, roughly <b>${Math.max(1, Math.floor(left / (avg + 15)))} more rides</b> at today's pace.</p>` : `<p class="muted">Park hours are over for today.</p>`}
+      ${bestPicks.length ? `<ol class="wbest">${bestPicks.map(r => `<li><span class="wnum ${waitClass(r.wait)}">${r.wait}<small>min</small></span><span>${esc(r.name)}</span></li>`).join("")}</ol>` : `<p>No favorite rides are open right now — check the list below.</p>`}
+      ${paNow.length ? `<p class="wpa">🎟️ Premier Access on sale: ${paNow.map(r => `<b>${esc(r.name)}</b>${r.pa.start ? ` (${hhmm(r.pa.start)}${r.pa.end ? "–" + hhmm(r.pa.end) : ""})` : ""}`).join(", ")} — buy in the official app.</p>` : ""}
+      ${nextShows.length ? `<p class="wpa">🎭 Next shows: ${nextShows.map(x => `<b>${esc(x.r.name)}</b> ${hhmm(x.t)}`).join(" · ")}</p>` : ""}
+      ${key === "tds" ? `<p class="wpa">📸 Sunset ~4:50 PM → be at the Mediterranean Harbor railing by 4:30.</p>` : `<p class="wpa">📸 Sunset ~4:50 PM → Cinderella Castle from the hub for blue hour.</p>`}
+    </div>`;
+    const row = r => `<div class="wrow ${isPick(r) ? "pick" : ""}">
+        <span class="wnum ${waitClass(r.wait)}">${r.wait == null ? "—" : r.wait}<small>${r.wait == null ? "" : "min"}</small></span>
+        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}</span>
+      </div>`;
+    $("#wList").innerHTML = `
+      ${open.length ? `<div class="card wlist"><h3>🟢 Open now · shortest first</h3>${open.map(row).join("")}</div>` : ""}
+      ${shows.length ? `<div class="card wlist"><h3>🎭 Shows</h3>${shows.map(r => `<div class="wrow"><span class="wname">${esc(r.name)}</span><span class="wshows">${r.shows.filter(t => new Date(t) > new Date()).slice(0, 3).map(hhmm).join(" · ") || "done for today"}</span></div>`).join("")}</div>` : ""}
+      ${down.length ? `<details class="card wlist"><summary>🔴 Closed or paused (${down.length})</summary>${down.map(r => `<div class="wrow"><span class="wname">${esc(r.name)}</span><span class="wstat">${r.status === "REFURBISHMENT" ? "refurb" : r.status === "DOWN" ? "paused" : "closed"}</span></div>`).join("")}</details>` : ""}`;
+    $("#wUpd").textContent = `${src} · ${new Date().toLocaleTimeString("en-US", { timeZone: "Asia/Tokyo", hour: "numeric", minute: "2-digit" })}`;
+  }
 
   /* ---------- Delegated events ---------- */
   document.addEventListener("click", e => {

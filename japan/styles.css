@@ -761,3 +761,29 @@ details.rainplan p { margin: 0; padding: 0 16px 14px; font-size: 14.5px; color: 
 .ride-stops li span { font-weight: 600; }
 .ride-stops li em { margin-left: auto; font-style: normal; font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--c); color: #fff; }
 .ride-stops li.off { background: color-mix(in srgb, var(--c) 18%, transparent); border-radius: 8px; }
+
+/* ⏱️ live waits */
+.waits-cta { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; border: 1.5px solid var(--accent); }
+.waits-cta .wc-ico { font-size: 26px; }
+.waits-cta span:nth-child(2) { display: flex; flex-direction: column; }
+.waits-cta small { color: var(--muted); font-size: 13px; }
+.waits-cta .wc-go { margin-left: auto; font-size: 26px; color: var(--accent); }
+.waits-seg { display: flex; gap: 8px; margin: 10px 0; }
+.waits-seg a { flex: 1; text-align: center; padding: 9px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--card); color: inherit; text-decoration: none; font-weight: 700; }
+.waits-seg a.on { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.waits-tools { display: flex; align-items: center; justify-content: space-between; margin: 6px 0 10px; }
+.wsort { font-size: 14px; display: flex; gap: 6px; align-items: center; }
+.wplan h3, .wlist h3 { margin: 0 0 8px; font-size: 16px; }
+.wbest { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 6px; }
+.wbest li { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.wpa { font-size: 14px; margin: 6px 0 0; }
+.wrow { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-top: 1px solid var(--line); }
+.wrow:first-of-type { border-top: 0; }
+.wrow.pick .wname { font-weight: 700; }
+.wnum { min-width: 52px; text-align: center; font-weight: 800; font-size: 20px; border-radius: 10px; padding: 3px 4px; background: var(--card2); line-height: 1; }
+.wnum small { display: block; font-size: 10px; font-weight: 600; opacity: .8; }
+.w-low { background: #2e9e5b; color: #fff; } .w-mid { background: #e0a526; color: #1b1300; } .w-high { background: #d64545; color: #fff; }
+.wname { flex: 1; font-size: 15px; }
+.wbadge { display: inline-block; margin-left: 6px; font-style: normal; font-size: 11px; font-weight: 800; padding: 2px 7px; border-radius: 999px; background: var(--accent2); color: #fff; vertical-align: middle; }
+.wshows, .wstat { font-size: 13px; color: var(--muted); }
+details.wlist summary { cursor: pointer; font-weight: 700; }
