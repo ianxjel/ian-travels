@@ -185,7 +185,7 @@ const DAYS = [
         t: "09:30", title: "Fantasy Springs + the big rides", ask: [{"jp": "ファンタジースプリングスはどっちですか？", "ro": "Fantajī Supuringusu wa dotchi desu ka?", "en": "Which way is Fantasy Springs?", "hear": "dir"}], say: ["photoplease", "hitotsu", "oishii"], pic: "Tokyo DisneySea Halloween outfit men", rx: "pastel", place: "Fantasy Springs, Tokyo DisneySea",
         how: [
           "Fantasy Springs on standby: Rapunzel's Lantern Festival, Peter Pan's Never Land Adventure.",
-          "Then the classics: Journey to the Center of the Earth (Mysterious Island), Indiana Jones Adventure, Raging Spirits, Soaring: Fantastic Flight. (Tower of Terror is closed for refurbishment Sep 28 – Nov 5, 2026.)",
+          "Then the classics: Journey to the Center of the Earth (Mysterious Island), Raging Spirits, Nemo & Friends SeaRider, Soaring: Fantastic Flight. (Tower of Terror is closed until Nov 5 and Indiana Jones until Nov 30 for refurbishment.)",
           "Check the app for the 25th-anniversary harbor show times.",
         ],
         snack: "Park snacks to hunt: the Gyoza Dog at Nautilus Galley (Mysterious Island), the float-ring shaped Ukiwaman shrimp bun at Seaside Snacks (Port Discovery), and a popcorn bucket — every cart has a different flavor, so check the app map.",
@@ -1914,4 +1914,43 @@ const LINES = {
     ["SJK", "新宿", "Shinjuku"], ["SBY", "渋谷", "Shibuya (some trains)"], ["SGW", "品川", "Shinagawa"], ["TKY", "東京", "Tokyo"],
     ["NRT2", "空港第2ビル", "Narita Airport T2·3"], ["NRT1", "成田空港", "Narita Airport T1"]] },
   JYE: { name: "JR Yamanote Line", jp: "山手線", color: "#80c241", stops: [["JY01", "東京", "Tokyo"], ["JY02", "神田", "Kanda"], ["JY03", "秋葉原", "Akihabara"], ["JY04", "御徒町", "Okachimachi"], ["JY05", "上野", "Ueno"]] },
+};
+
+/* ---------------- Park treats (for the Live waits → 🍡 Treats tab) ----------------
+   tag: halloween (until Oct 31) · 25th (anniversary, through Mar 2027) · remember (Coco event, until Nov 2) · classic · popcorn
+   jp: true = Japan-style or only-in-Tokyo flavor */
+const PARK_TREATS = {
+  tds: [
+    { name: "Gyoza Dog", price: 600, tag: "classic", jp: true, land: "Mysterious Island", where: "Nautilus Galley · also Liberty Landing Diner, Breezeway Bites, Yucatan Base Camp Grill", why: "The DisneySea legend: a fluffy bun stuffed with gyoza-style pork filling. Eat it inside the volcano." },
+    { name: "Ukiwa Man (shrimp float-ring bun)", price: 600, tag: "classic", jp: true, land: "Port Discovery", where: "Seaside Snacks", why: "Steamed bun shaped like Donald's life preserver, filled with shrimp. The 25th-anniversary shrimp + sweet potato version is ¥900." },
+    { name: "Maple Pumpkin Churro", price: 600, tag: "halloween", land: "American Waterfront", where: "Dockside Diner · Liberty Landing Diner · Open Sesame", why: "Halloween-only churro (until Oct 31)." },
+    { name: "Halloween Sundae (purple sweet potato soft serve + churro)", price: 900, tag: "halloween", jp: true, land: "American Waterfront", where: "Liberty Landing Diner · Sultan's Oasis (Arabian Coast)", why: "Beni-imo (Okinawan purple sweet potato) soft serve is a very Japanese autumn flavor." },
+    { name: "Purple Sweet Potato Milk with coffee jelly", price: 750, tag: "halloween", jp: true, land: "American Waterfront", where: "New York Deli · Hudson River Harvest", why: "Sweet potato latte vibes with chewy coffee jelly at the bottom." },
+    { name: "Pumpkin Muffin", price: 400, tag: "halloween", land: "Mediterranean Harbor", where: "Gondolier Snack", why: "Easy grab-and-go while you wait for sunset at the harbor." },
+    { name: "Duffy Cookie Sandwich (cheese + lemon)", price: 600, tag: "25th", land: "American Waterfront", where: "Cape Cod Cook-Off · Cape Cod Confections · Dockside Diner", why: "Duffy is DisneySea's mascot bear (huge in Japan). Anniversary-only." },
+    { name: "Cookies & Cream Mickey Churro", price: 650, tag: "25th", land: "American Waterfront", where: "Dockside Diner · Open Sesame · Hudson River Harvest · Arendelle Royal Banquet · Zambini Brothers'", why: "Mickey-shaped anniversary churro." },
+    { name: "White Chocolate Mickey Macaron", price: 600, tag: "25th", land: "Mediterranean Harbor", where: "Mamma Biscotti's Bakery · Sebastian's Calypso Kitchen (Mermaid Lagoon)", why: "¥1,850 with the souvenir case." },
+    { name: "Little Green Men Bun", price: 400, tag: "classic", jp: true, land: "Mediterranean Harbor", where: "Zambini Brothers' · Expedition Eats · Yucatan Base Camp Grill", why: "Steamed bun shaped like the Toy Story aliens. Peak Tokyo Disney cute." },
+    { name: "Mike Melon Bread (cream)", price: 500, tag: "classic", jp: true, land: "Mediterranean Harbor", where: "Mamma Biscotti's Bakery", why: "Japanese melon-pan shaped like Mike Wazowski." },
+    { name: "Smoked Turkey Leg", price: 1200, tag: "classic", land: "Mediterranean Harbor", where: "Refresco's", why: "Big, smoky and shareable." },
+    { name: "Tortilla Cheese Dog", price: 980, tag: "remember", land: "Lost River Delta", where: "Miguel's El Dorado Cantina", why: "Coco 'Remember Me' event special (until Nov 2): spicy sausage, chili and cheese." },
+    { name: "Tandoori Chicken + Mango Lassi", price: 400, tag: "classic", land: "Arabian Coast", where: "Casbah Food Court", why: "Cheap, tasty and quick: ¥400 chicken, ¥600 lassi." },
+    { name: "Sushi Roll (shrimp + chicken cutlet)", price: 550, tag: "classic", jp: true, land: "American Waterfront", where: "Bayside Takeout", why: "Hand-held Japanese snack roll." },
+    { name: "Sea Salt Ice Monaka", price: 400, tag: "classic", jp: true, land: "Everywhere", where: "Ice cream wagons", why: "Ice cream in a crispy Japanese monaka wafer." },
+    { name: "Popcorn: Truffle Salt", price: 400, tag: "popcorn", land: "Port Discovery", where: "Wagon by Aquatopia · wagon by Horizon Bay", why: "Anniversary flavor." },
+    { name: "Popcorn: Garlic Shrimp", price: 400, tag: "popcorn", jp: true, land: "Fantasy Springs", where: "Wagon by Fairy Tinker Bell's Busy Buggies · Lido Isle wagon", why: "Savory and only-in-Tokyo." },
+    { name: "Popcorn: Mala Spicy", price: 400, tag: "popcorn", land: "American Waterfront", where: "Wagon by Liberty Landing Diner", why: "Numbing Sichuan heat." },
+    { name: "Popcorn: Soy Sauce Butter", price: 400, tag: "popcorn", jp: true, land: "Mermaid Lagoon", where: "Wagon by Scuttle's Scooters", why: "The classic Japanese flavor." },
+    { name: "Popcorn: Black Pepper", price: 400, tag: "popcorn", land: "Mediterranean Harbor", where: "Wagon by Soaring", why: "" },
+    { name: "Popcorn: Curry (from 5 PM) / Salty Caramel (until 4:30)", price: 400, tag: "popcorn", jp: true, land: "Arabian Coast", where: "Arabian Coast wagon", why: "Japanese-style curry popcorn is a fan favorite." },
+    { name: "Popcorn: Caramel · Milk Chocolate · Salt", price: 400, tag: "popcorn", land: "American Waterfront", where: "Caramel: Dockside Stage + Cove of Wonder · Milk Choc: Cape Cod Cook-Off · Salt: Hangar Stage (Lost River Delta)", why: "" },
+  ],
+  tdl: [
+    { name: "Halloween Sundae (pumpkin soft serve + churros)", price: 900, tag: "halloween", land: "Check the app", where: "Halloween menu outlets (until Oct 31)", why: "Halloween-only. Pumpkin soft serve is a seasonal Japan favorite." },
+    { name: "LeFou's Brew + Assortment Box", price: 1580, tag: "classic", land: "Fantasyland", where: "La Taverne de Gaston", why: "Frozen apple drink with mango-passion foam, plus a new box with a pretzel dog and bone-in fried chicken." },
+    { name: "Mickey Waffle", price: null, tag: "classic", land: "World Bazaar", where: "Great American Waffle Co.", why: "The classic. Expect a line in the morning." },
+    { name: "Ganache Sandwich (chocolate + coffee)", price: 850, tag: "classic", land: "New Orleans Square", where: "Café Orleans", why: "New 'Sweet Moments' dessert." },
+    { name: "Galette Bretonne (nuts + chocolate)", price: 850, tag: "classic", land: "World Bazaar", where: "Sweetheart Café", why: "New 'Sweet Moments' dessert; ¥1,450 as a café set." },
+    { name: "Sea Salt Ice Monaka · Mickey Ice Bars", price: 400, tag: "classic", jp: true, land: "Everywhere", where: "Ice cream wagons", why: "Cheap, cute, and quick between rides." },
+  ],
 };

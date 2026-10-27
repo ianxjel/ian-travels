@@ -1128,7 +1128,7 @@
     [/journey to the center/i, 3, "Drill car through the volcano's caverns, then a fast burst up and out of Mount Prometheus. The park's top thrill."],
     [/raging spirits/i, 3, "Short, intense coaster through a ruined temple with fire, steam and a full 360° loop."],
     [/tower of terror/i, 3, "Haunted hotel elevator drop. Closed for refurbishment until Nov 5."],
-    [/indiana jones/i, 2, "Bumpy jeep ride through a cursed temple, with a fireball and a rolling boulder."],
+    [/indiana jones/i, 2, "Bumpy jeep ride through a cursed temple. Closed for refurbishment until Nov 30."],
     [/nemo.*searider|searider/i, 1, "Motion-simulator 'submarine' ride with the Finding Nemo crew."],
     [/soaring/i, 1, "Hang-glide in front of a giant dome screen over world landmarks. Heights, but gentle."],
     [/peter pan's never ?land/i, 1, "3D flying ride through Never Land with Peter and a fight with Captain Hook."],
@@ -1199,6 +1199,31 @@
   }
   const hhmm = iso => { try { return new Date(iso).toLocaleTimeString("en-US", { timeZone: "Asia/Tokyo", hour: "numeric", minute: "2-digit" }); } catch { return ""; } };
   const waitClass = w => w == null ? "" : w <= 20 ? "w-low" : w <= 45 ? "w-mid" : "w-high";
+  const TREAT_TAGS = { halloween: ["🎃", "Halloween · until Oct 31"], "25th": ["✨", "25th anniversary"], remember: ["💀", "Coco event · until Nov 2"], classic: ["⭐", "Classic"], popcorn: ["🍿", "Popcorn"] };
+  const ateKey = k => `ate:${k}:${jstDateStr()}`;
+  function treatsHtml(key) {
+    const list = (typeof PARK_TREATS !== "undefined" && PARK_TREATS[key]) || [];
+    const ate = store.get(ateKey(key), {}) || {};
+    const order = { halloween: 0, remember: 1, classic: 2, "25th": 3, popcorn: 4 };
+    const sorted = list.map((t, i) => ({ ...t, i })).sort((a, b) => (order[a.tag] - order[b.tag]) || ((b.jp ? 1 : 0) - (a.jp ? 1 : 0)));
+    const lands = [...new Set(sorted.map(t => t.land))];
+    return `<div class="card wplan"><h3>🍡 Treats to try</h3>
+        <p class="muted">Limited-time first: 🎃 Halloween items end Oct 31. 🇯🇵 = Japan-style or only-in-Tokyo. Popcorn flavors rotate, so check the wagon sign.</p></div>
+      ${lands.map(l => `<div class="card wlist"><h3>📍 ${esc(l)}</h3>${sorted.filter(t => t.land === l).map(t => `
+        <div class="treat ${ate[t.i] ? "ate" : ""}">
+          <div class="treat-h"><b>${esc(t.name)}</b>${t.price ? `<span class="treat-price">¥${t.price.toLocaleString()}</span>` : ""}</div>
+          <div class="treat-tags"><span class="ttag ${t.tag}">${TREAT_TAGS[t.tag][0]} ${TREAT_TAGS[t.tag][1]}</span>${t.jp ? `<span class="ttag jp">🇯🇵 Japan-only flavor</span>` : ""}</div>
+          ${t.why ? `<p class="treat-why">${esc(t.why)}</p>` : ""}
+          <p class="treat-where">📍 ${esc(t.where)}</p>
+          <button class="btn sm ${ate[t.i] ? "" : "ghost"}" data-ate="${t.i}" type="button">${ate[t.i] ? "✓ Ate it" : "Mark as eaten"}</button>
+        </div>`).join("")}</div>`).join("")}`;
+  }
+  document.addEventListener("click", e => {
+    const v = e.target.closest("[data-wview]");
+    if (v) { store.set("wView", v.dataset.wview); $$("[data-wview]").forEach(b => b.classList.toggle("on", b === v)); $("#wTreats").hidden = v.dataset.wview !== "treats"; $("#wRides").hidden = v.dataset.wview === "treats"; return; }
+    const a = e.target.closest("[data-ate]");
+    if (a) { const key = (location.hash.split("/")[1] || "tds"); const m = store.get(ateKey(key), {}) || {}; if (m[a.dataset.ate]) delete m[a.dataset.ate]; else m[a.dataset.ate] = 1; store.set(ateKey(key), m); const y = scrollY; $("#wTreats").innerHTML = treatsHtml(key); scrollTo(0, y); }
+  });
   function renderWaits(key) {
     if (!PARKS[key]) key = "tds";
     const P = PARKS[key]; const day = DAYS.find(d => d.id === P.day);
@@ -1208,11 +1233,15 @@
       <div class="media-back"><a href="#day/${P.day}" class="btn">‹ ${day ? esc(day.title) : "Today"}</a></div>
       <div class="section-title" style="margin-top:10px"><h2>⏱️ Live waits</h2><span class="sub" id="wUpd">loading…</span></div>
       <div class="seg waits-seg">${Object.entries(PARKS).map(([k, p]) => `<a class="${k === key ? "on" : ""}" href="#waits/${k}">${k === "tds" ? "🌋 " : "🏰 "}${p.name.replace("Tokyo ", "")}</a>`).join("")}</div>
+      <div class="seg waits-view"><button type="button" data-wview="rides" class="${store.get("wView", "rides") === "rides" ? "on" : ""}">🎢 Rides</button><button type="button" data-wview="treats" class="${store.get("wView", "rides") === "treats" ? "on" : ""}">🍡 Treats</button></div>
+      <div id="wTreats" ${store.get("wView", "rides") === "treats" ? "" : "hidden"}>${treatsHtml(key)}</div>
+      <div id="wRides" ${store.get("wView", "rides") === "treats" ? "hidden" : ""}>
       <div id="wPlan"></div>
       <div class="waits-tools"><button class="btn" id="wRefresh" type="button">🔄 Refresh</button>
         <label class="wsort"><input type="checkbox" id="wThrill" ${store.get("wThrill", true) ? "checked" : ""}> 🔥 Thrill first</label>
         <label class="wsort"><input type="checkbox" id="wPicks" ${store.get("wPicks", false) ? "checked" : ""}> ⭐ Picks</label></div>
       <div id="wList"><div class="card muted">Loading live waits…</div></div>
+      </div>
       <p class="mini-note">Wait times come from public feeds (themeparks.wiki / queue-times.com) and can lag a few minutes. The official Tokyo Disney Resort app is the final word, and it's where you buy Premier Access.</p>`;
     const load = async () => {
       let rows = null, src = "";
@@ -1245,7 +1274,7 @@
   let lastWaits = null;
   function dpaHtml(key, rows) {
     const list = getDpa(key), now = jstMinutes();
-    const rideNames = [...new Set(rows.filter(r => r.type === "ride").map(r => r.name))].sort();
+    const rideNames = (DPA_RIDES[key] || []).slice().sort((a, b) => rideInfo(b).thrill - rideInfo(a).thrill || a.localeCompare(b));
     return `<div class="dpa-box">
       <h4>🎟️ Your Premier Access</h4>
       ${list.length ? list.map((d, i) => {
@@ -1256,12 +1285,17 @@
           <button class="btn sm ghost" data-dpadel="${i}" type="button" aria-label="Remove">✕</button>
         </div>`; }).join("") : `<p class="muted">None yet.</p>`}
       <details class="dpa-add"><summary>+ Add Premier Access</summary>
-        <label>Ride<select id="dpaRide">${rideNames.map(n => `<option>${esc(n)}</option>`).join("")}</select></label>
-        <div class="dpa-times"><label>From<input type="time" id="dpaStart" value="${fmt24(now + 60)}"></label><label>To<input type="time" id="dpaEnd" value="${fmt24(now + 120)}"></label></div>
+        <label>Ride<select id="dpaRide">${rideNames.map(n => `<option value="${esc(n)}">${esc(n)} ${"🔥".repeat(rideInfo(n).thrill)}</option>`).join("")}</select></label>
+        <label>Return time starts at<input type="time" id="dpaStart" value="${fmt24(now + 60)}"></label>
+        <p class="muted" style="font-size:12.5px;margin:4px 0 0">The window is always 1 hour, so the end time fills in for you.</p>
         <button class="btn primary" id="dpaSave" type="button">Save</button>
       </details>
     </div>`;
   }
+  const DPA_RIDES = {
+    tds: ["Journey to the Center of the Earth", "Raging Spirits", "Soaring: Fantastic Flight", "Anna and Elsa's Frozen Journey", "Rapunzel's Lantern Festival", "Peter Pan's Never Land Adventure", "Toy Story Mania!"],
+    tdl: ["Big Thunder Mountain", "Splash Mountain", "The Happy Ride with Baymax", "Enchanted Tale of Beauty and the Beast", "Pooh's Hunny Hunt", "Monsters, Inc. Ride & Go Seek!", "Haunted Mansion"],
+  };
   const fmt24 = m => { m = Math.max(0, Math.min(23 * 60 + 59, m)); return `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`; };
   document.addEventListener("click", e => {
     const t = e.target.closest("[data-rode],[data-dpaused],[data-dpadel],#dpaSave");
@@ -1277,7 +1311,7 @@
     } else if (t.dataset.dpadel !== undefined) {
       const d = getDpa(key); d.splice(+t.dataset.dpadel, 1); store.set(dpaKey(key), d);
     } else if (t.id === "dpaSave") {
-      const name = $("#dpaRide").value, start = $("#dpaStart").value, end = $("#dpaEnd").value;
+      const name = $("#dpaRide").value, start = $("#dpaStart").value, end = start ? fmt24(toMin(start) + 60) : "";
       if (!name || !start || !end) return;
       const d = getDpa(key); d.push({ name, start, end, used: false }); d.sort((a, b) => toMin(a.start) - toMin(b.start)); store.set(dpaKey(key), d);
       toast("🎟️ Premier Access saved");
