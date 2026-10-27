@@ -241,10 +241,10 @@ const DAYS = [
 
   /* ---------------- DAY 3 ---------------- */
   {
-    id: "d3", date: "2026-10-28", prep: ["Costume + ears again for Disneyland", "Link your Disneyland ticket in the Disney app; decide on Premier Access for Beauty and the Beast", "Charge phone, power bank and camera batteries; poncho in the bag", "Alarm ~6:15 AM — leave at 7:00"], rain: "teamLab Planets is fully indoors. If it pours later, skip the seaside boardwalk and stay inside DiverCity Tokyo Plaza (food court + shops) — the Gundam still poses outside, rain or shine.", home: {"after": "22:30", "note": "Kabukichō to your hotel is ~20 min on foot or a ¥1,000 taxi. Disneyland tomorrow means a 6:15 AM alarm."}, dow: "Wed", title: "teamLab + Odaiba", city: "Tokyo",
-    theme: "teamlab", emoji: "🌈", deco: ["🌈", "🪞", "🤖", "🌊", "✨", "💧"],
-    kicker: "Day 3 · Light, water + giant robots",
-    tagline: "Wade through glowing water rooms, meet a life-size Gundam, then watch the sun set over Rainbow Bridge.",
+    id: "d3", date: "2026-10-28", prep: ["Costume + ears again for Disneyland", "Link your Disneyland ticket in the Disney app; decide on Premier Access for Beauty and the Beast", "Charge phone, power bank and camera batteries; poncho in the bag", "Alarm ~6:15 AM — leave at 7:00"], rain: "Almost everything today is indoors: teamLab, the food hall, Sunshine City and Shibuya PARCO. Grab a ¥500 umbrella at any konbini for the walks between.", home: {"after": "21:30", "note": "Omoide Yokocho to your hotel is ~15 min on foot or 2 stops on the Marunouchi Line (M08 → M10). Disneyland tomorrow means a 6:15 AM alarm."}, dow: "Wed", title: "teamLab + Pokémon day", city: "Tokyo",
+    theme: "teamlab", emoji: "🌈", deco: ["🌈", "🪞", "⚡", "🌊", "✨", "💧"],
+    kicker: "Day 3 · Light, water + Pokémon",
+    tagline: "Wade through glowing water rooms, eat your way through an Edo-style food hall, then hit both of Tokyo's biggest Pokémon Centers.",
     sleep: "shinjuku", wx: { lat: 35.645, lon: 139.79 },
     phrases: ["yoyaku", "photoplease", "kirei", "hitotsu"],
     steps: [
@@ -271,36 +271,40 @@ const DAYS = [
         photo: "The Edo-style street with lanterns and wooden shopfronts. Classic Chrome makes it look like an old film still.",
       },
       {
-        t: "14:15", title: "Odaiba: Unicorn Gundam", quest: "🎢 Tokyo Joypolis (Decks Tokyo Beach, ~5 min walk): Sega's indoor thrill park with VR rides and an indoor coaster, if you want a ride fix before sunset.", ask: [{"jp": "ガンダムの変身は何時ですか？", "ro": "Gandamu no henshin wa nanji desu ka?", "en": "What time does the Gundam transform?", "hear": "time"}], ll: [35.6251, 139.7756], say: ["photoplease", "hitotsu"], pic: "Unicorn Gundam Odaiba photo low angle", rx: "classic", place: "DiverCity Tokyo Plaza, Odaiba",
-        ride: [{"ln": "U", "from": "U14", "to": "U07", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train. Sit up front!", "wrong": "Next stop 新豊洲 Shin-toyosu (U15) = wrong way.", "min": 20, "exit": "DiverCity Tokyo Plaza is a 5-min walk"}],
+        t: "14:15", title: "Pokémon Center Mega Tokyo ⚡", ask: [{"jp": "サンシャインシティはどっちですか？", "ro": "Sanshain Shiti wa dotchi desu ka?", "en": "Which way to Sunshine City?", "hear": "dir"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.729, 139.7193], say: ["menzei", "fukuro", "card"], pic: "Pokemon Center Mega Tokyo photo", rx: "reala", place: "Pokemon Center Mega Tokyo, Sunshine City",
+        ride: [{"ln": "U", "from": "U14", "to": "U16", "dir": "豊洲方面 (toward Toyosu)", "type": "Every train. Or walk ~15 min.", "wrong": "Next stop 有明テニスの森 (U13) = wrong way.", "min": 4, "exit": "Follow 有楽町線 Yūrakuchō Line (gold) signs"}, {"ln": "Y", "from": "Y22", "to": "Y09", "dir": "池袋・和光市方面 (toward Ikebukuro / Wakōshi)", "type": "Every train. Direct, no transfer.", "wrong": "Next stop 辰巳 Tatsumi = wrong way.", "min": 30, "exit": "Exit 35 / East Exit (東口) → Sunshine 60 Street"}],
         how: [
-          "Yurikamome line from Shijō-mae to Daiba (~18 min). Sit in the front car — it's driverless, so you get the windshield view.",
-          "The life-size Unicorn Gundam stands outside DiverCity Tokyo Plaza; it transforms at set times.",
-          "Inside DiverCity: The Gundam Base, the huge official Gundam model store.",
+          "Yurikamome 2 stops to Toyosu, then the Yūrakuchō Line straight to Ikebukuro (~35 min total).",
+          "Take the East Exit and walk ~10 min down Sunshine 60 Street to Sunshine City.",
+          "Pokémon Center Mega Tokyo + Pikachu Sweets are on Alpa 2F. Check the official site in case timed entry is required.",
         ],
-        snack: "Afternoon snack at the DiverCity food court if you're hungry again.",
-        photo: "Shoot the Gundam from low with a 0.5x wide angle so it towers over you.",
+        tip: "Tax-free at the register until Oct 31: bring your passport and do the big haul (¥5,000+ per store).",
+        snack: "Pikachu Sweets by Pokémon Café — walk-up takeout treats, no reservation.",
+        photo: "With the big statues at the entrance, plush in hand.",
       },
       {
-        t: "16:15", title: "Sunset at Odaiba Seaside Park", ll: [35.6298, 139.7744], say: ["kirei"], pic: "Odaiba Rainbow Bridge sunset silhouette", rx: "velvia", place: "Odaiba Seaside Park",
+        t: "16:15", title: "Shibuya: Mewtwo + Pokémon Center + Nintendo Tokyo", quest: "🌸 Tower Records Shibuya (5 min walk) has Ariana's “Tower Love!” petal posters + a fan lottery. Buy the Japanese edition CD.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
+        ride: [{"ln": "F", "from": "F09", "to": "F16", "dir": "渋谷・横浜・元町・中華街方面 (toward Shibuya)", "type": "Any train — all stop at Shibuya.", "wrong": "Next stop 要町 Kanamechō = wrong way.", "min": 15, "exit": "Follow signs to Shibuya PARCO (~7 min walk)"}],
         how: [
-          "Walk 10 min to the beach boardwalk. Sunset ~4:50 PM.",
-          "Rainbow Bridge lights up just after.",
+          "Fukutoshin line from Ikebukuro straight to Shibuya (~15 min).",
+          "Walk ~7 min to Shibuya PARCO; Pokémon Center Shibuya and Nintendo TOKYO are both on 6F.",
+          "Then Scramble Crossing at dusk (sunset ~4:50) — the neon comes on just as you finish shopping.",
         ],
-        photo: "Silhouette on the boardwalk with Rainbow Bridge + Tokyo Tower behind. Lean on the railing, profile view.",
-        tip: "Prefer the coast? Swap the whole day for Kamakura + Enoshima on the Odakyu line from Shinjuku: the Great Buddha, the seaside Enoden train and the famous Kamakurakōkōmae crossing.",
+        snack: "Snack stop at Shibuya Yokochō under Miyashita Park — a lively food alley with dishes from all over Japan.",
+        photo: "Copy Mewtwo's pose next to its tank. At the Scramble, have someone shoot you walking toward the camera mid-crossing (Live Photo → Long Exposure blurs the crowd). Keep walking — guards stop people posing in the road this week.",
+        tip: "Halloween week: Shibuya bans street drinking in the evenings and the crowds build fast. Shop, shoot, then head out by ~6.",
       },
       {
-        t: "17:15", title: "Back to Shinjuku", ll: [35.6896, 139.7006], say: ["hitori", "oshiete"], place: "Shinjuku Station",
-        ride: [{"ln": "U", "from": "U07", "to": "U01", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train.", "wrong": "Next stop 東京国際クルーズターミナル (U08) = wrong way.", "min": 15, "exit": "Follow 銀座線 Ginza Line (orange) signs"}, {"ln": "G", "from": "G08", "to": "G05", "dir": "渋谷方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 銀座 Ginza (G09) = wrong way.", "min": 6, "exit": "Cross the platform at Akasaka-mitsuke to the red Marunouchi Line"}, {"ln": "M", "from": "M13", "to": "M09", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train. One stop past your hotel.", "wrong": "Next stop 国会議事堂前 (M14) = wrong way.", "min": 8, "exit": "Exits C5–C8 come up right at Ni-chome"}],
+        t: "18:00", title: "Shibuya → Ni-chome", ll: [35.6896, 139.7006], say: ["hitori", "oshiete"], place: "Shinjuku Station",
+        ride: [{"ln": "F", "from": "F16", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Trains for 横浜 Yokohama / 元町・中華街 use the same platforms — next stop 代官山 Daikanyama = wrong way.", "min": 10, "exit": "Exits C5–C8 come up right at Ni-chome"}],
         how: [
-          "Yurikamome from Daiba to Shimbashi, then the Ginza line to Akasaka-mitsuke and the Marunouchi line to Shinjuku-sanchōme (~50 min) — or just follow Google Maps.",
-          "Tonight: Okamalt → yakitori → Attack on Titan in ScreenX → bed by midnight (Disneyland alarm 6:15).",
+          "Fukutoshin Line from Shibuya straight to Shinjuku-sanchōme (~10 min).",
+          "Drop the Pokémon haul at the hotel on the way (it's 5 min from Ni-chome).",
         ],
         snack: "Hungry before Okamalt? Fūunji's tsukemen (dipping ramen) near Shinjuku South Exit: buy a ticket at the machine by the door, hand it over, wait for your seat.",
       },
       {
-        t: "18:00", title: "Okamalt — Ni-chome's LGBTQ book café", night: true, ask: [{"jp": "オカマルトはどこですか？", "ro": "Okamaruto wa doko desu ka?", "en": "Where's Okamalt?", "hear": "dir"}], ll: [35.691, 139.707], say: ["gaymanga", "cover"], place: "Okamalt, 2-18-10 Shinjuku, Tokyo",
+        t: "18:30", title: "Okamalt — Ni-chome's LGBTQ book café", night: true, ask: [{"jp": "オカマルトはどこですか？", "ro": "Okamaruto wa doko desu ka?", "en": "Where's Okamalt?", "hear": "dir"}], ll: [35.691, 139.707], say: ["gaymanga", "cover"], place: "Okamalt, 2-18-10 Shinjuku, Tokyo",
         how: [
           "From Shinjuku-sanchōme (Exits C5–C8), walk ~3 min to 2-18-10 Shinjuku (Shin-Chidorigai building, 2F). It closes around 8 PM.",
           "Around ¥1,500 for 90 minutes, with a drink and snacks.",
@@ -309,7 +313,7 @@ const DAYS = [
         spicy: "Shelves of vintage Barazoku (the magazine the word “bara” comes from), Tom of Finland art and gay culture books, run by a Ni-chome writer and drag legend.",
       },
       {
-        t: "19:15", title: "Yakitori in Omoide Yokocho", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
+        t: "19:45", title: "Yakitori in Omoide Yokocho", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
         how: [
           "From Okamalt, walk ~15 min west along Shinjuku-dōri, or take the Marunouchi Line one stop, M09 → M08 (toward 荻窪 Ogikubo).",
           "Follow signs for the West Exit (西口); the alley is just north of the exit, along the tracks.",
@@ -319,19 +323,9 @@ const DAYS = [
         photo: "Walk toward the camera mid-alley glancing up at the lanterns, vertical, Night mode. Ask before shooting inside a stall.",
       },
       {
-        t: "20:30", title: "⚔️ Attack on Titan in ScreenX", quest: "⚔️ Last chance for the first-week gift: a free Eren mini shikishi (art board by Kyōji Asano) with every ticket, through Oct 29 while supplies last.", ask: [{"jp": "入場者特典はまだありますか？", "ro": "Nyūjōsha tokuten wa mada arimasu ka?", "en": "Do you still have the first-week bonus gift?", "hear": "yesno"}], ll: [35.6958, 139.7004], say: ["arigatou"], place: "109 Cinemas Premium Shinjuku, Tokyu Kabukicho Tower",
+        t: "22:00", title: "Optional: quick soak at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "kondomu2"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
         how: [
-          "劇場版「進撃の巨人」前編〜紅蓮の弓矢〜 (Guren no Yumiya) — the recap movie of the anime, shown only in ScreenX / 4DX / ULTRA 4DX.",
-          "Closest: 109 Cinemas Premium Shinjuku in Tokyu Kabukichō Tower, 5 min from Omoide Yokocho (ScreenX). It's a premium cinema, so seats are about ¥4,500 + ¥700 ScreenX.",
-          "Want the full motion-seat ULTRA 4DX? Grand Cinema Sunshine Ikebukuro: Fukutoshin Line F13 → F09 (~10 min).",
-          "Book on the cinema's website and check the showtime and runtime. It's in Japanese with no English subtitles, but you know the story.",
-        ],
-        photo: "Tokyu Kabukichō Tower's neon facade from the Godzilla Road side.",
-      },
-      {
-        t: "23:00", title: "Optional: quick soak at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "kondomu2"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
-        how: [
-          "Kabukichō → 24 Kaikan is about 15 min on foot.",
+          "Omoide Yokocho → 24 Kaikan is about 15 min on foot.",
           "Only if you're not wiped: the Disneyland alarm is 6:15 AM. Tomorrow night is the long Ueno sauna night anyway.",
         ],
         spicy: "Weeknight evenings are calmer: good for the sauna and the rooftop deck before it gets busy.",
@@ -512,30 +506,6 @@ const DAYS = [
     sleep: "shinjuku", wx: { lat: 35.69, lon: 139.71 },
     phrases: ["menzei", "fukuro", "card", "kore", "kanpai", "kakkoii", "line", "hima"],
     steps: [
-      {
-        t: "11:30", title: "Pokémon Center Mega Tokyo", ask: [{"jp": "サンシャインシティはどっちですか？", "ro": "Sanshain Shiti wa dotchi desu ka?", "en": "Which way to Sunshine City?", "hear": "dir"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.729, 139.7193], say: ["menzei", "fukuro", "card"], pic: "Pokemon Center Mega Tokyo photo", rx: "reala", place: "Pokemon Center Mega Tokyo, Sunshine City",
-        ride: [{"ln": "F", "from": "F13", "to": "F09", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Any train — all stop at Ikebukuro.", "wrong": "Next stop 北参道 Kita-sandō (F14) = wrong way.", "min": 10, "exit": "East Exit (東口) → Sunshine 60 Street"}],
-        how: [
-          "Fukutoshin line (brown) from Shinjuku-sanchome to Ikebukuro (~10 min, no transfer).",
-          "Take the East Exit and walk ~10 min down Sunshine 60 Street to Sunshine City.",
-          "Pokémon Center Mega Tokyo + Pikachu Sweets are on Alpa 2F. Check the official site in the morning in case timed entry is required.",
-        ],
-        tip: "TODAY is the last day of tax-free at the register: bring your passport and do the big haul (¥5,000+ per store). From Nov 1 you'd have to claim refunds at Narita.",
-        snack: "Pikachu Sweets by Pokémon Café — walk-up takeout treats, no reservation.",
-        photo: "With the big statues at the entrance, plush in hand. Opening time = no crowds.",
-      },
-      {
-        t: "14:30", title: "Shibuya: Mewtwo + Nintendo Tokyo", quest: "🌸 Tower Records Shibuya (5 min walk) has Ariana's “Tower Love!” petal posters + a fan lottery. Buy the Japanese edition CD.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
-        ride: [{"ln": "F", "from": "F09", "to": "F16", "dir": "渋谷・横浜・元町・中華街方面 (toward Shibuya)", "type": "Any train — all stop at Shibuya.", "wrong": "Next stop 要町 Kanamechō = wrong way.", "min": 15, "exit": "Follow signs to Shibuya PARCO (~7 min walk)"}],
-        how: [
-          "Fukutoshin line from Ikebukuro straight to Shibuya (~15 min).",
-          "Walk ~7 min to Shibuya PARCO; Pokémon Center Shibuya and Nintendo TOKYO are both on 6F.",
-          "Then Scramble Crossing photos on the way back.",
-        ],
-        snack: "Lunch at Shibuya Yokochō under Miyashita Park — a lively food alley with dishes from all over Japan.",
-        photo: "Copy Mewtwo's pose next to its tank. At the Scramble, have someone shoot you walking toward the camera mid-crossing (Live Photo → Long Exposure blurs the crowd). Keep walking — guards stop people posing in the road today.",
-        tip: "Leave Shibuya by 5 PM. Street drinking is banned 6 PM–5 AM and the Halloween crowds get intense fast.",
-      },
       {
         t: "16:30", title: "Pride House Tokyo Legacy 🏳️‍🌈", night: true, ask: [{"jp": "見学してもいいですか？", "ro": "Kengaku shite mo ii desu ka?", "en": "Is it OK to look around?", "hear": "yesno"}], ll: [35.6886, 139.7128], say: ["arigatou"], place: "Pride House Tokyo Legacy, 1-2-9 Shinjuku, Tokyo",
         how: [
@@ -1892,7 +1862,8 @@ const LINES = {
     ["G10", "京橋", "Kyōbashi"], ["G11", "日本橋", "Nihombashi"], ["G12", "三越前", "Mitsukoshimae"], ["G13", "神田", "Kanda"], ["G14", "末広町", "Suehirochō"],
     ["G15", "上野広小路", "Ueno-hirokōji"], ["G16", "上野", "Ueno"], ["G17", "稲荷町", "Inarichō"], ["G18", "田原町", "Tawaramachi"], ["G19", "浅草", "Asakusa"]] },
   Y: { name: "Yurakucho Line", jp: "有楽町線", color: "#c1a470", stops: [
-    ["Y18", "有楽町", "Yūrakuchō"], ["Y19", "銀座一丁目", "Ginza-itchōme"], ["Y20", "新富町", "Shintomichō"], ["Y21", "月島", "Tsukishima"], ["Y22", "豊洲", "Toyosu"]] },
+    ["Y09", "池袋", "Ikebukuro"], ["Y10", "東池袋", "Higashi-ikebukuro"], ["Y11", "護国寺", "Gokokuji"], ["Y12", "江戸川橋", "Edogawabashi"], ["Y13", "飯田橋", "Iidabashi"],
+    ["Y14", "市ケ谷", "Ichigaya"], ["Y15", "麹町", "Kōjimachi"], ["Y16", "永田町", "Nagatachō"], ["Y17", "桜田門", "Sakuradamon"], ["Y18", "有楽町", "Yūrakuchō"], ["Y19", "銀座一丁目", "Ginza-itchōme"], ["Y20", "新富町", "Shintomichō"], ["Y21", "月島", "Tsukishima"], ["Y22", "豊洲", "Toyosu"]] },
   U: { name: "Yurikamome", jp: "ゆりかもめ", color: "#1b8fd1", stops: [
     ["U01", "新橋", "Shimbashi"], ["U02", "汐留", "Shiodome"], ["U03", "竹芝", "Takeshiba"], ["U04", "日の出", "Hinode"], ["U05", "芝浦ふ頭", "Shibaura-futō"],
     ["U06", "お台場海浜公園", "Odaiba-kaihinkōen"], ["U07", "台場", "Daiba"], ["U08", "東京国際クルーズターミナル", "Tokyo Int'l Cruise Terminal"], ["U09", "テレコムセンター", "Telecom Center"],
