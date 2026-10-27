@@ -1122,6 +1122,48 @@
     tdl: { name: "Tokyo Disneyland", match: /disneyland/i, qt: 274, day: "d4", close: "21:00",
       picks: /beauty and the beast|enchanted tale|haunted mansion|big thunder|splash mountain|hunny hunt|baymax|monsters|space mountain|pirates|jungle cruise|toon|roger rabbit|buzz/i },
   };
+  // ride blurbs + thrill level (0 calm · 1 a little · 2 big · 3 the big ones)
+  const RIDE_INFO = [
+    // Tokyo DisneySea
+    [/journey to the center/i, 3, "Drill car through the volcano's caverns, then a fast burst up and out of Mount Prometheus. The park's top thrill."],
+    [/raging spirits/i, 3, "Short, intense coaster through a ruined temple with fire, steam and a full 360° loop."],
+    [/tower of terror/i, 3, "Haunted hotel elevator drop. Closed for refurbishment until Nov 5."],
+    [/indiana jones/i, 2, "Bumpy jeep ride through a cursed temple, with a fireball and a rolling boulder."],
+    [/nemo.*searider|searider/i, 1, "Motion-simulator 'submarine' ride with the Finding Nemo crew."],
+    [/soaring/i, 1, "Hang-glide in front of a giant dome screen over world landmarks. Heights, but gentle."],
+    [/peter pan's never ?land/i, 1, "3D flying ride through Never Land with Peter and a fight with Captain Hook."],
+    [/aquatopia/i, 1, "Spinning boats on a random path through whirlpools and waterfalls. Mild splashes."],
+    [/whirlpool/i, 1, "Spinning cups on a whirlpool in Mermaid Lagoon."],
+    [/flounder/i, 1, "Small family coaster: quick dips, nothing scary."],
+    [/frozen journey/i, 0, "Boat ride through Arendelle with Anna and Elsa singing the hits. Gorgeous effects."],
+    [/rapunzel/i, 0, "Gentle boat ride ending in the floating-lantern scene."],
+    [/tinker ?bell/i, 0, "Cute kids' ride through Pixie Hollow."],
+    [/20,?000 leagues/i, 0, "Submarine dark ride to the ocean floor."],
+    [/toy story mania/i, 0, "4D shooting game; compete for a high score."],
+    [/sindbad/i, 0, "Musical boat ride with an earworm theme song."],
+    [/turtle talk/i, 0, "Live interactive show with Crush the sea turtle (in Japanese)."],
+    [/jasmine|caravan carousel|blowfish|jumpin|scuttle|big city vehicles/i, 0, "Gentle family ride."],
+    [/transit steamer|electric railway/i, 0, "Transport with great views. A breather between big rides."],
+    [/gondola/i, 0, "Singing gondoliers around Mediterranean Harbor. Great photos."],
+    // Tokyo Disneyland
+    [/big thunder/i, 3, "Runaway mine-train coaster: the park's best thrill."],
+    [/splash mountain/i, 3, "Log flume ending in a big 16 m drop. You will get wet."],
+    [/space mountain/i, 3, "Closed while it's rebuilt (new version opening 2027)."],
+    [/star tours/i, 2, "Motion simulator through the Star Wars galaxy; different route each ride."],
+    [/baymax/i, 2, "Whip-style spinning ride with a dance beat. Surprisingly intense."],
+    [/pirates/i, 1, "Boat ride with a couple of small drops."],
+    [/gadget/i, 1, "Short kiddie coaster."],
+    [/roger rabbit|car ?toon/i, 1, "Spin-your-own taxi through Toontown."],
+    [/tea party|teacup/i, 1, "Classic spinning teacups: spin as hard as you dare."],
+    [/beauty and the beast|enchanted tale/i, 0, "Trackless 'dancing' cups through the Beast's castle. Stunning."],
+    [/haunted mansion/i, 0, "Doom-buggy dark ride (Holiday Nightmare overlay this season)."],
+    [/hunny hunt/i, 0, "Trackless honey-pot ride through Pooh's storybook."],
+    [/monsters/i, 0, "Flashlight game hunting hidden monsters."],
+    [/buzz|astro blasters/i, 0, "Laser-shooting game."],
+    [/jungle cruise/i, 0, "Boat ride with a (Japanese) skipper spiel."],
+  ];
+  const rideInfo = name => { const m = RIDE_INFO.find(([re]) => re.test(name)); return m ? { thrill: m[1], desc: m[2] } : { thrill: 0, desc: "" }; };
+  const flames = n => n ? `<span class="thrill" title="Thrill level">${"🔥".repeat(n)}</span>` : "";
   let waitsTimer = null;
   async function fetchJSON(url, ms = 9000) {
     const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), ms);
@@ -1168,7 +1210,8 @@
       <div class="seg waits-seg">${Object.entries(PARKS).map(([k, p]) => `<a class="${k === key ? "on" : ""}" href="#waits/${k}">${k === "tds" ? "🌋 " : "🏰 "}${p.name.replace("Tokyo ", "")}</a>`).join("")}</div>
       <div id="wPlan"></div>
       <div class="waits-tools"><button class="btn" id="wRefresh" type="button">🔄 Refresh</button>
-        <label class="wsort"><input type="checkbox" id="wPicks" ${store.get("wPicks", false) ? "checked" : ""}> ⭐ My picks only</label></div>
+        <label class="wsort"><input type="checkbox" id="wThrill" ${store.get("wThrill", true) ? "checked" : ""}> 🔥 Thrill first</label>
+        <label class="wsort"><input type="checkbox" id="wPicks" ${store.get("wPicks", false) ? "checked" : ""}> ⭐ Picks</label></div>
       <div id="wList"><div class="card muted">Loading live waits…</div></div>
       <p class="mini-note">Wait times come from public feeds (themeparks.wiki / queue-times.com) and can lag a few minutes. The official Tokyo Disney Resort app is the final word, and it's where you buy Premier Access.</p>`;
     const load = async () => {
@@ -1184,7 +1227,8 @@
       paintWaits(key, rows, src);
     };
     $("#wRefresh").onclick = load;
-    $("#wPicks").onchange = e => { store.set("wPicks", e.target.checked); load(); };
+    $("#wPicks").onchange = e => { store.set("wPicks", e.target.checked); lastWaits ? paintWaits(lastWaits.key, lastWaits.rows, lastWaits.src) : load(); };
+    $("#wThrill").onchange = e => { store.set("wThrill", e.target.checked); lastWaits ? paintWaits(lastWaits.key, lastWaits.rows, lastWaits.src) : load(); };
     load();
     clearInterval(waitsTimer);
     waitsTimer = setInterval(() => { if (location.hash.startsWith("#waits")) load(); else clearInterval(waitsTimer); }, 120e3);
@@ -1252,13 +1296,16 @@
     const done = r => Object.keys(rode).some(n => sameRide(n, r.name));
     const booked = r => dpas.some(d => !d.used && sameRide(d.name, r.name));
     const P = PARKS[key]; const picksOnly = store.get("wPicks", false);
-    const isPick = r => P.picks.test(r.name);
-    const open = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && (!picksOnly || isPick(r))).sort((a, b) => a.wait - b.wait);
+    const isPick = r => P.picks.test(r.name) || rideInfo(r.name).thrill >= 2;
+    const thrillFirst = store.get("wThrill", true);
+    const open = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && (!picksOnly || isPick(r))).sort((a, b) => thrillFirst ? (rideInfo(b.name).thrill - rideInfo(a.name).thrill) || (a.wait - b.wait) : a.wait - b.wait);
     const shows = rows.filter(r => r.type === "show" && r.shows.length && (!picksOnly || isPick(r)));
     const down = rows.filter(r => r.type === "ride" && r.status !== "OPERATING" && (!picksOnly || isPick(r)));
     // smart plan: best picks right now + time left
     const nowM = jstMinutes(), closeM = toMin(P.close), left = closeM - nowM;
-    const bestPicks = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && isPick(r) && !done(r) && !booked(r)).sort((a, b) => a.wait - b.wait).slice(0, 3);
+    // thrill-weighted: each 🔥 is worth ~25 min of waiting
+    const score = r => rideInfo(r.name).thrill * 25 - r.wait;
+    const bestPicks = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && isPick(r) && !done(r) && !booked(r)).sort((a, b) => score(b) - score(a)).slice(0, 3);
     const rideCount = Object.values(rode).reduce((a, b) => a + b, 0);
     const paNow = rows.filter(r => r.pa && /AVAILABLE/i.test(r.pa.state)).slice(0, 3);
     const nextShows = shows.map(r => ({ r, t: r.shows.find(t => new Date(t) > new Date()) })).filter(x => x.t).sort((a, b) => new Date(a.t) - new Date(b.t)).slice(0, 2);
@@ -1268,7 +1315,7 @@
       ${dpaHtml(key, rows)}
       ${left > 0 ? `<p class="muted">Park closes at ${fmt12(P.close)} — about <b>${Math.floor(left / 60)}h ${left % 60}m</b> left, roughly <b>${Math.max(1, Math.floor(left / (avg + 15)))} more rides</b> at today's pace.</p>` : `<p class="muted">Park hours are over for today.</p>`}
       ${rideCount ? `<p class="muted">✓ ${rideCount} ride${rideCount > 1 ? "s" : ""} done today — those (and your Premier Access rides) are skipped below.</p>` : ""}
-      ${bestPicks.length ? `<ol class="wbest">${bestPicks.map(r => `<li><span class="wnum ${waitClass(r.wait)}">${r.wait}<small>min</small></span><span>${esc(r.name)}</span></li>`).join("")}</ol>` : `<p>No new favorites are open right now — check the list below.</p>`}
+      ${bestPicks.length ? `<ol class="wbest">${bestPicks.map(r => `<li><span class="wnum ${waitClass(r.wait)}">${r.wait}<small>min</small></span><span>${esc(r.name)} ${flames(rideInfo(r.name).thrill)}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span></li>`).join("")}</ol>` : `<p>No new favorites are open right now — check the list below.</p>`}
       ${paNow.length ? `<p class="wpa">🎟️ Premier Access on sale: ${paNow.map(r => `<b>${esc(r.name)}</b>${r.pa.start ? ` (${hhmm(r.pa.start)}${r.pa.end ? "–" + hhmm(r.pa.end) : ""})` : ""}`).join(", ")} — buy in the official app.</p>` : ""}
       ${nextShows.length ? `<p class="wpa">🎭 Next shows: ${nextShows.map(x => `<b>${esc(x.r.name)}</b> ${hhmm(x.t)}`).join(" · ")}</p>` : ""}
       ${key === "tds" ? `<p class="wpa">📸 Sunset ~4:50 PM → be at the Mediterranean Harbor railing by 4:30.</p>` : `<p class="wpa">📸 Sunset ~4:50 PM → Cinderella Castle from the hub for blue hour.</p>`}
@@ -1276,14 +1323,14 @@
     const row = r => { const cnt = Object.entries(rode).filter(([n]) => sameRide(n, r.name)).reduce((a, [, c]) => a + c, 0);
       return `<div class="wrow ${isPick(r) ? "pick" : ""} ${cnt ? "rode" : ""}">
         <span class="wnum ${waitClass(r.wait)}">${r.wait == null ? "—" : r.wait}<small>${r.wait == null ? "" : "min"}</small></span>
-        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${booked(r) ? `<em class="wbadge mine">Your DPA</em>` : r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}${cnt ? `<em class="wdone">✓ rode${cnt > 1 ? " ×" + cnt : ""}</em>` : ""}</span>
+        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${booked(r) ? `<em class="wbadge mine">Your DPA</em>` : r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}${cnt ? `<em class="wdone">✓ rode${cnt > 1 ? " ×" + cnt : ""}</em>` : ""} ${flames(rideInfo(r.name).thrill)}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span>
         ${cnt ? `<button class="btn sm ghost" data-unrode="${esc(r.name)}" type="button" aria-label="Undo">↺</button>` : ""}
         <button class="btn sm" data-rode="${esc(r.name)}" type="button">✓ Rode</button>
       </div>`; };
     $("#wList").innerHTML = `
-      ${open.length ? `<div class="card wlist"><h3>🟢 Open now · shortest first</h3>${open.map(row).join("")}</div>` : ""}
+      ${open.length ? `<div class="card wlist"><h3>🟢 Open now · ${thrillFirst ? "biggest thrills first" : "shortest wait first"}</h3>${open.map(row).join("")}</div>` : ""}
       ${shows.length ? `<div class="card wlist"><h3>🎭 Shows</h3>${shows.map(r => `<div class="wrow"><span class="wname">${esc(r.name)}</span><span class="wshows">${r.shows.filter(t => new Date(t) > new Date()).slice(0, 3).map(hhmm).join(" · ") || "done for today"}</span></div>`).join("")}</div>` : ""}
-      ${down.length ? `<details class="card wlist"><summary>🔴 Closed or paused (${down.length})</summary>${down.map(r => `<div class="wrow"><span class="wname">${esc(r.name)}</span><span class="wstat">${r.status === "REFURBISHMENT" ? "refurb" : r.status === "DOWN" ? "paused" : "closed"}</span></div>`).join("")}</details>` : ""}`;
+      ${down.length ? `<details class="card wlist"><summary>🔴 Closed or paused (${down.length})</summary>${down.map(r => `<div class="wrow"><span class="wname">${esc(r.name)} ${flames(rideInfo(r.name).thrill)}</span><span class="wstat">${r.status === "REFURBISHMENT" ? "refurb" : r.status === "DOWN" ? "paused" : "closed"}</span></div>`).join("")}</details>` : ""}`;
     $("#wUpd").textContent = `${src} · ${new Date().toLocaleTimeString("en-US", { timeZone: "Asia/Tokyo", hour: "numeric", minute: "2-digit" })}`;
   }
 
