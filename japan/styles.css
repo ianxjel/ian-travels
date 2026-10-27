@@ -826,3 +826,9 @@ details.wlist summary { cursor: pointer; font-weight: 700; }
 .treat-where { margin: 2px 0 8px; font-size: 13px; color: var(--muted); }
 
 .wbadge.single { background: #6b5bd6; }
+
+.eat-progress .ep-top { display: flex; justify-content: space-between; align-items: center; }
+.ep-bar { height: 10px; border-radius: 999px; background: var(--card2); margin: 8px 0; overflow: hidden; }
+.ep-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 999px; }
+.food-actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 4px; }
+.card.food.eaten { opacity: .7; }

@@ -612,8 +612,9 @@
           <button class="icon-btn sm" data-showtxt="${esc(JSON.stringify(o))}" aria-label="Show big">⤢</button></div>`).join("")}
         <p class="tip" style="margin-top:10px">Can't read the menu? Many places have plastic food models or photos — point and say “Kore kudasai” (this one, please). Google Translate's camera mode reads menus too.</p>
       </div></details>
-      <div id="foods">${FOODS.map(f => `
-        <article class="card food" id="f-${f.id}">
+      ${(() => { const ate = store.get("ate:food", {}) || {}, n = FOODS.filter(f => ate[f.id]).length; return `<div class="card eat-progress"><div class="ep-top"><b>🍽️ Must-eat checklist</b><span>${n} / ${FOODS.length} eaten</span></div><div class="ep-bar"><i style="width:${Math.round(100 * n / FOODS.length)}%"></i></div><label class="wsort"><input type="checkbox" id="eatTodo" ${store.get("eatTodo", false) ? "checked" : ""}> Hide what I've eaten</label></div>`; })()}
+      <div id="foods">${FOODS.filter(f => !(store.get("eatTodo", false) && (store.get("ate:food", {}) || {})[f.id])).map(f => `
+        <article class="card food ${(store.get("ate:food", {}) || {})[f.id] ? "eaten" : ""}" id="f-${f.id}">
           <div class="food-img" data-img="${f.id}"><span class="food-emoji">${f.emoji}</span></div>
           <div class="food-body">
             <div class="food-top">
@@ -630,11 +631,17 @@
               </div>
             </div>
             <p class="food-tip">💡 ${esc(f.tips)}</p>
+            <div class="food-actions">
+              <button class="btn sm ${(store.get("ate:food", {}) || {})[f.id] ? "primary" : ""}" data-atefood="${f.id}" type="button">${(store.get("ate:food", {}) || {})[f.id] ? "✓ Ate it!" : "Mark as eaten"}</button>
+              ${f.day ? (() => { const d = DAYS.find(x => x.id === f.day); return d ? `<a class="btn sm ghost" href="#day/${d.id}">📅 Planned: ${esc(d.dow)} ${esc(d.date.slice(5).replace("-", "/"))}</a>` : ""; })() : ""}
+            </div>
             <div class="food-foot"><span>📍 ${esc(f.where)}</span>
               <a href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(f.jp + " " + f.en)}" target="_blank" rel="noopener">More photos ↗</a></div>
           </div>
         </article>`).join("")}</div>
       <p class="foot">Photos from Wikipedia (CC licensed). Tap “More photos” for more examples.</p>`;
+    $("#eatTodo")?.addEventListener("change", e => { store.set("eatTodo", e.target.checked); const y = scrollY; renderFood(); scrollTo(0, y); });
+    $$("[data-atefood]").forEach(b => b.addEventListener("click", () => { const m = store.get("ate:food", {}) || {}; if (m[b.dataset.atefood]) delete m[b.dataset.atefood]; else { m[b.dataset.atefood] = 1; toast("😋 Checked off!"); } store.set("ate:food", m); const y = scrollY; renderFood(); scrollTo(0, y); }));
     $$("[data-img]").forEach(async el => {
       const f = FOODS.find(x => x.id === el.dataset.img);
       const src = await foodImage(f);
