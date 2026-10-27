@@ -400,7 +400,7 @@ const DAYS = [
 
   /* ---------------- DAY 5 ---------------- */
   {
-    id: "d5", date: "2026-10-30", prep: ["Tomorrow is the LAST day of tax-free at the register: passport in your sling, ¥5,000+ per store", "Check the Pokémon Center Mega Tokyo site for timed entry (you're going around 11:30)", "Pokémon Café 7:15 PM: confirmation in Trip → Tickets; you leave the hotel at 6:25", "Halloween costume ready", "Look over your Trip → Merch list so the haul goes fast", "Big night tonight — water before bed 😅 No alarm: Saturday starts at 11:30"], rain: "Shibuya Sky's open-air rooftop closes in heavy rain or strong wind (the indoor 46F deck stays open). Backup: the free Tokyo Metropolitan Government observatory in Shinjuku. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
+    id: "d5", date: "2026-10-30", prep: ["Tomorrow is the LAST day of tax-free at the register: passport in your sling, ¥5,000+ per store", "Tomorrow is Akihabara + Nakano Broadway: bring cash for the card shops and ¥100 coins for gachapon", "Pokémon Café 7:15 PM: confirmation in Trip → Tickets; you leave the hotel at 6:25", "Halloween costume ready", "Look over your Trip → Merch list so the haul goes fast", "Big night tonight — water before bed 😅 No alarm: Saturday starts at 11:30"], rain: "Shibuya Sky's open-air rooftop closes in heavy rain or strong wind (the indoor 46F deck stays open). Backup: the free Tokyo Metropolitan Government observatory in Shinjuku. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
     theme: "steamy", emoji: "💦", deco: ["💦", "🔥", "🍑", "🪩", "💋", "😈"],
     kicker: "Day 5 · Friday is for the boys",
     tagline: "Temples by day, Ni-chome by night. Hydrate, moisturize, and stay out till the trains restart.",
@@ -490,7 +490,7 @@ const DAYS = [
         how: [
           "When Eagle Blue winds down, 24 Kaikan is a 2-minute walk.",
           "Ask for the overnight stay (宿泊): about 12–14 hours with a locker, robe and towels, so you can sleep there. Guys come straight from the clubs at this hour.",
-          "Pokémon Center Mega Tokyo isn't until 11:30, and your phone lives in the locker. Ask the desk to wake you: “10時に起こしてください” (Jū-ji ni okoshite kudasai).",
+          "Akihabara isn't until 11:30, and your phone lives in the locker. Ask the desk to wake you: “10時に起こしてください” (Jū-ji ni okoshite kudasai).",
         ],
         spicy: "The classic Ni-chome ending: the club crowd moves to the sauna at this hour 🔥",
       },
@@ -499,13 +499,37 @@ const DAYS = [
 
   /* ---------------- DAY 6 ---------------- */
   {
-    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "SmartEX: Shinagawa → Kyoto ~8:30 AM, seat E, Suica linked", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Ikebukuro's Sunshine City, Shibuya PARCO and Takashimaya are all indoors — rain barely matters today. Shibuya streets get crowded on Halloween either way.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Pokémon Tokyo + Halloween", city: "Tokyo",
+    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "SmartEX: Shinagawa → Kyoto ~8:30 AM, seat E, Suica linked", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Akihabara's shops, Nakano Broadway and Takashimaya are all indoors — rain barely matters today.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Akihabara, Nakano + Halloween", city: "Tokyo",
     theme: "ghost", emoji: "👻", deco: ["👻", "🎃", "⚡", "💜", "🍬", "🕯️"],
     kicker: "Day 6 · Ghost-type energy",
-    tagline: "Merch haul by day, Pokémon Café dinner, then Ni-chome in costume until sunrise.",
+    tagline: "Anime, retro games and Pokémon cards by day, Pokémon Café dinner, then Ni-chome in costume until sunrise.",
     sleep: "shinjuku", wx: { lat: 35.69, lon: 139.71 },
     phrases: ["menzei", "fukuro", "card", "kore", "kanpai", "kakkoii", "line", "hima"],
     steps: [
+      {
+        t: "11:30", title: "Akihabara: anime, retro games + Pokémon cards 🎮", ask: [{"jp": "ポケモンカードはありますか？", "ro": "Pokemon kādo wa arimasu ka?", "en": "Do you have Pokémon cards?", "hear": "yesno"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.6984, 139.7731], say: ["menzei", "kore", "ikura"], pic: "Akihabara electric town neon street", rx: "neon", place: "Akihabara Electric Town, Tokyo",
+        ride: [{"ln": "JB", "from": "JB10", "to": "JB19", "dir": "千葉・津田沼・西船橋方面 (toward Chiba) — the YELLOW Chūō-Sōbu local, not the orange Chūō rapid", "type": "Every yellow local stops at Akihabara.", "wrong": "Next stop 大久保 Ōkubo (JB09) = wrong way. Orange trains (中央線快速) don't go to Akihabara.", "min": 18, "exit": "電気街口 Electric Town Exit"}],
+        how: [
+          "Walk ~10 min to JR Shinjuku, then the yellow Chūō-Sōbu local straight to Akihabara (~18 min).",
+          "Super Potato: retro-game heaven over several floors (Game Boy, N64, old Pokémon carts).",
+          "Mandarake Complex: 8 floors of anime figures, manga and vintage toys.",
+          "Radio Kaikan + the card shops along Chūō-dōri: Japanese Pokémon TCG singles and sealed packs. Check prices across a couple of shops.",
+          "Akihabara Gachapon Kaikan: hundreds of capsule-toy machines — bring ¥100 coins.",
+        ],
+        tip: "TODAY is the last day of tax-free at the register: passport in your sling, ¥5,000+ per store. From Nov 1 you'd claim refunds at Narita instead.",
+        snack: "Kebab or a crepe on Chūō-dōri, or a gachapon-break coffee at one of the maid cafés if you're curious.",
+        photo: "Chūō-dōri's wall of anime billboards: stand on the sidewalk by the Electric Town Exit and shoot up the street.",
+      },
+      {
+        t: "14:15", title: "Nakano Broadway: Mandarake heaven", quest: "🍑 Ask Mandarake for the gay manga section: ゲイ漫画のコーナーはありますか？", ask: [{"jp": "ゲイ漫画のコーナーはありますか？", "ro": "Gei manga no kōnā wa arimasu ka?", "en": "Is there a gay manga section?", "hear": "kai"}], ll: [35.7086, 139.6658], say: ["kore", "ikura", "menzei"], place: "Nakano Broadway, Tokyo",
+        ride: [{"ln": "JB", "from": "JB19", "to": "JB07", "dir": "三鷹・中野方面 (toward Mitaka / Nakano) — yellow local", "type": "Every yellow local stops at Nakano.", "wrong": "Next stop 浅草橋 Asakusabashi = wrong way.", "min": 28, "exit": "北口 North Exit → Sun Mall arcade → Nakano Broadway"}],
+        how: [
+          "Stay on the yellow local the other way, all the way to Nakano (~28 min). It goes straight through Shinjuku.",
+          "Walk through the Sun Mall arcade into Nakano Broadway: floors 2–4 are packed with Mandarake shops for vintage toys, anime cels, retro games and old Pokémon merch.",
+          "Back to Shinjuku: 3 stops on the yellow local (JB07 → JB10, ~6 min), then walk to Pride House by 4:30.",
+        ],
+        photo: "The long covered Sun Mall arcade leading into Broadway — shoot down the middle for the vanishing point.",
+      },
       {
         t: "16:30", title: "Pride House Tokyo Legacy 🏳️‍🌈", night: true, ask: [{"jp": "見学してもいいですか？", "ro": "Kengaku shite mo ii desu ka?", "en": "Is it OK to look around?", "hear": "yesno"}], ll: [35.6886, 139.7128], say: ["arigatou"], place: "Pride House Tokyo Legacy, 1-2-9 Shinjuku, Tokyo",
         how: [
@@ -1726,7 +1750,7 @@ const FAN_QUESTS = [
       place: "Okamalt, 2-18-10 Shinjuku, Tokyo", link: "https://www.timeout.com/tokyo/lgbtq/okamalt" },
     { t: "Lumiere", where: "2-17-1 Shinjuku, Naka-dori (Ni-chome)", when: "Any Tokyo evening", day: "d1",
       what: "The historic Ni-chome gay shop, known for its gay magazines.", place: "Lumiere, 2-17-1 Shinjuku, Tokyo", link: "https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%BC%E3%83%AB_(%E3%82%B2%E3%82%A4%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97)" },
-    { t: "Mandarake (secondhand manga + doujinshi)", where: "Nakano Broadway (1 stop from Shinjuku) · Shinsaibashi, Osaka", when: "Daytime", day: "d8",
+    { t: "Mandarake (secondhand manga + doujinshi)", where: "Nakano Broadway (1 stop on the orange Chūō rapid from Shinjuku) · Shinsaibashi, Osaka", when: "Daytime", day: "d6",
       what: "Japan's big secondhand manga chain. Ask for the gay manga section with the phrase “ゲイ漫画のコーナーはありますか？” — not every branch has one.", place: "Mandarake Nakano", link: "https://www.timeout.com/tokyo/shopping/nakano-broadway" },
   ]},
   { fandom: "Gay saunas", emoji: "🧖", spicy: true, items: [
@@ -1907,6 +1931,10 @@ const LINES = {
     ["SJK", "新宿", "Shinjuku"], ["SBY", "渋谷", "Shibuya (some trains)"], ["SGW", "品川", "Shinagawa"], ["TKY", "東京", "Tokyo"],
     ["NRT2", "空港第2ビル", "Narita Airport T2·3"], ["NRT1", "成田空港", "Narita Airport T1"]] },
   JYE: { name: "JR Yamanote Line", jp: "山手線", color: "#80c241", stops: [["JY01", "東京", "Tokyo"], ["JY02", "神田", "Kanda"], ["JY03", "秋葉原", "Akihabara"], ["JY04", "御徒町", "Okachimachi"], ["JY05", "上野", "Ueno"]] },
+  JB: { name: "JR Chūō-Sōbu Line (yellow, local)", jp: "中央・総武線各駅停車", color: "#ffd400", stops: [
+    ["JB07", "中野", "Nakano"], ["JB08", "東中野", "Higashi-Nakano"], ["JB09", "大久保", "Ōkubo"], ["JB10", "新宿", "Shinjuku"], ["JB11", "代々木", "Yoyogi"],
+    ["JB12", "千駄ケ谷", "Sendagaya"], ["JB13", "信濃町", "Shinanomachi"], ["JB14", "四ツ谷", "Yotsuya"], ["JB15", "市ケ谷", "Ichigaya"], ["JB16", "飯田橋", "Iidabashi"],
+    ["JB17", "水道橋", "Suidōbashi"], ["JB18", "御茶ノ水", "Ochanomizu"], ["JB19", "秋葉原", "Akihabara"]] },
 };
 
 /* ---------------- Park treats (for the Live waits → 🍡 Treats tab) ----------------
