@@ -148,7 +148,7 @@ const DAYS = [
 
   /* ---------------- DAY 2 ---------------- */
   {
-    id: "d2", date: "2026-10-27", prep: ["Book a teamLab Planets slot around 11 AM if you haven't, and save the QR in Trip → Tickets", "Pack shorts or pants that roll up above the knee — teamLab has knee-deep water rooms", "Charge everything (teamLab + Odaiba are big photo days)", "No early alarm: ~9:45 AM, leave at 10:15 — stay out as late as you want tonight 🎂"], rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, park: "tds", dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
+    id: "d2", date: "2026-10-27", prep: ["Passport in your sling tomorrow: tax-free shopping at Animate + Pokémon Centers", "Charge everything (big merch + food photo day)", "No early alarm: ~9:45 AM, leave at 10:15 — stay out as late as you want tonight 🎂"], rain: "DisneySea stays great in rain: Journey to the Center of the Earth, Sindbad, Tower of Terror, Toy Story Mania and most of Fantasy Springs are indoors. Ponchos are sold in every shop; outdoor shows may be cut, so check the app.", home: {"after": "20:30", "note": "Trains from Maihama run until around midnight, but the long Keiyo-line walk at Tokyo Station adds 15 min. A taxi from Maihama to Shinjuku is expensive (likely ¥10,000+), so aim for a train before ~23:00."}, park: "tds", dow: "Tue", title: "Your 25th birthday at DisneySea", city: "Tokyo DisneySea",
     theme: "disney", emoji: "🎂", deco: ["🎂", "✨", "🏰", "🎈", "🌊", "⭐"],
     kicker: "Day 2 · Happy 25th, Ian!",
     tagline: "The whole harbor is celebrating you today. Ears on, sticker on, main character energy on.",
@@ -232,7 +232,7 @@ const DAYS = [
         how: [
           "A 2-minute walk from Eagle. Open 24/7.",
           "Prices go up after about 9 PM (roughly ¥2,500–3,900). Bring cash.",
-          "teamLab isn't until 11 AM tomorrow, so stay as long as you like.",
+          "Tomorrow starts at noon, so stay as long as you like.",
         ],
         spicy: "Birthday steam session. “今日誕生日なんです” (it's my birthday today) works here too 🎉",
       },
@@ -241,56 +241,52 @@ const DAYS = [
 
   /* ---------------- DAY 3 ---------------- */
   {
-    id: "d3", date: "2026-10-28", prep: ["Costume + ears again for Disneyland", "Link your Disneyland ticket in the Disney app; decide on Premier Access for Beauty and the Beast", "Charge phone, power bank and camera batteries; poncho in the bag", "Alarm ~6:15 AM — leave at 7:00"], rain: "Almost everything today is indoors: teamLab, the food hall, Sunshine City and Shibuya PARCO. Grab a ¥500 umbrella at any konbini for the walks between.", home: {"after": "21:30", "note": "Omoide Yokocho to your hotel is ~15 min on foot or 2 stops on the Marunouchi Line (M08 → M10). Disneyland tomorrow means a 6:15 AM alarm."}, dow: "Wed", title: "teamLab + Pokémon day", city: "Tokyo",
-    theme: "teamlab", emoji: "🌈", deco: ["🌈", "🪞", "⚡", "🌊", "✨", "💧"],
-    kicker: "Day 3 · Light, water + Pokémon",
-    tagline: "Wade through glowing water rooms, eat your way through an Edo-style food hall, then hit both of Tokyo's biggest Pokémon Centers.",
+    id: "d3", date: "2026-10-28", prep: ["Costume + ears again for Disneyland", "Link your Disneyland ticket in the Disney app; decide on Premier Access for Beauty and the Beast", "Charge phone, power bank and camera batteries; poncho in the bag", "Alarm ~6:15 AM — leave at 7:00"], rain: "Almost everything today is indoors: Animate, Sunshine City, Shibuya PARCO and Tower Records. Grab a ¥500 umbrella at any konbini for the walks between.", home: {"after": "21:30", "note": "Omoide Yokocho to your hotel is ~15 min on foot or 2 stops on the Marunouchi Line (M08 → M10). Disneyland tomorrow means a 6:15 AM alarm."}, dow: "Wed", title: "Pokémon, anime + ramen day", city: "Tokyo",
+    theme: "poke", emoji: "⚡", deco: ["⚡", "🎌", "🍜", "🍣", "🦑", "🌸"],
+    kicker: "Day 3 · Sleep in, then fandom",
+    tagline: "Ramen in Ikebukuro, the world's biggest anime store, two Pokémon Centers, Splatoon + Ariana + AOT in Shibuya, conveyor sushi and yakitori.",
     sleep: "shinjuku", wx: { lat: 35.645, lon: 139.79 },
     phrases: ["yoyaku", "photoplease", "kirei", "hitotsu"],
     steps: [
       {
-        t: "10:30", title: "Shinjuku → teamLab Planets", ask: [{"jp": "チームラボプラネッツはどっちですか？", "ro": "Chīmu Rabo Puranettsu wa dotchi desu ka?", "en": "Which way to teamLab Planets?", "hear": "dir"}, {"jp": "靴と荷物はどこに置きますか？", "ro": "Kutsu to nimotsu wa doko ni okimasu ka?", "en": "Where do I leave my shoes and bags?", "hear": "dir"}], ll: [35.6492, 139.7898], say: ["yoyaku", "norikae"], pic: "teamLab Planets men outfit photo", rx: "reala", place: "teamLab Planets TOKYO, Toyosu",
-        ride: [{"ln": "M", "from": "M10", "to": "M16", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 14, "exit": "Walk underground to Ginza-itchōme (Yurakucho Line, ~5 min)"}, {"ln": "Y", "from": "Y19", "to": "Y22", "dir": "新木場方面 (toward Shin-kiba)", "type": "Every train.", "wrong": "Next stop 有楽町 Yūrakuchō (Y18) = wrong way.", "min": 6, "exit": "Follow ゆりかもめ Yurikamome signs"}, {"ln": "U", "from": "U16", "to": "U15", "dir": "新橋方面 (toward Shimbashi) — Toyosu is the end, so any train", "type": "Driverless — front car = best view.", "wrong": "", "min": 2, "exit": "teamLab Planets is a 1-min walk"}],
+        t: "12:00", title: "Ramen brunch in Ikebukuro 🍜", ask: [{"jp": "全部のせでお願いします。", "ro": "Zenbu nose de onegai shimasu.", "en": "With all the toppings, please.", "hear": "yesno"}], ll: [35.7299, 139.7125], say: ["hitori", "oishii", "gochisousama"], pic: "ramen bowl close up chopsticks", rx: "classic", place: "Mutekiya, Ikebukuro",
+        ride: [{"ln": "F", "from": "F13", "to": "F09", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Any train — all stop at Ikebukuro.", "wrong": "Next stop 北参道 Kita-sandō (F14) = wrong way.", "min": 10, "exit": "East Exit (東口)"}],
         how: [
-          "Marunouchi line from Shinjuku-gyoemmae to Ginza, walk to Ginza-itchōme and take the Yūrakuchō line to Toyosu (or just follow Google Maps).",
-          "Switch to the Yurikamome line 1 stop to Shin-Toyosu; teamLab is a 1-min walk.",
-          "Book a time slot online first if you haven't.",
+          "Sleep in first. Then Fukutoshin Line from Shinjuku-sanchōme straight to Ikebukuro (~10 min).",
+          "Ikebukuro is a ramen battleground. Mutekiya (無敵家), a few minutes from the East Exit, is the famous one: rich tonkotsu, open late, with a line that moves fast.",
+          "Buy a ticket at the machine or order at the counter, then say “zenbu nose” for everything on top.",
         ],
-        tip: "You'll wade through knee-deep water: wear shorts or pants that roll up. White or light colors catch the projections best.",
-        photo: "The mirror-floor rooms are the best mirror selfies of the whole trip. Stand still in the infinite light-crystal room and shoot wide.",
+        snack: "Ramen must-try: tonkotsu (pork bone). Later this trip you'll also get shoyu, miso and tsukemen.",
+        photo: "Overhead shot of the bowl the second it lands, before you touch it.",
       },
       {
-        t: "13:00", title: "Lunch at Senkyaku Banrai 🍣", ask: [{"jp": "おすすめは何ですか？", "ro": "Osusume wa nan desu ka?", "en": "What do you recommend?", "hear": "write"}], ll: [35.6455, 139.7841], say: ["hitori", "osusume", "oishii"], place: "Toyosu Senkyaku Banrai, 6-5-1 Toyosu, Tokyo",
-        ride: [{"ln": "U", "from": "U15", "to": "U14", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train. Or walk ~10 min.", "wrong": "Next stop 豊洲 Toyosu (U16) = wrong way.", "min": 2, "exit": "Senkyaku Banrai is right by Shijō-mae Station"}],
+        t: "13:15", title: "Animate Ikebukuro: the anime mothership 🎌", ask: [{"jp": "ヒロアカのグッズは何階ですか？", "ro": "Hiroaka no guzzu wa nankai desu ka?", "en": "Which floor has My Hero Academia goods?", "hear": "kai"}], ll: [35.7311, 139.7171], say: ["kore", "menzei"], place: "Animate Ikebukuro",
         how: [
-          "One stop from teamLab: an Edo-period-style food hall next to Toyosu fish market.",
-          "Kaisendon (seafood rice bowls), sushi counters and grilled street-food stalls. Many stalls take cards; small ones want cash.",
-          "If your stomach's still delicate from last night: a warm bowl of miso soup or udon is easy to find here too.",
+          "Walk ~5 min down Sunshine 60 Street. It's the world's biggest anime store, floor after floor of goods.",
+          "Hunt MHA, Tokyo Ghoul and Attack on Titan goods: acrylic stands, can badges, clear files. Ask staff for a series with 「〇〇のグッズは何階ですか？」 (Which floor has ___ goods?).",
+          "Bring your passport: tax-free at the register until Oct 31.",
         ],
-        snack: "Tamagoyaki (sweet rolled omelet) on a stick and grilled scallops from the street stalls.",
-        photo: "The Edo-style street with lanterns and wooden shopfronts. Classic Chrome makes it look like an old film still.",
+        snack: "Taiyaki (fish-shaped waffle with sweet red bean) from a street stand on Sunshine 60 Street.",
       },
       {
-        t: "14:15", title: "Pokémon Center Mega Tokyo ⚡", ask: [{"jp": "サンシャインシティはどっちですか？", "ro": "Sanshain Shiti wa dotchi desu ka?", "en": "Which way to Sunshine City?", "hear": "dir"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.729, 139.7193], say: ["menzei", "fukuro", "card"], pic: "Pokemon Center Mega Tokyo photo", rx: "reala", place: "Pokemon Center Mega Tokyo, Sunshine City",
-        ride: [{"ln": "U", "from": "U14", "to": "U16", "dir": "豊洲方面 (toward Toyosu)", "type": "Every train. Or walk ~15 min.", "wrong": "Next stop 有明テニスの森 (U13) = wrong way.", "min": 4, "exit": "Follow 有楽町線 Yūrakuchō Line (gold) signs"}, {"ln": "Y", "from": "Y22", "to": "Y09", "dir": "池袋・和光市方面 (toward Ikebukuro / Wakōshi)", "type": "Every train. Direct, no transfer.", "wrong": "Next stop 辰巳 Tatsumi = wrong way.", "min": 30, "exit": "Exit 35 / East Exit (東口) → Sunshine 60 Street"}],
+        t: "14:30", title: "Pokémon Center Mega Tokyo ⚡", ask: [{"jp": "サンシャインシティはどっちですか？", "ro": "Sanshain Shiti wa dotchi desu ka?", "en": "Which way to Sunshine City?", "hear": "dir"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.729, 139.7193], say: ["menzei", "fukuro", "card"], pic: "Pokemon Center Mega Tokyo photo", rx: "reala", place: "Pokemon Center Mega Tokyo, Sunshine City",
         how: [
-          "Yurikamome 2 stops to Toyosu, then the Yūrakuchō Line straight to Ikebukuro (~35 min total).",
-          "Take the East Exit and walk ~10 min down Sunshine 60 Street to Sunshine City.",
-          "Pokémon Center Mega Tokyo + Pikachu Sweets are on Alpa 2F. Check the official site in case timed entry is required.",
+          "From Animate, walk ~5 min to Sunshine City.",
+                    "Pokémon Center Mega Tokyo + Pikachu Sweets are on Alpa 2F. Check the official site in case timed entry is required.",
         ],
         tip: "Tax-free at the register until Oct 31: bring your passport and do the big haul (¥5,000+ per store).",
         snack: "Pikachu Sweets by Pokémon Café — walk-up takeout treats, no reservation.",
         photo: "With the big statues at the entrance, plush in hand.",
       },
       {
-        t: "16:15", title: "Shibuya: Mewtwo + Pokémon Center + Nintendo Tokyo", quest: "🌸 Tower Records Shibuya (5 min walk) has Ariana's “Tower Love!” petal posters + a fan lottery. Buy the Japanese edition CD.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
+        t: "16:15", title: "Shibuya: Mewtwo + Pokémon Center + Nintendo Tokyo", quest: "🌸 Tower Records Shibuya (5 min walk): Ariana's “Tower Love!” petal posters + fan lottery (buy the Japanese edition CD), PLUS the Attack on Titan DJ-theme POP UP SHOP (until Nov 29).", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.6622, 139.6988], say: ["photoplease", "menzei"], pic: "Shibuya crossing walking photo men", rx: "classic", place: "Shibuya PARCO",
         ride: [{"ln": "F", "from": "F09", "to": "F16", "dir": "渋谷・横浜・元町・中華街方面 (toward Shibuya)", "type": "Any train — all stop at Shibuya.", "wrong": "Next stop 要町 Kanamechō = wrong way.", "min": 15, "exit": "Follow signs to Shibuya PARCO (~7 min walk)"}],
         how: [
           "Fukutoshin line from Ikebukuro straight to Shibuya (~15 min).",
-          "Walk ~7 min to Shibuya PARCO; Pokémon Center Shibuya and Nintendo TOKYO are both on 6F.",
+          "Walk ~7 min to Shibuya PARCO; Pokémon Center Shibuya and Nintendo TOKYO are both on 6F. Nintendo TOKYO is your Splatoon spot: store-exclusive Splatoon merch (Splatoween runs in-game Oct 31 – Nov 2).",
           "Then Scramble Crossing at dusk (sunset ~4:50) — the neon comes on just as you finish shopping.",
         ],
-        snack: "Snack stop at Shibuya Yokochō under Miyashita Park — a lively food alley with dishes from all over Japan.",
+        snack: "Early dinner: conveyor-belt sushi at Uobei (魚べい) in Dōgenzaka — order on the touch screen and plates zoom to you on a bullet-train track. ¥100-ish plates, a must-try.",
         photo: "Copy Mewtwo's pose next to its tank. At the Scramble, have someone shoot you walking toward the camera mid-crossing (Live Photo → Long Exposure blurs the crowd). Keep walking — guards stop people posing in the road this week.",
         tip: "Halloween week: Shibuya bans street drinking in the evenings and the crowds build fast. Shop, shoot, then head out by ~6.",
       },
@@ -1425,7 +1421,7 @@ const RECIPES = [
     id: "reala", slot: "C4", name: "Reala Glow", emoji: "📸", sim: "Reala Ace",
     vibe: "True-to-life color and the most flattering skin. Your people, food and fit-check recipe.",
     settings: [["Film Simulation", "Reala Ace"], ["Grain", "Weak, Small"], ["Color Chrome Effect", "Weak"], ["Color Chrome FX Blue", "Off"], ["White Balance", "Auto, R +1, B −1"], ["Dynamic Range", "DR-Auto"], ["Highlight / Shadow", "0 / −1"], ["Color", "0"], ["Sharpness", "−1"], ["High ISO NR", "−4"], ["Clarity", "0"], ["ISO", "Auto, up to 6400"], ["Exposure comp", "+1/3"]],
-    use: ["Birthday portrait at Mediterranean Harbor", "Pokémon Café plates", "Mirror fit checks", "teamLab", "Okonomiyaki on the griddle"],
+    use: ["Birthday portrait at Mediterranean Harbor", "Pokémon Café plates", "Mirror fit checks", "Akihabara neon", "Okonomiyaki on the griddle"],
   },
   {
     id: "velvia", slot: "C5", name: "Vermilion + Fuji", emoji: "🗻", sim: "Velvia",
@@ -1678,7 +1674,7 @@ const PHOTO_IDEAS = [
   { cat: "Fit checks + portraits", items: [
     ["🪞", "Omokado mirror entrance", "Full-body in the kaleidoscope mirrors.", "d5"],
     ["🛗", "Elevator mirror fit check", "Every night before going out — the photo-dump opener.", ""],
-    ["🌀", "teamLab mirror rooms", "Infinite reflections — white or light outfit.", "d3"],
+    ["⚡", "Pokémon Center Mega Tokyo statues", "Life-size Pokémon at the entrance — plush in hand, crouch low.", "d3"],
     ["🚶", "Candid walk past the camera", "Have them crouch, burst mode, you looking away. Pontochō, the Scramble, Gion.", ""],
     ["👘", "Kimono rental portrait", "Asakusa or Ninenzaka — temple backdrop.", "d5"],
     ["🎃", "Costume shot at the Haunted Mansion", "Centered, slightly low, moody.", "d4"],
@@ -1822,7 +1818,6 @@ const FAN_QUESTS = [
 const TICKET_SEEDS = [
   { title: "Visit Japan Web QR (immigration + customs)", date: "2026-10-26", when: "Mon Oct 26 · Haneda arrival" },
   { title: "Tokyo DisneySea", date: "2026-10-27", when: "Tue Oct 27 · birthday!" },
-  { title: "teamLab Planets", date: "2026-10-28", when: "Wed Oct 28 · morning slot" },
   { title: "Tokyo Disneyland", date: "2026-10-29", when: "Thu Oct 29" },
   { title: "Shibuya Sky", date: "2026-10-30", when: "Fri Oct 30 · sunset slot" },
   { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },

@@ -1501,6 +1501,11 @@
     try { localStorage.removeItem("ij:variant:d3"); } catch {}
     store.set("mig:nopokepark", true);
   }
+  if (!store.get("mig:noteamlab", false)) {
+    const tk = store.get("tickets", null);
+    if (tk) store.set("tickets", tk.filter(t => !/teamLab/i.test(t.title) || t.code || t.photo));
+    store.set("mig:noteamlab", true);
+  }
   applySafe();
   const setTopH = () => document.documentElement.style.setProperty("--top-h", ($(".top")?.offsetHeight || 130) + "px");
   tickClock(); setInterval(tickClock, 30e3);
