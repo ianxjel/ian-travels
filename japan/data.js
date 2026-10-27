@@ -241,7 +241,7 @@ const DAYS = [
 
   /* ---------------- DAY 3 ---------------- */
   {
-    id: "d3", date: "2026-10-28", prep: ["Costume + ears again for Disneyland", "Link your Disneyland ticket in the Disney app; decide on Premier Access for Beauty and the Beast", "Charge phone, power bank and camera batteries; poncho in the bag", "Alarm ~6:15 AM — leave at 7:00"], rain: "teamLab Planets is fully indoors. If it pours later, skip the seaside boardwalk and stay inside DiverCity Tokyo Plaza (food court + shops) — the Gundam still poses outside, rain or shine.", home: {"after": "20:00", "note": "You're back in Shinjuku early tonight — Ni-chome is around the corner from your hotel. Disneyland tomorrow means a 6:15 AM alarm."}, dow: "Wed", title: "teamLab + Odaiba", city: "Tokyo",
+    id: "d3", date: "2026-10-28", prep: ["Costume + ears again for Disneyland", "Link your Disneyland ticket in the Disney app; decide on Premier Access for Beauty and the Beast", "Charge phone, power bank and camera batteries; poncho in the bag", "Alarm ~6:15 AM — leave at 7:00"], rain: "teamLab Planets is fully indoors. If it pours later, skip the seaside boardwalk and stay inside DiverCity Tokyo Plaza (food court + shops) — the Gundam still poses outside, rain or shine.", home: {"after": "22:30", "note": "Kabukichō to your hotel is ~20 min on foot or a ¥1,000 taxi. Disneyland tomorrow means a 6:15 AM alarm."}, dow: "Wed", title: "teamLab + Odaiba", city: "Tokyo",
     theme: "teamlab", emoji: "🌈", deco: ["🌈", "🪞", "🤖", "🌊", "✨", "💧"],
     kicker: "Day 3 · Light, water + giant robots",
     tagline: "Wade through glowing water rooms, meet a life-size Gundam, then watch the sun set over Rainbow Bridge.",
@@ -260,13 +260,25 @@ const DAYS = [
         photo: "The mirror-floor rooms are the best mirror selfies of the whole trip. Stand still in the infinite light-crystal room and shoot wide.",
       },
       {
-        t: "13:30", title: "Odaiba: Unicorn Gundam", ask: [{"jp": "ガンダムの変身は何時ですか？", "ro": "Gandamu no henshin wa nanji desu ka?", "en": "What time does the Gundam transform?", "hear": "time"}], ll: [35.6251, 139.7756], say: ["photoplease", "hitotsu"], pic: "Unicorn Gundam Odaiba photo low angle", rx: "classic", place: "DiverCity Tokyo Plaza, Odaiba",
-        ride: [{"ln": "U", "from": "U15", "to": "U07", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train. Sit up front!", "wrong": "Next stop 豊洲 Toyosu (U16) = wrong way.", "min": 20, "exit": "DiverCity Tokyo Plaza is a 5-min walk"}],
+        t: "13:00", title: "Lunch at Senkyaku Banrai 🍣", ask: [{"jp": "おすすめは何ですか？", "ro": "Osusume wa nan desu ka?", "en": "What do you recommend?", "hear": "write"}], ll: [35.6455, 139.7841], say: ["hitori", "osusume", "oishii"], place: "Toyosu Senkyaku Banrai, 6-5-1 Toyosu, Tokyo",
+        ride: [{"ln": "U", "from": "U15", "to": "U14", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train. Or walk ~10 min.", "wrong": "Next stop 豊洲 Toyosu (U16) = wrong way.", "min": 2, "exit": "Senkyaku Banrai is right by Shijō-mae Station"}],
         how: [
-          "Yurikamome line from Shin-Toyosu to Daiba (~20 min). Sit in the front car — it's driverless, so you get the windshield view.",
-          "The life-size Unicorn Gundam stands outside DiverCity Tokyo Plaza; it transforms at set times.",
+          "One stop from teamLab: an Edo-period-style food hall next to Toyosu fish market.",
+          "Kaisendon (seafood rice bowls), sushi counters and grilled street-food stalls. Many stalls take cards; small ones want cash.",
+          "If your stomach's still delicate from last night: a warm bowl of miso soup or udon is easy to find here too.",
         ],
-        snack: "Lunch at the DiverCity food court (ramen, okonomiyaki, everything).",
+        snack: "Tamagoyaki (sweet rolled omelet) on a stick and grilled scallops from the street stalls.",
+        photo: "The Edo-style street with lanterns and wooden shopfronts. Classic Chrome makes it look like an old film still.",
+      },
+      {
+        t: "14:15", title: "Odaiba: Unicorn Gundam", quest: "🎢 Tokyo Joypolis (Decks Tokyo Beach, ~5 min walk): Sega's indoor thrill park with VR rides and an indoor coaster, if you want a ride fix before sunset.", ask: [{"jp": "ガンダムの変身は何時ですか？", "ro": "Gandamu no henshin wa nanji desu ka?", "en": "What time does the Gundam transform?", "hear": "time"}], ll: [35.6251, 139.7756], say: ["photoplease", "hitotsu"], pic: "Unicorn Gundam Odaiba photo low angle", rx: "classic", place: "DiverCity Tokyo Plaza, Odaiba",
+        ride: [{"ln": "U", "from": "U14", "to": "U07", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train. Sit up front!", "wrong": "Next stop 新豊洲 Shin-toyosu (U15) = wrong way.", "min": 20, "exit": "DiverCity Tokyo Plaza is a 5-min walk"}],
+        how: [
+          "Yurikamome line from Shijō-mae to Daiba (~18 min). Sit in the front car — it's driverless, so you get the windshield view.",
+          "The life-size Unicorn Gundam stands outside DiverCity Tokyo Plaza; it transforms at set times.",
+          "Inside DiverCity: The Gundam Base, the huge official Gundam model store.",
+        ],
+        snack: "Afternoon snack at the DiverCity food court if you're hungry again.",
         photo: "Shoot the Gundam from low with a 0.5x wide angle so it towers over you.",
       },
       {
@@ -279,18 +291,27 @@ const DAYS = [
         tip: "Prefer the coast? Swap the whole day for Kamakura + Enoshima on the Odakyu line from Shinjuku: the Great Buddha, the seaside Enoden train and the famous Kamakurakōkōmae crossing.",
       },
       {
-        t: "17:30", title: "Back to Shinjuku", quest: "⚔️ Attack on Titan “Guren no Yumiya” is screening in SCREEN X / 4DX (TOHO Cinemas Ikebukuro and others) — the first-week Eren art-board gift ends tomorrow, Oct 29.", ll: [35.6896, 139.7006], say: ["hitori", "oshiete"], place: "Shinjuku Station",
-        ride: [{"ln": "U", "from": "U07", "to": "U01", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train.", "wrong": "Next stop 東京国際クルーズターミナル (U08) = wrong way.", "min": 15, "exit": "Follow 銀座線 Ginza Line (orange) signs"}, {"ln": "G", "from": "G08", "to": "G05", "dir": "渋谷方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 銀座 Ginza (G09) = wrong way.", "min": 6, "exit": "Cross the platform at Akasaka-mitsuke to the red Marunouchi Line"}, {"ln": "M", "from": "M13", "to": "M08", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train. Stay on past your hotel stop to Shinjuku.", "wrong": "Next stop 国会議事堂前 (M14) = wrong way.", "min": 10, "exit": "西口 West Exit — Omoide Yokocho is along the tracks just north"}],
+        t: "17:15", title: "Back to Shinjuku", ll: [35.6896, 139.7006], say: ["hitori", "oshiete"], place: "Shinjuku Station",
+        ride: [{"ln": "U", "from": "U07", "to": "U01", "dir": "新橋方面 (toward Shimbashi)", "type": "Every train.", "wrong": "Next stop 東京国際クルーズターミナル (U08) = wrong way.", "min": 15, "exit": "Follow 銀座線 Ginza Line (orange) signs"}, {"ln": "G", "from": "G08", "to": "G05", "dir": "渋谷方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 銀座 Ginza (G09) = wrong way.", "min": 6, "exit": "Cross the platform at Akasaka-mitsuke to the red Marunouchi Line"}, {"ln": "M", "from": "M13", "to": "M09", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train. One stop past your hotel.", "wrong": "Next stop 国会議事堂前 (M14) = wrong way.", "min": 8, "exit": "Exits C5–C8 come up right at Ni-chome"}],
         how: [
-          "Yurikamome from Daiba to Shimbashi, then the Ginza line to Akasaka-mitsuke and the Marunouchi line all the way to Shinjuku (~50 min) — or just follow Google Maps.",
-          "Easy night: Disneyland tomorrow starts early.",
+          "Yurikamome from Daiba to Shimbashi, then the Ginza line to Akasaka-mitsuke and the Marunouchi line to Shinjuku-sanchōme (~50 min) — or just follow Google Maps.",
+          "Tonight: Okamalt → yakitori → Attack on Titan in ScreenX → bed by midnight (Disneyland alarm 6:15).",
         ],
-        snack: "Not feeling yakitori? Fūunji's tsukemen (dipping ramen) near Shinjuku South Exit: buy a ticket at the machine by the door, hand it over, wait for your seat.",
+        snack: "Hungry before Okamalt? Fūunji's tsukemen (dipping ramen) near Shinjuku South Exit: buy a ticket at the machine by the door, hand it over, wait for your seat.",
       },
       {
-        t: "18:00", title: "Yakitori in Omoide Yokocho", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
+        t: "18:00", title: "Okamalt — Ni-chome's LGBTQ book café", night: true, ask: [{"jp": "オカマルトはどこですか？", "ro": "Okamaruto wa doko desu ka?", "en": "Where's Okamalt?", "hear": "dir"}], ll: [35.691, 139.707], say: ["gaymanga", "cover"], place: "Okamalt, 2-18-10 Shinjuku, Tokyo",
         how: [
-          "You're already at Shinjuku from the ride back.",
+          "From Shinjuku-sanchōme (Exits C5–C8), walk ~3 min to 2-18-10 Shinjuku (Shin-Chidorigai building, 2F). It closes around 8 PM.",
+          "Around ¥1,500 for 90 minutes, with a drink and snacks.",
+          "Open about 1–8 PM, closed Thursday to Saturday — so tonight is your Tokyo window. Listing info is older; confirm hours first.",
+        ],
+        spicy: "Shelves of vintage Barazoku (the magazine the word “bara” comes from), Tom of Finland art and gay culture books, run by a Ni-chome writer and drag legend.",
+      },
+      {
+        t: "19:15", title: "Yakitori in Omoide Yokocho", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
+        how: [
+          "From Okamalt, walk ~15 min west along Shinjuku-dōri, or take the Marunouchi Line one stop, M09 → M08 (toward 荻窪 Ogikubo).",
           "Follow signs for the West Exit (西口); the alley is just north of the exit, along the tracks.",
           "Pick a stall with an empty stool and say “Hitori desu” (just one).",
         ],
@@ -298,19 +319,20 @@ const DAYS = [
         photo: "Walk toward the camera mid-alley glancing up at the lanterns, vertical, Night mode. Ask before shooting inside a stall.",
       },
       {
-        t: "19:15", title: "Okamalt — Ni-chome's LGBTQ book café", night: true, ask: [{"jp": "オカマルトはどこですか？", "ro": "Okamaruto wa doko desu ka?", "en": "Where's Okamalt?", "hear": "dir"}], ll: [35.691, 139.707], say: ["gaymanga", "cover"], place: "Okamalt, 2-18-10 Shinjuku, Tokyo",
+        t: "20:30", title: "⚔️ Attack on Titan in ScreenX", quest: "⚔️ Last chance for the first-week gift: a free Eren mini shikishi (art board by Kyōji Asano) with every ticket, through Oct 29 while supplies last.", ask: [{"jp": "入場者特典はまだありますか？", "ro": "Nyūjōsha tokuten wa mada arimasu ka?", "en": "Do you still have the first-week bonus gift?", "hear": "yesno"}], ll: [35.6958, 139.7004], say: ["arigatou"], place: "109 Cinemas Premium Shinjuku, Tokyu Kabukicho Tower",
         how: [
-          "From Omoide Yokocho, walk ~15 min east along Shinjuku-dori to 2-18-10 Shinjuku (Shin-Chidorigai building, 2F). Go by 19:15: it closes around 8 PM.",
-          "Around ¥1,500 for 90 minutes, with a drink and snacks.",
-          "Open about 1–8 PM, closed Thursday to Saturday — so tonight is your Tokyo window. Listing info is older; confirm hours first.",
+          "劇場版「進撃の巨人」前編〜紅蓮の弓矢〜 (Guren no Yumiya) — the recap movie of the anime, shown only in ScreenX / 4DX / ULTRA 4DX.",
+          "Closest: 109 Cinemas Premium Shinjuku in Tokyu Kabukichō Tower, 5 min from Omoide Yokocho (ScreenX). It's a premium cinema, so seats are about ¥4,500 + ¥700 ScreenX.",
+          "Want the full motion-seat ULTRA 4DX? Grand Cinema Sunshine Ikebukuro: Fukutoshin Line F13 → F09 (~10 min).",
+          "Book on the cinema's website and check the showtime and runtime. It's in Japanese with no English subtitles, but you know the story.",
         ],
-        spicy: "Shelves of vintage Barazoku (the magazine the word “bara” comes from), Tom of Finland art and gay culture books, run by a Ni-chome writer and drag legend. Still up for more? The Tokyo Gaysian Club Crawl (Airbnb) runs 9–11:30 PM tonight from the Ni-chome 7-Eleven — only if you can handle the 6:15 AM Disney alarm 😅",
+        photo: "Tokyu Kabukichō Tower's neon facade from the Godzilla Road side.",
       },
       {
-        t: "20:30", title: "Early session at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "kondomu2"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        t: "23:00", title: "Optional: quick soak at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "kondomu2"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
         how: [
-          "Okamalt → 24 Kaikan is a 3-minute walk through Ni-chome.",
-          "Out by 22:30: the Disneyland alarm is 6:15 AM tomorrow.",
+          "Kabukichō → 24 Kaikan is about 15 min on foot.",
+          "Only if you're not wiped: the Disneyland alarm is 6:15 AM. Tomorrow night is the long Ueno sauna night anyway.",
         ],
         spicy: "Weeknight evenings are calmer: good for the sauna and the rooftop deck before it gets busy.",
       },
@@ -1713,7 +1735,7 @@ const FAN_QUESTS = [
       what: "Fits the Omotesando stop on Friday afternoon.", place: "Cue Plaza Harajuku", link: "https://animeanime.jp/article/2026/10/03/103463.html" },
   ]},
   { fandom: "Attack on Titan", emoji: "⚔️", items: [
-    { t: "Guren no Yumiya — SCREEN X / 4DX screening", where: "TOHO Cinemas Ikebukuro and other premium screens", when: "From Oct 23, 2026 · first-week gift Oct 23–29", day: "d3",
+    { t: "Guren no Yumiya — SCREEN X / 4DX screening", where: "109 Cinemas Premium Shinjuku (ScreenX) · Grand Cinema Sunshine Ikebukuro (ULTRA 4DX) · TOHO Cinemas Ikebukuro", when: "From Oct 23, 2026 · first-week gift Oct 23–29", day: "d3",
       what: "Recap film of the anime shown only in SCREEN X, 4DX and ULTRA 4DX. First week: a free Eren mini shikishi (art board) while supplies last. Japanese audio — check if subtitled.",
       place: "TOHO Cinemas Ikebukuro", link: "https://collabo-cafe.com/events/collabo/attack-on-titan-event-guren-screenx-nyujosha-tokuten-week1-2026/" },
     { t: "Attack on Titan × Nijigen no Mori", where: "Awaji Island, Hyogo (a day trip from Osaka)", when: "Through Dec 13, 2026", day: "d9",
