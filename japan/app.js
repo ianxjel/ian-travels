@@ -1189,7 +1189,68 @@
     clearInterval(waitsTimer);
     waitsTimer = setInterval(() => { if (location.hash.startsWith("#waits")) load(); else clearInterval(waitsTimer); }, 120e3);
   }
+  // per-day, per-park: rides you've done + your Premier Access (DPA) bookings
+  const rodeKey = k => `rode:${k}:${jstDateStr()}`, dpaKey = k => `dpa:${k}:${jstDateStr()}`;
+  const getRode = k => store.get(rodeKey(k), {}) || {};
+  const getDpa = k => {
+    let d = store.get(dpaKey(k), null);
+    if (!d) { d = (k === "tds" && jstDateStr() === "2026-10-27") ? [{ name: "Journey to the Center of the Earth", start: "16:55", end: "17:55", used: false }] : []; store.set(dpaKey(k), d); }
+    return d;
+  };
+  const sameRide = (a, b) => { const n = x => x.toLowerCase().replace(/[^a-z0-9]/g, ""); return n(a).includes(n(b)) || n(b).includes(n(a)); };
+  let lastWaits = null;
+  function dpaHtml(key, rows) {
+    const list = getDpa(key), now = jstMinutes();
+    const rideNames = [...new Set(rows.filter(r => r.type === "ride").map(r => r.name))].sort();
+    return `<div class="dpa-box">
+      <h4>🎟️ Your Premier Access</h4>
+      ${list.length ? list.map((d, i) => {
+        const st = d.used ? "✓ used" : now < toMin(d.start) ? `in ${Math.floor((toMin(d.start) - now) / 60) ? Math.floor((toMin(d.start) - now) / 60) + "h " : ""}${(toMin(d.start) - now) % 60}m` : now <= toMin(d.end) ? "🔥 ride now!" : "window passed";
+        return `<div class="dpa-row ${d.used ? "used" : ""} ${!d.used && now >= toMin(d.start) && now <= toMin(d.end) ? "live" : ""}">
+          <span class="dpa-name"><b>${esc(d.name)}</b><small>${fmt12(d.start)}–${fmt12(d.end)} · ${st}</small></span>
+          <button class="btn sm" data-dpaused="${i}" type="button">${d.used ? "Undo" : "✓ Used"}</button>
+          <button class="btn sm ghost" data-dpadel="${i}" type="button" aria-label="Remove">✕</button>
+        </div>`; }).join("") : `<p class="muted">None yet.</p>`}
+      <details class="dpa-add"><summary>+ Add Premier Access</summary>
+        <label>Ride<select id="dpaRide">${rideNames.map(n => `<option>${esc(n)}</option>`).join("")}</select></label>
+        <div class="dpa-times"><label>From<input type="time" id="dpaStart" value="${fmt24(now + 60)}"></label><label>To<input type="time" id="dpaEnd" value="${fmt24(now + 120)}"></label></div>
+        <button class="btn primary" id="dpaSave" type="button">Save</button>
+      </details>
+    </div>`;
+  }
+  const fmt24 = m => { m = Math.max(0, Math.min(23 * 60 + 59, m)); return `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`; };
+  document.addEventListener("click", e => {
+    const t = e.target.closest("[data-rode],[data-dpaused],[data-dpadel],#dpaSave");
+    if (!t || !lastWaits) return;
+    const { key, rows, src } = lastWaits;
+    if (t.dataset.rode !== undefined) {
+      const r = getRode(key), n = t.dataset.rode; r[n] = (r[n] || 0) + 1; store.set(rodeKey(key), r);
+      toast(`✓ ${n} — ride #${r[n]} today`);
+    } else if (t.dataset.dpaused !== undefined) {
+      const d = getDpa(key), i = +t.dataset.dpaused; d[i].used = !d[i].used; store.set(dpaKey(key), d);
+      const r = getRode(key); if (d[i].used) r[d[i].name] = (r[d[i].name] || 0) + 1; else if (r[d[i].name]) { r[d[i].name]--; if (!r[d[i].name]) delete r[d[i].name]; }
+      store.set(rodeKey(key), r);
+    } else if (t.dataset.dpadel !== undefined) {
+      const d = getDpa(key); d.splice(+t.dataset.dpadel, 1); store.set(dpaKey(key), d);
+    } else if (t.id === "dpaSave") {
+      const name = $("#dpaRide").value, start = $("#dpaStart").value, end = $("#dpaEnd").value;
+      if (!name || !start || !end) return;
+      const d = getDpa(key); d.push({ name, start, end, used: false }); d.sort((a, b) => toMin(a.start) - toMin(b.start)); store.set(dpaKey(key), d);
+      toast("🎟️ Premier Access saved");
+    }
+    paintWaits(key, rows, src);
+  });
+  document.addEventListener("click", e => {
+    const t = e.target.closest("[data-unrode]"); if (!t || !lastWaits) return;
+    const { key, rows, src } = lastWaits; const r = getRode(key), n = t.dataset.unrode;
+    if (r[n]) { r[n]--; if (!r[n]) delete r[n]; } store.set(rodeKey(key), r); paintWaits(key, rows, src);
+  });
+
   function paintWaits(key, rows, src) {
+    lastWaits = { key, rows, src };
+    const rode = getRode(key), dpas = getDpa(key);
+    const done = r => Object.keys(rode).some(n => sameRide(n, r.name));
+    const booked = r => dpas.some(d => !d.used && sameRide(d.name, r.name));
     const P = PARKS[key]; const picksOnly = store.get("wPicks", false);
     const isPick = r => P.picks.test(r.name);
     const open = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && (!picksOnly || isPick(r))).sort((a, b) => a.wait - b.wait);
@@ -1197,22 +1258,28 @@
     const down = rows.filter(r => r.type === "ride" && r.status !== "OPERATING" && (!picksOnly || isPick(r)));
     // smart plan: best picks right now + time left
     const nowM = jstMinutes(), closeM = toMin(P.close), left = closeM - nowM;
-    const bestPicks = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && isPick(r)).sort((a, b) => a.wait - b.wait).slice(0, 3);
+    const bestPicks = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && isPick(r) && !done(r) && !booked(r)).sort((a, b) => a.wait - b.wait).slice(0, 3);
+    const rideCount = Object.values(rode).reduce((a, b) => a + b, 0);
     const paNow = rows.filter(r => r.pa && /AVAILABLE/i.test(r.pa.state)).slice(0, 3);
     const nextShows = shows.map(r => ({ r, t: r.shows.find(t => new Date(t) > new Date()) })).filter(x => x.t).sort((a, b) => new Date(a.t) - new Date(b.t)).slice(0, 2);
     const avg = bestPicks.length ? bestPicks.reduce((a, r) => a + r.wait, 0) / bestPicks.length : 30;
     $("#wPlan").innerHTML = `<div class="card wplan">
       <h3>🧭 Your next moves</h3>
+      ${dpaHtml(key, rows)}
       ${left > 0 ? `<p class="muted">Park closes at ${fmt12(P.close)} — about <b>${Math.floor(left / 60)}h ${left % 60}m</b> left, roughly <b>${Math.max(1, Math.floor(left / (avg + 15)))} more rides</b> at today's pace.</p>` : `<p class="muted">Park hours are over for today.</p>`}
-      ${bestPicks.length ? `<ol class="wbest">${bestPicks.map(r => `<li><span class="wnum ${waitClass(r.wait)}">${r.wait}<small>min</small></span><span>${esc(r.name)}</span></li>`).join("")}</ol>` : `<p>No favorite rides are open right now — check the list below.</p>`}
+      ${rideCount ? `<p class="muted">✓ ${rideCount} ride${rideCount > 1 ? "s" : ""} done today — those (and your Premier Access rides) are skipped below.</p>` : ""}
+      ${bestPicks.length ? `<ol class="wbest">${bestPicks.map(r => `<li><span class="wnum ${waitClass(r.wait)}">${r.wait}<small>min</small></span><span>${esc(r.name)}</span></li>`).join("")}</ol>` : `<p>No new favorites are open right now — check the list below.</p>`}
       ${paNow.length ? `<p class="wpa">🎟️ Premier Access on sale: ${paNow.map(r => `<b>${esc(r.name)}</b>${r.pa.start ? ` (${hhmm(r.pa.start)}${r.pa.end ? "–" + hhmm(r.pa.end) : ""})` : ""}`).join(", ")} — buy in the official app.</p>` : ""}
       ${nextShows.length ? `<p class="wpa">🎭 Next shows: ${nextShows.map(x => `<b>${esc(x.r.name)}</b> ${hhmm(x.t)}`).join(" · ")}</p>` : ""}
       ${key === "tds" ? `<p class="wpa">📸 Sunset ~4:50 PM → be at the Mediterranean Harbor railing by 4:30.</p>` : `<p class="wpa">📸 Sunset ~4:50 PM → Cinderella Castle from the hub for blue hour.</p>`}
     </div>`;
-    const row = r => `<div class="wrow ${isPick(r) ? "pick" : ""}">
+    const row = r => { const cnt = Object.entries(rode).filter(([n]) => sameRide(n, r.name)).reduce((a, [, c]) => a + c, 0);
+      return `<div class="wrow ${isPick(r) ? "pick" : ""} ${cnt ? "rode" : ""}">
         <span class="wnum ${waitClass(r.wait)}">${r.wait == null ? "—" : r.wait}<small>${r.wait == null ? "" : "min"}</small></span>
-        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}</span>
-      </div>`;
+        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${booked(r) ? `<em class="wbadge mine">Your DPA</em>` : r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}${cnt ? `<em class="wdone">✓ rode${cnt > 1 ? " ×" + cnt : ""}</em>` : ""}</span>
+        ${cnt ? `<button class="btn sm ghost" data-unrode="${esc(r.name)}" type="button" aria-label="Undo">↺</button>` : ""}
+        <button class="btn sm" data-rode="${esc(r.name)}" type="button">✓ Rode</button>
+      </div>`; };
     $("#wList").innerHTML = `
       ${open.length ? `<div class="card wlist"><h3>🟢 Open now · shortest first</h3>${open.map(row).join("")}</div>` : ""}
       ${shows.length ? `<div class="card wlist"><h3>🎭 Shows</h3>${shows.map(r => `<div class="wrow"><span class="wname">${esc(r.name)}</span><span class="wshows">${r.shows.filter(t => new Date(t) > new Date()).slice(0, 3).map(hhmm).join(" · ") || "done for today"}</span></div>`).join("")}</div>` : ""}

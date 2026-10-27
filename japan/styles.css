@@ -787,3 +787,21 @@ details.rainplan p { margin: 0; padding: 0 16px 14px; font-size: 14.5px; color: 
 .wbadge { display: inline-block; margin-left: 6px; font-style: normal; font-size: 11px; font-weight: 800; padding: 2px 7px; border-radius: 999px; background: var(--accent2); color: #fff; vertical-align: middle; }
 .wshows, .wstat { font-size: 13px; color: var(--muted); }
 details.wlist summary { cursor: pointer; font-weight: 700; }
+
+.btn.sm { padding: 5px 9px; font-size: 13px; min-height: 0; }
+.btn.ghost { background: transparent; }
+.wrow.rode .wname { opacity: .6; }
+.wdone { display: inline-block; margin-left: 6px; font-style: normal; font-size: 11px; font-weight: 800; padding: 2px 7px; border-radius: 999px; background: #2e9e5b; color: #fff; vertical-align: middle; }
+.wbadge.mine { background: #2fa9e0; }
+.dpa-box { margin: 4px 0 12px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+.dpa-box h4 { margin: 0 0 6px; font-size: 15px; }
+.dpa-row { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 10px; background: var(--card2); margin-bottom: 6px; }
+.dpa-row.live { outline: 2px solid var(--accent); }
+.dpa-row.used { opacity: .55; }
+.dpa-name { flex: 1; display: flex; flex-direction: column; }
+.dpa-name small { color: var(--muted); font-size: 12.5px; }
+.dpa-add summary { cursor: pointer; font-weight: 700; color: var(--accent); margin-top: 4px; }
+.dpa-add label { display: flex; flex-direction: column; font-size: 13px; gap: 4px; margin-top: 8px; }
+.dpa-add select, .dpa-add input { font: inherit; padding: 8px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+.dpa-times { display: flex; gap: 10px; } .dpa-times label { flex: 1; }
+.dpa-add .btn.primary { margin-top: 10px; width: 100%; }
