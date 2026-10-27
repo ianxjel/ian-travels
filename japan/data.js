@@ -185,7 +185,7 @@ const DAYS = [
         t: "09:30", title: "Fantasy Springs + the big rides", ask: [{"jp": "ファンタジースプリングスはどっちですか？", "ro": "Fantajī Supuringusu wa dotchi desu ka?", "en": "Which way is Fantasy Springs?", "hear": "dir"}], say: ["photoplease", "hitotsu", "oishii"], pic: "Tokyo DisneySea Halloween outfit men", rx: "pastel", place: "Fantasy Springs, Tokyo DisneySea",
         how: [
           "Fantasy Springs on standby: Rapunzel's Lantern Festival, Peter Pan's Never Land Adventure.",
-          "Then the classics: Journey to the Center of the Earth (Mysterious Island), Tower of Terror, Soaring: Fantastic Flight.",
+          "Then the classics: Journey to the Center of the Earth (Mysterious Island), Indiana Jones Adventure, Raging Spirits, Soaring: Fantastic Flight. (Tower of Terror is closed for refurbishment Sep 28 – Nov 5, 2026.)",
           "Check the app for the 25th-anniversary harbor show times.",
         ],
         snack: "Park snacks to hunt: the Gyoza Dog at Nautilus Galley (Mysterious Island), the float-ring shaped Ukiwaman shrimp bun at Seaside Snacks (Port Discovery), and a popcorn bucket — every cart has a different flavor, so check the app map.",
