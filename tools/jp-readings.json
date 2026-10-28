@@ -133,7 +133,9 @@
   "何着てる": "なに (what), not なん",
   "何探してる": "なに (what), not なん",
   "何歳": "なんさい",
-  "日本": "にほん (everyday); MeCab picks the formal にっぽん"
+  "日本": "にほん (everyday); MeCab picks the formal にっぽん",
+  "竹林の小径": "Proper name of Arashiyama's bamboo path; 小径 is read こみち here."
  },
- "日本人": "ニホンジン"
+ "日本人": "ニホンジン",
+ "竹林の小径": "チクリンノコミチ"
 }
