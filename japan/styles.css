@@ -836,3 +836,11 @@ details.wlist summary { cursor: pointer; font-weight: 700; }
 .rx-table.cam th { font-family: system-ui, sans-serif; font-size: 12.5px; letter-spacing: .03em; text-transform: uppercase; }
 .rx-table .rx-page th { background: var(--card2); color: var(--accent); font-size: 12px; text-align: left; padding: 6px 8px; border-radius: 6px; }
 .rx-table .rx-same th, .rx-table .rx-same td { color: var(--muted); font-size: 12px; }
+
+/* ⏩ ahead of schedule */
+.card.ahead { display: grid; gap: 8px; margin: 10px 0 14px; border: 1.5px dashed var(--accent); }
+.card.ahead b { font-family: var(--font-head); }
+.card.ahead small { font-size: 13px; line-height: 1.4; }
+.card.ahead .btn { justify-self: start; }
+.time .was { font: 500 11px/1.2 var(--font-body, inherit); color: var(--muted, #888); text-decoration: line-through; }
+.linkbtn { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }

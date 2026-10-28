@@ -241,7 +241,32 @@
 
   function visibleSteps(day) {
     const v = dayVariant(day);
-    return day.steps.map((s, i) => ({ ...s, key: `${day.id}-${i}` })).filter(s => (!s.only || s.only === v) && !(s.night && isSafe()));
+    const moved = store.get("moved:" + day.id, {}) || {};
+    return day.steps.map((s, i) => { const key = `${day.id}-${i}`; return moved[key] ? { ...s, key, t: moved[key], t0: s.t } : { ...s, key }; }).filter(s => (!s.only || s.only === v) && !(s.night && isSafe()));
+  }
+
+  /* ⏩ Done early → offer to pull the following stops sooner (stops at the next booked/fixed-time step) */
+  const hhmm2 = m => `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
+  function aheadInfo(day, steps) {
+    if (!isToday(day)) return null;
+    const done = store.get("done", {});
+    let last = -1; steps.forEach((s, i) => { if (done[s.key]) last = i; });
+    const nxt = steps[last + 1];
+    if (last < 0 || !nxt || nxt.fixed) return null;
+    const start = Math.ceil((jstMinutes() + 10) / 5) * 5;
+    const gap = toMin(nxt.t) - start;
+    if (gap < 20) return null;
+    let end = last + 1; while (end < steps.length && !steps[end].fixed) end++;
+    return { after: steps[last].key, gap, keys: steps.slice(last + 1, end).filter(s => !done[s.key]).map(s => s.key), next: nxt, stop: steps[end] || null };
+  }
+  const durTxt = m => m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? " " + (m % 60) + " min" : ""}` : `${m} min`;
+  function aheadHtml(day, a) {
+    return `<div class="card ahead">
+      <b>⏩ You're ahead of schedule</b>
+      <small>“${esc(a.next.title)}” is set for ${fmt12(a.next.t)} — about ${durTxt(a.gap)} away.</small>
+      <button class="btn primary" data-pull="${day.id}">Pull ${a.keys.length > 1 ? `the next ${a.keys.length} stops` : "it"} ${durTxt(a.gap)} sooner</button>
+      ${a.stop ? `<small class="muted">${esc(a.stop.title)} (${fmt12(a.stop.t)}) and everything after it stay put — it's a booked or fixed time.</small>` : ""}
+    </div>`;
   }
 
   function nextKey(day, steps) {
@@ -291,6 +316,8 @@
     const pinNo = {}; let pn = 0; steps.forEach(x => { if (x.ll) pinNo[x.key] = ++pn; });
     const done = store.get("done", {});
     const nk = nextKey(day, steps);
+    const ahead = aheadInfo(day, steps);
+    const anyMoved = steps.some(s => s.t0);
     const doneCount = steps.filter(s => done[s.key]).length;
     const h = day.sleep ? hotel(day.sleep) : null;
 
@@ -349,14 +376,14 @@
       </div>`;
     }
     html += `<div class="progress"><span>${doneCount}/${steps.length} done</span><div class="bar"><i style="width:${steps.length ? (doneCount / steps.length) * 100 : 0}%"></i></div></div>`;
-    html += `<div class="section-title"><h2>Step by step</h2><span class="sub">Japan time</span></div><div class="timeline">`;
+    html += `<div class="section-title"><h2>Step by step</h2><span class="sub">${anyMoved ? `<button class="linkbtn" data-unpull="${day.id}">↩️ Original times</button>` : "Japan time"}</span></div><div class="timeline">`;
 
     steps.forEach(s => {
       const isDone = !!done[s.key];
       const isNext = s.key === nk;
       html += `<article class="card step ${isDone ? "done" : ""} ${isNext ? "next" : ""}" id="s-${s.key}">
         ${isNext ? `<span class="badge-next">Up next</span>` : ""}
-        <div class="step-head"><div class="time">${fmt12(s.t)}${s.ll ? `<button class="pin-no" data-flyto="${s.key}" aria-label="Show on map">${pinNo[s.key]}</button>` : ""}</div><h3>${esc(s.title)}</h3></div>
+        <div class="step-head"><div class="time">${fmt12(s.t)}${s.t0 ? `<small class="was">was ${fmt12(s.t0)}</small>` : ""}${s.ll ? `<button class="pin-no" data-flyto="${s.key}" aria-label="Show on map">${pinNo[s.key]}</button>` : ""}</div><h3>${esc(s.title)}</h3></div>
         ${s.how && s.how.length ? `<ol class="how">${s.how.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}
         ${s.ride ? rideHtml(s.ride) : ""}
         ${s.tip ? `<div class="tip"><b>Heads-up:</b> ${esc(s.tip)}</div>` : ""}
@@ -375,6 +402,7 @@
       if (s.quest) mini.push(`<a class="mini quest" href="#media/quests"><span class="ico">🎮</span><div><b>Fan quest</b>${esc(s.quest)}</div></a>`);
       if (s.spicy && !isSafe()) mini.push(`<div class="mini spicy"><span class="ico">🔥</span><div><b>After dark</b>${esc(s.spicy)}</div></div>`);
       if (mini.length) html += `<div class="between">${mini.join("")}</div>`;
+      if (ahead && ahead.after === s.key) html += aheadHtml(day, ahead);
     });
     html += `</div>`;
 
@@ -1408,7 +1436,7 @@
   document.addEventListener("click", e => {
     const tile = e.target.closest("[data-tile]");
     if (tile) { $$(".tile").forEach(x => x.classList.toggle("picked", x === tile)); return; }
-    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-variant],[data-taxi],[data-clip],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
+    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-pull],[data-unpull],[data-variant],[data-taxi],[data-clip],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
     if (t.dataset.prep) {
@@ -1472,6 +1500,21 @@
       if (!done[t.dataset.done]) delete done[t.dataset.done];
       store.set("done", done);
       const y = window.scrollY; renderDay(currentDayId()); window.scrollTo(0, y);
+      return;
+    }
+    if (t.dataset.pull) {
+      const id = t.dataset.pull, day = dv(DAYS.find(d => d.id === id)), a = aheadInfo(day, visibleSteps(day));
+      if (a) {
+        const moved = store.get("moved:" + id, {}) || {};
+        visibleSteps(day).forEach(s => { if (a.keys.includes(s.key)) moved[s.key] = hhmm2(toMin(s.t) - a.gap); });
+        store.set("moved:" + id, moved);
+      }
+      const y = window.scrollY; renderDay(id); window.scrollTo(0, y);
+      return;
+    }
+    if (t.dataset.unpull) {
+      store.set("moved:" + t.dataset.unpull, {});
+      const y = window.scrollY; renderDay(t.dataset.unpull); window.scrollTo(0, y);
       return;
     }
     if (t.dataset.variant) {
