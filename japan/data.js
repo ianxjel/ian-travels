@@ -732,7 +732,7 @@ const DAYS = [
         how: [
           "Walk ~10 min north to Gion's Hanamikoji street (main street only — the private side alleys have a ¥10,000 photo fine).",
           "Plan A people: Nintendo KYOTO + Pokémon Center Kyoto are 10 min west at Shijō-Kawaramachi (check closing time).",
-          "Cross the Kamo River to Pontocho alley for dinner.",
+          "Cross the Kamo River to Pontocho alley for dinner. Only sit down where Google Maps shows 4.0+.",
         ],
         photo: "Pontocho: walk toward the camera between the lanterns, or a flash close-up. Then a sitting shot on the Kamo River bank.",
         snack: "Pontocho can be pricey — check the menu board out front. Yakitori or kushiage counters are the friendliest for solo diners.",
@@ -798,7 +798,7 @@ const DAYS = [
           "About 1.5 h round trip.",
         ],
         photo: "Walk away down the torii tunnel and look back over your shoulder. Shoot from chest height so the gates converge. White, black or denim pops against the orange.",
-        snack: "On the way out: kitsune udon or inari sushi (fried tofu — the fox spirits' favorite) at the shops by the gate.",
+        snack: "On the way out: kitsune udon or inari sushi (fried tofu — the fox spirits' favorite) at the shops by the gate. Only sit down where Google Maps shows 4.0+.",
       },
       {
         t: "08:30", title: "Kinkaku-ji: the Golden Pavilion ✨", ask: [{"jp": "金閣寺までお願いします。", "ro": "Kinkakuji made onegai shimasu.", "en": "To Kinkaku-ji, please. (to a taxi driver)", "hear": "none"}], ll: [35.0394, 135.7292], say: ["taxi", "photoplease", "kirei"], pic: "Kinkakuji golden pavilion reflection pond", rx: "velvia", place: "Kinkaku-ji, Kyoto",
@@ -817,7 +817,7 @@ const DAYS = [
           "Finish at Togetsukyō, the long wooden bridge over the river with forested mountains behind.",
         ],
         photo: "Stand still mid-path and shoot straight up through the bamboo, or walk away from the camera with the stalks framing you. Tall vertical frame.",
-        snack: "Lunch in Arashiyama: soba or yudōfu (Kyoto's silky simmered tofu), then matcha sweets on the main street.",
+        snack: "Lunch in Arashiyama: soba or yudōfu (Kyoto's silky simmered tofu), then matcha sweets on the main street. Only sit down where Google Maps shows 4.0+.",
       },
       {
         t: "12:00", title: "Arashiyama → Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
@@ -865,7 +865,7 @@ const DAYS = [
           "Stroll the canal both ways.",
         ],
         photo: "The Glico runner pose: arms up in a V, one knee raised, sign behind you. Everyone does it — that's the point. Direct flash for the night look.",
-        snack: "Takoyaki at Kukuru or Wanaka (blow on it — the inside is lava). Kushikatsu rule: never double-dip in the shared sauce.",
+        snack: "Takoyaki at Wanaka Dōtonbori (1-6-7 Dōtonbori, Google 4.2, open until 9 PM). Blow on it — the inside is lava). Kushikatsu rule: never double-dip in the shared sauce.",
       },
       {
         t: "23:00", title: "Doyama-cho holiday-eve crawl", night: true, ask: [{"jp": "イーグル大阪はどこですか？", "ro": "Īguru Ōsaka wa doko desu ka?", "en": "Where's Eagle Osaka?", "hear": "dir"}], ll: [34.7048, 135.504], say: ["amerika", "nomou", "issho", "gaikokujin"], rx: "neon", place: "Doyama-cho, Kita-ku, Osaka",
@@ -928,7 +928,7 @@ const DAYS = [
           "Deer roam free — don't feed them (it's banned here) and keep maps and paper out of reach. They will eat them.",
         ],
         photo: "“Pinch” the torii with forced perspective from the beach, or sit on the shore with the torii behind you and a deer wandering in.",
-        snack: "Grilled oysters (yaki-gaki) on Omotesando shopping street, momiji manjū (try the deep-fried age-momiji), and anago-meshi (conger-eel rice) — a Miyajima classic.",
+        snack: "Grilled oysters (yaki-gaki) on Omotesando shopping street, momiji manjū (try the deep-fried age-momiji), and anago-meshi (conger-eel rice) — a Miyajima classic. Only sit down where Google Maps shows 4.0+.",
         tip: "It's a national holiday — expect crowds. Eat early.",
       },
       {
@@ -943,9 +943,11 @@ const DAYS = [
         tip: "Keep your voice low. Many visitors leave paper cranes at the Children's Peace Monument.",
       },
       {
-        t: "18:00", title: "Hiroshima okonomiyaki", ask: [{"jp": "一人ですが、座れますか？", "ro": "Hitori desu ga, suwaremasu ka?", "en": "Just me — can I sit?", "hear": "full"}], ll: [34.392, 132.461], say: ["hitori", "osusume", "gochisousama"], pic: "Hiroshima okonomiyaki griddle", rx: "reala", place: "Okonomimura, Hiroshima",
+        t: "17:30", title: "Hiroshima okonomiyaki", ask: [{"jp": "一人ですが、座れますか？", "ro": "Hitori desu ga, suwaremasu ka?", "en": "Just me — can I sit?", "hear": "full"}], ll: [34.3918, 132.4659], say: ["hitori", "osusume", "gochisousama"], pic: "Hiroshima okonomiyaki griddle", rx: "reala", place: "Yagenbori Hassho, 10-6 Yagenbori, Naka-ku, Hiroshima",
         how: [
-          "Walk ~15 min to Okonomimura near Hondōri: floors of tiny griddle counters.",
+          "Yagenbori Hassho (薬研堀 八昌): Google 4.2 from 1,700+ reviews, opens at 4 PM and Tuesday is open. A queue builds fast, so get in line by 5:30. It's a ~20 min walk east from Peace Park, or ¥1,000 by taxi.",
+          "Today is a national holiday, so hours can shift. If it's closed, Nagataya by Peace Park (Google 4.4) is normally closed Tuesdays but may open for the holiday. Check Google Maps.",
+          "Leave by 18:40 for your 19:15 shinkansen: taxi to Hiroshima Station is ~10 min.",
           "Sit at the counter and watch them build it.",
         ],
         snack: "Hiroshima-style okonomiyaki is layered with noodles (soba or udon) — order “soba-iri” with an egg on top. Eat it straight off the griddle with the little spatula.",
@@ -968,7 +970,7 @@ const DAYS = [
           "Or the MHA × Umeda Sky Building collab at night: the open-air Floating Garden observatory, 15 min walk from your hotel (open to 22:30, last entry 22:00).",
         ],
         photo: "Shinsekai is the best direct-flash street of the trip: giant food signs, retro neon, Tsūtenkaku behind you.",
-        snack: "Shinsekai kushikatsu (fried skewers) — again: no double-dipping.",
+        snack: "Shinsekai kushikatsu (fried skewers) at Kushikatsu Daruma Shinsekai Sōhonten (the original, Google 4.1, open until 10:30 PM). Again: no double-dipping.",
         spicy: "Doyama tonight: Eagle Osaka for bears, Kuro for daddies, Village for drag. Explosion is closed on Tuesdays.",
       },
       {
@@ -1042,7 +1044,7 @@ const DAYS = [
       {
         t: "18:30", title: "Hōtō dinner + onsen night", ll: [35.5012, 138.7715], say: ["hitori", "onsen", "gochisousama"], pic: "hoto noodles Kawaguchiko", place: "Hoto Fudo Kawaguchiko",
         how: [
-          "Dinner: hōtō, the local thick noodles stewed in miso with pumpkin (Hōtō Fudō is the famous spot).",
+          "Dinner: hōtō, the local thick noodles stewed in miso with pumpkin. Skip Hōtō Fudō's station branch (Google 3.8). Try Kosaku Kawaguchiko (甲州ほうとう小作 河口湖店), the other classic, but check it shows 4.0+ on Google first.",
           "Hot spring at the hotel (manners in the Manners tab).",
           "Check the Fuji live camera, set an alarm for 5:30 AM, early night.",
         ],
@@ -1541,11 +1543,11 @@ const FOODS = [
   { id: "takoyaki", emoji: "🐙", en: "Takoyaki", jp: "たこ焼き", ro: "takoyaki", wiki: "たこ焼き", enwiki: "Takoyaki",
     what: "Crispy-gooey batter balls with octopus, topped with sauce, mayo and bonito flakes. Osaka's icon.",
     order: { jp: "たこ焼き八個入りを一つください", ro: "Takoyaki hakko-iri o hitotsu kudasai", en: "One 8-piece takoyaki, please" },
-    tips: "Molten inside — bite a hole and let the steam out first. Eat it at the stand's counter.", where: "Dōtonbori: Kukuru or Wanaka (Mon Nov 2)", day: "d8" },
+    tips: "Molten inside — bite a hole and let the steam out first. Eat it at the stand's counter.", where: "Wanaka Dōtonbori (Mon Nov 2)", day: "d8" },
   { id: "okonomiyaki", emoji: "🥞", en: "Okonomiyaki", jp: "お好み焼き", ro: "okonomiyaki", wiki: "お好み焼き", enwiki: "Okonomiyaki",
     what: "Savory cabbage pancake. Hiroshima style is layered with noodles.",
     order: { jp: "肉玉そば入り、お願いします", ro: "Nikutama soba-iri, onegai shimasu", en: "Pork-and-egg with soba noodles, please" },
-    tips: "Eat it straight off the griddle with the little spatula (hera).", where: "Okonomimura, Hiroshima (Tue Nov 3) · Dōtonbori (Mon Nov 2)", day: "d9" },
+    tips: "Eat it straight off the griddle with the little spatula (hera).", where: "Yagenbori Hassho, Hiroshima (Tue Nov 3)", day: "d9" },
   { id: "gyoza", emoji: "🥟", en: "Gyōza", jp: "餃子", ro: "gyōza", wiki: "餃子", enwiki: "Jiaozi",
     what: "Pan-fried pork dumplings with crispy bottoms.",
     order: { jp: "餃子一人前と生ビールをください", ro: "Gyōza ichinin-mae to nama bīru o kudasai", en: "One serving of gyoza and a draft beer" },
@@ -1605,7 +1607,7 @@ const FOODS = [
   { id: "kushikatsu", emoji: "🍡", en: "Kushikatsu", jp: "串カツ", ro: "kushikatsu", wiki: "串カツ", enwiki: "Kushikatsu",
     what: "Deep-fried skewers of meat, veg and cheese. Osaka's drinking food.",
     order: { jp: "おまかせで五本お願いします", ro: "Omakase de gohon onegai shimasu", en: "Five chef's-choice skewers, please" },
-    tips: "NO double-dipping in the shared sauce (二度づけ禁止). Use a cabbage leaf to scoop more sauce.", where: "Shinsekai, Osaka (Tue Nov 3)", day: "d9" },
+    tips: "NO double-dipping in the shared sauce (二度づけ禁止). Use a cabbage leaf to scoop more sauce.", where: "Kushikatsu Daruma Shinsekai Sōhonten, Osaka (Tue Nov 3)", day: "d9" },
   { id: "momiji", emoji: "🍁", en: "Momiji manjū", jp: "もみじ饅頭", ro: "momiji manjū", wiki: "もみじ饅頭", enwiki: "Momiji manjū",
     what: "Maple-leaf sponge cakes filled with red bean or custard. Miyajima's sweet.",
     order: { jp: "揚げもみじを一つください", ro: "Age-momiji o hitotsu kudasai", en: "One deep-fried momiji, please" },
@@ -1617,7 +1619,7 @@ const FOODS = [
   { id: "hoto", emoji: "🎃", en: "Hōtō", jp: "ほうとう", ro: "hōtō", wiki: "ほうとう", enwiki: "Hōtō",
     what: "Fat flat noodles stewed in miso with pumpkin and veg, served in an iron pot.",
     order: { jp: "かぼちゃほうとうを一つください", ro: "Kabocha hōtō o hitotsu kudasai", en: "One pumpkin hōtō, please" },
-    tips: "Perfect after a cold Fuji sunset. Portions are big.", where: "Hōtō Fudō, Kawaguchiko (Wed Nov 4)", day: "d10" },
+    tips: "Perfect after a cold Fuji sunset. Portions are big.", where: "Kosaku, Kawaguchiko (Wed Nov 4) — check 4.0+ first", day: "d10" },
   { id: "gyukatsu", emoji: "🥩", en: "Gyūkatsu (beef cutlet)", jp: "牛カツ", ro: "gyūkatsu", wiki: "牛カツ", enwiki: "Gyukatsu", what: "Crispy breaded beef left rare inside — you finish each slice yourself on a tiny hot stone.", order: { jp: "牛カツ定食をお願いします。", ro: "Gyūkatsu teishoku o onegai shimasu.", en: "A gyukatsu set meal, please." }, tips: "Sear each piece only a few seconds. Try it with wasabi + soy, then with the sauce.", where: "Gyūkatsu Motomura, Akihabara (Sat lunch)", day: "d6" },
   { id: "pancakes", emoji: "🥞", en: "Soufflé pancakes", jp: "スフレパンケーキ", ro: "sufure pankēki", wiki: "パンケーキ", enwiki: "Soufflé pancake", what: "Jiggly, cloud-soft pancakes about 4 cm tall. A Tokyo café classic.", order: { jp: "スフレパンケーキを一つお願いします。", ro: "Sufure pankēki o hitotsu onegai shimasu.", en: "One soufflé pancake, please." }, tips: "They're cooked to order, so expect a 20–30 min wait. Put your name on the list, then wander.", where: "A Happy Pancake, Omotesandō (Fri afternoon)", day: "d5" },
   { id: "yakiniku", emoji: "🍖", en: "Yakiniku (Japanese BBQ)", jp: "焼肉", ro: "yakiniku", wiki: "焼肉", enwiki: "Yakiniku", what: "Grill-it-yourself wagyu and other meats at your table. Solo-friendly chains give you your own little grill.", order: { jp: "一人焼肉セットをお願いします。", ro: "Hitori yakiniku setto o onegai shimasu.", en: "A solo yakiniku set, please." }, tips: "Start with tongue (タン, tan) with lemon, then kalbi (カルビ). Don't overcook wagyu.", where: "Yakiniku Iwasaki, Ueno, after Disneyland (Thu) — Google 4.8", day: "d4" },
