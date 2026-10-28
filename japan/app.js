@@ -729,6 +729,34 @@
       <p class="foot">Every step's 📸 Photo op on the Today tab has its own 🖼️ Photo idea button too.</p>`;
   }
 
+  /* Recipe rows in the exact order of the X100VI "EDIT/SAVE CUSTOM SETTING" (I.Q.) pages */
+  const RX_CAM = [
+    [1, "FILM SIMULATION", "Film Simulation"], [1, "MONOCHROMATIC COLOR", "Monochromatic Color"], [1, "GRAIN EFFECT", "Grain"], [1, "COLOR CHROME EFFECT", "Color Chrome Effect"],
+    [2, "COLOR CHROME FX BLUE", "Color Chrome FX Blue"], [2, "SMOOTH SKIN EFFECT", null, "OFF"], [2, "WHITE BALANCE", "White Balance"], [2, "DYNAMIC RANGE", "Dynamic Range"],
+    [2, "D RANGE PRIORITY", null, "OFF"], [2, "TONE CURVE", "Highlight / Shadow"], [2, "COLOR", "Color"], [2, "SHARPNESS", "Sharpness"],
+    [3, "HIGH ISO NR", "High ISO NR"], [3, "CLARITY", "Clarity"],
+  ];
+  function rxCameraTable(r) {
+    const get = k => (r.settings.find(([kk]) => kk === k) || [])[1];
+    const mono = /acros|monochrome/i.test(get("Film Simulation") || "");
+    const rows = RX_CAM.map(([pg, label, key, fixed]) => {
+      let v = fixed || (key ? get(key) : null);
+      if (key === "Highlight / Shadow" && v) { const [h, sh] = v.split("/").map(x => x.trim()); v = `H ${h}   S ${sh}`; }
+      if (!v) v = (mono && (key === "Color" || key === "Color Chrome FX Blue")) || (!mono && key === "Monochromatic Color") ? "— (greyed out)" : "—";
+      return [pg, label, v];
+    });
+    const page = n => `<tr class="rx-page"><th colspan="2">I.Q. ${n}/3</th></tr>` + rows.filter(r => r[0] === n).map(([, l, v]) => `<tr><th>${esc(l)}</th><td>${esc(v)}</td></tr>`).join("");
+    return `<table class="rx-table cam">
+      <tr class="rx-page"><th colspan="2">I.Q. 1/3</th></tr>
+      <tr class="rx-same"><th>IMAGE SIZE · QUALITY · RAW · JPEG/HEIF</th><td>L 3:2 · F · Uncompressed · JPEG (same for every recipe)</td></tr>
+      ${rows.filter(r => r[0] === 1).map(([, l, v]) => `<tr><th>${esc(l)}</th><td>${esc(v)}</td></tr>`).join("")}
+      ${page(2)}${page(3)}
+      <tr class="rx-page"><th colspan="2">On the dials (not in this menu)</th></tr>
+      <tr><th>ISO</th><td>${esc(get("ISO") || "—")}</td></tr>
+      <tr><th>EXPOSURE COMP</th><td>${esc(get("Exposure comp") || "—")}</td></tr>
+    </table>`;
+  }
+
   /* ---------- Recipes ---------- */
   function renderRecipes(focus) {
     document.body.dataset.theme = DAYS[todayDayIndex()].theme;
@@ -741,7 +769,7 @@
         <article class="card recipe" id="rx-${r.id}">
           <div class="rx-head"><span class="rx-slot">${r.slot}</span><div><h3>${r.emoji} ${esc(r.name)}</h3><div class="rx-sim">${esc(r.sim)}</div></div></div>
           <p class="rx-vibe">${esc(r.vibe)}</p>
-          <table class="rx-table">${r.settings.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</table>
+          ${rxCameraTable(r)}
           <div class="rx-use"><b>Best for</b>${r.use.map(u => `<span>${esc(u)}</span>`).join("")}</div>
           ${uses[r.id] ? `<div class="rx-trip"><b>On your trip</b>${uses[r.id].map(u => `<a href="#day/${u.d.id}" data-step="${u.d.id}-${u.d.steps.indexOf(u.s)}">${u.d.emoji} ${u.d.dow} · ${esc(u.s.title)}</a>`).join("")}</div>` : ""}
         </article>`).join("")}

@@ -1455,7 +1455,7 @@ const RECIPES = [
     id: "classic", slot: "C1", name: "Tokyo Classic", emoji: "🏙️", sim: "Classic Chrome",
     vibe: "The recipe you already saved: muted, warm, editorial. The default for daytime streets and buildings.",
     settings: [["Film Simulation", "Classic Chrome"], ["Grain", "Off (or Weak, Small for texture)"], ["Color Chrome Effect", "Off (or Weak)"], ["Color Chrome FX Blue", "Off"], ["White Balance", "6700K, R −1, B −6"], ["Dynamic Range", "DR200"], ["Highlight / Shadow", "−2 / −2"], ["Color", "+1"], ["Sharpness", "−2"], ["High ISO NR", "−4"], ["Clarity", "0"], ["ISO", "Auto, up to 6400"], ["Exposure comp", "0 to +1/3"]],
-    use: ["Shinjuku and Shibuya in daylight", "Skytree from the river", "Byōdō-in", "Fuji from the shinkansen window", "Anything architectural"],
+    use: ["Shinjuku and Shibuya in daylight", "Skytree from the river", "Kinkaku-ji", "Fuji from the shinkansen window", "Anything architectural"],
   },
   {
     id: "neon", slot: "C2", name: "Neon Nights", emoji: "🌃", sim: "Classic Negative",

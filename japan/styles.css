@@ -832,3 +832,7 @@ details.wlist summary { cursor: pointer; font-weight: 700; }
 .ep-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 999px; }
 .food-actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 4px; }
 .card.food.eaten { opacity: .7; }
+
+.rx-table.cam th { font-family: system-ui, sans-serif; font-size: 12.5px; letter-spacing: .03em; text-transform: uppercase; }
+.rx-table .rx-page th { background: var(--card2); color: var(--accent); font-size: 12px; text-align: left; padding: 6px 8px; border-radius: 6px; }
+.rx-table .rx-same th, .rx-table .rx-same td { color: var(--muted); font-size: 12px; }
