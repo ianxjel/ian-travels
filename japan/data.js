@@ -616,7 +616,7 @@ const DAYS = [
 
   /* ---------------- DAY 7 ---------------- */
   {
-    id: "d7", date: "2026-11-01", prep: ["Pack the backpack tonight — you leave it at the front desk at 6:30 AM checkout", "Comfy shoes for the 1.5-hour Fushimi Inari climb", "Pokémon Café Osaka 6:00 PM: confirmation in Trip → Tickets", "Optional: check the Kirby Café Osaka booking site for a cancellation", "Alarm ~6:00 AM"], rain: "Kyoto temples look amazing in the rain, but Ninenzaka's stone slopes get slippery. Covered options: Nishiki Market, Kyoto Takashimaya (Nintendo KYOTO) and Kyoto Station.", home: {"after": "21:30", "note": "Kyoto buses and the Karasuma subway stop around 23:30. Taxis are easy to flag on Shijō-dōri — show the Kyoto hotel card."}, dow: "Sun", title: "To Kyoto + Nintendo Museum", city: "Kyoto",
+    id: "d7", date: "2026-11-01", prep: ["Pack the backpack tonight — you leave it at the front desk at 6:30 AM checkout", "Comfy shoes for the 1.5-hour Fushimi Inari climb", "Budget ~¥7,000 for taxis tomorrow morning (Inari → Kinkaku-ji → Arashiyama) — Kyoto taxis take cards and Suica", "Pokémon Café Osaka 6:00 PM: confirmation in Trip → Tickets", "Optional: check the Kirby Café Osaka booking site for a cancellation", "Alarm ~6:00 AM"], rain: "Kyoto temples look amazing in the rain, but Ninenzaka's stone slopes get slippery. Covered options: Nishiki Market, Kyoto Takashimaya (Nintendo KYOTO) and Kyoto Station.", home: {"after": "21:30", "note": "Kyoto buses and the Karasuma subway stop around 23:30. Taxis are easy to flag on Shijō-dōri — show the Kyoto hotel card."}, dow: "Sun", title: "To Kyoto + Nintendo Museum", city: "Kyoto",
     theme: "pixel", emoji: "🎮", deco: ["🎮", "⛩️", "🍄", "⭐", "🕹️", "🍁"],
     kicker: "Day 7 · Press Start in Kyoto",
     tagline: "Bullet train past Fuji, Nintendo's birthplace, and lantern-lit Gion at night.",
@@ -761,10 +761,10 @@ const DAYS = [
 
   /* ---------------- DAY 8 ---------------- */
   {
-    id: "d8", date: "2026-11-02", prep: ["📦 Suitcase handed to the front desk for Narita? (Yamato needs 2 days)", "Waybill: Narita Airport Terminal 1, flight UA868 on Thu Nov 5, pick up at the Yamato counter", "Keep OUT of the suitcase: 2 nights of clothes, a warm layer for the Fuji sunrise, passport, meds, chargers", "Anything you'll claim a tax refund on goes in your backpack, not the shipped suitcase", "SmartEX: Shin-Osaka ⇄ Hiroshima tickets (~10:30 AM out, ~7:15 PM back)", "Check tomorrow's Miyajima tide times", "Alarm ~9:00 AM — out as late as you want tonight"], rain: "Fushimi Inari in light rain = moody, empty gate photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Fushimi Inari + Uji → Osaka", city: "Kyoto → Osaka",
+    id: "d8", date: "2026-11-02", prep: ["📦 Suitcase handed to the front desk for Narita? (Yamato needs 2 days)", "Waybill: Narita Airport Terminal 1, flight UA868 on Thu Nov 5, pick up at the Yamato counter", "Keep OUT of the suitcase: 2 nights of clothes, a warm layer for the Fuji sunrise, passport, meds, chargers", "Anything you'll claim a tax refund on goes in your backpack, not the shipped suitcase", "SmartEX: Shin-Osaka ⇄ Hiroshima tickets (~10:30 AM out, ~7:15 PM back)", "Check tomorrow's Miyajima tide times", "Alarm ~9:00 AM — out as late as you want tonight"], rain: "Fushimi Inari and the bamboo grove in light rain = moody, empty photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Inari, Golden Pavilion + bamboo → Osaka", city: "Kyoto → Osaka",
     theme: "torii", emoji: "🦊", deco: ["⛩️", "🦊", "🍵", "🐙", "🌆", "⚡"],
     kicker: "Day 8 · Thousand gates to neon canals",
-    tagline: "Dawn torii, real matcha, Pokémon Café Osaka, and a holiday-eve night in Doyama-cho.",
+    tagline: "Dawn torii, the Golden Pavilion, the bamboo grove, Osaka Castle, Pokémon Café Osaka, and a holiday-eve night in Doyama-cho.",
     sleep: "osaka", wx: { lat: 34.70, lon: 135.50 },
     phrases: ["azukeru", "ohayou", "osusume", "nama", "kanpai", "amerika", "nomou", "issho"],
     steps: [
@@ -789,27 +789,35 @@ const DAYS = [
         snack: "On the way out: kitsune udon or inari sushi (fried tofu — the fox spirits' favorite) at the shops by the gate.",
       },
       {
-        t: "08:30", title: "Uji: Byōdō-in + matcha", ask: [{"jp": "平等院はどっちですか？", "ro": "Byōdōin wa dotchi desu ka?", "en": "Which way to Byōdō-in?", "hear": "dir"}], ll: [34.8892, 135.8077], say: ["osusume", "hitotsu"], pic: "Byodoin Phoenix Hall reflection photo", rx: "classic", place: "Byodo-in, Uji",
-        ride: [{"ln": "JD", "from": "D03", "to": "D09", "dir": "奈良・宇治方面 (toward Nara / Uji)", "type": "普通 Local and みやこ路快速 Miyakoji Rapid stop at Uji.", "wrong": "Next stop 東福寺 Tōfukuji (D02) = wrong way.", "min": 20, "exit": "Walk ~10 min to Byōdō-in"}],
+        t: "08:30", title: "Kinkaku-ji: the Golden Pavilion ✨", ask: [{"jp": "金閣寺までお願いします。", "ro": "Kinkakuji made onegai shimasu.", "en": "To Kinkaku-ji, please. (to a taxi driver)", "hear": "none"}], ll: [35.0394, 135.7292], say: ["taxi", "photoplease", "kirei"], pic: "Kinkakuji golden pavilion reflection pond", rx: "velvia", place: "Kinkaku-ji, Kyoto",
         how: [
-          "JR Nara line from Inari to Uji (~20 min).",
-          "Walk ~10 min to Byōdō-in (opens 8:30).",
+          "From Fushimi Inari, take a taxi from the main road (~35 min, about ¥4,000–5,000). It saves an hour of buses and transfers.",
+          "Opens 9:00, ¥500. The path loops past the pavilion and its pond in about 40 minutes.",
         ],
-        photo: "The Phoenix Hall mirrored in its pond — it's the temple on the ¥10 coin. Hold the coin up next to it for the cute comparison shot.",
-        snack: "Early lunch at Nakamura Tōkichi's Byōdō-in branch: matcha soba and a matcha parfait. Uji is Japan's matcha capital.",
-        tip: "Rather have the bamboo-grove photo? Swap Uji for Arashiyama (via Kyoto, ~35 min).",
+        photo: "The classic: the gold pavilion mirrored in the pond from the first viewpoint by the entrance. Arrive at 9:00 sharp to get the railing before the tour groups.",
+        snack: "Matcha soft serve near the exit — the gold-leaf version is very on-theme.",
       },
       {
-        t: "12:30", title: "Uji → Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
-        ride: [{"ln": "JD", "from": "D09", "to": "D01", "dir": "京都方面 (toward Kyoto)", "type": "Any train.", "wrong": "Next stop 新田 Shinden = wrong way.", "min": 20, "exit": "Grab your backpack at the hotel, then back to JR Kyoto"}, {"ln": "JA", "from": "A31", "to": "A47", "dir": "大阪・神戸・姫路方面 (westbound) — look for 新快速 Special Rapid", "type": "Special Rapid only stops at these 4 stations. Local and Rapid also work, just slower.", "wrong": "Next stop 山科 Yamashina = wrong way (eastbound).", "min": 30, "exit": "Midosuji South Exit → walk ~8 min to the hotel"}],
+        t: "10:00", title: "Arashiyama bamboo grove + Togetsukyō 🎋", ask: [{"jp": "竹林の小径はどっちですか？", "ro": "Chikurin no komichi wa dotchi desu ka?", "en": "Which way to the bamboo grove path?", "hear": "dir"}], ll: [35.0170, 135.6713], say: ["photoplease", "osusume", "kirei"], pic: "Arashiyama bamboo grove path men photo", rx: "classic", place: "Arashiyama Bamboo Grove, Kyoto",
         how: [
-          "JR Nara line back to Kyoto; grab your backpack at the hotel.",
+          "Taxi from Kinkaku-ji (~20 min, ~¥2,500).",
+          "Walk the bamboo path (Chikurin no Komichi), then Tenryū-ji's garden (¥500) right next to it.",
+          "Finish at Togetsukyō, the long wooden bridge over the river with forested mountains behind.",
+        ],
+        photo: "Stand still mid-path and shoot straight up through the bamboo, or walk away from the camera with the stalks framing you. Tall vertical frame.",
+        snack: "Lunch in Arashiyama: soba or yudōfu (Kyoto's silky simmered tofu), then matcha sweets on the main street.",
+      },
+      {
+        t: "12:00", title: "Arashiyama → Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
+        ride: [{"ln": "SAG", "from": "E08", "to": "E01", "dir": "京都方面 (toward Kyoto)", "type": "Every train stops at Kyoto (the end of the line).", "wrong": "Next stop 保津峡 Hozukyō = wrong way.", "min": 16, "exit": "Grab your backpack at the hotel (Karasuma side), then back into JR Kyoto"}, {"ln": "JA", "from": "A31", "to": "A47", "dir": "大阪・神戸・姫路方面 (westbound) — look for 新快速 Special Rapid", "type": "Special Rapid only stops at these 4 stations. Local and Rapid also work, just slower.", "wrong": "Next stop 山科 Yamashina = wrong way (eastbound).", "min": 30, "exit": "Midosuji South Exit → walk ~8 min to the hotel"}],
+        how: [
+          "JR Sagano Line from Saga-Arashiyama (8 min walk from the bamboo grove) to Kyoto; grab your backpack at the hotel.",
           "JR Special Rapid (新快速) from Kyoto to Osaka (~30 min).",
         ],
         tip: "Osaka switch: stand on the RIGHT side of escalators here (the opposite of Tokyo).",
       },
       {
-        t: "14:00", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (stickers, stamp rally, photo panels) + the MHA café under HEP FIVE's Ferris wheel. 🍄 Nintendo OSAKA is on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
+        t: "13:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (stickers, stamp rally, photo panels) + the MHA café under HEP FIVE's Ferris wheel. 🍄 Nintendo OSAKA is on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Your suitcase should be waiting. Check-in is from 3 PM.",
@@ -1545,7 +1553,7 @@ const FOODS = [
   { id: "soba", emoji: "🥢", en: "Soba", jp: "蕎麦", ro: "soba", wiki: "蕎麦", enwiki: "Soba",
     what: "Buckwheat noodles, served cold with dipping sauce (zaru) or hot in broth.",
     order: { jp: "ざるそばをください", ro: "Zaru soba o kudasai", en: "Cold soba with dipping sauce, please" },
-    tips: "At the end, pour the cooking water (sobayu) into your leftover sauce and drink it.", where: "Matcha soba in Uji (Mon Nov 2)", day: "d8" },
+    tips: "At the end, pour the cooking water (sobayu) into your leftover sauce and drink it.", where: "Soba in Arashiyama (Mon Nov 2)", day: "d8" },
   { id: "tempura", emoji: "🍤", en: "Tempura", jp: "天ぷら", ro: "tenpura", wiki: "天ぷら", enwiki: "Tempura",
     what: "Light, crispy battered shrimp and vegetables. Tendon = tempura over rice.",
     order: { jp: "天丼をください", ro: "Tendon o kudasai", en: "A tempura rice bowl, please" },
@@ -1573,7 +1581,7 @@ const FOODS = [
   { id: "matcha", emoji: "🍵", en: "Matcha", jp: "抹茶", ro: "matcha", wiki: "抹茶", enwiki: "Matcha",
     what: "Stone-ground green tea: as tea, lattes, soft-serve, parfaits, soba…",
     order: { jp: "抹茶ソフトを一つください", ro: "Matcha sofuto o hitotsu kudasai", en: "One matcha soft-serve, please" },
-    tips: "Uji is Japan's matcha capital. A matcha parfait is basically required.", where: "Uji (Mon Nov 2) · Ninenzaka, Kyoto (Sun)", day: "d8" },
+    tips: "Uji is Japan's matcha capital. A matcha parfait is basically required.", where: "Kinkaku-ji + Arashiyama (Mon Nov 2) · Ninenzaka, Kyoto (Sun)", day: "d8" },
   { id: "daifuku", emoji: "🍓", en: "Ichigo daifuku", jp: "いちご大福", ro: "ichigo daifuku", wiki: "いちご大福", enwiki: "Daifuku",
     what: "Soft mochi wrapped around red bean and a whole strawberry.",
     order: { jp: "いちご大福を一つください", ro: "Ichigo daifuku o hitotsu kudasai", en: "One strawberry daifuku, please" },
@@ -1903,7 +1911,7 @@ const MERCH_SEEDS = [
   { item: "Pokémon Café Tokyo merch", where: "Nihonbashi Takashimaya", day: "d6" },
   { item: "Nintendo Museum shop", where: "Ogura, Uji", day: "d7" },
   { item: "Nintendo KYOTO / Pokémon Center Kyoto", where: "Kyoto Takashimaya S.C.", day: "d7" },
-  { item: "Uji matcha (powder tin or sweets)", where: "Uji", day: "d8" },
+  { item: "Kyoto matcha (powder tin or sweets)", where: "Arashiyama main street", day: "d8" },
   { item: "Pokémon Center Osaka DX + Café Osaka merch", where: "Daimaru Shinsaibashi 9F", day: "d8" },
   { item: "My Hero Academia collab goods", where: "Umeda Sky Building 39F shop", day: "d8" },
   { item: "Nintendo OSAKA exclusives", where: "Daimaru Umeda 13F", day: "d8" },
@@ -1991,6 +1999,7 @@ const LINES = {
     ["JB17", "水道橋", "Suidōbashi"], ["JB18", "御茶ノ水", "Ochanomizu"], ["JB19", "秋葉原", "Akihabara"]] },
   A: { name: "Toei Asakusa Line", jp: "浅草線", color: "#ec6e65", stops: [["A09", "大門", "Daimon"], ["A10", "新橋", "Shimbashi"], ["A11", "東銀座", "Higashi-ginza"], ["A12", "宝町", "Takarachō"], ["A13", "日本橋", "Nihombashi"]] },
   OT: { name: "Tanimachi Line (Osaka Metro)", jp: "谷町線", color: "#8e5c9e", stops: [["T20", "東梅田", "Higashi-Umeda"], ["T21", "南森町", "Minami-morimachi"], ["T22", "天満橋", "Temmabashi"], ["T23", "谷町四丁目", "Tanimachi 4-chōme"]] },
+  SAG: { name: "JR Sagano Line", jp: "嵯峨野線", color: "#7b3f98", stops: [["E01", "京都", "Kyoto"], ["E02", "梅小路京都西", "Umekōji-Kyōtonishi"], ["E03", "丹波口", "Tambaguchi"], ["E04", "二条", "Nijō"], ["E05", "円町", "Emmachi"], ["E06", "花園", "Hanazono"], ["E07", "太秦", "Uzumasa"], ["E08", "嵯峨嵐山", "Saga-Arashiyama"]] },
 };
 
 /* ---------------- Park treats (for the Live waits → 🍡 Treats tab) ----------------
