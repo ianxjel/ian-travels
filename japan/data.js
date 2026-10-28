@@ -319,9 +319,18 @@ const DAYS = [
         photo: "Walk toward the camera mid-alley glancing up at the lanterns, vertical, Night mode. Ask before shooting inside a stall.",
       },
       {
-        t: "22:00", title: "Optional: quick soak at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "kondomu2"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        t: "21:00", title: "Free night view: Tokyo Metropolitan Government Building 🌃", ask: [{"jp": "展望室の入口はどこですか？", "ro": "Tenbōshitsu no iriguchi wa doko desu ka?", "en": "Where's the observatory entrance?", "hear": "dir"}], ll: [35.6896, 139.6917], say: ["kirei", "photoplease"], pic: "Tokyo Metropolitan Government Building projection mapping night", rx: "neon", place: "Tokyo Metropolitan Government Building, Shinjuku",
         how: [
-          "Omoide Yokocho → 24 Kaikan is about 15 min on foot.",
+          "Walk ~10 min west from Omoide Yokocho through the Shinjuku skyscraper district.",
+          "Free 45th-floor observatory (202 m), open until 22:00 — last entry 21:30. On a clear night you can see Skytree and Tokyo Tower.",
+          "TOKYO Night & Light: free projection mapping on the building's facade, several shows each evening until 21:45 — catch one from the plaza before you go up.",
+        ],
+        photo: "Rest the X100VI on the window ledge (no flash, lens hood against the glass to kill reflections) for a sharp city-lights shot.",
+      },
+      {
+        t: "22:30", title: "Optional: quick soak at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["kyukei", "kondomu2"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
+        how: [
+          "From the TMG building, ~20 min on foot or a ¥1,000 taxi.",
           "Only if you're not wiped: the Disneyland alarm is 6:15 AM. Tomorrow night is the long Ueno sauna night anyway.",
         ],
         spicy: "Weeknight evenings are calmer: good for the sauna and the rooftop deck before it gets busy.",
@@ -379,6 +388,7 @@ const DAYS = [
           "Keiyo Line back to Tokyo Station, then just 4 stops north to Ueno (~45 min total).",
           "Bring a change of clothes in your day bag if you might stay the night at the sauna.",
         ],
+        photo: "Bonus sight: Tokyo Station's 1914 red-brick Marunouchi building is lit up at night — a 10-min detour from the Keiyo platforms out the Marunouchi Central Exit.",
         snack: "Konbini stop near Ueno Station: Lawson's Karaage-kun or a hot oden cup from the counter.",
       },
       {
@@ -447,6 +457,7 @@ const DAYS = [
         how: [
           "From Oshiage (Skytree) take the Hanzōmon line straight to Omotesando (~30 min).",
           "Exit A2; Tokyu Plaza's kaleidoscope mirror escalator is on the corner.",
+          "Ahead of schedule? Takeshita Street (Harajuku's colorful crepe-and-fashion street) and Meiji Jingū shrine are ~10 min north. The shrine gates close at sunset.",
         ],
         photo: "Fit check: full-body shot in the mirror entrance from the bottom of the escalator. Then the free rooftop terrace upstairs.",
         snack: "Soufflé pancakes: A Happy Pancake or FLIPPER'S in Omotesandō. Put your name down (20–30 min wait), then do the MHA café / mirror photos.",
@@ -573,10 +584,19 @@ const DAYS = [
         photo: "Overhead flat-lay of your food before the first bite, then a selfie with the costume + plate.",
       },
       {
-        t: "21:30", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 2-15-12 Shinjuku",
-        ride: [{"ln": "G", "from": "G11", "to": "G09", "dir": "渋谷方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 三越前 Mitsukoshimae (G12) = wrong way.", "min": 4, "exit": "Follow the red Marunouchi Line signs"}, {"ln": "M", "from": "M16", "to": "M09", "dir": "荻窪・方南町方面 (toward Ogikubo / Hōnanchō)", "type": "Every train.", "wrong": "Next stop 東京 Tokyo (M17) = wrong way.", "min": 17, "exit": "Exits C5–C8 come up right at Ni-chome"}],
+        t: "21:00", title: "Tokyo Tower lit up 🗼", ask: [{"jp": "東京タワーへの行き方を教えてください。", "ro": "Tōkyō Tawā e no ikikata o oshiete kudasai.", "en": "How do I get to Tokyo Tower?", "hear": "dir"}], ll: [35.6586, 139.7454], say: ["photoplease", "kirei", "taxi"], pic: "Tokyo Tower night Zojoji temple", rx: "neon", place: "Zojo-ji Temple, Minato, Tokyo",
+        ride: [{"ln": "A", "from": "A13", "to": "A09", "dir": "西馬込・羽田空港方面 (toward Nishi-magome / Haneda)", "type": "Every train stops at Daimon.", "wrong": "Next stop 人形町 Ningyōchō = wrong way.", "min": 7, "exit": "Exit A6 → walk ~10 min past Zōjō-ji's big gate"}],
         how: [
-          "Ginza → Marunouchi line back to Shinjuku-sanchome (~25 min).",
+          "Toei Asakusa Line from Nihombashi 4 stops to Daimon, or a ~15 min taxi (~¥2,000).",
+          "The classic shot: Zōjō-ji temple's gate and roof with the glowing orange tower right behind it.",
+          "You don't need to go up — the ground-level view is the iconic one.",
+        ],
+        photo: "Costume + tower: stand in Zōjō-ji's courtyard and have someone shoot you with the tower above your head.",
+      },
+      {
+        t: "22:15", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 2-15-12 Shinjuku",
+        how: [
+          "From Tokyo Tower: taxi to Shinjuku 2-chōme (~20 min, ~¥2,500). Halloween night is the one night a taxi is worth it.",
           "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE 80th) or ArcH (Jimi-Halloween: dress as something boring 😂).",
           "Drink inside the bars — parts of Shinjuku restrict street drinking tonight.",
         ],
@@ -794,15 +814,25 @@ const DAYS = [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Your suitcase should be waiting. Check-in is from 3 PM.",
           "Repack it for the flight now and hand it back to the front desk for Yamato to Narita (flight UA868, Thu Nov 5, Terminal 1, ~¥3,300). Then tonight and tomorrow morning are free.",
-          "Nap before the long night — or see the Umeda Sky Building.",
+          "Then straight to Osaka Castle while it's light out.",
         ],
         photo: "HEP FIVE's red Ferris wheel on the mall roof, shot from the street below (better after dark).",
+      },
+      {
+        t: "15:00", title: "Osaka Castle 🏯", ask: [{"jp": "天守閣はどっちですか？", "ro": "Tenshukaku wa dotchi desu ka?", "en": "Which way is the castle tower?", "hear": "dir"}], ll: [34.6873, 135.5262], say: ["photoplease", "kirei"], pic: "Osaka Castle autumn moat photo", rx: "velvia", place: "Osaka Castle Main Tower",
+        ride: [{"ln": "OT", "from": "T20", "to": "T23", "dir": "八尾南方面 (toward Yaominami)", "type": "Every train.", "wrong": "Next stop 中崎町 Nakazakichō = wrong way.", "min": 6, "exit": "Exit 9 → ~15 min walk through the park to the main tower"}],
+        how: [
+          "Tanimachi Line from Higashi-Umeda (5 min walk from your hotel) to Tanimachi 4-chōme.",
+          "Main tower: 9:00–18:00, last entry 17:30, ¥1,200. Museum inside, rooftop-style viewing deck on the 8th floor.",
+          "Leave by 16:30 for Pokémon Center Osaka DX: taxi to Daimaru Shinsaibashi (~15 min) or the Chūō Line to Hommachi → Midosuji Line 1 stop.",
+        ],
+        photo: "Shoot the tower across the stone walls and moat from the Gokuraku-bashi bridge — gold trim, white walls, autumn leaves.",
       },
       {
         t: "17:00", title: "Pokémon Center Osaka DX", quest: "⭐ Kirby Café Osaka is also in Shinsaibashi — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
         ride: [{"ln": "OM", "from": "M16", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 6, "exit": "Daimaru is connected to the station"}],
         how: [
-          "Midosuji line (red) from Umeda to Shinsaibashi (~6 min). Daimaru is connected to the station.",
+          "From Osaka Castle: taxi (~15 min) or Chūō Line to Hommachi, then the Midosuji Line 1 stop to Shinsaibashi. (From Umeda it's the Midosuji Line direct, below.) Daimaru is connected to the station.",
           "Pokémon Center Osaka DX and the café are on 9F.",
           "Check in at Pokémon Café Osaka by 5:50 PM for your 6:00 table (reservation in your email).",
         ],
@@ -915,6 +945,7 @@ const DAYS = [
         how: [
           "Energy left? Shinsekai's retro neon around Tsūtenkaku tower (Sakaisuji line to Ebisuchō).",
           "Or one last round in Doyama-cho, 5 min from the hotel.",
+          "Or the MHA × Umeda Sky Building collab at night: the open-air Floating Garden observatory, 15 min walk from your hotel (open to 22:30, last entry 22:00).",
         ],
         photo: "Shinsekai is the best direct-flash street of the trip: giant food signs, retro neon, Tsūtenkaku behind you.",
         snack: "Shinsekai kushikatsu (fried skewers) — again: no double-dipping.",
@@ -1958,6 +1989,8 @@ const LINES = {
     ["JB07", "中野", "Nakano"], ["JB08", "東中野", "Higashi-Nakano"], ["JB09", "大久保", "Ōkubo"], ["JB10", "新宿", "Shinjuku"], ["JB11", "代々木", "Yoyogi"],
     ["JB12", "千駄ケ谷", "Sendagaya"], ["JB13", "信濃町", "Shinanomachi"], ["JB14", "四ツ谷", "Yotsuya"], ["JB15", "市ケ谷", "Ichigaya"], ["JB16", "飯田橋", "Iidabashi"],
     ["JB17", "水道橋", "Suidōbashi"], ["JB18", "御茶ノ水", "Ochanomizu"], ["JB19", "秋葉原", "Akihabara"]] },
+  A: { name: "Toei Asakusa Line", jp: "浅草線", color: "#ec6e65", stops: [["A09", "大門", "Daimon"], ["A10", "新橋", "Shimbashi"], ["A11", "東銀座", "Higashi-ginza"], ["A12", "宝町", "Takarachō"], ["A13", "日本橋", "Nihombashi"]] },
+  OT: { name: "Tanimachi Line (Osaka Metro)", jp: "谷町線", color: "#8e5c9e", stops: [["T20", "東梅田", "Higashi-Umeda"], ["T21", "南森町", "Minami-morimachi"], ["T22", "天満橋", "Temmabashi"], ["T23", "谷町四丁目", "Tanimachi 4-chōme"]] },
 };
 
 /* ---------------- Park treats (for the Live waits → 🍡 Treats tab) ----------------
