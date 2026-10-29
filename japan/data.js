@@ -340,7 +340,7 @@ const DAYS = [
 
   /* ---------------- DAY 4 ---------------- */
   {
-    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "21:00", "note": "You're out of Disney by about 3:15 today. Tonight ends in Ueno: the Yamanote runs until about midnight, or sleep over at 24 Kaikan and take the first train."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
+    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "21:00", "note": "You're out of Disney by about 3:15 today. Tonight ends in Ueno: leave 24 Kaikan by midnight for the 12:34 AM last Chūō-Sōbu train from Akihabara, or sleep over and take the first train."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
     theme: "spooky", emoji: "🎃", deco: ["🎃", "🏰", "🦇", "👻", "🍬", "🕸️"],
     kicker: "Day 4 · Spooky season, castle edition",
     tagline: "Villains, pumpkins and a castle at blue hour. Wear the costume one more time — it's allowed.",
@@ -416,34 +416,25 @@ const DAYS = [
         photo: "Night shot: walk out the Marunouchi side (丸の内中央口) for the 1914 red-brick Tokyo Station building lit up. Shoot it from across the plaza in front of the KITTE building.",
       },
       {
-        t: "18:30", title: "Ueno: Ameyoko on the walk to dinner 🏮", ll: [35.7101, 139.7744], say: ["kore", "ikura"], pic: "Ameyoko Ueno night street photo", rx: "neon", place: "Ameyoko, Ueno, Tokyo",
-        ride: [{"ln": "JYE", "from": "JY01", "to": "JY05", "dir": "上野・池袋方面 (toward Ueno / Ikebukuro) — or the light-blue Keihin-Tohoku Line toward 大宮 Ōmiya; both stop at Ueno", "type": "Every Yamanote train stops at all 4 stops.", "wrong": "Next stop 有楽町 Yūrakuchō (JY30) = wrong way.", "min": 8, "exit": "Shinobazu Exit (不忍口) → Ameyoko starts right across the street"}],
+        t: "18:30", title: "Yakiniku in Ueno 🍖", ask: [{"jp": "一人ですが、大丈夫ですか？", "ro": "Hitori desu ga, daijōbu desu ka?", "en": "It's just me. Is that OK?", "hear": "yesno"}], ll: [35.7096, 139.7745], say: ["hitori", "oishii", "nama"], place: "Yakiniku Iwasaki, 2-8-2 Ueno, Taito, Tokyo",
+        ride: [{"ln": "JYE", "from": "JY01", "to": "JY04", "dir": "上野・池袋方面 (toward Ueno / Ikebukuro)", "type": "Every Yamanote train stops at all 3 stops.", "wrong": "Next stop 有楽町 Yūrakuchō (JY30) = wrong way.", "min": 6, "exit": "Okachimachi North Exit → Yakiniku Iwasaki is ~5 min north (2-8-2 Ueno)"}],
         how: [
-          "Back through the gates and 4 stops north to Ueno (~8 min).",
-          "Ameyoko (アメ横) runs under and beside the train tracks from Ueno to Okachimachi: snack stalls, sneaker shops, cheap Japanese snacks. Stalls start closing around 7–8 PM, so it's a quick stroll tonight.",
-          "It ends right by Yakiniku Iwasaki, so just walk south to dinner.",
-        ],
-        snack: "Street-food stalls here: only stop at ones showing 4.0+ on Google Maps.",
-        photo: "Shoot down the alley under the elevated tracks when a train passes overhead, neon signs on both sides.",
-      },
-      {
-        t: "19:15", title: "Yakiniku in Ueno 🍖", ask: [{"jp": "一人ですが、大丈夫ですか？", "ro": "Hitori desu ga, daijōbu desu ka?", "en": "It's just me. Is that OK?", "hear": "yesno"}], ll: [35.7096, 139.7745], say: ["hitori", "oishii", "nama"], place: "Yakiniku Iwasaki, 2-8-2 Ueno, Taito, Tokyo",
-        how: [
-          "Yakiniku Iwasaki (2-8-2 Ueno, ~7 min walk south of Ueno Station toward Okachimachi): Google 4.8 from 2,300+ reviews, listed as open late into the night. Search “Yakiniku Iwasaki Ueno” in Google Maps.",
+          "From Tokyo Character Street, back through the Yaesu gates and 3 stops north on the Yamanote to Okachimachi (~6 min). Yakiniku Iwasaki (2-8-2 Ueno, ~5 min walk): Google 4.8 from 2,300+ reviews, listed as open late into the night. Search “Yakiniku Iwasaki Ueno” in Google Maps.",
           "Backup: Wagyu Yakiniku USHIHACHI Kiwami Ueno (FUNDES Ueno 10F, right by the station): Google 4.6, open until 11 PM.",
           "Point at the menu photos. Start with tongue (タン) and kalbi (カルビ).",
         ],
         snack: "Wagyu kalbi, a beer and rice. You've earned it after a full Disney day.",
       },
       {
-        t: "21:00", title: "Long night at 24 Kaikan Ueno 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.712, 139.779], say: ["shukuhaku", "kyukei", "kondomu2"], place: "24会館 上野 (24 Kaikan Ueno)",
+        t: "19:45", title: "24 Kaikan Ueno, then the last train home 🧖", night: true, fixed: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.7155, 139.781], say: ["kyukei", "kondomu2"], place: "24会館 上野, 1-8-7 Kita-Ueno, Taito, Tokyo",
+        ride: [{"ln": "JYE", "from": "JY05", "to": "JY03", "dir": "東京・品川方面 (toward Tokyo / Shinagawa) — Platform 3", "type": "12:25, 12:28 or 12:33 AM. Ride 2 stops; board cars 3–6 for the fastest transfer.", "wrong": "Next stop 鶯谷 Uguisudani (JY06) = wrong way.", "min": 4, "exit": "At Akihabara, follow the yellow Chūō-Sōbu Line signs to Platform 5"}, {"ln": "JB", "from": "JB19", "to": "JB10", "dir": "三鷹・中野方面 (toward Nakano) — Platform 5, yellow local", "type": "⚠️ 12:34 AM is the LAST train. The next one is 5:02 AM. Front cars (1–2) for the fastest exit at Shinjuku.", "wrong": "Next stop 浅草橋 Asakusabashi (JB20) = wrong way.", "min": 19, "exit": "Shinjuku South East Exit → walk ~13 min to the hotel (arrive ~1:05 AM)"}],
         how: [
-          "It's on Shōwa-dōri, a short walk from Ueno Station's east side. Search 24会館 上野 in Google Maps.",
-          "Get there at 9 PM or later: that's when the ~¥2,800 overnight rate (up to 14 hours, cash) starts. English is spoken and the signs are in English too.",
-          "Tonight's the one to go long: Friday starts at 10 AM, and Asakusa is 5 minutes away.",
-          "Sleeping there? Ask for the overnight stay (宿泊). Trains restart around 5 AM, and Friday starts in Asakusa, 3 stops away on the Ginza Line.",
+          "From Iwasaki, walk ~10–15 min north-east to 1-8-7 Kita-Ueno. Search 24会館 上野 in Google Maps.",
+          "You're going home tonight, so ask for the short stay (休憩, kyūkei) instead of the overnight rate. Cash. English is spoken and the signs are in English too.",
+          "⏰ Leave 24 Kaikan by 12:00 AM. It's a 14-min walk to Ueno Station (Park Exit), and you need the 12:25 Yamanote at the latest for the 12:34 last Chūō-Sōbu train from Akihabara.",
+          "Miss it? No stress: go back and switch to the overnight stay (宿泊). Friday starts in Asakusa, 3 stops away on the Ginza Line.",
         ],
-        spicy: "Thursday + post-Disney legs + nowhere to be until 10 AM = the long sauna night you asked for 😏",
+        spicy: "Thursday + post-Disney legs = a proper soak and whatever happens after 😏 Just watch the clock.",
       },
     ],
   },
