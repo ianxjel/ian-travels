@@ -622,7 +622,7 @@ const DAYS = [
           "Want it straight to the point? Deep Throat Men (3F Wakatsuki Bldg, Kabukichō) is a foreigner-friendly cruising bar with English-speaking staff, 5 min from Golden Gai.",
         ],
         spicy: "Friday is the main event — the bear-and-muscle crowd is out in force at Eagle Blue. Bring ¥20,000+ cash for small bars, and if the night ends at 24 Kaikan, wear your locker key the way you mean it 😉. Stay out of any bar a Kabukichō tout steers you to. Poppers and cannabis are illegal in Japan — don't carry or accept any.",
-        snack: "The 4 AM move: konbini onigiri + Pocari Sweat on the walk home. Your Saturday self will thank you.",
+        snack: "The 4 AM move: grab konbini onigiri + a Pocari Sweat and have them back at the hotel. Your Saturday self will thank you.",
       },
       {
         t: "28:00", title: "After-club crash at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["shukuhaku", "kondomu2"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
