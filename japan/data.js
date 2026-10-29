@@ -2096,5 +2096,13 @@ const PARK_TREATS = {
     { name: "Ganache Sandwich (chocolate + coffee)", price: 850, tag: "classic", land: "New Orleans Square", where: "Café Orleans", why: "New 'Sweet Moments' dessert." },
     { name: "Galette Bretonne (nuts + chocolate)", price: 850, tag: "classic", land: "World Bazaar", where: "Sweetheart Café", why: "New 'Sweet Moments' dessert; ¥1,450 as a café set." },
     { name: "Sea Salt Ice Monaka · Mickey Ice Bars", price: 400, tag: "classic", jp: true, land: "Everywhere", where: "Ice cream wagons", why: "Cheap, cute, and quick between rides." },
+    { name: "Hungry Bear Curry (chicken + beef patty) or Pork Cutlet Curry", price: 1200, tag: "classic", jp: true, land: "Westernland", where: "Hungry Bear Restaurant", why: "Japanese curry rice, the park's best-value real meal. Google 4.3. Lines are shortest before noon, mid-afternoon or after 8 PM." },
+    { name: "Japanese set meal: tempura, udon or eel on omelette", price: null, tag: "classic", jp: true, land: "World Bazaar", where: "Restaurant Hokusai (2F)", why: "Sit-down Japanese food with Mickey-shaped desserts. Google 4.0. A calm break from the crowds." },
+    { name: "Mickey glove Chicken Pao (steamed bun)", price: null, tag: "classic", jp: true, land: "Tomorrowland", where: "Plazma Ray's Diner", why: "A fluffy Chinese-style steamed bun shaped like Mickey's glove. Very Tokyo Disney, very photogenic." },
+    { name: "Mike Wazowski Melon Bread", price: null, tag: "classic", jp: true, land: "World Bazaar", where: "Sweetheart Café", why: "Japan's crispy-sweet melon pan with a Mike face. Grab one for the train." },
+    { name: "Little Green Alien Mochi", price: null, tag: "classic", jp: true, land: "Tomorrowland (check the app)", where: "Snack outlets near Toy Story / Tomorrowland", why: "Three Toy Story aliens as squishy mochi with sweet fillings. Tokyo-only and an Instagram classic." },
+    { name: "Smoked Turkey Leg", price: null, tag: "classic", land: "Westernland", where: "Chuck Wagon (food cart)", why: "The giant smoked drumstick. Same idea as Orlando's, so skip it if you're saving room." },
+    { name: "Popcorn: Japan-only flavors", price: null, tag: "popcorn", jp: true, land: "Everywhere", where: "Popcorn wagons", why: "Flavors rotate by wagon: look for soy sauce + butter, curry, milk tea or honey. Character buckets make great souvenirs, and refills are cheap." },
+    { name: "Churros (seasonal flavors)", price: null, tag: "classic", land: "Everywhere", where: "Churro wagons", why: "Tokyo churros come in rotating flavors you won't find at WDW. Check the wagon sign." },
   ],
 };
