@@ -340,7 +340,7 @@ const DAYS = [
 
   /* ---------------- DAY 4 ---------------- */
   {
-    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "20:30", "note": "Same as Tuesday: trains from Maihama until around midnight, but leave buffer for the long Tokyo Station transfer."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
+    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "20:30", "note": "Same as Tuesday: trains from Maihama until around midnight, but leave buffer for the long Tokyo Station transfer."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
     theme: "spooky", emoji: "🎃", deco: ["🎃", "🏰", "🦇", "👻", "🍬", "🕸️"],
     kicker: "Day 4 · Spooky season, castle edition",
     tagline: "Villains, pumpkins and a castle at blue hour. Wear the costume one more time — it's allowed.",
@@ -415,7 +415,7 @@ const DAYS = [
 
   /* ---------------- DAY 5 ---------------- */
   {
-    id: "d5", date: "2026-10-30", prep: ["Tomorrow is the LAST day of tax-free at the register: passport in your sling, ¥5,000+ per store", "Tomorrow is Akihabara + Nakano Broadway: bring cash for the card shops and ¥100 coins for gachapon", "Pokémon Café 7:15 PM: confirmation in Trip → Tickets; you leave the hotel at 6:25", "Halloween costume ready", "Look over your Trip → Merch list so the haul goes fast", "Big night tonight — water before bed 😅 No alarm: Saturday starts at 11:30"], rain: "Shibuya Sky's open-air rooftop closes in heavy rain or strong wind (the indoor 46F deck stays open). Backup: the free Tokyo Metropolitan Government observatory in Shinjuku. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
+    id: "d5", date: "2026-10-30", prep: ["Tomorrow is the LAST day of tax-free at the register: passport in your sling, ¥5,000+ per store", "Tomorrow is Akihabara + Nakano Broadway: bring cash for the card shops and ¥100 coins for gachapon", "Pokémon Café 7:15 PM: confirmation in Trip → Tickets; you leave the hotel at 6:25", "Halloween costume ready", "Look over your Trip → Merch list so the haul goes fast — the 🎁 family gift haul is at Don Quijote Akihabara, 1:30 PM", "Big night tonight — water before bed 😅 No alarm: Saturday starts at 11:30"], rain: "Shibuya Sky's open-air rooftop closes in heavy rain or strong wind (the indoor 46F deck stays open). Backup: the free Tokyo Metropolitan Government observatory in Shinjuku. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
     theme: "steamy", emoji: "💦", deco: ["💦", "🔥", "🍑", "🪩", "💋", "😈"],
     kicker: "Day 5 · Friday is for the boys",
     tagline: "Temples by day, Ni-chome by night. Hydrate, moisturize, and stay out till the trains restart.",
@@ -459,6 +459,8 @@ const DAYS = [
           "From Oshiage (Skytree) take the Hanzōmon line straight to Omotesando (~30 min).",
           "Exit A2; Tokyu Plaza's kaleidoscope mirror escalator is on the corner.",
           "Ahead of schedule? Takeshita Street (Harajuku's colorful crepe-and-fashion street) and Meiji Jingū shrine are ~10 min north. The shrine gates close at sunset.",
+          "🎁 Gift stop: Kiddy Land (6-1-9 Jingūmae, a 3-min walk up Omotesandō avenue, 11:00–20:00) is 5 floors of Japanese toys: Tomica cars + Plarail trains (3F), Sanrio + Rilakkuma (4F), Disney (2F), Snoopy (B1). Tax-free over ¥5,000 — passport out.",
+          "🎁 If time: @cosme TOKYO by Harajuku Station (1-14-27 Jingūmae, 11:00–21:00), 3 floors of Japanese skincare ranked by Japan's biggest beauty-review site. Otherwise do skincare tomorrow in Akihabara.",
         ],
         photo: "Fit check: full-body shot in the mirror entrance from the bottom of the escalator. Then the free rooftop terrace upstairs.",
         snack: "Soufflé pancakes: A Happy Pancake Omotesandō (its branches sit around Google 4.1–4.2). Put your name down (20–30 min wait), then do the MHA café / mirror photos.",
@@ -479,6 +481,8 @@ const DAYS = [
         ride: [{"ln": "F", "from": "F16", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Trains for 横浜 Yokohama / 元町・中華街 Motomachi-Chūkagai use the same platforms — next stop 代官山 Daikanyama = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
         how: [
           "Fukutoshin line Shibuya → Shinjuku-sanchome (~10 min, no transfer).",
+          "🎁 On the way, polos for your uncle: BEAMS JAPAN (3-32-6 Shinjuku, open until 8 PM). 2F is menswear: BEAMS' own made-in-Japan line and smaller Japanese labels. 1F has Japanese crafts and souvenirs if anyone else is still on your list. Japanese sizes run one smaller (LL ≈ US L).",
+          "Backup if BEAMS isn't it: Isetan Men's (Shinjuku-sanchōme, also open until 8 PM): 8 floors of menswear, tax-free counter on site.",
           "Nap 30 min. Shower. Outfit on. Dinner is yakitori on the way to Golden Gai.",
         ],
         photo: "Fit check in the hotel mirror before you go out — the photo-dump opener.",
@@ -550,7 +554,19 @@ const DAYS = [
         photo: "Chūō-dōri's wall of anime billboards: stand on the sidewalk by the Electric Town Exit and shoot up the street.",
       },
       {
-        t: "14:15", title: "Nakano Broadway: Mandarake heaven", quest: "🍑 Ask Mandarake for the gay manga section: ゲイ漫画のコーナーはありますか？", ask: [{"jp": "ゲイ漫画のコーナーはありますか？", "ro": "Gei manga no kōnā wa arimasu ka?", "en": "Is there a gay manga section?", "hear": "kai"}], ll: [35.7086, 139.6658], say: ["kore", "ikura", "menzei"], place: "Nakano Broadway, Tokyo",
+        t: "13:30", title: "🎁 Family gift haul (last tax-free day)", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "母へのプレゼントです。おすすめは？", "ro": "Haha e no purezento desu. Osusume wa?", "en": "It's a gift for my mom. What do you recommend?", "hear": "none"}], ll: [35.6987, 139.7714], say: ["menzei", "kore", "fukuro"], place: "Don Quijote Akihabara, 4-3-3 Sotokanda, Tokyo",
+        how: [
+          "Don Quijote Akihabara (4-3-3 Sotokanda, open 24 h, ~3 min from the Electric Town Exit) has skincare, toys and Christmas lights under one roof — one tax-free checkout easily clears the ¥5,000 minimum. Say “Menzei de onegai shimasu” BEFORE they scan.",
+          "Skincare, sister + sister-in-law: Hada Labo Gokujyun lotion, Biore UV Aqua Rich sunscreen, Melano CC vitamin-C serum, Lululun face-mask packs.",
+          "Skincare, mom + grandma: Kosé Sekkisei lotion (the iconic blue bottle), Shiseido Elixir (anti-aging), a Japanese horse-oil cream or Shiseido Urea hand cream.",
+          "Toys: Tomica cars and Plarail trains, Sylvanian Families, Pokémon plush, Kracie Popin' Cookin' DIY candy kits (very Japanese, kids love them), a kendama, plus gachapon capsules as stocking stuffers.",
+          "Christmas lights for dad: battery or USB LED strings, or LED paper-lantern (chōchin) lights for a Japanese twist. Plug-in sets must say AC100–240V on the box — 100V-only ones aren't safe on US 120V.",
+          "Bigger toy floor if Donki is too chaotic: Yodobashi Akiba (5 min east, across the tracks) has a huge toy floor and its own tax-free counter.",
+        ],
+        tip: "Tax-free skincare comes sealed in a bag: don't open it until you're home. Liquids go in the suitcase you ship tomorrow, not your carry-on.",
+      },
+      {
+        t: "14:30", title: "Nakano Broadway: Mandarake heaven", quest: "🍑 Ask Mandarake for the gay manga section: ゲイ漫画のコーナーはありますか？", ask: [{"jp": "ゲイ漫画のコーナーはありますか？", "ro": "Gei manga no kōnā wa arimasu ka?", "en": "Is there a gay manga section?", "hear": "kai"}], ll: [35.7086, 139.6658], say: ["kore", "ikura", "menzei"], place: "Nakano Broadway, Tokyo",
         ride: [{"ln": "JB", "from": "JB19", "to": "JB07", "dir": "三鷹・中野方面 (toward Mitaka / Nakano) — yellow local", "type": "Every yellow local stops at Nakano.", "wrong": "Next stop 浅草橋 Asakusabashi = wrong way.", "min": 28, "exit": "北口 North Exit → Sun Mall arcade → Nakano Broadway"}],
         how: [
           "Stay on the yellow local the other way, all the way to Nakano (~28 min). It goes straight through Shinjuku.",
@@ -1932,6 +1948,15 @@ const MERCH_SEEDS = [
   { item: "Momiji manjū gift box", where: "Miyajima", day: "d9" },
   { item: "Fuji-shaped sweets / regional KitKats", where: "Kawaguchiko + Narita", day: "d10" },
   { item: "Konbini snack haul for home", where: "Any konbini", day: "d11" },
+];
+// 🎁 family gifts (added Oct 29) — also merged into lists already saved on the phone
+const GIFT_SEEDS = [
+  { id: "g-toys", item: "🎁 Toys for the nieces + nephews (Tomica, Sylvanian, Popin' Cookin' kits, gachapon)", where: "Kiddy Land Harajuku (Fri) · Don Quijote / Yodobashi Akiba (Sat)", day: "d6", forWho: "Nieces + nephews" },
+  { id: "g-sis", item: "🎁 Skincare: Hada Labo lotion, Biore UV sunscreen, Melano CC serum, Lululun masks", where: "Don Quijote Akihabara (Sat) · @cosme TOKYO (Fri)", day: "d6", forWho: "Sister + sister-in-law" },
+  { id: "g-mom", item: "🎁 Skincare: Sekkisei lotion or Shiseido Elixir", where: "Don Quijote Akihabara (Sat) · @cosme TOKYO (Fri)", day: "d6", forWho: "Mom" },
+  { id: "g-grandma", item: "🎁 Skincare: Shiseido Elixir, horse-oil cream or Urea hand cream", where: "Don Quijote Akihabara (Sat)", day: "d6", forWho: "Grandma" },
+  { id: "g-dad", item: "🎁 Christmas lights: battery/USB LED or paper-lantern lights (plug-ins must say AC100–240V)", where: "Don Quijote Akihabara (Sat) · LOFT Umeda (Mon, backup)", day: "d6", forWho: "Dad" },
+  { id: "g-uncle", item: "🎁 Japanese polos (go one size up: LL ≈ US L)", where: "BEAMS JAPAN Shinjuku 2F (Fri) · Isetan Men's (backup)", day: "d5", forWho: "Uncle" },
 ];
 
 /* ---------------- Train lines + station numbers (for the 🚆 Ride check boxes) ----------------

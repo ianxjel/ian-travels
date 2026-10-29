@@ -1034,6 +1034,7 @@
   function merch() {
     let m = store.get("merch", null);
     if (!m) { m = MERCH_SEEDS.map((x, i) => ({ id: "m" + i, forWho: "", price: "", bought: false, ...x })); store.set("merch", m); }
+    if (typeof GIFT_SEEDS !== "undefined" && !store.get("mig:gifts", false)) { GIFT_SEEDS.forEach(g => { if (!m.some(x => x.id === g.id)) m.push({ price: "", bought: false, ...g }); }); store.set("merch", m); store.set("mig:gifts", true); }
     return m;
   }
   function merchHtml() {
