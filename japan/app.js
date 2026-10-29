@@ -1210,22 +1210,45 @@
     [/gondola/i, 0, "Singing gondoliers around Mediterranean Harbor. Great photos."],
     // Tokyo Disneyland
     [/big thunder/i, 3, "Runaway mine-train coaster: the park's best thrill."],
-    [/splash mountain/i, 3, "Log flume ending in a big 16 m drop. You will get wet."],
+    [/splash mountain/i, 3, "Log flume ending in a big 16 m drop. You will get wet. Gone from WDW (it's Tiana's now), so ride it here while you can."],
     [/space mountain/i, 3, "Closed while it's rebuilt (new version opening 2027)."],
     [/star tours/i, 2, "Motion simulator through the Star Wars galaxy; different route each ride."],
     [/baymax/i, 2, "Whip-style spinning ride with a dance beat. Surprisingly intense."],
-    [/pirates/i, 1, "Boat ride with a couple of small drops."],
+    [/pirates/i, 1, "Boat ride with a couple of small drops. The longer Disneyland-style version, with a bayou opening and more scenes than Magic Kingdom's."],
     [/gadget/i, 1, "Short kiddie coaster."],
     [/roger rabbit|car ?toon/i, 1, "Spin-your-own taxi through Toontown."],
     [/tea party|teacup/i, 1, "Classic spinning teacups: spin as hard as you dare."],
     [/beauty and the beast|enchanted tale/i, 0, "Trackless 'dancing' cups through the Beast's castle. Stunning."],
-    [/haunted mansion/i, 0, "Doom-buggy dark ride (Holiday Nightmare overlay this season)."],
+    [/haunted mansion/i, 0, "Doom-buggy dark ride with the Nightmare Before Christmas “Holiday Nightmare” overlay this season — WDW doesn't have it."],
     [/hunny hunt/i, 0, "Trackless honey-pot ride through Pooh's storybook."],
     [/monsters/i, 0, "Flashlight game hunting hidden monsters."],
     [/buzz|astro blasters/i, 0, "Laser-shooting game."],
     [/jungle cruise/i, 0, "Boat ride with a (Japanese) skipper spiel."],
   ];
   const rideInfo = name => { const m = RIDE_INFO.find(([re]) => re.test(name)); return m ? { thrill: m[1], desc: m[2] } : { thrill: 0, desc: "" }; };
+  // near-identical twins of Walt Disney World rides (you can ride these back home in Orlando)
+  const WDW_COPY = [
+    [/big thunder/i, "Big Thunder Mountain Railroad · Magic Kingdom"],
+    [/star tours/i, "Star Tours · Hollywood Studios"],
+    [/buzz|astro blasters/i, "Buzz Lightyear's Space Ranger Spin · Magic Kingdom"],
+    [/jungle cruise/i, "Jungle Cruise · Magic Kingdom"],
+    [/small world/i, "it's a small world · Magic Kingdom"],
+    [/peter pan's flight/i, "Peter Pan's Flight · Magic Kingdom"],
+    [/dumbo/i, "Dumbo the Flying Elephant · Magic Kingdom"],
+    [/alice's tea party|mad tea party|teacup/i, "Mad Tea Party · Magic Kingdom"],
+    [/castle carrousel/i, "Prince Charming Regal Carrousel · Magic Kingdom"],
+    [/grand circuit/i, "Tomorrowland Speedway · Magic Kingdom"],
+    [/mark twain|riverboat/i, "Liberty Square Riverboat · Magic Kingdom"],
+    [/tom sawyer/i, "Tom Sawyer Island · Magic Kingdom"],
+    [/swiss family/i, "Swiss Family Treehouse · Magic Kingdom"],
+    [/country bear/i, "Country Bear Musical Jamboree · Magic Kingdom"],
+    [/shootin/i, "Frontierland Shootin' Arcade · Magic Kingdom"],
+    [/toy story mania/i, "Toy Story Mania! · Hollywood Studios"],
+    [/soaring/i, "Soarin' · EPCOT"],
+    [/turtle talk/i, "Turtle Talk with Crush · EPCOT"],
+    [/jasmine/i, "Magic Carpets of Aladdin · Magic Kingdom"],
+  ];
+  const wdwTwin = name => { const m = WDW_COPY.find(([re]) => re.test(name)); return m ? m[1] : ""; };
   const SINGLE_RIDER = /raging spirits|frozen journey|peter pan's never ?land|indiana jones|beauty and the beast|enchanted tale/i;
   const flames = n => n ? `<span class="thrill" title="Thrill level">${"🔥".repeat(n)}</span>` : "";
   let waitsTimer = null;
@@ -1303,7 +1326,8 @@
       <div id="wPlan"></div>
       <div class="waits-tools"><button class="btn" id="wRefresh" type="button">🔄 Refresh</button>
         <label class="wsort"><input type="checkbox" id="wThrill" ${store.get("wThrill", true) ? "checked" : ""}> 🔥 Thrill first</label>
-        <label class="wsort"><input type="checkbox" id="wPicks" ${store.get("wPicks", false) ? "checked" : ""}> ⭐ Picks</label></div>
+        <label class="wsort"><input type="checkbox" id="wPicks" ${store.get("wPicks", false) ? "checked" : ""}> ⭐ Picks</label>
+        <label class="wsort"><input type="checkbox" id="wNoWdw" ${store.get("wNoWdw", false) ? "checked" : ""}> 🇺🇸 Skip WDW copies</label></div>
       <div id="wList"><div class="card muted">Loading live waits…</div></div>
       </div>
       <p class="mini-note">Wait times come from public feeds (themeparks.wiki / queue-times.com) and can lag a few minutes. The official Tokyo Disney Resort app is the final word, and it's where you buy Premier Access.</p>`;
@@ -1321,6 +1345,7 @@
     };
     $("#wRefresh").onclick = load;
     $("#wPicks").onchange = e => { store.set("wPicks", e.target.checked); lastWaits ? paintWaits(lastWaits.key, lastWaits.rows, lastWaits.src) : load(); };
+    $("#wNoWdw").onchange = e => { store.set("wNoWdw", e.target.checked); lastWaits ? paintWaits(lastWaits.key, lastWaits.rows, lastWaits.src) : load(); };
     $("#wThrill").onchange = e => { store.set("wThrill", e.target.checked); lastWaits ? paintWaits(lastWaits.key, lastWaits.rows, lastWaits.src) : load(); };
     load();
     clearInterval(waitsTimer);
@@ -1396,6 +1421,9 @@
     const P = PARKS[key]; const picksOnly = store.get("wPicks", false);
     const isPick = r => P.picks.test(r.name) || rideInfo(r.name).thrill >= 2;
     const thrillFirst = store.get("wThrill", true);
+    const noWdw = store.get("wNoWdw", false);
+    const hiddenWdw = noWdw ? rows.filter(r => wdwTwin(r.name)).length : 0;
+    if (noWdw) rows = rows.filter(r => !wdwTwin(r.name));
     const open = rows.filter(r => r.type === "ride" && r.status === "OPERATING" && r.wait != null && (!picksOnly || isPick(r))).sort((a, b) => thrillFirst ? (rideInfo(b.name).thrill - rideInfo(a.name).thrill) || (a.wait - b.wait) : a.wait - b.wait);
     const shows = rows.filter(r => r.type === "show" && r.shows.length && (!picksOnly || isPick(r)));
     const down = rows.filter(r => r.type === "ride" && r.status !== "OPERATING" && (!picksOnly || isPick(r)));
@@ -1412,6 +1440,7 @@
       <h3>🧭 Your next moves</h3>
       ${dpaHtml(key, rows)}
       ${left > 0 ? `<p class="muted">Park closes at ${fmt12(P.close)} — about <b>${Math.floor(left / 60)}h ${left % 60}m</b> left, roughly <b>${Math.max(1, Math.floor(left / (avg + 15)))} more rides</b> at today's pace.</p>` : `<p class="muted">Park hours are over for today.</p>`}
+      ${hiddenWdw ? `<p class="muted">🇺🇸 Skipping ${hiddenWdw} ride${hiddenWdw > 1 ? "s" : ""} you can already do at Walt Disney World.</p>` : ""}
       ${rideCount ? `<p class="muted">✓ ${rideCount} ride${rideCount > 1 ? "s" : ""} done today — those (and your Premier Access rides) are skipped below.</p>` : ""}
       ${bestPicks.length ? `<ol class="wbest">${bestPicks.map(r => `<li><span class="wnum ${waitClass(r.wait)}">${r.wait}<small>min</small></span><span>${esc(r.name)} ${flames(rideInfo(r.name).thrill)}${SINGLE_RIDER.test(r.name) ? ` <em class="wbadge single">👤 Single rider</em>` : ""}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span></li>`).join("")}</ol>` : `<p>No new favorites are open right now — check the list below.</p>`}
       ${paNow.length ? `<p class="wpa">🎟️ Premier Access on sale: ${paNow.map(r => `<b>${esc(r.name)}</b>${r.pa.start ? ` (${hhmm(r.pa.start)}${r.pa.end ? "–" + hhmm(r.pa.end) : ""})` : ""}`).join(", ")} — buy in the official app.</p>` : ""}
@@ -1421,7 +1450,7 @@
     const row = r => { const cnt = Object.entries(rode).filter(([n]) => sameRide(n, r.name)).reduce((a, [, c]) => a + c, 0);
       return `<div class="wrow ${isPick(r) ? "pick" : ""} ${cnt ? "rode" : ""}">
         <span class="wnum ${waitClass(r.wait)}">${r.wait == null ? "—" : r.wait}<small>${r.wait == null ? "" : "min"}</small></span>
-        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${SINGLE_RIDER.test(r.name) ? `<em class="wbadge single">👤 Single rider</em>` : ""}${booked(r) ? `<em class="wbadge mine">Your DPA</em>` : r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}${cnt ? `<em class="wdone">✓ rode${cnt > 1 ? " ×" + cnt : ""}</em>` : ""} ${flames(rideInfo(r.name).thrill)}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span>
+        <span class="wname">${isPick(r) ? "⭐ " : ""}${esc(r.name)}${SINGLE_RIDER.test(r.name) ? `<em class="wbadge single">👤 Single rider</em>` : ""}${wdwTwin(r.name) ? `<em class="wbadge wdw" title="${esc(wdwTwin(r.name))}">🇺🇸 Same as WDW</em>` : ""}${booked(r) ? `<em class="wbadge mine">Your DPA</em>` : r.pa && /AVAILABLE/i.test(r.pa.state) ? `<em class="wbadge">Premier Access</em>` : ""}${cnt ? `<em class="wdone">✓ rode${cnt > 1 ? " ×" + cnt : ""}</em>` : ""} ${flames(rideInfo(r.name).thrill)}${rideInfo(r.name).desc ? `<small class="wdesc">${esc(rideInfo(r.name).desc)}</small>` : ""}</span>
         ${cnt ? `<button class="btn sm ghost" data-unrode="${esc(r.name)}" type="button" aria-label="Undo">↺</button>` : ""}
         <button class="btn sm" data-rode="${esc(r.name)}" type="button">✓ Rode</button>
       </div>`; };

@@ -844,3 +844,4 @@ details.wlist summary { cursor: pointer; font-weight: 700; }
 .card.ahead .btn { justify-self: start; }
 .time .was { font: 500 11px/1.2 var(--font-body, inherit); color: var(--muted, #888); text-decoration: line-through; }
 .linkbtn { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }
+.wbadge.wdw { background: #3c3b6e; }
