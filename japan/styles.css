@@ -858,3 +858,4 @@ details.wlist summary { cursor: pointer; font-weight: 700; }
 .step.open .step-hints { display: none; }
 .step-body .between { margin: 12px 0 0; }
 .step-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 10px; }
+.ahead-btns { display: flex; gap: 8px; flex-wrap: wrap; }

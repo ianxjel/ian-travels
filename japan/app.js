@@ -257,6 +257,7 @@
     const done = store.get("done", {});
     let last = -1; steps.forEach((s, i) => { if (done[s.key]) last = i; });
     const nxt = steps[last + 1];
+    if (last >= 0 && store.get("nopull:" + day.id, "") === steps[last].key) return null;
     if (last < 0 || !nxt || nxt.fixed) return null;
     const start = Math.ceil((jstMinutes() + 10) / 5) * 5;
     const gap = toMin(nxt.t) - start;
@@ -267,10 +268,9 @@
   const durTxt = m => m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? " " + (m % 60) + " min" : ""}` : `${m} min`;
   function aheadHtml(day, a) {
     return `<div class="card ahead">
-      <b>⏩ You're ahead of schedule</b>
-      <small>“${esc(a.next.title)}” is set for ${fmt12(a.next.t)} — about ${durTxt(a.gap)} away.</small>
-      <button class="btn primary" data-pull="${day.id}">Pull ${a.keys.length > 1 ? `the next ${a.keys.length} stops` : "it"} ${durTxt(a.gap)} sooner</button>
-      ${a.stop ? `<small class="muted">${esc(a.stop.title)} (${fmt12(a.stop.t)}) and everything after it stay put — it's a booked or fixed time.</small>` : ""}
+      <b>⏩ You're ${durTxt(a.gap)} ahead. Move ${a.keys.length > 1 ? `the next ${a.keys.length} stops` : "the next stop"} up?</b>
+      <small>“${esc(a.next.title)}” would start at ${fmt12(hhmm2(toMin(a.next.t) - a.gap))} instead of ${fmt12(a.next.t)}.${a.stop ? ` ${esc(a.stop.title)} (${fmt12(a.stop.t)}) stays put — it's a fixed time.` : ""}</small>
+      <div class="ahead-btns"><button class="btn primary" data-pull="${day.id}">Yes, move up</button><button class="btn" data-nopull="${day.id}|${a.after}">No, keep times</button></div>
     </div>`;
   }
 
@@ -1477,7 +1477,7 @@
   document.addEventListener("click", e => {
     const tile = e.target.closest("[data-tile]");
     if (tile) { $$(".tile").forEach(x => x.classList.toggle("picked", x === tile)); return; }
-    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-pull],[data-unpull],[data-stoggle],[data-sall],[data-variant],[data-taxi],[data-clip],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
+    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-pull],[data-unpull],[data-stoggle],[data-sall],[data-nopull],[data-variant],[data-taxi],[data-clip],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
     if (t.dataset.prep) {
@@ -1549,6 +1549,7 @@
       const o = {}; st.forEach(x => o[x.key] = !all); store.set("open:" + id, o);
       const y = window.scrollY; renderDay(id); window.scrollTo(0, y); return;
     }
+    if (t.dataset.nopull) { const [id, k] = t.dataset.nopull.split("|"); store.set("nopull:" + id, k); const y = window.scrollY; renderDay(id); window.scrollTo(0, y); return; }
     if (t.dataset.pull) {
       const id = t.dataset.pull, day = dv(DAYS.find(d => d.id === id)), a = aheadInfo(day, visibleSteps(day));
       if (a) {
