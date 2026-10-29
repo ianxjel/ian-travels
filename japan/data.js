@@ -512,6 +512,7 @@ const DAYS = [
         how: [
           "1F–2F, 3-24-7 Jingūmae, ~3 min from the mirror entrance. The flagship reopened in March 2026 for BEAMS' 50th: casual menswear plus Harajuku-only collabs.",
           "Look for: heavyweight boxy tees, open-collar shirts, relaxed straight denim, knit polos. Tops in 3L/XXL.",
+          "Also on Meiji-dōri: United Arrows' Harajuku main store (the parent brand of BEAUTY&YOUTH; renovated in 2025). I couldn't confirm its current address — search ユナイテッドアローズ 原宿本店 in Google Maps.",
           "Keep it to ~25 min: Shibuya Sky's sunset slot is at 4:15, one stop away.",
         ],
       },
@@ -527,12 +528,13 @@ const DAYS = [
         snack: "Dinner: tonkatsu at Tonkatsu Maisen Aoyama (Google 4.4 from 5,000+ reviews, Tripadvisor 4.5), one stop back on the Hanzōmon line at Omotesandō (Exit A2, ~5 min walk). Open until 9 PM, English menu. Solid fuel for the big night.",
       },
       {
-        t: "18:45", title: "👕🎁 BEAMS JAPAN + Isetan Men's", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
+        t: "18:45", title: "👕🎁 UNIQLO flagship + BEAMS JAPAN + Isetan Men's", ask: [{"jp": "裾上げできますか？何時にできますか？", "ro": "Susoage dekimasu ka? Nanji ni dekimasu ka?", "en": "Can you hem these? What time will they be ready?", "hear": "time"}, {"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
         ride: [{"ln": "F", "from": "F15", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Next stop 渋谷 Shibuya (F16) = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
         how: [
           "From Maisen (Omotesandō), walk ~8 min to Meiji-jingūmae Station, then the Fukutoshin Line 2 stops to Shinjuku-sanchōme (F15 → F13). Both stores close at 8 PM.",
           "BEAMS JAPAN (3-32-6 Shinjuku) 2F: a sukajan (the embroidered souvenir jacket born from US servicemen in Japan), made-in-Japan tees and denim — and your uncle's polos (LL ≈ US L). 1F has Japanese crafts if anyone else is still on your list.",
           "Isetan Men's (across the street): 8 floors of menswear and the best one-stop for work pieces — oxford button-downs, pleated wide trousers, an unstructured stretch blazer, knit polos. Central tax-free counter on site.",
+          "UNIQLO Shinjuku Honten (3-29-1 Shinjuku, the global flagship on the old Bicqlo site, 10 AM–10 PM) — start here: heavyweight tees in XXL, the U line, pleated wide pants. Ask “Susoage dekimasu ka?” for hemming: free on pants ¥1,990+, often ready in 30–60 min, so drop them off, shop BEAMS + Isetan, then pick up (it's open until 10 PM).",
           "Tax-free still works at the register today: passport out, ¥5,000+ per store.",
         ],
       },
@@ -2038,7 +2040,7 @@ const GIFT_SEEDS = [
   { id: "p-tsta", item: "Pokémon Store Tokyo Station exclusives", where: "First Avenue Tokyo Station", day: "d4", forWho: "" },
   { id: "p-nrt", item: "Pokémon Store Narita Airport", where: "Narita Terminal 2, 4F", day: "d11", forWho: "" },
   { id: "s-sukajan", item: "👕 Sukajan (souvenir jacket) for me", where: "BEAMS JAPAN Shinjuku 2F (Fri)", day: "d5", forWho: "Me" },
-  { id: "s-tees", item: "👕 Heavyweight boxy tees in 3L/XXL + a knit polo (going out + work)", where: "BEAMS JAPAN (Fri) · Uniqlo (U line, heavyweight)", day: "d5", forWho: "Me" },
+  { id: "s-tees", item: "👕 Heavyweight boxy tees in 3L/XXL + a knit polo (going out + work)", where: "UNIQLO Shinjuku Honten (Fri, open till 10 PM) · BEAMS JAPAN", day: "d5", forWho: "Me" },
   { id: "s-work", item: "👕 Work: oxford button-downs, pleated wide trousers, unstructured stretch blazer", where: "Isetan Men's (Fri) · BEAMS / United Arrows", day: "d5", forWho: "Me" },
   { id: "s-vintage", item: "👕 American vintage in US sizes (denim, workwear, Ralph Lauren)", where: "Amerikamura, Osaka (Mon)", day: "d8", forWho: "Me" },
   { id: "g-uncle", item: "🎁 Japanese polos (go one size up: LL ≈ US L)", where: "BEAMS JAPAN Shinjuku 2F (Fri) · Isetan Men's (backup)", day: "d5", forWho: "Uncle" },
