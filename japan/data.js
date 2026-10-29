@@ -747,7 +747,8 @@ const DAYS = [
       {
         only: "b", t: "13:30", title: "Nintendo KYOTO + Pokémon Center Kyoto", ask: [{"jp": "任天堂のお店は何階ですか？", "ro": "Nintendō no omise wa nankai desu ka?", "en": "What floor is the Nintendo store?", "hear": "kai"}], ll: [35.0034, 135.7688], say: ["card", "fukuro"], pic: "Nintendo Kyoto store photo", place: "Kyoto Takashimaya S.C.",
         how: [
-          "Walk east to Shijō-Kawaramachi: both are inside Kyoto Takashimaya S.C. (T8 building).",
+          "Nintendo KYOTO is inside Kyoto Takashimaya S.C. (T8 building) at Shijō-Kawaramachi.",
+          "⚡ Pokémon Center Kyoto is NOT in the same building: it's 12 min west along Shijō-dōri in SUINA Muromachi 2F (Hankyu Karasuma Station Exit 26, or Karasuma subway Shijō Station). Open 10:00–20:00.",
           "Then taxi or walk ~25 min east to Kiyomizu-dera.",
         ],
         photo: "Grab a shot with the shop's big character displays — Kyoto is where Nintendo started as a playing-card company in 1889.",
@@ -766,7 +767,7 @@ const DAYS = [
         t: "18:00", title: "Gion + Pontocho dinner", ask: [{"jp": "一人ですが、カウンター席はありますか？", "ro": "Hitori desu ga, kauntā-seki wa arimasu ka?", "en": "Just me — do you have a counter seat?", "hear": "full"}], ll: [35.0054, 135.771], say: ["hitori", "osusume", "gochisousama"], pic: "Pontocho alley night photo", rx: "nostalgic", place: "Pontocho Alley, Kyoto",
         how: [
           "Walk ~10 min north to Gion's Hanamikoji street (main street only — the private side alleys have a ¥10,000 photo fine).",
-          "Plan A people: Nintendo KYOTO + Pokémon Center Kyoto are 10 min west at Shijō-Kawaramachi (check closing time).",
+          "Plan A people: Nintendo KYOTO is 10 min west at Shijō-Kawaramachi (Takashimaya S.C.). Pokémon Center Kyoto is another 12 min west along Shijō-dōri in SUINA Muromachi 2F and closes at 8 PM, so go there first.",
           "Cross the Kamo River to Pontocho alley for dinner. Only sit down where Google Maps shows 4.0+.",
         ],
         photo: "Pontocho: walk toward the camera between the lanterns, or a flash close-up. Then a sitting shot on the Kamo River bank.",
@@ -864,11 +865,12 @@ const DAYS = [
         tip: "Osaka switch: stand on the RIGHT side of escalators here (the opposite of Tokyo).",
       },
       {
-        t: "13:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (stickers, stamp rally, photo panels) + the MHA café under HEP FIVE's Ferris wheel. 🍄 Nintendo OSAKA is on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
+        t: "13:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (stickers, stamp rally, photo panels) + the MHA café under HEP FIVE's Ferris wheel. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Your suitcase should be waiting. Check-in is from 3 PM.",
           "Repack it for the flight now and hand it back to the front desk for Yamato to Narita (flight UA868, Thu Nov 5, Terminal 1, ~¥3,300). Then tonight and tomorrow morning are free.",
+          "⚡ Before the castle: Pokémon Center Osaka (the original, not the DX) is on Daimaru Umeda 13F, right on top of JR Osaka Station and ~5 min from the hotel. Nintendo OSAKA is on the same floor. Give it 30 minutes.",
           "Then straight to Osaka Castle while it's light out.",
         ],
         photo: "HEP FIVE's red Ferris wheel on the mall roof, shot from the street below (better after dark).",
@@ -973,6 +975,7 @@ const DAYS = [
           "Ferry back → JR to Hiroshima Station (~30 min).",
           "Taxi (~10 min) or streetcar line 2 or 6 to Genbaku-Dōmu-mae. Have coins ready in case your IC card isn't accepted.",
           "Walk the park to the Cenotaph and the Children's Peace Monument.",
+          "⚡ On your way to dinner: Pokémon Center Hiroshima is in Sogo Hiroshima, ~5 min east of the Atomic Bomb Dome across the river at Kamiyachō. Open daily. A quick 20-minute stop, then taxi to dinner.",
         ],
         photo: "A memorial: photograph the dome across the Motoyasu River. No smiling or playful poses here.",
         tip: "Keep your voice low. Many visitors leave paper cranes at the Children's Peace Monument.",
@@ -1138,6 +1141,7 @@ const DAYS = [
           "Yamato counter in Terminal 1: pick up your suitcase.",
           "Tax-refund kiosk for anything bought from Nov 1 on (passport + purchases with you).",
           "Check in for UA868 (6:00 PM) and drop the bag.",
+          "⚡ Last Pokémon stop: Pokémon Store Narita Airport is in Terminal 2 (main building 4F). Take the free terminal shuttle bus from T1 (~10 min each way) after you check in, before security. Leave T2 by 4:15.",
         ],
       },
       {
@@ -1959,7 +1963,7 @@ const MERCH_SEEDS = [
   { item: "Ariana — petal (Japanese edition CD)", where: "Tower Records Shibuya", day: "d6" },
   { item: "Pokémon Café Tokyo merch", where: "Nihonbashi Takashimaya", day: "d6" },
   { item: "Nintendo Museum shop", where: "Ogura, Uji", day: "d7" },
-  { item: "Nintendo KYOTO / Pokémon Center Kyoto", where: "Kyoto Takashimaya S.C.", day: "d7" },
+  { item: "Nintendo KYOTO / Pokémon Center Kyoto", where: "Takashimaya S.C. (Nintendo) · SUINA Muromachi 2F (Pokémon)", day: "d7" },
   { item: "Kyoto matcha (powder tin or sweets)", where: "Arashiyama main street", day: "d8" },
   { item: "Pokémon Center Osaka DX + Café Osaka merch", where: "Daimaru Shinsaibashi 9F", day: "d8" },
   { item: "My Hero Academia collab goods", where: "Umeda Sky Building 39F shop", day: "d8" },
@@ -1975,6 +1979,10 @@ const GIFT_SEEDS = [
   { id: "g-mom", item: "🎁 Skincare: Sekkisei lotion or Shiseido Elixir", where: "Don Quijote Akihabara (Sat) · @cosme TOKYO (Fri)", day: "d6", forWho: "Mom" },
   { id: "g-grandma", item: "🎁 Skincare: Shiseido Elixir, horse-oil cream or Urea hand cream", where: "Don Quijote Akihabara (Sat)", day: "d6", forWho: "Grandma" },
   { id: "g-dad", item: "🎁 Christmas lights: battery/USB LED or paper-lantern lights (plug-ins must say AC100–240V)", where: "Don Quijote Akihabara (Sat) · LOFT Umeda (Mon, backup)", day: "d6", forWho: "Dad" },
+  { id: "p-osaka", item: "Pokémon Center Osaka (Umeda) exclusives", where: "Daimaru Umeda 13F", day: "d8", forWho: "" },
+  { id: "p-hiro", item: "Pokémon Center Hiroshima exclusives", where: "Sogo Hiroshima, by Peace Park", day: "d9", forWho: "" },
+  { id: "p-tsta", item: "Pokémon Store Tokyo Station exclusives", where: "First Avenue Tokyo Station", day: "d4", forWho: "" },
+  { id: "p-nrt", item: "Pokémon Store Narita Airport", where: "Narita Terminal 2, 4F", day: "d11", forWho: "" },
   { id: "g-uncle", item: "🎁 Japanese polos (go one size up: LL ≈ US L)", where: "BEAMS JAPAN Shinjuku 2F (Fri) · Isetan Men's (backup)", day: "d5", forWho: "Uncle" },
 ];
 

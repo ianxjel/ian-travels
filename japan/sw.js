@@ -1,5 +1,5 @@
 /* Offline support: cache the app shell, keep fonts and the last weather forecast. */
-const VERSION = "ij-v47";
+const VERSION = "ij-v48";
 const SHELL = [
   "./",
   "index.html",

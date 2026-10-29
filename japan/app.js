@@ -1034,6 +1034,7 @@
   function merch() {
     let m = store.get("merch", null);
     if (!m) { m = MERCH_SEEDS.map((x, i) => ({ id: "m" + i, forWho: "", price: "", bought: false, ...x })); store.set("merch", m); }
+    if (!store.get("mig:pkkyoto", false)) { m.forEach(x => { if (x.item === "Nintendo KYOTO / Pokémon Center Kyoto") x.where = "Takashimaya S.C. (Nintendo) · SUINA Muromachi 2F (Pokémon)"; }); store.set("merch", m); store.set("mig:pkkyoto", true); if (store.get("mig:gifts", false) && typeof GIFT_SEEDS !== "undefined") { GIFT_SEEDS.forEach(g => { if (!m.some(x => x.id === g.id)) m.push({ price: "", bought: false, ...g }); }); store.set("merch", m); } }
     if (typeof GIFT_SEEDS !== "undefined" && !store.get("mig:gifts", false)) { GIFT_SEEDS.forEach(g => { if (!m.some(x => x.id === g.id)) m.push({ price: "", bought: false, ...g }); }); store.set("merch", m); store.set("mig:gifts", true); }
     return m;
   }
