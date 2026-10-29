@@ -465,7 +465,7 @@ const DAYS = [
           "Cross the platform to the Ginza line (orange) and ride to the end: Asakusa (~25 min).",
           "Exit 1 → Kaminarimon gate is right there.",
         ],
-        snack: "Asakusa Kagetsudo's giant melon pan (crispy outside, fluffy inside), then ningyō-yaki and age-manjū on Nakamise street. Eat beside the stall — eating while walking is frowned on here.",
+        snack: "Asakusa Kagetsudo's giant melon pan (2-7-13 Asakusa; opens 10 AM and sells until it runs out, so go early): crispy outside, fluffy inside, then ningyō-yaki and age-manjū on Nakamise street. Eat beside the stall — eating while walking is frowned on here.",
         spicy: "Slept at 24 Kaikan Ueno? Skip the hotel route: Ginza Line G16 Ueno → G19 Asakusa (toward 浅草, 3 stops, ~5 min), Exit 1.",
       },
       {
@@ -488,11 +488,11 @@ const DAYS = [
         photo: "From Azuma-bashi bridge: Skytree + the golden Asahi building across the river.",
       },
       {
-        t: "15:00", title: "Omotesando mirror entrance (on the way)", quest: "💥 My Hero Academia Café is a short walk away at BOX cafe&space Cue Plaza Harajuku (through Dec 20; book ahead).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
+        t: "15:00", title: "Omotesando mirror entrance (on the way)", quest: "💥 My Hero Academia Café “WE ARE HERO HOLICS”: BOX cafe&space, Q Plaza Harajuku 3F (6-28-6 Jingūmae), through Dec 20. Book a slot at heroaca-cafe.ltr-online.com (¥715 reservation fee, comes with a hologram sticker).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
         ride: [{"ln": "Z", "from": "Z14", "to": "Z02", "dir": "渋谷・中央林間方面 (toward Shibuya / Chūō-rinkan)", "type": "Every train stops everywhere on the Hanzomon Line.", "wrong": "Next stop 曳舟 Hikifune = wrong way (that's the Tobu Line).", "min": 30, "exit": "Exit A2 → Tokyu Plaza Omotesando"}],
         how: [
           "From Oshiage (Skytree) take the Hanzōmon line straight to Omotesando (~30 min).",
-          "Exit A2; Tokyu Plaza's kaleidoscope mirror escalator is on the corner.",
+          "Exit A2, then walk ~7 min up Omotesandō avenue toward Harajuku (you pass Kiddy Land on the way). The kaleidoscope mirror entrance is Tokyu Plaza Omokado, on the corner of Meiji-dōri (4-30-3 Jingūmae).",
           "Ahead of schedule? Takeshita Street (Harajuku's colorful crepe-and-fashion street) and Meiji Jingū shrine are ~10 min north. The shrine gates close at sunset.",
           "🎁 Gift stop: Kiddy Land (6-1-9 Jingūmae, a 3-min walk up Omotesandō avenue, 11:00–20:00) is 5 floors of Japanese toys: Tomica cars + Plarail trains (3F), Sanrio + Rilakkuma (4F), Disney (2F), Snoopy (B1). Tax-free over ¥5,000 — passport out.",
           "🎁 If time: @cosme TOKYO by Harajuku Station (1-14-27 Jingūmae, 11:00–21:00), 3 floors of Japanese skincare ranked by Japan's biggest beauty-review site. Otherwise do skincare tomorrow in Akihabara.",
@@ -506,7 +506,7 @@ const DAYS = [
         how: [
           "Hanzōmon line 1 stop to Shibuya, follow signs to Shibuya Scramble Square.",
           "Ticket counter on 14F; the rooftop is 46F. Sunset ~4:50 PM.",
-          "Bags, hats and selfie sticks go in the ¥100 lockers; phones are fine.",
+          "Bags, hats, scarves, umbrellas and selfie sticks go in the 46F lockers (¥100, refunded). Phones are fine, and your camera is allowed only with a neck or wrist strap — bring the X100VI strap.",
         ],
         photo: "Sky Edge glass corner at sunset as a silhouette (queue early). Lie in the Cloud Hammock looking up. Shoot straight down onto the crossing.",
         snack: "Dinner: tonkatsu at Tonkatsu Maisen Aoyama (Google 4.4 from 5,000+ reviews, Tripadvisor 4.5), one stop back on the Hanzōmon line at Omotesandō (Exit A2, ~5 min walk). Open until 9 PM, English menu. Solid fuel for the big night.",
@@ -545,7 +545,8 @@ const DAYS = [
         t: "23:30", title: "The big night 🪩", fixed: true, night: true, ask: [{"jp": "イーグル・ブルーはどこですか？", "ro": "Īguru Burū wa doko desu ka?", "en": "Where's Eagle Tokyo Blue?", "hear": "dir"}], ll: [35.6902, 139.7085], say: ["taipu", "kinniku", "odorou", "hotel", "kisu", "yametoku"], rx: "neon", place: "Eagle Tokyo Blue, Shinjuku 2-chome",
         how: [
           "Eagle Tokyo Blue (hairy, beefy go-go dancers) or Bear Tokyo first (weekend DJs).",
-          "Go-go shows: Dragon Men's Dragon Master party has sets at 11 PM, 1 AM and 3 AM tonight. Tip in yen bills tucked into the waistband.",
+          "✅ Confirmed on the clubs' own sites: AiSOTOPE LOUNGE “Akiba Night 51 · 23rd anniversary HALLOWEEN NIGHT” and ArcH “SHOWER CANDY” both start at 9 PM tonight.",
+          "Go-go shows: Dragon Men's Dragon Master party has sets at 11 PM, 1 AM and 3 AM tonight (⚠️ check Dragon Men's Instagram for tonight's times). Tip in yen bills tucked into the waistband.",
           "After 1 AM: ArcH (SHOWER CANDY tonight) or AiSOTOPE Lounge for Akiba Night's 23rd-anniversary Halloween, a long-running anime/otaku gay night. Your MHA and AOT fandom fits right in.",
           "Clubs run till ~5 AM; trains restart around 5.",
           "Want it straight to the point? Deep Throat Men (3F Wakatsuki Bldg, Kabukichō) is a foreigner-friendly cruising bar with English-speaking staff, 5 min from Golden Gai.",
@@ -579,8 +580,8 @@ const DAYS = [
         ride: [{"ln": "JB", "from": "JB10", "to": "JB19", "dir": "千葉・津田沼・西船橋方面 (toward Chiba) — the YELLOW Chūō-Sōbu local, not the orange Chūō rapid", "type": "Every yellow local stops at Akihabara.", "wrong": "Next stop 大久保 Ōkubo (JB09) = wrong way. Orange trains (中央線快速) don't go to Akihabara.", "min": 18, "exit": "電気街口 Electric Town Exit"}],
         how: [
           "Walk ~10 min to JR Shinjuku, then the yellow Chūō-Sōbu local straight to Akihabara (~18 min).",
-          "Super Potato: retro-game heaven over several floors (Game Boy, N64, old Pokémon carts).",
-          "Mandarake Complex: 8 floors of anime figures, manga and vintage toys.",
+          "Start at Super Potato (open from 10 AM on weekends): retro-game heaven over several floors (Game Boy, N64, old Pokémon carts).",
+          "Mandarake Complex: 8 floors of anime figures, manga and vintage toys. It opens at noon, so do it after Super Potato and the card shops.",
           "Radio Kaikan + the card shops along Chūō-dōri: Japanese Pokémon TCG singles and sealed packs. Check prices across a couple of shops.",
           "Akihabara Gachapon Kaikan: hundreds of capsule-toy machines — bring ¥100 coins.",
         ],
@@ -623,7 +624,7 @@ const DAYS = [
         t: "17:15", title: "Rest + costume on", ll: [35.6888, 139.71], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
         ride: [{"ln": "F", "from": "F16", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Next stop 代官山 Daikanyama = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
         how: [
-          "Fukutoshin line Shibuya → Shinjuku-sanchome (~10 min).",
+          "Walk ~5 min from Pride House to the hotel.",
           "Drop the merch, nap, costume on (wear it to the café for the Halloween photo).",
         ],
       },
@@ -633,7 +634,7 @@ const DAYS = [
         how: [
           "Marunouchi line from Shinjuku-gyoemmae to Ginza (~17 min).",
           "Change to the Ginza line (orange) 2 stops to Nihombashi.",
-          "Exit B2 connects straight into Takashimaya; head to the Annex (新館) 5F.",
+          "Exit B2, then a short walk to Nihombashi Takashimaya S.C. East Building (東館): the café and Pokémon Center Tokyo DX are side by side on 5F.",
         ],
         tip: "Arrive by 7:00 — they want you 15 min early for the 7:15 PM table. Your reservation number is in your confirmation email.",
       },
@@ -660,7 +661,7 @@ const DAYS = [
         t: "22:15", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 2-15-12 Shinjuku",
         how: [
           "From Tokyo Tower: taxi to Shinjuku 2-chōme (~20 min, ~¥2,500). Halloween night is the one night a taxi is worth it.",
-          "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE 80th) or ArcH (Jimi-Halloween: dress as something boring 😂).",
+          "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE The 80th Edition “Duality”, from 9 PM ✅) or ArcH (地味ハロ “Jimi-Halloween”, from 9 PM ✅: dress as something boring 😂). ⚠️ Blacknude, Arty Farty and Dragon Men times are from their social posts — check Instagram before you go.",
           "Drink inside the bars — parts of Shinjuku restrict street drinking tonight.",
         ],
         spicy: "The streets fill with costumes all night. Costume = instant conversation starter: compliment someone's look (“Kakkoii!” = you look cool!) and you're in. Ask before photographing anyone.",
@@ -881,7 +882,7 @@ const DAYS = [
         tip: "Osaka switch: stand on the RIGHT side of escalators here (the opposite of Tokyo).",
       },
       {
-        t: "13:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (stickers, stamp rally, photo panels) + the MHA café under HEP FIVE's Ferris wheel. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
+        t: "13:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (Oct 30–Nov 30): collab ticket ¥2,800 incl. the 40F observatory, 2 random stickers + a stamp rally for a glass magnet, 9:30 AM–10:30 PM (last entry 10 PM). 💥 MHA Café “WE ARE HERO HOLICS”: BOX cafe&space HEP FIVE 7F (through Dec 6), book at heroaca-cafe.ltr-online.com. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Your suitcase should be waiting. Check-in is from 3 PM.",
@@ -902,7 +903,7 @@ const DAYS = [
         photo: "Shoot the tower across the stone walls and moat from the Gokuraku-bashi bridge — gold trim, white walls, autumn leaves.",
       },
       {
-        t: "17:00", title: "Pokémon Center Osaka DX", fixed: true, quest: "⭐ Kirby Café Osaka is also in Shinsaibashi — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
+        t: "17:00", title: "Pokémon Center Osaka DX", fixed: true, quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
         ride: [{"ln": "OM", "from": "M16", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 6, "exit": "Daimaru is connected to the station"}],
         how: [
           "From Osaka Castle: taxi (~15 min) or Chūō Line to Hommachi, then the Midosuji Line 1 stop to Shinsaibashi. (From Umeda it's the Midosuji Line direct, below.) Daimaru is connected to the station.",
@@ -991,6 +992,7 @@ const DAYS = [
           "Ferry back → JR to Hiroshima Station (~30 min).",
           "Taxi (~10 min) or streetcar line 2 or 6 to Genbaku-Dōmu-mae. Have coins ready in case your IC card isn't accepted.",
           "Walk the park to the Cenotaph and the Children's Peace Monument.",
+          "🏛️ Strongly recommended: the Peace Memorial Museum (¥200, at the south end of the park). Regular entry is until 5:30 PM in November; after that you need an online reservation. Give it 45–60 minutes, then go straight to Pokémon Center and dinner.",
           "⚡ On your way to dinner: Pokémon Center Hiroshima is in Sogo Hiroshima, ~5 min east of the Atomic Bomb Dome across the river at Kamiyachō. Open daily. A quick 20-minute stop, then taxi to dinner.",
         ],
         photo: "A memorial: photograph the dome across the Motoyasu River. No smiling or playful poses here.",
@@ -1021,7 +1023,7 @@ const DAYS = [
         how: [
           "Energy left? Shinsekai's retro neon around Tsūtenkaku tower (Sakaisuji line to Ebisuchō).",
           "Or one last round in Doyama-cho, 5 min from the hotel.",
-          "Or the MHA × Umeda Sky Building collab at night: the open-air Floating Garden observatory, 15 min walk from your hotel (open to 22:30, last entry 22:00).",
+          "Or the MHA × Umeda Sky Building collab at night: the open-air Floating Garden observatory, 15 min walk from your hotel (open to 22:30, last entry 22:00). The ¥2,800 collab ticket includes entry, 2 random stickers and the stamp rally; the collab drink (¥880) is at café SKY 40.",
         ],
         photo: "Shinsekai is the best direct-flash street of the trip: giant food signs, retro neon, Tsūtenkaku behind you.",
         snack: "Shinsekai kushikatsu (fried skewers) at Kushikatsu Daruma Shinsekai Sōhonten (the original, Google 4.1, open until 10:30 PM). Again: no double-dipping.",
@@ -1076,11 +1078,11 @@ const DAYS = [
         photo: "Sit on the right side heading north — Fuji fills the window around Lake Yamanaka.",
       },
       {
-        t: "14:30", title: "Fuji-Q Highland × My Hero Academia 🎢", quest: "💥 “My Hero Academia in Fuji-Q Highland” runs until Nov 8: FUJIYAMA and 5 more rides get MHA banners and Deku / Bakugo / Todoroki announcements, plus collab food (random placemats + coasters) and merch at SHOP FUJIYAMA.", ask: [{"jp": "フジヤマは今日動いていますか？", "ro": "Fujiyama wa kyō ugoite imasu ka?", "en": "Is FUJIYAMA running today?", "hear": "yesno"}], ll: [35.4873, 138.7799], say: ["photoplease", "kakkoii"], pic: "Fuji-Q FUJIYAMA roller coaster Mt Fuji", rx: "velvia", place: "Fuji-Q Highland, Fujiyoshida",
+        t: "14:30", title: "Fuji-Q Highland × My Hero Academia 🎢", quest: "💥 “My Hero Academia in Fuji-Q Highland” runs until Nov 8: Deku / Bakugo / Todoroki announcements on the rides, MHA music on Kirarinko, an attraction + mission stamp rally, MHA-wrapped trains and buses, collab food and merch.", ask: [{"jp": "フジヤマは今日動いていますか？", "ro": "Fujiyama wa kyō ugoite imasu ka?", "en": "Is FUJIYAMA running today?", "hear": "yesno"}], ll: [35.4873, 138.7799], say: ["photoplease", "kakkoii"], pic: "Fuji-Q FUJIYAMA roller coaster Mt Fuji", rx: "velvia", place: "Fuji-Q Highland, Fujiyoshida",
         ride: [{"ln": "FJ", "from": "KWG", "to": "FQH", "dir": "大月方面 (toward Ōtsuki) — Kawaguchiko is the end, so any train", "type": "Every local stops at Fuji-Q Highland. Or walk ~20 min.", "min": 5, "exit": "The park gate is right at the station"}],
         how: [
           "The Fujikyu bus from Mishima may stop at 富士急ハイランド (Fuji-Q Highland) — ask the driver. Otherwise ride it to Kawaguchiko, leave your bag in a station locker, and take the train 1 stop back.",
-          "Entry is free; you pay per ride or buy a pass. There's an MHA collab one-day pass (¥8,900 with a rubber-band set) on the official ticket site.",
+          "Entry is free; you pay per ride or buy a one-day pass (¥6,000–7,900 depending on the day). During the MHA collab (Sep 18–Nov 8) the pass comes with an original 3-piece rubber-band set. Look out for the MHA-wrapped Fujikyu trains and buses too.",
           "Check fujiq.jp for Nov 4 hours: in autumn the park often closes around 5 PM, and closure days are irregular (usually Thursdays — Nov 4 is a Wednesday).",
           "Thrill list: FUJIYAMA (MHA-themed classic with huge Fuji views), Eejanaika (spinning 4D coaster), Takabisha (beyond-vertical drop), Do-Dodonpa (launch coaster). Check which are running today.",
         ],
@@ -1846,10 +1848,10 @@ const FAN_QUESTS = [
     { t: "My Hero Academia Café — WE ARE HERO HOLICS", where: "BOX cafe&space HEP FIVE, Osaka (under the red Ferris wheel, next to your hotel)", when: "Oct 22 – Dec 6, 2026", day: "d8",
       what: "Themed menu for Deku, Bakugo, Todoroki and the class. Advance booking ¥715 includes a hologram sticker.",
       place: "HEP FIVE Osaka", link: "https://animeanime.jp/article/2026/10/03/103463.html" },
-    { t: "My Hero Academia in Fuji-Q Highland", where: "Fuji-Q Highland, next to Kawaguchiko", when: "Until Nov 8, 2026 · park hours", day: "d10", what: "FUJIYAMA + 5 more rides with MHA banners and Deku / Bakugo / Todoroki announcements, collab food with random placemats/coasters, and merch at SHOP FUJIYAMA. Collab 1-day pass ¥8,900.", place: "Fuji-Q Highland", link: "https://collabo-cafe.com/events/collabo/heroaca-fujiq-highland-collabo2026/" },
+    { t: "My Hero Academia in Fuji-Q Highland", where: "Fuji-Q Highland, next to Kawaguchiko", when: "Until Nov 8, 2026 · park hours", day: "d10", what: "Deku / Bakugo / Todoroki announcements on the rides, MHA music on Kirarinko, a stamp rally, MHA-wrapped trains + buses, plus collab food with random placemats/coasters, and merch at SHOP FUJIYAMA. Collab one-day pass comes with a 3-piece rubber-band set (regular passes ¥6,000–7,900 by day; check fujiq.jp for the collab price).", place: "Fuji-Q Highland", link: "https://collabo-cafe.com/events/collabo/heroaca-fujiq-highland-collabo2026/" },
     { t: "MHA Chara Pop Store", where: "Bandai Namco Cross Store, atre Akihabara", when: "Until Jan 17, 2027", day: "d6", what: "Character pop-up shop with MHA goods — right by Akihabara Station on your Saturday fan run.", place: "atre Akihabara", link: "https://charagoo.jp/collab/region/tokyo/" },
-    { t: "Same café in Tokyo", where: "BOX cafe&space Cue Plaza Harajuku", when: "Oct 16 – Dec 20, 2026", day: "d5",
-      what: "Fits the Omotesando stop on Friday afternoon.", place: "Cue Plaza Harajuku", link: "https://animeanime.jp/article/2026/10/03/103463.html" },
+    { t: "Same café in Tokyo", where: "BOX cafe&space, Q Plaza Harajuku 3F", when: "Oct 16 – Dec 20, 2026", day: "d5",
+      what: "Fits the Omotesando stop on Friday afternoon.", place: "Q Plaza Harajuku, 6-28-6 Jingumae", link: "https://animeanime.jp/article/2026/10/03/103463.html" },
   ]},
   { fandom: "Attack on Titan", emoji: "⚔️", items: [
     { t: "AOT DJ-theme POP UP SHOP", where: "Tower Records Shibuya (also Abeno Hoop, Osaka)", when: "Until Nov 29, 2026", day: "d3", what: "Attack on Titan pop-up inside Tower Records Shibuya — same stop as Ariana's petal campaign.", place: "Tower Records Shibuya", link: "https://charagoo.jp/collab/region/tokyo/" },
