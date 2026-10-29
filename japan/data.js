@@ -633,6 +633,14 @@ const DAYS = [
         snack: "The 4 AM move: grab konbini onigiri + a Pocari Sweat and have them back at the hotel. Your Saturday self will thank you.",
       },
       {
+        t: "27:30", title: "🍚 Post-club gyūdon (24-hour beef bowl)", ask: [{"jp": "牛丼の並をください。", "ro": "Gyūdon no nami o kudasai.", "en": "A regular beef bowl, please.", "hear": "none"}], ll: [35.6906, 139.7065], say: ["oishii", "gochisousama"], place: "Matsuya, Shinjuku",
+        how: [
+          "Japan's classic 3 AM food: thin-sliced beef and onion simmered sweet-savory over rice. Matsuya, Sukiya and Yoshinoya are open 24 hours — search 牛丼 in Google Maps for the nearest one on Shinjuku-dōri (a few minutes from Ni-chome).",
+          "🟢 Easy: Matsuya uses a ticket machine with photos (and an English button); Sukiya and Yoshinoya have picture menus or tablets. Regular size = 並 (nami).",
+          "Add a raw egg (生卵) or soft egg on top, plus beni-shōga (red pickled ginger) and shichimi from the jars on the counter. ~¥500.",
+        ],
+      },
+      {
         t: "28:00", title: "After-club crash at 24 Kaikan 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.6904, 139.7083], say: ["shukuhaku", "kondomu2"], place: "24 Kaikan Shinjuku, 2-13-1 Shinjuku, Tokyo",
         how: [
           "When Eagle Blue winds down, 24 Kaikan is a 2-minute walk.",
@@ -1861,7 +1869,7 @@ const FOODS = [
   { id: "gyudon", emoji: "🍚", en: "Gyūdon (beef bowl)", jp: "牛丼", ro: "gyūdon", wiki: "牛丼", enwiki: "Gyūdon",
     what: "Thin-sliced beef and onions simmered sweet over rice. Cheap, fast, 24 hours.",
     order: { jp: "牛丼の並、つゆだくで", ro: "Gyūdon no nami, tsuyudaku de", en: "Regular beef bowl, extra sauce" },
-    tips: "Sizes: nami (regular), ōmori (large). Add a raw egg (tamago) on top like a local.", where: "Not on the plan yet" },
+    tips: "Sizes: nami (regular), ōmori (large). Add a raw egg (tamago) on top like a local.", where: "Post-club gyūdon at a 24-hour Matsuya / Sukiya / Yoshinoya (Fri ~3:30 AM)", day: "d5" },
   { id: "tamagosando", emoji: "🥪", en: "Tamago sando (egg sandwich)", jp: "たまごサンド", ro: "tamago sando", wiki: "卵焼き", enwiki: "Egg sandwich",
     what: "Fluffy milk bread with creamy egg salad. The konbini cult classic.",
     order: { jp: "たまごサンドください", ro: "Tamago sando kudasai", en: "An egg sandwich, please" },
