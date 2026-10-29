@@ -518,6 +518,7 @@ const DAYS = [
           "Fukutoshin line Shibuya → Shinjuku-sanchome (~10 min, no transfer).",
           "🎁 On the way, polos for your uncle: BEAMS JAPAN (3-32-6 Shinjuku, open until 8 PM). 2F is menswear: BEAMS' own made-in-Japan line and smaller Japanese labels. 1F has Japanese crafts and souvenirs if anyone else is still on your list. Japanese sizes run one smaller (LL ≈ US L).",
           "Backup if BEAMS isn't it: Isetan Men's (Shinjuku-sanchōme, also open until 8 PM): 8 floors of menswear, tax-free counter on site.",
+          "👕 For you while you're at BEAMS JAPAN 2F: a sukajan (the embroidered souvenir jacket born from US servicemen in Japan — Japanese-American style in one piece), made-in-Japan heavyweight tees and denim. Try tops in 3L/XXL so they fit your chest and arms.",
           "Nap 30 min. Shower. Outfit on. Dinner is yakitori on the way to Golden Gai.",
         ],
         photo: "Fit check in the hotel mirror before you go out — the photo-dump opener.",
@@ -905,7 +906,7 @@ const DAYS = [
         photo: "Shoot the tower across the stone walls and moat from the Gokuraku-bashi bridge — gold trim, white walls, autumn leaves.",
       },
       {
-        t: "17:00", title: "Pokémon Center Osaka DX", fixed: true, quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
+        t: "17:00", title: "Pokémon Center Osaka DX", fixed: true, quest: "👕 Amerikamura (“America Village”) is a 5-min walk west of Daimaru: American vintage in US sizes — Vintage Mecca (2-13-13 Nishi-Shinsaibashi, 1–7 PM, closed Wed) for 30s–60s denim and military, Grizzly (2-12-14 Nishi-Shinsaibashi, 12–7:30 PM) for Ralph Lauren. ⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
         ride: [{"ln": "OC", "from": "C18", "to": "C16", "dir": "本町・コスモスクエア方面 (toward Hommachi / Cosmosquare)", "type": "Every train.", "wrong": "Next stop 森ノ宮 Morinomiya (C19) = wrong way.", "min": 5, "exit": "Transfer to the red Midosuji Line"}, {"ln": "OM", "from": "M18", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 淀屋橋 Yodoyabashi (M17) = wrong way.", "min": 2, "exit": "Daimaru is connected to the station"}],
         how: [
           "From Osaka Castle: Chūō Line to Hommachi, then the Midosuji Line 1 stop to Shinsaibashi. Daimaru is connected to the station.",
@@ -2004,6 +2005,10 @@ const GIFT_SEEDS = [
   { id: "p-tbay", item: "Pokémon Center Tokyo Bay exclusives", where: "LaLaport TOKYO-BAY West 2F", day: "d4", forWho: "" },
   { id: "p-tsta", item: "Pokémon Store Tokyo Station exclusives", where: "First Avenue Tokyo Station", day: "d4", forWho: "" },
   { id: "p-nrt", item: "Pokémon Store Narita Airport", where: "Narita Terminal 2, 4F", day: "d11", forWho: "" },
+  { id: "s-sukajan", item: "👕 Sukajan (souvenir jacket) for me", where: "BEAMS JAPAN Shinjuku 2F (Fri)", day: "d5", forWho: "Me" },
+  { id: "s-tees", item: "👕 Heavyweight boxy tees in 3L/XXL + a knit polo (going out + work)", where: "BEAMS JAPAN (Fri) · Uniqlo (U line, heavyweight)", day: "d5", forWho: "Me" },
+  { id: "s-work", item: "👕 Work: oxford button-downs, pleated wide trousers, unstructured stretch blazer", where: "Isetan Men's (Fri) · BEAMS / United Arrows", day: "d5", forWho: "Me" },
+  { id: "s-vintage", item: "👕 American vintage in US sizes (denim, workwear, Ralph Lauren)", where: "Amerikamura, Osaka (Mon)", day: "d8", forWho: "Me" },
   { id: "g-uncle", item: "🎁 Japanese polos (go one size up: LL ≈ US L)", where: "BEAMS JAPAN Shinjuku 2F (Fri) · Isetan Men's (backup)", day: "d5", forWho: "Uncle" },
 ];
 
