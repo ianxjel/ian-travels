@@ -845,3 +845,16 @@ details.wlist summary { cursor: pointer; font-weight: 700; }
 .time .was { font: 500 11px/1.2 var(--font-body, inherit); color: var(--muted, #888); text-decoration: line-through; }
 .linkbtn { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }
 .wbadge.wdw { background: #3c3b6e; }
+
+/* ▸ collapsible step cards */
+.step { padding-top: 14px; padding-bottom: 14px; }
+.step .step-head { cursor: pointer; align-items: center; -webkit-tap-highlight-color: transparent; }
+.step .step-head h3 { font-size: 17px; }
+.step .chev { flex: 0 0 auto; font-size: 20px; line-height: 1; color: var(--muted); transition: transform .2s ease; margin-left: 4px; }
+.step.open .chev { transform: rotate(180deg); }
+.step .step-body { display: none; }
+.step.open .step-body { display: block; padding-top: 4px; }
+.step-hints { display: block; margin-top: 3px; font: 400 12px/1 var(--font-body); letter-spacing: 2px; opacity: .75; }
+.step.open .step-hints { display: none; }
+.step-body .between { margin: 12px 0 0; }
+.step-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 10px; }

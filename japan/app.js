@@ -245,6 +245,11 @@
     return day.steps.map((s, i) => { const key = `${day.id}-${i}`; return moved[key] ? { ...s, key, t: moved[key], t0: s.t } : { ...s, key }; }).filter(s => (!s.only || s.only === v) && !(s.night && isSafe()));
   }
 
+  /* ▸ collapsible steps: only time + title show; tap to open. Default: just the "Up next" step is open */
+  function stepOpen(dayId, key, nk) { const o = store.get("open:" + dayId, null); return o && key in o ? !!o[key] : key === nk; }
+  function setStepOpen(dayId, key, val) { const o = store.get("open:" + dayId, null) || {}; o[key] = val; store.set("open:" + dayId, o); const el = $("#s-" + key); if (el) { el.classList.toggle("open", val); el.querySelector(".step-head")?.setAttribute("aria-expanded", val); } }
+  function openStep(key) { setStepOpen(key.split("-")[0], key, true); }
+
   /* ⏩ Done early → offer to pull the following stops sooner (stops at the next booked/fixed-time step) */
   const hhmm2 = m => `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
   function aheadInfo(day, steps) {
@@ -376,14 +381,17 @@
       </div>`;
     }
     html += `<div class="progress"><span>${doneCount}/${steps.length} done</span><div class="bar"><i style="width:${steps.length ? (doneCount / steps.length) * 100 : 0}%"></i></div></div>`;
-    html += `<div class="section-title"><h2>Step by step</h2><span class="sub">${anyMoved ? `<button class="linkbtn" data-unpull="${day.id}">↩️ Original times</button>` : "Japan time"}</span></div><div class="timeline">`;
+    html += `<div class="section-title"><h2>Step by step</h2><span class="sub">${anyMoved ? `<button class="linkbtn" data-unpull="${day.id}">↩️ Original times</button> · ` : ""}<button class="linkbtn" data-sall="${day.id}">${steps.every(x => stepOpen(day.id, x.key, nk)) ? "Collapse all" : "Expand all"}</button></span></div><div class="timeline">`;
 
     steps.forEach(s => {
       const isDone = !!done[s.key];
       const isNext = s.key === nk;
-      html += `<article class="card step ${isDone ? "done" : ""} ${isNext ? "next" : ""}" id="s-${s.key}">
+      const isOpen = stepOpen(day.id, s.key, nk);
+      const hints = [s.ride ? "🚆" : "", s.snack ? "🍙" : "", s.photo ? "📸" : "", s.quest ? "🎮" : "", s.spicy && !isSafe() ? "🔥" : ""].join("");
+      html += `<article class="card step ${isDone ? "done" : ""} ${isNext ? "next" : ""} ${isOpen ? "open" : ""}" id="s-${s.key}">
         ${isNext ? `<span class="badge-next">Up next</span>` : ""}
-        <div class="step-head"><div class="time">${fmt12(s.t)}${s.t0 ? `<small class="was">was ${fmt12(s.t0)}</small>` : ""}${s.ll ? `<button class="pin-no" data-flyto="${s.key}" aria-label="Show on map">${pinNo[s.key]}</button>` : ""}</div><h3>${esc(s.title)}</h3></div>
+        <div class="step-head" data-stoggle="${s.key}" role="button" tabindex="0" aria-expanded="${isOpen}"><div class="time">${fmt12(s.t)}${s.t0 ? `<small class="was">was ${fmt12(s.t0)}</small>` : ""}${s.ll ? `<button class="pin-no" data-flyto="${s.key}" aria-label="Show on map">${pinNo[s.key]}</button>` : ""}</div><h3>${isDone ? "✅ " : ""}${esc(s.title)}${hints ? `<small class="step-hints">${hints}</small>` : ""}</h3><span class="chev" aria-hidden="true">⌄</span></div>
+        <div class="step-body">
         ${s.how && s.how.length ? `<ol class="how">${s.how.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}
         ${s.ride ? rideHtml(s.ride) : ""}
         ${s.tip ? `<div class="tip"><b>Heads-up:</b> ${esc(s.tip)}</div>` : ""}
@@ -394,14 +402,14 @@
           ${s.place ? `<a class="btn primary" href="${mapsDir(s.place)}" target="_blank" rel="noopener">🧭 Directions</a>` : ""}
           ${photoLink(s) ? `<a class="btn" href="${photoLink(s)}" target="_blank" rel="noopener">🖼️ Photo idea</a>` : ""}
           <button class="btn ${isDone ? "done-on" : ""}" data-done="${s.key}">${isDone ? "✅ Done" : "◻️ Mark done"}</button>
-        </div>
-      </article>`;
+        </div>`;
       const mini = [];
       if (s.photo) mini.push(`<div class="mini photo"><span class="ico">📸</span><div><b>Photo op</b>${esc(s.photo)}</div></div>`);
       if (s.snack) mini.push(`<div class="mini snack"><span class="ico">🍙</span><div><b>Snack stop</b>${esc(s.snack)}</div></div>`);
       if (s.quest) mini.push(`<a class="mini quest" href="#media/quests"><span class="ico">🎮</span><div><b>Fan quest</b>${esc(s.quest)}</div></a>`);
       if (s.spicy && !isSafe()) mini.push(`<div class="mini spicy"><span class="ico">🔥</span><div><b>After dark</b>${esc(s.spicy)}</div></div>`);
       if (mini.length) html += `<div class="between">${mini.join("")}</div>`;
+      html += `</div></article>`;
       if (ahead && ahead.after === s.key) html += aheadHtml(day, ahead);
     });
     html += `</div>`;
@@ -459,7 +467,7 @@
     }
 
     const nb = $("#nowBtn");
-    if (nk) { nb.hidden = false; nb.onclick = () => $("#s-" + nk)?.scrollIntoView({ behavior: "smooth", block: "center" }); }
+    if (nk) { nb.hidden = false; nb.onclick = () => { openStep(nk); $("#s-" + nk)?.scrollIntoView({ behavior: "smooth", block: "center" }); }; }
     else nb.hidden = true;
   }
 
@@ -540,7 +548,7 @@
     map = L.map("daymap", { zoomControl: false, attributionControl: true, scrollWheelZoom: false });
     map.on("popupopen", e => {
       const a = e.popup.getElement && e.popup.getElement().querySelector("[data-goto]");
-      if (a) a.onclick = ev => { ev.preventDefault(); ev.stopPropagation(); map.closePopup(); $("#s-" + a.dataset.goto)?.scrollIntoView({ behavior: "smooth", block: "center" }); };
+      if (a) a.onclick = ev => { ev.preventDefault(); ev.stopPropagation(); map.closePopup(); openStep(a.dataset.goto); $("#s-" + a.dataset.goto)?.scrollIntoView({ behavior: "smooth", block: "center" }); };
     });
     L.control.zoom({ position: "topright" }).addTo(map);
     // CARTO basemap with Ian's API key; if keyed tiles ever fail, fall back to the public endpoint
@@ -1469,7 +1477,7 @@
   document.addEventListener("click", e => {
     const tile = e.target.closest("[data-tile]");
     if (tile) { $$(".tile").forEach(x => x.classList.toggle("picked", x === tile)); return; }
-    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-pull],[data-unpull],[data-variant],[data-taxi],[data-clip],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
+    const t = e.target.closest("[data-prep],[data-planb],[data-star],[data-jump],[data-cv],[data-spadd],[data-spdel],[data-mtoggle],[data-mdel],[data-madd],[data-tkview],[data-tkedit],[data-tkdel],[data-tkadd],[data-safe],[data-backup],[data-share],[data-shot],[data-ask],[data-speak],[data-show],[data-showtxt],[data-done],[data-pull],[data-unpull],[data-stoggle],[data-sall],[data-variant],[data-taxi],[data-clip],[data-copy],[data-cat],[data-savefuji],[data-flyto],[data-step],[data-area],[data-locate],[data-fitall],[data-goto]");
     if (!t) return;
     if (t.dataset.speak !== undefined) { e.stopPropagation(); speak(t.dataset.speak, t); return; }
     if (t.dataset.prep) {
@@ -1520,12 +1528,12 @@
     }
     if (t.dataset.ask) { showAsk(t.dataset.ask); return; }
     if (t.dataset.showtxt) { showPhrase(JSON.parse(t.dataset.showtxt)); return; }
-    if (t.dataset.step) { e.preventDefault(); location.hash = "day/" + t.dataset.step.split("-")[0]; setTimeout(() => $("#s-" + t.dataset.step)?.scrollIntoView({ behavior: "smooth", block: "center" }), 120); return; }
+    if (t.dataset.step) { e.preventDefault(); location.hash = "day/" + t.dataset.step.split("-")[0]; setTimeout(() => { openStep(t.dataset.step); $("#s-" + t.dataset.step)?.scrollIntoView({ behavior: "smooth", block: "center" }); }, 120); return; }
     if (t.dataset.flyto) { flyTo(t.dataset.flyto); return; }
     if (t.dataset.area !== undefined) { showArea(+t.dataset.area); return; }
     if (t.dataset.locate !== undefined) { locateMe(); return; }
     if (t.dataset.fitall !== undefined) { if (map) map.fitBounds(L.latLngBounds(Object.values(mapMarkers).map(m => m.getLatLng())), { padding: [30, 30] }); $$(".area-chips button").forEach(b => b.classList.remove("on")); return; }
-    if (t.dataset.goto) { e.preventDefault(); map && map.closePopup(); $("#s-" + t.dataset.goto)?.scrollIntoView({ behavior: "smooth", block: "center" }); return; }
+    if (t.dataset.goto) { e.preventDefault(); map && map.closePopup(); openStep(t.dataset.goto); $("#s-" + t.dataset.goto)?.scrollIntoView({ behavior: "smooth", block: "center" }); return; }
     if (t.dataset.show) { const p = PHRASES.find(x => x.id === t.dataset.show); if (p) showPhrase(p); return; }
     if (t.dataset.done) {
       const done = store.get("done", {});
@@ -1534,6 +1542,12 @@
       store.set("done", done);
       const y = window.scrollY; renderDay(currentDayId()); window.scrollTo(0, y);
       return;
+    }
+    if (t.dataset.stoggle) { const k = t.dataset.stoggle, el = $("#s-" + k); setStepOpen(k.split("-")[0], k, !el.classList.contains("open")); return; }
+    if (t.dataset.sall) {
+      const id = t.dataset.sall, day = dv(DAYS.find(d => d.id === id)), st = visibleSteps(day), all = st.every(x => $("#s-" + x.key)?.classList.contains("open"));
+      const o = {}; st.forEach(x => o[x.key] = !all); store.set("open:" + id, o);
+      const y = window.scrollY; renderDay(id); window.scrollTo(0, y); return;
     }
     if (t.dataset.pull) {
       const id = t.dataset.pull, day = dv(DAYS.find(d => d.id === id)), a = aheadInfo(day, visibleSteps(day));
@@ -1601,6 +1615,9 @@
     }
   });
   document.getElementById("safeBtn")?.addEventListener("click", () => { store.set("safe", !isSafe()); applySafe(); toast(isSafe() ? "Family-friendly mode on 😇" : "Family-friendly mode off 🔥"); rerender(route); });
+
+  // Enter/Space opens a collapsed step for keyboard users
+  document.addEventListener("keydown", e => { const h = e.target.closest && e.target.closest("[data-stoggle]"); if (h && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); h.click(); } });
 
   /* ---------- Boot ---------- */
   // v15: PokéPark removed from the plan — tidy anything already saved on this phone
