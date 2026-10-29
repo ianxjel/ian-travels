@@ -340,7 +340,7 @@ const DAYS = [
 
   /* ---------------- DAY 4 ---------------- */
   {
-    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "21:00", "note": "You're out of Disney by about 3:15 today. Tonight ends in Ueno: the Yamanote runs until about midnight, or a taxi to Shinjuku is ~¥4,000–5,000."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
+    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "21:00", "note": "You're out of Disney by about 3:15 today. Tonight ends in Ueno: the Yamanote runs until about midnight, or sleep over at 24 Kaikan and take the first train."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
     theme: "spooky", emoji: "🎃", deco: ["🎃", "🏰", "🦇", "👻", "🍬", "🕸️"],
     kicker: "Day 4 · Spooky season, castle edition",
     tagline: "Villains, pumpkins and a castle at blue hour. Wear the costume one more time — it's allowed.",
@@ -441,7 +441,7 @@ const DAYS = [
           "It's on Shōwa-dōri, a short walk from Ueno Station's east side. Search 24会館 上野 in Google Maps.",
           "Get there at 9 PM or later: that's when the ~¥2,800 overnight rate (up to 14 hours, cash) starts. English is spoken and the signs are in English too.",
           "Tonight's the one to go long: Friday starts at 10 AM, and Asakusa is 5 minutes away.",
-          "Sleeping there? Ask for the overnight stay (宿泊). Or catch a taxi back to the hotel (~¥4,000–5,000).",
+          "Sleeping there? Ask for the overnight stay (宿泊). Trains restart around 5 AM, and Friday starts in Asakusa, 3 stops away on the Ginza Line.",
         ],
         spicy: "Thursday + post-Disney legs + nowhere to be until 10 AM = the long sauna night you asked for 😏",
       },
@@ -622,7 +622,6 @@ const DAYS = [
       },
       {
         t: "17:15", title: "Rest + costume on", ll: [35.6888, 139.71], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
-        ride: [{"ln": "F", "from": "F16", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Next stop 代官山 Daikanyama = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
         how: [
           "Walk ~5 min from Pride House to the hotel.",
           "Drop the merch, nap, costume on (wear it to the café for the Halloween photo).",
@@ -648,10 +647,10 @@ const DAYS = [
         photo: "Overhead flat-lay of your food before the first bite, then a selfie with the costume + plate.",
       },
       {
-        t: "21:00", title: "Tokyo Tower lit up 🗼", ask: [{"jp": "東京タワーへの行き方を教えてください。", "ro": "Tōkyō Tawā e no ikikata o oshiete kudasai.", "en": "How do I get to Tokyo Tower?", "hear": "dir"}], ll: [35.6586, 139.7454], say: ["photoplease", "kirei", "taxi"], pic: "Tokyo Tower night Zojoji temple", rx: "neon", place: "Zojo-ji Temple, Minato, Tokyo",
+        t: "21:00", title: "Tokyo Tower lit up 🗼", ask: [{"jp": "東京タワーへの行き方を教えてください。", "ro": "Tōkyō Tawā e no ikikata o oshiete kudasai.", "en": "How do I get to Tokyo Tower?", "hear": "dir"}], ll: [35.6586, 139.7454], say: ["photoplease", "kirei"], pic: "Tokyo Tower night Zojoji temple", rx: "neon", place: "Zojo-ji Temple, Minato, Tokyo",
         ride: [{"ln": "A", "from": "A13", "to": "A09", "dir": "西馬込・羽田空港方面 (toward Nishi-magome / Haneda)", "type": "Every train stops at Daimon.", "wrong": "Next stop 人形町 Ningyōchō = wrong way.", "min": 7, "exit": "Exit A6 → walk ~10 min past Zōjō-ji's big gate"}],
         how: [
-          "Toei Asakusa Line from Nihombashi 4 stops to Daimon, or a ~15 min taxi (~¥2,000).",
+          "Toei Asakusa Line from Nihombashi 4 stops to Daimon (~10 min), then walk ~10 min west past Zōjō-ji.",
           "The classic shot: Zōjō-ji temple's gate and roof with the glowing orange tower right behind it.",
           "You don't need to go up — the ground-level view is the iconic one.",
         ],
@@ -659,8 +658,9 @@ const DAYS = [
       },
       {
         t: "22:15", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 2-15-12 Shinjuku",
+        ride: [{"ln": "OE", "from": "E21", "to": "E27", "dir": "六本木・都庁前方面 (toward Roppongi / Tochōmae)", "type": "Every train.", "wrong": "Next stop 大門 Daimon (E20) = wrong way.", "min": 15, "exit": "Exit toward Shinjuku-dōri, then walk east ~15 min to Shinjuku 2-chōme"}],
         how: [
-          "From Tokyo Tower: taxi to Shinjuku 2-chōme (~20 min, ~¥2,500). Halloween night is the one night a taxi is worth it.",
+          "From Tokyo Tower: walk ~7 min north to Akabanebashi Station, Toei Ōedo Line to Shinjuku (E21 → E27, ~15 min), then walk ~15 min east along Shinjuku-dōri to Ni-chome. Easier in costume than it sounds — half the train will be dressed up too.",
           "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE The 80th Edition “Duality”, from 9 PM ✅) or ArcH (地味ハロ “Jimi-Halloween”, from 9 PM ✅: dress as something boring 😂). ⚠️ Blacknude, Arty Farty and Dragon Men times are from their social posts — check Instagram before you go.",
           "Drink inside the bars — parts of Shinjuku restrict street drinking tonight.",
         ],
@@ -680,7 +680,7 @@ const DAYS = [
 
   /* ---------------- DAY 7 ---------------- */
   {
-    id: "d7", date: "2026-11-01", prep: ["Pack the backpack tonight — you leave it at the front desk at 6:30 AM checkout", "Comfy shoes for the 1.5-hour Fushimi Inari climb", "Budget ~¥7,000 for taxis tomorrow morning (Inari → Kinkaku-ji → Arashiyama) — Kyoto taxis take cards and Suica", "Pokémon Café Osaka 6:00 PM: confirmation in Trip → Tickets", "Optional: check the Kirby Café Osaka booking site for a cancellation", "Alarm ~6:00 AM"], rain: "Kyoto temples look amazing in the rain, but Ninenzaka's stone slopes get slippery. Covered options: Nishiki Market, Kyoto Takashimaya (Nintendo KYOTO) and Kyoto Station.", home: {"after": "21:30", "note": "Kyoto buses and the Karasuma subway stop around 23:30. Taxis are easy to flag on Shijō-dōri — show the Kyoto hotel card."}, dow: "Sun", title: "To Kyoto + Nintendo Museum", city: "Kyoto",
+    id: "d7", date: "2026-11-01", prep: ["Pack the backpack tonight — you leave it at the front desk at 6:30 AM checkout", "Comfy shoes for the 1.5-hour Fushimi Inari climb", "Tomorrow is all trains + buses (Inari → Kinkaku-ji → Arashiyama). Suica works on all of them; keep ~¥1,000 in coins as backup", "Pokémon Café Osaka 6:00 PM: confirmation in Trip → Tickets", "Optional: check the Kirby Café Osaka booking site for a cancellation", "Alarm ~6:00 AM"], rain: "Kyoto temples look amazing in the rain, but Ninenzaka's stone slopes get slippery. Covered options: Nishiki Market, Kyoto Takashimaya (Nintendo KYOTO) and Kyoto Station.", home: {"after": "21:30", "note": "Kyoto buses and the Karasuma subway stop around 23:30. From Kiyamachi it's a 15-min walk to Shijō Station, then 2 stops on the Karasuma subway — catch it before ~23:30."}, dow: "Sun", title: "To Kyoto + Nintendo Museum", city: "Kyoto",
     theme: "pixel", emoji: "🎮", deco: ["🎮", "⛩️", "🍄", "⭐", "🕹️", "🍁"],
     kicker: "Day 7 · Press Start in Kyoto",
     tagline: "Bullet train past Fuji, Nintendo's birthplace, and lantern-lit Gion at night.",
@@ -743,11 +743,12 @@ const DAYS = [
         photo: "Follow the posted photo rules inside. The courtyard and the big entrance signage are fair game for a hero shot.",
       },
       {
-        only: "a", t: "15:30", title: "Back → taxi to Kiyomizu-dera", ask: [{"jp": "清水寺までお願いします", "ro": "Kiyomizu-dera made onegai shimasu", "en": "To Kiyomizu-dera, please (taxi)", "hear": "none"}], say: ["taxi"], place: "Kiyomizu-dera",
-        ride: [{"ln": "KB", "from": "B10", "to": "B01", "dir": "京都方面 (toward Kyoto)", "type": "Any train that stops at Ogura goes all the way to Kyoto.", "wrong": "Next stop 伊勢田 Iseda = wrong way.", "min": 25, "exit": "Taxi stand on the north (Karasuma) side"}],
+        only: "a", t: "15:30", title: "Back → express bus to Kiyomizu-dera", ask: [{"jp": "清水寺行きのバス乗り場はどこですか？", "ro": "Kiyomizu-dera iki no basu noriba wa doko desu ka?", "en": "Where's the bus stop for Kiyomizu-dera?", "hear": "dir"}], say: ["norikae"], place: "Kiyomizu-dera",
+        ride: [{"ln": "KB", "from": "B10", "to": "B01", "dir": "京都方面 (toward Kyoto)", "type": "Any train that stops at Ogura goes all the way to Kyoto.", "wrong": "Next stop 伊勢田 Iseda = wrong way.", "min": 25, "exit": "Out the north (Karasuma) side to the bus terminal"}],
         how: [
           "Kintetsu back to Kyoto Station.",
-          "Taxi from the north (Karasuma) side to Kiyomizu-dera (~15 min, ~¥1,800). It's open until 6 PM.",
+          "Today is Sunday, so the EX101 Rakuraku Kiyomizu-dera express bus runs (weekends/holidays): Kyoto Station bus terminal → Gojōzaka, ¥500, Suica OK. Pay as you board at the front.",
+          "Backup: regular city bus 206 to Kiyomizu-michi (¥230). From either stop it's a ~10-min uphill walk. Kiyomizu-dera is open until 6 PM.",
         ],
       },
 
@@ -766,7 +767,7 @@ const DAYS = [
         how: [
           "Nintendo KYOTO is inside Kyoto Takashimaya S.C. (T8 building) at Shijō-Kawaramachi.",
           "⚡ Pokémon Center Kyoto is NOT in the same building: it's 12 min west along Shijō-dōri in SUINA Muromachi 2F (Hankyu Karasuma Station Exit 26, or Karasuma subway Shijō Station). Open 10:00–20:00.",
-          "Then taxi or walk ~25 min east to Kiyomizu-dera.",
+          "Then walk ~25 min east to Kiyomizu-dera (across the Kamo River, through Gion and up the slopes).",
         ],
         photo: "Grab a shot with the shop's big character displays — Kyoto is where Nintendo started as a playing-card company in 1889.",
       },
@@ -803,10 +804,10 @@ const DAYS = [
         spicy: "Kyoto's scene is tiny and chatty: one bar, a few drinks, and you'll know half the room 😉",
       },
       {
-        t: "21:30", title: "Back to the hotel", ask: [{"jp": "京都駅までお願いします", "ro": "Kyōto-eki made onegai shimasu", "en": "To Kyoto Station, please (taxi)", "hear": "none"}], ll: [34.987, 135.7593], say: ["taxi"], pic: "Kyoto Station staircase night photo", rx: "neon", place: "Hotel Hokke Club Kyoto",
+        t: "21:30", title: "Back to the hotel", ask: [{"jp": "四条駅はどっちですか？", "ro": "Shijō-eki wa dotchi desu ka?", "en": "Which way to Shijō Station?", "hear": "dir"}], ll: [34.987, 135.7593], say: ["norikae"], pic: "Kyoto Station staircase night photo", rx: "neon", place: "Hotel Hokke Club Kyoto",
         ride: [{"ln": "KR", "from": "K09", "to": "K11", "dir": "竹田方面 (toward Takeda)", "type": "Every train.", "wrong": "Next stop 烏丸御池 Karasuma-oike (K08) = wrong way.", "min": 5, "exit": "Karasuma Central Gate → hotel across the bus terminal"}],
         how: [
-          "Taxi (~¥1,500) or walk ~10 min west to Shijō Station → Karasuma subway 2 stops to Kyoto.",
+          "Walk ~15 min west along Shijō-dōri to Shijō Station → Karasuma subway 2 stops to Kyoto.",
           "Check in and grab your backpack.",
         ],
         photo: "The Kyoto Station grand staircase light-up, right by your hotel: sit halfway up the 171 steps while the LEDs change color, shot from the bottom.",
@@ -854,18 +855,19 @@ const DAYS = [
         snack: "On the way out: kitsune udon or inari sushi (fried tofu — the fox spirits' favorite) at the shops by the gate. Only sit down where Google Maps shows 4.0+.",
       },
       {
-        t: "08:30", title: "Kinkaku-ji: the Golden Pavilion ✨", ask: [{"jp": "金閣寺までお願いします。", "ro": "Kinkakuji made onegai shimasu.", "en": "To Kinkaku-ji, please. (to a taxi driver)", "hear": "none"}], ll: [35.0394, 135.7292], say: ["taxi", "photoplease", "kirei"], pic: "Kinkakuji golden pavilion reflection pond", rx: "velvia", place: "Kinkaku-ji, Kyoto",
+        t: "08:15", title: "Kinkaku-ji: the Golden Pavilion ✨", ask: [{"jp": "金閣寺行きのバスはどれですか？", "ro": "Kinkakuji iki no basu wa dore desu ka?", "en": "Which bus goes to Kinkaku-ji?", "hear": "none"}], ll: [35.0394, 135.7292], say: ["norikae", "photoplease", "kirei"],
+        ride: [{"ln": "JD", "from": "D03", "to": "D01", "dir": "京都方面 (toward Kyoto)", "type": "Every train.", "wrong": "Next stop JR藤森 JR Fujinomori (D04) = wrong way.", "min": 5, "exit": "Follow the green subway signs (Karasuma Line)"}, {"ln": "KR", "from": "K11", "to": "K04", "dir": "国際会館方面 (toward Kokusaikaikan)", "type": "Every train.", "wrong": "Next stop 九条 Kujō = wrong way.", "min": 15, "exit": "Kitaōji Bus Terminal → blue boarding area, stop E → bus 205 (or 204 from stop G) to Kinkakuji-michi, ~15 min"}], pic: "Kinkakuji golden pavilion reflection pond", rx: "velvia", place: "Kinkaku-ji, Kyoto",
         how: [
-          "From Fushimi Inari, take a taxi from the main road (~35 min, about ¥4,000–5,000). It saves an hour of buses and transfers.",
+          "Leave Inari by ~8:15: JR 2 stops back to Kyoto, Karasuma subway 7 stops to Kitaōji, then bus 205 from Kitaōji Bus Terminal stop E to Kinkakuji-michi (stop B), and a 5-min walk. ~50 min door to door, about ¥650, Suica all the way.",
           "Opens 9:00, ¥500. The path loops past the pavilion and its pond in about 40 minutes.",
         ],
         photo: "The classic: the gold pavilion mirrored in the pond from the first viewpoint by the entrance. Arrive at 9:00 sharp to get the railing before the tour groups.",
         snack: "Matcha soft serve near the exit — the gold-leaf version is very on-theme.",
       },
       {
-        t: "10:00", title: "Arashiyama bamboo grove + Togetsukyō 🎋", ask: [{"jp": "竹林の小径はどっちですか？", "ro": "Chikurin no komichi wa dotchi desu ka?", "en": "Which way to the bamboo grove path?", "hear": "dir"}], ll: [35.0170, 135.6713], say: ["photoplease", "osusume", "kirei"], pic: "Arashiyama bamboo grove path men photo", rx: "classic", place: "Arashiyama Bamboo Grove, Kyoto",
+        t: "10:15", title: "Arashiyama bamboo grove + Togetsukyō 🎋", ask: [{"jp": "竹林の小径はどっちですか？", "ro": "Chikurin no komichi wa dotchi desu ka?", "en": "Which way to the bamboo grove path?", "hear": "dir"}], ll: [35.0170, 135.6713], say: ["photoplease", "osusume", "kirei"], pic: "Arashiyama bamboo grove path men photo", rx: "classic", place: "Arashiyama Bamboo Grove, Kyoto",
         how: [
-          "Taxi from Kinkaku-ji (~20 min, ~¥2,500).",
+          "Bus 204 or 205 from Kinkakuji-michi 3 stops to Kitano-Hakubaichō, then the Randen tram (Kitano Line) → change at Katabiranotsuji → Arashiyama (~40 min total, Suica OK). The Randen Arashiyama stop is a 5-min walk from the bamboo grove.",
           "Walk the bamboo path (Chikurin no Komichi), then Tenryū-ji's garden (¥500) right next to it.",
           "Finish at Togetsukyō, the long wooden bridge over the river with forested mountains behind.",
         ],
@@ -898,15 +900,15 @@ const DAYS = [
         how: [
           "Tanimachi Line from Higashi-Umeda (5 min walk from your hotel) to Tanimachi 4-chōme.",
           "Main tower: 9:00–18:00, last entry 17:30, ¥1,200. Museum inside, rooftop-style viewing deck on the 8th floor.",
-          "Leave by 16:30 for Pokémon Center Osaka DX: taxi to Daimaru Shinsaibashi (~15 min) or the Chūō Line to Hommachi → Midosuji Line 1 stop.",
+          "Leave by 16:30 for Pokémon Center Osaka DX: Chūō Line from Tanimachi 4-chōme to Hommachi (C18 → C16), then the Midosuji Line 1 stop to Shinsaibashi (~20 min).",
         ],
         photo: "Shoot the tower across the stone walls and moat from the Gokuraku-bashi bridge — gold trim, white walls, autumn leaves.",
       },
       {
         t: "17:00", title: "Pokémon Center Osaka DX", fixed: true, quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
-        ride: [{"ln": "OM", "from": "M16", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 6, "exit": "Daimaru is connected to the station"}],
+        ride: [{"ln": "OC", "from": "C18", "to": "C16", "dir": "本町・コスモスクエア方面 (toward Hommachi / Cosmosquare)", "type": "Every train.", "wrong": "Next stop 森ノ宮 Morinomiya (C19) = wrong way.", "min": 5, "exit": "Transfer to the red Midosuji Line"}, {"ln": "OM", "from": "M18", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 淀屋橋 Yodoyabashi (M17) = wrong way.", "min": 2, "exit": "Daimaru is connected to the station"}],
         how: [
-          "From Osaka Castle: taxi (~15 min) or Chūō Line to Hommachi, then the Midosuji Line 1 stop to Shinsaibashi. (From Umeda it's the Midosuji Line direct, below.) Daimaru is connected to the station.",
+          "From Osaka Castle: Chūō Line to Hommachi, then the Midosuji Line 1 stop to Shinsaibashi. Daimaru is connected to the station.",
           "Pokémon Center Osaka DX and the café are on 9F.",
           "Check in at Pokémon Café Osaka by 5:50 PM for your 6:00 table (reservation in your email).",
         ],
@@ -986,14 +988,14 @@ const DAYS = [
         tip: "It's a national holiday — expect crowds. Eat early.",
       },
       {
-        t: "16:15", title: "Peace Memorial Park", ask: [{"jp": "原爆ドームまでお願いします", "ro": "Genbaku Dōmu made onegai shimasu", "en": "To the Atomic Bomb Dome, please (taxi)", "hear": "none"}], ll: [34.3955, 132.4536], say: ["taxi"], pic: "Atomic Bomb Dome river photo black and white", rx: "acros", place: "Atomic Bomb Dome, Hiroshima",
-        ride: [{"ln": "SL", "from": "MYJ", "to": "HIR", "dir": "広島・白市・西条方面 (toward Hiroshima)", "type": "Any train.", "wrong": "Next stop 前空 Maezora = wrong way.", "min": 27, "exit": "Taxi or tram to Genbaku-Dōmu-mae"}],
+        t: "16:15", title: "Peace Memorial Park", ask: [{"jp": "原爆ドーム前に行きますか？", "ro": "Genbaku Dōmu-mae ni ikimasu ka?", "en": "Does this go to Genbaku-Dōmu-mae?", "hear": "yesno"}], ll: [34.3955, 132.4536], say: ["norikae"], pic: "Atomic Bomb Dome river photo black and white", rx: "acros", place: "Atomic Bomb Dome, Hiroshima",
+        ride: [{"ln": "SL", "from": "MYJ", "to": "HIR", "dir": "広島・白市・西条方面 (toward Hiroshima)", "type": "Any train.", "wrong": "Next stop 前空 Maezora = wrong way.", "min": 27, "exit": "Streetcar to Genbaku-Dōmu-mae"}],
         how: [
           "Ferry back → JR to Hiroshima Station (~30 min).",
-          "Taxi (~10 min) or streetcar line 2 or 6 to Genbaku-Dōmu-mae. Have coins ready in case your IC card isn't accepted.",
+          "Streetcar (Hiroden) line 2 or 6 from the Hiroshima Station stop to Genbaku-Dōmu-mae (~15 min). Have coins ready in case your IC card isn't accepted.",
           "Walk the park to the Cenotaph and the Children's Peace Monument.",
           "🏛️ Strongly recommended: the Peace Memorial Museum (¥200, at the south end of the park). Regular entry is until 5:30 PM in November; after that you need an online reservation. Give it 45–60 minutes, then go straight to Pokémon Center and dinner.",
-          "⚡ On your way to dinner: Pokémon Center Hiroshima is in Sogo Hiroshima, ~5 min east of the Atomic Bomb Dome across the river at Kamiyachō. Open daily. A quick 20-minute stop, then taxi to dinner.",
+          "⚡ On your way to dinner: Pokémon Center Hiroshima is in Sogo Hiroshima, ~5 min east of the Atomic Bomb Dome across the river at Kamiyachō. Open daily. A quick 20-minute stop, then the streetcar to dinner.",
         ],
         photo: "A memorial: photograph the dome across the Motoyasu River. No smiling or playful poses here.",
         tip: "Keep your voice low. Many visitors leave paper cranes at the Children's Peace Monument.",
@@ -1001,9 +1003,9 @@ const DAYS = [
       {
         t: "17:30", title: "Hiroshima okonomiyaki", ask: [{"jp": "一人ですが、座れますか？", "ro": "Hitori desu ga, suwaremasu ka?", "en": "Just me — can I sit?", "hear": "full"}], ll: [34.3918, 132.4659], say: ["hitori", "osusume", "gochisousama"], pic: "Hiroshima okonomiyaki griddle", rx: "reala", place: "Yagenbori Hassho, 10-6 Yagenbori, Naka-ku, Hiroshima",
         how: [
-          "Yagenbori Hassho (薬研堀 八昌): Google 4.2 from 1,700+ reviews, opens at 4 PM and Tuesday is open. A queue builds fast, so get in line by 5:30. It's a ~20 min walk east from Peace Park, or ¥1,000 by taxi.",
+          "Yagenbori Hassho (薬研堀 八昌): Google 4.2 from 1,700+ reviews, opens at 4 PM and Tuesday is open. A queue builds fast, so get in line by 5:30. From Kamiyachō-higashi, ride any eastbound streetcar 3 stops to Ebisu-chō, then walk ~5 min south (or walk ~20 min from Peace Park).",
           "Today is a national holiday, so hours can shift. If it's closed, Nagataya by Peace Park (Google 4.4) is normally closed Tuesdays but may open for the holiday. Check Google Maps.",
-          "Leave by 18:40 for your 19:15 shinkansen: taxi to Hiroshima Station is ~10 min.",
+          "Leave by 18:35 for your 19:15 shinkansen: streetcar from Ebisu-chō to Hiroshima Station (~10 min), then the shinkansen gates.",
           "Sit at the counter and watch them build it.",
         ],
         snack: "Hiroshima-style okonomiyaki is layered with noodles (soba or udon) — order “soba-iri” with an egg on top. Eat it straight off the griddle with the little spatula.",
@@ -1012,7 +1014,7 @@ const DAYS = [
         t: "19:15", title: "Shinkansen back to Osaka", fixed: true, place: "APA Hotel & Resort Osaka Umeda Eki Tower",
         ride: [{"ln": "SYS", "from": "HIJ", "to": "SHO", "dir": "新大阪・東京方面 (eastbound)", "type": "Every Nozomi stops at Shin-Osaka.", "min": 85, "exit": "Follow JR Kyoto Line signs"}, {"ln": "JA", "from": "A46", "to": "A47", "dir": "大阪・神戸方面 (toward Osaka)", "type": "Any train.", "wrong": "Next stop 東淀川 Higashi-Yodogawa = wrong way.", "min": 4, "exit": "Midosuji South Exit → hotel"}],
         how: [
-          "Tram or taxi back to Hiroshima Station.",
+          "Streetcar back to Hiroshima Station.",
           "Nozomi to Shin-Osaka (~1 h 25), JR 1 stop to Osaka, walk ~8 min.",
         ],
         spicy: "Want a Hiroshima gay bar first? Goli Macho (5F Jewel Ebisu Bldg, 3-6 Ebisu-cho; open Tue–Sat) is Hiroshima's friendliest, with a mixed crowd. Its opening time isn't listed, so only stay if SmartEX shows a later train that still gets you to Osaka.",
@@ -1043,7 +1045,7 @@ const DAYS = [
 
   /* ---------------- DAY 10 ---------------- */
   {
-    id: "d10", date: "2026-11-04", prep: ["Alarm 5:30 AM for the sunrise; warm layer by the door", "Save the 9:30 AM Kawaguchiko → Busta Shinjuku bus QR — don't take a later one", "Passport + tax-refund receipts + those goods together in your backpack", "Online check-in for UA868 (opens 24 hours before the 6 PM flight)", "Mobile Passport Control app ready for Chicago", "Spend leftover coins — they can't be exchanged back"], rain: "Clouds hide Fuji? Check the Kawaguchiko live cam the night before. If the forecast is bad, consider Hakone instead (Hikari to Odawara) — great hot springs, less reliable Fuji views. Even cloudy, Kawaguchiko's autumn leaves and onsen are worth it.", cloudy: true, home: {"after": "18:30", "note": "Kawaguchiko's local buses stop early in the evening — plan a taxi back from dinner if your hotel isn't walkable."}, dow: "Wed", title: "Osaka → Mt Fuji", city: "Mt Fuji",
+    id: "d10", date: "2026-11-04", prep: ["Alarm 5:30 AM for the sunrise; warm layer by the door", "Save the 9:30 AM Kawaguchiko → Busta Shinjuku bus QR — don't take a later one", "Passport + tax-refund receipts + those goods together in your backpack", "Online check-in for UA868 (opens 24 hours before the 6 PM flight)", "Mobile Passport Control app ready for Chicago", "Spend leftover coins — they can't be exchanged back"], rain: "Clouds hide Fuji? Check the Kawaguchiko live cam the night before. If the forecast is bad, consider Hakone instead (Hikari to Odawara) — great hot springs, less reliable Fuji views. Even cloudy, Kawaguchiko's autumn leaves and onsen are worth it.", cloudy: true, home: {"after": "18:30", "note": "Kawaguchiko's local buses stop early in the evening — pick a dinner spot within walking distance of your hotel, or eat early enough to catch the bus back."}, dow: "Wed", title: "Osaka → Mt Fuji", city: "Mt Fuji",
     theme: "fuji", emoji: "🗻", deco: ["🗻", "🍁", "♨️", "🌅", "🚄", "🍂"],
     kicker: "Day 10 · The mountain",
     tagline: "Bullet train, then My Hero Academia coasters with Fuji in the background, hōtō noodles and a hot spring.",
@@ -2058,7 +2060,7 @@ const LINES = {
   KB: { name: "Kintetsu Kyoto Line", jp: "近鉄京都線", color: "#e0262b", stops: [
     ["B01", "京都", "Kyoto"], ["B02", "東寺", "Tōji"], ["B03", "十条", "Jūjō"], ["B04", "上鳥羽口", "Kamitobaguchi"], ["B05", "竹田", "Takeda"],
     ["B06", "伏見", "Fushimi"], ["B07", "近鉄丹波橋", "Kintetsu-Tambabashi"], ["B08", "桃山御陵前", "Momoyama-goryōmae"], ["B09", "向島", "Mukaijima"], ["B10", "小倉", "Ogura"]] },
-  KR: { name: "Karasuma Line (Kyoto subway)", jp: "烏丸線", color: "#2a9d4a", stops: [["K09", "四条", "Shijō"], ["K10", "五条", "Gojō"], ["K11", "京都", "Kyoto"]] },
+  KR: { name: "Karasuma Line (Kyoto subway)", jp: "烏丸線", color: "#2a9d4a", stops: [["K04", "北大路", "Kitaōji"], ["K05", "鞍馬口", "Kuramaguchi"], ["K06", "今出川", "Imadegawa"], ["K07", "丸太町", "Marutamachi"], ["K08", "烏丸御池", "Karasuma-oike"], ["K09", "四条", "Shijō"], ["K10", "五条", "Gojō"], ["K11", "京都", "Kyoto"]] },
   JD: { name: "JR Nara Line", jp: "奈良線", color: "#9a6b32", stops: [
     ["D01", "京都", "Kyoto"], ["D02", "東福寺", "Tōfukuji"], ["D03", "稲荷", "Inari"], ["D04", "JR藤森", "JR Fujinomori"], ["D05", "桃山", "Momoyama"],
     ["D06", "六地蔵", "Rokujizō"], ["D07", "木幡", "Kohata"], ["D08", "黄檗", "Ōbaku"], ["D09", "宇治", "Uji"]] },
@@ -2083,6 +2085,8 @@ const LINES = {
     ["JB07", "中野", "Nakano"], ["JB08", "東中野", "Higashi-Nakano"], ["JB09", "大久保", "Ōkubo"], ["JB10", "新宿", "Shinjuku"], ["JB11", "代々木", "Yoyogi"],
     ["JB12", "千駄ケ谷", "Sendagaya"], ["JB13", "信濃町", "Shinanomachi"], ["JB14", "四ツ谷", "Yotsuya"], ["JB15", "市ケ谷", "Ichigaya"], ["JB16", "飯田橋", "Iidabashi"],
     ["JB17", "水道橋", "Suidōbashi"], ["JB18", "御茶ノ水", "Ochanomizu"], ["JB19", "秋葉原", "Akihabara"]] },
+  OE: { name: "Toei Ōedo Line", jp: "大江戸線", color: "#b6007a", stops: [["E21", "赤羽橋", "Akabanebashi"], ["E22", "麻布十番", "Azabu-jūban"], ["E23", "六本木", "Roppongi"], ["E24", "青山一丁目", "Aoyama-itchōme"], ["E25", "国立競技場", "Kokuritsu-kyōgijō"], ["E26", "代々木", "Yoyogi"], ["E27", "新宿", "Shinjuku"]] },
+  OC: { name: "Chūō Line (Osaka Metro)", jp: "中央線", color: "#019a66", stops: [["C16", "本町", "Hommachi"], ["C17", "堺筋本町", "Sakaisuji-hommachi"], ["C18", "谷町四丁目", "Tanimachi 4-chōme"]] },
   A: { name: "Toei Asakusa Line", jp: "浅草線", color: "#ec6e65", stops: [["A09", "大門", "Daimon"], ["A10", "新橋", "Shimbashi"], ["A11", "東銀座", "Higashi-ginza"], ["A12", "宝町", "Takarachō"], ["A13", "日本橋", "Nihombashi"]] },
   OT: { name: "Tanimachi Line (Osaka Metro)", jp: "谷町線", color: "#8e5c9e", stops: [["T20", "東梅田", "Higashi-Umeda"], ["T21", "南森町", "Minami-morimachi"], ["T22", "天満橋", "Temmabashi"], ["T23", "谷町四丁目", "Tanimachi 4-chōme"]] },
   SAG: { name: "JR Sagano Line", jp: "嵯峨野線", color: "#7b3f98", stops: [["E01", "京都", "Kyoto"], ["E02", "梅小路京都西", "Umekōji-Kyōtonishi"], ["E03", "丹波口", "Tambaguchi"], ["E04", "二条", "Nijō"], ["E05", "円町", "Emmachi"], ["E06", "花園", "Hanazono"], ["E07", "太秦", "Uzumasa"], ["E08", "嵯峨嵐山", "Saga-Arashiyama"]] },
