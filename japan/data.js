@@ -406,9 +406,17 @@ const DAYS = [
         ],
       },
       {
-        t: "17:30", title: "Tokyo Character Street 🎁", quest: "⭐ KIRBY CAFÉ PETIT: takeout Kirby sweets, no reservation needed.", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6795, 139.7685], say: ["menzei", "kore", "fukuro"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
+        t: "17:30", title: "🍣 Grab a sushi queue ticket (Nemuro Hanamaru)", ll: [35.6797, 139.7649], say: ["hitori"], place: "Kaitenzushi Nemuro Hanamaru, KITTE Marunouchi 5F, 2-7-2 Marunouchi, Tokyo",
         how: [
-          "A whole underground street of character shops, open until 8:30 PM. Tax-free is still on until Saturday: ask before you pay.",
+          "Hokkaido-style conveyor sushi on KITTE Marunouchi 5F, right across from Tokyo Station's Marunouchi South Exit. Google 4.1 from 3,000+ reviews. Open until 10 PM.",
+          "🟢 Low-pressure: get a number from the self-service machine outside the door (enter 1 person). Scan the QR on the ticket for an alert when you're close, then go shopping.",
+          "From the Keiyo platforms, walk through the station to the Marunouchi South Exit (丸の内南口), then cross the street to KITTE.",
+        ],
+      },
+      {
+        t: "17:45", title: "Tokyo Character Street 🎁 (while you wait)", quest: "⭐ KIRBY CAFÉ PETIT: takeout Kirby sweets, no reservation needed.", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6795, 139.7685], say: ["menzei", "kore", "fukuro"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
+        how: [
+          "Walk back through the station to the Yaesu side, B1 (~10 min). A whole underground street of character shops, open until 8:30 PM. Tax-free is still on until Saturday: ask before you pay. Head back to KITTE when your sushi alert comes.",
           "Pokémon Store Tokyo Station: small, but it has station-exclusive designs.",
           "🎁 TOMICA PLARAIL SHOP: a wall of ~700 Tomica cars and a big train diorama. The easiest place to shop for your nieces and nephews.",
           "🎁 Also here: Sanrio (store exclusives), Chiikawa Land, the ONE PIECE Mugiwara Store, plus Snoopy and Rilakkuma shops.",
@@ -416,11 +424,21 @@ const DAYS = [
         photo: "Night shot: walk out the Marunouchi side (丸の内中央口) for the 1914 red-brick Tokyo Station building lit up. Shoot it from across the plaza in front of the KITTE building.",
       },
       {
-        t: "18:30", title: "24 Kaikan Ueno, then the last train home 🧖", night: true, fixed: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.7155, 139.781], say: ["kyukei", "kondomu2"], place: "24会館 上野, 1-8-7 Kita-Ueno, Taito, Tokyo",
+        t: "18:30", title: "🍣 Your first sushi: conveyor sushi at Nemuro Hanamaru", fixed: true, ask: [{"jp": "おすすめは何ですか？", "ro": "Osusume wa nan desu ka?", "en": "What do you recommend?", "hear": "none"}, {"jp": "お会計お願いします。", "ro": "Okaikei onegai shimasu.", "en": "Check, please.", "hear": "none"}], ll: [35.6797, 139.7649], say: ["hitori", "oishii", "gochisousama"], place: "Kaitenzushi Nemuro Hanamaru, KITTE Marunouchi 5F, 2-7-2 Marunouchi, Tokyo",
+        how: [
+          "🟢 Zero-pressure eating: just take any plate you like off the belt. Plate color = price (the chart is on the wall or menu). Nobody minds what or how much you take.",
+          "Want something specific? Write it on the order sheet or point at the menu photo and say “Kore kudasai.” Chefs make it fresh.",
+          "At your seat: green-tea powder + the hot-water tap for free tea, pickled ginger (gari) between bites, soy sauce on the fish side, not the rice. Hands or chopsticks are both fine.",
+          "Done? Stack your plates, say “Okaikei onegai shimasu,” and pay at the register. No tip.",
+        ],
+        snack: "Try: salmon, scallop (hotate), seared salmon (aburi), and a Hokkaido specialty from the order sheet. The chefs will happily point you to the day's best fish.",
+      },
+      {
+        t: "19:30", title: "24 Kaikan Ueno, then the last train home 🧖", night: true, fixed: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.7155, 139.781], say: ["kyukei", "kondomu2"], place: "24会館 上野, 1-8-7 Kita-Ueno, Taito, Tokyo",
         ride: [{"ln": "JYE", "from": "JY01", "to": "JY05", "dir": "上野・池袋方面 (toward Ueno / Ikebukuro)", "type": "Every Yamanote train stops at all 4 stops.", "wrong": "Next stop 有楽町 Yūrakuchō (JY30) = wrong way.", "min": 8, "exit": "Park Exit (公園口) → walk ~14 min to 24 Kaikan"}, {"ln": "JYE", "from": "JY05", "to": "JY03", "dir": "東京・品川方面 (toward Tokyo / Shinagawa) — Platform 3", "type": "12:25, 12:28 or 12:33 AM. Ride 2 stops; board cars 3–6 for the fastest transfer.", "wrong": "Next stop 鶯谷 Uguisudani (JY06) = wrong way.", "min": 4, "exit": "At Akihabara, follow the yellow Chūō-Sōbu Line signs to Platform 5"}, {"ln": "JB", "from": "JB19", "to": "JB10", "dir": "三鷹・中野方面 (toward Nakano) — Platform 5, yellow local", "type": "⚠️ 12:34 AM is the LAST train. The next one is 5:02 AM. Front cars (1–2) for the fastest exit at Shinjuku.", "wrong": "Next stop 浅草橋 Asakusabashi (JB20) = wrong way.", "min": 19, "exit": "Shinjuku South East Exit → walk ~13 min to the hotel (arrive ~1:05 AM)"}],
         how: [
-          "From Character Street, back through the Yaesu gates: Yamanote 4 stops to Ueno (~8 min), then walk ~14 min to 1-8-7 Kita-Ueno. Search 24会館 上野 in Google Maps.",
-          "Skipping dinner? Grab water and an onigiri at a konbini on the walk — saunas dehydrate you fast.",
+          "From KITTE, back into Tokyo Station: Yamanote 4 stops to Ueno (~8 min), then walk ~14 min to 1-8-7 Kita-Ueno. Search 24会館 上野 in Google Maps.",
+          "Grab water at a konbini on the walk — saunas dehydrate you fast.",
           "You're going home tonight, so ask for the short stay (休憩, kyūkei) instead of the overnight rate. Cash. English is spoken and the signs are in English too.",
           "⏰ Leave 24 Kaikan by 12:00 AM. It's a 14-min walk to Ueno Station (Park Exit), and you need the 12:25 Yamanote at the latest for the 12:34 last Chūō-Sōbu train from Akihabara.",
           "Miss it? No stress: go back and switch to the overnight stay (宿泊). Friday starts in Asakusa, 3 stops away on the Ginza Line.",
@@ -1390,6 +1408,18 @@ const PHRASES = [
 
 /* ---------------- MANNERS ---------------- */
 const MANNERS = [
+  {
+    emoji: "🍣", title: "Eat out without stress",
+    body: [
+      "<b>Staff expect foreigners not to know the rules.</b> A smile, a point and “arigatō” make you an easy customer, not an embarrassing one.",
+      "<b>Easiest formats:</b> conveyor sushi (grab plates off the belt or order on a tablet), ticket-machine shops (pick a photo button, pay, hand over the ticket — no talking), solo-booth ramen, takeout stands, food halls in department-store basements (depachika) and konbini.",
+      "<b>Walking in:</b> hold up one finger and say “Hitori desu” (just one). If there's a clipboard or ticket machine by the door, write a name or take a number and wait outside.",
+      "<b>Ordering:</b> point at the photo + “Kore kudasai” (this one, please). To call staff: raise a hand and say “Sumimasen,” or press the call button on the table.",
+      "<b>Things you can't really get wrong:</b> slurping is normal, asking for a fork is fine, no tipping ever, and you can leave food you don't like.",
+      "<b>The real rules (only a few):</b> don't stick chopsticks upright in rice, don't pass food chopstick-to-chopstick, and put cash or card in the little tray instead of handing it over.",
+      "<b>Leaving:</b> pay at the register by the door and say “Gochisōsama deshita” (thanks for the meal). They'll love it.",
+    ],
+  },
   {
     emoji: "🙇", title: "How to physically say thank you",
     body: [
