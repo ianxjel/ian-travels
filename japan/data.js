@@ -460,7 +460,7 @@ const DAYS = [
       {
         t: "08:45", title: "🍳 Breakfast: konbini by the hotel", ask: [{"jp": "温めてください。", "ro": "Atatamete kudasai.", "en": "Please heat it up.", "hear": "yesno"}], ll: [35.6888, 139.71], say: ["fukuro", "atatame"], place: "7-Eleven near Shinjuku-gyoemmae Station",
         how: [
-          "🟢 Zero-pressure Japanese breakfast: grab it, pay, eat on the walk to the station.",
+          "🟢 Zero-pressure Japanese breakfast: grab it, pay, then eat in the store's eat-in corner (イートイン) if it has one, or standing just outside by the door. Eating while walking is frowned on in Japan.",
           "Onigiri (rice ball): sake (salmon) or tuna mayo. Pull tab 1 down the middle, then corners 2 and 3 — the seaweed wraps itself on.",
           "Tamago sando (the famous fluffy egg sandwich) + a hot drink. Second breakfast is Kagetsudō's melon pan at 10.",
         ],
