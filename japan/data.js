@@ -340,7 +340,7 @@ const DAYS = [
 
   /* ---------------- DAY 4 ---------------- */
   {
-    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "20:30", "note": "Same as Tuesday: trains from Maihama until around midnight, but leave buffer for the long Tokyo Station transfer."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
+    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "21:00", "note": "You're out of Disney by 3:30 today. Tonight ends in Ueno: the Yamanote runs until about midnight, or a taxi to Shinjuku is ~¥4,000–5,000."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
     theme: "spooky", emoji: "🎃", deco: ["🎃", "🏰", "🦇", "👻", "🍬", "🕸️"],
     kicker: "Day 4 · Spooky season, castle edition",
     tagline: "Villains, pumpkins and a castle at blue hour. Wear the costume one more time — it's allowed.",
@@ -374,37 +374,56 @@ const DAYS = [
         snack: "Halloween menus: look for seasonal items in the app (pumpkin and purple everything), a Mickey churro, and a themed popcorn bucket — it doubles as a birthday-week souvenir.",
       },
       {
-        t: "17:00", title: "Cinderella Castle at blue hour", fixed: true, ask: [{"jp": "ナイトショーは何時からですか？", "ro": "Naito shō wa nanji kara desu ka?", "en": "What time is the night show?", "hear": "time"}], ll: [35.6329, 139.8804], say: ["photoplease", "kirei"], pic: "Tokyo Disneyland castle Halloween night men photo", rx: "pastel", place: "Cinderella Castle, Tokyo Disneyland",
+        t: "14:40", title: "Beauty and the Beast, round 2 🌹", fixed: true, ll: [35.6343, 139.8797], say: ["photoplease"], pic: "Tokyo Disneyland Cinderella Castle Halloween daytime photo", rx: "pastel", place: "Enchanted Tale of Beauty and the Beast, Tokyo Disneyland",
         how: [
-          "Get to the hub in front of the castle by ~4:45 PM.",
-          "Stay for the nighttime show / Electrical Parade (check the app).",
+          "Your Premier Access window is 2:40–3:40 PM. Scan the QR in the Disney app at the DPA entrance.",
+          "You've done every Premier Access ride before noon, so this is the victory lap. Leave the park right after.",
         ],
-        photo: "Stand dead-center on the path with the castle behind you, arms out or mid-jump. Burst mode, and have them crouch so the castle looks taller.",
+        photo: "No blue hour at the castle today: grab a daytime castle shot on your way out, then catch blue hour at Tokyo Station instead (~5:10 PM).",
       },
       {
-        t: "21:00", title: "Disneyland → Ueno 🚃", night: true, ll: [35.7138, 139.7773], say: ["norikae", "nanban"], place: "Ueno Station, Tokyo",
-        ride: [{"ln": "JE", "from": "JE07", "to": "JE01", "dir": "東京方面 (toward Tokyo)", "type": "Any train.", "wrong": "Next stop 新浦安 Shin-urayasu (JE08) = wrong way.", "min": 15, "exit": "Follow the green Yamanote / light-blue Keihin-Tohoku signs (long walk from the Keiyo platforms)"}, {"ln": "JYE", "from": "JY01", "to": "JY05", "dir": "上野・池袋方面 (toward Ueno / Ikebukuro) — or the light-blue Keihin-Tohoku Line toward 大宮 Ōmiya; both stop at Ueno", "type": "Every Yamanote train stops at all 4 stops.", "wrong": "Next stop 有楽町 Yūrakuchō (JY30) = wrong way.", "min": 8, "exit": "Exit toward Shōwa-dōri (昭和通り口) — search 24会館 上野 in Google Maps"}],
+        t: "15:30", title: "Disneyland → Tokyo Station 🚃", ll: [35.6795, 139.7685], say: ["norikae"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
+        ride: [{"ln": "JE", "from": "JE07", "to": "JE01", "dir": "東京方面 (toward Tokyo)", "type": "Any train.", "wrong": "Next stop 新浦安 Shin-urayasu (JE08) = wrong way.", "min": 15, "exit": "Follow 八重洲口 Yaesu Exit signs. Tokyo Character Street is on B1, right outside the Yaesu-side gates"}],
         how: [
-          "Keiyo Line back to Tokyo Station, then just 4 stops north to Ueno (~45 min total).",
-          "Bring a change of clothes in your day bag if you might stay the night at the sauna.",
+          "Keiyo Line to the end, Tokyo (~15 min). The Keiyo platforms are deep underground, so it's a long walk to the gates.",
+          "Tap out at a Yaesu-side gate (八重洲口). Tokyo Character Street (東京キャラクターストリート) is on B1 of First Avenue Tokyo Station, just outside.",
         ],
-        photo: "Bonus sight: Tokyo Station's 1914 red-brick Marunouchi building is lit up at night — a 10-min detour from the Keiyo platforms out the Marunouchi Central Exit.",
-        snack: "Konbini stop near Ueno Station: Lawson's Karaage-kun or a hot oden cup from the counter.",
       },
       {
-        t: "21:45", title: "Yakiniku in Ueno 🍖", ask: [{"jp": "一人ですが、大丈夫ですか？", "ro": "Hitori desu ga, daijōbu desu ka?", "en": "It's just me. Is that OK?", "hear": "yesno"}], ll: [35.7096, 139.7745], say: ["hitori", "oishii", "nama"], place: "Yakiniku Iwasaki, 2-8-2 Ueno, Taito, Tokyo",
+        t: "16:00", title: "Tokyo Character Street 🎁", quest: "⭐ KIRBY CAFÉ PETIT: takeout Kirby sweets, no reservation needed.", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6795, 139.7685], say: ["menzei", "kore", "fukuro"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
         how: [
-          "Yakiniku Iwasaki (2-8-2 Ueno, ~7 min walk south of Ueno Station toward Okachimachi): Google 4.8 from 2,300+ reviews, listed as open late into the night, so a 9:45 PM arrival works. Search “Yakiniku Iwasaki Ueno” in Google Maps.",
-          "Backup: Wagyu Yakiniku USHIHACHI Kiwami Ueno (FUNDES Ueno 10F, right by the station): Google 4.6, closes at 11 PM, so go straight there.",
+          "A whole underground street of character shops, open until 8:30 PM. Tax-free is still on until Saturday: ask before you pay.",
+          "Pokémon Store Tokyo Station: small, but it has station-exclusive designs.",
+          "🎁 TOMICA PLARAIL SHOP: a wall of ~700 Tomica cars and a big train diorama. The easiest place to shop for your nieces and nephews.",
+          "🎁 Also here: Sanrio (store exclusives), Chiikawa Land, the ONE PIECE Mugiwara Store, plus Snoopy and Rilakkuma shops.",
+        ],
+        photo: "Blue hour ~5:10 PM: walk out the Marunouchi side (丸の内中央口) for the 1914 red-brick Tokyo Station building lit up. Shoot it from across the plaza in front of the KITTE building.",
+      },
+      {
+        t: "17:45", title: "Ueno: Ameyoko market at night 🏮", ll: [35.7101, 139.7744], say: ["kore", "ikura"], pic: "Ameyoko Ueno night street photo", rx: "neon", place: "Ameyoko, Ueno, Tokyo",
+        ride: [{"ln": "JYE", "from": "JY01", "to": "JY05", "dir": "上野・池袋方面 (toward Ueno / Ikebukuro) — or the light-blue Keihin-Tohoku Line toward 大宮 Ōmiya; both stop at Ueno", "type": "Every Yamanote train stops at all 4 stops.", "wrong": "Next stop 有楽町 Yūrakuchō (JY30) = wrong way.", "min": 8, "exit": "Shinobazu Exit (不忍口) → Ameyoko starts right across the street"}],
+        how: [
+          "Back through the gates and 4 stops north to Ueno (~8 min).",
+          "Ameyoko (アメ横) runs under and beside the train tracks from Ueno to Okachimachi: snack stalls, sneaker shops, cheap Japanese snacks and dried fruit. Stalls start closing around 7–8 PM.",
+          "It ends right by Yakiniku Iwasaki, so just walk south to dinner.",
+        ],
+        snack: "Street-food stalls here: only stop at ones showing 4.0+ on Google Maps.",
+        photo: "Shoot down the alley under the elevated tracks when a train passes overhead, neon signs on both sides.",
+      },
+      {
+        t: "19:15", title: "Yakiniku in Ueno 🍖", ask: [{"jp": "一人ですが、大丈夫ですか？", "ro": "Hitori desu ga, daijōbu desu ka?", "en": "It's just me. Is that OK?", "hear": "yesno"}], ll: [35.7096, 139.7745], say: ["hitori", "oishii", "nama"], place: "Yakiniku Iwasaki, 2-8-2 Ueno, Taito, Tokyo",
+        how: [
+          "Yakiniku Iwasaki (2-8-2 Ueno, ~7 min walk south of Ueno Station toward Okachimachi): Google 4.8 from 2,300+ reviews, listed as open late into the night. Search “Yakiniku Iwasaki Ueno” in Google Maps.",
+          "Backup: Wagyu Yakiniku USHIHACHI Kiwami Ueno (FUNDES Ueno 10F, right by the station): Google 4.6, open until 11 PM.",
           "Point at the menu photos. Start with tongue (タン) and kalbi (カルビ).",
         ],
         snack: "Wagyu kalbi, a beer and rice. You've earned it after a full Disney day.",
       },
       {
-        t: "22:45", title: "Long night at 24 Kaikan Ueno 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.712, 139.779], say: ["shukuhaku", "kyukei", "kondomu2"], place: "24会館 上野 (24 Kaikan Ueno)",
+        t: "21:00", title: "Long night at 24 Kaikan Ueno 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [35.712, 139.779], say: ["shukuhaku", "kyukei", "kondomu2"], place: "24会館 上野 (24 Kaikan Ueno)",
         how: [
           "It's on Shōwa-dōri, a short walk from Ueno Station's east side. Search 24会館 上野 in Google Maps.",
-          "After 9 PM it's about ¥2,800 for up to 14 hours, cash. English is spoken and the signs are in English too.",
+          "Get there at 9 PM or later: that's when the ~¥2,800 overnight rate (up to 14 hours, cash) starts. English is spoken and the signs are in English too.",
           "Tonight's the one to go long: Friday starts at 10 AM, and Asakusa is 5 minutes away.",
           "Sleeping there? Ask for the overnight stay (宿泊). Or catch a taxi back to the hotel (~¥4,000–5,000).",
         ],
@@ -1951,7 +1970,7 @@ const MERCH_SEEDS = [
 ];
 // 🎁 family gifts (added Oct 29) — also merged into lists already saved on the phone
 const GIFT_SEEDS = [
-  { id: "g-toys", item: "🎁 Toys for the nieces + nephews (Tomica, Sylvanian, Popin' Cookin' kits, gachapon)", where: "Kiddy Land Harajuku (Fri) · Don Quijote / Yodobashi Akiba (Sat)", day: "d6", forWho: "Nieces + nephews" },
+  { id: "g-toys", item: "🎁 Toys for the nieces + nephews (Tomica, Sylvanian, Popin' Cookin' kits, gachapon)", where: "Tomica Plarail Shop, Tokyo Character Street (Thu) · Kiddy Land (Fri) · Don Quijote Akiba (Sat)", day: "d4", forWho: "Nieces + nephews" },
   { id: "g-sis", item: "🎁 Skincare: Hada Labo lotion, Biore UV sunscreen, Melano CC serum, Lululun masks", where: "Don Quijote Akihabara (Sat) · @cosme TOKYO (Fri)", day: "d6", forWho: "Sister + sister-in-law" },
   { id: "g-mom", item: "🎁 Skincare: Sekkisei lotion or Shiseido Elixir", where: "Don Quijote Akihabara (Sat) · @cosme TOKYO (Fri)", day: "d6", forWho: "Mom" },
   { id: "g-grandma", item: "🎁 Skincare: Shiseido Elixir, horse-oil cream or Urea hand cream", where: "Don Quijote Akihabara (Sat)", day: "d6", forWho: "Grandma" },
