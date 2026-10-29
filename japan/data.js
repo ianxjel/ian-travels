@@ -494,12 +494,26 @@ const DAYS = [
           "From Oshiage (Skytree) take the Hanzōmon line straight to Omotesando (~30 min).",
           "Exit A2, then walk ~7 min up Omotesandō avenue toward Harajuku (you pass Kiddy Land on the way). The kaleidoscope mirror entrance is Tokyu Plaza Omokado, on the corner of Meiji-dōri (4-30-3 Jingūmae).",
           "Ahead of schedule? Takeshita Street (Harajuku's colorful crepe-and-fashion street) and Meiji Jingū shrine are ~10 min north. The shrine gates close at sunset.",
-          "🎁 Gift stop: Kiddy Land (6-1-9 Jingūmae, a 3-min walk up Omotesandō avenue, 11:00–20:00) is 5 floors of Japanese toys: Tomica cars + Plarail trains (3F), Sanrio + Rilakkuma (4F), Disney (2F), Snoopy (B1). Tax-free over ¥5,000 — passport out.",
-          "👕 Style stop: BEAMS Harajuku (1F–2F, 3-24-7 Jingūmae, ~3 min from the mirror entrance), the flagship that reopened in March 2026 for BEAMS' 50th: casual menswear plus Harajuku-only collabs. Tops in 3L/XXL.",
-          "🎁 If time: @cosme TOKYO by Harajuku Station (1-14-27 Jingūmae, 11:00–21:00), 3 floors of Japanese skincare ranked by Japan's biggest beauty-review site. Otherwise do skincare tomorrow in Akihabara.",
         ],
         photo: "Fit check: full-body shot in the mirror entrance from the bottom of the escalator. Then the free rooftop terrace upstairs.",
         snack: "Soufflé pancakes: A Happy Pancake Omotesandō (its branches sit around Google 4.1–4.2). Put your name down (20–30 min wait), then do the MHA café / mirror photos.",
+      },
+      {
+        t: "15:30", title: "🎁 Kiddy Land: toys for the nieces + nephews", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6683, 139.7058], say: ["menzei", "kore", "fukuro"], place: "Kiddy Land Harajuku, 6-1-9 Jingumae, Tokyo",
+        how: [
+          "On Omotesandō avenue, ~3 min back toward Omotesandō Station from the mirror entrance. Open 11:00–20:00.",
+          "5 floors: Tomica cars + Plarail trains (3F), Sanrio + Rilakkuma (4F), Disney (2F), Snoopy (B1).",
+          "Tax-free over ¥5,000 — passport out, ask before they scan.",
+          "If time: @cosme TOKYO by Harajuku Station (1-14-27 Jingūmae, 11:00–21:00) for skincare. Otherwise skincare is tomorrow in Akihabara.",
+        ],
+      },
+      {
+        t: "15:45", title: "👕 BEAMS Harajuku: Amekaji for you", ask: [{"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}, {"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6702, 139.7055], say: ["menzei", "kore"], place: "BEAMS Harajuku, 3-24-7 Jingumae, Tokyo",
+        how: [
+          "1F–2F, 3-24-7 Jingūmae, ~3 min from the mirror entrance. The flagship reopened in March 2026 for BEAMS' 50th: casual menswear plus Harajuku-only collabs.",
+          "Look for: heavyweight boxy tees, open-collar shirts, relaxed straight denim, knit polos. Tops in 3L/XXL.",
+          "Keep it to ~25 min: Shibuya Sky's sunset slot is at 4:15, one stop away.",
+        ],
       },
       {
         t: "16:15", title: "Shibuya Sky at sunset", fixed: true, ask: [{"jp": "渋谷スカイのチケット売り場は何階ですか？", "ro": "Shibuya Sukai no chiketto uriba wa nankai desu ka?", "en": "What floor is the Shibuya Sky ticket counter?", "hear": "kai"}, {"jp": "ロッカーはどこですか？", "ro": "Rokkā wa doko desu ka?", "en": "Where are the lockers?", "hear": "dir"}], ll: [35.6585, 139.7023], say: ["yoyaku", "photoplease"], pic: "Shibuya Sky sunset silhouette men", rx: "velvia", place: "Shibuya Sky",
@@ -513,13 +527,19 @@ const DAYS = [
         snack: "Dinner: tonkatsu at Tonkatsu Maisen Aoyama (Google 4.4 from 5,000+ reviews, Tripadvisor 4.5), one stop back on the Hanzōmon line at Omotesandō (Exit A2, ~5 min walk). Open until 9 PM, English menu. Solid fuel for the big night.",
       },
       {
-        t: "19:00", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
-        ride: [{"ln": "F", "from": "F16", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Trains for 横浜 Yokohama / 元町・中華街 Motomachi-Chūkagai use the same platforms — next stop 代官山 Daikanyama = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
+        t: "18:45", title: "👕🎁 BEAMS JAPAN + Isetan Men's", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
+        ride: [{"ln": "F", "from": "F15", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Next stop 渋谷 Shibuya (F16) = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
         how: [
-          "Fukutoshin line Shibuya → Shinjuku-sanchome (~10 min, no transfer).",
-          "🎁 On the way, polos for your uncle: BEAMS JAPAN (3-32-6 Shinjuku, open until 8 PM). 2F is menswear: BEAMS' own made-in-Japan line and smaller Japanese labels. 1F has Japanese crafts and souvenirs if anyone else is still on your list. Japanese sizes run one smaller (LL ≈ US L).",
-          "Backup if BEAMS isn't it: Isetan Men's (Shinjuku-sanchōme, also open until 8 PM): 8 floors of menswear, tax-free counter on site.",
-          "👕 For you while you're at BEAMS JAPAN 2F: a sukajan (the embroidered souvenir jacket born from US servicemen in Japan — Japanese-American style in one piece), made-in-Japan heavyweight tees and denim. Try tops in 3L/XXL so they fit your chest and arms.",
+          "From Maisen (Omotesandō), walk ~8 min to Meiji-jingūmae Station, then the Fukutoshin Line 2 stops to Shinjuku-sanchōme (F15 → F13). Both stores close at 8 PM.",
+          "BEAMS JAPAN (3-32-6 Shinjuku) 2F: a sukajan (the embroidered souvenir jacket born from US servicemen in Japan), made-in-Japan tees and denim — and your uncle's polos (LL ≈ US L). 1F has Japanese crafts if anyone else is still on your list.",
+          "Isetan Men's (across the street): 8 floors of menswear and the best one-stop for work pieces — oxford button-downs, pleated wide trousers, an unstructured stretch blazer, knit polos. Central tax-free counter on site.",
+          "Tax-free still works at the register today: passport out, ¥5,000+ per store.",
+        ],
+      },
+      {
+        t: "19:45", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        how: [
+          "Walk ~10 min from Isetan to the hotel.",
           "Nap 30 min. Shower. Outfit on. Dinner is yakitori on the way to Golden Gai.",
         ],
         photo: "Fit check in the hotel mirror before you go out — the photo-dump opener.",
@@ -902,17 +922,28 @@ const DAYS = [
         how: [
           "Tanimachi Line from Higashi-Umeda (5 min walk from your hotel) to Tanimachi 4-chōme.",
           "Main tower: 9:00–18:00, last entry 17:30, ¥1,200. Museum inside, rooftop-style viewing deck on the 8th floor.",
-          "Leave by 16:30 for Pokémon Center Osaka DX: Chūō Line from Tanimachi 4-chōme to Hommachi (C18 → C16), then the Midosuji Line 1 stop to Shinsaibashi (~20 min).",
+          "Leave by 16:15 for Amerikamura: Chūō Line from Tanimachi 4-chōme to Hommachi (C18 → C16), then the Midosuji Line 1 stop to Shinsaibashi (~20 min).",
         ],
         photo: "Shoot the tower across the stone walls and moat from the Gokuraku-bashi bridge — gold trim, white walls, autumn leaves.",
       },
       {
-        t: "17:00", title: "Pokémon Center Osaka DX", fixed: true, quest: "👕 Amerikamura (“America Village”) is a 5-min walk west of Daimaru: American vintage in US sizes — Vintage Mecca (2-13-13 Nishi-Shinsaibashi, 1–7 PM, closed Wed) for 30s–60s denim and military, Grizzly (2-12-14 Nishi-Shinsaibashi, 12–7:30 PM) for Ralph Lauren. ⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
+        t: "16:30", title: "👕 Amerikamura: American vintage in US sizes", ask: [{"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6719, 135.4985], say: ["kore", "ikura"], pic: "Amerikamura Osaka street", rx: "classic", place: "Amerikamura (America-mura), Osaka",
         ride: [{"ln": "OC", "from": "C18", "to": "C16", "dir": "本町・コスモスクエア方面 (toward Hommachi / Cosmosquare)", "type": "Every train.", "wrong": "Next stop 森ノ宮 Morinomiya (C19) = wrong way.", "min": 5, "exit": "Transfer to the red Midosuji Line"}, {"ln": "OM", "from": "M18", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 淀屋橋 Yodoyabashi (M17) = wrong way.", "min": 2, "exit": "Daimaru is connected to the station"}],
         how: [
-          "From Osaka Castle: Chūō Line to Hommachi, then the Midosuji Line 1 stop to Shinsaibashi. Daimaru is connected to the station.",
+          "Chūō Line to Hommachi, Midosuji Line 1 stop to Shinsaibashi, then walk ~5 min west into Amerikamura (“America Village”).",
+          "Vintage Mecca (2-13-13 Nishi-Shinsaibashi, 1–7 PM, closed Wed): 30s–60s American denim, shirts and military pants.",
+          "Grizzly (2-12-14 Nishi-Shinsaibashi by Triangle Park, 12–7:30 PM): Ralph Lauren and American brands.",
+          "It's American stock, so US sizes — no 3L guessing. Head to Daimaru by 5:40 for the café.",
+        ],
+        photo: "Triangle Park (三角公園) is the heart of Amerikamura — street shots with the murals.",
+      },
+      {
+        t: "17:45", title: "Pokémon Café Osaka + Pokémon Center Osaka DX", fixed: true, quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
+        how: [
+          "Walk ~5 min east from Amerikamura to Daimaru Shinsaibashi (Main Building).",
           "Pokémon Center Osaka DX and the café are on 9F.",
           "Check in at Pokémon Café Osaka by 5:50 PM for your 6:00 table (reservation in your email).",
+          "Shop Pokémon Center Osaka DX after the café — it's open until 8 PM.",
         ],
         snack: "Café time: character plates + a latte. Try a different dish than Tokyo for the comparison post.",
       },
