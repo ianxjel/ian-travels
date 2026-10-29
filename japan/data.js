@@ -495,6 +495,7 @@ const DAYS = [
           "Exit A2, then walk ~7 min up Omotesandō avenue toward Harajuku (you pass Kiddy Land on the way). The kaleidoscope mirror entrance is Tokyu Plaza Omokado, on the corner of Meiji-dōri (4-30-3 Jingūmae).",
           "Ahead of schedule? Takeshita Street (Harajuku's colorful crepe-and-fashion street) and Meiji Jingū shrine are ~10 min north. The shrine gates close at sunset.",
           "🎁 Gift stop: Kiddy Land (6-1-9 Jingūmae, a 3-min walk up Omotesandō avenue, 11:00–20:00) is 5 floors of Japanese toys: Tomica cars + Plarail trains (3F), Sanrio + Rilakkuma (4F), Disney (2F), Snoopy (B1). Tax-free over ¥5,000 — passport out.",
+          "👕 Style stop: BEAMS Harajuku (1F–2F, 3-24-7 Jingūmae, ~3 min from the mirror entrance), the flagship that reopened in March 2026 for BEAMS' 50th: casual menswear plus Harajuku-only collabs. Tops in 3L/XXL.",
           "🎁 If time: @cosme TOKYO by Harajuku Station (1-14-27 Jingūmae, 11:00–21:00), 3 floors of Japanese skincare ranked by Japan's biggest beauty-review site. Otherwise do skincare tomorrow in Akihabara.",
         ],
         photo: "Fit check: full-body shot in the mirror entrance from the bottom of the escalator. Then the free rooftop terrace upstairs.",
