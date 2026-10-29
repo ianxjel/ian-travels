@@ -578,7 +578,7 @@ const DAYS = [
         how: [
           "Eagle Tokyo Blue (hairy, beefy go-go dancers) or Bear Tokyo first (weekend DJs).",
           "✅ Confirmed on the clubs' own sites: AiSOTOPE LOUNGE “Akiba Night 51 · 23rd anniversary HALLOWEEN NIGHT” and ArcH “SHOWER CANDY” both start at 9 PM tonight.",
-          "Go-go shows: Dragon Men's Dragon Master party has sets at 11 PM, 1 AM and 3 AM tonight (⚠️ check Dragon Men's Instagram for tonight's times). Tip in yen bills tucked into the waistband.",
+          "Go-go shows: Dragon Men's Dragon Master party has sets at 11 PM, 1 AM and 3 AM tonight ✅ (2-11-4 Shinjuku, open 6 PM–5 AM, happy hour 6–9 PM, bring cash). Tip in yen bills tucked into the waistband.",
           "After 1 AM: ArcH (SHOWER CANDY tonight) or AiSOTOPE Lounge for Akiba Night's 23rd-anniversary Halloween, a long-running anime/otaku gay night. Your MHA and AOT fandom fits right in.",
           "Clubs run till ~5 AM; trains restart around 5.",
           "Want it straight to the point? Deep Throat Men (3F Wakatsuki Bldg, Kabukichō) is a foreigner-friendly cruising bar with English-speaking staff, 5 min from Golden Gai.",
@@ -694,7 +694,7 @@ const DAYS = [
         ride: [{"ln": "OE", "from": "E21", "to": "E27", "dir": "六本木・都庁前方面 (toward Roppongi / Tochōmae)", "type": "Every train.", "wrong": "Next stop 大門 Daimon (E20) = wrong way.", "min": 15, "exit": "Exit toward Shinjuku-dōri, then walk east ~15 min to Shinjuku 2-chōme"}],
         how: [
           "From Tokyo Tower: walk ~7 min north to Akabanebashi Station, Toei Ōedo Line to Shinjuku (E21 → E27, ~15 min), then walk ~15 min east along Shinjuku-dōri to Ni-chome. Easier in costume than it sounds — half the train will be dressed up too.",
-          "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE The 80th Edition “Duality”, from 9 PM ✅) or ArcH (地味ハロ “Jimi-Halloween”, from 9 PM ✅: dress as something boring 😂). ⚠️ Blacknude, Arty Farty and Dragon Men times are from their social posts — check Instagram before you go.",
+          "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM ✅) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE The 80th Edition “Duality”, from 9 PM ✅) or ArcH (地味ハロ “Jimi-Halloween”, from 9 PM ✅: dress as something boring 😂). ⚠️ Blacknude and Arty Farty times are from their social posts — check Instagram before you go.",
           "Drink inside the bars — parts of Shinjuku restrict street drinking tonight.",
         ],
         spicy: "The streets fill with costumes all night. Costume = instant conversation starter: compliment someone's look (“Kakkoii!” = you look cool!) and you're in. Ask before photographing anyone.",
@@ -973,7 +973,7 @@ const DAYS = [
         ride: [{"ln": "OM", "from": "M19", "to": "M16", "dir": "千里中央・新大阪方面 (toward Senri-Chūō / Shin-Osaka)", "type": "Every train.", "wrong": "Next stop なんば Namba (M20) = wrong way.", "min": 6, "exit": "Doyama-cho is ~5 min from Umeda"}],
         how: [
           "Midosuji line back to Umeda; Doyama-cho is ~5 min from your hotel.",
-          "Eagle Osaka (free entry Mon–Thu, cashless) → Grand Slam (small, international) → Explosion (main club; check @explosion_osaka).",
+          "Eagle Osaka (12-8 Doyamacho; free entry Mon–Thu, cashless; open until 2 AM tonight) → Explosion (B1F Sanyo Kaikan, 8-23 Doyamacho; open until 4 AM Mondays — check @explosion_osaka for tonight's event). Grand Slam is closed on Mondays (only opens when Monday is a holiday), so save it for tomorrow.",
           "Bear Plus / Dungaree / BULL for bear-and-muscle bars — check Instagram that they're open.",
           "Daddies: Kuro (OK Bldg, 16-6 Doyama), Osaka's oldest gay bar, with a mostly mature Japanese crowd. Foreigners welcome; the sign is only in Japanese.",
           "Drag: Village (2F East Street Bldg, 10-3 Doyama) does drag shows, cabaret and karaoke nightly, 8 PM–5 AM.",
@@ -1074,7 +1074,7 @@ const DAYS = [
         ],
         photo: "Shinsekai is the best direct-flash street of the trip: giant food signs, retro neon, Tsūtenkaku behind you.",
         snack: "Shinsekai kushikatsu (fried skewers) at Kushikatsu Daruma Shinsekai Sōhonten (the original, Google 4.1, open until 10:30 PM). Again: no double-dipping.",
-        spicy: "Doyama tonight: Eagle Osaka for bears, Kuro for daddies, Village for drag. Explosion is closed on Tuesdays.",
+        spicy: "Doyama tonight: Eagle Osaka for bears (until 2 AM), Kuro for daddies, Village for drag, and Grand Slam (small, international, open Tuesday 9 PM–5 AM). Explosion is closed on Tuesdays unless there's an event.",
       },
       {
         t: "23:30", title: "Last-night soak at Daikichi 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["kyukei"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
