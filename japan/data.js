@@ -458,6 +458,14 @@ const DAYS = [
     phrases: ["hitori", "cover", "kanpai", "taipu", "kinniku", "hige", "odorou", "hotel", "kisu", "yametoku"],
     steps: [
       {
+        t: "07:45", title: "🍳 Breakfast: konbini by the hotel", ask: [{"jp": "温めてください。", "ro": "Atatamete kudasai.", "en": "Please heat it up.", "hear": "yesno"}], ll: [35.6888, 139.71], say: ["fukuro", "atatame"], place: "7-Eleven near Shinjuku-gyoemmae Station",
+        how: [
+          "🟢 Zero-pressure Japanese breakfast: grab it, pay, eat on the walk to the station.",
+          "Onigiri (rice ball): sake (salmon) or tuna mayo. Pull tab 1 down the middle, then corners 2 and 3 — the seaweed wraps itself on.",
+          "Tamago sando (the famous fluffy egg sandwich) + a hot drink. Second breakfast is Kagetsudō's melon pan at 10.",
+        ],
+      },
+      {
         t: "08:00", title: "Early start → Asakusa", ask: [{"jp": "雷門はどっちですか？", "ro": "Kaminarimon wa dotchi desu ka?", "en": "Which way to Kaminarimon gate?", "hear": "dir"}], ll: [35.7106, 139.7975], say: ["norikae", "hitotsu"], place: "Senso-ji, Asakusa",
         ride: [{"ln": "M", "from": "M10", "to": "M13", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 8, "exit": "Cross the platform to the orange Ginza Line"}, {"ln": "G", "from": "G05", "to": "G19", "dir": "浅草方面 (toward Asakusa)", "type": "Every train. Asakusa is the last stop.", "wrong": "Next stop 青山一丁目 Aoyama-itchōme (G04) = wrong way.", "min": 25, "exit": "Exit 1 → Kaminarimon gate"}],
         how: [
@@ -544,10 +552,19 @@ const DAYS = [
         photo: "Rest the X100VI on the window ledge (no flash, lens hood against the glass to kill reflections) for a sharp sunset-to-city-lights shot.",
       },
       {
-        t: "17:30", title: "👕🎁 UNIQLO flagship + BEAMS JAPAN + Isetan Men's", ask: [{"jp": "裾上げできますか？何時にできますか？", "ro": "Susoage dekimasu ka? Nanji ni dekimasu ka?", "en": "Can you hem these? What time will they be ready?", "hear": "time"}, {"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
+        t: "17:30", title: "🍜 Dinner: Menya Musashi ramen (ticket machine)", ask: [{"jp": "おすすめはどのボタンですか？", "ro": "Osusume wa dono botan desu ka?", "en": "Which button do you recommend?", "hear": "none"}], ll: [35.6967, 139.6974], say: ["hitori", "oishii", "gochisousama"], place: "Menya Musashi, K-1 Bldg 1F, 7-2-6 Nishi-Shinjuku, Tokyo",
+        how: [
+          "Menya Musashi (麺屋武蔵), 7-2-6 Nishi-Shinjuku: the original branch of a famous Tokyo ramen shop. Google 4.1 from 3,800 reviews, open 11 AM–10 PM daily. ~10 min walk north from TMG.",
+          "🟢 Easy: buy a ticket at the machine by the entrance (photo buttons), hand it over, sit. The staff call out loudly when you come in — it's a greeting, not a problem.",
+          "Then walk ~3 min to Nishi-shinjuku Station for the shopping stop.",
+        ],
+        snack: "Order the classic rich ramen with an ajitama (soft marinated egg).",
+      },
+      {
+        t: "18:15", title: "👕🎁 UNIQLO flagship + BEAMS JAPAN + Isetan Men's", ask: [{"jp": "裾上げできますか？何時にできますか？", "ro": "Susoage dekimasu ka? Nanji ni dekimasu ka?", "en": "Can you hem these? What time will they be ready?", "hear": "time"}, {"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
         ride: [{"ln": "M", "from": "M07", "to": "M09", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train. 2 stops.", "wrong": "Next stop 中野坂上 Nakano-sakaue (M06) = wrong way.", "min": 4, "exit": "Exits C3–C5 → UNIQLO, BEAMS JAPAN and Isetan are all within 3 min"}],
         how: [
-          "From TMG, walk ~8 min to Nishi-shinjuku Station, then the Marunouchi Line 2 stops to Shinjuku-sanchōme (M07 → M09) — or walk ~20 min east through Shinjuku Station. BEAMS and Isetan close at 8 PM, UNIQLO at 10.",
+          "From Menya Musashi, walk ~3 min to Nishi-shinjuku Station, then the Marunouchi Line 2 stops to Shinjuku-sanchōme (M07 → M09) — or walk ~20 min east through Shinjuku Station. BEAMS and Isetan close at 8 PM, UNIQLO at 10.",
           "BEAMS JAPAN (3-32-6 Shinjuku) 2F: a sukajan (the embroidered souvenir jacket born from US servicemen in Japan), made-in-Japan tees and denim — and your uncle's polos (LL ≈ US L). 1F has Japanese crafts if anyone else is still on your list.",
           "Isetan Men's (across the street): 8 floors of menswear and the best one-stop for work pieces — oxford button-downs, pleated wide trousers, an unstructured stretch blazer, knit polos. Central tax-free counter on site.",
           "UNIQLO Shinjuku Honten (3-29-1 Shinjuku, the global flagship on the old Bicqlo site, 10 AM–10 PM) — start here: heavyweight tees in XXL, the U line, pleated wide pants. Ask “Susoage dekimasu ka?” for hemming: free on pants ¥1,990+, often ready in 30–60 min, so drop them off, shop BEAMS + Isetan, then pick up (it's open until 10 PM).",
@@ -555,7 +572,7 @@ const DAYS = [
         ],
       },
       {
-        t: "19:15", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        t: "19:30", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
         how: [
           "Walk ~10 min from Isetan to the hotel.",
           "Nap 30 min. Shower. Outfit on. Dinner is yakitori on the way to Golden Gai.",
@@ -563,7 +580,7 @@ const DAYS = [
         photo: "Fit check in the hotel mirror before you go out — the photo-dump opener.",
       },
       {
-        t: "21:00", title: "Yakitori in Omoide Yokocho", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
+        t: "21:00", title: "🍢 Late dinner #2: yakitori in Omoide Yokocho", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
         ride: [{"ln": "M", "from": "M10", "to": "M08", "dir": "荻窪方面 (toward Ogikubo)", "type": "Every train.", "wrong": "Next stop 四谷三丁目 Yotsuya-sanchōme (M11) = wrong way.", "min": 4, "exit": "West Exit (西口) → the alley is just north, along the tracks"}],
         how: [
           "From the hotel, Marunouchi Line Shinjuku-gyoemmae → Shinjuku (M10 → M08, toward 荻窪 Ogikubo, ~4 min), or walk ~20 min along Shinjuku-dōri.",
