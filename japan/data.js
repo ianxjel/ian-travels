@@ -633,6 +633,13 @@ const DAYS = [
     phrases: ["menzei", "fukuro", "card", "kore", "kanpai", "kakkoii", "line", "hima"],
     steps: [
       {
+        t: "10:45", title: "🍳 Brunch: konbini on the way", ll: [35.6888, 139.71], say: ["atatame", "fukuro"], place: "7-Eleven near Shinjuku-gyoemmae Station",
+        how: [
+          "🟢 After last night, keep it easy: onigiri + a hot drink, or karaage-kun / Famichiki (konbini fried chicken) and a Pocari Sweat.",
+          "Real lunch is at 12:30 — gyūkatsu in Akihabara.",
+        ],
+      },
+      {
         t: "11:30", title: "Akihabara: anime, retro games + Pokémon cards 🎮", quest: "💥 MHA Chara Pop Store at Bandai Namco Cross Store (atre Akihabara, by the station) — until Jan 17.", ask: [{"jp": "ポケモンカードはありますか？", "ro": "Pokemon kādo wa arimasu ka?", "en": "Do you have Pokémon cards?", "hear": "yesno"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.6984, 139.7731], say: ["menzei", "kore", "ikura"], pic: "Akihabara electric town neon street", rx: "neon", place: "Akihabara Electric Town, Tokyo",
         ride: [{"ln": "JB", "from": "JB10", "to": "JB19", "dir": "千葉・津田沼・西船橋方面 (toward Chiba) — the YELLOW Chūō-Sōbu local, not the orange Chūō rapid", "type": "Every yellow local stops at Akihabara.", "wrong": "Next stop 大久保 Ōkubo (JB09) = wrong way. Orange trains (中央線快速) don't go to Akihabara.", "min": 18, "exit": "電気街口 Electric Town Exit"}],
         how: [
@@ -643,8 +650,15 @@ const DAYS = [
           "Akihabara Gachapon Kaikan: hundreds of capsule-toy machines — bring ¥100 coins.",
         ],
         tip: "TODAY is the last day of tax-free at the register: passport in your sling, ¥5,000+ per store. From Nov 1 you'd claim refunds at Narita instead.",
-        snack: "Lunch: gyūkatsu at Gyūkatsu Motomura Akihabara — crispy rare beef cutlet you finish on your own hot stone. There's usually a line; it moves. 🟢 Easy: there's basically one dish — point at the set size you want.",
         photo: "Chūō-dōri's wall of anime billboards: stand on the sidewalk by the Electric Town Exit and shoot up the street.",
+      },
+      {
+        t: "12:30", title: "🍱 Lunch: Gyūkatsu Motomura Akihabara", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6990, 139.7725], say: ["hitori", "oishii", "gochisousama"], place: "Gyukatsu Motomura Akihabara",
+        how: [
+          "Google 4.8 from 9,500+ reviews. Crispy rare beef cutlet you finish on your own little hot stone, with rice, miso soup and sauces.",
+          "🟢 Easy: there's basically one dish — point at the set size you want. There's usually a line; it moves.",
+        ],
+        snack: "Sear each slice on the stone for a few seconds; try it with wasabi + soy, then the sauce.",
       },
       {
         t: "13:30", title: "🎁 Family gift haul (last tax-free day)", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "母へのプレゼントです。おすすめは？", "ro": "Haha e no purezento desu. Osusume wa?", "en": "It's a gift for my mom. What do you recommend?", "hear": "none"}], ll: [35.6987, 139.7714], say: ["menzei", "kore", "fukuro"], place: "Don Quijote Akihabara, 4-3-3 Sotokanda, Tokyo",
@@ -761,7 +775,7 @@ const DAYS = [
         ],
       },
       {
-        t: "07:45", title: "Shinjuku → Shinagawa", ask: [{"jp": "新幹線の乗り換え口はどこですか？", "ro": "Shinkansen no norikae-guchi wa doko desu ka?", "en": "Where's the transfer gate for the shinkansen?", "hear": "dir"}], ll: [35.6285, 139.7387], say: ["nanban", "hitotsu"], place: "Shinagawa Station",
+        t: "07:45", title: "Shinjuku → Shinagawa + 🍱 ekiben breakfast", ask: [{"jp": "新幹線の乗り換え口はどこですか？", "ro": "Shinkansen no norikae-guchi wa doko desu ka?", "en": "Where's the transfer gate for the shinkansen?", "hear": "dir"}], ll: [35.6285, 139.7387], say: ["nanban", "hitotsu"], place: "Shinagawa Station",
         ride: [{"ln": "JY", "from": "JY17", "to": "JY25", "dir": "渋谷・品川方面 (toward Shibuya / Shinagawa)", "type": "All Yamanote trains stop everywhere.", "wrong": "Next stop 新大久保 Shin-Ōkubo (JY16) = wrong way.", "min": 20, "exit": "Blue 新幹線 Shinkansen signs → tap the SmartEX-linked Suica"}],
         how: [
           "Walk ~10 min to Shinjuku Station, JR Yamanote line (green) toward Shibuya/Shinagawa (~20 min).",
@@ -790,7 +804,7 @@ const DAYS = [
 
       /* ---- Plan A: museum ---- */
       {
-        only: "a", t: "11:30", title: "Kintetsu → Nintendo Museum", ask: [{"jp": "近鉄線の乗り場はどこですか？", "ro": "Kintetsu-sen no noriba wa doko desu ka?", "en": "Where do I board the Kintetsu Line?", "hear": "dir"}, {"jp": "この電車は小倉に止まりますか？", "ro": "Kono densha wa Ogura ni tomarimasu ka?", "en": "Does this train stop at Ogura?", "hear": "yesno"}], ll: [34.8956, 135.786], say: ["yoyaku", "konokippu"], pic: "Nintendo Museum Kyoto photo", rx: "reala", place: "Nintendo Museum, Uji",
+        only: "a", t: "11:30", title: "Kintetsu → Nintendo Museum (🍱 lunch at the museum café)", ask: [{"jp": "近鉄線の乗り場はどこですか？", "ro": "Kintetsu-sen no noriba wa doko desu ka?", "en": "Where do I board the Kintetsu Line?", "hear": "dir"}, {"jp": "この電車は小倉に止まりますか？", "ro": "Kono densha wa Ogura ni tomarimasu ka?", "en": "Does this train stop at Ogura?", "hear": "yesno"}], ll: [34.8956, 135.786], say: ["yoyaku", "konokippu"], pic: "Nintendo Museum Kyoto photo", rx: "reala", place: "Nintendo Museum, Uji",
         ride: [{"ln": "KB", "from": "B01", "to": "B10", "dir": "奈良・橿原神宮前・新田辺方面", "type": "⚠️ Only 普通 Local and 準急 Semi-Express stop at Ogura. 急行 Express and 特急 Limited Express skip it.", "min": 25, "exit": "Walk ~5 min to the Nintendo Museum"}],
         how: [
           "Back into Kyoto Station, follow signs to the Kintetsu Line (south side, Hachijō exit area).",
@@ -813,7 +827,7 @@ const DAYS = [
 
       /* ---- Plan B: no museum ---- */
       {
-        only: "b", t: "11:30", title: "Nishiki Market lunch crawl", ask: [{"jp": "これ一つ。ここで食べてもいいですか？", "ro": "Kore hitotsu. Koko de tabete mo ii desu ka?", "en": "One of these. Can I eat it here?", "hear": "yesno"}], ll: [35.005, 135.7649], say: ["hitotsu", "ikura", "oishii"], pic: "Nishiki Market food photo", rx: "nostalgic", place: "Nishiki Market, Kyoto",
+        only: "b", t: "11:30", title: "🍱 Nishiki Market lunch crawl", ask: [{"jp": "これ一つ。ここで食べてもいいですか？", "ro": "Kore hitotsu. Koko de tabete mo ii desu ka?", "en": "One of these. Can I eat it here?", "hear": "yesno"}], ll: [35.005, 135.7649], say: ["hitotsu", "ikura", "oishii"], pic: "Nishiki Market food photo", rx: "nostalgic", place: "Nishiki Market, Kyoto",
         ride: [{"ln": "KR", "from": "K11", "to": "K09", "dir": "国際会館方面 (toward Kokusaikaikan)", "type": "Every train.", "wrong": "Next stop 九条 Kujō (K12) = wrong way.", "min": 5, "exit": "Walk ~5 min east to Nishiki Market"}],
         how: [
           "Karasuma subway from Kyoto Station 2 stops to Shijō (~5 min).",
@@ -841,7 +855,7 @@ const DAYS = [
         snack: "Matcha soft-serve and free yatsuhashi (cinnamon mochi) samples on the slopes — stand by the shop to eat.",
       },
       {
-        t: "18:00", title: "Gion + Pontocho dinner", ask: [{"jp": "一人ですが、カウンター席はありますか？", "ro": "Hitori desu ga, kauntā-seki wa arimasu ka?", "en": "Just me — do you have a counter seat?", "hear": "full"}], ll: [35.0054, 135.771], say: ["hitori", "osusume", "gochisousama"], pic: "Pontocho alley night photo", rx: "nostalgic", place: "Pontocho Alley, Kyoto",
+        t: "18:00", title: "Gion + 🍽️ Pontocho dinner", ask: [{"jp": "一人ですが、カウンター席はありますか？", "ro": "Hitori desu ga, kauntā-seki wa arimasu ka?", "en": "Just me — do you have a counter seat?", "hear": "full"}], ll: [35.0054, 135.771], say: ["hitori", "osusume", "gochisousama"], pic: "Pontocho alley night photo", rx: "nostalgic", place: "Pontocho Alley, Kyoto",
         how: [
           "Walk ~10 min north to Gion's Hanamikoji street (main street only — the private side alleys have a ¥10,000 photo fine).",
           "Plan A people: Nintendo KYOTO is 10 min west at Shijō-Kawaramachi (Takashimaya S.C.). Pokémon Center Kyoto is another 12 min west along Shijō-dōri in SUINA Muromachi 2F and closes at 8 PM, so go there first.",
@@ -894,7 +908,7 @@ const DAYS = [
     phrases: ["azukeru", "ohayou", "osusume", "nama", "kanpai", "amerika", "nomou", "issho"],
     steps: [
       {
-        t: "06:30", title: "Check out → Inari", ask: [{"jp": "奈良線は何番線ですか？", "ro": "Nara-sen wa nanbansen desu ka?", "en": "Which platform is the Nara Line?", "hear": "bansen"}, {"jp": "この電車は稲荷に止まりますか？", "ro": "Kono densha wa Inari ni tomarimasu ka?", "en": "Does this train stop at Inari?", "hear": "yesno"}], ll: [34.9671, 135.7727], say: ["checkout", "azukeru"], place: "Fushimi Inari Taisha",
+        t: "06:30", title: "Check out → Inari (🍳 konbini breakfast)", ask: [{"jp": "奈良線は何番線ですか？", "ro": "Nara-sen wa nanbansen desu ka?", "en": "Which platform is the Nara Line?", "hear": "bansen"}, {"jp": "この電車は稲荷に止まりますか？", "ro": "Kono densha wa Inari ni tomarimasu ka?", "en": "Does this train stop at Inari?", "hear": "yesno"}], ll: [34.9671, 135.7727], say: ["checkout", "azukeru"], place: "Fushimi Inari Taisha",
         ride: [{"ln": "JD", "from": "D01", "to": "D03", "dir": "奈良・城陽方面 — platforms 8–10. Kyoto is the end of the Nara Line", "type": "普通 Local and みやこ路快速 Miyakoji Rapid stop at Inari.", "min": 5, "exit": "The shrine gate is right across the street"}],
         how: [
           "Leave your backpack at the front desk.",
@@ -931,10 +945,18 @@ const DAYS = [
           "Finish at Togetsukyō, the long wooden bridge over the river with forested mountains behind.",
         ],
         photo: "Stand still mid-path and shoot straight up through the bamboo, or walk away from the camera with the stalks framing you. Tall vertical frame.",
-        snack: "Lunch in Arashiyama: soba or yudōfu (Kyoto's silky simmered tofu), then matcha sweets on the main street. Only sit down where Google Maps shows 4.0+.",
+        snack: "Matcha sweets on the main street after lunch.",
       },
       {
-        t: "12:00", title: "Arashiyama → Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
+        t: "11:15", title: "🍱 Lunch: Arashiyama Yoshimura soba", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.0141, 135.6770], say: ["hitori", "oishii", "gochisousama"], place: "Arashiyama Yoshimura, 3 Sagatenryuji Susukinobabacho, Kyoto",
+        how: [
+          "Handmade soba by Togetsukyō bridge, with river views from the window seats. Google 4.2 from 2,600+ reviews. Open from 10:30 AM on Mondays.",
+          "🟢 Easy: photo menu — point at a set (soba + tempura or soba + a small rice bowl) and say “Kore kudasai.”",
+        ],
+        snack: "Cold zaru soba is the classic: dip the noodles in the sauce, add wasabi and green onion. Pour the leftover cooking water (soba-yu) into the sauce at the end and drink it.",
+      },
+      {
+        t: "12:15", title: "Arashiyama → Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
         ride: [{"ln": "SAG", "from": "E08", "to": "E01", "dir": "京都方面 (toward Kyoto)", "type": "Every train stops at Kyoto (the end of the line).", "wrong": "Next stop 保津峡 Hozukyō = wrong way.", "min": 16, "exit": "Grab your backpack at the hotel (Karasuma side), then back into JR Kyoto"}, {"ln": "JA", "from": "A31", "to": "A47", "dir": "大阪・神戸・姫路方面 (westbound) — look for 新快速 Special Rapid", "type": "Special Rapid only stops at these 4 stations. Local and Rapid also work, just slower.", "wrong": "Next stop 山科 Yamashina = wrong way (eastbound).", "min": 30, "exit": "Midosuji South Exit → walk ~8 min to the hotel"}],
         how: [
           "JR Sagano Line from Saga-Arashiyama (8 min walk from the bamboo grove) to Kyoto; grab your backpack at the hotel.",
@@ -1028,7 +1050,7 @@ const DAYS = [
     phrases: ["takkyubin", "konokippu", "doko", "oishii", "arigatou"],
     steps: [
       {
-        t: "10:00", title: "Osaka → Hiroshima", ask: [{"jp": "広島行きの新幹線は何番線ですか？", "ro": "Hiroshima-iki no shinkansen wa nanbansen desu ka?", "en": "Which platform for the shinkansen to Hiroshima?", "hear": "bansen"}], say: ["nanban", "seki"], place: "Hiroshima Station",
+        t: "10:00", title: "Osaka → Hiroshima (🍳 551 Hōrai buns)", ask: [{"jp": "広島行きの新幹線は何番線ですか？", "ro": "Hiroshima-iki no shinkansen wa nanbansen desu ka?", "en": "Which platform for the shinkansen to Hiroshima?", "hear": "bansen"}], say: ["nanban", "seki"], place: "Hiroshima Station",
         ride: [{"ln": "JA", "from": "A47", "to": "A46", "dir": "京都方面 (toward Kyoto) — JR Kyoto Line platforms", "type": "Any train stops at Shin-Osaka.", "wrong": "Next stop 塚本 Tsukamoto = wrong way (JR Kobe Line).", "min": 4, "exit": "Follow blue 新幹線 signs"}, {"ln": "SYS", "from": "SHO", "to": "HIJ", "dir": "博多・広島方面 (westbound)", "type": "Every Nozomi stops at Hiroshima.", "min": 85, "exit": "Follow signs to the JR Sanyo Line for Miyajima"}],
         how: [
           "JR Kyoto line from Osaka 1 stop to Shin-Osaka (~4 min).",
@@ -1047,14 +1069,14 @@ const DAYS = [
         photo: "Stand on deck: the JR ferry swings close to the floating torii on the way over.",
       },
       {
-        t: "13:00", title: "Itsukushima Shrine + the deer", ask: [{"jp": "今日の満潮は何時ですか？", "ro": "Kyō no manchō wa nanji desu ka?", "en": "What time is high tide today?", "hear": "time"}], ll: [34.296, 132.3198], say: ["photoplease", "hitotsu", "oishii"], pic: "Miyajima torii men photo", rx: "velvia", place: "Itsukushima Shrine",
+        t: "13:00", title: "Itsukushima Shrine + the deer + 🍱 oyster lunch", ask: [{"jp": "今日の満潮は何時ですか？", "ro": "Kyō no manchō wa nanji desu ka?", "en": "What time is high tide today?", "hear": "time"}], ll: [34.296, 132.3198], say: ["photoplease", "hitotsu", "oishii"], pic: "Miyajima torii men photo", rx: "velvia", place: "Itsukushima Shrine",
         how: [
           "Check today's tide table: the torii “floats” near high tide; at low tide you can walk out to it.",
           "Walk the shrine's corridors over the water.",
           "Deer roam free — don't feed them (it's banned here) and keep maps and paper out of reach. They will eat them.",
         ],
         photo: "“Pinch” the torii with forced perspective from the beach, or sit on the shore with the torii behind you and a deer wandering in.",
-        snack: "Grilled oysters (yaki-gaki) on Omotesando shopping street, momiji manjū (try the deep-fried age-momiji), and anago-meshi (conger-eel rice) — a Miyajima classic. Only sit down where Google Maps shows 4.0+. 🟢 Easy: point-and-pay stalls.",
+        snack: "🍱 Lunch: Kakiya (Google 4.4) on Omotesando shopping street for grilled, fried and rice-cooked oysters — closes ~6 PM. Or Yakigaki no Hayashi (Google 4.3). Dessert: age-momiji (deep-fried momiji manjū) at Momijidō main store (Google 4.3). 🟢 Easy: point-and-pay stalls.",
         tip: "It's a national holiday — expect crowds. Eat early.",
       },
       {
@@ -1071,7 +1093,7 @@ const DAYS = [
         tip: "Keep your voice low. Many visitors leave paper cranes at the Children's Peace Monument.",
       },
       {
-        t: "17:30", title: "Hiroshima okonomiyaki", ask: [{"jp": "一人ですが、座れますか？", "ro": "Hitori desu ga, suwaremasu ka?", "en": "Just me — can I sit?", "hear": "full"}], ll: [34.3918, 132.4659], say: ["hitori", "osusume", "gochisousama"], pic: "Hiroshima okonomiyaki griddle", rx: "reala", place: "Yagenbori Hassho, 10-6 Yagenbori, Naka-ku, Hiroshima",
+        t: "17:30", title: "🍽️ Dinner: Hiroshima okonomiyaki", ask: [{"jp": "一人ですが、座れますか？", "ro": "Hitori desu ga, suwaremasu ka?", "en": "Just me — can I sit?", "hear": "full"}], ll: [34.3918, 132.4659], say: ["hitori", "osusume", "gochisousama"], pic: "Hiroshima okonomiyaki griddle", rx: "reala", place: "Yagenbori Hassho, 10-6 Yagenbori, Naka-ku, Hiroshima",
         how: [
           "Yagenbori Hassho (薬研堀 八昌): Google 4.2 from 1,700+ reviews, opens at 4 PM and Tuesday is open. A queue builds fast, so get in line by 5:30. From Kamiyachō-higashi, ride any eastbound streetcar 3 stops to Ebisu-chō, then walk ~5 min south (or walk ~20 min from Peace Park).",
           "Today is a national holiday, so hours can shift. If it's closed, Nagataya by Peace Park (Google 4.4) is normally closed Tuesdays but may open for the holiday. Check Google Maps.",
@@ -1123,7 +1145,7 @@ const DAYS = [
     phrases: ["onsen", "takkyubin", "doko", "gochisousama", "kirei"],
     steps: [
       {
-        t: "09:30", title: "Check out + breakfast", say: ["checkout", "hitotsu"], place: "Shin-Osaka Station",
+        t: "09:30", title: "Check out + 🍳 breakfast", say: ["checkout", "hitotsu"], place: "Shin-Osaka Station",
         how: [
           "Check out with your backpack.",
           "Up early? Kuromon Market (Sakaisuji line Ōgimachi → Nippombashi, ~10 min) — allow a full hour.",
@@ -1132,7 +1154,7 @@ const DAYS = [
         snack: "Kuromon: grilled scallops, tuna skewers and a strawberry daifuku. Or 551 Hōrai buns at Shin-Osaka. 🟢 Easy: point-and-pay stalls.",
       },
       {
-        t: "10:30", title: "Hikari to Mishima (seat E)", fixed: true, ask: [{"jp": "三島に止まるひかりは何番線ですか？", "ro": "Mishima ni tomaru Hikari wa nanbansen desu ka?", "en": "Which platform for the Hikari that stops at Mishima?", "hear": "bansen"}], ll: [35.1264, 138.911], say: ["seki", "nanban"], pic: "Mt Fuji from shinkansen Mishima", rx: "classic", place: "Mishima Station",
+        t: "10:30", title: "Hikari to Mishima (seat E) + 🍱 ekiben lunch", fixed: true, ask: [{"jp": "三島に止まるひかりは何番線ですか？", "ro": "Mishima ni tomaru Hikari wa nanbansen desu ka?", "en": "Which platform for the Hikari that stops at Mishima?", "hear": "bansen"}], ll: [35.1264, 138.911], say: ["seki", "nanban"], pic: "Mt Fuji from shinkansen Mishima", rx: "classic", place: "Mishima Station",
         ride: [{"ln": "JA", "from": "A47", "to": "A46", "dir": "京都方面 (toward Kyoto)", "type": "Any train.", "wrong": "Next stop 塚本 Tsukamoto = wrong way.", "min": 4, "exit": "Follow blue 新幹線 signs"}, {"ln": "TKH", "from": "SHO", "to": "MSM", "dir": "東京方面 (eastbound) — must be ひかり HIKARI", "type": "Hikari stop patterns vary — these are the big ones. Check 三島 is on your train's list on the platform board.", "wrong": "のぞみ Nozomi does NOT stop at Mishima.", "min": 120, "exit": "South Exit (南口) → Fujikyu bus stop"}],
         how: [
           "Take a HIKARI (ひかり) — the Nozomi doesn't stop at Mishima.",
@@ -1172,7 +1194,7 @@ const DAYS = [
       {
         t: "18:30", title: "Hōtō dinner + onsen night", ll: [35.5012, 138.7715], say: ["hitori", "onsen", "gochisousama"], pic: "hoto noodles Kawaguchiko", place: "Hoto Fudo Kawaguchiko",
         how: [
-          "Dinner: hōtō, the local thick noodles stewed in miso with pumpkin. Skip Hōtō Fudō's station branch (Google 3.8). Try Kosaku Kawaguchiko (甲州ほうとう小作 河口湖店), the other classic, but check it shows 4.0+ on Google first.",
+          "🍽️ Dinner: hōtō, the local thick noodles stewed in miso with pumpkin, at Hōtokura Funari Kawaguchiko (ほうとう蔵 歩成 河口湖店, Google 4.2 from 3,400+ reviews). Skip Hōtō Fudō Higashikoiji (3.7).",
           "Hot spring at the hotel (manners in the Manners tab).",
           "Check the Fuji live camera, set an alarm for 5:30 AM, early night.",
         ],
@@ -1208,7 +1230,7 @@ const DAYS = [
         photo: "Stand at the right edge of the frame, back to camera or in profile, with the pagoda + Fuji behind you. 2–3x zoom. Then Honchō Street's Fuji view — sidewalk only.",
       },
       {
-        t: "09:30", title: "Highway bus to Shinjuku", fixed: true, ask: [{"jp": "新宿行きのバス乗り場はここですか？", "ro": "Shinjuku-iki no basu noriba wa koko desu ka?", "en": "Is this the stop for the bus to Shinjuku?", "hear": "yesno"}], ll: [35.4986, 138.7689], say: ["konokippu"], place: "Busta Shinjuku",
+        t: "09:30", title: "Highway bus to Shinjuku (🍳 konbini breakfast)", fixed: true, ask: [{"jp": "新宿行きのバス乗り場はここですか？", "ro": "Shinjuku-iki no basu noriba wa koko desu ka?", "en": "Is this the stop for the bus to Shinjuku?", "hear": "yesno"}], ll: [35.4986, 138.7689], say: ["konokippu"], place: "Busta Shinjuku",
         ride: [{"ln": "FJ", "from": "SYD", "to": "KWG", "dir": "河口湖方面 (toward Kawaguchiko)", "type": "Any train.", "wrong": "Next stop isn't 月江寺 Gekkōji = wrong way.", "min": 15, "exit": "Bus stops are outside Kawaguchiko Station"}],
         how: [
           "Fujikyu train back to Kawaguchiko Station in time for the 9:30 bus — don't take a later one.",
@@ -1217,7 +1239,7 @@ const DAYS = [
         snack: "Konbini breakfast for the bus. Grab regional KitKats or Fuji-shaped sweets as gifts.",
       },
       {
-        t: "11:45", title: "Narita Express to the airport", fixed: true, ask: [{"jp": "成田エクスプレスの切符はどこで買えますか？", "ro": "Narita Ekusupuresu no kippu wa doko de kaemasu ka?", "en": "Where can I buy a Narita Express ticket?", "hear": "dir"}], ll: [35.6896, 139.7006], say: ["oshiete", "seki"], place: "Narita Airport Terminal 1",
+        t: "11:45", title: "Narita Express to the airport + 🍱 ekiben lunch", fixed: true, ask: [{"jp": "成田エクスプレスの切符はどこで買えますか？", "ro": "Narita Ekusupuresu no kippu wa doko de kaemasu ka?", "en": "Where can I buy a Narita Express ticket?", "hear": "dir"}], ll: [35.6896, 139.7006], say: ["oshiete", "seki"], place: "Narita Airport Terminal 1",
         ride: [{"ln": "NEX", "from": "SJK", "to": "NRT1", "dir": "成田空港方面 — every seat is reserved; your car + seat are on the ticket", "type": "At Tokyo the train joins another — just stay in your seat.", "wrong": "Get off at the LAST stop, 成田空港 Narita Airport (T1). 空港第2ビル is Terminal 2·3 — United is in T1.", "min": 80, "exit": "Terminal 1 → United check-in"}],
         how: [
           "Walk into JR Shinjuku and buy a Narita Express (N'EX) ticket at a JR machine — every seat is reserved (~¥3,300).",
@@ -1760,7 +1782,7 @@ const FOODS = [
   { id: "hoto", emoji: "🎃", en: "Hōtō", jp: "ほうとう", ro: "hōtō", wiki: "ほうとう", enwiki: "Hōtō",
     what: "Fat flat noodles stewed in miso with pumpkin and veg, served in an iron pot.",
     order: { jp: "かぼちゃほうとうを一つください", ro: "Kabocha hōtō o hitotsu kudasai", en: "One pumpkin hōtō, please" },
-    tips: "Perfect after a cold Fuji sunset. Portions are big.", where: "Kosaku, Kawaguchiko (Wed Nov 4) — check 4.0+ first", day: "d10" },
+    tips: "Perfect after a cold Fuji sunset. Portions are big.", where: "Hōtokura Funari, Kawaguchiko (Wed Nov 4) — Google 4.2", day: "d10" },
   { id: "gyukatsu", emoji: "🥩", en: "Gyūkatsu (beef cutlet)", jp: "牛カツ", ro: "gyūkatsu", wiki: "牛カツ", enwiki: "Gyukatsu", what: "Crispy breaded beef left rare inside — you finish each slice yourself on a tiny hot stone.", order: { jp: "牛カツ定食をお願いします。", ro: "Gyūkatsu teishoku o onegai shimasu.", en: "A gyukatsu set meal, please." }, tips: "Sear each piece only a few seconds. Try it with wasabi + soy, then with the sauce.", where: "Gyūkatsu Motomura, Akihabara (Sat lunch)", day: "d6" },
   { id: "pancakes", emoji: "🥞", en: "Soufflé pancakes", jp: "スフレパンケーキ", ro: "sufure pankēki", wiki: "パンケーキ", enwiki: "Soufflé pancake", what: "Jiggly, cloud-soft pancakes about 4 cm tall. A Tokyo café classic.", order: { jp: "スフレパンケーキを一つお願いします。", ro: "Sufure pankēki o hitotsu onegai shimasu.", en: "One soufflé pancake, please." }, tips: "They're cooked to order, so expect a 20–30 min wait. Put your name on the list, then wander.", where: "A Happy Pancake, Omotesandō (Fri afternoon)", day: "d5" },
   { id: "yakiniku", emoji: "🍖", en: "Yakiniku (Japanese BBQ)", jp: "焼肉", ro: "yakiniku", wiki: "焼肉", enwiki: "Yakiniku", what: "Grill-it-yourself wagyu and other meats at your table. Solo-friendly chains give you your own little grill.", order: { jp: "一人焼肉セットをお願いします。", ro: "Hitori yakiniku setto o onegai shimasu.", en: "A solo yakiniku set, please." }, tips: "Start with tongue (タン, tan) with lemon, then kalbi (カルビ). Don't overcook wagyu.", where: "Yakiniku Iwasaki, Ueno (Google 4.8) — any night you're near Ueno/Okachimachi" },
