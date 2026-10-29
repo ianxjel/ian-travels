@@ -465,7 +465,7 @@ const DAYS = [
           "Cross the platform to the Ginza line (orange) and ride to the end: Asakusa (~25 min).",
           "Exit 1 → Kaminarimon gate is right there.",
         ],
-        snack: "Asakusa Kagetsudo's giant melon pan (2-7-13 Asakusa; opens 10 AM and sells until it runs out, so go early): crispy outside, fluffy inside, then ningyō-yaki and age-manjū on Nakamise street. Eat beside the stall — eating while walking is frowned on here.",
+        snack: "Asakusa Kagetsudo's giant melon pan (2-7-13 Asakusa; opens 10 AM and sells until it runs out, so go early): crispy outside, fluffy inside, then ningyō-yaki and age-manjū on Nakamise street. Eat beside the stall — eating while walking is frowned on here. 🟢 Easy: takeout counter — point and pay.",
         spicy: "Slept at 24 Kaikan Ueno? Skip the hotel route: Ginza Line G16 Ueno → G19 Asakusa (toward 浅草, 3 stops, ~5 min), Exit 1.",
       },
       {
@@ -525,7 +525,7 @@ const DAYS = [
           "Bags, hats, scarves, umbrellas and selfie sticks go in the 46F lockers (¥100, refunded). Phones are fine, and your camera is allowed only with a neck or wrist strap — bring the X100VI strap.",
         ],
         photo: "Sky Edge glass corner at sunset as a silhouette (queue early). Lie in the Cloud Hammock looking up. Shoot straight down onto the crossing.",
-        snack: "Dinner: tonkatsu at Tonkatsu Maisen Aoyama (Google 4.4 from 5,000+ reviews, Tripadvisor 4.5), one stop back on the Hanzōmon line at Omotesandō (Exit A2, ~5 min walk). Open until 9 PM, English menu. Solid fuel for the big night.",
+        snack: "Dinner: tonkatsu at Tonkatsu Maisen Aoyama (Google 4.4 from 5,000+ reviews, Tripadvisor 4.5), one stop back on the Hanzōmon line at Omotesandō (Exit A2, ~5 min walk). Open until 9 PM, English menu. Solid fuel for the big night. 🟢 Easy: English menu, point and order.",
       },
       {
         t: "18:45", title: "👕🎁 UNIQLO flagship + BEAMS JAPAN + Isetan Men's", ask: [{"jp": "裾上げできますか？何時にできますか？", "ro": "Susoage dekimasu ka? Nanji ni dekimasu ka?", "en": "Can you hem these? What time will they be ready?", "hear": "time"}, {"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
@@ -554,7 +554,7 @@ const DAYS = [
           "Follow signs for the West Exit (西口); the alley is just north of the exit, along the tracks.",
           "Before you sit, tap the stall in Google Maps and only go in at 4.0+. Then say “Hitori desu” (just one). Eat here before Golden Gai — it's a 7-min walk across the tracks.",
         ],
-        snack: "Order by pointing: negima (chicken + leek), tsukune (meatball), kawa (crispy skin). Say “tare” for the sweet glaze or “shio” for salt. A small seat charge (otōshi) with a mini appetizer is normal.",
+        snack: "Order by pointing: negima (chicken + leek), tsukune (meatball), kawa (crispy skin). Say “tare” for the sweet glaze or “shio” for salt. A small seat charge (otōshi) with a mini appetizer is normal. 🟡 The most local-feeling meal of the trip: tiny counters, little English. Point at what the person next to you is eating and say “Onaji no o” (the same one). If it feels like too much, skip it — Golden Gai is next.",
         photo: "Walk toward the camera mid-alley glancing up at the lanterns, vertical, Night mode. Ask before shooting inside a stall.",
       },
       {
@@ -610,7 +610,7 @@ const DAYS = [
           "Akihabara Gachapon Kaikan: hundreds of capsule-toy machines — bring ¥100 coins.",
         ],
         tip: "TODAY is the last day of tax-free at the register: passport in your sling, ¥5,000+ per store. From Nov 1 you'd claim refunds at Narita instead.",
-        snack: "Lunch: gyūkatsu at Gyūkatsu Motomura Akihabara — crispy rare beef cutlet you finish on your own hot stone. There's usually a line; it moves.",
+        snack: "Lunch: gyūkatsu at Gyūkatsu Motomura Akihabara — crispy rare beef cutlet you finish on your own hot stone. There's usually a line; it moves. 🟢 Easy: there's basically one dish — point at the set size you want.",
         photo: "Chūō-dōri's wall of anime billboards: stand on the sidewalk by the Electric Town Exit and shoot up the street.",
       },
       {
@@ -784,7 +784,7 @@ const DAYS = [
           "Karasuma subway from Kyoto Station 2 stops to Shijō (~5 min).",
           "Walk ~5 min east to Nishiki Market.",
         ],
-        snack: "Graze: tamagoyaki (sweet rolled omelet), tako-tamago (baby octopus with a quail egg inside), soy-milk doughnuts. Many stalls ask you to eat at the stall, not while walking.",
+        snack: "Graze: tamagoyaki (sweet rolled omelet), tako-tamago (baby octopus with a quail egg inside), soy-milk doughnuts. Many stalls ask you to eat at the stall, not while walking. 🟢 Easy: point-and-pay stalls.",
       },
       {
         only: "b", t: "13:30", title: "Nintendo KYOTO + Pokémon Center Kyoto", ask: [{"jp": "任天堂のお店は何階ですか？", "ro": "Nintendō no omise wa nankai desu ka?", "en": "What floor is the Nintendo store?", "hear": "kai"}], ll: [35.0034, 135.7688], say: ["card", "fukuro"], pic: "Nintendo Kyoto store photo", place: "Kyoto Takashimaya S.C.",
@@ -813,7 +813,7 @@ const DAYS = [
           "Cross the Kamo River to Pontocho alley for dinner. Only sit down where Google Maps shows 4.0+.",
         ],
         photo: "Pontocho: walk toward the camera between the lanterns, or a flash close-up. Then a sitting shot on the Kamo River bank.",
-        snack: "Pontocho can be pricey — check the menu board out front. Yakitori or kushiage counters are the friendliest for solo diners.",
+        snack: "Pontocho can be pricey — check the menu board out front. Yakitori or kushiage counters are the friendliest for solo diners. 🟢 Lower-pressure option: skip Pontocho and eat at Kyoto Ramen Kōji (Kyoto Station 10F) on your way back — most shops there use ticket machines.",
         tip: "Never photograph geiko or maiko without asking.",
       },
       {
@@ -835,7 +835,7 @@ const DAYS = [
           "Check in and grab your backpack.",
         ],
         photo: "The Kyoto Station grand staircase light-up, right by your hotel: sit halfway up the 171 steps while the LEDs change color, shot from the bottom.",
-        snack: "Kyoto Ramen Kōji on Kyoto Station's 10F: eight ramen shops from around Japan under one roof.",
+        snack: "Kyoto Ramen Kōji on Kyoto Station's 10F: eight ramen shops from around Japan under one roof. 🟢 Easy: most shops use ticket machines — pick a photo button, pay, hand over the ticket.",
       },
       {
         t: "22:15", title: "Sauna Verde Club (check it out first) 🧖", night: true, ask: [{"jp": "ここはゲイサウナですか？", "ro": "Koko wa gei sauna desu ka?", "en": "Is this a gay sauna?", "hear": "yesno"}, {"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.9879, 135.7608], say: ["kyukei", "gaikokujin"], place: "Sauna Verde Club, 684 Higashishiokoji-cho, Kyoto",
@@ -956,7 +956,7 @@ const DAYS = [
           "Stroll the canal both ways.",
         ],
         photo: "The Glico runner pose: arms up in a V, one knee raised, sign behind you. Everyone does it — that's the point. Direct flash for the night look.",
-        snack: "Takoyaki at Wanaka Dōtonbori (1-6-7 Dōtonbori, Google 4.2, open until 9 PM). Blow on it — the inside is lava). Kushikatsu rule: never double-dip in the shared sauce.",
+        snack: "Takoyaki at Wanaka Dōtonbori (1-6-7 Dōtonbori, Google 4.2, open until 9 PM). Blow on it — the inside is lava). Kushikatsu rule: never double-dip in the shared sauce. 🟢 Easy: stand counter — point at the box size, pay, eat at the standing counter.",
       },
       {
         t: "23:00", title: "Doyama-cho holiday-eve crawl", night: true, ask: [{"jp": "イーグル大阪はどこですか？", "ro": "Īguru Ōsaka wa doko desu ka?", "en": "Where's Eagle Osaka?", "hear": "dir"}], ll: [34.7048, 135.504], say: ["amerika", "nomou", "issho", "gaikokujin"], rx: "neon", place: "Doyama-cho, Kita-ku, Osaka",
@@ -1019,7 +1019,7 @@ const DAYS = [
           "Deer roam free — don't feed them (it's banned here) and keep maps and paper out of reach. They will eat them.",
         ],
         photo: "“Pinch” the torii with forced perspective from the beach, or sit on the shore with the torii behind you and a deer wandering in.",
-        snack: "Grilled oysters (yaki-gaki) on Omotesando shopping street, momiji manjū (try the deep-fried age-momiji), and anago-meshi (conger-eel rice) — a Miyajima classic. Only sit down where Google Maps shows 4.0+.",
+        snack: "Grilled oysters (yaki-gaki) on Omotesando shopping street, momiji manjū (try the deep-fried age-momiji), and anago-meshi (conger-eel rice) — a Miyajima classic. Only sit down where Google Maps shows 4.0+. 🟢 Easy: point-and-pay stalls.",
         tip: "It's a national holiday — expect crowds. Eat early.",
       },
       {
@@ -1094,7 +1094,7 @@ const DAYS = [
           "Up early? Kuromon Market (Sakaisuji line Ōgimachi → Nippombashi, ~10 min) — allow a full hour.",
           "Otherwise go straight to Shin-Osaka.",
         ],
-        snack: "Kuromon: grilled scallops, tuna skewers and a strawberry daifuku. Or 551 Hōrai buns at Shin-Osaka.",
+        snack: "Kuromon: grilled scallops, tuna skewers and a strawberry daifuku. Or 551 Hōrai buns at Shin-Osaka. 🟢 Easy: point-and-pay stalls.",
       },
       {
         t: "10:30", title: "Hikari to Mishima (seat E)", fixed: true, ask: [{"jp": "三島に止まるひかりは何番線ですか？", "ro": "Mishima ni tomaru Hikari wa nanbansen desu ka?", "en": "Which platform for the Hikari that stops at Mishima?", "hear": "bansen"}], ll: [35.1264, 138.911], say: ["seki", "nanban"], pic: "Mt Fuji from shinkansen Mishima", rx: "classic", place: "Mishima Station",
@@ -1125,7 +1125,7 @@ const DAYS = [
         ],
         photo: "Fuji behind the FUJIYAMA lift hill at golden hour — the coaster and the mountain in one frame.",
         tip: "If Fuji-Q is closed: Oishi Park on the north shore for a Fuji-over-the-lake sunset (Kawaguchiko sightseeing bus, red line).",
-        snack: "MHA collab menu inside the park — order food for a random placemat, a side or drink for a random coaster.",
+        snack: "MHA collab menu inside the park — order food for a random placemat, a side or drink for a random coaster. 🟢 Easy: counter service.",
       },
       {
         t: "17:15", title: "Check in", fixed: true, ask: [{"jp": "温泉は何時まで入れますか？", "ro": "Onsen wa nanji made hairemasu ka?", "en": "Until what time is the hot spring open?", "hear": "time"}], say: ["checkin", "onsen"], place: "",
