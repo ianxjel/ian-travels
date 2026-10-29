@@ -340,7 +340,7 @@ const DAYS = [
 
   /* ---------------- DAY 4 ---------------- */
   {
-    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "21:00", "note": "You're out of Disney by 3:30 today. Tonight ends in Ueno: the Yamanote runs until about midnight, or a taxi to Shinjuku is ~¥4,000–5,000."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
+    id: "d4", date: "2026-10-29", prep: ["Save your Shibuya Sky QR (sunset slot) in Trip → Tickets", "Optional bookings: Asakusa kimono rental, sushi class, Kirby Café / MHA Café cancellations", "Pick tomorrow's going-out outfit", "🎁 Family gifts start tomorrow: Kiddy Land (toys) at Omotesandō, BEAMS JAPAN (uncle's polos) on the way back — list in Trip → Merch", "Cash for the night: ¥20,000+ (small bars are cash-only)", "Sleep in — alarm optional"], rain: "Rainy Disneyland: Haunted Mansion, Enchanted Tale of Beauty and the Beast, Pooh's Hunny Hunt and Monsters, Inc. are indoors. Parades can be cancelled for rain — check the app.", home: {"after": "21:00", "note": "You're out of Disney by about 3:15 today. Tonight ends in Ueno: the Yamanote runs until about midnight, or a taxi to Shinjuku is ~¥4,000–5,000."}, park: "tdl", dow: "Thu", title: "Tokyo Disneyland Halloween", city: "Tokyo Disneyland",
     theme: "spooky", emoji: "🎃", deco: ["🎃", "🏰", "🦇", "👻", "🍬", "🕸️"],
     kicker: "Day 4 · Spooky season, castle edition",
     tagline: "Villains, pumpkins and a castle at blue hour. Wear the costume one more time — it's allowed.",
@@ -379,32 +379,48 @@ const DAYS = [
           "Your Premier Access window is 2:40–3:40 PM. Scan the QR in the Disney app at the DPA entrance.",
           "You've done every Premier Access ride before noon, so this is the victory lap. Leave the park right after.",
         ],
-        photo: "No blue hour at the castle today: grab a daytime castle shot on your way out, then catch blue hour at Tokyo Station instead (~5:10 PM).",
+        photo: "No blue hour at the castle today: grab a daytime castle shot on your way out. Tokyo Station lit up at night is tonight's big photo.",
       },
       {
-        t: "15:30", title: "Disneyland → Tokyo Station 🚃", ll: [35.6795, 139.7685], say: ["norikae"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
-        ride: [{"ln": "JE", "from": "JE07", "to": "JE01", "dir": "東京方面 (toward Tokyo)", "type": "Any train.", "wrong": "Next stop 新浦安 Shin-urayasu (JE08) = wrong way.", "min": 15, "exit": "Follow 八重洲口 Yaesu Exit signs. Tokyo Character Street is on B1, right outside the Yaesu-side gates"}],
+        t: "15:20", title: "Maihama → Pokémon Center Tokyo Bay ⚡", ll: [35.6868, 139.9915], say: ["norikae"], place: "Pokémon Center Tokyo Bay, LaLaport TOKYO-BAY West Building 2F, Funabashi",
+        ride: [{"ln": "JE", "from": "JE07", "to": "JE11", "dir": "蘇我・海浜幕張・南船橋方面 (toward Soga / Kaihin-Makuhari) — away from Tokyo", "type": "Keiyo Line trains toward 蘇我 Soga or 海浜幕張 Kaihin-Makuhari stop at Minami-Funabashi.", "wrong": "Trains marked 武蔵野線 Musashino Line or 西船橋 Nishi-Funabashi split off after Ichikawa-shiohama — don't board those. Next stop 葛西臨海公園 Kasai-rinkai-kōen = wrong way.", "min": 12, "exit": "South Exit (南口) → follow the signs to LaLaport, ~10 min walk"}],
         how: [
-          "Keiyo Line to the end, Tokyo (~15 min). The Keiyo platforms are deep underground, so it's a long walk to the gates.",
-          "Tap out at a Yaesu-side gate (八重洲口). Tokyo Character Street (東京キャラクターストリート) is on B1 of First Avenue Tokyo Station, just outside.",
+          "From the park gates walk back to JR Maihama, then 4 stops away from Tokyo to Minami-Funabashi (~12 min).",
+          "LaLaport TOKYO-BAY is one of Japan's biggest malls. Head for the West Building (西館), 2F.",
         ],
       },
       {
-        t: "16:00", title: "Tokyo Character Street 🎁", quest: "⭐ KIRBY CAFÉ PETIT: takeout Kirby sweets, no reservation needed.", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6795, 139.7685], say: ["menzei", "kore", "fukuro"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
+        t: "15:45", title: "Pokémon Center Tokyo Bay ⚡", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6868, 139.9915], say: ["menzei", "kore", "fukuro"], pic: "Pokemon Center Tokyo Bay store", rx: "reala", place: "Pokémon Center Tokyo Bay, LaLaport TOKYO-BAY West Building 2F, Funabashi",
+        how: [
+          "Full-size Pokémon Center, open until 8 PM on weekdays. Usually calmer than the city stores.",
+          "Ask about tax-free before you pay — the register system still runs until Saturday.",
+          "Out by about 4:40 to make the next train back.",
+        ],
+      },
+      {
+        t: "16:45", title: "Minami-Funabashi → Tokyo Station 🚃", ll: [35.6795, 139.7685], say: ["norikae"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
+        ride: [{"ln": "JE", "from": "JE11", "to": "JE01", "dir": "東京方面 (toward Tokyo)", "type": "Board a train whose sign says 東京 Tokyo.", "wrong": "Orange Musashino Line trains (武蔵野線, toward 西船橋 / 府中本町) don't go to Tokyo. Next stop 新習志野 Shin-Narashino = wrong way.", "min": 25, "exit": "Follow 八重洲口 Yaesu Exit signs. Tokyo Character Street is on B1, right outside the Yaesu-side gates"}],
+        how: [
+          "Keiyo Line all the way to the end, Tokyo (~25 min). You'll pass Maihama again.",
+          "The Keiyo platforms are deep underground, so it's a long walk to the gates. Tap out at a Yaesu-side gate (八重洲口).",
+        ],
+      },
+      {
+        t: "17:30", title: "Tokyo Character Street 🎁", quest: "⭐ KIRBY CAFÉ PETIT: takeout Kirby sweets, no reservation needed.", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6795, 139.7685], say: ["menzei", "kore", "fukuro"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
         how: [
           "A whole underground street of character shops, open until 8:30 PM. Tax-free is still on until Saturday: ask before you pay.",
           "Pokémon Store Tokyo Station: small, but it has station-exclusive designs.",
           "🎁 TOMICA PLARAIL SHOP: a wall of ~700 Tomica cars and a big train diorama. The easiest place to shop for your nieces and nephews.",
           "🎁 Also here: Sanrio (store exclusives), Chiikawa Land, the ONE PIECE Mugiwara Store, plus Snoopy and Rilakkuma shops.",
         ],
-        photo: "Blue hour ~5:10 PM: walk out the Marunouchi side (丸の内中央口) for the 1914 red-brick Tokyo Station building lit up. Shoot it from across the plaza in front of the KITTE building.",
+        photo: "Night shot: walk out the Marunouchi side (丸の内中央口) for the 1914 red-brick Tokyo Station building lit up. Shoot it from across the plaza in front of the KITTE building.",
       },
       {
-        t: "17:45", title: "Ueno: Ameyoko market at night 🏮", ll: [35.7101, 139.7744], say: ["kore", "ikura"], pic: "Ameyoko Ueno night street photo", rx: "neon", place: "Ameyoko, Ueno, Tokyo",
+        t: "18:30", title: "Ueno: Ameyoko on the walk to dinner 🏮", ll: [35.7101, 139.7744], say: ["kore", "ikura"], pic: "Ameyoko Ueno night street photo", rx: "neon", place: "Ameyoko, Ueno, Tokyo",
         ride: [{"ln": "JYE", "from": "JY01", "to": "JY05", "dir": "上野・池袋方面 (toward Ueno / Ikebukuro) — or the light-blue Keihin-Tohoku Line toward 大宮 Ōmiya; both stop at Ueno", "type": "Every Yamanote train stops at all 4 stops.", "wrong": "Next stop 有楽町 Yūrakuchō (JY30) = wrong way.", "min": 8, "exit": "Shinobazu Exit (不忍口) → Ameyoko starts right across the street"}],
         how: [
           "Back through the gates and 4 stops north to Ueno (~8 min).",
-          "Ameyoko (アメ横) runs under and beside the train tracks from Ueno to Okachimachi: snack stalls, sneaker shops, cheap Japanese snacks and dried fruit. Stalls start closing around 7–8 PM.",
+          "Ameyoko (アメ横) runs under and beside the train tracks from Ueno to Okachimachi: snack stalls, sneaker shops, cheap Japanese snacks. Stalls start closing around 7–8 PM, so it's a quick stroll tonight.",
           "It ends right by Yakiniku Iwasaki, so just walk south to dinner.",
         ],
         snack: "Street-food stalls here: only stop at ones showing 4.0+ on Google Maps.",
@@ -1981,6 +1997,7 @@ const GIFT_SEEDS = [
   { id: "g-dad", item: "🎁 Christmas lights: battery/USB LED or paper-lantern lights (plug-ins must say AC100–240V)", where: "Don Quijote Akihabara (Sat) · LOFT Umeda (Mon, backup)", day: "d6", forWho: "Dad" },
   { id: "p-osaka", item: "Pokémon Center Osaka (Umeda) exclusives", where: "Daimaru Umeda 13F", day: "d8", forWho: "" },
   { id: "p-hiro", item: "Pokémon Center Hiroshima exclusives", where: "Sogo Hiroshima, by Peace Park", day: "d9", forWho: "" },
+  { id: "p-tbay", item: "Pokémon Center Tokyo Bay exclusives", where: "LaLaport TOKYO-BAY West 2F", day: "d4", forWho: "" },
   { id: "p-tsta", item: "Pokémon Store Tokyo Station exclusives", where: "First Avenue Tokyo Station", day: "d4", forWho: "" },
   { id: "p-nrt", item: "Pokémon Store Narita Airport", where: "Narita Terminal 2, 4F", day: "d11", forWho: "" },
   { id: "g-uncle", item: "🎁 Japanese polos (go one size up: LL ≈ US L)", where: "BEAMS JAPAN Shinjuku 2F (Fri) · Isetan Men's (backup)", day: "d5", forWho: "Uncle" },
@@ -2005,7 +2022,8 @@ const LINES = {
     ["M16", "銀座", "Ginza"], ["M17", "東京", "Tokyo"]] },
   JE: { name: "JR Keiyo Line", jp: "京葉線", color: "#c9242f", stops: [
     ["JE01", "東京", "Tokyo"], ["JE02", "八丁堀", "Hatchōbori"], ["JE03", "越中島", "Etchūjima"], ["JE04", "潮見", "Shiomi"],
-    ["JE05", "新木場", "Shin-kiba"], ["JE06", "葛西臨海公園", "Kasai-rinkai-kōen"], ["JE07", "舞浜", "Maihama"]] },
+    ["JE05", "新木場", "Shin-kiba"], ["JE06", "葛西臨海公園", "Kasai-rinkai-kōen"], ["JE07", "舞浜", "Maihama"], ["JE08", "新浦安", "Shin-urayasu"],
+    ["JE09", "市川塩浜", "Ichikawa-shiohama"], ["JE10", "二俣新町", "Futamata-shinmachi"], ["JE11", "南船橋", "Minami-funabashi"]] },
   DR: { name: "Disney Resort Line", jp: "ディズニーリゾートライン", color: "#2fa9e0", loop: true, stops: [
     ["RG", "リゾートゲートウェイ", "Resort Gateway"], ["TDL", "東京ディズニーランド・ステーション", "Tokyo Disneyland Station"],
     ["BS", "ベイサイド", "Bayside"], ["TDS", "東京ディズニーシー・ステーション", "Tokyo DisneySea Station"]] },
