@@ -1298,7 +1298,7 @@
     const sorted = list.map((t, i) => ({ ...t, i })).sort((a, b) => (order[a.tag] - order[b.tag]) || ((b.jp ? 1 : 0) - (a.jp ? 1 : 0)));
     const lands = [...new Set(sorted.map(t => t.land))];
     return `<div class="card wplan"><h3>🍡 Treats to try</h3>
-        <p class="muted">Limited-time first: 🎃 Halloween items end Oct 31. 🇯🇵 = Japan-style or only-in-Tokyo. Popcorn flavors rotate, so check the wagon sign.</p></div>
+        <p class="muted">Limited-time first: 🎃 Halloween items end Oct 31. 🇯🇵 = Japan-style or only-in-Tokyo. Menus checked against the official site on Oct 29.</p></div>
       ${lands.map(l => `<div class="card wlist"><h3>📍 ${esc(l)}</h3>${sorted.filter(t => t.land === l).map(t => `
         <div class="treat ${ate[t.i] ? "ate" : ""}">
           <div class="treat-h"><b>${esc(t.name)}</b>${t.price ? `<span class="treat-price">¥${t.price.toLocaleString()}</span>` : ""}</div>
