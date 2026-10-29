@@ -466,7 +466,6 @@ const DAYS = [
           "Exit 1 → Kaminarimon gate is right there.",
         ],
         snack: "Asakusa Kagetsudo's giant melon pan (2-7-13 Asakusa; opens 10 AM and sells until it runs out, so go early): crispy outside, fluffy inside, then ningyō-yaki and age-manjū on Nakamise street. Eat beside the stall — eating while walking is frowned on here. 🟢 Easy: takeout counter — point and pay.",
-        spicy: "Slept at 24 Kaikan Ueno? Skip the hotel route: Ginza Line G16 Ueno → G19 Asakusa (toward 浅草, 3 stops, ~5 min), Exit 1.",
       },
       {
         t: "11:00", title: "Senso-ji + Nakamise", ask: [{"jp": "予約なしで着物をレンタルできますか？", "ro": "Yoyaku nashi de kimono o rentaru dekimasu ka?", "en": "Can I rent a kimono without a reservation?", "hear": "yesno"}], ll: [35.7148, 139.7967], say: ["photook", "ikura"], pic: "Kaminarimon Asakusa men outfit photo", rx: "nostalgic", place: "Kaminarimon, Asakusa",
@@ -476,13 +475,22 @@ const DAYS = [
           "Optional: rent a men's kimono nearby (~¥4,000 with dressing).",
         ],
         photo: "Under the giant red Kaminarimon lantern looking up, shot from low. From the temple grounds, line up the pagoda with Skytree behind it.",
-        snack: "Lunch: tendon (tempura over rice) at Edomae Tendon Masaru (江戸前天丼 まさる, 1-32-2 Asakusa), the local favorite. Lunch only, 11:00–15:00, ~¥3,800, and it closes early when the day's fish sells out, so go before 1 PM. Check it shows 4.0+ on Google, Yelp and Apple Maps before you queue.",
+        snack: "Optional (you have sushi at 1:15): tendon (tempura over rice) at Edomae Tendon Masaru (江戸前天丼 まさる, 1-32-2 Asakusa), the local favorite. Lunch only, 11:00–15:00, ~¥3,800, and it closes early when the day's fish sells out, so go before 1 PM. Check it shows 4.0+ on Google, Yelp and Apple Maps before you queue.",
       },
       {
-        t: "13:30", title: "Skytree Town + Pokémon Center", quest: "⭐ Kirby Café + Kirby Café THE STORE are in Solamachi too. THE STORE is walk-in; the café needs a reservation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.7101, 139.8107], say: ["menzei", "fukuro"], pic: "Tokyo Skytree Sumida river photo", rx: "classic", place: "Tokyo Solamachi",
+        t: "13:15", title: "🍣 Sushi lunch: Toriton conveyor sushi (Solamachi 6F)", ask: [{"jp": "おすすめは何ですか？", "ro": "Osusume wa nan desu ka?", "en": "What do you recommend?", "hear": "none"}, {"jp": "お会計お願いします。", "ro": "Okaikei onegai shimasu.", "en": "Check, please.", "hear": "none"}], ll: [35.7101, 139.8107], say: ["hitori", "oishii", "gochisousama"], place: "Kaitenzushi Toriton, Tokyo Solamachi 6F, 1-1-2 Oshiage, Tokyo",
         ride: [{"ln": "TS", "from": "TS01", "to": "TS02", "dir": "北千住・東武動物公園方面 — Asakusa is the end, so any local", "type": "Local (普通) trains stop at Tokyo Skytree; limited expresses don't.", "min": 3, "exit": "Follow signs to Tokyo Solamachi"}],
         how: [
-          "Walk ~20 min across the Sumida River (Azuma-bashi bridge) or ride the Tobu Skytree line 1 stop to Tokyo Skytree.",
+          "Walk ~20 min across the Sumida River (Azuma-bashi bridge) or ride the Tobu Skytree line 1 stop to Tokyo Skytree. Toriton is on Solamachi 6F, two floors above the Pokémon Center.",
+          "Hokkaido conveyor sushi, plates from ~¥143. ⚠️ I couldn't confirm this branch's Google rating — check it shows 4.0+ before you join the line (the Shinjuku branch is 4.6).",
+          "🟢 Zero-pressure: take a number (they use a LINE queue ticket), then just grab plates off the belt. Want something specific? Write it on the paper order slip.",
+          "Plate color = price. Free green tea from the powder + hot-water tap, ginger between bites, soy sauce on the fish side. Stack your plates and pay at the register.",
+        ],
+        snack: "Try the Hokkaido stuff: ikura (salmon roe), Hokkaido shrimp, scallop, and salmon.",
+      },
+      {
+        t: "14:00", title: "Skytree Town + Pokémon Center", quest: "⭐ Kirby Café + Kirby Café THE STORE are in Solamachi too. THE STORE is walk-in; the café needs a reservation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.7101, 139.8107], say: ["menzei", "fukuro"], pic: "Tokyo Skytree Sumida river photo", rx: "classic", place: "Tokyo Solamachi",
+        how: [
           "Pokémon Center Skytree Town is inside Tokyo Solamachi (4F).",
         ],
         photo: "From Azuma-bashi bridge: Skytree + the golden Asahi building across the river.",
@@ -649,6 +657,7 @@ const DAYS = [
         how: [
           "Walk ~5 min from Pride House to the hotel.",
           "Drop the merch, nap, costume on (wear it to the café for the Halloween photo).",
+          "🧳 Send your suitcase to Osaka now if the front desk can't: 7-Eleven or FamilyMart near the hotel take Yamato parcels at the register — say “Takkyūbin onegai shimasu,” address it to APA Hotel & Resort Osaka Umeda Eki Tower (Hotels tab), your name as guest. Usually next-day, so it's waiting Monday. Keep a backpack for Kyoto.",
         ],
       },
       {
@@ -719,8 +728,9 @@ const DAYS = [
       {
         t: "07:30", title: "Check out + ship your suitcase", ask: [{"jp": "大阪のホテルに明日届きますか？", "ro": "Ōsaka no hoteru ni ashita todokimasu ka?", "en": "Will it arrive at my Osaka hotel tomorrow?", "hear": "deliver"}], ll: [35.6888, 139.71], say: ["checkout", "takkyubin"], place: "",
         how: [
-          "At the front desk, ask to send your suitcase to the Osaka hotel by Yamato (takkyūbin): “Takkyūbin de Ōsaka no hoteru ni okuritai desu.” (I'd like to send this to my Osaka hotel by courier.)",
+          "Already sent it from a konbini on Saturday? Just check out. Otherwise, at the front desk, ask to send your suitcase to the Osaka hotel by Yamato (takkyūbin): “Takkyūbin de Ōsaka no hoteru ni okuritai desu.” (I'd like to send this to my Osaka hotel by courier.)",
           "On the waybill: APA Hotel & Resort Osaka Umeda Eki Tower (address in the Hotels tab), your name, and delivery date Nov 2. ~¥2,500.",
+          "Front desk says no? The 7-Eleven / FamilyMart register does it too (“Takkyūbin onegai shimasu”). Sending on a Sunday morning, ask if it'll arrive Monday.",
           "Email the Osaka hotel that a bag is arriving for you.",
           "Keep a backpack with 1 night of stuff + your passport.",
         ],
