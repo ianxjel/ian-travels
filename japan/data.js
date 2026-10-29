@@ -450,7 +450,7 @@ const DAYS = [
 
   /* ---------------- DAY 5 ---------------- */
   {
-    id: "d5", date: "2026-10-30", prep: ["Tomorrow is the LAST day of tax-free at the register: passport in your sling, ¥5,000+ per store", "Tomorrow is Akihabara + Nakano Broadway: bring cash for the card shops and ¥100 coins for gachapon", "Pokémon Café 7:15 PM: confirmation in Trip → Tickets; you leave the hotel at 6:25", "Halloween costume ready", "Look over your Trip → Merch list so the haul goes fast — the 🎁 family gift haul is at Don Quijote Akihabara, 1:30 PM", "Big night tonight — water before bed 😅 No alarm: Saturday starts at 11:30"], rain: "Shibuya Sky's open-air rooftop closes in heavy rain or strong wind (the indoor 46F deck stays open). Backup: the free Tokyo Metropolitan Government observatory in Shinjuku. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
+    id: "d5", date: "2026-10-30", prep: ["Tomorrow is the LAST day of tax-free at the register: passport in your sling, ¥5,000+ per store", "Tomorrow is Akihabara + Nakano Broadway: bring cash for the card shops and ¥100 coins for gachapon", "Pokémon Café 7:15 PM: confirmation in Trip → Tickets; you leave the hotel at 6:25", "Halloween costume ready", "Look over your Trip → Merch list so the haul goes fast — the 🎁 family gift haul is at Don Quijote Akihabara, 1:30 PM", "Big night tonight — water before bed 😅 No alarm: Saturday starts at 11:30"], rain: "The TMG observatory is indoors, so sunset still works in the rain (just less view). Meiji Jingū's forest path is fine with an umbrella. Asakusa is fine with an umbrella — the Nakamise arcade is partly covered.", home: {"after": "23:00", "note": "Tokyo trains stop around midnight and restart ~5 AM. Ni-chome and Golden Gai are walking distance from your hotel."}, safe: {"title": "Easy Tokyo day + Shibuya sunset", "emoji": "🌆", "theme": "neon", "kicker": "Day 5 · Easy Tokyo day", "tagline": "Temples, Skytree, a Shibuya Sky sunset and a night out in Shinjuku.", "deco": ["🏮", "🗼", "🌆", "✨", "🍜", "🎌"]}, dow: "Fri", title: "Easy Tokyo day + the big night", city: "Tokyo",
     theme: "steamy", emoji: "💦", deco: ["💦", "🔥", "🍑", "🪩", "💋", "😈"],
     kicker: "Day 5 · Friday is for the boys",
     tagline: "Temples by day, Ni-chome by night. Hydrate, moisturize, and stay out till the trains restart.",
@@ -528,27 +528,26 @@ const DAYS = [
         how: [
           "From BEAMS Harajuku, walk ~10 min to the south torii by JR Harajuku Station. A 10-min forest walk under giant wooden gates to the main shrine.",
           "The gates close at 4:40 PM in October — be heading out by 4:00.",
-          "On the way back: Takeshita Street (Harajuku's crepe-and-fashion street) is right across from the station. Then 1 stop on the JR Yamanote to Shibuya.",
+          "On the way back: Takeshita Street (Harajuku's crepe-and-fashion street) is right across from the station. Then the JR Yamanote 2 stops to Shinjuku for sunset.",
         ],
         photo: "The giant wooden torii on the forest path: stand dead-center, shoot up from low. Wall of sake barrels on the way in.",
         snack: "🟢 Easy: Takeshita Street crepes — point at the display model, pay, eat by the stand.",
       },
       {
-        t: "16:15", title: "Shibuya Sky at sunset", fixed: true, ask: [{"jp": "渋谷スカイのチケット売り場は何階ですか？", "ro": "Shibuya Sukai no chiketto uriba wa nankai desu ka?", "en": "What floor is the Shibuya Sky ticket counter?", "hear": "kai"}, {"jp": "ロッカーはどこですか？", "ro": "Rokkā wa doko desu ka?", "en": "Where are the lockers?", "hear": "dir"}], ll: [35.6585, 139.7023], say: ["yoyaku", "photoplease"], pic: "Shibuya Sky sunset silhouette men", rx: "velvia", place: "Shibuya Sky",
-        ride: [{"ln": "Z", "from": "Z02", "to": "Z01", "dir": "渋谷・中央林間方面 (toward Shibuya)", "type": "Every train.", "wrong": "Next stop 青山一丁目 Aoyama-itchōme (Z03) = wrong way.", "min": 2, "exit": "Follow signs to Shibuya Scramble Square"}],
+        t: "16:15", title: "🌇 Free sunset: Tokyo Metropolitan Government observatory", fixed: true, ask: [{"jp": "展望室の入口はどこですか？", "ro": "Tenbōshitsu no iriguchi wa doko desu ka?", "en": "Where's the observatory entrance?", "hear": "dir"}], ll: [35.6896, 139.6917], say: ["kirei", "photoplease"], pic: "Tokyo Metropolitan Government Building observatory sunset view", rx: "velvia", place: "Tokyo Metropolitan Government Building, 2-8-1 Nishi-Shinjuku, Tokyo",
+        ride: [{"ln": "JY", "from": "JY19", "to": "JY17", "dir": "新宿・池袋方面 (toward Shinjuku / Ikebukuro)", "type": "Every Yamanote train. 2 stops.", "wrong": "Next stop 渋谷 Shibuya (JY20) = wrong way.", "min": 4, "exit": "West Exit (西口) → walk ~10 min west through the skyscraper district"}],
         how: [
-          "Hanzōmon line 1 stop to Shibuya, follow signs to Shibuya Scramble Square.",
-          "Ticket counter on 14F; the rooftop is 46F. Sunset ~4:50 PM.",
-          "Bags, hats, scarves, umbrellas and selfie sticks go in the 46F lockers (¥100, refunded). Phones are fine, and your camera is allowed only with a neck or wrist strap — bring the X100VI strap.",
+          "From Meiji Jingū: JR Harajuku → Shinjuku (2 stops), West Exit, ~10 min walk. Free, no ticket — just a quick bag check at the entrance.",
+          "45th-floor observatory (202 m). Sunset is ~4:50 PM; stay through blue hour (~5:15) for the city lights. On a clear day: Skytree, Tokyo Tower and sometimes Fuji.",
+          "After dark, TOKYO Night & Light projection mapping plays on the building's facade (several shows each evening) — watch one from the plaza before you leave.",
         ],
-        photo: "Sky Edge glass corner at sunset as a silhouette (queue early). Lie in the Cloud Hammock looking up. Shoot straight down onto the crossing.",
-        snack: "Dinner: tonkatsu at Tonkatsu Maisen Aoyama (Google 4.4 from 5,000+ reviews, Tripadvisor 4.5), one stop back on the Hanzōmon line at Omotesandō (Exit A2, ~5 min walk). Open until 9 PM, English menu. Solid fuel for the big night. 🟢 Easy: English menu, point and order.",
+        photo: "Rest the X100VI on the window ledge (no flash, lens hood against the glass to kill reflections) for a sharp sunset-to-city-lights shot.",
       },
       {
-        t: "18:45", title: "👕🎁 UNIQLO flagship + BEAMS JAPAN + Isetan Men's", ask: [{"jp": "裾上げできますか？何時にできますか？", "ro": "Susoage dekimasu ka? Nanji ni dekimasu ka?", "en": "Can you hem these? What time will they be ready?", "hear": "time"}, {"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
-        ride: [{"ln": "F", "from": "F15", "to": "F13", "dir": "池袋・和光市・小竹向原方面 (toward Ikebukuro)", "type": "Local, Express and Commuter Express all stop at Shinjuku-sanchōme.", "wrong": "Next stop 渋谷 Shibuya (F16) = wrong way.", "min": 10, "exit": "Walk ~5 min to the hotel"}],
+        t: "17:30", title: "👕🎁 UNIQLO flagship + BEAMS JAPAN + Isetan Men's", ask: [{"jp": "裾上げできますか？何時にできますか？", "ro": "Susoage dekimasu ka? Nanji ni dekimasu ka?", "en": "Can you hem these? What time will they be ready?", "hear": "time"}, {"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
+        ride: [{"ln": "M", "from": "M07", "to": "M09", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train. 2 stops.", "wrong": "Next stop 中野坂上 Nakano-sakaue (M06) = wrong way.", "min": 4, "exit": "Exits C3–C5 → UNIQLO, BEAMS JAPAN and Isetan are all within 3 min"}],
         how: [
-          "From Maisen (Omotesandō), walk ~8 min to Meiji-jingūmae Station, then the Fukutoshin Line 2 stops to Shinjuku-sanchōme (F15 → F13). Both stores close at 8 PM.",
+          "From TMG, walk ~8 min to Nishi-shinjuku Station, then the Marunouchi Line 2 stops to Shinjuku-sanchōme (M07 → M09) — or walk ~20 min east through Shinjuku Station. BEAMS and Isetan close at 8 PM, UNIQLO at 10.",
           "BEAMS JAPAN (3-32-6 Shinjuku) 2F: a sukajan (the embroidered souvenir jacket born from US servicemen in Japan), made-in-Japan tees and denim — and your uncle's polos (LL ≈ US L). 1F has Japanese crafts if anyone else is still on your list.",
           "Isetan Men's (across the street): 8 floors of menswear and the best one-stop for work pieces — oxford button-downs, pleated wide trousers, an unstructured stretch blazer, knit polos. Central tax-free counter on site.",
           "UNIQLO Shinjuku Honten (3-29-1 Shinjuku, the global flagship on the old Bicqlo site, 10 AM–10 PM) — start here: heavyweight tees in XXL, the U line, pleated wide pants. Ask “Susoage dekimasu ka?” for hemming: free on pants ¥1,990+, often ready in 30–60 min, so drop them off, shop BEAMS + Isetan, then pick up (it's open until 10 PM).",
@@ -556,7 +555,7 @@ const DAYS = [
         ],
       },
       {
-        t: "19:45", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        t: "19:15", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
         how: [
           "Walk ~10 min from Isetan to the hotel.",
           "Nap 30 min. Shower. Outfit on. Dinner is yakitori on the way to Golden Gai.",
@@ -1861,7 +1860,7 @@ const PHOTO_IDEAS = [
     ["⛩️", "Walking away down the torii tunnel", "Look back over your shoulder at Fushimi Inari, 7 AM.", "d8"],
     ["🗻", "Back-to-camera Fuji over the lake", "Oishi Park at sunset, 2–3x zoom so Fuji looks huge.", "d10"],
     ["🌅", "Chūreitō Pagoda + Fuji", "From the deck above, you at the right edge of the frame.", "d11"],
-    ["🌆", "Shibuya Sky silhouette", "Sky Edge glass corner at sunset.", "d5"],
+    ["🌆", "TMG observatory sunset", "Window-ledge shot from the 45F at sunset, then the city lights.", "d5"],
     ["🏮", "Kaminarimon lantern from below", "Stand under it, phone low, looking up.", "d5"],
     ["🦌", "Miyajima torii + a deer", "Sit on the shore with a deer wandering into frame.", "d9"],
     ["🐙", "Glico pose on Ebisubashi", "Arms in a V, knee up, flash on.", "d8"],
@@ -2025,7 +2024,6 @@ const TICKET_SEEDS = [
   { title: "Visit Japan Web QR (immigration + customs)", date: "2026-10-26", when: "Mon Oct 26 · Haneda arrival" },
   { title: "Tokyo DisneySea", date: "2026-10-27", when: "Tue Oct 27 · birthday!" },
   { title: "Tokyo Disneyland", date: "2026-10-29", when: "Thu Oct 29" },
-  { title: "Shibuya Sky", date: "2026-10-30", when: "Fri Oct 30 · sunset slot" },
   { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },
   { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · ~8:30 AM · seat E" },
   { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
@@ -2091,7 +2089,7 @@ const LINES = {
     ["JY17", "新宿", "Shinjuku"], ["JY18", "代々木", "Yoyogi"], ["JY19", "原宿", "Harajuku"], ["JY20", "渋谷", "Shibuya"],
     ["JY21", "恵比寿", "Ebisu"], ["JY22", "目黒", "Meguro"], ["JY23", "五反田", "Gotanda"], ["JY24", "大崎", "Ōsaki"], ["JY25", "品川", "Shinagawa"]] },
   M: { name: "Marunouchi Line", jp: "丸ノ内線", color: "#f62e36", stops: [
-    ["M08", "新宿", "Shinjuku"], ["M09", "新宿三丁目", "Shinjuku-sanchōme"], ["M10", "新宿御苑前", "Shinjuku-gyoemmae"], ["M11", "四谷三丁目", "Yotsuya-sanchōme"],
+    ["M07", "西新宿", "Nishi-shinjuku"], ["M08", "新宿", "Shinjuku"], ["M09", "新宿三丁目", "Shinjuku-sanchōme"], ["M10", "新宿御苑前", "Shinjuku-gyoemmae"], ["M11", "四谷三丁目", "Yotsuya-sanchōme"],
     ["M12", "四ツ谷", "Yotsuya"], ["M13", "赤坂見附", "Akasaka-mitsuke"], ["M14", "国会議事堂前", "Kokkai-gijidōmae"], ["M15", "霞ケ関", "Kasumigaseki"],
     ["M16", "銀座", "Ginza"], ["M17", "東京", "Tokyo"]] },
   JE: { name: "JR Keiyo Line", jp: "京葉線", color: "#c9242f", stops: [

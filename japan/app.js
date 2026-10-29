@@ -289,7 +289,11 @@
     if (!L) return [];
     const st = L.stops, i = st.findIndex(x => x[0] === l.from), j = st.findIndex(x => x[0] === l.to);
     if (i < 0 || j < 0) return [];
-    if (L.loop) return i <= j ? st.slice(i, j + 1) : st.slice(i).concat(st.slice(0, j + 1));
+    if (L.loop) {
+      const n = st.length, fwd = (j - i + n) % n, back = (i - j + n) % n;
+      const path = []; for (let k = 0; k <= Math.min(fwd, back); k++) path.push(st[(i + (fwd <= back ? k : -k) + n) % n]);
+      return path;
+    }
     return i <= j ? st.slice(i, j + 1) : st.slice(j, i + 1).reverse();
   }
   function rideHtml(legs) {
@@ -1629,6 +1633,11 @@
     if (mm) store.set("merch", mm.filter(x => !/PokéPark/.test(x.item) || x.bought || x.price || x.forWho));
     try { localStorage.removeItem("ij:variant:d3"); } catch {}
     store.set("mig:nopokepark", true);
+  }
+  if (!store.get("mig:noshibuyasky", false)) {
+    const tk = store.get("tickets", null);
+    if (tk) store.set("tickets", tk.filter(t => !/Shibuya Sky/i.test(t.title) || t.code || t.photo));
+    store.set("mig:noshibuyasky", true);
   }
   if (!store.get("mig:noteamlab", false)) {
     const tk = store.get("tickets", null);
