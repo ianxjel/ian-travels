@@ -504,7 +504,7 @@ const DAYS = [
         t: "11:55", title: "🎟️ Toriton: grab a waitlist number (Solamachi 6F)", ask: [{"jp": "おすすめは何ですか？", "ro": "Osusume wa nan desu ka?", "en": "What do you recommend?", "hear": "none"}, {"jp": "お会計お願いします。", "ro": "Okaikei onegai shimasu.", "en": "Check, please.", "hear": "none"}], ll: [35.7101, 139.8107], say: ["hitori", "oishii", "gochisousama"], place: "Kaitenzushi Toriton, Tokyo Solamachi 6F, 1-1-2 Oshiage, Tokyo",
         ride: [{"ln": "TS", "from": "TS01", "to": "TS02", "dir": "北千住・東武動物公園方面 — Asakusa is the end, so any local", "type": "Local (普通) trains stop at Tokyo Skytree; limited expresses don't.", "min": 3, "exit": "Follow signs to Tokyo Solamachi"}],
         how: [
-          "Oct 30: you're #44 on the waitlist. It moved fast (#11 → #30 in 37 min), so expect your 🔔 around 1:00–1:10. Be at the shop when you're close: people who miss their call go on hold (保留中).",
+          "Oct 30: the waitlist was over an hour, so you cancelled — first sushi is Himawari at 5:20 PM instead. (Cancel your number on the waitlist page so the next person moves up.)",
           "Walk ~20 min across the Sumida River (Azuma-bashi bridge) or ride the Tobu Skytree line 1 stop to Tokyo Skytree. Toriton is on Solamachi 6F, two floors above the Pokémon Center. It opens at 11 — be in line at opening and you skip the lunch queue.",
           "Hokkaido conveyor sushi, plates from ~¥143. Google 4.2 from 2,500+ reviews (checked Oct 30). Open 11:00–22:00. Standouts: the scallops; when the chefs ring the bell for a daily special, raise your hand fast.",
           "🟢 Zero-pressure: take a number (they use a LINE queue ticket), then just grab plates off the belt. Want something specific? Write it on the paper order slip.",
@@ -520,34 +520,25 @@ const DAYS = [
         photo: "From Azuma-bashi bridge: Skytree + the golden Asahi building across the river.",
       },
       {
-        t: "13:05", title: "🍣 Sushi lunch at Toriton (your number's up)", ll: [35.7101, 139.8107], say: ["oishii", "okaikei", "gochisousama"], place: "Kaitenzushi Toriton, Tokyo Solamachi 6F, 1-1-2 Oshiage, Tokyo",
-        how: [
-          "When the 🔔 shows on your number, go in and show staff your number. Your first sushi of the trip 🍣",
-          "Grab plates off the belt or write an order on the slip. Plate color = price. Free green tea from the tap, ginger between bites, soy on the fish side.",
-          "Get the scallop (hotate) — it's their standout — plus salmon, fatty tuna (toro) and salmon roe (ikura). When the chefs ring the bell for a special, raise your hand fast.",
-          "Stack your plates and pay at the register. Aim to leave by about 1:40 for Harajuku.",
-        ],
-      },
-      {
-        t: "13:40", title: "🚇 Hanzōmon line to Omotesando (Maisen tonkatsu: skip today)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6683, 139.7108], say: ["hitori", "oishii", "gochisousama"], place: "Tonkatsu Maisen Aoyama Honten, 4-8-5 Jingumae, Tokyo",
+        t: "12:55", title: "🍽️ Lunch: Tonkatsu Maisen Aoyama", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6683, 139.7108], say: ["hitori", "oishii", "gochisousama"], place: "Tonkatsu Maisen Aoyama Honten, 4-8-5 Jingumae, Tokyo",
         ride: [{"ln": "Z", "from": "Z14", "to": "Z02", "dir": "渋谷・中央林間方面 (toward Shibuya / Chūō-rinkan)", "type": "Every train stops everywhere on the Hanzomon Line.", "wrong": "Next stop 曳舟 Hikifune = wrong way (that's the Tobu Line).", "min": 30, "exit": "Exit A2 → Tokyu Plaza Omotesando"}],
         how: [
-          "Sushi ran late, so skip Maisen today and ride straight to Omotesando. If you get hungry later, it's open until 9 PM, 4-8-5 Jingūmae, 5 min from the mirror entrance.",
           "Hanzōmon line from Oshiage (Skytree) straight to Omotesandō (~30 min), Exit A2, then ~4 min walk.",
           "Tonkatsu Maisen Aoyama: Google 4.4 from 5,000+ reviews, Tripadvisor 4.5. Open 11 AM–9 PM.",
           "🟢 Easy: English menu — point at a set. The kurobuta (black pork) loin set is the classic. Rice, cabbage and miso refills are free: ask “okawari.”",
+          "Small appetite + sushi at 5:20? Go for one of the smaller sets and skip the refills.",
         ],
         snack: "Grind the sesame seeds in your little bowl, add the sauce, dip. Mustard on the side if you like heat.",
       },
       {
-        t: "14:10", title: "Omotesando mirror entrance", quest: "💥 My Hero Academia Café “WE ARE HERO HOLICS”: BOX cafe&space, Q Plaza Harajuku 3F (6-28-6 Jingūmae), through Dec 20. Book a slot at heroaca-cafe.ltr-online.com (¥715 reservation fee, comes with a hologram sticker).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
+        t: "14:15", title: "Omotesando mirror entrance", quest: "💥 My Hero Academia Café “WE ARE HERO HOLICS”: BOX cafe&space, Q Plaza Harajuku 3F (6-28-6 Jingūmae), through Dec 20. Book a slot at heroaca-cafe.ltr-online.com (¥715 reservation fee, comes with a hologram sticker).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
         how: [
           "From Maisen, walk ~7 min up Omotesandō avenue toward Harajuku (you pass Kiddy Land on the way). The kaleidoscope mirror entrance is Tokyu Plaza Omokado, on the corner of Meiji-dōri (4-30-3 Jingūmae).",
         ],
         photo: "Fit check: full-body shot in the mirror entrance from the bottom of the escalator. Then the free rooftop terrace upstairs.",
       },
       {
-        t: "14:20", title: "🎁 Kiddy Land: toys for the nieces + nephews", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6683, 139.7058], say: ["menzei", "kore", "fukuro"], place: "Kiddy Land Harajuku, 6-1-9 Jingumae, Tokyo",
+        t: "14:25", title: "🎁 Kiddy Land: toys for the nieces + nephews", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6683, 139.7058], say: ["menzei", "kore", "fukuro"], place: "Kiddy Land Harajuku, 6-1-9 Jingumae, Tokyo",
         how: [
           "On Omotesandō avenue, ~3 min back toward Omotesandō Station from the mirror entrance. Open 11:00–20:00.",
           "5 floors: Tomica cars + Plarail trains (3F), Sanrio + Rilakkuma (4F), Disney (2F), Snoopy (B1).",
@@ -556,7 +547,7 @@ const DAYS = [
         ],
       },
       {
-        t: "14:40", title: "👕 BEAMS Harajuku: Amekaji for you", ask: [{"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}, {"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6702, 139.7055], say: ["menzei", "kore"], place: "BEAMS Harajuku, 3-24-7 Jingumae, Tokyo",
+        t: "14:45", title: "👕 BEAMS Harajuku: Amekaji for you", ask: [{"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}, {"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6702, 139.7055], say: ["menzei", "kore"], place: "BEAMS Harajuku, 3-24-7 Jingumae, Tokyo",
         how: [
           "1F–2F, 3-24-7 Jingūmae, ~3 min from the mirror entrance. The flagship reopened in March 2026 for BEAMS' 50th: casual menswear plus Harajuku-only collabs.",
           "Look for: heavyweight boxy tees, open-collar shirts, relaxed straight denim, knit polos. Tops in 3L/XXL.",
@@ -565,7 +556,7 @@ const DAYS = [
         ],
       },
       {
-        t: "15:10", title: "⛩️ Meiji Jingū + Takeshita Street", ask: [{"jp": "本殿はどっちですか？", "ro": "Honden wa dotchi desu ka?", "en": "Which way to the main shrine?", "hear": "dir"}], ll: [35.6764, 139.6993], say: ["photoplease", "kirei"], pic: "Meiji Jingu torii gate forest path", rx: "classic", place: "Meiji Jingu, Shibuya, Tokyo",
+        t: "15:15", title: "⛩️ Meiji Jingū + Takeshita Street", ask: [{"jp": "本殿はどっちですか？", "ro": "Honden wa dotchi desu ka?", "en": "Which way to the main shrine?", "hear": "dir"}], ll: [35.6764, 139.6993], say: ["photoplease", "kirei"], pic: "Meiji Jingu torii gate forest path", rx: "classic", place: "Meiji Jingu, Shibuya, Tokyo",
         how: [
           "From BEAMS Harajuku, walk ~10 min to the south torii by JR Harajuku Station. A 10-min forest walk under giant wooden gates to the main shrine.",
           "The gates close at 4:40 PM in October — be heading out by 4:00.",
@@ -586,7 +577,7 @@ const DAYS = [
       {
         t: "17:20", title: "🍣 Sushi take 2: Himawari Sushi Shintoshin (conveyor)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one person.", "hear": "none"}, {"jp": "ホタテをください。", "ro": "Hotate o kudasai.", "en": "Scallop, please.", "hear": "none"}], ll: [35.6888, 139.6975], say: ["hitori", "oishii", "okaikei", "gochisousama"], place: "Himawari Sushi Shintoshin, 1-15-3 Nishi-Shinjuku, Tokyo",
         how: [
-          "Optional if you already had Toriton at lunch — a second round of sushi, or skip it. Himawari Sushi Shintoshin (ひまわり寿司 新都心店): conveyor-belt sushi, Google 4.3 from 2,400+ reviews. About 3 min from Shinjuku Station's South Exit, ~10 min walk from the TMG building.",
+          "Your first sushi, for real this time. Himawari Sushi Shintoshin (ひまわり寿司 新都心店): conveyor-belt sushi, Google 4.3 from 2,400+ reviews. About 3 min from Shinjuku Station's South Exit, ~10 min walk from the TMG building.",
           "Fri hours 11–3 and 5–10 PM, so you're arriving just after the dinner reopen — the shortest line of the evening. Reviewers mention waits of 10–15 min at peak. 💴 Cash only.",
           "🟢 Easy: grab plates off the belt, or ask the chef for something specific (“Hotate o kudasai” = scallop, please). Plate color = price. Stack your plates, pay at the register.",
           "Small appetite? Take 3–4 plates of what you really want: scallop (hotate), salmon, fatty tuna (toro), salmon roe (ikura).",
@@ -1868,7 +1859,7 @@ const FOODS = [
   { id: "sushi", emoji: "🍣", en: "Sushi", jp: "寿司", ro: "sushi", wiki: "寿司", enwiki: "Sushi",
     what: "Vinegared rice with raw fish (nigiri) or rolled (maki).",
     order: { jp: "おすすめを二貫ください", ro: "Osusume o nikan kudasai", en: "Two pieces of whatever you recommend" },
-    tips: "Dip the fish side, not the rice, in soy sauce. Eat nigiri in one bite. “Sabi-nuki” = no wasabi.", where: "Himawari Sushi Shintoshin, Nishi-Shinjuku (Fri 5:20 PM) — or Toriton, Solamachi, if the wait is short", day: "d5" },
+    tips: "Dip the fish side, not the rice, in soy sauce. Eat nigiri in one bite. “Sabi-nuki” = no wasabi.", where: "Himawari Sushi Shintoshin, Nishi-Shinjuku (Fri 5:20 PM)", day: "d5" },
   { id: "onigiri", emoji: "🍙", en: "Onigiri (rice ball)", jp: "おにぎり", ro: "onigiri", wiki: "おにぎり", enwiki: "Onigiri",
     what: "Rice triangle wrapped in seaweed with a filling. The konbini breakfast of champions.",
     order: { jp: "ツナマヨと鮭をください", ro: "Tsuna mayo to shake o kudasai", en: "Tuna-mayo and salmon, please" },
