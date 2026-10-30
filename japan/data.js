@@ -533,14 +533,14 @@ const DAYS = [
         snack: "Grind the sesame seeds in your little bowl, add the sauce, dip. Mustard on the side if you like heat.",
       },
       {
-        t: "14:15", title: "Omotesando mirror entrance", quest: "💥 My Hero Academia Café “WE ARE HERO HOLICS”: BOX cafe&space, Q Plaza Harajuku 3F (6-28-6 Jingūmae), through Dec 20. Book a slot at heroaca-cafe.ltr-online.com (¥715 reservation fee, comes with a hologram sticker).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
+        t: "15:00", title: "Omotesando mirror entrance", quest: "💥 My Hero Academia Café “WE ARE HERO HOLICS”: BOX cafe&space, Q Plaza Harajuku 3F (6-28-6 Jingūmae), through Dec 20. Book a slot at heroaca-cafe.ltr-online.com (¥715 reservation fee, comes with a hologram sticker).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
         how: [
           "From Maisen, walk ~7 min up Omotesandō avenue toward Harajuku (you pass Kiddy Land on the way). The kaleidoscope mirror entrance is Tokyu Plaza Omokado, on the corner of Meiji-dōri (4-30-3 Jingūmae).",
         ],
         photo: "Fit check: full-body shot in the mirror entrance from the bottom of the escalator. Then the free rooftop terrace upstairs.",
       },
       {
-        t: "14:25", title: "🎁 Kiddy Land: toys for the nieces + nephews", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6683, 139.7058], say: ["menzei", "kore", "fukuro"], place: "Kiddy Land Harajuku, 6-1-9 Jingumae, Tokyo",
+        t: "15:10", title: "🎁 Kiddy Land: toys for the nieces + nephews", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6683, 139.7058], say: ["menzei", "kore", "fukuro"], place: "Kiddy Land Harajuku, 6-1-9 Jingumae, Tokyo",
         how: [
           "On Omotesandō avenue, ~3 min back toward Omotesandō Station from the mirror entrance. Open 11:00–20:00.",
           "5 floors: Tomica cars + Plarail trains (3F), Sanrio + Rilakkuma (4F), Disney (2F), Snoopy (B1).",
@@ -549,8 +549,9 @@ const DAYS = [
         ],
       },
       {
-        t: "14:45", title: "👕 BEAMS Harajuku: Amekaji for you", ask: [{"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}, {"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6702, 139.7055], say: ["menzei", "kore"], place: "BEAMS Harajuku, 3-24-7 Jingumae, Tokyo",
+        t: "15:40", title: "👕 BEAMS Harajuku: skip today (BEAMS JAPAN tonight)", ask: [{"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}, {"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6702, 139.7055], say: ["menzei", "kore"], place: "BEAMS Harajuku, 3-24-7 Jingumae, Tokyo",
         how: [
+          "⏩ Oct 30: running late, so skip this today — BEAMS JAPAN in Shinjuku tonight (6:45 PM) has the same Amekaji style. Only pop in if Kiddy Land was quick.",
           "1F–2F, 3-24-7 Jingūmae, ~3 min from the mirror entrance. The flagship reopened in March 2026 for BEAMS' 50th: casual menswear plus Harajuku-only collabs.",
           "Look for: heavyweight boxy tees, open-collar shirts, relaxed straight denim, knit polos. Tops in 3L/XXL.",
           "Also on Meiji-dōri: United Arrows' Harajuku main store (the parent brand of BEAUTY&YOUTH; renovated in 2025). I couldn't confirm its current address — search ユナイテッドアローズ 原宿本店 in Google Maps.",
@@ -558,16 +559,16 @@ const DAYS = [
         ],
       },
       {
-        t: "15:15", title: "⛩️ Meiji Jingū + Takeshita Street", ask: [{"jp": "本殿はどっちですか？", "ro": "Honden wa dotchi desu ka?", "en": "Which way to the main shrine?", "hear": "dir"}], ll: [35.6764, 139.6993], say: ["photoplease", "kirei"], pic: "Meiji Jingu torii gate forest path", rx: "classic", place: "Meiji Jingu, Shibuya, Tokyo",
+        t: "15:40", title: "⛩️ Meiji Jingū + Takeshita Street", ask: [{"jp": "本殿はどっちですか？", "ro": "Honden wa dotchi desu ka?", "en": "Which way to the main shrine?", "hear": "dir"}], ll: [35.6764, 139.6993], say: ["photoplease", "kirei"], pic: "Meiji Jingu torii gate forest path", rx: "classic", place: "Meiji Jingu, Shibuya, Tokyo",
         how: [
-          "From BEAMS Harajuku, walk ~10 min to the south torii by JR Harajuku Station. A 10-min forest walk under giant wooden gates to the main shrine.",
-          "The gates close at 4:40 PM in October — be heading out by 4:00.",
-          "On the way back: Takeshita Street (Harajuku's crepe-and-fashion street) is right across from the station. Then the JR Yamanote 2 stops to Shinjuku for sunset.",
+          "From Kiddy Land, walk ~10 min up Omotesandō to the south torii by JR Harajuku Station. A 10-min forest walk under giant wooden gates to the main shrine.",
+          "The gates close at 4:40 PM in October. Today: main shrine, a few photos, and be walking out by 4:15 to catch the sunset.",
+          "Takeshita Street (Harajuku's crepe-and-fashion street) is right across from the station — just a peek today. Then the JR Yamanote 2 stops to Shinjuku for sunset.",
         ],
         photo: "The giant wooden torii on the forest path: stand dead-center, shoot up from low. Wall of sake barrels on the way in.",
       },
       {
-        t: "16:15", title: "🌇 Free sunset: Tokyo Metropolitan Government observatory", fixed: true, ask: [{"jp": "展望室の入口はどこですか？", "ro": "Tenbōshitsu no iriguchi wa doko desu ka?", "en": "Where's the observatory entrance?", "hear": "dir"}], ll: [35.6896, 139.6917], say: ["kirei", "photoplease"], pic: "Tokyo Metropolitan Government Building observatory sunset view", rx: "velvia", place: "Tokyo Metropolitan Government Building, 2-8-1 Nishi-Shinjuku, Tokyo",
+        t: "16:25", title: "🌇 Free sunset: Tokyo Metropolitan Government observatory", fixed: true, ask: [{"jp": "展望室の入口はどこですか？", "ro": "Tenbōshitsu no iriguchi wa doko desu ka?", "en": "Where's the observatory entrance?", "hear": "dir"}], ll: [35.6896, 139.6917], say: ["kirei", "photoplease"], pic: "Tokyo Metropolitan Government Building observatory sunset view", rx: "velvia", place: "Tokyo Metropolitan Government Building, 2-8-1 Nishi-Shinjuku, Tokyo",
         ride: [{"ln": "JY", "from": "JY19", "to": "JY17", "dir": "新宿・池袋方面 (toward Shinjuku / Ikebukuro)", "type": "Every Yamanote train. 2 stops.", "wrong": "Next stop 渋谷 Shibuya (JY20) = wrong way.", "min": 4, "exit": "West Exit (西口) → walk ~10 min west through the skyscraper district"}],
         how: [
           "From Meiji Jingū: JR Harajuku → Shinjuku (2 stops), West Exit, ~10 min walk. Free, no ticket — just a quick bag check at the entrance.",
