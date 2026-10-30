@@ -578,9 +578,11 @@ const DAYS = [
         photo: "Rest the X100VI on the window ledge (no flash, lens hood against the glass to kill reflections) for a sharp sunset-to-city-lights shot.",
       },
       {
-        t: "17:20", title: "🍣 Sushi take 2: Himawari Sushi Shintoshin (conveyor)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one person.", "hear": "none"}, {"jp": "ホタテをください。", "ro": "Hotate o kudasai.", "en": "Scallop, please.", "hear": "none"}], ll: [35.6888, 139.6975], say: ["hitori", "oishii", "okaikei", "gochisousama"], place: "Himawari Sushi Shintoshin, 1-15-3 Nishi-Shinjuku, Tokyo",
+        t: "17:20", title: "🍣 Sushi with your friend: Himawari Sushi Shintoshin (conveyor)", ask: [{"jp": "二人です。", "ro": "Futari desu.", "en": "Two people.", "hear": "none"}, {"jp": "ホタテをください。", "ro": "Hotate o kudasai.", "en": "Scallop, please.", "hear": "none"}], ll: [35.6888, 139.6975], say: ["oishii", "okaikei", "gochisousama"], place: "Himawari Sushi Shintoshin, 1-15-3 Nishi-Shinjuku, Tokyo",
         how: [
           "Your first sushi, for real this time. Himawari Sushi Shintoshin (ひまわり寿司 新都心店): conveyor-belt sushi, Google 4.3 from 2,400+ reviews. About 3 min from Shinjuku Station's South Exit, ~10 min walk from the TMG building.",
+          "👯 Meeting your friend here. From her hotel (9h nine hours Shinjuku-North, 1-4-15 Hyakunincho): 2 min walk to Shin-Ōkubo, JR Yamanote 1 stop to Shinjuku (JY16 → JY17, toward Shinjuku / Shibuya), South Exit (南口), then ~3 min walk. About 15 min door to door — send her “Himawari Sushi Shintoshin, 1-15-3 Nishi-Shinjuku”.",
+          "Whoever arrives first gets in line; tell staff “Futari desu” (two people) when you're both there. Counter seats for two can take a little longer than for one.",
           "Fri hours 11–3 and 5–10 PM, so you're arriving just after the dinner reopen — the shortest line of the evening. Reviewers mention waits of 10–15 min at peak. 💴 Cash only.",
           "🟢 Easy: grab plates off the belt, or ask the chef for something specific (“Hotate o kudasai” = scallop, please). Plate color = price. Stack your plates, pay at the register.",
           "Small appetite? Take 3–4 plates of what you really want: scallop (hotate), salmon, fatty tuna (toro), salmon roe (ikura).",
