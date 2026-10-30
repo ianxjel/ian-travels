@@ -505,7 +505,7 @@ const DAYS = [
         ride: [{"ln": "TS", "from": "TS01", "to": "TS02", "dir": "北千住・東武動物公園方面 — Asakusa is the end, so any local", "type": "Local (普通) trains stop at Tokyo Skytree; limited expresses don't.", "min": 3, "exit": "Follow signs to Tokyo Solamachi"}],
         how: [
           "Walk ~20 min across the Sumida River (Azuma-bashi bridge) or ride the Tobu Skytree line 1 stop to Tokyo Skytree. Toriton is on Solamachi 6F, two floors above the Pokémon Center. It opens at 11 — be in line at opening and you skip the lunch queue.",
-          "Hokkaido conveyor sushi, plates from ~¥143. ⚠️ I couldn't confirm this branch's Google rating — check it shows 4.0+ before you join the line (the Shinjuku branch is 4.6).",
+          "Hokkaido conveyor sushi, plates from ~¥143. Google 4.2 from 2,500+ reviews (checked Oct 30). Open 11:00–22:00. Standouts: the scallops; when the chefs ring the bell for a daily special, raise your hand fast.",
           "🟢 Zero-pressure: take a number (they use a LINE queue ticket), then just grab plates off the belt. Want something specific? Write it on the paper order slip.",
           "Plate color = price. Free green tea from the powder + hot-water tap, ginger between bites, soy sauce on the fish side. Stack your plates and pay at the register.",
         ],
@@ -735,7 +735,7 @@ const DAYS = [
       {
         t: "17:00", title: "🥟 Gyoza at Gyoza no Fukuho", ask: [{"jp": "焼き餃子を一つください。", "ro": "Yaki gyōza o hitotsu kudasai.", "en": "One pan-fried gyoza, please.", "hear": "none"}], ll: [35.6905, 139.7076], say: ["hitori", "nama", "oishii"], place: "Gyoza no Fukuho Shinjuku, 2-8-6 Shinjuku, Tokyo",
         how: [
-          "Gyoza no Fukuho (餃子の福包), 2-8-6 Shinjuku — a 3-min walk from your hotel. Google 4.3 from 2,100+ reviews. Open 11:30 AM–10 PM on Saturdays.",
+          "Gyoza no Fukuho (餃子の福包), KDX Shinjuku 286 Bldg 1F, 2-8-6 Shinjuku — a 3-min walk from your hotel. Google 4.3 from 2,100+ reviews. Open 11:30 AM–10 PM on Saturdays.",
           "🟢 Easy: point at the photos. Pan-fried (yaki) and boiled (sui) gyoza — get one plate of each. Keep it to a snack: Pokémon Café is at 7:15.",
           "Dip: vinegar + a little soy + chili oil.",
         ],
@@ -749,7 +749,7 @@ const DAYS = [
         ],
       },
       {
-        t: "18:25", title: "Leave for Pokémon Café Tokyo", fixed: true, ask: [{"jp": "高島屋の新館はどっちですか？", "ro": "Takashimaya no shinkan wa dotchi desu ka?", "en": "Which way to Takashimaya's Annex building?", "hear": "dir"}], say: ["norikae", "doko"], place: "Nihonbashi Takashimaya S.C. Annex",
+        t: "18:25", title: "Leave for Pokémon Café Tokyo", fixed: true, ask: [{"jp": "高島屋の新館はどっちですか？", "ro": "Takashimaya no shinkan wa dotchi desu ka?", "en": "Which way to Takashimaya's Annex building?", "hear": "dir"}], say: ["norikae", "doko"], place: "Nihombashi Takashimaya S.C. East Bldg 5F, 2-5-1 Nihombashi, Tokyo", ll: [35.681, 139.774],
         ride: [{"ln": "M", "from": "M10", "to": "M16", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 14, "exit": "Follow the orange Ginza Line signs"}, {"ln": "G", "from": "G09", "to": "G11", "dir": "浅草方面 (toward Asakusa)", "type": "Every train.", "wrong": "Next stop 新橋 Shimbashi (G08) = wrong way.", "min": 4, "exit": "Exit B2 → straight into Takashimaya"}],
         how: [
           "Marunouchi line from Shinjuku-gyoemmae to Ginza (~17 min).",
@@ -778,7 +778,7 @@ const DAYS = [
         photo: "Costume + tower: stand in Zōjō-ji's courtyard and have someone shoot you with the tower above your head.",
       },
       {
-        t: "22:15", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 2-15-12 Shinjuku",
+        t: "22:15", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 1F 2-15-12 Shinjuku, Tokyo",
         ride: [{"ln": "OE", "from": "E21", "to": "E27", "dir": "六本木・都庁前方面 (toward Roppongi / Tochōmae)", "type": "Every train.", "wrong": "Next stop 大門 Daimon (E20) = wrong way.", "min": 15, "exit": "Exit toward Shinjuku-dōri, then walk east ~15 min to Shinjuku 2-chōme"}],
         how: [
           "From Tokyo Tower: walk ~7 min north to Akabanebashi Station, Toei Ōedo Line to Shinjuku (E21 → E27, ~15 min), then walk ~15 min east along Shinjuku-dōri to Ni-chome. Easier in costume than it sounds — half the train will be dressed up too.",
@@ -926,7 +926,7 @@ const DAYS = [
         photo: "Walk out through the Starbucks Ninenzaka noren curtain, drink in hand. Then the classic pagoda shot looking up the sloped lane, three-quarter turn — but don't block the street.",
       },
       {
-        t: "18:00", title: "Gion at dusk", ask: [{"jp": "一人ですが、カウンター席はありますか？", "ro": "Hitori desu ga, kauntā-seki wa arimasu ka?", "en": "Just me — do you have a counter seat?", "hear": "full"}], ll: [35.0054, 135.771], say: ["hitori", "osusume", "gochisousama"], pic: "Pontocho alley night photo", rx: "nostalgic", place: "Pontocho Alley, Kyoto",
+        t: "18:00", title: "Gion at dusk", ask: [{"jp": "一人ですが、カウンター席はありますか？", "ro": "Hitori desu ga, kauntā-seki wa arimasu ka?", "en": "Just me — do you have a counter seat?", "hear": "full"}], ll: [35.0031, 135.7751], say: ["hitori", "osusume", "gochisousama"], pic: "Pontocho alley night photo", rx: "nostalgic", place: "Hanamikoji-dori, Gion, Kyoto",
         how: [
           "Walk ~10 min north to Gion's Hanamikoji street (main street only — the private side alleys have a ¥10,000 photo fine).",
           "Plan A people: Nintendo KYOTO is 10 min west at Shijō-Kawaramachi (Takashimaya S.C.). Pokémon Center Kyoto is another 12 min west along Shijō-dōri in SUINA Muromachi 2F and closes at 8 PM, so go there first.",
@@ -946,7 +946,7 @@ const DAYS = [
       {
         t: "19:00", title: "🍤 Dinner: Kyoto Tempura Ten no Meshi", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.0045, 135.7745], say: ["hitori", "oishii", "gochisousama"], place: "Kyoto Tempura Ten no Meshi Gion Honten, 255 Gionmachi Kitagawa, Kyoto",
         how: [
-          "Kyoto Tempura Ten no Meshi Gion Honten (255 Gionmachi Kitagawa): Google 4.9 from 6,000+ reviews. Open 11 AM–11 PM daily.",
+          "Kyoto Tempura Ten no Meshi Gion Honten (255 Gionmachi Kitagawa): Google 4.9 from 6,000+ reviews. Open 11 AM–10 PM daily (last order 9 PM).",
           "🟢 Easy: pick a tempura set from the menu (photos) and point. Tempura comes in waves, fresh from the fryer.",
           "Dip in tentsuyu with grated daikon, or just a pinch of salt. That's tempura crossed off ✅",
         ],
@@ -975,7 +975,7 @@ const DAYS = [
         t: "22:15", title: "Sauna Verde Club (check it out first) 🧖", night: true, ask: [{"jp": "ここはゲイサウナですか？", "ro": "Koko wa gei sauna desu ka?", "en": "Is this a gay sauna?", "hear": "yesno"}, {"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.9879, 135.7608], say: ["kyukei", "gaikokujin"], place: "Sauna Verde Club, 684 Higashishiokoji-cho, Kyoto",
         how: [
           "It's on the same street as your hotel, by Kyoto Station: Shiokoji-dori, east of Higashinotoin.",
-          "One gay guide lists it as gay, but I couldn't confirm that, or the hours or price. Look in or ask at the desk before you pay.",
+          "One gay guide lists it as gay, but I couldn't confirm that, or the hours, price or exact address ⚠️ (the map pin is approximate). Look in or ask at the desk before you pay.",
           "Keep it short: you check out at 6:30 AM for Fushimi Inari.",
         ],
         spicy: "Kyoto's scene is small. If this one isn't it, Osaka's Doyama-cho is tomorrow night.",
@@ -1052,7 +1052,7 @@ const DAYS = [
         tip: "Osaka switch: stand on the RIGHT side of escalators here (the opposite of Tokyo).",
       },
       {
-        t: "13:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (Oct 30–Nov 30): collab ticket ¥2,800 incl. the 40F observatory, 2 random stickers + a stamp rally for a glass magnet, 9:30 AM–10:30 PM (last entry 10 PM). 💥 MHA Café “WE ARE HERO HOLICS”: BOX cafe&space HEP FIVE 7F (through Dec 6), book at heroaca-cafe.ltr-online.com. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower",
+        t: "13:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (Oct 30–Nov 30): collab ticket ¥2,800 incl. the 40F observatory, 2 random stickers + a stamp rally for a glass magnet, 9:30 AM–10:30 PM (last entry 10 PM). 💥 MHA Café “WE ARE HERO HOLICS”: BOX cafe&space HEP FIVE 7F (through Dec 6), book at heroaca-cafe.ltr-online.com. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Your suitcase should be waiting. Check-in is from 3 PM.",
@@ -1073,7 +1073,7 @@ const DAYS = [
         photo: "Shoot the tower across the stone walls and moat from the Gokuraku-bashi bridge — gold trim, white walls, autumn leaves.",
       },
       {
-        t: "16:30", title: "👕 Amerikamura: American vintage in US sizes", ask: [{"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6719, 135.4985], say: ["kore", "ikura"], pic: "Amerikamura Osaka street", rx: "classic", place: "Amerikamura (America-mura), Osaka",
+        t: "16:30", title: "👕 Amerikamura: American vintage in US sizes", ask: [{"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [34.6719, 135.4985], say: ["kore", "ikura"], pic: "Amerikamura Osaka street", rx: "classic", place: "Amerikamura (America-mura), Osaka",
         ride: [{"ln": "OC", "from": "C18", "to": "C16", "dir": "本町・コスモスクエア方面 (toward Hommachi / Cosmosquare)", "type": "Every train.", "wrong": "Next stop 森ノ宮 Morinomiya (C19) = wrong way.", "min": 5, "exit": "Transfer to the red Midosuji Line"}, {"ln": "OM", "from": "M18", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 淀屋橋 Yodoyabashi (M17) = wrong way.", "min": 2, "exit": "Daimaru is connected to the station"}],
         how: [
           "Chūō Line to Hommachi, Midosuji Line 1 stop to Shinsaibashi, then walk ~5 min west into Amerikamura (“America Village”).",
@@ -1186,9 +1186,9 @@ const DAYS = [
         photo: "Stand on deck: the JR ferry swings close to the floating torii on the way over.",
       },
       {
-        t: "12:45", title: "🦪 Lunch: oysters at Kakiya", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [34.2983, 132.3215], say: ["hitori", "oishii", "gochisousama"], place: "Kakiya, Omotesando shopping street, Miyajima",
+        t: "12:45", title: "🦪 Lunch: oysters at Kakiya", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [34.2983, 132.3215], say: ["hitori", "oishii", "gochisousama"], place: "Kakiya, 539 Miyajimacho, Hatsukaichi, Hiroshima",
         how: [
-          "Kakiya on Miyajima's Omotesando shopping street: Google 4.4 from 1,500+ reviews. Grilled, fried and rice-cooked Hiroshima oysters. Closes around 6 PM.",
+          "Kakiya (539 Miyajimacho) on Miyajima's Omotesando shopping street: Google 4.4 from 1,500+ reviews. Grilled, fried and rice-cooked Hiroshima oysters. Open 10 AM–6 PM, and closes early if the oysters sell out.",
           "🟢 Easy: point at the oyster set on the menu. It's a national holiday, so expect a line — come straight here off the ferry.",
         ],
       },
@@ -1203,7 +1203,7 @@ const DAYS = [
         tip: "It's a national holiday — expect crowds. Eat early.",
       },
       {
-        t: "15:15", title: "🍁 Dessert: age-momiji at Momijidō", ll: [34.2975, 132.3205], say: ["hitotsu", "oishii"], place: "Momijido Main Store, Miyajima",
+        t: "15:15", title: "🍁 Dessert: age-momiji at Momijidō", ll: [34.2975, 132.3205], say: ["hitotsu", "oishii"], place: "Momijido Honten, 448-1 Miyajimacho, Hatsukaichi, Hiroshima",
         how: [
           "Momijidō main store (Google 4.3 from 1,400+ reviews): deep-fried momiji manjū (maple-leaf cakes) on a stick, hot from the fryer.",
           "🟢 Easy: point at the flavor (custard, red bean, cheese), pay, eat by the shop. Then the ferry back.",
@@ -1233,7 +1233,7 @@ const DAYS = [
         snack: "Hiroshima-style okonomiyaki is layered with noodles (soba or udon) — order “soba-iri” with an egg on top. Eat it straight off the griddle with the little spatula.",
       },
       {
-        t: "19:15", title: "Shinkansen back to Osaka", fixed: true, place: "APA Hotel & Resort Osaka Umeda Eki Tower",
+        t: "19:15", title: "Shinkansen back to Osaka", fixed: true, place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
         ride: [{"ln": "SYS", "from": "HIJ", "to": "SHO", "dir": "新大阪・東京方面 (eastbound)", "type": "Every Nozomi stops at Shin-Osaka.", "min": 85, "exit": "Follow JR Kyoto Line signs"}, {"ln": "JA", "from": "A46", "to": "A47", "dir": "大阪・神戸方面 (toward Osaka)", "type": "Any train.", "wrong": "Next stop 東淀川 Higashi-Yodogawa = wrong way.", "min": 4, "exit": "Midosuji South Exit → hotel"}],
         how: [
           "Streetcar back to Hiroshima Station.",
@@ -1332,9 +1332,9 @@ const DAYS = [
         ],
       },
       {
-        t: "18:30", title: "🍲 Dinner: hōtō at Hōtokura Funari, then onsen", ll: [35.5012, 138.7715], say: ["hitori", "onsen", "gochisousama"], pic: "hoto noodles Kawaguchiko", place: "Hoto Fudo Kawaguchiko",
+        t: "18:30", title: "🍲 Dinner: hōtō at Hōtokura Funari, then onsen", ll: [35.4925, 138.7755], say: ["hitori", "onsen", "gochisousama"], pic: "hoto noodles Kawaguchiko", place: "Hotokura Funari Kawaguchiko, 6931 Funatsu, Fujikawaguchiko, Yamanashi",
         how: [
-          "🍽️ Dinner: hōtō, the local thick noodles stewed in miso with pumpkin, at Hōtokura Funari Kawaguchiko (ほうとう蔵 歩成 河口湖店, Google 4.2 from 3,400+ reviews). Skip Hōtō Fudō Higashikoiji (3.7).",
+          "🍽️ Dinner: hōtō, the local thick noodles stewed in miso with pumpkin, at Hōtokura Funari Kawaguchiko (ほうとう蔵 歩成 河口湖店, 6931 Funatsu — on Route 139 by the Funatsu-tozandō-iriguchi intersection, ~1.1 km / 15 min walk from Kawaguchiko Station; Google 4.2 from 3,400+ reviews). Open 11:00–21:00, last order 20:30. Skip Hōtō Fudō Higashikoiji (3.7).",
           "Hot spring at the hotel (manners in the Manners tab).",
           "Check the Fuji live camera, set an alarm for 5:30 AM, early night.",
         ],
@@ -1394,7 +1394,7 @@ const DAYS = [
         ],
       },
       {
-        t: "12:15", title: "Narita Express to the airport", fixed: true, ask: [{"jp": "成田エクスプレスの切符はどこで買えますか？", "ro": "Narita Ekusupuresu no kippu wa doko de kaemasu ka?", "en": "Where can I buy a Narita Express ticket?", "hear": "dir"}], ll: [35.6896, 139.7006], say: ["oshiete", "seki"], place: "Narita Airport Terminal 1",
+        t: "12:15", title: "Narita Express to the airport", fixed: true, ask: [{"jp": "成田エクスプレスの切符はどこで買えますか？", "ro": "Narita Ekusupuresu no kippu wa doko de kaemasu ka?", "en": "Where can I buy a Narita Express ticket?", "hear": "dir"}], ll: [35.6896, 139.7006], say: ["oshiete", "seki"], place: "JR Shinjuku Station",
         ride: [{"ln": "NEX", "from": "SJK", "to": "NRT1", "dir": "成田空港方面 — every seat is reserved; your car + seat are on the ticket", "type": "At Tokyo the train joins another — just stay in your seat.", "wrong": "Get off at the LAST stop, 成田空港 Narita Airport (T1). 空港第2ビル is Terminal 2·3 — United is in T1.", "min": 80, "exit": "Terminal 1 → United check-in"}],
         how: [
           "Walk back into JR Shinjuku and buy a Narita Express (N'EX) ticket at a JR machine for the next departure — every seat is reserved (~¥3,300). They run roughly every 30 minutes.",
@@ -2155,7 +2155,7 @@ const FAN_QUESTS = [
   { fandom: "Your bars: gachimuchi + muscle cub crowd", emoji: "🐻", spicy: true, items: [
     { t: "Eagle Tokyo + Eagle Tokyo Blue", where: "Ni-chome, Tokyo", when: "Nightly · cashless · ¥1,000–2,000", day: "d2", what: "Leather and bear bars with a mature, stocky and muscular crowd, multilingual staff, and locals and tourists mixing. BUFF parties (muscle guys to bears, fetish gear) run every two months; check @bufftyo.", place: "Eagle Tokyo, Shinjuku 2-chome", link: "https://sushisandwich81.com/eagle-tokyo-and-eagle-tokyo-blue/" },
     { t: "Dragon Men", where: "Ni-chome, Tokyo", when: "~¥2,000 with two drinks on weekends", day: "d4", what: "Go-go dancers and a big mix of Japanese regulars and visitors. Turns club-like after midnight.", place: "Dragon Men, Shinjuku 2-chome", link: "https://nightlifetokyo.com/en/tokyo/guides/lgbtq-nightlife-tokyo-ni-chome" },
-    { t: "Bar Blacknude", where: "1F, 2-15-12 Shinjuku", when: "Mon–Sat 8 PM–1 AM, Sun 7 PM–midnight", day: "d6", what: "Muscle-staff bar; foreigners welcome.", place: "Bar Blacknude, 2-15-12 Shinjuku", link: "https://www.travelgay.com/tokyo-gay-bars" },
+    { t: "Bar Blacknude", where: "1F, 2-15-12 Shinjuku", when: "Mon–Sat 8 PM–1 AM, Sun 7 PM–midnight", day: "d6", what: "Muscle-staff bar; foreigners welcome.", place: "Bar Blacknude, 1F 2-15-12 Shinjuku, Tokyo", link: "https://www.travelgay.com/tokyo-gay-bars" },
     { t: "GB", where: "Ni-chome, Tokyo", when: "Nightly", day: "d1", what: "Quiet counter bar with English-speaking staff and an older crowd. Good for daddies and real conversation.", place: "GB, Shinjuku 2-chome", link: "https://nightlifetokyo.com/en/tokyo/guides/lgbtq-nightlife-tokyo-ni-chome" },
     { t: "Eagle Osaka", where: "12-8 Doyama-cho, Osaka", when: "Cashless · free entry Mon–Thu", day: "d8", what: "Western Japan's biggest gay bar: a go-go dance floor downstairs and a lounge upstairs. A hotspot for bears and tourists.", place: "Eagle Osaka, 12-8 Doyamacho", link: "https://sushisandwich81.com/eagle-osaka-best-gay-bear-bar-in-osaka/" },
     { t: "Dungaree + Kuro", where: "Doyama-cho, Osaka", when: "Kuro: Mon–Sat 7 PM–2 AM", day: "d8", what: "Dungaree is “where Japanese bears go to play.” Kuro is Osaka's oldest gay bar, with a mature Japanese crowd; foreigners welcome.", place: "Doyama-cho, Kita-ku, Osaka", link: "https://www.travelgay.com/osaka-gay-bars" },
