@@ -1639,6 +1639,7 @@
     if (tk) store.set("tickets", tk.filter(t => !/Shibuya Sky/i.test(t.title) || t.code || t.photo));
     store.set("mig:noshibuyasky", true);
   }
+  if (!store.get("mig:d5late915", false)) { store.set("moved:d5", {}); store.set("nopull:d5", ""); store.set("mig:d5late915", true); }
   if (!store.get("mig:noteamlab", false)) {
     const tk = store.get("tickets", null);
     if (tk) store.set("tickets", tk.filter(t => !/teamLab/i.test(t.title) || t.code || t.photo));

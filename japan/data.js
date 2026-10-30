@@ -458,7 +458,7 @@ const DAYS = [
     phrases: ["hitori", "cover", "kanpai", "taipu", "kinniku", "hige", "odorou", "hotel", "kisu", "yametoku"],
     steps: [
       {
-        t: "08:45", title: "🍳 Breakfast: konbini by the hotel", ask: [{"jp": "温めてください。", "ro": "Atatamete kudasai.", "en": "Please heat it up.", "hear": "yesno"}], ll: [35.6888, 139.71], say: ["fukuro", "atatame"], place: "7-Eleven near Shinjuku-gyoemmae Station",
+        t: "09:15", title: "🍳 Breakfast: konbini by the hotel", ask: [{"jp": "温めてください。", "ro": "Atatamete kudasai.", "en": "Please heat it up.", "hear": "yesno"}], ll: [35.6888, 139.71], say: ["fukuro", "atatame"], place: "7-Eleven near Shinjuku-gyoemmae Station",
         how: [
           "🟢 Zero-pressure Japanese breakfast: grab it, pay, then eat in the store's eat-in corner (イートイン) if it has one, or standing just outside by the door. Eating while walking is frowned on in Japan.",
           "Onigiri (rice ball): sake (salmon) or tuna mayo. Pull tab 1 down the middle, then corners 2 and 3 — the seaweed wraps itself on.",
@@ -466,7 +466,7 @@ const DAYS = [
         ],
       },
       {
-        t: "09:00", title: "Train to Asakusa", ask: [{"jp": "雷門はどっちですか？", "ro": "Kaminarimon wa dotchi desu ka?", "en": "Which way to Kaminarimon gate?", "hear": "dir"}], ll: [35.7106, 139.7975], say: ["norikae", "hitotsu"], place: "Senso-ji, Asakusa",
+        t: "09:30", title: "Train to Asakusa", ask: [{"jp": "雷門はどっちですか？", "ro": "Kaminarimon wa dotchi desu ka?", "en": "Which way to Kaminarimon gate?", "hear": "dir"}], ll: [35.7106, 139.7975], say: ["norikae", "hitotsu"], place: "Senso-ji, Asakusa",
         ride: [{"ln": "M", "from": "M10", "to": "M13", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train.", "wrong": "Next stop 新宿三丁目 (M09) = wrong way.", "min": 8, "exit": "Cross the platform to the orange Ginza Line"}, {"ln": "G", "from": "G05", "to": "G19", "dir": "浅草方面 (toward Asakusa)", "type": "Every train. Asakusa is the last stop.", "wrong": "Next stop 青山一丁目 Aoyama-itchōme (G04) = wrong way.", "min": 25, "exit": "Exit 1 → Kaminarimon gate"}],
         how: [
           "Marunouchi line from Shinjuku-gyoemmae to Akasaka-mitsuke (~8 min).",
@@ -475,9 +475,9 @@ const DAYS = [
         ],
       },
       {
-        t: "09:35", title: "Senso-ji + Nakamise", ask: [{"jp": "予約なしで着物をレンタルできますか？", "ro": "Yoyaku nashi de kimono o rentaru dekimasu ka?", "en": "Can I rent a kimono without a reservation?", "hear": "yesno"}], ll: [35.7148, 139.7967], say: ["photook", "ikura"], pic: "Kaminarimon Asakusa men outfit photo", rx: "nostalgic", place: "Kaminarimon, Asakusa",
+        t: "10:05", title: "Senso-ji + Nakamise", ask: [{"jp": "予約なしで着物をレンタルできますか？", "ro": "Yoyaku nashi de kimono o rentaru dekimasu ka?", "en": "Can I rent a kimono without a reservation?", "hear": "yesno"}], ll: [35.7148, 139.7967], say: ["photook", "ikura"], pic: "Kaminarimon Asakusa men outfit photo", rx: "nostalgic", place: "Kaminarimon, Asakusa",
         how: [
-          "The main hall opens at 6:30 AM (Oct–Mar), so it's still fairly calm before 10 — shoot the temple first.",
+          "The main hall opens at 6:30 AM (Oct–Mar), so it gets busier after 10 — shoot the temple first, before Nakamise fills up.",
           "Nakamise's shops open around 9:30–10. Walk it on the way back out.",
           "At the incense burner, waft a little smoke toward yourself for good health.",
           "Optional: rent a men's kimono nearby (~¥4,000 with dressing).",
@@ -485,7 +485,7 @@ const DAYS = [
         photo: "Under the giant red Kaminarimon lantern looking up, shot from low. From the temple grounds, line up the pagoda with Skytree behind it.",
       },
       {
-        t: "09:55", title: "🐟 Taiyaki at Naruto Taiyaki", ask: [{"jp": "一つください。", "ro": "Hitotsu kudasai.", "en": "One, please.", "hear": "money"}], ll: [35.7108, 139.7955], say: ["hitotsu", "oishii"], place: "Naruto Taiyaki Honpo Asakusa, 1-28-1 Asakusa, Tokyo",
+        t: "10:25", title: "🐟 Taiyaki at Naruto Taiyaki", ask: [{"jp": "一つください。", "ro": "Hitotsu kudasai.", "en": "One, please.", "hear": "money"}], ll: [35.7108, 139.7955], say: ["hitotsu", "oishii"], place: "Naruto Taiyaki Honpo Asakusa, 1-28-1 Asakusa, Tokyo",
         how: [
           "Naruto Taiyaki Honpo (1-28-1 Asakusa, a minute from Kaminarimon): Google 4.5 from 1,000+ reviews, open from 9 AM.",
           "🟢 Easy: takeout window — point at the fish-shaped cake (classic red bean, or custard), pay, eat beside the shop.",
@@ -493,7 +493,7 @@ const DAYS = [
         ],
       },
       {
-        t: "10:10", title: "🍈 Breakfast #2: Kagetsudō giant melon pan", ask: [{"jp": "メロンパンを一つください。", "ro": "Meron pan o hitotsu kudasai.", "en": "One melon pan, please.", "hear": "money"}], ll: [35.7148, 139.7955], say: ["hitotsu", "oishii"], place: "Asakusa Kagetsudo, 2-7-13 Asakusa, Tokyo",
+        t: "10:40", title: "🍈 Breakfast #2: Kagetsudō giant melon pan", ask: [{"jp": "メロンパンを一つください。", "ro": "Meron pan o hitotsu kudasai.", "en": "One melon pan, please.", "hear": "money"}], ll: [35.7148, 139.7955], say: ["hitotsu", "oishii"], place: "Asakusa Kagetsudo, 2-7-13 Asakusa, Tokyo",
         how: [
           "Asakusa Kagetsudō (2-7-13 Asakusa, right behind Senso-ji): Google 4.4 from 2,900+ reviews. Opens 10 AM and sells until it runs out.",
           "🟢 Easy: takeout counter — point and pay. Eat it beside the shop; eating while walking is frowned on here.",
@@ -501,7 +501,7 @@ const DAYS = [
         ],
       },
       {
-        t: "10:45", title: "🍣 Early sushi lunch: Toriton conveyor sushi (Solamachi 6F)", ask: [{"jp": "おすすめは何ですか？", "ro": "Osusume wa nan desu ka?", "en": "What do you recommend?", "hear": "none"}, {"jp": "お会計お願いします。", "ro": "Okaikei onegai shimasu.", "en": "Check, please.", "hear": "none"}], ll: [35.7101, 139.8107], say: ["hitori", "oishii", "gochisousama"], place: "Kaitenzushi Toriton, Tokyo Solamachi 6F, 1-1-2 Oshiage, Tokyo",
+        t: "11:10", title: "🍣 Early sushi lunch: Toriton conveyor sushi (Solamachi 6F)", ask: [{"jp": "おすすめは何ですか？", "ro": "Osusume wa nan desu ka?", "en": "What do you recommend?", "hear": "none"}, {"jp": "お会計お願いします。", "ro": "Okaikei onegai shimasu.", "en": "Check, please.", "hear": "none"}], ll: [35.7101, 139.8107], say: ["hitori", "oishii", "gochisousama"], place: "Kaitenzushi Toriton, Tokyo Solamachi 6F, 1-1-2 Oshiage, Tokyo",
         ride: [{"ln": "TS", "from": "TS01", "to": "TS02", "dir": "北千住・東武動物公園方面 — Asakusa is the end, so any local", "type": "Local (普通) trains stop at Tokyo Skytree; limited expresses don't.", "min": 3, "exit": "Follow signs to Tokyo Solamachi"}],
         how: [
           "Walk ~20 min across the Sumida River (Azuma-bashi bridge) or ride the Tobu Skytree line 1 stop to Tokyo Skytree. Toriton is on Solamachi 6F, two floors above the Pokémon Center. It opens at 11 — be in line at opening and you skip the lunch queue.",
@@ -512,14 +512,14 @@ const DAYS = [
         snack: "Try the Hokkaido stuff: ikura (salmon roe), Hokkaido shrimp, scallop, and salmon.",
       },
       {
-        t: "11:45", title: "Skytree Town + Pokémon Center", quest: "⭐ Kirby Café + Kirby Café THE STORE are in Solamachi too. THE STORE is walk-in; the café needs a reservation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.7101, 139.8107], say: ["menzei", "fukuro"], pic: "Tokyo Skytree Sumida river photo", rx: "classic", place: "Tokyo Solamachi",
+        t: "12:00", title: "Skytree Town + Pokémon Center", quest: "⭐ Kirby Café + Kirby Café THE STORE are in Solamachi too. THE STORE is walk-in; the café needs a reservation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center on?", "hear": "kai"}], ll: [35.7101, 139.8107], say: ["menzei", "fukuro"], pic: "Tokyo Skytree Sumida river photo", rx: "classic", place: "Tokyo Solamachi",
         how: [
           "Pokémon Center Skytree Town is inside Tokyo Solamachi (4F).",
         ],
         photo: "From Azuma-bashi bridge: Skytree + the golden Asahi building across the river.",
       },
       {
-        t: "12:45", title: "🍽️ Lunch #2: Tonkatsu Maisen Aoyama", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6683, 139.7108], say: ["hitori", "oishii", "gochisousama"], place: "Tonkatsu Maisen Aoyama Honten, 4-8-5 Jingumae, Tokyo",
+        t: "12:50", title: "🍽️ Lunch #2: Tonkatsu Maisen Aoyama", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6683, 139.7108], say: ["hitori", "oishii", "gochisousama"], place: "Tonkatsu Maisen Aoyama Honten, 4-8-5 Jingumae, Tokyo",
         ride: [{"ln": "Z", "from": "Z14", "to": "Z02", "dir": "渋谷・中央林間方面 (toward Shibuya / Chūō-rinkan)", "type": "Every train stops everywhere on the Hanzomon Line.", "wrong": "Next stop 曳舟 Hikifune = wrong way (that's the Tobu Line).", "min": 30, "exit": "Exit A2 → Tokyu Plaza Omotesando"}],
         how: [
           "Hanzōmon line from Oshiage (Skytree) straight to Omotesandō (~30 min), Exit A2, then ~4 min walk.",
@@ -529,14 +529,14 @@ const DAYS = [
         snack: "Grind the sesame seeds in your little bowl, add the sauce, dip. Mustard on the side if you like heat.",
       },
       {
-        t: "13:30", title: "Omotesando mirror entrance", quest: "💥 My Hero Academia Café “WE ARE HERO HOLICS”: BOX cafe&space, Q Plaza Harajuku 3F (6-28-6 Jingūmae), through Dec 20. Book a slot at heroaca-cafe.ltr-online.com (¥715 reservation fee, comes with a hologram sticker).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
+        t: "13:45", title: "Omotesando mirror entrance", quest: "💥 My Hero Academia Café “WE ARE HERO HOLICS”: BOX cafe&space, Q Plaza Harajuku 3F (6-28-6 Jingūmae), through Dec 20. Book a slot at heroaca-cafe.ltr-online.com (¥715 reservation fee, comes with a hologram sticker).", ask: [{"jp": "鏡のエスカレーターはどこですか？", "ro": "Kagami no esukarētā wa doko desu ka?", "en": "Where's the mirror escalator?", "hear": "dir"}], ll: [35.6683, 139.7056], say: ["photoplease"], pic: "Tokyu Plaza Omotesando mirror entrance outfit", rx: "reala", place: "Tokyu Plaza Omotesando Omokado",
         how: [
           "From Maisen, walk ~7 min up Omotesandō avenue toward Harajuku (you pass Kiddy Land on the way). The kaleidoscope mirror entrance is Tokyu Plaza Omokado, on the corner of Meiji-dōri (4-30-3 Jingūmae).",
         ],
         photo: "Fit check: full-body shot in the mirror entrance from the bottom of the escalator. Then the free rooftop terrace upstairs.",
       },
       {
-        t: "13:45", title: "🎁 Kiddy Land: toys for the nieces + nephews", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6683, 139.7058], say: ["menzei", "kore", "fukuro"], place: "Kiddy Land Harajuku, 6-1-9 Jingumae, Tokyo",
+        t: "13:55", title: "🎁 Kiddy Land: toys for the nieces + nephews", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6683, 139.7058], say: ["menzei", "kore", "fukuro"], place: "Kiddy Land Harajuku, 6-1-9 Jingumae, Tokyo",
         how: [
           "On Omotesandō avenue, ~3 min back toward Omotesandō Station from the mirror entrance. Open 11:00–20:00.",
           "5 floors: Tomica cars + Plarail trains (3F), Sanrio + Rilakkuma (4F), Disney (2F), Snoopy (B1).",
@@ -545,7 +545,7 @@ const DAYS = [
         ],
       },
       {
-        t: "14:10", title: "👕 BEAMS Harajuku: Amekaji for you", ask: [{"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}, {"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6702, 139.7055], say: ["menzei", "kore"], place: "BEAMS Harajuku, 3-24-7 Jingumae, Tokyo",
+        t: "14:20", title: "👕 BEAMS Harajuku: Amekaji for you", ask: [{"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}, {"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [35.6702, 139.7055], say: ["menzei", "kore"], place: "BEAMS Harajuku, 3-24-7 Jingumae, Tokyo",
         how: [
           "1F–2F, 3-24-7 Jingūmae, ~3 min from the mirror entrance. The flagship reopened in March 2026 for BEAMS' 50th: casual menswear plus Harajuku-only collabs.",
           "Look for: heavyweight boxy tees, open-collar shirts, relaxed straight denim, knit polos. Tops in 3L/XXL.",
@@ -554,7 +554,7 @@ const DAYS = [
         ],
       },
       {
-        t: "14:45", title: "⛩️ Meiji Jingū + Takeshita Street", ask: [{"jp": "本殿はどっちですか？", "ro": "Honden wa dotchi desu ka?", "en": "Which way to the main shrine?", "hear": "dir"}], ll: [35.6764, 139.6993], say: ["photoplease", "kirei"], pic: "Meiji Jingu torii gate forest path", rx: "classic", place: "Meiji Jingu, Shibuya, Tokyo",
+        t: "14:55", title: "⛩️ Meiji Jingū + Takeshita Street", ask: [{"jp": "本殿はどっちですか？", "ro": "Honden wa dotchi desu ka?", "en": "Which way to the main shrine?", "hear": "dir"}], ll: [35.6764, 139.6993], say: ["photoplease", "kirei"], pic: "Meiji Jingu torii gate forest path", rx: "classic", place: "Meiji Jingu, Shibuya, Tokyo",
         how: [
           "From BEAMS Harajuku, walk ~10 min to the south torii by JR Harajuku Station. A 10-min forest walk under giant wooden gates to the main shrine.",
           "The gates close at 4:40 PM in October — be heading out by 4:00.",
