@@ -662,7 +662,18 @@ const DAYS = [
     phrases: ["menzei", "fukuro", "card", "kore", "kanpai", "kakkoii", "line", "hima"],
     steps: [
       {
-        t: "11:00", title: "🍛 Brunch: curry at Shinjuku Nakamuraya Manna", ask: [{"jp": "インドカリーをください。", "ro": "Indo karī o kudasai.", "en": "The Indo curry, please.", "hear": "none"}], ll: [35.6913, 139.7016], say: ["hitori", "oishii", "gochisousama"], place: "Shinjuku Nakamuraya Manna, B2F 3-26-13 Shinjuku, Tokyo",
+        t: "09:00", title: "🍳 Breakfast buffet: Gomaichi at your hotel", ask: [{"jp": "朝食券を一枚ください。", "ro": "Chōshoku-ken o ichi-mai kudasai.", "en": "One breakfast ticket, please.", "hear": "none"}], ll: [35.6881, 139.7086], say: ["oishii", "gochisousama"], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        how: [
+          "Gomaichi (ごまいち 新宿御苑店) is your hotel's breakfast restaurant: a Japanese + Western buffet, 7:00–10:00, last entry 9:30 (from the sign you saw, and the hotel's listing on Jalan).",
+          "🟢 Easiest meal of the trip: it's all self-service, so there's nothing to order. Pay, grab a tray, take a little of everything.",
+          "¥2,600 at the door, or ¥2,400 if you buy the ticket ahead (ask at the front desk the night before). Only pre-buy if you're sure you'll be up by 9:30 after the big night.",
+          "Try the Japanese side: tamagoyaki (sweet rolled omelet), grilled salmon and mackerel, miso soup with rice, hijiki seaweed, kinpira (burdock root) and the greens.",
+          "Coming from 24 Kaikan after the club? It's about a 5-minute walk back to the hotel. If you sleep past 9:30, skip it — Nakamuraya curry at 11:00 is your first meal instead.",
+          "⚠️ No Google rating checked for this one — it's the hotel's own buffet, added because you asked.",
+        ],
+      },
+      {
+        t: "11:00", title: "🍛 Lunch #1: curry at Shinjuku Nakamuraya Manna", ask: [{"jp": "インドカリーをください。", "ro": "Indo karī o kudasai.", "en": "The Indo curry, please.", "hear": "none"}], ll: [35.6913, 139.7016], say: ["hitori", "oishii", "gochisousama"], place: "Shinjuku Nakamuraya Manna, B2F 3-26-13 Shinjuku, Tokyo",
         how: [
           "Shinjuku Nakamuraya Manna (新宿中村屋 Manna), B2F of the Nakamuraya Building, 3-26-13 Shinjuku — by the JR Shinjuku East Exit. Google 4.1 from 1,200+ reviews. Opens 11 AM.",
           "Nakamuraya started serving its “Indo curry” in 1927 — one of the places Japanese curry-rice culture comes from. Japanese curry crossed off ✅",
