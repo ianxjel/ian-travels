@@ -520,13 +520,15 @@ const DAYS = [
         photo: "From Azuma-bashi bridge: Skytree + the golden Asahi building across the river.",
       },
       {
-        t: "12:55", title: "🍽️ Lunch: Tonkatsu Maisen Aoyama", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6683, 139.7108], say: ["hitori", "oishii", "gochisousama"], place: "Tonkatsu Maisen Aoyama Honten, 4-8-5 Jingumae, Tokyo",
+        t: "12:55", title: "🍽️ Lunch: Tonkatsu Maisen Aoyama", ask: [{"jp": "これを一つください。", "ro": "Kore o hitotsu kudasai.", "en": "One of these, please.", "hear": "none"}, {"jp": "コーラゼロはありますか？", "ro": "Kōra Zero wa arimasu ka?", "en": "Do you have Coke Zero?", "hear": "yesno"}, {"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6683, 139.7108], say: ["hitori", "oishii", "gochisousama"], place: "Tonkatsu Maisen Aoyama Honten, 4-8-5 Jingumae, Tokyo",
         ride: [{"ln": "Z", "from": "Z14", "to": "Z02", "dir": "渋谷・中央林間方面 (toward Shibuya / Chūō-rinkan)", "type": "Every train stops everywhere on the Hanzomon Line.", "wrong": "Next stop 曳舟 Hikifune = wrong way (that's the Tobu Line).", "min": 30, "exit": "Exit A2 → Tokyu Plaza Omotesando"}],
         how: [
           "Hanzōmon line from Oshiage (Skytree) straight to Omotesandō (~30 min), Exit A2, then ~4 min walk.",
           "Tonkatsu Maisen Aoyama: Google 4.4 from 5,000+ reviews, Tripadvisor 4.5. Open 11 AM–9 PM.",
           "🟢 Easy: English menu — point at a set. The kurobuta (black pork) loin set is the classic. Rice, cabbage and miso refills are free: ask “okawari.”",
           "Small appetite + sushi at 5:20? Go for one of the smaller sets and skip the refills.",
+          "🍺 Lunch-only beer deal: Suntory The Premium Malt's on draft, small (240 ml), ¥300 instead of ¥500 (tax incl.). Point at the table card: “Kore o hitotsu kudasai.”",
+          "🥤 Diet Coke: Japan rarely sells Diet Coke — the zero-sugar Coke here is Coca-Cola Zero. Ask “Kōra Zero wa arimasu ka?” ⚠️ I couldn't confirm Maisen's soft-drink list.",
         ],
         snack: "Grind the sesame seeds in your little bowl, add the sauce, dip. Mustard on the side if you like heat.",
       },
