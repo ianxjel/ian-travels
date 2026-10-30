@@ -578,27 +578,36 @@ const DAYS = [
         photo: "Rest the X100VI on the window ledge (no flash, lens hood against the glass to kill reflections) for a sharp sunset-to-city-lights shot.",
       },
       {
-        t: "17:20", title: "🍣 Sushi with your friend: Himawari Sushi Shintoshin (conveyor)", ask: [{"jp": "二人です。", "ro": "Futari desu.", "en": "Two people.", "hear": "none"}, {"jp": "ホタテをください。", "ro": "Hotate o kudasai.", "en": "Scallop, please.", "hear": "none"}], ll: [35.6888, 139.6975], say: ["oishii", "okaikei", "gochisousama"], place: "Himawari Sushi Shintoshin, 1-15-3 Nishi-Shinjuku, Tokyo",
+        t: "17:05", title: "👯 Pick up your friend at her hotel (Shin-Ōkubo)", ll: [35.7005, 139.7001], place: "9h nine hours Shinjuku-North, 1-4-15 Hyakunincho, Shinjuku, Tokyo",
+        ride: [{"ln": "JY", "from": "JY17", "to": "JY16", "dir": "池袋方面 (toward Ikebukuro)", "type": "All Yamanote trains stop everywhere. 1 stop.", "wrong": "Next stop 代々木 Yoyogi (JY18) = wrong way.", "min": 2, "exit": "Exit toward the Ōkubo-dōri side, then ~2 min walk"}],
         how: [
-          "Your first sushi, for real this time. Himawari Sushi Shintoshin (ひまわり寿司 新都心店): conveyor-belt sushi, Google 4.3 from 2,400+ reviews. About 3 min from Shinjuku Station's South Exit, ~10 min walk from the TMG building.",
-          "👯 Meeting your friend here. From her hotel (9h nine hours Shinjuku-North, 1-4-15 Hyakunincho): 2 min walk to Shin-Ōkubo, JR Yamanote 1 stop to Shinjuku (JY16 → JY17, toward Shinjuku / Shibuya), South Exit (南口), then ~3 min walk. About 15 min door to door — send her “Himawari Sushi Shintoshin, 1-15-3 Nishi-Shinjuku”.",
-          "Whoever arrives first gets in line; tell staff “Futari desu” (two people) when you're both there. Counter seats for two can take a little longer than for one.",
-          "Fri hours 11–3 and 5–10 PM, so you're arriving just after the dinner reopen — the shortest line of the evening. Reviewers mention waits of 10–15 min at peak. 💴 Cash only.",
-          "🟢 Easy: grab plates off the belt, or ask the chef for something specific (“Hotate o kudasai” = scallop, please). Plate color = price. Stack your plates, pay at the register.",
-          "Small appetite? Take 3–4 plates of what you really want: scallop (hotate), salmon, fatty tuna (toro), salmon roe (ikura).",
+          "From the TMG building, walk ~12 min east to JR Shinjuku Station (West Exit), then the Yamanote 1 stop to Shin-Ōkubo.",
+          "Her hotel, 9h nine hours Shinjuku-North (1-4-15 Hyakunincho), is ~2 min from Shin-Ōkubo Station. Text her when you're on the train so she's ready in the lobby.",
+          "Shin-Ōkubo is Tokyo's Koreatown — the street outside the station is packed with K-pop shops and street food.",
         ],
       },
       {
-        t: "18:10", title: "🍢 Dinner: yakitori in Omoide Yokocho", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
+        t: "17:50", title: "🍣 Sushi with your friend: Himawari Sushi Shintoshin (conveyor)", ask: [{"jp": "二人です。", "ro": "Futari desu.", "en": "Two people.", "hear": "none"}, {"jp": "ホタテをください。", "ro": "Hotate o kudasai.", "en": "Scallop, please.", "hear": "none"}], ll: [35.6888, 139.6975], say: ["oishii", "okaikei", "gochisousama"], place: "Himawari Sushi Shintoshin, 1-15-3 Nishi-Shinjuku, Tokyo",
+        ride: [{"ln": "JY", "from": "JY16", "to": "JY17", "dir": "新宿・渋谷方面 (toward Shinjuku / Shibuya)", "type": "All Yamanote trains stop everywhere. 1 stop.", "wrong": "Next stop 高田馬場 Takadanobaba (JY15) = wrong way.", "min": 2, "exit": "South Exit (南口) → ~3 min walk"}],
         how: [
-          "From Himawari, walk ~7 min north past Shinjuku Station's West Exit. Omoide Yokocho (Google 4.2 as a whole) is the lantern alley just north of the West Exit (西口), along the tracks.",
+          "Your first sushi, for real this time. Himawari Sushi Shintoshin (ひまわり寿司 新都心店): conveyor-belt sushi, Google 4.3 from 2,400+ reviews. About 3 min from Shinjuku Station's South Exit, ~10 min walk from the TMG building.",
+          "👯 Together from Shin-Ōkubo: Yamanote 1 stop back to Shinjuku, South Exit (南口), ~3 min walk. Tell staff “Futari desu” (two people). Counter seats for two can take a little longer than for one.",
+          "Fri hours 11–3 and 5–10 PM, so you're arriving just after the dinner reopen — the shortest line of the evening. Reviewers mention waits of 10–15 min at peak. 💴 Cash only.",
+          "🟢 Easy: grab plates off the belt, or ask the chef for something specific (“Hotate o kudasai” = scallop, please). Plate color = price. Stack your plates, pay at the register.",
+          "Take 3–4 plates of what you really want: scallop (hotate), salmon, fatty tuna (toro), salmon roe (ikura).",
+        ],
+      },
+      {
+        t: "18:45", title: "🍢 Yakitori in Omoide Yokocho (optional — skip if full)", ask: [{"jp": "一人、入れますか？", "ro": "Hitori, hairemasu ka?", "en": "Can one person get a seat?", "hear": "full"}, {"jp": "席料はいくらですか？", "ro": "Sekiryō wa ikura desu ka?", "en": "How much is the seat charge?", "hear": "money"}], ll: [35.6929, 139.6995], say: ["hitori", "hitotsu", "nama", "okaikei"], pic: "Omoide Yokocho night photo men", rx: "nostalgic", place: "Omoide Yokocho, Shinjuku",
+        how: [
+          "From Himawari, walk ~7 min north past Shinjuku Station's West Exit. Keep it to 2–3 skewers so you make the shops before 8. Omoide Yokocho (Google 4.2 as a whole) is the lantern alley just north of the West Exit (西口), along the tracks.",
                     "Before you sit, tap the stall in Google Maps and only go in at 4.0+. Then say “Hitori desu” (just one). Early evening is the easiest time to get a stool.",
         ],
         snack: "Order by pointing: negima (chicken + leek), tsukune (meatball), kawa (crispy skin). Say “tare” for the sweet glaze or “shio” for salt. A small seat charge (otōshi) with a mini appetizer is normal. 🟡 The most local-feeling meal of the trip: tiny counters, little English. Point at what the person next to you is eating and say “Onaji no o” (the same one). Still full from sushi? Two skewers is plenty, or skip it — Golden Gai ramen is at 9.",
         photo: "Walk toward the camera mid-alley glancing up at the lanterns, vertical, Night mode. Ask before shooting inside a stall.",
       },
       {
-        t: "18:45", title: "👕🎁 UNIQLO flagship + BEAMS JAPAN + Isetan Men's", ask: [{"jp": "裾上げできますか？何時にできますか？", "ro": "Susoage dekimasu ka? Nanji ni dekimasu ka?", "en": "Can you hem these? What time will they be ready?", "hear": "time"}, {"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
+        t: "19:10", title: "👕🎁 UNIQLO flagship + BEAMS JAPAN + Isetan Men's", ask: [{"jp": "裾上げできますか？何時にできますか？", "ro": "Susoage dekimasu ka? Nanji ni dekimasu ka?", "en": "Can you hem these? What time will they be ready?", "hear": "time"}, {"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "もう一つ大きいサイズはありますか？", "ro": "Mō hitotsu ōkii saizu wa arimasu ka?", "en": "Do you have one size bigger?", "hear": "yesno"}], ll: [35.6904, 139.7036], say: ["menzei", "kore"], place: "BEAMS JAPAN, 3-32-6 Shinjuku, Tokyo",
         ride: [{"ln": "M", "from": "M08", "to": "M09", "dir": "池袋方面 (toward Ikebukuro)", "type": "Every train. 1 stop.", "wrong": "Next stop 西新宿 Nishi-shinjuku (M07) = wrong way.", "min": 2, "exit": "Exits C3–C5 → UNIQLO, BEAMS JAPAN and Isetan are all within 3 min"}],
         how: [
           "From Omoide Yokocho, Marunouchi Line 1 stop from Shinjuku to Shinjuku-sanchōme (M08 → M09) — or walk ~15 min east through the station. BEAMS and Isetan close at 8 PM and UNIQLO at 10, so go BEAMS + Isetan first and finish at UNIQLO.",
@@ -609,7 +618,7 @@ const DAYS = [
         ],
       },
       {
-        t: "20:00", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        t: "20:15", title: "Back to the hotel to glow up", ll: [35.6888, 139.71], pic: "hotel mirror fit check night out men", rx: "reala", place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
         how: [
           "Walk ~10 min from Isetan to the hotel.",
           "Quick shower, outfit on. Dinner with your friends is Nagi ramen in Golden Gai at 9.",
