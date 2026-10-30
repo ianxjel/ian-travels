@@ -902,9 +902,25 @@ const DAYS = [
       },
 
       {
-        t: "16:00", title: "Kiyomizu → Ninenzaka → Yasaka Pagoda", ask: [{"jp": "二年坂はどっちですか？", "ro": "Ninenzaka wa dotchi desu ka?", "en": "Which way to Ninenzaka?", "hear": "dir"}], ll: [34.9949, 135.785], say: ["photoplease", "kirei"], pic: "Yasaka Pagoda men outfit photo", rx: "nostalgic", place: "Kiyomizu-dera",
+        t: "16:00", title: "💪 Benkei strength challenge at Kiyomizu-dera", ask: [{"jp": "弁慶の錫杖はどこですか？", "ro": "Benkei no shakujō wa doko desu ka?", "en": "Where are Benkei's iron staffs?", "hear": "dir"}], ll: [34.9949, 135.785], say: ["photoplease", "photook"], place: "Kiyomizu-dera, Kyoto",
         how: [
-          "Kiyomizu-dera's wooden stage first, then walk downhill on Sannenzaka and Ninenzaka.",
+          "Kiyomizu-dera is open 6:00–18:00 (until Nov 17), ¥500 entry.",
+          "Right in front of the main hall (本堂) sit replicas of the iron gear of Benkei, the legendary 12th-century warrior monk: a big iron staff (~96 kg), a small one (~17 kg) and giant iron geta clogs.",
+          "The challenge: try to lift them. The small staff is doable; the big one is the real test, and most people can barely budge it. Legend says the gear brings luck (one guide even says it protects against cheating 👀).",
+          "Lift with your legs, not your back, and don't swing it — it's a temple. Grab a friend or stranger for a video.",
+        ],
+        photo: "Have someone film you from low and to the side while you lift the big staff, so the main hall roof is behind you.",
+      },
+      {
+        t: "16:15", title: "Kiyomizu-dera's wooden stage", ask: [{"jp": "写真を撮ってもらえますか？", "ro": "Shashin o totte moraemasu ka?", "en": "Could you take a photo of me?", "hear": "yesno"}], ll: [34.9949, 135.785], say: ["photoplease", "kirei"], place: "Kiyomizu-dera, Kyoto",
+        how: [
+          "The famous wooden stage juts out over the hillside, built without a single nail. Walk out, then look back at it from the Okunoin side for the classic view of the whole stage over the trees.",
+        ],
+      },
+      {
+        t: "16:40", title: "Sannenzaka → Ninenzaka → Yasaka Pagoda", ask: [{"jp": "二年坂はどっちですか？", "ro": "Ninenzaka wa dotchi desu ka?", "en": "Which way to Ninenzaka?", "hear": "dir"}], ll: [34.9986, 135.7808], say: ["photoplease", "kirei"], pic: "Yasaka Pagoda men outfit photo", rx: "nostalgic", place: "Yasaka Pagoda, Kyoto",
+        how: [
+          "Walk downhill from the temple on Sannenzaka and Ninenzaka.",
           "Pass the Starbucks in a 100-year-old townhouse, and end at Yasaka Pagoda for blue hour (~5 PM).",
         ],
         photo: "Walk out through the Starbucks Ninenzaka noren curtain, drink in hand. Then the classic pagoda shot looking up the sloped lane, three-quarter turn — but don't block the street.",
