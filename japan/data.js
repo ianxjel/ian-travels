@@ -1474,6 +1474,8 @@ const PHRASES = [
   { id: "osusume", cat: "Food & drink", jp: "おすすめは何ですか？", ro: "Osusume wa nan desu ka?", en: "What do you recommend?", say: "oh-soo-soo-meh wah nahn dess kah" },
   { id: "hitotsu", cat: "Food & drink", jp: "これを一つください", ro: "Kore o hitotsu kudasai", en: "One of these, please", say: "koh-reh oh hee-toh-tsoo koo-dah-sai" },
   { id: "nama", cat: "Food & drink", jp: "生ビールください", ro: "Nama bīru kudasai", en: "A draft beer, please", say: "nah-mah bee-roo koo-dah-sai" },
+  { id: "namasho", cat: "Food & drink", jp: "生ビールの小をください", ro: "Nama bīru no shō o kudasai", en: "A small draft beer, please", say: "nah-mah bee-roo noh shoh oh koo-dah-sai", note: "Lots of lunch spots (like Maisen) sell a small draft for ~¥300 at lunch only. Or just point at the sign: “Kore o hitotsu kudasai.”" },
+  { id: "colazero", cat: "Food & drink", jp: "コーラゼロをください", ro: "Kōra zero o kudasai", en: "A Coke Zero, please", say: "koh-rah zeh-roh oh koo-dah-sai", note: "Diet Coke is hard to find in Japan — Coke Zero (コカ・コーラ ゼロ) is the usual zero-sugar cola. No Zero? Ask “Zero karorī no nomimono wa arimasu ka?” (any zero-calorie drinks?)." },
   { id: "mizu", cat: "Food & drink", jp: "お水ください", ro: "Omizu kudasai", en: "Water, please", say: "oh-mee-zoo koo-dah-sai", note: "Water and tea are free in restaurants." },
   { id: "itadakimasu", cat: "Food & drink", jp: "いただきます", ro: "Itadakimasu", en: "Said before eating (“I humbly receive”)", say: "ee-tah-dah-kee-mahs", note: "Hands together lightly, small nod." },
   { id: "gochisousama", cat: "Food & drink", jp: "ごちそうさまでした", ro: "Gochisōsama deshita", en: "Thanks for the meal (when leaving)", say: "go-chee-soh-sah-mah desh-tah", note: "Say it to the chef on your way out — they love it." },
