@@ -808,7 +808,7 @@ const DAYS = [
       {
         t: "07:00", title: "⏰ Change your train in SmartEX, then back to sleep", place: "",
         how: [
-          "Open SmartEX → My Trips → the Shinagawa → Kyoto booking → change it to a Nozomi around 10:30 (Fuji side: Green seat D or Ordinary seat E). Changes are free before departure.",
+          "✅ Done: changed to Nozomi 25, 10:37 → Kyoto 12:44, Green Car 8, seat 8-D.",
           "Then sleep until ~8:45. No Nintendo Museum today, so the morning is relaxed.",
         ],
       },
@@ -840,11 +840,10 @@ const DAYS = [
         ],
       },
       {
-        t: "10:30", title: "Shinkansen to Kyoto (~10:30 — change your ticket at 7 AM)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
+        t: "10:37", title: "Nozomi 25 to Kyoto (Green Car 8, seat D)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
         ride: [{"ln": "TKN", "from": "SGW", "to": "KYT", "dir": "新大阪・博多・広島方面 (westbound) — Nozomi 127 (Hakata-bound), Car 10", "type": "Nozomi stops only at these stations before Kyoto.", "wrong": "A train whose next stop is 東京 Tokyo = wrong way (that's the other platform).", "min": 135, "exit": "烏丸中央口 Karasuma Central Gate (north side)"}],
         how: [
-          "⏰ Your booking is NOZOMI 127 at 8:28. SmartEX is down 11:30 PM–5:30 AM, so at ~7 AM change it (free before departure) to a Nozomi around 10:30 from Shinagawa — Green Car seat D or Ordinary seat E for the Fuji side.",
-          "Missed the change and the 8:28? smart EX tickets normally let you ride a later train the same day in the unreserved cars (自由席) — check in the app.",
+          "✅ Changed: NOZOMI 25, Shinagawa 10:37 → Kyoto 12:44. Green Car 8, seat 8-D (window on the Mt Fuji side).",
           "Line up at your car number's marking on the platform floor. Fuji side = seat D in the Green Car, seat E in Ordinary.",
           "Fuji shows up ~40–45 min after Shinagawa. Kyoto in 2 h 15.",
         ],
@@ -2213,7 +2212,7 @@ const TICKET_SEEDS = [
   { title: "Tokyo DisneySea", date: "2026-10-27", when: "Tue Oct 27 · birthday!" },
   { title: "Tokyo Disneyland", date: "2026-10-29", when: "Thu Oct 29" },
   { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },
-  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 127 · 8:28 AM · Green Car 10, seat 10-D · print at a Shinagawa ticket machine" },
+  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 25 · 10:37 AM · Green Car 8, seat 8-D · print at a Shinagawa ticket machine" },
   { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
   { title: "Pokémon Café Osaka", date: "2026-11-02", when: "Mon Nov 2 · 6:00 PM · arrive 10 min early" },
   { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · out: Nozomi 13, Shin-Osaka 10:17, car 13 seat 9-A (print at a ticket machine) · back: Nozomi 200, Hiroshima 19:14, car 16 seat 5-E" },
