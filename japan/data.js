@@ -775,6 +775,7 @@ const DAYS = [
         ride: [{"ln": "OE", "from": "E21", "to": "E27", "dir": "六本木・都庁前方面 (toward Roppongi / Tochōmae)", "type": "Every train.", "wrong": "Next stop 大門 Daimon (E20) = wrong way.", "min": 15, "exit": "Exit toward Shinjuku-dōri, then walk east ~15 min to Shinjuku 2-chōme"}],
         how: [
           "🎃 Swing by the hotel first (5 min from Ni-chome) to drop your shopping and put the costume on.",
+          "🧳 Ship your suitcase to Osaka tonight: pack it (keep a backpack with 1 night of clothes, toiletries, chargers, meds and your passport for Kyoto), then take it to the 7-Eleven by the hotel (open 24 h) and say “Takkyūbin onegai shimasu.” Address: 〒530-0057 大阪府大阪市北区曾根崎2-8-32 アパホテル&リゾート〈大阪梅田駅タワー〉 フロント気付 — your name as the guest, delivery date Nov 2, morning (11月2日 午前中). Hotel phone is in your booking confirmation. Keep the receipt with the tracking number.",
           "🧺 While you're there: start a load in the hotel coin laundry (ask the front desk: “Koin randorī wa nan-gai desu ka?”). Bring ¥100 coins, and check whether detergent is added automatically (洗剤自動投入). Grab it when you get back tonight — clean clothes for Kyoto.",
           "🍺 Tonight: beers only, your call — order “Nama bīru kudasai.” Alternate with water.",
           "From Tokyo Tower: walk ~7 min north to Akabanebashi Station, Toei Ōedo Line to Shinjuku (E21 → E27, ~15 min), then walk ~15 min east along Shinjuku-dōri to Ni-chome. Easier in costume than it sounds — half the train will be dressed up too.",
