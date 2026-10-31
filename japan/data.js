@@ -1201,16 +1201,17 @@ const DAYS = [
         t: "09:30", title: "🚇 Hommachi → Shin-Osaka (+ 551 Hōrai pork buns for the train)", ask: [{"jp": "豚まんを二つください。", "ro": "Butaman o futatsu kudasai.", "en": "Two pork buns, please.", "hear": "money"}], ll: [34.7335, 135.5003], say: ["kore", "fukuro"], place: "551 Horai, Shin-Osaka Station",
         ride: [{"ln": "OM", "from": "M18", "to": "M13", "dir": "新大阪・千里中央方面 (toward Shin-Osaka / Senri-Chūō)", "type": "Every Midosuji train stops at Shin-Osaka.", "wrong": "Next stop 心斎橋 Shinsaibashi (M19) = wrong way.", "min": 12, "exit": "Follow signs to the JR / 新幹線 Shinkansen gates"}],
         how: [
-          "Midosuji line straight from Hommachi to Shin-Osaka (~12 min), then follow the 新幹線 signs.",
+          "Midosuji line straight from Hommachi to Shin-Osaka (~12 min), then follow the 新幹線 signs and print your shinkansen ticket at a ticket machine (Nozomi 13 leaves at 10:17).",
           "551 Hōrai's butaman (fat, juicy pork buns) are Osaka's most famous takeout, with a counter inside Shin-Osaka Station. 🟢 Point and pay, eat them on the shinkansen.",
         ],
       },
       {
-        t: "10:00", title: "Osaka → Hiroshima", ask: [{"jp": "広島行きの新幹線は何番線ですか？", "ro": "Hiroshima-iki no shinkansen wa nanbansen desu ka?", "en": "Which platform for the shinkansen to Hiroshima?", "hear": "bansen"}], say: ["nanban", "seki"], place: "Hiroshima Station",
+        t: "10:17", title: "Nozomi 13 to Hiroshima (Car 13, seat 9-A)", fixed: true, ask: [{"jp": "広島行きの新幹線は何番線ですか？", "ro": "Hiroshima-iki no shinkansen wa nanbansen desu ka?", "en": "Which platform for the shinkansen to Hiroshima?", "hear": "bansen"}], say: ["nanban", "seki"], place: "Hiroshima Station",
         ride: [{"ln": "SYS", "from": "SHO", "to": "HIJ", "dir": "博多・広島方面 (westbound)", "type": "Every Nozomi stops at Hiroshima.", "min": 85, "exit": "Follow signs to the JR Sanyo Line for Miyajima"}],
         how: [
-          "You're already at Shin-Osaka from breakfast.",
-          "~10:30 AM Nozomi to Hiroshima (~1 h 25) — tap the Suica linked to SmartEX.",
+          "✅ Booked: NOZOMI 13, Shin-Osaka 10:17 → Hiroshima 11:38. Ordinary car 13, seat 9-A.",
+          "Print the paper ticket first at a shinkansen ticket machine (English button: insert the Visa you booked with, or scan the SmartEX QR). Then at the gate, ticket in the slot + tap Suica together for the metro fare.",
+          "Line up at the car 13 marking on the platform.",
         ],
       },
       {
@@ -2261,7 +2262,7 @@ const TICKET_SEEDS = [
   { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 127 · 8:28 AM · Green Car 10, seat 10-D · print at a Shinagawa ticket machine" },
   { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
   { title: "Pokémon Café Osaka", date: "2026-11-02", when: "Mon Nov 2 · 6:00 PM · arrive 10 min early" },
-  { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · ~9 AM out, ~6 PM back" },
+  { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · out: Nozomi 13, Shin-Osaka 10:17, car 13 seat 9-A (print at a ticket machine) · back: ~7:15 PM" },
   { title: "Shinkansen Shin-Osaka → Mishima (Hikari)", date: "2026-11-04", when: "Wed Nov 4 · ~10:30 AM · seat E" },
   { title: "Bus Mishima → Kawaguchiko", date: "2026-11-04", when: "Wed Nov 4 · ~12:45 PM" },
   { title: "Bus Kawaguchiko → Busta Shinjuku", date: "2026-11-05", when: "Thu Nov 5 · 9:30 AM" },

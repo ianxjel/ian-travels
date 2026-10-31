@@ -1640,6 +1640,11 @@
     store.set("mig:noshibuyasky", true);
   }
   if (!store.get("mig:d5late915", false)) { store.set("moved:d5", {}); store.set("nopull:d5", ""); store.set("mig:d5late915", true); }
+  if (!store.get("mig:nozomi13", false)) {
+    const tk = store.get("tickets", null);
+    if (tk) { tk.forEach(x => { if (x.title === "Shinkansen Osaka ⇄ Hiroshima" && /~9 AM out/.test(x.when || "")) x.when = "Tue Nov 3 · out: Nozomi 13, Shin-Osaka 10:17, car 13 seat 9-A (print at a ticket machine) · back: ~7:15 PM"; }); store.set("tickets", tk); }
+    store.set("mig:nozomi13", true);
+  }
   if (!store.get("mig:nozomi127", false)) {
     const tk = store.get("tickets", null);
     if (tk) { tk.forEach(x => { if (x.title === "Shinkansen Shinagawa → Kyoto" && /~8:30 AM/.test(x.when || "")) x.when = "Sun Nov 1 · Nozomi 127 · 8:28 AM · Green Car 10, seat 10-D · print at a Shinagawa ticket machine"; }); store.set("tickets", tk); }
