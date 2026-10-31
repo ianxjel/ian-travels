@@ -775,6 +775,7 @@ const DAYS = [
         ride: [{"ln": "OE", "from": "E21", "to": "E27", "dir": "六本木・都庁前方面 (toward Roppongi / Tochōmae)", "type": "Every train.", "wrong": "Next stop 大門 Daimon (E20) = wrong way.", "min": 15, "exit": "Exit toward Shinjuku-dōri, then walk east ~15 min to Shinjuku 2-chōme"}],
         how: [
           "🎃 Swing by the hotel first (5 min from Ni-chome) to drop your shopping and put the costume on.",
+          "🧺 While you're there: start a load in the hotel coin laundry (ask the front desk: “Koin randorī wa nan-gai desu ka?”). Bring ¥100 coins, and check whether detergent is added automatically (洗剤自動投入). Grab it when you get back tonight — clean clothes for Kyoto.",
           "🍺 Tonight: beers only, your call — order “Nama bīru kudasai.” Alternate with water.",
           "From Tokyo Tower: walk ~7 min north to Akabanebashi Station, Toei Ōedo Line to Shinjuku (E21 → E27, ~15 min), then walk ~15 min east along Shinjuku-dōri to Ni-chome. Easier in costume than it sounds — half the train will be dressed up too.",
           "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM ✅) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE The 80th Edition “Duality”, from 9 PM ✅) or ArcH (地味ハロ “Jimi-Halloween”, from 9 PM ✅: dress as something boring 😂). ⚠️ Blacknude and Arty Farty times are from their social posts — check Instagram before you go.",
