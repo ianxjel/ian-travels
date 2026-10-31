@@ -679,7 +679,7 @@ const DAYS = [
 
   /* ---------------- DAY 6 ---------------- */
   {
-    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "✅ Booked on SmartEX: Nozomi 127, Shinagawa 8:28 → Kyoto 10:32, Green Car 10, seat 10-D. Not linked to Suica — print the paper ticket at a Shinagawa shinkansen ticket machine tomorrow", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Akihabara's shops, Nakano Broadway and Takashimaya are all indoors — rain barely matters today.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Akihabara, Nakano + Halloween", city: "Tokyo",
+    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "✅ Booked on SmartEX: Nozomi 127, Shinagawa 8:28 → Kyoto 10:32, Green Car 10, seat 10-D. Not linked to Suica — print the paper ticket at a Shinagawa shinkansen ticket machine tomorrow", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Isetan's food hall, Don Quijote and Takashimaya are all indoors — rain barely matters today.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Easy eats + Pokémon Café + Halloween", city: "Tokyo",
     theme: "ghost", emoji: "👻", deco: ["👻", "🎃", "⚡", "💜", "🍬", "🕯️"],
     kicker: "Day 6 · Ghost-type energy",
     tagline: "Anime, retro games and Pokémon cards by day, Pokémon Café dinner, then Ni-chome in costume until sunrise.",
@@ -698,77 +698,32 @@ const DAYS = [
         ],
       },
       {
-        t: "14:00", title: "🍛 Lunch: curry at Shinjuku Nakamuraya Manna", ask: [{"jp": "インドカリーをください。", "ro": "Indo karī o kudasai.", "en": "The Indo curry, please.", "hear": "none"}], ll: [35.6913, 139.7016], say: ["hitori", "oishii", "gochisousama"], place: "Shinjuku Nakamuraya Manna, B2F 3-26-13 Shinjuku, Tokyo",
-        how: [
-          "Shinjuku Nakamuraya Manna (新宿中村屋 Manna), B2F of the Nakamuraya Building, 3-26-13 Shinjuku — by the JR Shinjuku East Exit. Google 4.1 from 1,200+ reviews. Opens 11 AM.",
-          "Nakamuraya started serving its “Indo curry” in 1927 — one of the places Japanese curry-rice culture comes from. Japanese curry crossed off ✅",
-          "🟢 Easy: menu with photos — point at the classic Indo curry (chicken). Then straight into JR Shinjuku for Akihabara.",
-        ],
-      },
-      {
-        t: "14:45", title: "Akihabara: anime, retro games + Pokémon cards 🎮", quest: "💥 MHA Chara Pop Store at Bandai Namco Cross Store (atre Akihabara, by the station) — until Jan 17.", ask: [{"jp": "ポケモンカードはありますか？", "ro": "Pokemon kādo wa arimasu ka?", "en": "Do you have Pokémon cards?", "hear": "yesno"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.6984, 139.7731], say: ["menzei", "kore", "ikura"], pic: "Akihabara electric town neon street", rx: "neon", place: "Akihabara Electric Town, Tokyo",
-        ride: [{"ln": "JB", "from": "JB10", "to": "JB19", "dir": "千葉・津田沼・西船橋方面 (toward Chiba) — the YELLOW Chūō-Sōbu local, not the orange Chūō rapid", "type": "Every yellow local stops at Akihabara.", "wrong": "Next stop 大久保 Ōkubo (JB09) = wrong way. Orange trains (中央線快速) don't go to Akihabara.", "min": 18, "exit": "電気街口 Electric Town Exit"}],
-        how: [
-          "From Nakamuraya, walk ~3 min into JR Shinjuku, then the yellow Chūō-Sōbu local straight to Akihabara (~18 min).",
-          "⏩ Late start today: you have ~45 min here before Don Quijote, so pick 2 — Super Potato, Mandarake, or the card shops.",
-          "Super Potato (open from 10 AM on weekends): retro-game heaven over several floors (Game Boy, N64, old Pokémon carts).",
-          "Mandarake Complex: 8 floors of anime figures, manga and vintage toys. Open from noon.",
-          "Radio Kaikan + the card shops along Chūō-dōri: Japanese Pokémon TCG singles and sealed packs. Check prices across a couple of shops.",
-          "Akihabara Gachapon Kaikan: hundreds of capsule-toy machines — bring ¥100 coins.",
-        ],
-        tip: "TODAY is the last day of tax-free at the register: passport in your sling, ¥5,000+ per store. From Nov 1 you'd claim refunds at Narita instead.",
-        photo: "Chūō-dōri's wall of anime billboards: stand on the sidewalk by the Electric Town Exit and shoot up the street.",
-      },
-      {
-        t: "15:30", title: "🍱 Gyūkatsu Motomura (optional — only if the line is short)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6990, 139.7725], say: ["hitori", "oishii", "gochisousama"], place: "Gyukatsu Motomura Akihabara",
-        how: [
-          "Skip it if the line is more than ~10 people — Don Quijote is the priority today. Google 4.8 from 9,500+ reviews. Crispy rare beef cutlet you finish on your own little hot stone, with rice, miso soup and sauces.",
-          "🟢 Easy: there's basically one dish — point at the set size you want. There's usually a line; it moves.",
-        ],
-        snack: "Sear each slice on the stone for a few seconds; try it with wasabi + soy, then the sauce.",
-      },
-      {
-        t: "15:45", title: "🎁 Family gift haul + 🎃 costume (last tax-free day)", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "母へのプレゼントです。おすすめは？", "ro": "Haha e no purezento desu. Osusume wa?", "en": "It's a gift for my mom. What do you recommend?", "hear": "none"}], ll: [35.6987, 139.7714], say: ["menzei", "kore", "fukuro"], place: "Don Quijote Akihabara, 4-3-3 Sotokanda, Tokyo",
-        how: [
-          "Don Quijote Akihabara (4-3-3 Sotokanda, open 24 h, ~3 min from the Electric Town Exit) has skincare, toys and Christmas lights under one roof — one tax-free checkout easily clears the ¥5,000 minimum. Say “Menzei de onegai shimasu” BEFORE they scan.",
-          "Skincare, sister + sister-in-law: Hada Labo Gokujyun lotion, Biore UV Aqua Rich sunscreen, Melano CC vitamin-C serum, Lululun face-mask packs.",
-          "Skincare, mom + grandma: Kosé Sekkisei lotion (the iconic blue bottle), Shiseido Elixir (anti-aging), a Japanese horse-oil cream or Shiseido Urea hand cream.",
-          "Toys: Tomica cars and Plarail trains, Sylvanian Families, Pokémon plush, Kracie Popin' Cookin' DIY candy kits (very Japanese, kids love them), a kendama, plus gachapon capsules as stocking stuffers.",
-          "Christmas lights for dad: battery or USB LED strings, or LED paper-lantern (chōchin) lights for a Japanese twist. Plug-in sets must say AC100–240V on the box — 100V-only ones aren't safe on US 120V.",
-          "🎃 Costume for tonight: ask “Kosupure wa doko desu ka?” (where's the cosplay section?). For Professor Kukui: an open white lab coat (白衣), a cap, sunglasses and shorts — separate pieces rarely sell out. Put it in the same tax-free checkout.",
-          "Bigger toy floor if Donki is too chaotic: Yodobashi Akiba (5 min east, across the tracks) has a huge toy floor and its own tax-free counter.",
-        ],
-        tip: "Tax-free skincare comes sealed in a bag: don't open it until you're home. Liquids go in the suitcase you ship tomorrow, not your carry-on.",
-      },
-      {
-        t: "16:50", title: "🚃 Back to Shinjuku (Nakano Broadway: skip today)", ll: [35.6909, 139.7003], place: "JR Shinjuku Station",
-        ride: [{"ln": "JB", "from": "JB19", "to": "JB10", "dir": "三鷹・中野方面 (toward Mitaka / Nakano) — the YELLOW Chūō-Sōbu local", "type": "Every yellow local stops at Shinjuku.", "wrong": "Next stop 浅草橋 Asakusabashi (JB20) = wrong way.", "min": 18, "exit": "東口 East Exit → ~12 min walk east along Shinjuku-dōri to Fukuho"}],
-        how: [
-          "Yellow Chūō-Sōbu local from Akihabara back to Shinjuku (~18 min), East Exit, then walk ~12 min to Gyoza no Fukuho (2-8-6 Shinjuku, by your hotel).",
-          "Nakano Broadway is skipped today — it's the same kind of shopping as Akihabara.",
-        ],
-      },
-      {
-        t: "17:15", title: "🥟 Gyoza at Gyoza no Fukuho", ask: [{"jp": "焼き餃子を一つください。", "ro": "Yaki gyōza o hitotsu kudasai.", "en": "One pan-fried gyoza, please.", "hear": "none"}], ll: [35.6905, 139.7076], say: ["hitori", "nama", "oishii"], place: "Gyoza no Fukuho Shinjuku, 2-8-6 Shinjuku, Tokyo",
+        t: "15:30", title: "🥟 Late lunch: gyoza at Gyoza no Fukuho", ask: [{"jp": "焼き餃子を一つください。", "ro": "Yaki gyōza o hitotsu kudasai.", "en": "One pan-fried gyoza, please.", "hear": "none"}], ll: [35.6905, 139.7076], say: ["hitori", "nama", "oishii"], place: "Gyoza no Fukuho Shinjuku, 2-8-6 Shinjuku, Tokyo",
         how: [
           "Gyoza no Fukuho (餃子の福包), KDX Shinjuku 286 Bldg 1F, 2-8-6 Shinjuku — a 3-min walk from your hotel. Google 4.3 from 2,100+ reviews. Open 11:30 AM–10 PM on Saturdays.",
-          "🟢 Easy: point at the photos. Pan-fried (yaki) and boiled (sui) gyoza — get one plate of each. Keep it to a snack: Pokémon Café is at 7:15.",
+          "🟢 Easy: point at the photos. Pan-fried (yaki) and boiled (sui) gyoza — get one plate of each — eat as much as you want today.",
           "Dip: vinegar + a little soy + chili oil.",
         ],
       },
       {
-        t: "17:35", title: "Pride House Tokyo Legacy 🏳️‍🌈 (optional)", night: true, ask: [{"jp": "見学してもいいですか？", "ro": "Kengaku shite mo ii desu ka?", "en": "Is it OK to look around?", "hear": "yesno"}], ll: [35.6886, 139.7128], say: ["arigatou"], place: "Pride House Tokyo Legacy, 1-2-9 Shinjuku, Tokyo",
+        t: "16:15", title: "🍡 Isetan food hall: graze the depachika (B1)", ask: [{"jp": "これを一つください。", "ro": "Kore o hitotsu kudasai.", "en": "One of these, please.", "hear": "money"}], ll: [35.6918, 139.7046], say: ["kore", "hitotsu", "oishii"], place: "Isetan Shinjuku, 3-14-1 Shinjuku, Tokyo",
         how: [
-          "Optional today: only if you're ahead of schedule. Japan's first permanent LGBTQ center, at 1-2-9 Shinjuku: a few minutes' walk from your hotel.",
-          "Open 1–7 PM, closed Wednesdays and Thursdays, so today works.",
-          "Browse a library of about 1,400 LGBTQ books, chat with staff, and pick up flyers for tonight's parties.",
+          "Easy day: Isetan Shinjuku is ~7 min walk from your hotel. Its B1 food hall (depachika) is a maze of Japan's best snacks — wagyu croquettes, onigiri, yakitori, bento, wagashi, cream puffs, fruit sandos. Open until 8 PM.",
+          "🟢 Zero-pressure: every counter is point-and-pay. Grab a few small things and eat them back at the hotel (eating while walking around the store isn't done).",
+          "Optional while you're there: Isetan's cosmetics floor has Japanese skincare for your mom, grandma, sister and sister-in-law (Shiseido, Kosé Sekkisei) — today is the last day of tax-free at the register, so bring your passport. Skip it if you're not feeling it; from tomorrow you can claim tax refunds at Narita instead.",
         ],
-        spicy: "Ask the staff which Ni-chome Halloween parties they'd hit tonight. Local intel beats any guide.",
+      },
+      {
+        t: "16:50", title: "🎃 Costume pieces at Don Quijote Kabukichō (optional)", ask: [{"jp": "コスプレはどこですか？", "ro": "Kosupure wa doko desu ka?", "en": "Where are the costumes?", "hear": "dir"}], ll: [35.6941, 139.7023], say: ["kore", "ikura"], place: "Don Quijote Shinjuku Kabukicho, 1-16-5 Kabukicho, Tokyo",
+        how: [
+          "Only if you still want a costume tonight. Don Quijote Shinjuku Kabukichō (1-16-5 Kabukichō, open 24 h, ~5 min from Isetan): party goods and costumes are on 3F.",
+          "Professor Kukui = an open white lab coat (白衣), a cap, sunglasses and shorts. Separate pieces rarely sell out.",
+        ],
       },
       {
         t: "17:45", title: "Rest + costume on", ll: [35.6888, 139.71], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
         how: [
-          "Walk ~3 min from Fukuho (or ~5 from Pride House) to the hotel.",
+          "Walk back to the hotel (~10 min from Don Quijote, ~7 from Isetan).",
           "Drop the merch, costume on (wear it to the café for the Halloween photo).",
           "🧳 Send your suitcase to Osaka now if the front desk can't: 7-Eleven or FamilyMart near the hotel take Yamato parcels at the register — say “Takkyūbin onegai shimasu,” address it to APA Hotel & Resort Osaka Umeda Eki Tower (Hotels tab), your name as guest. Usually next-day, so it's waiting Monday. Keep a backpack for Kyoto.",
         ],
@@ -796,6 +751,7 @@ const DAYS = [
         t: "21:00", title: "Tokyo Tower lit up 🗼", ask: [{"jp": "東京タワーへの行き方を教えてください。", "ro": "Tōkyō Tawā e no ikikata o oshiete kudasai.", "en": "How do I get to Tokyo Tower?", "hear": "dir"}], ll: [35.6586, 139.7454], say: ["photoplease", "kirei"], pic: "Tokyo Tower night Zojoji temple", rx: "neon", place: "Zojo-ji Temple, Minato, Tokyo",
         ride: [{"ln": "A", "from": "A13", "to": "A09", "dir": "西馬込・羽田空港方面 (toward Nishi-magome / Haneda)", "type": "Every train stops at Daimon.", "wrong": "Next stop 人形町 Ningyōchō = wrong way.", "min": 7, "exit": "Exit A6 → walk ~10 min past Zōjō-ji's big gate"}],
         how: [
+          "🦑 Splatoon fact: Inkopolis Tower in the first Splatoon is based on Tokyo Tower.",
           "Toei Asakusa Line from Nihombashi 4 stops to Daimon (~10 min), then walk ~10 min west past Zōjō-ji.",
           "The classic shot: Zōjō-ji temple's gate and roof with the glowing orange tower right behind it.",
           "You don't need to go up — the ground-level view is the iconic one.",
@@ -806,6 +762,7 @@ const DAYS = [
         t: "22:15", title: "Ni-chome Halloween 👻", night: true, ll: [35.6912, 139.7068], say: ["kakkoii", "line", "hima", "kanpai"], pic: "Shinjuku Halloween street costume night", rx: "neon", place: "Bar Blacknude, 1F 2-15-12 Shinjuku, Tokyo",
         ride: [{"ln": "OE", "from": "E21", "to": "E27", "dir": "六本木・都庁前方面 (toward Roppongi / Tochōmae)", "type": "Every train.", "wrong": "Next stop 大門 Daimon (E20) = wrong way.", "min": 15, "exit": "Exit toward Shinjuku-dōri, then walk east ~15 min to Shinjuku 2-chōme"}],
         how: [
+          "🍺 Tonight: beers only, your call — order “Nama bīru kudasai.” Alternate with water.",
           "From Tokyo Tower: walk ~7 min north to Akabanebashi Station, Toei Ōedo Line to Shinjuku (E21 → E27, ~15 min), then walk ~15 min east along Shinjuku-dōri to Ni-chome. Easier in costume than it sounds — half the train will be dressed up too.",
           "Bar Blacknude's downstairs club (muscle staff, open from 7 PM tonight) → Arty Farty's HALLOWEEN PARTY 2026 (from 8 PM, very foreigner-friendly) → Dragon Men's Dragon Master go-go sets (11 PM, 1 AM, 3 AM ✅) → Eagle Tokyo Blue for the bears → after midnight, AiSOTOPE (RUSHCRUISE The 80th Edition “Duality”, from 9 PM ✅) or ArcH (地味ハロ “Jimi-Halloween”, from 9 PM ✅: dress as something boring 😂). ⚠️ Blacknude and Arty Farty times are from their social posts — check Instagram before you go.",
           "Drink inside the bars — parts of Shinjuku restrict street drinking tonight.",
@@ -1910,7 +1867,7 @@ const FOODS = [
   { id: "gyoza", emoji: "🥟", en: "Gyōza", jp: "餃子", ro: "gyōza", wiki: "餃子", enwiki: "Jiaozi",
     what: "Pan-fried pork dumplings with crispy bottoms.",
     order: { jp: "餃子一人前と生ビールをください", ro: "Gyōza ichinin-mae to nama bīru o kudasai", en: "One serving of gyoza and a draft beer" },
-    tips: "Mix soy sauce, vinegar and chili oil (rāyu) in the little dish to dip.", where: "Gyoza no Fukuho, Shinjuku (Sat 5 PM) — Google 4.3", day: "d6" },
+    tips: "Mix soy sauce, vinegar and chili oil (rāyu) in the little dish to dip.", where: "Gyoza no Fukuho, Shinjuku (Sat late lunch) — Google 4.3", day: "d6" },
   { id: "tonkatsu", emoji: "🐖", en: "Tonkatsu", jp: "とんかつ", ro: "tonkatsu", wiki: "とんかつ", enwiki: "Tonkatsu",
     what: "Panko-crusted fried pork cutlet with shredded cabbage, rice and miso soup.",
     order: { jp: "ロースかつ定食をください", ro: "Rōsu katsu teishoku o kudasai", en: "The pork-loin cutlet set meal, please" },
@@ -1934,7 +1891,7 @@ const FOODS = [
   { id: "curry", emoji: "🍛", en: "Japanese curry", jp: "カレーライス", ro: "karē raisu", wiki: "カレーライス", enwiki: "Japanese curry",
     what: "Thick, mildly sweet curry over rice. Katsu curry adds a pork cutlet.",
     order: { jp: "カツカレー、普通の辛さで", ro: "Katsu karē, futsū no karasa de", en: "Katsu curry, regular spice" },
-    tips: "Spice is chosen by level; “futsū” (regular) is mild by US standards.", where: "Shinjuku Nakamuraya Manna — Indo curry since 1927 (Sat brunch) — Google 4.1", day: "d6" },
+    tips: "Spice is chosen by level; “futsū” (regular) is mild by US standards.", where: "Not on the plan now — Saturday became an easy day. Nakamuraya Manna (Shinjuku East Exit, Google 4.1) is the pick if you want it" },
   { id: "gyudon", emoji: "🍚", en: "Gyūdon (beef bowl)", jp: "牛丼", ro: "gyūdon", wiki: "牛丼", enwiki: "Gyūdon",
     what: "Thin-sliced beef and onions simmered sweet over rice. Cheap, fast, 24 hours.",
     order: { jp: "牛丼の並、つゆだくで", ro: "Gyūdon no nami, tsuyudaku de", en: "Regular beef bowl, extra sauce" },
@@ -1979,7 +1936,7 @@ const FOODS = [
     what: "Fat flat noodles stewed in miso with pumpkin and veg, served in an iron pot.",
     order: { jp: "かぼちゃほうとうを一つください", ro: "Kabocha hōtō o hitotsu kudasai", en: "One pumpkin hōtō, please" },
     tips: "Perfect after a cold Fuji sunset. Portions are big.", where: "Hōtokura Funari, Kawaguchiko (Wed Nov 4) — Google 4.2", day: "d10" },
-  { id: "gyukatsu", emoji: "🥩", en: "Gyūkatsu (beef cutlet)", jp: "牛カツ", ro: "gyūkatsu", wiki: "牛カツ", enwiki: "Gyukatsu", what: "Crispy breaded beef left rare inside — you finish each slice yourself on a tiny hot stone.", order: { jp: "牛カツ定食をお願いします。", ro: "Gyūkatsu teishoku o onegai shimasu.", en: "A gyukatsu set meal, please." }, tips: "Sear each piece only a few seconds. Try it with wasabi + soy, then with the sauce.", where: "Gyūkatsu Motomura, Akihabara (Sat lunch)", day: "d6" },
+  { id: "gyukatsu", emoji: "🥩", en: "Gyūkatsu (beef cutlet)", jp: "牛カツ", ro: "gyūkatsu", wiki: "牛カツ", enwiki: "Gyukatsu", what: "Crispy breaded beef left rare inside — you finish each slice yourself on a tiny hot stone.", order: { jp: "牛カツ定食をお願いします。", ro: "Gyūkatsu teishoku o onegai shimasu.", en: "A gyukatsu set meal, please." }, tips: "Sear each piece only a few seconds. Try it with wasabi + soy, then with the sauce.", where: "Not on the plan now — Gyūkatsu Motomura (Google 4.8) has branches in Shinjuku and Shibuya if you want it" },
   { id: "pancakes", emoji: "🥞", en: "Soufflé pancakes", jp: "スフレパンケーキ", ro: "sufure pankēki", wiki: "パンケーキ", enwiki: "Soufflé pancake", what: "Jiggly, cloud-soft pancakes about 4 cm tall. A Tokyo café classic.", order: { jp: "スフレパンケーキを一つお願いします。", ro: "Sufure pankēki o hitotsu onegai shimasu.", en: "One soufflé pancake, please." }, tips: "They're cooked to order, so expect a 20–30 min wait. Put your name on the list, then wander.", where: "Not on the plan yet" },
   { id: "yakiniku", emoji: "🍖", en: "Yakiniku (Japanese BBQ)", jp: "焼肉", ro: "yakiniku", wiki: "焼肉", enwiki: "Yakiniku", what: "Grill-it-yourself wagyu and other meats at your table. Solo-friendly chains give you your own little grill.", order: { jp: "一人焼肉セットをお願いします。", ro: "Hitori yakiniku setto o onegai shimasu.", en: "A solo yakiniku set, please." }, tips: "Start with tongue (タン, tan) with lemon, then kalbi (カルビ). Don't overcook wagyu.", where: "Otona-no-Kobegyu Yakiniku, Umeda (Tue 10:20 PM) — Google 4.7", day: "d9" },
   { id: "kaisendon", emoji: "🐟", en: "Kaisendon (seafood bowl)", jp: "海鮮丼", ro: "kaisendon", wiki: "海鮮丼", enwiki: "Kaisendon", what: "Rice topped with raw tuna, salmon, salmon roe, sea urchin and more. Market breakfast royalty.", order: { jp: "海鮮丼をお願いします。", ro: "Kaisendon o onegai shimasu.", en: "A seafood rice bowl, please." }, tips: "Dab wasabi on the fish, not into the soy sauce. Drizzle soy lightly over the top.", where: "Not on the plan yet" },
