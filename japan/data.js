@@ -698,7 +698,7 @@ const DAYS = [
         ],
       },
       {
-        t: "11:00", title: "🍛 Lunch #1: curry at Shinjuku Nakamuraya Manna", ask: [{"jp": "インドカリーをください。", "ro": "Indo karī o kudasai.", "en": "The Indo curry, please.", "hear": "none"}], ll: [35.6913, 139.7016], say: ["hitori", "oishii", "gochisousama"], place: "Shinjuku Nakamuraya Manna, B2F 3-26-13 Shinjuku, Tokyo",
+        t: "14:00", title: "🍛 Lunch: curry at Shinjuku Nakamuraya Manna", ask: [{"jp": "インドカリーをください。", "ro": "Indo karī o kudasai.", "en": "The Indo curry, please.", "hear": "none"}], ll: [35.6913, 139.7016], say: ["hitori", "oishii", "gochisousama"], place: "Shinjuku Nakamuraya Manna, B2F 3-26-13 Shinjuku, Tokyo",
         how: [
           "Shinjuku Nakamuraya Manna (新宿中村屋 Manna), B2F of the Nakamuraya Building, 3-26-13 Shinjuku — by the JR Shinjuku East Exit. Google 4.1 from 1,200+ reviews. Opens 11 AM.",
           "Nakamuraya started serving its “Indo curry” in 1927 — one of the places Japanese curry-rice culture comes from. Japanese curry crossed off ✅",
@@ -706,12 +706,13 @@ const DAYS = [
         ],
       },
       {
-        t: "11:50", title: "Akihabara: anime, retro games + Pokémon cards 🎮", quest: "💥 MHA Chara Pop Store at Bandai Namco Cross Store (atre Akihabara, by the station) — until Jan 17.", ask: [{"jp": "ポケモンカードはありますか？", "ro": "Pokemon kādo wa arimasu ka?", "en": "Do you have Pokémon cards?", "hear": "yesno"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.6984, 139.7731], say: ["menzei", "kore", "ikura"], pic: "Akihabara electric town neon street", rx: "neon", place: "Akihabara Electric Town, Tokyo",
+        t: "14:45", title: "Akihabara: anime, retro games + Pokémon cards 🎮", quest: "💥 MHA Chara Pop Store at Bandai Namco Cross Store (atre Akihabara, by the station) — until Jan 17.", ask: [{"jp": "ポケモンカードはありますか？", "ro": "Pokemon kādo wa arimasu ka?", "en": "Do you have Pokémon cards?", "hear": "yesno"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.6984, 139.7731], say: ["menzei", "kore", "ikura"], pic: "Akihabara electric town neon street", rx: "neon", place: "Akihabara Electric Town, Tokyo",
         ride: [{"ln": "JB", "from": "JB10", "to": "JB19", "dir": "千葉・津田沼・西船橋方面 (toward Chiba) — the YELLOW Chūō-Sōbu local, not the orange Chūō rapid", "type": "Every yellow local stops at Akihabara.", "wrong": "Next stop 大久保 Ōkubo (JB09) = wrong way. Orange trains (中央線快速) don't go to Akihabara.", "min": 18, "exit": "電気街口 Electric Town Exit"}],
         how: [
           "From Nakamuraya, walk ~3 min into JR Shinjuku, then the yellow Chūō-Sōbu local straight to Akihabara (~18 min).",
-          "Start at Super Potato (open from 10 AM on weekends): retro-game heaven over several floors (Game Boy, N64, old Pokémon carts).",
-          "Mandarake Complex: 8 floors of anime figures, manga and vintage toys. It opens at noon, so do it after Super Potato and the card shops.",
+          "⏩ Late start today: you have ~45 min here before Don Quijote, so pick 2 — Super Potato, Mandarake, or the card shops.",
+          "Super Potato (open from 10 AM on weekends): retro-game heaven over several floors (Game Boy, N64, old Pokémon carts).",
+          "Mandarake Complex: 8 floors of anime figures, manga and vintage toys. Open from noon.",
           "Radio Kaikan + the card shops along Chūō-dōri: Japanese Pokémon TCG singles and sealed packs. Check prices across a couple of shops.",
           "Akihabara Gachapon Kaikan: hundreds of capsule-toy machines — bring ¥100 coins.",
         ],
@@ -719,46 +720,36 @@ const DAYS = [
         photo: "Chūō-dōri's wall of anime billboards: stand on the sidewalk by the Electric Town Exit and shoot up the street.",
       },
       {
-        t: "13:00", title: "🍱 Lunch: Gyūkatsu Motomura Akihabara", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6990, 139.7725], say: ["hitori", "oishii", "gochisousama"], place: "Gyukatsu Motomura Akihabara",
+        t: "15:30", title: "🍱 Gyūkatsu Motomura (optional — only if the line is short)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6990, 139.7725], say: ["hitori", "oishii", "gochisousama"], place: "Gyukatsu Motomura Akihabara",
         how: [
-          "Google 4.8 from 9,500+ reviews. Crispy rare beef cutlet you finish on your own little hot stone, with rice, miso soup and sauces.",
+          "Skip it if the line is more than ~10 people — Don Quijote is the priority today. Google 4.8 from 9,500+ reviews. Crispy rare beef cutlet you finish on your own little hot stone, with rice, miso soup and sauces.",
           "🟢 Easy: there's basically one dish — point at the set size you want. There's usually a line; it moves.",
         ],
         snack: "Sear each slice on the stone for a few seconds; try it with wasabi + soy, then the sauce.",
       },
       {
-        t: "13:45", title: "🎁 Family gift haul (last tax-free day)", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "母へのプレゼントです。おすすめは？", "ro": "Haha e no purezento desu. Osusume wa?", "en": "It's a gift for my mom. What do you recommend?", "hear": "none"}], ll: [35.6987, 139.7714], say: ["menzei", "kore", "fukuro"], place: "Don Quijote Akihabara, 4-3-3 Sotokanda, Tokyo",
+        t: "15:45", title: "🎁 Family gift haul + 🎃 costume (last tax-free day)", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "母へのプレゼントです。おすすめは？", "ro": "Haha e no purezento desu. Osusume wa?", "en": "It's a gift for my mom. What do you recommend?", "hear": "none"}], ll: [35.6987, 139.7714], say: ["menzei", "kore", "fukuro"], place: "Don Quijote Akihabara, 4-3-3 Sotokanda, Tokyo",
         how: [
           "Don Quijote Akihabara (4-3-3 Sotokanda, open 24 h, ~3 min from the Electric Town Exit) has skincare, toys and Christmas lights under one roof — one tax-free checkout easily clears the ¥5,000 minimum. Say “Menzei de onegai shimasu” BEFORE they scan.",
           "Skincare, sister + sister-in-law: Hada Labo Gokujyun lotion, Biore UV Aqua Rich sunscreen, Melano CC vitamin-C serum, Lululun face-mask packs.",
           "Skincare, mom + grandma: Kosé Sekkisei lotion (the iconic blue bottle), Shiseido Elixir (anti-aging), a Japanese horse-oil cream or Shiseido Urea hand cream.",
           "Toys: Tomica cars and Plarail trains, Sylvanian Families, Pokémon plush, Kracie Popin' Cookin' DIY candy kits (very Japanese, kids love them), a kendama, plus gachapon capsules as stocking stuffers.",
           "Christmas lights for dad: battery or USB LED strings, or LED paper-lantern (chōchin) lights for a Japanese twist. Plug-in sets must say AC100–240V on the box — 100V-only ones aren't safe on US 120V.",
+          "🎃 Costume for tonight: ask “Kosupure wa doko desu ka?” (where's the cosplay section?). For Professor Kukui: an open white lab coat (白衣), a cap, sunglasses and shorts — separate pieces rarely sell out. Put it in the same tax-free checkout.",
           "Bigger toy floor if Donki is too chaotic: Yodobashi Akiba (5 min east, across the tracks) has a huge toy floor and its own tax-free counter.",
         ],
         tip: "Tax-free skincare comes sealed in a bag: don't open it until you're home. Liquids go in the suitcase you ship tomorrow, not your carry-on.",
       },
       {
-        t: "14:45", title: "Nakano Broadway: Mandarake heaven", quest: "🍑 Ask Mandarake for the gay manga section: ゲイ漫画のコーナーはありますか？", ask: [{"jp": "ゲイ漫画のコーナーはありますか？", "ro": "Gei manga no kōnā wa arimasu ka?", "en": "Is there a gay manga section?", "hear": "kai"}], ll: [35.7086, 139.6658], say: ["kore", "ikura", "menzei"], place: "Nakano Broadway, Tokyo",
-        ride: [{"ln": "JB", "from": "JB19", "to": "JB07", "dir": "三鷹・中野方面 (toward Mitaka / Nakano) — yellow local", "type": "Every yellow local stops at Nakano.", "wrong": "Next stop 浅草橋 Asakusabashi = wrong way.", "min": 28, "exit": "北口 North Exit → Sun Mall arcade → Nakano Broadway"}],
+        t: "16:50", title: "🚃 Back to Shinjuku (Nakano Broadway: skip today)", ll: [35.6909, 139.7003], place: "JR Shinjuku Station",
+        ride: [{"ln": "JB", "from": "JB19", "to": "JB10", "dir": "三鷹・中野方面 (toward Mitaka / Nakano) — the YELLOW Chūō-Sōbu local", "type": "Every yellow local stops at Shinjuku.", "wrong": "Next stop 浅草橋 Asakusabashi (JB20) = wrong way.", "min": 18, "exit": "東口 East Exit → ~12 min walk east along Shinjuku-dōri to Fukuho"}],
         how: [
-          "Stay on the yellow local the other way, all the way to Nakano (~28 min). It goes straight through Shinjuku.",
-          "Walk through the Sun Mall arcade into Nakano Broadway: floors 2–4 are packed with Mandarake shops for vintage toys, anime cels, retro games and old Pokémon merch.",
-          "Back to Shinjuku: 3 stops on the yellow local (JB07 → JB10, ~6 min), then walk to Pride House by 4:30.",
+          "Yellow Chūō-Sōbu local from Akihabara back to Shinjuku (~18 min), East Exit, then walk ~12 min to Gyoza no Fukuho (2-8-6 Shinjuku, by your hotel).",
+          "Nakano Broadway is skipped today — it's the same kind of shopping as Akihabara.",
         ],
-        photo: "The long covered Sun Mall arcade leading into Broadway — shoot down the middle for the vanishing point.",
       },
       {
-        t: "16:30", title: "Pride House Tokyo Legacy 🏳️‍🌈", night: true, ask: [{"jp": "見学してもいいですか？", "ro": "Kengaku shite mo ii desu ka?", "en": "Is it OK to look around?", "hear": "yesno"}], ll: [35.6886, 139.7128], say: ["arigatou"], place: "Pride House Tokyo Legacy, 1-2-9 Shinjuku, Tokyo",
-        how: [
-          "Japan's first permanent LGBTQ center, at 1-2-9 Shinjuku: a few minutes' walk from your hotel.",
-          "Open 1–7 PM, closed Wednesdays and Thursdays, so today works.",
-          "Browse a library of about 1,400 LGBTQ books, chat with staff, and pick up flyers for tonight's parties.",
-        ],
-        spicy: "Ask the staff which Ni-chome Halloween parties they'd hit tonight. Local intel beats any guide.",
-      },
-      {
-        t: "17:00", title: "🥟 Gyoza at Gyoza no Fukuho", ask: [{"jp": "焼き餃子を一つください。", "ro": "Yaki gyōza o hitotsu kudasai.", "en": "One pan-fried gyoza, please.", "hear": "none"}], ll: [35.6905, 139.7076], say: ["hitori", "nama", "oishii"], place: "Gyoza no Fukuho Shinjuku, 2-8-6 Shinjuku, Tokyo",
+        t: "17:15", title: "🥟 Gyoza at Gyoza no Fukuho", ask: [{"jp": "焼き餃子を一つください。", "ro": "Yaki gyōza o hitotsu kudasai.", "en": "One pan-fried gyoza, please.", "hear": "none"}], ll: [35.6905, 139.7076], say: ["hitori", "nama", "oishii"], place: "Gyoza no Fukuho Shinjuku, 2-8-6 Shinjuku, Tokyo",
         how: [
           "Gyoza no Fukuho (餃子の福包), KDX Shinjuku 286 Bldg 1F, 2-8-6 Shinjuku — a 3-min walk from your hotel. Google 4.3 from 2,100+ reviews. Open 11:30 AM–10 PM on Saturdays.",
           "🟢 Easy: point at the photos. Pan-fried (yaki) and boiled (sui) gyoza — get one plate of each. Keep it to a snack: Pokémon Café is at 7:15.",
@@ -766,10 +757,19 @@ const DAYS = [
         ],
       },
       {
-        t: "17:30", title: "Rest + costume on", ll: [35.6888, 139.71], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        t: "17:35", title: "Pride House Tokyo Legacy 🏳️‍🌈 (optional)", night: true, ask: [{"jp": "見学してもいいですか？", "ro": "Kengaku shite mo ii desu ka?", "en": "Is it OK to look around?", "hear": "yesno"}], ll: [35.6886, 139.7128], say: ["arigatou"], place: "Pride House Tokyo Legacy, 1-2-9 Shinjuku, Tokyo",
         how: [
-          "Walk ~5 min from Pride House to the hotel.",
-          "Drop the merch, nap, costume on (wear it to the café for the Halloween photo).",
+          "Optional today: only if you're ahead of schedule. Japan's first permanent LGBTQ center, at 1-2-9 Shinjuku: a few minutes' walk from your hotel.",
+          "Open 1–7 PM, closed Wednesdays and Thursdays, so today works.",
+          "Browse a library of about 1,400 LGBTQ books, chat with staff, and pick up flyers for tonight's parties.",
+        ],
+        spicy: "Ask the staff which Ni-chome Halloween parties they'd hit tonight. Local intel beats any guide.",
+      },
+      {
+        t: "17:45", title: "Rest + costume on", ll: [35.6888, 139.71], place: "APA Hotel Shinjuku Gyoemmae, 2-2-8 Shinjuku, Tokyo",
+        how: [
+          "Walk ~3 min from Fukuho (or ~5 from Pride House) to the hotel.",
+          "Drop the merch, costume on (wear it to the café for the Halloween photo).",
           "🧳 Send your suitcase to Osaka now if the front desk can't: 7-Eleven or FamilyMart near the hotel take Yamato parcels at the register — say “Takkyūbin onegai shimasu,” address it to APA Hotel & Resort Osaka Umeda Eki Tower (Hotels tab), your name as guest. Usually next-day, so it's waiting Monday. Keep a backpack for Kyoto.",
         ],
       },
