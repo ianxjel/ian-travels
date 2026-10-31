@@ -679,7 +679,7 @@ const DAYS = [
 
   /* ---------------- DAY 6 ---------------- */
   {
-    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "SmartEX: Shinagawa → Kyoto ~8:30 AM, seat E, Suica linked", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Akihabara's shops, Nakano Broadway and Takashimaya are all indoors — rain barely matters today.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Akihabara, Nakano + Halloween", city: "Tokyo",
+    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "✅ Booked on SmartEX: Nozomi 127, Shinagawa 8:28 → Kyoto 10:32, Green Car 10, seat 10-D. Not linked to Suica — print the paper ticket at a Shinagawa shinkansen ticket machine tomorrow", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Akihabara's shops, Nakano Broadway and Takashimaya are all indoors — rain barely matters today.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Akihabara, Nakano + Halloween", city: "Tokyo",
     theme: "ghost", emoji: "👻", deco: ["👻", "🎃", "⚡", "💜", "🍬", "🕯️"],
     kicker: "Day 6 · Ghost-type energy",
     tagline: "Anime, retro games and Pokémon cards by day, Pokémon Café dinner, then Ni-chome in costume until sunrise.",
@@ -850,10 +850,11 @@ const DAYS = [
       },
       {
         t: "07:45", title: "Shinjuku → Shinagawa", ask: [{"jp": "新幹線の乗り換え口はどこですか？", "ro": "Shinkansen no norikae-guchi wa doko desu ka?", "en": "Where's the transfer gate for the shinkansen?", "hear": "dir"}], ll: [35.6285, 139.7387], say: ["nanban", "hitotsu"], place: "Shinagawa Station",
-        ride: [{"ln": "JY", "from": "JY17", "to": "JY25", "dir": "渋谷・品川方面 (toward Shibuya / Shinagawa)", "type": "All Yamanote trains stop everywhere.", "wrong": "Next stop 新大久保 Shin-Ōkubo (JY16) = wrong way.", "min": 20, "exit": "Blue 新幹線 Shinkansen signs → tap the SmartEX-linked Suica"}],
+        ride: [{"ln": "JY", "from": "JY17", "to": "JY25", "dir": "渋谷・品川方面 (toward Shibuya / Shinagawa)", "type": "All Yamanote trains stop everywhere.", "wrong": "Next stop 新大久保 Shin-Ōkubo (JY16) = wrong way.", "min": 20, "exit": "Blue 新幹線 Shinkansen signs → print your ticket at a shinkansen ticket machine"}],
         how: [
           "Walk ~10 min to Shinjuku Station, JR Yamanote line (green) toward Shibuya/Shinagawa (~20 min).",
-          "At Shinagawa follow the blue “Shinkansen” signs and tap the Suica linked to SmartEX at the gate.",
+          "At Shinagawa, follow the blue 新幹線 Shinkansen signs. Before the gate, print your ticket at a shinkansen ticket machine (English button): insert the Visa you booked with, or scan the QR in the SmartEX app. Takes ~2 min.",
+          "Then at the transfer gate (乗換口), put the paper ticket in the slot AND tap your Suica at the same time — Suica pays the Yamanote fare, the ticket covers the shinkansen. Grab the ticket back as it pops out.",
         ],
       },
       {
@@ -865,11 +866,11 @@ const DAYS = [
         ],
       },
       {
-        t: "08:30", title: "Nozomi to Kyoto (seat E)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
-        ride: [{"ln": "TKN", "from": "SGW", "to": "KYT", "dir": "新大阪・博多・広島方面 (westbound) — your car number is on your SmartEX ticket", "type": "Nozomi stops only at these stations before Kyoto.", "wrong": "A train whose next stop is 東京 Tokyo = wrong way (that's the other platform).", "min": 135, "exit": "烏丸中央口 Karasuma Central Gate (north side)"}],
+        t: "08:28", title: "Nozomi 127 to Kyoto (Green Car 10, seat D)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
+        ride: [{"ln": "TKN", "from": "SGW", "to": "KYT", "dir": "新大阪・博多・広島方面 (westbound) — Nozomi 127 (Hakata-bound), Car 10", "type": "Nozomi stops only at these stations before Kyoto.", "wrong": "A train whose next stop is 東京 Tokyo = wrong way (that's the other platform).", "min": 135, "exit": "烏丸中央口 Karasuma Central Gate (north side)"}],
         how: [
-          "Find your car number on the platform floor markings and line up there.",
-          "Sit in seat E — the window side that faces Mt Fuji.",
+          "✅ Booked: NOZOMI 127, Shinagawa 8:28 → Kyoto 10:32. Green Car (first class), Car 10, seat 10-D.",
+          "Line up at the car 10 marking on the platform floor. Seat D is the window on the Mt Fuji side in the Green Car (seats go A-B | C-D).",
           "Fuji shows up ~40–45 min after Shinagawa. Kyoto in 2 h 15.",
         ],
         photo: "Fuji through the window: press the lens (or phone) flat against the glass to kill reflections, and shoot a burst as it passes.",
@@ -2257,7 +2258,7 @@ const TICKET_SEEDS = [
   { title: "Tokyo DisneySea", date: "2026-10-27", when: "Tue Oct 27 · birthday!" },
   { title: "Tokyo Disneyland", date: "2026-10-29", when: "Thu Oct 29" },
   { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },
-  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · ~8:30 AM · seat E" },
+  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 127 · 8:28 AM · Green Car 10, seat 10-D · print at a Shinagawa ticket machine" },
   { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
   { title: "Pokémon Café Osaka", date: "2026-11-02", when: "Mon Nov 2 · 6:00 PM · arrive 10 min early" },
   { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · ~9 AM out, ~6 PM back" },
