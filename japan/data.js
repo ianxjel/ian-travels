@@ -706,11 +706,11 @@ const DAYS = [
         ],
       },
       {
-        t: "16:00", title: "Akihabara: anime, retro games + Pokémon cards 🎮", quest: "💥 MHA Chara Pop Store at Bandai Namco Cross Store (atre Akihabara, by the station) — until Jan 17.", ask: [{"jp": "ポケモンカードはありますか？", "ro": "Pokemon kādo wa arimasu ka?", "en": "Do you have Pokémon cards?", "hear": "yesno"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.6984, 139.7731], say: ["menzei", "kore", "ikura"], pic: "Akihabara electric town neon street", rx: "neon", place: "Akihabara Electric Town, Tokyo",
+        t: "16:35", title: "Akihabara: anime, retro games + Pokémon cards 🎮", quest: "💥 MHA Chara Pop Store at Bandai Namco Cross Store (atre Akihabara, by the station) — until Jan 17.", ask: [{"jp": "ポケモンカードはありますか？", "ro": "Pokemon kādo wa arimasu ka?", "en": "Do you have Pokémon cards?", "hear": "yesno"}, {"jp": "免税はレジでできますか？", "ro": "Menzei wa reji de dekimasu ka?", "en": "Can I do tax-free at the register?", "hear": "yesno"}], ll: [35.6984, 139.7731], say: ["menzei", "kore", "ikura"], pic: "Akihabara electric town neon street", rx: "neon", place: "Akihabara Electric Town, Tokyo",
         ride: [{"ln": "JB", "from": "JB10", "to": "JB19", "dir": "千葉・津田沼・西船橋方面 (toward Chiba) — the YELLOW Chūō-Sōbu local, not the orange Chūō rapid", "type": "Every yellow local stops at Akihabara.", "wrong": "Next stop 大久保 Ōkubo (JB09) = wrong way. Orange trains (中央線快速) don't go to Akihabara.", "min": 18, "exit": "電気街口 Electric Town Exit"}],
         how: [
           "From Fukuho, walk ~12 min west along Shinjuku-dōri to JR Shinjuku's East Exit, then the yellow Chūō-Sōbu local straight to Akihabara (~18 min).",
-          "You have until ~5:45 here, then Don Quijote. Super Potato and Mandarake both close around 8 PM.",
+          "You'll arrive ~5:10 and have until ~6:00 here, then Don Quijote. Pick 2: Super Potato, Mandarake, or the card shops. Take it easy and keep sipping water.",
           "Super Potato (open from 10 AM on weekends): retro-game heaven over several floors (Game Boy, N64, old Pokémon carts).",
           "Mandarake Complex: 8 floors of anime figures, manga and vintage toys. Open from noon.",
           "Radio Kaikan + the card shops along Chūō-dōri: Japanese Pokémon TCG singles and sealed packs. Check prices across a couple of shops.",
@@ -720,7 +720,7 @@ const DAYS = [
         photo: "Chūō-dōri's wall of anime billboards: stand on the sidewalk by the Electric Town Exit and shoot up the street.",
       },
       {
-        t: "17:00", title: "🍱 Gyūkatsu Motomura (optional — only if the line is short)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6990, 139.7725], say: ["hitori", "oishii", "gochisousama"], place: "Gyukatsu Motomura Akihabara",
+        t: "17:30", title: "🍱 Gyūkatsu Motomura (optional — you just had gyoza, so probably skip)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.6990, 139.7725], say: ["hitori", "oishii", "gochisousama"], place: "Gyukatsu Motomura Akihabara",
         how: [
           "Skip it if the line is more than ~10 people — Don Quijote is the priority today. Google 4.8 from 9,500+ reviews. Crispy rare beef cutlet you finish on your own little hot stone, with rice, miso soup and sauces.",
           "🟢 Easy: there's basically one dish — point at the set size you want. There's usually a line; it moves.",
@@ -728,7 +728,7 @@ const DAYS = [
         snack: "Sear each slice on the stone for a few seconds; try it with wasabi + soy, then the sauce.",
       },
       {
-        t: "17:45", title: "🎁 Family gift haul + 🎃 costume (last tax-free day)", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "母へのプレゼントです。おすすめは？", "ro": "Haha e no purezento desu. Osusume wa?", "en": "It's a gift for my mom. What do you recommend?", "hear": "none"}], ll: [35.6987, 139.7714], say: ["menzei", "kore", "fukuro"], place: "Don Quijote Akihabara, 4-3-3 Sotokanda, Tokyo",
+        t: "18:00", title: "🎁 Family gift haul + 🎃 costume (last tax-free day)", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}, {"jp": "母へのプレゼントです。おすすめは？", "ro": "Haha e no purezento desu. Osusume wa?", "en": "It's a gift for my mom. What do you recommend?", "hear": "none"}], ll: [35.6987, 139.7714], say: ["menzei", "kore", "fukuro"], place: "Don Quijote Akihabara, 4-3-3 Sotokanda, Tokyo",
         how: [
           "Don Quijote Akihabara (4-3-3 Sotokanda, open 24 h, ~3 min from the Electric Town Exit) has skincare, toys and Christmas lights under one roof — one tax-free checkout easily clears the ¥5,000 minimum. Say “Menzei de onegai shimasu” BEFORE they scan.",
           "Skincare, sister + sister-in-law: Hada Labo Gokujyun lotion, Biore UV Aqua Rich sunscreen, Melano CC vitamin-C serum, Lululun face-mask packs.",
