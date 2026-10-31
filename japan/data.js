@@ -1272,13 +1272,14 @@ const DAYS = [
         snack: "Hiroshima-style okonomiyaki is layered with noodles (soba or udon) — order “soba-iri” with an egg on top. Eat it straight off the griddle with the little spatula.",
       },
       {
-        t: "19:15", title: "Shinkansen back to Osaka", fixed: true, place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
+        t: "19:14", title: "Nozomi 200 back to Osaka (Car 16, seat 5-E)", fixed: true, place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
         ride: [{"ln": "SYS", "from": "HIJ", "to": "SHO", "dir": "新大阪・東京方面 (eastbound)", "type": "Every Nozomi stops at Shin-Osaka.", "min": 85, "exit": "Follow JR Kyoto Line signs"}, {"ln": "JA", "from": "A46", "to": "A47", "dir": "大阪・神戸方面 (toward Osaka)", "type": "Any train.", "wrong": "Next stop 東淀川 Higashi-Yodogawa = wrong way.", "min": 4, "exit": "Midosuji South Exit → hotel"}],
         how: [
-          "Streetcar back to Hiroshima Station.",
-          "Nozomi to Shin-Osaka (~1 h 25), JR 1 stop to Osaka, walk ~8 min.",
+          "✅ Booked: NOZOMI 200, Hiroshima 19:14 → Shin-Osaka 20:37. Ordinary car 16, seat 5-E.",
+          "Leave the okonomiyaki place by ~6:40: streetcar back to Hiroshima Station, then print the ticket at a shinkansen ticket machine (Visa or SmartEX QR) before the gate.",
+          "At Shin-Osaka: JR 1 stop to Osaka (~4 min), then ~10 min walk to Umeda Sky for the MHA collab (last entry 10 PM).",
         ],
-        spicy: "Want a Hiroshima gay bar first? Goli Macho (5F Jewel Ebisu Bldg, 3-6 Ebisu-cho; open Tue–Sat) is Hiroshima's friendliest, with a mixed crowd. Its opening time isn't listed, so only stay if SmartEX shows a later train that still gets you to Osaka.",
+        spicy: "Want a Hiroshima gay bar first? Goli Macho (5F Jewel Ebisu Bldg, 3-6 Ebisu-cho; open Tue–Sat) is Hiroshima's friendliest, with a mixed crowd. Its opening time isn't listed, and you're booked on the 7:14 train, so this one is only if you change your ticket in SmartEX.",
       },
       {
         t: "21:00", title: "💥 MHA × Umeda Sky Building at night", ask: [{"jp": "ヒロアカのコラボチケットをください。", "ro": "Hiroaka no korabo chiketto o kudasai.", "en": "The My Hero Academia collab ticket, please.", "hear": "money"}], ll: [34.7053, 135.4903], say: ["kakkoii", "photoplease"], pic: "Umeda Sky Building Floating Garden night", rx: "neon", place: "Umeda Sky Building, 1-1-88 Oyodonaka, Osaka",
@@ -2262,7 +2263,7 @@ const TICKET_SEEDS = [
   { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 127 · 8:28 AM · Green Car 10, seat 10-D · print at a Shinagawa ticket machine" },
   { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
   { title: "Pokémon Café Osaka", date: "2026-11-02", when: "Mon Nov 2 · 6:00 PM · arrive 10 min early" },
-  { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · out: Nozomi 13, Shin-Osaka 10:17, car 13 seat 9-A (print at a ticket machine) · back: ~7:15 PM" },
+  { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · out: Nozomi 13, Shin-Osaka 10:17, car 13 seat 9-A (print at a ticket machine) · back: Nozomi 200, Hiroshima 19:14, car 16 seat 5-E" },
   { title: "Shinkansen Shin-Osaka → Mishima (Hikari)", date: "2026-11-04", when: "Wed Nov 4 · ~10:30 AM · seat E" },
   { title: "Bus Mishima → Kawaguchiko", date: "2026-11-04", when: "Wed Nov 4 · ~12:45 PM" },
   { title: "Bus Kawaguchiko → Busta Shinjuku", date: "2026-11-05", when: "Thu Nov 5 · 9:30 AM" },
