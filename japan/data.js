@@ -1186,17 +1186,29 @@ const DAYS = [
     phrases: ["takkyubin", "konokippu", "doko", "oishii", "arigatou"],
     steps: [
       {
-        t: "09:45", title: "🍳 Breakfast: 551 Hōrai pork buns (Shin-Osaka)", ask: [{"jp": "豚まんを二つください。", "ro": "Butaman o futatsu kudasai.", "en": "Two pork buns, please.", "hear": "money"}], ll: [34.7335, 135.5003], say: ["kore", "fukuro"], place: "551 Horai, Shin-Osaka Station",
+        t: "08:40", title: "🥪 Breakfast: wagyu steak sandwich at MY NEIGHBOR", ask: [{"jp": "おすすめのサンドイッチはどれですか？", "ro": "Osusume no sandoitchi wa dore desu ka?", "en": "Which sandwich do you recommend?", "hear": "none"}], ll: [34.6835, 135.4955], say: ["kore", "oishii", "okaikei"], place: "MY NEIGHBOR, Grand-K 1-13-33 Nishihonmachi, Nishi-ku, Osaka",
+        ride: [{"ln": "OM", "from": "M16", "to": "M18", "dir": "なんば・天王寺方面 (toward Namba / Tennōji)", "type": "Every Midosuji train. 2 stops.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 4, "exit": "Walk ~5–8 min west to Nishihonmachi 1-chōme"}],
         how: [
-          "551 Hōrai's butaman (fat, juicy pork buns) are Osaka's most famous takeout. There's a counter inside Shin-Osaka Station.",
-          "🟢 Easy: point-and-pay counter. Eat them on the shinkansen.",
+          "The viral wagyu steak sandwich from your TikTok: MY NEIGHBOR (@my_neighbor_coffee), a coffee + sandwich shop in Nishihonmachi. Open 9:00–15:00 (from the video), ~¥1,000–1,500.",
+          "From the hotel, walk ~8 min to Umeda (Midosuji line, red), 2 stops to Hommachi, then ~5–8 min west. Aim to be there right at 9 — viral spots get lines.",
+          "⚠️ Today is a national holiday (Culture Day) and I couldn't confirm their closed days or Google rating — check their Instagram the night before. If they're closed, grab 551 Hōrai pork buns at Shin-Osaka instead.",
+          "🟢 Easy: order at the counter — point at the steak sandwich. Eat it there: you'll want both hands.",
+        ],
+        photo: "The cross-section shot from the video: hold the cut half toward the window light, steak facing the camera.",
+      },
+      {
+        t: "09:30", title: "🚇 Hommachi → Shin-Osaka (+ 551 Hōrai pork buns for the train)", ask: [{"jp": "豚まんを二つください。", "ro": "Butaman o futatsu kudasai.", "en": "Two pork buns, please.", "hear": "money"}], ll: [34.7335, 135.5003], say: ["kore", "fukuro"], place: "551 Horai, Shin-Osaka Station",
+        ride: [{"ln": "OM", "from": "M18", "to": "M13", "dir": "新大阪・千里中央方面 (toward Shin-Osaka / Senri-Chūō)", "type": "Every Midosuji train stops at Shin-Osaka.", "wrong": "Next stop 心斎橋 Shinsaibashi (M19) = wrong way.", "min": 12, "exit": "Follow signs to the JR / 新幹線 Shinkansen gates"}],
+        how: [
+          "Midosuji line straight from Hommachi to Shin-Osaka (~12 min), then follow the 新幹線 signs.",
+          "551 Hōrai's butaman (fat, juicy pork buns) are Osaka's most famous takeout, with a counter inside Shin-Osaka Station. 🟢 Point and pay, eat them on the shinkansen.",
         ],
       },
       {
         t: "10:00", title: "Osaka → Hiroshima", ask: [{"jp": "広島行きの新幹線は何番線ですか？", "ro": "Hiroshima-iki no shinkansen wa nanbansen desu ka?", "en": "Which platform for the shinkansen to Hiroshima?", "hear": "bansen"}], say: ["nanban", "seki"], place: "Hiroshima Station",
-        ride: [{"ln": "JA", "from": "A47", "to": "A46", "dir": "京都方面 (toward Kyoto) — JR Kyoto Line platforms", "type": "Any train stops at Shin-Osaka.", "wrong": "Next stop 塚本 Tsukamoto = wrong way (JR Kobe Line).", "min": 4, "exit": "Follow blue 新幹線 signs"}, {"ln": "SYS", "from": "SHO", "to": "HIJ", "dir": "博多・広島方面 (westbound)", "type": "Every Nozomi stops at Hiroshima.", "min": 85, "exit": "Follow signs to the JR Sanyo Line for Miyajima"}],
+        ride: [{"ln": "SYS", "from": "SHO", "to": "HIJ", "dir": "博多・広島方面 (westbound)", "type": "Every Nozomi stops at Hiroshima.", "min": 85, "exit": "Follow signs to the JR Sanyo Line for Miyajima"}],
         how: [
-          "JR Kyoto line from Osaka 1 stop to Shin-Osaka (~4 min).",
+          "You're already at Shin-Osaka from breakfast.",
           "~10:30 AM Nozomi to Hiroshima (~1 h 25) — tap the Suica linked to SmartEX.",
         ],
       },
@@ -2355,6 +2367,7 @@ const LINES = {
   JA: { name: "JR Kyoto Line · Special Rapid", jp: "JR京都線 新快速", color: "#0072bc", stops: [
     ["A31", "京都", "Kyoto"], ["A38", "高槻", "Takatsuki"], ["A46", "新大阪", "Shin-Osaka"], ["A47", "大阪", "Osaka"]] },
   OM: { name: "Midosuji Line (Osaka Metro)", jp: "御堂筋線", color: "#e5171f", stops: [
+    ["M13", "新大阪", "Shin-Osaka"], ["M14", "西中島南方", "Nishinakajima-minamigata"], ["M15", "中津", "Nakatsu"],
     ["M16", "梅田", "Umeda"], ["M17", "淀屋橋", "Yodoyabashi"], ["M18", "本町", "Hommachi"], ["M19", "心斎橋", "Shinsaibashi"],
     ["M20", "なんば", "Namba"], ["M21", "大国町", "Daikokuchō"], ["M22", "動物園前", "Dōbutsuen-mae"]] },
   OK: { name: "Sakaisuji Line (Osaka Metro)", jp: "堺筋線", color: "#814721", stops: [
