@@ -679,7 +679,7 @@ const DAYS = [
 
   /* ---------------- DAY 6 ---------------- */
   {
-    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "✅ Booked on SmartEX: Nozomi 127, Shinagawa 8:28 → Kyoto 10:32, Green Car 10, seat 10-D. Not linked to Suica — print the paper ticket at a Shinagawa shinkansen ticket machine tomorrow", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm ~6:45 AM — check out by 7:30"], rain: "Akihabara's shops, Don Quijote and Takashimaya are all indoors — rain barely matters today.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Akihabara, Pokémon Café + Halloween", city: "Tokyo",
+    id: "d6", date: "2026-10-31", prep: ["📦 PACK THE SUITCASE BEFORE YOU GO OUT and hand it to the front desk to ship to your Osaka hotel (Yamato, ~¥2,500, arrives Nov 2)", "Waybill info ready: APA Hotel & Resort Osaka Umeda Eki Tower (address in Trip → Hotels), your name, delivery Nov 2", "Email the Osaka hotel that a suitcase is arriving for you", "Backpack for 1 Kyoto night: clothes, toiletries, chargers, passport (the Nintendo Museum checks ID)", "✅ Booked on SmartEX: Nozomi 127, Shinagawa 8:28 → Kyoto 10:32, Green Car 10, seat 10-D. Not linked to Suica — print the paper ticket at a Shinagawa shinkansen ticket machine tomorrow", "Last check on the Nintendo Museum ticket alert", "From midnight tax-free ends — keep receipts for anything you buy, for the Narita refund", "Alarm 7:00 AM to change your train in SmartEX, then sleep until ~8:45 — check out ~9:15"], rain: "Akihabara's shops, Don Quijote and Takashimaya are all indoors — rain barely matters today.", home: {"after": "23:00", "note": "You're walking distance from your hotel in Ni-chome. Shinjuku streets stay busy all Halloween night."}, safe: {"tagline": "Merch haul by day, Pokémon Café dinner, then Halloween night in costume."}, dow: "Sat", title: "Akihabara, Pokémon Café + Halloween", city: "Tokyo",
     theme: "ghost", emoji: "👻", deco: ["👻", "🎃", "⚡", "💜", "🍬", "🕯️"],
     kicker: "Day 6 · Ghost-type energy",
     tagline: "Anime, retro games and Pokémon cards by day, Pokémon Café dinner, then Ni-chome in costume until sunrise.",
@@ -798,20 +798,22 @@ const DAYS = [
 
   /* ---------------- DAY 7 ---------------- */
   {
-    id: "d7", date: "2026-11-01", prep: ["Pack the backpack tonight — you leave it at the front desk at 6:30 AM checkout", "Comfy shoes for the 1.5-hour Fushimi Inari climb", "Tomorrow is all trains + buses (Inari → Kinkaku-ji → Arashiyama). Suica works on all of them; keep ~¥1,000 in coins as backup", "Pokémon Café Osaka 6:00 PM: confirmation in Trip → Tickets", "Optional: check the Kirby Café Osaka booking site for a cancellation", "Alarm ~6:00 AM"], rain: "Kyoto temples look amazing in the rain, but Ninenzaka's stone slopes get slippery. Covered options: Nishiki Market, Kyoto Takashimaya (Nintendo KYOTO) and Kyoto Station.", home: {"after": "21:30", "note": "Kyoto buses and the Karasuma subway stop around 23:30. From Kiyamachi it's a 15-min walk to Shijō Station, then 2 stops on the Karasuma subway — catch it before ~23:30."}, dow: "Sun", title: "To Kyoto + Nintendo Museum", city: "Kyoto",
+    id: "d7", date: "2026-11-01", prep: ["Pack the backpack tonight — you leave it at the front desk at 6:30 AM checkout", "Comfy shoes for the 1.5-hour Fushimi Inari climb", "Tomorrow is all trains + buses (Inari → Kinkaku-ji → Arashiyama). Suica works on all of them; keep ~¥1,000 in coins as backup", "Pokémon Café Osaka 6:00 PM: confirmation in Trip → Tickets", "Optional: check the Kirby Café Osaka booking site for a cancellation", "Alarm ~6:00 AM"], rain: "Kyoto temples look amazing in the rain, but Ninenzaka's stone slopes get slippery. Covered options: Nishiki Market, Kyoto Takashimaya (Nintendo KYOTO) and Kyoto Station.", home: {"after": "21:30", "note": "Kyoto buses and the Karasuma subway stop around 23:30. From Kiyamachi it's a 15-min walk to Shijō Station, then 2 stops on the Karasuma subway — catch it before ~23:30."}, dow: "Sun", title: "To Kyoto: Nishiki, Nintendo + Kiyomizu", city: "Kyoto",
     theme: "pixel", emoji: "🎮", deco: ["🎮", "⛩️", "🍄", "⭐", "🕹️", "🍁"],
     kicker: "Day 7 · Press Start in Kyoto",
     tagline: "Bullet train past Fuji, Nintendo's birthplace, and lantern-lit Gion at night.",
     sleep: "kyoto", wx: { lat: 34.99, lon: 135.76 },
     phrases: ["takkyubin", "azukeru", "photook", "eigomenu", "gochisousama"],
-    variants: {
-      q: "Did you get Nintendo Museum tickets?",
-      a: "Yes — museum time! 🎮",
-      b: "No — Kyoto temples + Nintendo KYOTO 🍁",
-    },
     steps: [
       {
-        t: "07:30", title: "Check out + ship your suitcase", ask: [{"jp": "大阪のホテルに明日届きますか？", "ro": "Ōsaka no hoteru ni ashita todokimasu ka?", "en": "Will it arrive at my Osaka hotel tomorrow?", "hear": "deliver"}], ll: [35.6888, 139.71], say: ["checkout", "takkyubin"], place: "",
+        t: "07:00", title: "⏰ Change your train in SmartEX, then back to sleep", place: "",
+        how: [
+          "Open SmartEX → My Trips → the Shinagawa → Kyoto booking → change it to a Nozomi around 10:30 (Fuji side: Green seat D or Ordinary seat E). Changes are free before departure.",
+          "Then sleep until ~8:45. No Nintendo Museum today, so the morning is relaxed.",
+        ],
+      },
+      {
+        t: "09:15", title: "Check out + ship your suitcase", ask: [{"jp": "大阪のホテルに明日届きますか？", "ro": "Ōsaka no hoteru ni ashita todokimasu ka?", "en": "Will it arrive at my Osaka hotel tomorrow?", "hear": "deliver"}], ll: [35.6888, 139.71], say: ["checkout", "takkyubin"], place: "",
         how: [
           "Your suitcase ships this morning (you did laundry last night). At the front desk, ask to send your suitcase to the Osaka hotel by Yamato (takkyūbin): “Takkyūbin de Ōsaka no hoteru ni okuritai desu.” (I'd like to send this to my Osaka hotel by courier.)",
           "On the waybill: 〒530-0057 大阪府大阪市北区曾根崎2-8-32 アパホテル&リゾート〈大阪梅田駅タワー〉 フロント気付, your name as the guest (11月2日 宿泊予定), delivery date Nov 2 morning (11月2日 午前中), and the hotel phone from your booking confirmation. ~¥2,000–3,000. Keep the receipt with the tracking number.",
@@ -821,7 +823,7 @@ const DAYS = [
         ],
       },
       {
-        t: "07:45", title: "Shinjuku → Shinagawa", ask: [{"jp": "新幹線の乗り換え口はどこですか？", "ro": "Shinkansen no norikae-guchi wa doko desu ka?", "en": "Where's the transfer gate for the shinkansen?", "hear": "dir"}], ll: [35.6285, 139.7387], say: ["nanban", "hitotsu"], place: "Shinagawa Station",
+        t: "09:45", title: "Shinjuku → Shinagawa", ask: [{"jp": "新幹線の乗り換え口はどこですか？", "ro": "Shinkansen no norikae-guchi wa doko desu ka?", "en": "Where's the transfer gate for the shinkansen?", "hear": "dir"}], ll: [35.6285, 139.7387], say: ["nanban", "hitotsu"], place: "Shinagawa Station",
         ride: [{"ln": "JY", "from": "JY17", "to": "JY25", "dir": "渋谷・品川方面 (toward Shibuya / Shinagawa)", "type": "All Yamanote trains stop everywhere.", "wrong": "Next stop 新大久保 Shin-Ōkubo (JY16) = wrong way.", "min": 20, "exit": "Blue 新幹線 Shinkansen signs → print your ticket at a shinkansen ticket machine"}],
         how: [
           "Walk ~10 min to Shinjuku Station, JR Yamanote line (green) toward Shibuya/Shinagawa (~20 min).",
@@ -830,7 +832,7 @@ const DAYS = [
         ],
       },
       {
-        t: "08:15", title: "🍱 Breakfast: ekiben for the shinkansen", ask: [{"jp": "これをください。", "ro": "Kore o kudasai.", "en": "This one, please.", "hear": "money"}], ll: [35.6285, 139.7387], say: ["kore", "fukuro"], place: "Shinagawa Station shinkansen gates",
+        t: "10:15", title: "🍱 Breakfast: ekiben for the shinkansen", ask: [{"jp": "これをください。", "ro": "Kore o kudasai.", "en": "This one, please.", "hear": "money"}], ll: [35.6285, 139.7387], say: ["kore", "fukuro"], place: "Shinagawa Station shinkansen gates",
         how: [
           "Inside the shinkansen gates at Shinagawa there are ekiben (station bento) shops: pick a box from the display, pay, done.",
           "🟢 Easy: point-and-pay. Grab a bottle of green tea too. Eating on the shinkansen is totally normal.",
@@ -838,17 +840,18 @@ const DAYS = [
         ],
       },
       {
-        t: "08:28", title: "Nozomi 127 to Kyoto (Green Car 10, seat D)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
+        t: "10:30", title: "Shinkansen to Kyoto (~10:30 — change your ticket at 7 AM)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
         ride: [{"ln": "TKN", "from": "SGW", "to": "KYT", "dir": "新大阪・博多・広島方面 (westbound) — Nozomi 127 (Hakata-bound), Car 10", "type": "Nozomi stops only at these stations before Kyoto.", "wrong": "A train whose next stop is 東京 Tokyo = wrong way (that's the other platform).", "min": 135, "exit": "烏丸中央口 Karasuma Central Gate (north side)"}],
         how: [
-          "✅ Booked: NOZOMI 127, Shinagawa 8:28 → Kyoto 10:32. Green Car (first class), Car 10, seat 10-D.",
-          "Line up at the car 10 marking on the platform floor. Seat D is the window on the Mt Fuji side in the Green Car (seats go A-B | C-D).",
+          "⏰ Your booking is NOZOMI 127 at 8:28. SmartEX is down 11:30 PM–5:30 AM, so at ~7 AM change it (free before departure) to a Nozomi around 10:30 from Shinagawa — Green Car seat D or Ordinary seat E for the Fuji side.",
+          "Missed the change and the 8:28? smart EX tickets normally let you ride a later train the same day in the unreserved cars (自由席) — check in the app.",
+          "Line up at your car number's marking on the platform floor. Fuji side = seat D in the Green Car, seat E in Ordinary.",
           "Fuji shows up ~40–45 min after Shinagawa. Kyoto in 2 h 15.",
         ],
         photo: "Fuji through the window: press the lens (or phone) flat against the glass to kill reflections, and shoot a burst as it passes.",
       },
       {
-        t: "10:45", title: "Drop your backpack at the hotel", ask: [{"jp": "チェックインの前に荷物を預けられますか？", "ro": "Chekku-in no mae ni nimotsu o azukeraremasu ka?", "en": "Can I leave my bag before check-in?", "hear": "yesno"}], ll: [34.987, 135.7593], say: ["azukeru"], place: "Hotel Hokke Club Kyoto",
+        t: "12:50", title: "Drop your backpack at the hotel", ask: [{"jp": "チェックインの前に荷物を預けられますか？", "ro": "Chekku-in no mae ni nimotsu o azukeraremasu ka?", "en": "Can I leave my bag before check-in?", "hear": "yesno"}], ll: [34.987, 135.7593], say: ["azukeru"], place: "Hotel Hokke Club Kyoto",
         how: [
           "Exit via the Karasuma Central Gate (烏丸中央口, north side).",
           "Hotel Hokke Club is directly across the bus terminal, 1 min away.",
@@ -857,31 +860,10 @@ const DAYS = [
       },
 
       /* ---- Plan A: museum ---- */
-      {
-        only: "a", t: "11:30", title: "Kintetsu → Nintendo Museum (🍱 lunch at the museum café)", ask: [{"jp": "近鉄線の乗り場はどこですか？", "ro": "Kintetsu-sen no noriba wa doko desu ka?", "en": "Where do I board the Kintetsu Line?", "hear": "dir"}, {"jp": "この電車は小倉に止まりますか？", "ro": "Kono densha wa Ogura ni tomarimasu ka?", "en": "Does this train stop at Ogura?", "hear": "yesno"}], ll: [34.8956, 135.786], say: ["yoyaku", "konokippu"], pic: "Nintendo Museum Kyoto photo", rx: "reala", place: "Nintendo Museum, Uji",
-        ride: [{"ln": "KB", "from": "B01", "to": "B10", "dir": "奈良・橿原神宮前・新田辺方面", "type": "⚠️ Only 普通 Local and 準急 Semi-Express stop at Ogura. 急行 Express and 特急 Limited Express skip it.", "min": 25, "exit": "Walk ~5 min to the Nintendo Museum"}],
-        how: [
-          "Back into Kyoto Station, follow signs to the Kintetsu Line (south side, Hachijō exit area).",
-          "Ride the Kintetsu Kyoto Line to Ogura (小倉) — check the board that your train stops there (~20–30 min).",
-          "Walk ~5 min to the museum. Bring your passport — tickets are checked against your name.",
-          "Plan on ~2.5 hours inside.",
-        ],
-        snack: "Grab onigiri at a konbini near Ogura Station before your entry time, or eat at the museum café.",
-        photo: "Follow the posted photo rules inside. The courtyard and the big entrance signage are fair game for a hero shot.",
-      },
-      {
-        only: "a", t: "15:30", title: "Back → express bus to Kiyomizu-dera", ask: [{"jp": "清水寺行きのバス乗り場はどこですか？", "ro": "Kiyomizu-dera iki no basu noriba wa doko desu ka?", "en": "Where's the bus stop for Kiyomizu-dera?", "hear": "dir"}], say: ["norikae"], place: "Kiyomizu-dera",
-        ride: [{"ln": "KB", "from": "B10", "to": "B01", "dir": "京都方面 (toward Kyoto)", "type": "Any train that stops at Ogura goes all the way to Kyoto.", "wrong": "Next stop 伊勢田 Iseda = wrong way.", "min": 25, "exit": "Out the north (Karasuma) side to the bus terminal"}],
-        how: [
-          "Kintetsu back to Kyoto Station.",
-          "Today is Sunday, so the EX101 Rakuraku Kiyomizu-dera express bus runs (weekends/holidays): Kyoto Station bus terminal → Gojōzaka, ¥500, Suica OK. Pay as you board at the front.",
-          "Backup: regular city bus 206 to Kiyomizu-michi (¥230). From either stop it's a ~10-min uphill walk. Kiyomizu-dera is open until 6 PM.",
-        ],
-      },
 
       /* ---- Plan B: no museum ---- */
       {
-        only: "b", t: "11:30", title: "🍱 Nishiki Market lunch crawl", ask: [{"jp": "これ一つ。ここで食べてもいいですか？", "ro": "Kore hitotsu. Koko de tabete mo ii desu ka?", "en": "One of these. Can I eat it here?", "hear": "yesno"}], ll: [35.005, 135.7649], say: ["hitotsu", "ikura", "oishii"], pic: "Nishiki Market food photo", rx: "nostalgic", place: "Nishiki Market, Kyoto",
+        t: "13:15", title: "🍱 Nishiki Market lunch crawl", ask: [{"jp": "これ一つ。ここで食べてもいいですか？", "ro": "Kore hitotsu. Koko de tabete mo ii desu ka?", "en": "One of these. Can I eat it here?", "hear": "yesno"}], ll: [35.005, 135.7649], say: ["hitotsu", "ikura", "oishii"], pic: "Nishiki Market food photo", rx: "nostalgic", place: "Nishiki Market, Kyoto",
         ride: [{"ln": "KR", "from": "K11", "to": "K09", "dir": "国際会館方面 (toward Kokusaikaikan)", "type": "Every train.", "wrong": "Next stop 九条 Kujō (K12) = wrong way.", "min": 5, "exit": "Walk ~5 min east to Nishiki Market"}],
         how: [
           "Karasuma subway from Kyoto Station 2 stops to Shijō (~5 min).",
@@ -890,7 +872,7 @@ const DAYS = [
         snack: "Graze: tamagoyaki (sweet rolled omelet), tako-tamago (baby octopus with a quail egg inside), soy-milk doughnuts. Many stalls ask you to eat at the stall, not while walking. 🟢 Easy: point-and-pay stalls.",
       },
       {
-        only: "b", t: "13:30", title: "Nintendo KYOTO + Pokémon Center Kyoto", ask: [{"jp": "任天堂のお店は何階ですか？", "ro": "Nintendō no omise wa nankai desu ka?", "en": "What floor is the Nintendo store?", "hear": "kai"}], ll: [35.0034, 135.7688], say: ["card", "fukuro"], pic: "Nintendo Kyoto store photo", place: "Kyoto Takashimaya S.C.",
+        t: "14:30", title: "Nintendo KYOTO + Pokémon Center Kyoto", ask: [{"jp": "任天堂のお店は何階ですか？", "ro": "Nintendō no omise wa nankai desu ka?", "en": "What floor is the Nintendo store?", "hear": "kai"}], ll: [35.0034, 135.7688], say: ["card", "fukuro"], pic: "Nintendo Kyoto store photo", place: "Kyoto Takashimaya S.C.",
         how: [
           "Nintendo KYOTO is inside Kyoto Takashimaya S.C. (T8 building) at Shijō-Kawaramachi.",
           "⚡ Pokémon Center Kyoto is NOT in the same building: it's 12 min west along Shijō-dōri in SUINA Muromachi 2F (Hankyu Karasuma Station Exit 26, or Karasuma subway Shijō Station). Open 10:00–20:00.",
@@ -927,7 +909,6 @@ const DAYS = [
         t: "18:00", title: "Gion at dusk", ask: [{"jp": "一人ですが、カウンター席はありますか？", "ro": "Hitori desu ga, kauntā-seki wa arimasu ka?", "en": "Just me — do you have a counter seat?", "hear": "full"}], ll: [35.0031, 135.7751], say: ["hitori", "osusume", "gochisousama"], pic: "Pontocho alley night photo", rx: "nostalgic", place: "Hanamikoji-dori, Gion, Kyoto",
         how: [
           "Walk ~10 min north to Gion's Hanamikoji street (main street only — the private side alleys have a ¥10,000 photo fine).",
-          "Plan A people: Nintendo KYOTO is 10 min west at Shijō-Kawaramachi (Takashimaya S.C.). Pokémon Center Kyoto is another 12 min west along Shijō-dōri in SUINA Muromachi 2F and closes at 8 PM, so go there first.",
           "Then matcha at Gion Tsujiri and dinner at Ten no Meshi, both a few minutes away in Gion.",
         ],
         photo: "Hanamikoji at dusk: lanterns on, wooden machiya fronts, shoot down the street. Pontocho alley (5 min west) for a lantern-lit flash close-up after dinner.",
