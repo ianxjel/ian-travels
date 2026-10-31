@@ -813,7 +813,7 @@ const DAYS = [
         ],
       },
       {
-        t: "09:15", title: "Check out + ship your suitcase", ask: [{"jp": "大阪のホテルに明日届きますか？", "ro": "Ōsaka no hoteru ni ashita todokimasu ka?", "en": "Will it arrive at my Osaka hotel tomorrow?", "hear": "deliver"}], ll: [35.6888, 139.71], say: ["checkout", "takkyubin"], place: "",
+        t: "09:15", title: "Check out + ship your suitcase", ask: [{"jp": "このスーツケースを宅急便で大阪のホテルに送りたいです。十一月二日の午前中に届けてください。", "ro": "Kono sūtsukēsu o takkyūbin de Ōsaka no hoteru ni okuritai desu. Jūichi-gatsu futsuka no gozenchū ni todokete kudasai.", "en": "I'd like to send this suitcase to my hotel in Osaka by courier. Please deliver it on the morning of Nov 2.", "hear": "yesno"}, {"jp": "大阪のホテルに明日届きますか？", "ro": "Ōsaka no hoteru ni ashita todokimasu ka?", "en": "Will it arrive at my Osaka hotel tomorrow?", "hear": "deliver"}], ll: [35.6888, 139.71], say: ["checkout", "takkyuosaka"], place: "",
         how: [
           "Your suitcase ships this morning (you did laundry last night). At the front desk, ask to send your suitcase to the Osaka hotel by Yamato (takkyūbin): “Takkyūbin de Ōsaka no hoteru ni okuritai desu.” (I'd like to send this to my Osaka hotel by courier.)",
           "On the waybill: 〒530-0057 大阪府大阪市北区曾根崎2-8-32 アパホテル&リゾート〈大阪梅田駅タワー〉 フロント気付, your name as the guest (11月2日 宿泊予定), delivery date Nov 2 morning (11月2日 午前中), and the hotel phone from your booking confirmation. ~¥2,000–3,000. Keep the receipt with the tracking number.",
@@ -1475,6 +1475,7 @@ const PHRASES = [
   // Hotel
   { id: "azukeru", cat: "Hotel", jp: "荷物を預かってもらえますか？", ro: "Nimotsu o azukatte moraemasu ka?", en: "Can you hold my bags?", say: "nee-moh-tsoo oh ah-zoo-kah-teh moh-rah-eh-mahs kah" },
   { id: "takkyubin", cat: "Hotel", jp: "宅急便で送りたいです", ro: "Takkyūbin de okuritai desu", en: "I'd like to ship this (luggage forwarding)", say: "tahk-kyoo-bin deh oh-koo-ree-tai dess" },
+  { id: "takkyuosaka", cat: "Hotel", jp: "このスーツケースを宅急便で大阪のホテルに送りたいです。十一月二日の午前中に届けてください。", ro: "Kono sūtsukēsu o takkyūbin de Ōsaka no hoteru ni okuritai desu. Jūichi-gatsu futsuka no gozenchū ni todokete kudasai.", en: "I'd like to send this suitcase to my hotel in Osaka by courier. Please deliver it on the morning of Nov 2.", say: "koh-noh soo-tsoo-keh-soo oh tahk-kyoo-bin deh oh-sah-kah noh hoh-teh-roo nee oh-koo-ree-tai dess. joo-ee-chee-gah-tsoo foo-tsoo-kah noh goh-zen-choo nee toh-doh-keh-teh koo-dah-sai", note: "Show this at the hotel front desk or the 7-Eleven register. The Osaka address is in Sunday's 9:15 step and the Hotels tab." },
   { id: "checkout", cat: "Hotel", jp: "チェックアウトお願いします", ro: "Chekku-auto onegai shimasu", en: "Check-out, please", say: "check-out oh-neh-gai shee-mahs" },
   { id: "checkin", cat: "Hotel", jp: "チェックインお願いします", ro: "Chekku-in onegai shimasu", en: "Check-in, please", say: "check-een oh-neh-gai shee-mahs" },
 
