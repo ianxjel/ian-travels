@@ -2125,7 +2125,6 @@ const FAN_QUESTS = [
       what: "Sister branches. Ueno is your long Thursday night after Disneyland (English signs, English spoken). Asakusa is a short walk from Senso-ji on Friday morning.", place: "24 Kaikan Ueno", link: "https://www.utopia-asia.com/tokysaun.htm" },
     { t: "Jinya", where: "2-30-19 Ikebukuro", when: "Baths closed for cleaning 11 AM–3 PM · ~¥2,800", day: "d6",
       what: "Older Ikebukuro sauna with a long record of welcoming foreigners.", place: "Jinya, 2-30-19 Ikebukuro, Tokyo", link: "https://www.utopia-asia.com/tokysaun.htm" },
-      what: "Listed by one gay guide as a gay sauna, but I couldn't confirm it. Check at the door before paying.", place: "Sauna Verde Club, Kyoto", link: "https://spartacus.gayguide.travel/saunas/kyoto/97733_Sauna+Verde+Club" },
     { t: "Daikichi", where: "12-12 Doyamacho, Osaka · ~5 min from your hotel", when: "24/7 · ~¥2,000–3,000", day: "d8",
       what: "Osaka's main gay sauna: several floors, sauna, steam, baths, dark room, cabins. Mostly locals, under-50s only, ID may be checked.", place: "Daikichi, 12-12 Doyamacho, Osaka", link: "https://www.travelgay.com/venue/daikishi-sauna" },
   ]},
