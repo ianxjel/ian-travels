@@ -808,12 +808,12 @@ const DAYS = [
       {
         t: "07:00", title: "⏰ Change your train in SmartEX, then back to sleep", place: "",
         how: [
-          "✅ Done: now Nozomi 371, 11:17 → Kyoto 13:21, Green Car 8, seat 6-D.",
+          "✅ Done: now Nozomi 69, 11:55 → Kyoto 14:00, Green Car.",
           "Then sleep until ~8:45. No Nintendo Museum today, so the morning is relaxed.",
         ],
       },
       {
-        t: "09:45", title: "Check out + ship your suitcase", ask: [{"jp": "このスーツケースを宅急便で大阪のホテルに送りたいです。十一月二日の午前中に届けてください。", "ro": "Kono sūtsukēsu o takkyūbin de Ōsaka no hoteru ni okuritai desu. Jūichi-gatsu futsuka no gozenchū ni todokete kudasai.", "en": "I'd like to send this suitcase to my hotel in Osaka by courier. Please deliver it on the morning of Nov 2.", "hear": "yesno"}, {"jp": "〒530-0057 大阪府大阪市北区曾根崎2-8-32 アパホテル&リゾート〈大阪梅田駅タワー〉 フロント気付 イアン様（十一月二日チェックイン）", "ro": "530-0057 Ōsaka-fu Ōsaka-shi Kita-ku Sonezaki 2-8-32, Apa Hoteru & Rizōto (Ōsaka Umeda-eki Tawā), furonto kizuke, Ian-sama (jūichi-gatsu futsuka chekku-in)", "en": "Delivery address: APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Kita-ku, Osaka 530-0057 — c/o the front desk, for guest Ian (checking in Nov 2).", "hear": "none"}, {"jp": "大阪のホテルに明日届きますか？", "ro": "Ōsaka no hoteru ni ashita todokimasu ka?", "en": "Will it arrive at my Osaka hotel tomorrow?", "hear": "deliver"}], ll: [35.6888, 139.71], say: ["checkout", "takkyuosaka", "osakaaddr"], place: "",
+        t: "10:15", title: "Check out + ship your suitcase", ask: [{"jp": "このスーツケースを宅急便で大阪のホテルに送りたいです。十一月二日の午前中に届けてください。", "ro": "Kono sūtsukēsu o takkyūbin de Ōsaka no hoteru ni okuritai desu. Jūichi-gatsu futsuka no gozenchū ni todokete kudasai.", "en": "I'd like to send this suitcase to my hotel in Osaka by courier. Please deliver it on the morning of Nov 2.", "hear": "yesno"}, {"jp": "〒530-0057 大阪府大阪市北区曾根崎2-8-32 アパホテル&リゾート〈大阪梅田駅タワー〉 フロント気付 イアン様（十一月二日チェックイン）", "ro": "530-0057 Ōsaka-fu Ōsaka-shi Kita-ku Sonezaki 2-8-32, Apa Hoteru & Rizōto (Ōsaka Umeda-eki Tawā), furonto kizuke, Ian-sama (jūichi-gatsu futsuka chekku-in)", "en": "Delivery address: APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Kita-ku, Osaka 530-0057 — c/o the front desk, for guest Ian (checking in Nov 2).", "hear": "none"}, {"jp": "大阪のホテルに明日届きますか？", "ro": "Ōsaka no hoteru ni ashita todokimasu ka?", "en": "Will it arrive at my Osaka hotel tomorrow?", "hear": "deliver"}], ll: [35.6888, 139.71], say: ["checkout", "takkyuosaka", "osakaaddr"], place: "",
         how: [
           "Your suitcase ships this morning (you did laundry last night). At the front desk, ask to send your suitcase to the Osaka hotel by Yamato (takkyūbin): “Takkyūbin de Ōsaka no hoteru ni okuritai desu.” (I'd like to send this to my Osaka hotel by courier.)",
           "On the waybill: 〒530-0057 大阪府大阪市北区曾根崎2-8-32 アパホテル&リゾート〈大阪梅田駅タワー〉 フロント気付, your name as the guest (11月2日 宿泊予定), delivery date Nov 2 morning (11月2日 午前中), and the hotel phone 06-6363-1411. ~¥2,000–3,000. Keep the receipt with the tracking number.",
@@ -823,7 +823,7 @@ const DAYS = [
         ],
       },
       {
-        t: "10:25", title: "Shinjuku → Shinagawa", ask: [{"jp": "新幹線の乗り換え口はどこですか？", "ro": "Shinkansen no norikae-guchi wa doko desu ka?", "en": "Where's the transfer gate for the shinkansen?", "hear": "dir"}], ll: [35.6285, 139.7387], say: ["nanban", "hitotsu"], place: "Shinagawa Station",
+        t: "11:05", title: "Shinjuku → Shinagawa", ask: [{"jp": "新幹線の乗り換え口はどこですか？", "ro": "Shinkansen no norikae-guchi wa doko desu ka?", "en": "Where's the transfer gate for the shinkansen?", "hear": "dir"}], ll: [35.6285, 139.7387], say: ["nanban", "hitotsu"], place: "Shinagawa Station",
         ride: [{"ln": "JY", "from": "JY17", "to": "JY25", "dir": "渋谷・品川方面 (toward Shibuya / Shinagawa)", "type": "All Yamanote trains stop everywhere.", "wrong": "Next stop 新大久保 Shin-Ōkubo (JY16) = wrong way.", "min": 20, "exit": "Blue 新幹線 Shinkansen signs → print your ticket at a shinkansen ticket machine"}],
         how: [
           "Walk ~10 min to Shinjuku Station, JR Yamanote line (green) toward Shibuya/Shinagawa (~20 min).",
@@ -832,7 +832,7 @@ const DAYS = [
         ],
       },
       {
-        t: "10:55", title: "🍱 Breakfast: ekiben for the shinkansen", ask: [{"jp": "これをください。", "ro": "Kore o kudasai.", "en": "This one, please.", "hear": "money"}], ll: [35.6285, 139.7387], say: ["kore", "fukuro"], place: "Shinagawa Station shinkansen gates",
+        t: "11:35", title: "🍱 Breakfast: ekiben for the shinkansen", ask: [{"jp": "これをください。", "ro": "Kore o kudasai.", "en": "This one, please.", "hear": "money"}], ll: [35.6285, 139.7387], say: ["kore", "fukuro"], place: "Shinagawa Station shinkansen gates",
         how: [
           "Inside the shinkansen gates at Shinagawa there are ekiben (station bento) shops: pick a box from the display, pay, done.",
           "🟢 Easy: point-and-pay. Grab a bottle of green tea too. Eating on the shinkansen is totally normal.",
@@ -840,17 +840,17 @@ const DAYS = [
         ],
       },
       {
-        t: "11:17", title: "Nozomi 371 to Kyoto (Green Car 8, seat D)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
+        t: "11:55", title: "Nozomi 69 to Kyoto (Green Car)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
         ride: [{"ln": "TKN", "from": "SGW", "to": "KYT", "dir": "新大阪・博多・広島方面 (westbound) — Nozomi 127 (Hakata-bound), Car 10", "type": "Nozomi stops only at these stations before Kyoto.", "wrong": "A train whose next stop is 東京 Tokyo = wrong way (that's the other platform).", "min": 135, "exit": "烏丸中央口 Karasuma Central Gate (north side)"}],
         how: [
-          "✅ Changed: NOZOMI 371, Shinagawa 11:17 → Kyoto 13:21. Green Car 8, seat 6-D (window on the Mt Fuji side). Fuji shows up ~40–45 min after Shinagawa (~12:00).",
+          "✅ Changed: NOZOMI 69, Shinagawa 11:55 → Kyoto 14:00, Green Car (car and seat are on your printed ticket). Fuji shows up ~40–45 min after Shinagawa (~12:40) on the right side.",
           "Line up at your car number's marking on the platform floor. Fuji side = seat D in the Green Car, seat E in Ordinary.",
           "Fuji shows up ~40–45 min after Shinagawa. Kyoto in 2 h 15.",
         ],
         photo: "Fuji through the window: press the lens (or phone) flat against the glass to kill reflections, and shoot a burst as it passes.",
       },
       {
-        t: "13:30", title: "Drop your backpack at the hotel", ask: [{"jp": "チェックインの前に荷物を預けられますか？", "ro": "Chekku-in no mae ni nimotsu o azukeraremasu ka?", "en": "Can I leave my bag before check-in?", "hear": "yesno"}], ll: [34.987, 135.7593], say: ["azukeru"], place: "Hotel Hokke Club Kyoto",
+        t: "14:10", title: "Drop your backpack at the hotel", ask: [{"jp": "チェックインの前に荷物を預けられますか？", "ro": "Chekku-in no mae ni nimotsu o azukeraremasu ka?", "en": "Can I leave my bag before check-in?", "hear": "yesno"}], ll: [34.987, 135.7593], say: ["azukeru"], place: "Hotel Hokke Club Kyoto",
         how: [
           "Exit via the Karasuma Central Gate (烏丸中央口, north side).",
           "Hotel Hokke Club is directly across the bus terminal, 1 min away.",
@@ -862,7 +862,7 @@ const DAYS = [
 
       /* ---- Plan B: no museum ---- */
       {
-        t: "13:50", title: "🍱 Nishiki Market lunch crawl", ask: [{"jp": "これ一つ。ここで食べてもいいですか？", "ro": "Kore hitotsu. Koko de tabete mo ii desu ka?", "en": "One of these. Can I eat it here?", "hear": "yesno"}], ll: [35.005, 135.7649], say: ["hitotsu", "ikura", "oishii"], pic: "Nishiki Market food photo", rx: "nostalgic", place: "Nishiki Market, Kyoto",
+        t: "14:30", title: "🍱 Nishiki Market lunch crawl", ask: [{"jp": "これ一つ。ここで食べてもいいですか？", "ro": "Kore hitotsu. Koko de tabete mo ii desu ka?", "en": "One of these. Can I eat it here?", "hear": "yesno"}], ll: [35.005, 135.7649], say: ["hitotsu", "ikura", "oishii"], pic: "Nishiki Market food photo", rx: "nostalgic", place: "Nishiki Market, Kyoto",
         ride: [{"ln": "KR", "from": "K11", "to": "K09", "dir": "国際会館方面 (toward Kokusaikaikan)", "type": "Every train.", "wrong": "Next stop 九条 Kujō (K12) = wrong way.", "min": 5, "exit": "Walk ~5 min east to Nishiki Market"}],
         how: [
           "Karasuma subway from Kyoto Station 2 stops to Shijō (~5 min).",
@@ -871,17 +871,17 @@ const DAYS = [
         snack: "Graze: tamagoyaki (sweet rolled omelet), tako-tamago (baby octopus with a quail egg inside), soy-milk doughnuts. Many stalls ask you to eat at the stall, not while walking. 🟢 Easy: point-and-pay stalls.",
       },
       {
-        t: "14:50", title: "Nintendo KYOTO + Pokémon Center Kyoto", ask: [{"jp": "任天堂のお店は何階ですか？", "ro": "Nintendō no omise wa nankai desu ka?", "en": "What floor is the Nintendo store?", "hear": "kai"}], ll: [35.0034, 135.7688], say: ["card", "fukuro"], pic: "Nintendo Kyoto store photo", place: "Kyoto Takashimaya S.C.",
+        t: "15:20", title: "Nintendo KYOTO + Pokémon Center Kyoto", ask: [{"jp": "任天堂のお店は何階ですか？", "ro": "Nintendō no omise wa nankai desu ka?", "en": "What floor is the Nintendo store?", "hear": "kai"}], ll: [35.0034, 135.7688], say: ["card", "fukuro"], pic: "Nintendo Kyoto store photo", place: "Kyoto Takashimaya S.C.",
         how: [
           "Nintendo KYOTO is inside Kyoto Takashimaya S.C. (T8 building) at Shijō-Kawaramachi.",
           "⚡ Pokémon Center Kyoto is NOT in the same building: it's 12 min west along Shijō-dōri in SUINA Muromachi 2F (Hankyu Karasuma Station Exit 26, or Karasuma subway Shijō Station). Open 10:00–20:00.",
-          "Then walk ~25 min east to Kiyomizu-dera (across the Kamo River, through Gion and up the slopes).",
+          "Leave Nintendo KYOTO by ~16:00 and walk ~25 min east to Kiyomizu-dera (across the Kamo River, through Gion and up the slopes) — it closes at 6 PM.",
         ],
         photo: "Grab a shot with the shop's big character displays — Kyoto is where Nintendo started as a playing-card company in 1889.",
       },
 
       {
-        t: "16:15", title: "💪 Benkei strength challenge at Kiyomizu-dera", ask: [{"jp": "弁慶の錫杖はどこですか？", "ro": "Benkei no shakujō wa doko desu ka?", "en": "Where are Benkei's iron staffs?", "hear": "dir"}], ll: [34.9949, 135.785], say: ["photoplease", "photook"], place: "Kiyomizu-dera, Kyoto",
+        t: "16:30", title: "💪 Benkei strength challenge at Kiyomizu-dera", ask: [{"jp": "弁慶の錫杖はどこですか？", "ro": "Benkei no shakujō wa doko desu ka?", "en": "Where are Benkei's iron staffs?", "hear": "dir"}], ll: [34.9949, 135.785], say: ["photoplease", "photook"], place: "Kiyomizu-dera, Kyoto",
         how: [
           "Kiyomizu-dera is open 6:00–18:00 (until Nov 17), ¥500 entry.",
           "Right in front of the main hall (本堂) sit replicas of the iron gear of Benkei, the legendary 12th-century warrior monk: a big iron staff (~96 kg), a small one (~17 kg) and giant iron geta clogs.",
@@ -891,13 +891,13 @@ const DAYS = [
         photo: "Have someone film you from low and to the side while you lift the big staff, so the main hall roof is behind you.",
       },
       {
-        t: "16:30", title: "Kiyomizu-dera's wooden stage", ask: [{"jp": "写真を撮ってもらえますか？", "ro": "Shashin o totte moraemasu ka?", "en": "Could you take a photo of me?", "hear": "yesno"}], ll: [34.9949, 135.785], say: ["photoplease", "kirei"], place: "Kiyomizu-dera, Kyoto",
+        t: "16:45", title: "Kiyomizu-dera's wooden stage", ask: [{"jp": "写真を撮ってもらえますか？", "ro": "Shashin o totte moraemasu ka?", "en": "Could you take a photo of me?", "hear": "yesno"}], ll: [34.9949, 135.785], say: ["photoplease", "kirei"], place: "Kiyomizu-dera, Kyoto",
         how: [
           "The famous wooden stage juts out over the hillside, built without a single nail. Walk out, then look back at it from the Okunoin side for the classic view of the whole stage over the trees.",
         ],
       },
       {
-        t: "16:50", title: "Sannenzaka → Ninenzaka → Yasaka Pagoda", ask: [{"jp": "二年坂はどっちですか？", "ro": "Ninenzaka wa dotchi desu ka?", "en": "Which way to Ninenzaka?", "hear": "dir"}], ll: [34.9986, 135.7808], say: ["photoplease", "kirei"], pic: "Yasaka Pagoda men outfit photo", rx: "nostalgic", place: "Yasaka Pagoda, Kyoto",
+        t: "17:05", title: "Sannenzaka → Ninenzaka → Yasaka Pagoda", ask: [{"jp": "二年坂はどっちですか？", "ro": "Ninenzaka wa dotchi desu ka?", "en": "Which way to Ninenzaka?", "hear": "dir"}], ll: [34.9986, 135.7808], say: ["photoplease", "kirei"], pic: "Yasaka Pagoda men outfit photo", rx: "nostalgic", place: "Yasaka Pagoda, Kyoto",
         how: [
           "Walk downhill from the temple on Sannenzaka and Ninenzaka.",
           "Pass the Starbucks in a 100-year-old townhouse, and end at Yasaka Pagoda for blue hour (~5 PM).",
@@ -2214,7 +2214,7 @@ const TICKET_SEEDS = [
   { title: "Tokyo DisneySea", date: "2026-10-27", when: "Tue Oct 27 · birthday!" },
   { title: "Tokyo Disneyland", date: "2026-10-29", when: "Thu Oct 29" },
   { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },
-  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 371 · 11:17 AM · Green Car 8, seat 6-D · print at a Shinagawa ticket machine" },
+  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 69 · 11:55 AM · Green Car · print at a Shinagawa ticket machine" },
   { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
   { title: "Pokémon Café Osaka", date: "2026-11-02", when: "Mon Nov 2 · 6:00 PM · arrive 10 min early" },
   { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · out: Nozomi 13, Shin-Osaka 10:17, car 13 seat 9-A (print at a ticket machine) · back: Nozomi 200, Hiroshima 19:14, car 16 seat 5-E" },

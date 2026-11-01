@@ -1640,6 +1640,11 @@
     store.set("mig:noshibuyasky", true);
   }
   if (!store.get("mig:d5late915", false)) { store.set("moved:d5", {}); store.set("nopull:d5", ""); store.set("mig:d5late915", true); }
+  if (!store.get("mig:nozomi69", false)) {
+    const tk = store.get("tickets", null);
+    if (tk) { tk.forEach(x => { if (x.title === "Shinkansen Shinagawa → Kyoto" && /Nozomi (127|25|371) /.test(x.when || "")) x.when = "Sun Nov 1 · Nozomi 69 · 11:55 AM · Green Car · print at a Shinagawa ticket machine"; }); store.set("tickets", tk); }
+    store.set("mig:nozomi69", true);
+  }
   if (!store.get("mig:nozomi371", false)) {
     const tk = store.get("tickets", null);
     if (tk) { tk.forEach(x => { if (x.title === "Shinkansen Shinagawa → Kyoto" && /Nozomi (127|25) /.test(x.when || "")) x.when = "Sun Nov 1 · Nozomi 371 · 11:17 AM · Green Car 8, seat 6-D · print at a Shinagawa ticket machine"; }); store.set("tickets", tk); }
