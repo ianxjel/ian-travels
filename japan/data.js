@@ -959,7 +959,7 @@ const DAYS = [
 
   /* ---------------- DAY 8 ---------------- */
   {
-    id: "d8", date: "2026-11-02", prep: ["📦 Suitcase handed to the front desk for Narita? (Yamato needs 2 days)", "Waybill: Narita Airport Terminal 1, flight UA868 on Thu Nov 5, pick up at the Yamato counter", "Keep OUT of the suitcase: 2 nights of clothes, a warm layer for the Fuji sunrise, passport, meds, chargers", "Anything you'll claim a tax refund on goes in your backpack, not the shipped suitcase", "SmartEX: Shin-Osaka ⇄ Hiroshima tickets (~10:30 AM out, ~7:15 PM back)", "Check tomorrow's Miyajima tide times", "Alarm ~9:00 AM — out as late as you want tonight"], rain: "Fushimi Inari and the bamboo grove in light rain = moody, empty photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Inari, Golden Pavilion + bamboo → Osaka", city: "Kyoto → Osaka",
+    id: "d8", date: "2026-11-02", prep: ["Late start (7:30): check out by ~8:10, leave your backpack at the front desk", "Rain is forecast — ¥500 umbrella from the konbini", "Bland food + OS-1/Pocari today while your stomach recovers", "Pokémon Café Osaka 6:00 PM: check in by 5:50 (confirmation in Trip → Tickets)", "Your two suitcases arrive at the Osaka hotel tomorrow (Nov 3)"], rain: "Fushimi Inari and the bamboo grove in light rain = moody, empty photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Inari, Golden Pavilion + bamboo → Osaka", city: "Kyoto → Osaka",
     theme: "torii", emoji: "🦊", deco: ["⛩️", "🦊", "🍵", "🐙", "🌆", "⚡"],
     kicker: "Day 8 · Thousand gates to neon canals",
     tagline: "Dawn torii, the Golden Pavilion, the bamboo grove, Osaka Castle, Pokémon Café Osaka, and a holiday-eve night in Doyama-cho.",
@@ -967,13 +967,13 @@ const DAYS = [
     phrases: ["azukeru", "ohayou", "osusume", "nama", "kanpai", "amerika", "nomou", "issho"],
     steps: [
       {
-        t: "06:15", title: "🍳 Breakfast: konbini by the hotel", ll: [34.987, 135.7593], say: ["atatame", "fukuro"], place: "Konbini by Kyoto Station",
+        t: "07:45", title: "🍳 Breakfast: konbini by the hotel", ll: [34.987, 135.7593], say: ["atatame", "fukuro"], place: "Konbini by Kyoto Station",
         how: [
-          "🟢 Easy: onigiri + a hot drink, plus Karaage-kun (Lawson) or Famichiki (FamilyMart) fried chicken from the counter. You'll burn it off on the Inari steps.",
+          "🟢 Easy and gentle on your stomach after last night: plain onigiri (salmon or kombu), a banana, and an OS-1 or Pocari Sweat for the climb. Skip the fried chicken today. Grab a ¥500 umbrella too — rain is forecast.",
         ],
       },
       {
-        t: "06:30", title: "Check out → Inari", ask: [{"jp": "奈良線は何番線ですか？", "ro": "Nara-sen wa nanbansen desu ka?", "en": "Which platform is the Nara Line?", "hear": "bansen"}, {"jp": "この電車は稲荷に止まりますか？", "ro": "Kono densha wa Inari ni tomarimasu ka?", "en": "Does this train stop at Inari?", "hear": "yesno"}], ll: [34.9671, 135.7727], say: ["checkout", "azukeru"], place: "Fushimi Inari Taisha",
+        t: "08:10", title: "Check out → Inari", ask: [{"jp": "奈良線は何番線ですか？", "ro": "Nara-sen wa nanbansen desu ka?", "en": "Which platform is the Nara Line?", "hear": "bansen"}, {"jp": "この電車は稲荷に止まりますか？", "ro": "Kono densha wa Inari ni tomarimasu ka?", "en": "Does this train stop at Inari?", "hear": "yesno"}], ll: [34.9671, 135.7727], say: ["checkout", "azukeru"], place: "Fushimi Inari Taisha",
         ride: [{"ln": "JD", "from": "D01", "to": "D03", "dir": "奈良・城陽方面 — platforms 8–10. Kyoto is the end of the Nara Line", "type": "普通 Local and みやこ路快速 Miyakoji Rapid stop at Inari.", "min": 5, "exit": "The shrine gate is right across the street"}],
         how: [
           "Leave your backpack at the front desk.",
@@ -982,25 +982,26 @@ const DAYS = [
         ],
       },
       {
-        t: "06:45", title: "Climb the gates to Yotsutsuji", ask: [{"jp": "四ツ辻まであと何分ですか？", "ro": "Yotsutsuji made ato nanpun desu ka?", "en": "How many more minutes to Yotsutsuji?", "hear": "min"}], ll: [34.9655, 135.781], say: ["ohayou", "photoplease"], pic: "Fushimi Inari men outfit photo", rx: "velvia", place: "Yotsutsuji Intersection, Fushimi Inari",
+        t: "08:30", title: "Climb the gates to Yotsutsuji", ask: [{"jp": "四ツ辻まであと何分ですか？", "ro": "Yotsutsuji made ato nanpun desu ka?", "en": "How many more minutes to Yotsutsuji?", "hear": "min"}], ll: [34.9655, 135.781], say: ["ohayou", "photoplease"], pic: "Fushimi Inari men outfit photo", rx: "velvia", place: "Yotsutsuji Intersection, Fushimi Inari",
         how: [
           "Walk through the Senbon Torii (the double rows of gates) and keep climbing.",
           "Yotsutsuji viewpoint is ~45 min up; the crowds thin the higher you go.",
-          "About 1.5 h round trip.",
+          "About 1.5 h round trip. Use the toilets by the main shrine before you climb. Steps get slippery in rain — turn back early if your stomach acts up.",
         ],
         photo: "Walk away down the torii tunnel and look back over your shoulder. Shoot from chest height so the gates converge. White, black or denim pops against the orange.",
       },
       {
-        t: "08:15", title: "Kinkaku-ji: the Golden Pavilion ✨", ask: [{"jp": "金閣寺行きのバスはどれですか？", "ro": "Kinkakuji iki no basu wa dore desu ka?", "en": "Which bus goes to Kinkaku-ji?", "hear": "none"}], ll: [35.0394, 135.7292], say: ["norikae", "photoplease", "kirei"],
+        t: "10:00", title: "Kinkaku-ji: the Golden Pavilion ✨ (skip if tired)", ask: [{"jp": "金閣寺行きのバスはどれですか？", "ro": "Kinkakuji iki no basu wa dore desu ka?", "en": "Which bus goes to Kinkaku-ji?", "hear": "none"}], ll: [35.0394, 135.7292], say: ["norikae", "photoplease", "kirei"],
         ride: [{"ln": "JD", "from": "D03", "to": "D01", "dir": "京都方面 (toward Kyoto)", "type": "Every train.", "wrong": "Next stop JR藤森 JR Fujinomori (D04) = wrong way.", "min": 5, "exit": "Follow the green subway signs (Karasuma Line)"}, {"ln": "KR", "from": "K11", "to": "K04", "dir": "国際会館方面 (toward Kokusaikaikan)", "type": "Every train.", "wrong": "Next stop 九条 Kujō = wrong way.", "min": 15, "exit": "Kitaōji Bus Terminal → blue boarding area, stop E → bus 205 (or 204 from stop G) to Kinkakuji-michi, ~15 min"}], pic: "Kinkakuji golden pavilion reflection pond", rx: "velvia", place: "Kinkaku-ji, Kyoto",
         how: [
-          "Leave Inari by ~8:15: JR 2 stops back to Kyoto, Karasuma subway 7 stops to Kitaōji, then bus 205 from Kitaōji Bus Terminal stop E to Kinkakuji-michi (stop B), and a 5-min walk. ~50 min door to door, about ¥650, Suica all the way.",
+          "Leave Inari by ~10:00: JR 2 stops back to Kyoto, Karasuma subway 7 stops to Kitaōji, then bus 205 from Kitaōji Bus Terminal stop E to Kinkakuji-michi (stop B), and a 5-min walk. ~50 min door to door, about ¥650, Suica all the way.",
           "Opens 9:00, ¥500. The path loops past the pavilion and its pond in about 40 minutes.",
+          "Tired or raining hard? Skip it: from Inari, JR back to Kyoto, then the JR Sagano line straight to Saga-Arashiyama (~16 min) and go to the bamboo grove.",
         ],
-        photo: "The classic: the gold pavilion mirrored in the pond from the first viewpoint by the entrance. Arrive at 9:00 sharp to get the railing before the tour groups.",
+        photo: "The classic: the gold pavilion mirrored in the pond from the first viewpoint by the entrance. It'll be busy by late morning — be patient for a spot at the railing.",
       },
       {
-        t: "10:15", title: "Arashiyama bamboo grove + Togetsukyō 🎋", ask: [{"jp": "竹林の小径はどっちですか？", "ro": "Chikurin no komichi wa dotchi desu ka?", "en": "Which way to the bamboo grove path?", "hear": "dir"}], ll: [35.0170, 135.6713], say: ["photoplease", "osusume", "kirei"], pic: "Arashiyama bamboo grove path men photo", rx: "classic", place: "Arashiyama Bamboo Grove, Kyoto",
+        t: "11:45", title: "Arashiyama bamboo grove + Togetsukyō 🎋", ask: [{"jp": "竹林の小径はどっちですか？", "ro": "Chikurin no komichi wa dotchi desu ka?", "en": "Which way to the bamboo grove path?", "hear": "dir"}], ll: [35.0170, 135.6713], say: ["photoplease", "osusume", "kirei"], pic: "Arashiyama bamboo grove path men photo", rx: "classic", place: "Arashiyama Bamboo Grove, Kyoto",
         how: [
           "Bus 204 or 205 from Kinkakuji-michi 3 stops to Kitano-Hakubaichō, then the Randen tram (Kitano Line) → change at Katabiranotsuji → Arashiyama (~40 min total, Suica OK). The Randen Arashiyama stop is a 5-min walk from the bamboo grove.",
           "Walk the bamboo path (Chikurin no Komichi), then Tenryū-ji's garden (¥500) right next to it.",
@@ -1009,7 +1010,7 @@ const DAYS = [
         photo: "Stand still mid-path and shoot straight up through the bamboo, or walk away from the camera with the stalks framing you. Tall vertical frame.",
       },
       {
-        t: "11:15", title: "🍱 Lunch: Arashiyama Yoshimura soba", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.0141, 135.6770], say: ["hitori", "oishii", "gochisousama"], place: "Arashiyama Yoshimura, 3 Sagatenryuji Susukinobabacho, Kyoto",
+        t: "12:30", title: "🍱 Lunch: Arashiyama Yoshimura soba", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.0141, 135.6770], say: ["hitori", "oishii", "gochisousama"], place: "Arashiyama Yoshimura, 3 Sagatenryuji Susukinobabacho, Kyoto",
         how: [
           "Handmade soba by Togetsukyō bridge, with river views from the window seats. Google 4.2 from 2,600+ reviews. Open from 10:30 AM on Mondays.",
           "🟢 Easy: photo menu — point at a set (soba + tempura or soba + a small rice bowl) and say “Kore onegai shimasu.”",
@@ -1017,7 +1018,7 @@ const DAYS = [
         snack: "Cold zaru soba is the classic: dip the noodles in the sauce, add wasabi and green onion. Pour the leftover cooking water (soba-yu) into the sauce at the end and drink it.",
       },
       {
-        t: "12:15", title: "Arashiyama → Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
+        t: "13:30", title: "Arashiyama → Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
         ride: [{"ln": "SAG", "from": "E08", "to": "E01", "dir": "京都方面 (toward Kyoto)", "type": "Every train stops at Kyoto (the end of the line).", "wrong": "Next stop 保津峡 Hozukyō = wrong way.", "min": 16, "exit": "Grab your backpack at the hotel (Karasuma side), then back into JR Kyoto"}, {"ln": "JA", "from": "A31", "to": "A47", "dir": "大阪・神戸・姫路方面 (westbound) — look for 新快速 Special Rapid", "type": "Special Rapid only stops at these 4 stations. Local and Rapid also work, just slower.", "wrong": "Next stop 山科 Yamashina = wrong way (eastbound).", "min": 30, "exit": "Midosuji South Exit → walk ~8 min to the hotel"}],
         how: [
           "JR Sagano Line from Saga-Arashiyama (8 min walk from the bamboo grove) to Kyoto; grab your backpack at the hotel.",
@@ -1026,31 +1027,20 @@ const DAYS = [
         tip: "Osaka switch: stand on the RIGHT side of escalators here (the opposite of Tokyo).",
       },
       {
-        t: "13:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (Oct 30–Nov 30): collab ticket ¥2,800 incl. the 40F observatory, 2 random stickers + a stamp rally for a glass magnet, 9:30 AM–10:30 PM (last entry 10 PM). 💥 MHA Café “WE ARE HERO HOLICS”: BOX cafe&space HEP FIVE 7F (through Dec 6), book at heroaca-cafe.ltr-online.com. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on Daimaru Umeda 13F.", ask: [{"jp": "私のスーツケースは届いていますか？", "ro": "Watashi no sūtsukēsu wa todoite imasu ka?", "en": "Has my suitcase arrived?", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
+        t: "14:45", title: "Drop your bag in Umeda", quest: "💥 MHA × Umeda Sky Building (Oct 30–Nov 30): collab ticket ¥2,800 incl. the 40F observatory, 2 random stickers + a stamp rally for a glass magnet, 9:30 AM–10:30 PM (last entry 10 PM). 💥 MHA Café “WE ARE HERO HOLICS”: BOX cafe&space HEP FIVE 7F (through Dec 6), book at heroaca-cafe.ltr-online.com. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on Daimaru Umeda 13F.", ask: [{"jp": "明日、スーツケースが二つ届きます。", "ro": "Ashita, sūtsukēsu ga futatsu todokimasu.", "en": "Two suitcases are arriving for me tomorrow.", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
-          "Your suitcase should be waiting. Check-in is from 3 PM.",
-          "Repack it for the flight now and hand it back to the front desk for Yamato to Narita (flight UA868, Thu Nov 5, Terminal 1, ~¥3,300). Then tonight and tomorrow morning are free.",
-          "⚡ Before the castle: Pokémon Center Osaka (the original, not the DX) is on Daimaru Umeda 13F, right on top of JR Osaka Station and ~5 min from the hotel. Nintendo OSAKA is on the same floor. Give it 30 minutes.",
-          "Then straight to Osaka Castle while it's light out.",
+          "Check-in is from 3 PM (drop the backpack early if you get here before). Your two suitcases arrive tomorrow (Nov 3) — tell the front desk so they hold them for you.",
+          "⚡ Next: Pokémon Center Osaka (the original, not the DX) is on Daimaru Umeda 13F, right on top of JR Osaka Station and ~5 min from the hotel. Nintendo OSAKA is on the same floor. Give it 30 minutes.",
+          "Osaka Castle is skipped today (late start + rain).",
         ],
         photo: "HEP FIVE's red Ferris wheel on the mall roof, shot from the street below (better after dark).",
       },
       {
-        t: "15:00", title: "Osaka Castle 🏯", ask: [{"jp": "天守閣はどっちですか？", "ro": "Tenshukaku wa dotchi desu ka?", "en": "Which way is the castle tower?", "hear": "dir"}], ll: [34.6873, 135.5262], say: ["photoplease", "kirei"], pic: "Osaka Castle autumn moat photo", rx: "velvia", place: "Osaka Castle Main Tower",
-        ride: [{"ln": "OT", "from": "T20", "to": "T23", "dir": "八尾南方面 (toward Yaominami)", "type": "Every train.", "wrong": "Next stop 中崎町 Nakazakichō = wrong way.", "min": 6, "exit": "Exit 9 → ~15 min walk through the park to the main tower"}],
+        t: "15:45", title: "👕 Amerikamura: American vintage in US sizes", ask: [{"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [34.6719, 135.4985], say: ["kore", "ikura"], pic: "Amerikamura Osaka street", rx: "classic", place: "Amerikamura (America-mura), Osaka",
+        ride: [{"ln": "OM", "from": "M16", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train. 3 stops.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 6, "exit": "Exit 7 → walk ~5 min west into Amerikamura"}],
         how: [
-          "Tanimachi Line from Higashi-Umeda (5 min walk from your hotel) to Tanimachi 4-chōme.",
-          "Main tower: 9:00–18:00, last entry 17:30, ¥1,200. Museum inside, rooftop-style viewing deck on the 8th floor.",
-          "Leave by 16:15 for Amerikamura: Chūō Line from Tanimachi 4-chōme to Hommachi (C18 → C16), then the Midosuji Line 1 stop to Shinsaibashi (~20 min).",
-        ],
-        photo: "Shoot the tower across the stone walls and moat from the Gokuraku-bashi bridge — gold trim, white walls, autumn leaves.",
-      },
-      {
-        t: "16:30", title: "👕 Amerikamura: American vintage in US sizes", ask: [{"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [34.6719, 135.4985], say: ["kore", "ikura"], pic: "Amerikamura Osaka street", rx: "classic", place: "Amerikamura (America-mura), Osaka",
-        ride: [{"ln": "OC", "from": "C18", "to": "C16", "dir": "本町・コスモスクエア方面 (toward Hommachi / Cosmosquare)", "type": "Every train.", "wrong": "Next stop 森ノ宮 Morinomiya (C19) = wrong way.", "min": 5, "exit": "Transfer to the red Midosuji Line"}, {"ln": "OM", "from": "M18", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train.", "wrong": "Next stop 淀屋橋 Yodoyabashi (M17) = wrong way.", "min": 2, "exit": "Daimaru is connected to the station"}],
-        how: [
-          "Chūō Line to Hommachi, Midosuji Line 1 stop to Shinsaibashi, then walk ~5 min west into Amerikamura (“America Village”).",
+          "From Daimaru Umeda, red Midosuji Line from Umeda 3 stops to Shinsaibashi, then walk ~5 min west into Amerikamura (“America Village”).",
           "Vintage Mecca (2-13-13 Nishi-Shinsaibashi, 1–7 PM, closed Wed): 30s–60s American denim, shirts and military pants.",
           "Grizzly (2-12-14 Nishi-Shinsaibashi by Triangle Park, 12–7:30 PM): Ralph Lauren and American brands.",
           "It's American stock, so US sizes — no 3L guessing. Head to Daimaru by 5:40 for the café.",
