@@ -1640,6 +1640,11 @@
     store.set("mig:noshibuyasky", true);
   }
   if (!store.get("mig:d5late915", false)) { store.set("moved:d5", {}); store.set("nopull:d5", ""); store.set("mig:d5late915", true); }
+  if (!store.get("mig:nocafeosaka", false)) {
+    const tk = store.get("tickets", null);
+    if (tk) store.set("tickets", tk.filter(t => t.title !== "Pokémon Café Osaka" || t.code || t.photo));
+    store.set("mig:nocafeosaka", true);
+  }
   if (!store.get("mig:nozomi69b", false)) {
     const tk = store.get("tickets", null);
     if (tk) { tk.forEach(x => { if (x.title === "Shinkansen Shinagawa → Kyoto" && /Nozomi (127|25|371|69) /.test(x.when || "") && !/4-D/.test(x.when || "")) x.when = "Sun Nov 1 · Nozomi 69 · 11:55 AM · Track 23 · Green Car 9, seat 4-D"; }); store.set("tickets", tk); }

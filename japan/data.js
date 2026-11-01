@@ -959,10 +959,10 @@ const DAYS = [
 
   /* ---------------- DAY 8 ---------------- */
   {
-    id: "d8", date: "2026-11-02", prep: ["Late start (7:30): check out by ~8:10, leave your backpack at the front desk", "Rain is forecast — ¥500 umbrella from the konbini", "Bland food + OS-1/Pocari today while your stomach recovers", "Pokémon Café Osaka 6:00 PM: check in by 5:50 (confirmation in Trip → Tickets)", "Your two suitcases arrive at the Osaka hotel tomorrow (Nov 3)"], rain: "Fushimi Inari and the bamboo grove in light rain = moody, empty photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Inari, Golden Pavilion + bamboo → Osaka", city: "Kyoto → Osaka",
+    id: "d8", date: "2026-11-02", prep: ["Late start (7:30): check out by ~8:10, leave your backpack at the front desk", "Rain is forecast — ¥500 umbrella from the konbini", "Bland food + OS-1/Pocari today while your stomach recovers", "Your two suitcases arrive at the Osaka hotel tomorrow (Nov 3)"], rain: "Fushimi Inari and the bamboo grove in light rain = moody, empty photos (careful on wet steps). Osaka's Shinsaibashi-suji shopping street is fully covered, and Dotonbori is a short dash from it.", home: {"after": "23:00", "note": "Your hotel is ~5 min from Doyama-cho — walk home."}, safe: {"tagline": "Dawn torii, real matcha, Pokémon Café Osaka, and Dotonbori's neon by night."}, dow: "Mon", title: "Inari, Golden Pavilion + bamboo → Osaka", city: "Kyoto → Osaka",
     theme: "torii", emoji: "🦊", deco: ["⛩️", "🦊", "🍵", "🐙", "🌆", "⚡"],
     kicker: "Day 8 · Thousand gates to neon canals",
-    tagline: "Dawn torii, the Golden Pavilion, the bamboo grove, Osaka Castle, Pokémon Café Osaka, and a holiday-eve night in Doyama-cho.",
+    tagline: "Dawn torii, the Golden Pavilion, the bamboo grove, Pokémon Center Osaka DX, and a holiday-eve night in Doyama-cho.",
     sleep: "osaka", wx: { lat: 34.70, lon: 135.50 },
     phrases: ["azukeru", "ohayou", "osusume", "nama", "kanpai", "amerika", "nomou", "issho"],
     steps: [
@@ -1039,14 +1039,12 @@ const DAYS = [
         photo: "Triangle Park (三角公園) is the heart of Amerikamura — street shots with the murals.",
       },
       {
-        t: "17:45", title: "Pokémon Café Osaka + Pokémon Center Osaka DX", fixed: true, quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンカフェは何階ですか？", "ro": "Pokemon Kafe wa nankai desu ka?", "en": "What floor is the Pokémon Café?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["yoyaku", "oishii"], pic: "Pokemon Cafe Osaka food photo", rx: "reala", place: "Daimaru Shinsaibashi",
+        t: "17:30", title: "⚡ Pokémon Center Osaka DX (Daimaru Shinsaibashi 9F)", quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["menzei", "kore"], place: "Daimaru Shinsaibashi",
         how: [
           "Walk ~5 min east from Amerikamura to Daimaru Shinsaibashi (Main Building).",
-          "Pokémon Center Osaka DX and the café are on 9F.",
-          "Check in at Pokémon Café Osaka by 5:50 PM for your 6:00 table (reservation in your email).",
-          "Shop Pokémon Center Osaka DX after the café — it's open until 8 PM.",
+          "Pokémon Center Osaka DX is on 9F, open until 8 PM. (The Pokémon Café is cancelled today.)",
+          "Keep receipts — from Nov 1 on, tax refunds are claimed at Narita.",
         ],
-        snack: "Café time: character plates + a latte. Try a different dish than Tokyo for the comparison post.",
       },
       {
         t: "19:30", title: "Dotonbori neon", ask: [{"jp": "グリコの看板はどっちですか？", "ro": "Guriko no kanban wa dotchi desu ka?", "en": "Which way to the Glico sign?", "hear": "dir"}], ll: [34.6687, 135.5013], say: ["hitotsu", "oishii"], pic: "Glico pose Dotonbori men", rx: "neon", place: "Glico Sign, Dotonbori",
@@ -2170,7 +2168,6 @@ const TICKET_SEEDS = [
   { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },
   { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 69 · 11:55 AM · Track 23 · Green Car 9, seat 4-D" },
   { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
-  { title: "Pokémon Café Osaka", date: "2026-11-02", when: "Mon Nov 2 · 6:00 PM · arrive 10 min early" },
   { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · out: Nozomi 13, Shin-Osaka 10:17, car 13 seat 9-A (print at a ticket machine) · back: Nozomi 200, Hiroshima 19:14, car 16 seat 5-E" },
   { title: "Shinkansen Shin-Osaka → Mishima (Hikari)", date: "2026-11-04", when: "Wed Nov 4 · ~10:30 AM · seat E" },
   { title: "Bus Mishima → Kawaguchiko", date: "2026-11-04", when: "Wed Nov 4 · ~12:45 PM" },
