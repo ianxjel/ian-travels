@@ -930,15 +930,12 @@ const DAYS = [
         ],
       },
       {
-        t: "20:15", title: "Kiyamachi gay bars 🏳️‍🌈", night: true, ask: [{"jp": "アップルはどこですか？", "ro": "Appuru wa doko desu ka?", "en": "Where's Apple (the bar)?", "hear": "dir"}], ll: [35.0045, 135.7703], say: ["cover", "kanpai", "gaikokujin"], place: "Kiyamachi-dori, Kyoto",
+        t: "20:15", title: "🌙 Kamo River + Pontochō night walk", ll: [35.0045, 135.7712], say: ["kirei", "photoplease"], pic: "Pontocho alley night lanterns Kyoto", rx: "nostalgic", place: "Pontocho Alley, Kyoto",
         how: [
-          "Kiyamachi runs right beside Pontocho, so just walk one street west.",
-          "Apple Kyoto: men only, English-friendly, a mix of locals and travelers. Open 8 PM–4 AM (closed Mondays).",
-          "Azure: men only, open nightly 8 PM–4 AM, with a table charge.",
-          "bell KYOTO: lots of international travelers (closed Tuesdays).",
-          "Leave by about 21:30 to get back to the hotel: Fushimi Inari starts at 6:30 AM.",
+          "From Gion, cross the Shijō bridge and walk the riverbank of the Kamo River (people sit along the water at night) — then loop back up Pontochō, the narrow lantern-lit alley one street west.",
+          "Easy and free. Then head to Shijō Station for the subway back to the hotel.",
         ],
-        spicy: "Kyoto's scene is tiny and chatty: one bar, a few drinks, and you'll know half the room 😉",
+        photo: "Pontochō's lantern alley: stand at one end and shoot down the lane, vertical, Night mode.",
       },
       {
         t: "21:30", title: "Back to the hotel", ask: [{"jp": "四条駅はどっちですか？", "ro": "Shijō-eki wa dotchi desu ka?", "en": "Which way to Shijō Station?", "hear": "dir"}], ll: [34.987, 135.7593], say: ["norikae"], pic: "Kyoto Station staircase night photo", rx: "neon", place: "Hotel Hokke Club Kyoto",
@@ -1094,7 +1091,7 @@ const DAYS = [
         ],
       },
       {
-        t: "21:00", title: "🍢 Kushikatsu in Shinsekai (Daruma Sōhonten)", ask: [{"jp": "おすすめセットをください。", "ro": "Osusume setto o kudasai.", "en": "The recommended set, please.", "hear": "none"}], ll: [34.6525, 135.5063], say: ["nama", "oishii", "kanpai"], pic: "Shinsekai Tsutenkaku night neon", rx: "neon", place: "Kushikatsu Daruma Shinsekai Sohonten, 2-3-9 Ebisuhigashi, Osaka",
+        t: "21:00", title: "🍢 Kushikatsu in Shinsekai (Daruma Sōhonten)", ask: [{"jp": "おすすめセットをください。", "ro": "Osusume setto o kudasai.", "en": "The recommended set, please.", "hear": "none"}], ll: [34.6525, 135.5063], say: ["oishii", "gochisousama"], pic: "Shinsekai Tsutenkaku night neon", rx: "neon", place: "Kushikatsu Daruma Shinsekai Sohonten, 2-3-9 Ebisuhigashi, Osaka",
         ride: [{"ln": "OK", "from": "K17", "to": "K18", "dir": "天下茶屋方面 (toward Tengachaya)", "type": "Every train. 1 stop from Nippombashi.", "wrong": "Next stop 長堀橋 Nagahoribashi (K16) = wrong way.", "min": 2, "exit": "Exit 3 → Shinsekai's neon is right there"}],
         how: [
           "Walk ~8 min to Nippombashi, Sakaisuji Line 1 stop to Ebisuchō, then into Shinsekai's retro neon under Tsūtenkaku tower.",
@@ -1105,24 +1102,12 @@ const DAYS = [
         photo: "Shinsekai is the best direct-flash street of the trip: giant food signs, retro neon, Tsūtenkaku behind you.",
       },
       {
-        t: "23:00", title: "Doyama-cho holiday-eve crawl", night: true, ask: [{"jp": "イーグル大阪はどこですか？", "ro": "Īguru Ōsaka wa doko desu ka?", "en": "Where's Eagle Osaka?", "hear": "dir"}], ll: [34.7048, 135.504], say: ["amerika", "nomou", "issho", "gaikokujin"], rx: "neon", place: "Doyama-cho, Kita-ku, Osaka",
-        ride: [{"ln": "OM", "from": "M19", "to": "M16", "dir": "千里中央・新大阪方面 (toward Senri-Chūō / Shin-Osaka)", "type": "Every train.", "wrong": "Next stop なんば Namba (M20) = wrong way.", "min": 6, "exit": "Doyama-cho is ~5 min from Umeda"}],
-        how: [
-          "Midosuji line back to Umeda; Doyama-cho is ~5 min from your hotel.",
-          "Eagle Osaka (12-8 Doyamacho; free entry Mon–Thu, cashless; open until 2 AM tonight) → Explosion (B1F Sanyo Kaikan, 8-23 Doyamacho; open until 4 AM Mondays — check @explosion_osaka for tonight's event). Grand Slam is closed on Mondays (only opens when Monday is a holiday), so save it for tomorrow.",
-          "Bear Plus / Dungaree / BULL for bear-and-muscle bars — check Instagram that they're open.",
-          "Daddies: Kuro (OK Bldg, 16-6 Doyama), Osaka's oldest gay bar, with a mostly mature Japanese crowd. Foreigners welcome; the sign is only in Japanese.",
-          "Drag: Village (2F East Street Bldg, 10-3 Doyama) does drag shows, cabaret and karaoke nightly, 8 PM–5 AM.",
-        ],
-        spicy: "Tomorrow's a holiday, so Osaka's out tonight. Osaka guys are famously chattier than Tokyo — say hi first. Your hotel is a 5-minute stumble away 😉",
-      },
-      {
         t: "25:30", title: "Daikichi — Osaka's gay sauna 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["shukuhaku", "gaikokujin"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
         how: [
           "It's in the middle of Doyama-cho (12-12 Doyamacho), about 5 minutes from your hotel.",
           "Open 24/7. A short stay is about ¥2,000–2,500, overnight about ¥2,500–3,000, with private rooms extra. Cash.",
           "Several floors: sauna, steam, baths, a dark room and cabins. Age limit is under 50, and ID may be checked, so bring your passport.",
-          "Your suitcase is already with the front desk and tomorrow's train isn't until 10:30, so stay out.",
+          "No alcohol needed: it's a sauna. Tomorrow's breakfast is at 8:40, so don't stay too late.",
         ],
         spicy: "Mostly local guys. Osaka guys are chattier than Tokyo guys, so a smile and “はじめまして” go a long way.",
       },
@@ -1231,7 +1216,6 @@ const DAYS = [
           "Leave the okonomiyaki place by ~6:40: streetcar back to Hiroshima Station, then print the ticket at a shinkansen ticket machine (Visa or SmartEX QR) before the gate.",
           "At Shin-Osaka: JR 1 stop to Osaka (~4 min), then ~10 min walk to Umeda Sky for the MHA collab (last entry 10 PM).",
         ],
-        spicy: "Want a Hiroshima gay bar first? Goli Macho (5F Jewel Ebisu Bldg, 3-6 Ebisu-cho; open Tue–Sat) is Hiroshima's friendliest, with a mixed crowd. Its opening time isn't listed, and you're booked on the 7:14 train, so this one is only if you change your ticket in SmartEX.",
       },
       {
         t: "21:00", title: "💥 MHA × Umeda Sky Building at night", ask: [{"jp": "ヒロアカのコラボチケットをください。", "ro": "Hiroaka no korabo chiketto o kudasai.", "en": "The My Hero Academia collab ticket, please.", "hear": "money"}], ll: [34.7053, 135.4903], say: ["kakkoii", "photoplease"], pic: "Umeda Sky Building Floating Garden night", rx: "neon", place: "Umeda Sky Building, 1-1-88 Oyodonaka, Osaka",
@@ -1243,13 +1227,12 @@ const DAYS = [
         photo: "Open-air rooftop: lean on the railing with the city lights behind you. Then the escalator tubes from below.",
       },
       {
-        t: "22:20", title: "🥩 Late dinner: Kobe beef yakiniku", ask: [{"jp": "一人ですが、大丈夫ですか？", "ro": "Hitori desu ga, daijōbu desu ka?", "en": "It's just me. Is that OK?", "hear": "yesno"}], ll: [34.7005, 135.5017], say: ["hitori", "nama", "oishii"], place: "Otona-no-Kobegyu Yakiniku Umeda Ohatsutenjin, 2F 2-2-12 Sonezaki, Osaka",
+        t: "22:20", title: "🥩 Late dinner: Kobe beef yakiniku", ask: [{"jp": "一人ですが、大丈夫ですか？", "ro": "Hitori desu ga, daijōbu desu ka?", "en": "It's just me. Is that OK?", "hear": "yesno"}], ll: [34.7005, 135.5017], say: ["hitori", "oishii"], place: "Otona-no-Kobegyu Yakiniku Umeda Ohatsutenjin, 2F 2-2-12 Sonezaki, Osaka",
         how: [
           "Otona-no-Kobegyu Yakiniku Umeda Ohatsutenjin (2F, 2-2-12 Sonezaki): Google 4.7, open until 1 AM. ~10 min walk from the Umeda Sky Building, right next to Doyama-chō.",
           "🟢 Easy: point at the photo menu. Start with tongue (タン) and kalbi (カルビ), then a Kobe beef plate — grill each slice a few seconds per side. Yakiniku crossed off ✅",
-          "Small place: if it's full, ask for the next opening time and do a Doyama bar first.",
+          "Small place: if it's full, ask for the next opening time.",
         ],
-        spicy: "Then Doyama: Eagle Osaka for bears (until 2 AM), Kuro for daddies, Village for drag, Grand Slam (open Tuesday 9 PM–5 AM). Explosion is closed on Tuesdays unless there's an event.",
       },
       {
         t: "24:30", title: "Last-night soak at Daikichi 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["kyukei"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
@@ -1948,7 +1931,7 @@ const FOODS = [
   { id: "sake", emoji: "🍶", en: "Sake (nihonshu)", jp: "日本酒", ro: "nihonshu", wiki: "日本酒", enwiki: "Sake",
     what: "Rice wine, served cold (hiya), room temp or warm (atsukan).",
     order: { jp: "おすすめの日本酒を冷やでお願いします", ro: "Osusume no nihonshu o hiya de onegai shimasu", en: "Your recommended sake, chilled" },
-    tips: "In Japan “sake” means alcohol in general; say “nihonshu” for rice wine.", where: "Kiyamachi bars, Kyoto (Sun)", day: "d7" },
+    tips: "In Japan “sake” means alcohol in general; say “nihonshu” for rice wine.", where: "Not on the plan — you're taking a break from drinking" },
 ];
 
 const FOOD_ORDERING = [
@@ -2153,16 +2136,12 @@ const FAN_QUESTS = [
     { t: "Dragon Men", where: "Ni-chome, Tokyo", when: "~¥2,000 with two drinks on weekends", day: "d4", what: "Go-go dancers and a big mix of Japanese regulars and visitors. Turns club-like after midnight.", place: "Dragon Men, Shinjuku 2-chome", link: "https://nightlifetokyo.com/en/tokyo/guides/lgbtq-nightlife-tokyo-ni-chome" },
     { t: "Bar Blacknude", where: "1F, 2-15-12 Shinjuku", when: "Mon–Sat 8 PM–1 AM, Sun 7 PM–midnight", day: "d6", what: "Muscle-staff bar; foreigners welcome.", place: "Bar Blacknude, 1F 2-15-12 Shinjuku, Tokyo", link: "https://www.travelgay.com/tokyo-gay-bars" },
     { t: "GB", where: "Ni-chome, Tokyo", when: "Nightly", day: "d1", what: "Quiet counter bar with English-speaking staff and an older crowd. Good for daddies and real conversation.", place: "GB, Shinjuku 2-chome", link: "https://nightlifetokyo.com/en/tokyo/guides/lgbtq-nightlife-tokyo-ni-chome" },
-    { t: "Eagle Osaka", where: "12-8 Doyama-cho, Osaka", when: "Cashless · free entry Mon–Thu", day: "d8", what: "Western Japan's biggest gay bar: a go-go dance floor downstairs and a lounge upstairs. A hotspot for bears and tourists.", place: "Eagle Osaka, 12-8 Doyamacho", link: "https://sushisandwich81.com/eagle-osaka-best-gay-bear-bar-in-osaka/" },
-    { t: "Dungaree + Kuro", where: "Doyama-cho, Osaka", when: "Kuro: Mon–Sat 7 PM–2 AM", day: "d8", what: "Dungaree is “where Japanese bears go to play.” Kuro is Osaka's oldest gay bar, with a mature Japanese crowd; foreigners welcome.", place: "Doyama-cho, Kita-ku, Osaka", link: "https://www.travelgay.com/osaka-gay-bars" },
-    { t: "Goli Macho", where: "5F Jewel Ebisu Bldg, 3-6 Ebisu-cho, Hiroshima", when: "Tue–Sat · opening time not listed", day: "d9", what: "Hiroshima's friendliest gay bar, with a mixed crowd. Only works if you take a later shinkansen back.", place: "Goli Macho, Hiroshima", link: "https://nomadicboys.com/gay-hiroshima/" },
   ]},
   { fandom: "Go-go boys + strip shows", emoji: "🍑", spicy: true, items: [
     { t: "Dragon Master at Dragon Men", where: "2-11-4 Shinjuku (Ni-chome)", when: "Fri Oct 30 + Sat Oct 31 · go-go shows 11 PM, 1 AM, 3 AM", day: "d5", what: "Weekend party with a different go-go show at each set, guest DJs and happy hour 6–9 PM. Cash.", place: "Dragon Men, 2-11-4 Shinjuku", link: "https://www.gaytravel4u.com/event/dragon-men-presents/" },
     { t: "Eagle Tokyo Blue", where: "2-11-21 Shinjuku (Ni-chome)", when: "Fri–Sun from 6 PM, Mon–Thu from 8 PM · ¥1,000–2,000", day: "d5", what: "Known for hairy, beefy go-go dancers — exactly your type of show.", place: "Eagle Tokyo Blue, 2-11-21 Shinjuku", link: "https://japangayguide.com/gogoboys/gogoboys-in-japan-best-clubs-2024/" },
     { t: "Kingdom Tokyo", where: "2-10-7 Shinjuku (Ni-chome)", when: "Fri + Sat go-go × drag shows · ¥1,000–2,000", day: "d6", what: "Go-go boys plus drag on weekend nights; all-you-can-drink ¥1,500 from 6–10 PM.", place: "Kingdom Tokyo, 2-10-7 Shinjuku", link: "https://japangayguide.com/gogoboys/gogoboys-in-japan-best-clubs-2024/" },
     { t: "Club Blacknude", where: "B1F, 2-15-12 Shinjuku", when: "Nightly · ¥1,500 with a drink", day: "d6", what: "Muscle bar with one or two go-go boys every night.", place: "Club Blacknude, 2-15-12 Shinjuku", link: "https://japangayguide.com/gogoboys/gogoboys-in-japan-best-clubs-2024/" },
-    { t: "Eagle Osaka dance floor", where: "12-8 Doyama-cho, Osaka", when: "Cashless", day: "d8", what: "Go-go dancers on the ground-floor dance floor.", place: "Eagle Osaka, 12-8 Doyamacho", link: "https://sushisandwich81.com/eagle-osaka-best-gay-bear-bar-in-osaka/" },
   ]},
   { fandom: "Cruise bars + love hotels", emoji: "🔥", spicy: true, items: [
     { t: "Deep Throat Men", where: "3F Wakatsuki Bldg, Kabukichō, Shinjuku", when: "Nights · 20+", day: "d5", what: "Cruising bar where foreigners are welcome and staff speak English. 5 minutes from Golden Gai.", place: "Deep Throat Men, Kabukicho", link: "https://www.utopia-asia.com/tokysaun.htm" },
@@ -2170,7 +2149,6 @@ const FAN_QUESTS = [
     { t: "Men's Club MEAT", where: "1-13-4 Shinjuku · near your hotel", when: "Mon–Fri 3–10 PM, Sat 1–10 PM, Sun noon–9 PM", day: "d6", what: "Daytime-and-evening cruising club for guys in their 20s–40s. Good for a sleep-in day afternoon.", place: "Men's Club MEAT, 1-13-4 Shinjuku", link: "https://www.utopia-asia.com/tokysaun.htm" },
     { t: "Rokuten", where: "4F Okuo Bldg, Kanda", when: "Check before going", day: "d5", what: "Fundoshi (traditional loincloth) cruising bar, described as foreigner-friendly.", place: "Rokuten, Kanda", link: "https://www.utopia-asia.com/tokysaun.htm" },
     { t: "Hotel Queen Annex", where: "Ni-chome, Shinjuku", when: "24-hour front desk", day: "d1", what: "Big, bright love hotel in Ni-chome known as gay-friendly. Pay by the “rest” (a few hours) or the night.", place: "Hotel Queen Annex, Shinjuku", link: "https://japangayguide.com/travel-tips/our-favorite-tokyo-gay-love-hotels/" },
-    { t: "Glory Hole Osaka", where: "Near Namba / Dōtonbori", when: "Nights", day: "d8", what: "Osaka cruising bar. Reports say it's not especially foreigner-friendly, so try Daikichi first.", place: "Namba, Osaka", link: "https://www.utopia-asia.com/osaksaun.htm" },
   ]},
   { fandom: "Parties on your dates", emoji: "🪩", spicy: true, items: [
     { t: "Akiba Night 51 · Halloween + 23rd anniversary", where: "AiSOTOPE Lounge, Ni-chome", when: "Fri Oct 30 · 9 PM", day: "d5", what: "Long-running anime/otaku gay night. Photo ID required, 20+.", place: "AiSOTOPE Lounge, Shinjuku", link: "https://aisotope-lounge.net/" },
@@ -2178,12 +2156,10 @@ const FAN_QUESTS = [
     { t: "Arty Farty HALLOWEEN PARTY 2026", where: "Arty Farty, Ni-chome", when: "Sat Oct 31 · 8 PM", day: "d6", what: "Halloween at one of Ni-chome's most foreigner-friendly bars.", place: "Arty Farty, Shinjuku 2-chome", link: "https://dokoiku-2chome.com/event-list/" },
     { t: "RUSHCRUISE 80th · Duality", where: "AiSOTOPE Lounge", when: "Sat Oct 31 · 9 PM", day: "d6", what: "Halloween-night party at Ni-chome's biggest gay club.", place: "AiSOTOPE Lounge, Shinjuku", link: "https://aisotope-lounge.net/" },
     { t: "Jimi-Halloween", where: "ArcH", when: "Sat Oct 31 · 9 PM", day: "d6", what: "地味ハロ: dress as something boring and everyday. Very Japanese humor.", place: "ArcH, Shinjuku 2-chome", link: "https://clubarch.jp/" },
-    { t: "Explosion", where: "B1 Sanyo-Kaikan, 8-23 Doyama-cho, Osaka", when: "8 PM–4 AM · closed Tuesdays · no cover", day: "d8", what: "Osaka's main gay club. Saturdays bring drag queens and go-gos, and it's open on your Monday holiday-eve night too.", place: "Explosion, Doyama-cho, Osaka", link: "https://www.travelgay.com/venue/explosion" },
   ]},
   { fandom: "Drag + shows", emoji: "💄", spicy: true, items: [
     { t: "Campy! Bar", where: "1F Musashino Bldg, 2-13-10 Shinjuku", when: "Mon–Sat 7 PM–4 AM, Sun 5 PM–midnight · usually no cover", day: "d2", what: "Run by TV drag star Bourbonne. Glitter, shots and chaos. Perfect for a birthday shot.", place: "Campy! Bar, Shinjuku 2-chome", link: "https://www.travelgay.com/tokyo-gay-bars" },
     { t: "Queen's Lounge drag nights", where: "AiSOTOPE Lounge, Ni-chome", when: "Wed + Thu · ~¥3,000 with a drink", day: "d4", what: "Weekly drag shows at the big club.", place: "AiSOTOPE Lounge, Shinjuku", link: "https://nightlifetokyo.com/en/tokyo/guides/lgbtq-nightlife-tokyo-ni-chome" },
-    { t: "Village", where: "2F East Street Bldg, 10-3 Doyama-cho, Osaka", when: "Daily 8 PM–5 AM", day: "d8", what: "Drag shows, cabaret, karaoke and live performances in Doyama.", place: "Village, Doyama-cho, Osaka", link: "https://www.travelgay.com/osaka-gay-bars" },
   ]},
   { fandom: "Daytime queer culture", emoji: "🏳️‍🌈", spicy: true, items: [
     { t: "Pride House Tokyo Legacy", where: "1-2-9 Shinjuku · minutes from your hotel", when: "1–7 PM · closed Wed + Thu", day: "d6", what: "Japan's first permanent LGBTQ center: a 1,400-book library, friendly staff and event flyers.", place: "Pride House Tokyo Legacy, 1-2-9 Shinjuku", link: "https://www.timeout.com/tokyo/things-to-do/pride-house-tokyo-legacy" },
