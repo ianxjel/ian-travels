@@ -840,10 +840,10 @@ const DAYS = [
         ],
       },
       {
-        t: "11:55", title: "Nozomi 69 to Kyoto (Green Car)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
+        t: "11:55", title: "Nozomi 69 to Kyoto (Green Car 9, seat 4-D)", fixed: true, ask: [{"jp": "富士山はどっち側に見えますか？", "ro": "Fujisan wa dotchi-gawa ni miemasu ka?", "en": "Which side can I see Mt Fuji from?", "hear": "side"}], say: ["seki"], pic: "Mt Fuji from shinkansen window", rx: "classic", place: "Kyoto Station",
         ride: [{"ln": "TKN", "from": "SGW", "to": "KYT", "dir": "新大阪・博多・広島方面 (westbound) — Nozomi 127 (Hakata-bound), Car 10", "type": "Nozomi stops only at these stations before Kyoto.", "wrong": "A train whose next stop is 東京 Tokyo = wrong way (that's the other platform).", "min": 135, "exit": "烏丸中央口 Karasuma Central Gate (north side)"}],
         how: [
-          "✅ Changed: NOZOMI 69, Shinagawa 11:55 → Kyoto 14:00, Green Car (car and seat are on your printed ticket). Fuji shows up ~40–45 min after Shinagawa (~12:40) on the right side.",
+          "✅ Changed: NOZOMI 69, Shinagawa 11:55 → Kyoto 14:00, Green Car 9, seat 4-D. At Kyoto, exit by tapping the same Suica (or QR-Ticket) you used to enter — the blue seat slip is NOT a ticket. Fuji shows up ~40–45 min after Shinagawa (~12:40) on the right side.",
           "Line up at your car number's marking on the platform floor. Fuji side = seat D in the Green Car, seat E in Ordinary.",
           "Fuji shows up ~40–45 min after Shinagawa. Kyoto in 2 h 15.",
         ],
@@ -2214,7 +2214,7 @@ const TICKET_SEEDS = [
   { title: "Tokyo DisneySea", date: "2026-10-27", when: "Tue Oct 27 · birthday!" },
   { title: "Tokyo Disneyland", date: "2026-10-29", when: "Thu Oct 29" },
   { title: "Pokémon Café Tokyo", date: "2026-10-31", when: "Sat Oct 31 · 7:15 PM · arrive 15 min early" },
-  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 69 · 11:55 AM · Green Car · print at a Shinagawa ticket machine" },
+  { title: "Shinkansen Shinagawa → Kyoto", date: "2026-11-01", when: "Sun Nov 1 · Nozomi 69 · 11:55 AM · Track 23 · Green Car 9, seat 4-D" },
   { title: "Nintendo Museum", date: "2026-11-01", when: "Sun Nov 1 · if the alert lands one" },
   { title: "Pokémon Café Osaka", date: "2026-11-02", when: "Mon Nov 2 · 6:00 PM · arrive 10 min early" },
   { title: "Shinkansen Osaka ⇄ Hiroshima", date: "2026-11-03", when: "Tue Nov 3 · out: Nozomi 13, Shin-Osaka 10:17, car 13 seat 9-A (print at a ticket machine) · back: Nozomi 200, Hiroshima 19:14, car 16 seat 5-E" },
