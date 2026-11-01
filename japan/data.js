@@ -967,13 +967,13 @@ const DAYS = [
     phrases: ["azukeru", "ohayou", "osusume", "nama", "kanpai", "amerika", "nomou", "issho"],
     steps: [
       {
-        t: "07:45", title: "🍳 Breakfast: konbini by the hotel", ll: [34.987, 135.7593], say: ["atatame", "fukuro"], place: "Konbini by Kyoto Station",
+        t: "08:40", title: "🍳 Breakfast: konbini by the hotel", ll: [34.987, 135.7593], say: ["atatame", "fukuro"], place: "Konbini by Kyoto Station",
         how: [
           "🟢 Easy and gentle on your stomach after last night: plain onigiri (salmon or kombu), a banana, and an OS-1 or Pocari Sweat for the climb. Skip the fried chicken today. Grab a ¥500 umbrella too — rain is forecast.",
         ],
       },
       {
-        t: "08:10", title: "Check out → Inari", ask: [{"jp": "奈良線は何番線ですか？", "ro": "Nara-sen wa nanbansen desu ka?", "en": "Which platform is the Nara Line?", "hear": "bansen"}, {"jp": "この電車は稲荷に止まりますか？", "ro": "Kono densha wa Inari ni tomarimasu ka?", "en": "Does this train stop at Inari?", "hear": "yesno"}], ll: [34.9671, 135.7727], say: ["checkout", "azukeru"], place: "Fushimi Inari Taisha",
+        t: "09:00", title: "Check out → Inari", ask: [{"jp": "奈良線は何番線ですか？", "ro": "Nara-sen wa nanbansen desu ka?", "en": "Which platform is the Nara Line?", "hear": "bansen"}, {"jp": "この電車は稲荷に止まりますか？", "ro": "Kono densha wa Inari ni tomarimasu ka?", "en": "Does this train stop at Inari?", "hear": "yesno"}], ll: [34.9671, 135.7727], say: ["checkout", "azukeru"], place: "Fushimi Inari Taisha",
         ride: [{"ln": "JD", "from": "D01", "to": "D03", "dir": "奈良・城陽方面 — platforms 8–10. Kyoto is the end of the Nara Line", "type": "普通 Local and みやこ路快速 Miyakoji Rapid stop at Inari.", "min": 5, "exit": "The shrine gate is right across the street"}],
         how: [
           "Leave your backpack at the front desk.",
@@ -982,28 +982,19 @@ const DAYS = [
         ],
       },
       {
-        t: "08:30", title: "Climb the gates to Yotsutsuji", ask: [{"jp": "四ツ辻まであと何分ですか？", "ro": "Yotsutsuji made ato nanpun desu ka?", "en": "How many more minutes to Yotsutsuji?", "hear": "min"}], ll: [34.9655, 135.781], say: ["ohayou", "photoplease"], pic: "Fushimi Inari men outfit photo", rx: "velvia", place: "Yotsutsuji Intersection, Fushimi Inari",
+        t: "09:20", title: "Climb the gates to Yotsutsuji", ask: [{"jp": "四ツ辻まであと何分ですか？", "ro": "Yotsutsuji made ato nanpun desu ka?", "en": "How many more minutes to Yotsutsuji?", "hear": "min"}], ll: [34.9655, 135.781], say: ["ohayou", "photoplease"], pic: "Fushimi Inari men outfit photo", rx: "velvia", place: "Yotsutsuji Intersection, Fushimi Inari",
         how: [
           "Walk through the Senbon Torii (the double rows of gates) and keep climbing.",
           "Yotsutsuji viewpoint is ~45 min up; the crowds thin the higher you go.",
-          "About 1.5 h round trip. Use the toilets by the main shrine before you climb. Steps get slippery in rain — turn back early if your stomach acts up.",
+          "About 1.5 h round trip — be heading back down by ~10:50. Use the toilets by the main shrine before you climb. Steps get slippery in rain — turn back early if your stomach acts up.",
         ],
         photo: "Walk away down the torii tunnel and look back over your shoulder. Shoot from chest height so the gates converge. White, black or denim pops against the orange.",
       },
       {
-        t: "10:00", title: "Kinkaku-ji: the Golden Pavilion ✨ (skip if tired)", ask: [{"jp": "金閣寺行きのバスはどれですか？", "ro": "Kinkakuji iki no basu wa dore desu ka?", "en": "Which bus goes to Kinkaku-ji?", "hear": "none"}], ll: [35.0394, 135.7292], say: ["norikae", "photoplease", "kirei"],
-        ride: [{"ln": "JD", "from": "D03", "to": "D01", "dir": "京都方面 (toward Kyoto)", "type": "Every train.", "wrong": "Next stop JR藤森 JR Fujinomori (D04) = wrong way.", "min": 5, "exit": "Follow the green subway signs (Karasuma Line)"}, {"ln": "KR", "from": "K11", "to": "K04", "dir": "国際会館方面 (toward Kokusaikaikan)", "type": "Every train.", "wrong": "Next stop 九条 Kujō = wrong way.", "min": 15, "exit": "Kitaōji Bus Terminal → blue boarding area, stop E → bus 205 (or 204 from stop G) to Kinkakuji-michi, ~15 min"}], pic: "Kinkakuji golden pavilion reflection pond", rx: "velvia", place: "Kinkaku-ji, Kyoto",
+        t: "11:00", title: "Arashiyama bamboo grove + Togetsukyō 🎋", ask: [{"jp": "竹林の小径はどっちですか？", "ro": "Chikurin no komichi wa dotchi desu ka?", "en": "Which way to the bamboo grove path?", "hear": "dir"}], ll: [35.0170, 135.6713], say: ["photoplease", "osusume", "kirei"], pic: "Arashiyama bamboo grove path men photo", rx: "classic", place: "Arashiyama Bamboo Grove, Kyoto",
+        ride: [{"ln": "JD", "from": "D03", "to": "D01", "dir": "京都方面 (toward Kyoto)", "type": "Every train. 2 stops.", "wrong": "Next stop JR藤森 JR Fujinomori (D04) = wrong way.", "min": 5, "exit": "Change to the JR Sagano Line (platforms 31–33, west end of the station)"}, {"ln": "SAG", "from": "E01", "to": "E08", "dir": "嵯峨嵐山・園部方面 (toward Saga-Arashiyama / Sonobe)", "type": "Every train stops at Saga-Arashiyama.", "wrong": "Kyoto is the end of the Sagano line, so every train from platforms 31–33 goes the right way. If the next stop is 東福寺 Tōfukuji, you're on the Nara line = wrong train.", "min": 16, "exit": "South Exit → walk ~10 min to the bamboo grove"}],
         how: [
-          "Leave Inari by ~10:00: JR 2 stops back to Kyoto, Karasuma subway 7 stops to Kitaōji, then bus 205 from Kitaōji Bus Terminal stop E to Kinkakuji-michi (stop B), and a 5-min walk. ~50 min door to door, about ¥650, Suica all the way.",
-          "Opens 9:00, ¥500. The path loops past the pavilion and its pond in about 40 minutes.",
-          "Tired or raining hard? Skip it: from Inari, JR back to Kyoto, then the JR Sagano line straight to Saga-Arashiyama (~16 min) and go to the bamboo grove.",
-        ],
-        photo: "The classic: the gold pavilion mirrored in the pond from the first viewpoint by the entrance. It'll be busy by late morning — be patient for a spot at the railing.",
-      },
-      {
-        t: "11:45", title: "Arashiyama bamboo grove + Togetsukyō 🎋", ask: [{"jp": "竹林の小径はどっちですか？", "ro": "Chikurin no komichi wa dotchi desu ka?", "en": "Which way to the bamboo grove path?", "hear": "dir"}], ll: [35.0170, 135.6713], say: ["photoplease", "osusume", "kirei"], pic: "Arashiyama bamboo grove path men photo", rx: "classic", place: "Arashiyama Bamboo Grove, Kyoto",
-        how: [
-          "Bus 204 or 205 from Kinkakuji-michi 3 stops to Kitano-Hakubaichō, then the Randen tram (Kitano Line) → change at Katabiranotsuji → Arashiyama (~40 min total, Suica OK). The Randen Arashiyama stop is a 5-min walk from the bamboo grove.",
+          "Kinkaku-ji is skipped today (late start). From Inari: JR Nara line 2 stops back to Kyoto, then the JR Sagano line to Saga-Arashiyama (~16 min) and walk ~10 min to the bamboo grove. Suica all the way.",
           "Walk the bamboo path (Chikurin no Komichi), then Tenryū-ji's garden (¥500) right next to it.",
           "Finish at Togetsukyō, the long wooden bridge over the river with forested mountains behind.",
         ],
