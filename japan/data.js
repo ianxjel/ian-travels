@@ -1055,22 +1055,47 @@ const DAYS = [
         ],
       },
       {
-        t: "19:55", title: "🎮 Den Den Town: DS + Pokémon card hunt", ask: [{"jp": "動作確認できますか？", "ro": "Dōsa kakunin dekimasu ka?", "en": "Can I check that it works?", "hear": "yesno"}], ll: [34.6612, 135.5060], say: ["kore", "ikura", "menzei"], place: "Den Den Town, Nipponbashi, Osaka",
+        t: "20:05", title: "🃏 CHAMPION Collectibles (Pokémon cards)", ask: [{"jp": "このカードはいくらですか？", "ro": "Kono kādo wa ikura desu ka?", "en": "How much is this card?", "hear": "money"}], ll: [34.6657, 135.5064], say: ["kore", "ikura", "menzei"], place: "CHAMPION Collectibles Osaka Nipponbashi, 4F 404, 1-21-20 Nipponbashi, Chuo-ku, Osaka",
         how: [
-          "Walk ~10 min east along Dōtonbori to Sakaisuji (the big street), then south into Den Den Town (Nipponbashi). Everything below is walkable; do them in this order.",
-          "🃏 CHAMPION Collectibles (1-21-20 Nipponbashi, 4F room 404): Google 4.9 from 870+ reviews, open until 9 PM. Pokémon cards (raw + graded), figures and some retro games. Tax-free with your passport.",
-          "🎮 Surugaya Nipponbashi Main Building (4-11-3 Nipponbashi): open until 9 PM. Used games and consoles on 1F. Its sister shop Otomekan (4-10-1, 1F–2F, also until 9) has 3DS consoles per reviews.",
-          "🃏 Pop Town トレカ専門店 ポップタウン (4-9-22 Nipponbashi, Refine Bldg 4F): Google 4.8, open until 10 PM. Lots of Pokémon singles, friendly owners.",
-          "Late backup for DS: Kaitori MAX (5-12-2 Nipponbashi, 1F, open until 11 PM), but Google 3.1 and pricier — test before paying, no refunds. Super Potato closes at 8, so you'll likely miss it.",
-          "DS tips: a Japanese 3DS only plays Japanese 3DS games (DS games from any region work). Check the charger says 100–240V, or use a USB cable.",
-          "Card tips: buy singles or sealed boxes, not loose or “mystery” packs from small shops — some get searched for hits. Keep receipts: tax refunds are claimed at Narita.",
+          "Den Den Town hunt, stop 1 of 5 (~10 min each). Walk ~10 min east along Dōtonbori to Sakaisuji (the big street), then a few minutes south to 1-21-20 Nipponbashi, 4F room 404. Don't be put off by the plain entrance.",
+          "Google 4.9 from 870+ reviews, open until 9 PM. Pokémon cards (raw + graded), figures and some retro games. Tax-free with your passport.",
+          "Card tip for the whole hunt: buy singles or sealed boxes, not loose or “mystery” packs from small shops — some get searched for hits. Keep receipts: tax refunds are claimed at Narita.",
         ],
       },
       {
-        t: "21:30", title: "🥩 Dinner: Yakiniku no Watami Umeda", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [34.7058, 135.4992], say: ["hitori", "oishii", "gochisousama"], place: "Yakiniku no Watami, East Square Chayamachi 4F, 2-16 Chayamachi, Kita-ku, Osaka",
+        t: "20:20", title: "🎮 Surugaya Otomekan (3DS)", ask: [{"jp": "動作確認できますか？", "ro": "Dōsa kakunin dekimasu ka?", "en": "Can I check that it works?", "hear": "yesno"}], ll: [34.6613, 135.5056], say: ["kore", "ikura", "menzei"], place: "Surugaya Nipponbashi Otomekan, Moriya Bldg 1F-2F, 4-10-1 Nipponbashi, Naniwa-ku, Osaka",
+        how: [
+          "Stop 2: walk ~8 min south down Sakaisuji into 4-chōme. 4-10-1 Nipponbashi, 1F–2F, open until 9 PM.",
+          "Reviews mention 3DS and Vita consoles here. Mostly anime goods, so ask: 中古の3DSはありますか？ (Chūko no surī-dī-esu wa arimasu ka?).",
+          "DS tips: a Japanese 3DS only plays Japanese 3DS games (DS games from any region work). Check the charger says 100–240V, or use a USB cable.",
+        ],
+      },
+      {
+        t: "20:32", title: "🃏 Pop Town (Pokémon singles)", ask: [{"jp": "このカードはいくらですか？", "ro": "Kono kādo wa ikura desu ka?", "en": "How much is this card?", "hear": "money"}], ll: [34.6609, 135.5064], say: ["kore", "ikura"], place: "Pop Town (トレカ専門店 ポップタウン), Refine Bldg 4F, 4-9-22 Nipponbashi, Naniwa-ku, Osaka",
+        how: [
+          "Stop 3: a couple of minutes away at 4-9-22 Nipponbashi, Refine Bldg 4F.",
+          "Google 4.8, open until 10 PM. Lots of Pokémon singles at fair prices; the owners are friendly and speak a bit of English.",
+        ],
+      },
+      {
+        t: "20:44", title: "🎮 Surugaya Main Building (used consoles)", ask: [{"jp": "動作確認できますか？", "ro": "Dōsa kakunin dekimasu ka?", "en": "Can I check that it works?", "hear": "yesno"}], ll: [34.6602, 135.5057], say: ["kore", "ikura", "menzei"], place: "Surugaya Osaka Nipponbashi Main Building, 4-11-3 Nipponbashi, Naniwa-ku, Osaka",
+        how: [
+          "Stop 4: 4-11-3 Nipponbashi, a few minutes south. Open until 9 PM, so this is your last chance here.",
+          "Used games and consoles are on 1F. Tax-free with your passport. Some reviews say prices run high, so compare with Otomekan before buying.",
+        ],
+      },
+      {
+        t: "20:58", title: "🎮 Kaitori MAX (3DS backup)", ask: [{"jp": "動作確認できますか？", "ro": "Dōsa kakunin dekimasu ka?", "en": "Can I check that it works?", "hear": "yesno"}], ll: [34.6571, 135.5056], say: ["kore", "ikura", "menzei"], place: "KAITORI-MAX Nipponbashi, 5-12-2 Nipponbashi, Naniwa-ku, Osaka",
+        how: [
+          "Stop 5 (the shop from your TikTok): walk ~5 min south to 5-12-2 Nipponbashi. Open until 11 PM, tax-free. Retro games are on 1F — skip 4F (adult DVDs).",
+          "Google 3.1 from 20 reviews: one person got a 3DS at a good price, others say it's pricier and condition isn't always marked honestly, with no refunds. Test it before you pay.",
+        ],
+      },
+      {
+        t: "21:40", title: "🥩 Dinner: Yakiniku no Watami Umeda", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [34.7058, 135.4992], say: ["hitori", "oishii", "gochisousama"], place: "Yakiniku no Watami, East Square Chayamachi 4F, 2-16 Chayamachi, Kita-ku, Osaka",
         ride: [{"ln": "OM", "from": "M20", "to": "M16", "dir": "梅田・新大阪方面 (toward Umeda / Shin-Osaka)", "type": "Every train. 4 stops.", "wrong": "Next stop 大国町 Daikokuchō (M21) = wrong way.", "min": 8, "exit": "Walk ~5–8 min northeast to East Square Chayamachi (茶屋町), past Hankyu Umeda"}],
         how: [
-          "Leave Den Den Town by ~9:05: walk ~10 min west to Namba Station, red Midosuji Line 4 stops to Umeda.",
+          "Leave Kaitori MAX by ~9:10: walk ~12 min northwest to Namba Station, red Midosuji Line 4 stops to Umeda. Tired? Grab a taxi on Sakaisuji instead (~15 min, ⚠️ roughly ¥2,000–2,500, not verified).",
           "Yakiniku no Watami, East Square Chayamachi 4F (2-16 Chayamachi): Google 4.8 from 3,400+ reviews, open until 1 AM.",
           "🟢 Easy, almost no talking: order on the tablet (English menu) and the meat arrives on a conveyor tray. À la carte is fine; you don't have to do all-you-can-eat. ⚠️ Prices not verified.",
           "Then Daikichi is ~10 min walk east, in Doyama-chō.",
