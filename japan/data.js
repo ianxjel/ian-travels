@@ -1023,25 +1023,25 @@ const DAYS = [
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Check-in is from 3 PM, so you can go straight up. Your two suitcases arrive tomorrow (Nov 3) — tell the front desk so they hold them for you.",
-          "😴 Rest in the room until ~4:45. Set an alarm.",
-          "⚡ Then: Pokémon Center Osaka (the original, not the DX) is on Daimaru Umeda 13F, right on top of JR Osaka Station and ~5 min from the hotel. Nintendo OSAKA is on the same floor. Give it 30 minutes.",
+          "😴 Nap in the room (you slept until ~5:30 — good).",
+          "⚡ Pokémon Center Osaka (the original, Daimaru Umeda 13F, with Nintendo OSAKA on the same floor) is skipped tonight; you're doing the DX instead. It's on top of JR Osaka Station, ~5 min from the hotel, if you pass by another day.",
           "Osaka Castle is skipped today (late start + rain).",
         ],
         photo: "HEP FIVE's red Ferris wheel on the mall roof, shot from the street below (better after dark).",
       },
       {
-        t: "17:15", title: "👕 Amerikamura: American vintage in US sizes", ask: [{"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [34.6719, 135.4985], say: ["kore", "ikura"], pic: "Amerikamura Osaka street", rx: "classic", place: "Amerikamura (America-mura), Osaka",
+        t: "17:45", title: "👕 Amerikamura: American vintage in US sizes", ask: [{"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [34.6719, 135.4985], say: ["kore", "ikura"], pic: "Amerikamura Osaka street", rx: "classic", place: "Amerikamura (America-mura), Osaka",
         ride: [{"ln": "OM", "from": "M16", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train. 3 stops.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 6, "exit": "Exit 7 → walk ~5 min west into Amerikamura"}],
         how: [
-          "From Daimaru Umeda, red Midosuji Line from Umeda 3 stops to Shinsaibashi, then walk ~5 min west into Amerikamura (“America Village”).",
+          "From the hotel, walk ~8 min to Umeda, red Midosuji Line 3 stops to Shinsaibashi, then walk ~5 min west into Amerikamura (“America Village”).",
           "Vintage Mecca (2-13-13 Nishi-Shinsaibashi, 1–7 PM, closed Wed): 30s–60s American denim, shirts and military pants.",
           "Grizzly (2-12-14 Nishi-Shinsaibashi by Triangle Park, 12–7:30 PM): Ralph Lauren and American brands.",
-          "It's American stock, so US sizes — no 3L guessing. Hit Vintage Mecca first (closes 7 PM), then walk to Daimaru by ~6:30.",
+          "It's American stock, so US sizes — no 3L guessing. Go straight to Vintage Mecca (closes 7 PM), then walk to Daimaru by ~6:50.",
         ],
         photo: "Triangle Park (三角公園) is the heart of Amerikamura — street shots with the murals.",
       },
       {
-        t: "18:30", title: "⚡ Pokémon Center Osaka DX (Daimaru Shinsaibashi 9F)", quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["menzei", "kore"], place: "Daimaru Shinsaibashi",
+        t: "18:50", title: "⚡ Pokémon Center Osaka DX (Daimaru Shinsaibashi 9F)", quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["menzei", "kore"], place: "Daimaru Shinsaibashi",
         how: [
           "Walk ~5 min east from Amerikamura to Daimaru Shinsaibashi (Main Building).",
           "Pokémon Center Osaka DX is on 9F, open until 8 PM. (The Pokémon Café is cancelled today.)",
