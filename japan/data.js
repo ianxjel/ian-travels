@@ -417,7 +417,7 @@ const DAYS = [
         t: "17:45", title: "Tokyo Character Street 🎁 (while you wait)", quest: "⭐ KIRBY CAFÉ PETIT: takeout Kirby sweets, no reservation needed.", ask: [{"jp": "免税できますか？", "ro": "Menzei dekimasu ka?", "en": "Can I buy tax-free?", "hear": "yesno"}], ll: [35.6795, 139.7685], say: ["menzei", "kore", "fukuro"], place: "Tokyo Character Street, First Avenue Tokyo Station B1",
         how: [
           "Walk back through the station to the Yaesu side, B1 (~10 min). A whole underground street of character shops, open until 8:30 PM. Tax-free is still on until Saturday: ask before you pay. Head back to KITTE when your sushi alert comes.",
-          "Pokémon Store Tokyo Station: small, but it has station-exclusive designs.",
+          "Pokémon Store Tokyo Station: now on 1F of First Avenue Tokyo Station (moved up from B1 in 2024). Small, but it has station-exclusive designs.",
           "🎁 TOMICA PLARAIL SHOP: a wall of ~700 Tomica cars and a big train diorama. The easiest place to shop for your nieces and nephews.",
           "🎁 Also here: Sanrio (store exclusives), Chiikawa Land, the ONE PIECE Mugiwara Store, plus Snoopy and Rilakkuma shops.",
         ],
@@ -1019,7 +1019,7 @@ const DAYS = [
         tip: "Osaka switch: stand on the RIGHT side of escalators here (the opposite of Tokyo).",
       },
       {
-        t: "15:30", title: "Check in + nap in Umeda 😴", quest: "💥 MHA × Umeda Sky Building (Oct 30–Nov 30): collab ticket ¥2,800 incl. the 40F observatory, 2 random stickers + a stamp rally for a glass magnet, 9:30 AM–10:30 PM (last entry 10 PM). 💥 MHA Café “WE ARE HERO HOLICS”: BOX cafe&space HEP FIVE 7F (through Dec 6), book at heroaca-cafe.ltr-online.com. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on Daimaru Umeda 13F.", ask: [{"jp": "明日、スーツケースが二つ届きます。", "ro": "Ashita, sūtsukēsu ga futatsu todokimasu.", "en": "Two suitcases are arriving for me tomorrow.", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
+        t: "15:30", title: "Check in + nap in Umeda 😴", quest: "💥 MHA × Umeda Sky Building (Oct 30–Nov 30): collab ticket ¥2,800 incl. the 40F observatory, 2 random stickers + a stamp rally for a glass magnet, 9:30 AM–10:30 PM (last entry 10 PM). 💥 MHA Café “WE ARE HERO HOLICS”: BOX cafe&space HEP FIVE 7F (through Dec 6), book at heroaca-cafe.ltr-online.com. 🍄 Nintendo OSAKA + ⚡ Pokémon Center Osaka are both on LUCUA SOUTH 13F (the old Daimaru Umeda building).", ask: [{"jp": "明日、スーツケースが二つ届きます。", "ro": "Ashita, sūtsukēsu ga futatsu todokimasu.", "en": "Two suitcases are arriving for me tomorrow.", "hear": "yesno"}], ll: [34.7022, 135.5018], say: ["azukeru", "checkin"], pic: "HEP FIVE ferris wheel night", rx: "neon", place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
         how: [
           "From JR Osaka, Midosuji South Exit, walk ~8 min to the hotel.",
           "Check-in is from 3 PM, so you can go straight up. Your two suitcases arrive tomorrow (Nov 3) — tell the front desk so they hold them for you.",
