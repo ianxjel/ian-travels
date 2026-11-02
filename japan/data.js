@@ -1030,26 +1030,17 @@ const DAYS = [
         photo: "HEP FIVE's red Ferris wheel on the mall roof, shot from the street below (better after dark).",
       },
       {
-        t: "18:10", title: "👕 Amerikamura: American vintage in US sizes", ask: [{"jp": "試着してもいいですか？", "ro": "Shichaku shite mo ii desu ka?", "en": "Can I try this on?", "hear": "yesno"}], ll: [34.6719, 135.4985], say: ["kore", "ikura"], pic: "Amerikamura Osaka street", rx: "classic", place: "Amerikamura (America-mura), Osaka",
-        ride: [{"ln": "OM", "from": "M16", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train. 3 stops.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 6, "exit": "Exit 7 → walk ~5 min west into Amerikamura"}],
+        t: "18:10", title: "⚡ Pokémon Center Osaka DX (Daimaru Shinsaibashi 9F)", quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["menzei", "kore"], place: "Daimaru Shinsaibashi",
+        ride: [{"ln": "OM", "from": "M16", "to": "M19", "dir": "なかもず・天王寺方面 (toward Nakamozu / Tennōji)", "type": "Every train. 3 stops.", "wrong": "Next stop 中津 Nakatsu (M15) = wrong way.", "min": 6, "exit": "Follow the signs to 大丸 Daimaru: it connects to the station"}],
         how: [
-          "From the hotel, walk ~8 min to Umeda, red Midosuji Line 3 stops to Shinsaibashi, then walk ~5 min west into Amerikamura (“America Village”).",
-          "Vintage Mecca (2-13-13 Nishi-Shinsaibashi, 1–7 PM, closed Wed): 30s–60s American denim, shirts and military pants.",
-          "Grizzly (2-12-14 Nishi-Shinsaibashi by Triangle Park, 12–7:30 PM): Ralph Lauren and American brands.",
-          "It's American stock, so US sizes — no 3L guessing. Go straight to Vintage Mecca: you'll get ~30 min before it closes at 7 PM. Then walk to Daimaru by ~7:05.",
-        ],
-        photo: "Triangle Park (三角公園) is the heart of Amerikamura — street shots with the murals.",
-      },
-      {
-        t: "19:05", title: "⚡ Pokémon Center Osaka DX (Daimaru Shinsaibashi 9F)", quest: "⭐ Kirby Café Osaka is in this same Daimaru Shinsaibashi building. Reservations sell out fast — check its booking site for a cancellation.", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center?", "hear": "kai"}], ll: [34.6731, 135.5012], say: ["menzei", "kore"], place: "Daimaru Shinsaibashi",
-        how: [
-          "Walk ~5 min east from Amerikamura to Daimaru Shinsaibashi (Main Building).",
+          "Leave the hotel at 6:10: walk ~8 min to Umeda, red Midosuji Line 3 stops to Shinsaibashi, then into Daimaru Shinsaibashi (Main Building). Vintage shopping in Amerikamura is skipped.",
           "Pokémon Center Osaka DX is on 9F, open until 8 PM. (The Pokémon Café is cancelled today.)",
           "Keep receipts — from Nov 1 on, tax refunds are claimed at Narita.",
+          "You have until 8 PM, but head out by ~7:30 for Dōtonbori.",
         ],
       },
       {
-        t: "19:55", title: "Dotonbori neon", ask: [{"jp": "グリコの看板はどっちですか？", "ro": "Guriko no kanban wa dotchi desu ka?", "en": "Which way to the Glico sign?", "hear": "dir"}], ll: [34.6687, 135.5013], say: ["hitotsu", "oishii"], pic: "Glico pose Dotonbori men", rx: "neon", place: "Glico Sign, Dotonbori",
+        t: "19:30", title: "Dotonbori neon", ask: [{"jp": "グリコの看板はどっちですか？", "ro": "Guriko no kanban wa dotchi desu ka?", "en": "Which way to the Glico sign?", "hear": "dir"}], ll: [34.6687, 135.5013], say: ["hitotsu", "oishii"], pic: "Glico pose Dotonbori men", rx: "neon", place: "Glico Sign, Dotonbori",
         how: [
           "Walk ~5 min south down Midosuji/Shinsaibashi-suji to Ebisubashi bridge.",
           "Stroll the canal both ways.",
@@ -1057,14 +1048,14 @@ const DAYS = [
         photo: "The Glico runner pose: arms up in a V, one knee raised, sign behind you. Everyone does it — that's the point. Direct flash for the night look.",
       },
       {
-        t: "20:10", title: "🐙 Takoyaki at Wanaka Dōtonbori", ll: [34.6688, 135.5017], say: ["hitotsu", "oishii"], place: "Takoyaki Wanaka Dotonbori, 1-6-7 Dotonbori, Osaka",
+        t: "19:45", title: "🐙 Takoyaki at Wanaka Dōtonbori", ll: [34.6688, 135.5017], say: ["hitotsu", "oishii"], place: "Takoyaki Wanaka Dotonbori, 1-6-7 Dotonbori, Osaka",
         how: [
           "Wanaka Dōtonbori (1-6-7 Dōtonbori): Google 4.2 from 1,600+ reviews, open until 9 PM.",
           "🟢 Easy: stand counter — point at the box size on the board, pay, eat at the standing counter. Blow on it: the inside is lava.",
         ],
       },
       {
-        t: "20:25", title: "🍜 Kitsune udon at Dōtonbori Imai (optional)", ask: [{"jp": "きつねうどんを一つお願いします。", "ro": "Kitsune udon o hitotsu onegai shimasu.", "en": "One kitsune udon, please.", "hear": "none"}], ll: [34.6686, 135.5022], say: ["hitori", "oishii", "gochisousama"], place: "Dotonbori Imai Honten, 1-7-22 Dotonbori, Osaka",
+        t: "20:05", title: "🍜 Kitsune udon at Dōtonbori Imai (optional)", ask: [{"jp": "きつねうどんを一つお願いします。", "ro": "Kitsune udon o hitotsu onegai shimasu.", "en": "One kitsune udon, please.", "hear": "none"}], ll: [34.6686, 135.5022], say: ["hitori", "oishii", "gochisousama"], place: "Dotonbori Imai Honten, 1-7-22 Dotonbori, Osaka",
         how: [
           "Dōtonbori Imai main shop (1-7-22 Dōtonbori): an Osaka udon institution for 70+ years. Google 4.3 from 2,600+ reviews. Open until 9 PM (closed Wednesdays) — get there by 8:30.",
           "Optional: skip it if you want room for yakiniku at 9.",
@@ -2213,7 +2204,7 @@ const GIFT_SEEDS = [
   { id: "s-sukajan", item: "👕 Sukajan (souvenir jacket) for me", where: "BEAMS JAPAN Shinjuku 2F (Fri)", day: "d5", forWho: "Me" },
   { id: "s-tees", item: "👕 Heavyweight boxy tees in 3L/XXL + a knit polo (going out + work)", where: "UNIQLO Shinjuku Honten (Fri, open till 10 PM) · BEAMS JAPAN", day: "d5", forWho: "Me" },
   { id: "s-work", item: "👕 Work: oxford button-downs, pleated wide trousers, unstructured stretch blazer", where: "Isetan Men's (Fri) · BEAMS / United Arrows", day: "d5", forWho: "Me" },
-  { id: "s-vintage", item: "👕 American vintage in US sizes (denim, workwear, Ralph Lauren)", where: "Amerikamura, Osaka (Mon)", day: "d8", forWho: "Me" },
+  { id: "s-vintage", item: "👕 American vintage in US sizes (denim, workwear, Ralph Lauren)", where: "Amerikamura, Osaka — skipped Mon (Vintage Mecca, Grizzly)", forWho: "Me" },
   { id: "g-uncle", item: "🎁 Japanese polos (go one size up: LL ≈ US L)", where: "BEAMS JAPAN Shinjuku 2F (Fri) · Isetan Men's (backup)", day: "d5", forWho: "Uncle" },
 ];
 
