@@ -1004,16 +1004,16 @@ const DAYS = [
         ride: [{"ln": "KR", "from": "K04", "to": "K11", "dir": "竹田方面 (toward Takeda)", "type": "Every train.", "wrong": "Next stop 北山 Kitayama (K03) = wrong way.", "min": 15, "exit": "Follow signs down to JR Kyoto Station's underground east side (地下東口)"}],
         how: [
           "Bamboo grove skipped: rest up instead. From Kinkakuji-michi, take bus 205 or 204 back to Kitaōji Bus Terminal (~15 min), then the Karasuma subway 7 stops to Kyoto (~15 min).",
-          "Tsukumo Udon main shop, Kyoto Station B1 by the underground east exit, right next to your old hotel: Google 4.1 from 1,600+ reviews, open 7 AM–10 PM.",
+          "Tsukumo Udon main shop, Kyoto Station B1 by the underground east exit, right by the JR gates: Google 4.1 from 1,600+ reviews, open 7 AM–10 PM.",
           "🟢 Easy, no talking: buy a ticket at the machine by the door (English button, cards OK), get in line, hand over the ticket. You'll pick hot or cold.",
-          "Plain kake udon (clear broth) or kitsune udon is gentle on your stomach. Seating is tight, so leave the backpack at the hotel until after.",
+          "Plain kake udon (clear broth) or kitsune udon is gentle on your stomach. Seating is tight, so keep your backpack on your lap or at your feet.",
         ],
       },
       {
         t: "14:30", title: "Kyoto → Osaka", ask: [{"jp": "大阪行きの新快速は何番線ですか？", "ro": "Ōsaka-iki no shinkaisoku wa nanbansen desu ka?", "en": "Which platform is the Special Rapid to Osaka?", "hear": "bansen"}], ll: [34.7025, 135.4959], say: ["nanban", "norikae"], place: "Osaka Station",
         ride: [{"ln": "JA", "from": "A31", "to": "A47", "dir": "大阪・神戸・姫路方面 (westbound) — look for 新快速 Special Rapid", "type": "Special Rapid only stops at these 4 stations. Local and Rapid also work, just slower.", "wrong": "Next stop 山科 Yamashina = wrong way (eastbound).", "min": 30, "exit": "Midosuji South Exit → walk ~8 min to the hotel"}],
         how: [
-          "Grab your backpack at the hotel (a few minutes from the udon shop), then back into JR Kyoto Station.",
+          "You've already got your backpack, so go straight from the udon shop through the JR gates.",
           "JR Special Rapid (新快速) from Kyoto to Osaka (~30 min). Every seat is unreserved, so sit and rest.",
         ],
         tip: "Osaka switch: stand on the RIGHT side of escalators here (the opposite of Tokyo).",
