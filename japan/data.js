@@ -1064,27 +1064,28 @@ const DAYS = [
         ],
       },
       {
-        t: "20:20", title: "🍜 Kitsune udon at Dōtonbori Imai", ask: [{"jp": "きつねうどんを一つお願いします。", "ro": "Kitsune udon o hitotsu onegai shimasu.", "en": "One kitsune udon, please.", "hear": "none"}], ll: [34.6686, 135.5022], say: ["hitori", "oishii", "gochisousama"], place: "Dotonbori Imai Honten, 1-7-22 Dotonbori, Osaka",
+        t: "20:20", title: "🍜 Kitsune udon at Dōtonbori Imai (optional)", ask: [{"jp": "きつねうどんを一つお願いします。", "ro": "Kitsune udon o hitotsu onegai shimasu.", "en": "One kitsune udon, please.", "hear": "none"}], ll: [34.6686, 135.5022], say: ["hitori", "oishii", "gochisousama"], place: "Dotonbori Imai Honten, 1-7-22 Dotonbori, Osaka",
         how: [
           "Dōtonbori Imai main shop (1-7-22 Dōtonbori): an Osaka udon institution for 70+ years. Google 4.3 from 2,600+ reviews. Open until 9 PM (closed Wednesdays) — get there by 8:30.",
+          "Optional: skip it if you want room for yakiniku at 9.",
           "🟢 Easy: order the kitsune udon (sweet fried tofu on top) by name or point at the menu. Drink the dashi broth — it's the whole point in Osaka.",
         ],
       },
       {
-        t: "21:00", title: "🍢 Kushikatsu in Shinsekai (Daruma Sōhonten)", ask: [{"jp": "おすすめセットをお願いします。", "ro": "Osusume setto o onegai shimasu.", "en": "The recommended set, please.", "hear": "none"}], ll: [34.6525, 135.5063], say: ["oishii", "gochisousama"], pic: "Shinsekai Tsutenkaku night neon", rx: "neon", place: "Kushikatsu Daruma Shinsekai Sohonten, 2-3-9 Ebisuhigashi, Osaka",
-        ride: [{"ln": "OK", "from": "K17", "to": "K18", "dir": "天下茶屋方面 (toward Tengachaya)", "type": "Every train. 1 stop from Nippombashi.", "wrong": "Next stop 長堀橋 Nagahoribashi (K16) = wrong way.", "min": 2, "exit": "Exit 3 → Shinsekai's neon is right there"}],
+        t: "21:00", title: "🥩 Dinner: Yakiniku no Watami Umeda", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [34.7058, 135.4992], say: ["hitori", "oishii", "gochisousama"], place: "Yakiniku no Watami, East Square Chayamachi 4F, 2-16 Chayamachi, Kita-ku, Osaka",
+        ride: [{"ln": "OM", "from": "M20", "to": "M16", "dir": "梅田・新大阪方面 (toward Umeda / Shin-Osaka)", "type": "Every train. 4 stops.", "wrong": "Next stop 大国町 Daikokuchō (M21) = wrong way.", "min": 8, "exit": "Walk ~5–8 min northeast to East Square Chayamachi (茶屋町), past Hankyu Umeda"}],
         how: [
-          "Walk ~8 min to Nippombashi, Sakaisuji Line 1 stop to Ebisuchō, then into Shinsekai's retro neon under Tsūtenkaku tower.",
-          "Kushikatsu Daruma Shinsekai Sōhonten (the original): Google 4.1 from 2,100+ reviews, open until 10:30 PM.",
-          "🟢 Easy: English menu with photos — get the recommended set. Never double-dip in the shared sauce (二度づけ禁止); use a cabbage leaf to scoop more.",
-          "Back to Umeda by ~10:30 for Daikichi: Sakaisuji Line to Nippombashi, then the Midosuji Line from Namba to Umeda (~20 min).",
+          "Leave Dōtonbori by ~8:40: walk to Namba Station, red Midosuji Line 4 stops to Umeda.",
+          "Yakiniku no Watami, East Square Chayamachi 4F (2-16 Chayamachi): Google 4.8 from 3,400+ reviews, open until 1 AM.",
+          "🟢 Easy, almost no talking: order on the tablet (English menu) and the meat arrives on a conveyor tray. À la carte is fine; you don't have to do all-you-can-eat. ⚠️ Prices not verified.",
+          "Then Daikichi is ~10 min walk east, in Doyama-chō.",
         ],
-        photo: "Shinsekai is the best direct-flash street of the trip: giant food signs, retro neon, Tsūtenkaku behind you.",
+        snack: "Grill each piece a few seconds per side (thin wagyu cooks fast), dip in the tare sauce, eat with rice.",
       },
       {
         t: "22:30", title: "Daikichi — Osaka's gay sauna 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["shukuhaku", "gaikokujin"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
         how: [
-          "It's in the middle of Doyama-cho (12-12 Doyamacho), about 5 minutes from your hotel.",
+          "It's in the middle of Doyama-cho (12-12 Doyamacho), ~10 min walk from Watami and about 5 minutes from your hotel.",
           "Open 24/7. A short stay is about ¥2,000–2,500, overnight about ¥2,500–3,000, with private rooms extra. Cash.",
           "Several floors: sauna, steam, baths, a dark room and cabins. Age limit is under 50, and ID may be checked, so bring your passport.",
           "Head back to your hotel by midnight. Tomorrow is breakfast at 8:40 AM, then your fixed Nozomi 13 to Hiroshima at 10:17.",
@@ -1096,7 +1097,7 @@ const DAYS = [
 
   /* ---------------- DAY 9 ---------------- */
   {
-    id: "d9", date: "2026-11-03", prep: ["Fuji hotel booked? Add it in Trip → Hotels (edit Fuji hotel)", "Tickets: Hikari (NOT Nozomi) Shin-Osaka → Mishima ~10:30, seat E + the Mishima → Kawaguchiko bus QR", "Check the Kawaguchiko live cam and forecast — flip the cloudy-Fuji plan only if you want to", "Warm layer at the top of the backpack", "Check out by ~9:30 AM"], rain: "The Miyajima ferry runs in rain, and the torii looks dramatic in mist. If it pours: spend longer indoors at the Hiroshima Peace Memorial Museum and Okonomimura.", home: {"after": "20:00", "note": "Check the last shinkansen from Hiroshima back to Shin-Osaka in SmartEX and don't cut it close — it's the only way home tonight."}, dow: "Tue", title: "Hiroshima + Miyajima", city: "Hiroshima",
+    id: "d9", date: "2026-11-03", prep: ["Shinkansen in SmartEX: Nozomi 13 at 10:17 (car 13, 9-A) out, Nozomi 200 at 19:14 (car 16, 5-E) back", "Your two suitcases arrive at the hotel today — remind the front desk", "Check MY NEIGHBOR's Instagram for holiday hours", "Umbrella in the backpack"], rain: "The Miyajima ferry runs in rain, and the torii looks dramatic in mist. If it pours: spend longer indoors at the Hiroshima Peace Memorial Museum and Okonomimura.", home: {"after": "19:00", "note": "Your Nozomi 200 leaves Hiroshima at 19:14 — be on the platform by 19:00. Missing it means rebooking in SmartEX."}, dow: "Tue", title: "Hiroshima + Miyajima", city: "Hiroshima",
     theme: "sea", emoji: "🦌", deco: ["🦌", "🌊", "⛩️", "🍁", "🕊️", "🦪"],
     kicker: "Day 9 · Culture Day holiday",
     tagline: "A floating torii, wild deer, grilled oysters, and a quiet hour of remembrance at the Peace Park.",
@@ -1216,10 +1217,9 @@ const DAYS = [
       },
       {
         t: "24:30", title: "Last-night soak at Daikichi 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["kyukei"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
-        ride: [{"ln": "OM", "from": "M22", "to": "M16", "dir": "千里中央・新大阪方面 (toward Shin-Osaka)", "type": "Every train.", "wrong": "Next stop 天王寺 Tennōji (M23) = wrong way.", "min": 15, "exit": "Walk 5–10 min to Doyama-cho"}],
         how: [
-          "Daikichi is in the middle of Doyama-chō, a few minutes from the yakiniku and your hotel.",
-          "Check out of the hotel by about 9:30 AM tomorrow for the Fuji train. No sauna in Kawaguchiko, so make this one count.",
+          "Daikichi is in the middle of Doyama-chō, a few minutes' walk from the yakiniku and your hotel.",
+          "Tomorrow you leave Osaka with both suitcases. Yokohama has no gay sauna, so make this one count.",
         ],
         spicy: "Last sauna of the trip 🥲 Go big.",
       },
@@ -1883,7 +1883,7 @@ const FOODS = [
   { id: "kushikatsu", emoji: "🍡", en: "Kushikatsu", jp: "串カツ", ro: "kushikatsu", wiki: "串カツ", enwiki: "Kushikatsu",
     what: "Deep-fried skewers of meat, veg and cheese. Osaka's drinking food.",
     order: { jp: "おまかせで五本お願いします", ro: "Omakase de gohon onegai shimasu", en: "Five chef's-choice skewers, please" },
-    tips: "NO double-dipping in the shared sauce (二度づけ禁止). Use a cabbage leaf to scoop more sauce.", where: "Kushikatsu Daruma Shinsekai Sōhonten (Mon) — Google 4.1", day: "d8" },
+    tips: "NO double-dipping in the shared sauce (二度づけ禁止). Use a cabbage leaf to scoop more sauce.", where: "Not on the plan — swapped for yakiniku on Mon. Kushikatsu Daruma (Google 4.1) has branches in Dōtonbori if you want it later" },
   { id: "momiji", emoji: "🍁", en: "Momiji manjū", jp: "もみじ饅頭", ro: "momiji manjū", wiki: "もみじ饅頭", enwiki: "Momiji manjū",
     what: "Maple-leaf sponge cakes filled with red bean or custard. Miyajima's sweet.",
     order: { jp: "揚げもみじを一つお願いします", ro: "Age-momiji o hitotsu onegai shimasu", en: "One deep-fried momiji, please" },
