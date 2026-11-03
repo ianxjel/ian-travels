@@ -47,17 +47,16 @@ const HOTELS = {
     maps: "APA Hotel & Resort Osaka Umeda Eki Tower",
     emoji: "🐙",
   },
-  fuji: {
-    name: "Mt Fuji hotel",
-    jp: "",
-    addr: "",
-    addrEn: "Tap “Edit” to add your Fuji hotel once it's booked",
-    near: "",
-    nearEn: "",
-    dates: "Wed Nov 4 → Thu Nov 5 · 1 night",
-    maps: "Kawaguchiko Station",
-    emoji: "🗻",
-    editable: true,
+  yokohama: {
+    name: "APA Hotel & Resort Yokohama Bay Tower",
+    jp: "アパホテル&リゾート〈横浜ベイタワー〉",
+    addr: "神奈川県横浜市中区海岸通5-25-3",
+    addrEn: "5-25-3 Kaigandori, Naka-ku, Yokohama",
+    near: "みなとみらい線 馬車道駅 徒歩約2分",
+    nearEn: "~2 min from Bashamichi Stn (Minatomirai Line) · ~9 min from JR Sakuragichō",
+    dates: "Wed Nov 4 → Thu Nov 5 · 1 night · Conf 20261103269901077",
+    maps: "APA Hotel & Resort Yokohama Bay Tower",
+    emoji: "⚓",
   },
 };
 
@@ -1260,149 +1259,145 @@ const DAYS = [
 
   /* ---------------- DAY 10 ---------------- */
   {
-    id: "d10", date: "2026-11-04", prep: ["Alarm 5:30 AM for the sunrise; warm layer by the door", "Save the 9:30 AM Kawaguchiko → Busta Shinjuku bus QR — don't take a later one", "Passport + tax-refund receipts + those goods together in your backpack", "Online check-in for UA868 (opens 24 hours before the 6 PM flight)", "Mobile Passport Control app ready for Chicago", "Spend leftover coins — they can't be exchanged back"], rain: "Clouds hide Fuji? Check the Kawaguchiko live cam the night before. If the forecast is bad, consider Hakone instead (Hikari to Odawara) — great hot springs, less reliable Fuji views. Even cloudy, Kawaguchiko's autumn leaves and onsen are worth it.", cloudy: true, home: {"after": "18:30", "note": "Kawaguchiko's local buses stop early in the evening — pick a dinner spot within walking distance of your hotel, or eat early enough to catch the bus back."}, dow: "Wed", title: "Osaka → Mt Fuji", city: "Mt Fuji",
-    theme: "fuji", emoji: "🗻", deco: ["🗻", "🍁", "♨️", "🌅", "🚄", "🍂"],
-    kicker: "Day 10 · The mountain",
-    tagline: "Bullet train, then My Hero Academia coasters with Fuji in the background, hōtō noodles and a hot spring.",
-    sleep: "fuji", wx: { lat: 35.51, lon: 138.76 },
-    phrases: ["onsen", "takkyubin", "doko", "gochisousama", "kirei"],
+    id: "d10", date: "2026-11-04", prep: ["Pick up both suitcases from the Osaka front desk (delivered Nov 3)", "Kodama 820 QR in SmartEX: 10:54 Shin-Osaka, car 14, seat 1-A (oversized baggage area)", "Skincare + liquids go in the checked bag", "Online check-in for UA868 opens tonight around 6 PM (24 hours before)", "Mobile Passport Control app ready for Chicago"], rain: "Dry forecast. If it rains in Yokohama, everything tonight is indoors and connected to Yokohama Station.", dow: "Wed", title: "Osaka → Yokohama", city: "Yokohama",
+    theme: "sea", emoji: "⚓", deco: ["⚓", "🚄", "⚡", "🍣", "🌉", "🎁"],
+    kicker: "Day 10 · Last night in Japan",
+    tagline: "One easy bullet train with your bags behind you, two Yokohama Pokémon Centers, conveyor-belt sushi and a big bath.",
+    sleep: "yokohama", wx: { lat: 35.45, lon: 139.64 },
+    phrases: ["menzei", "kore", "doko", "taxi", "gochisousama"],
     steps: [
       {
-        t: "09:30", title: "Check out", say: ["checkout", "hitotsu"], place: "Shin-Osaka Station",
+        t: "08:45", title: "🍳 Breakfast: something familiar", ll: [34.7032, 135.5009], say: ["kore", "fukuro"], place: "Konbini near APA Osaka Umeda",
         how: [
-          "Check out with your backpack.",
-          "Head straight to Shin-Osaka (JR 1 stop from Osaka).",
+          "Konbini by the hotel (onigiri, sandwiches, yogurt) or McDonald's Umeda Chayamachi (open 24 hours, English kiosks).",
+          "Pack: skincare and any liquids into the checked bag.",
         ],
       },
       {
-        t: "10:00", title: "🍳 Breakfast + 🍱 lunch: two ekiben at Shin-Osaka", ask: [{"jp": "これを二つお願いします。", "ro": "Kore o futatsu onegai shimasu.", "en": "Two of these, please.", "hear": "money"}], ll: [34.7335, 135.5003], say: ["kore", "fukuro"], place: "Shin-Osaka Station shinkansen gates",
+        t: "09:45", title: "Check out → taxi to Shin-Osaka", ask: [{"jp": "新大阪駅までお願いします。", "ro": "Shin-Ōsaka-eki made onegai shimasu.", "en": "To Shin-Osaka Station, please.", "hear": "none"}], ll: [34.7334, 135.5001], say: ["checkout", "taxi"], place: "Shin-Osaka Station",
         how: [
-          "Inside the shinkansen gates: one ekiben for breakfast now, one for lunch on the Hikari. Pick from the display, pay, done.",
-          "🟢 Easy: point-and-pay. Go regional — a Kobe beef bento or a pretty Kansai-style box.",
+          "Get both suitcases from the front desk, check out, and take a taxi from the hotel (~15 min). ⚠️ Fare not verified, roughly ¥2,000–2,500.",
+          "Tell the driver: 新大阪駅までお願いします (Shin-Ōsaka-eki made onegai shimasu).",
         ],
       },
       {
-        t: "10:30", title: "Hikari to Mishima (seat E)", fixed: true, ask: [{"jp": "三島に止まるひかりは何番線ですか？", "ro": "Mishima ni tomaru Hikari wa nanbansen desu ka?", "en": "Which platform for the Hikari that stops at Mishima?", "hear": "bansen"}], ll: [35.1264, 138.911], say: ["seki", "nanban"], pic: "Mt Fuji from shinkansen Mishima", rx: "classic", place: "Mishima Station",
-        ride: [{"ln": "JA", "from": "A47", "to": "A46", "dir": "京都方面 (toward Kyoto)", "type": "Any train.", "wrong": "Next stop 塚本 Tsukamoto = wrong way.", "min": 4, "exit": "Follow blue 新幹線 signs"}, {"ln": "TKH", "from": "SHO", "to": "MSM", "dir": "東京方面 (eastbound) — must be ひかり HIKARI", "type": "Hikari stop patterns vary — these are the big ones. Check 三島 is on your train's list on the platform board.", "wrong": "のぞみ Nozomi does NOT stop at Mishima.", "min": 120, "exit": "South Exit (南口) → Fujikyu bus stop"}],
+        t: "10:25", title: "🍙 Lunch to go for the train", ll: [34.7335, 135.5003], say: ["kore", "fukuro"], place: "Shin-Osaka Station",
         how: [
-          "Take a HIKARI (ひかり) — the Nozomi doesn't stop at Mishima.",
-          "Seat E again for Fuji. ~2 h.",
-        ],
-        photo: "Fuji gets huge on the approach to Mishima — burst through the window.",
-      },
-      {
-        t: "12:45", title: "Fujikyu bus to Kawaguchiko", fixed: true, ask: [{"jp": "河口湖行きのバス乗り場はどこですか？", "ro": "Kawaguchiko-iki no basu noriba wa doko desu ka?", "en": "Where's the bus stop for Kawaguchiko?", "hear": "dir"}, {"jp": "このバスは河口湖駅に行きますか？", "ro": "Kono basu wa Kawaguchiko-eki ni ikimasu ka?", "en": "Does this bus go to Kawaguchiko Station?", "hear": "yesno"}], ll: [35.4986, 138.7689], say: ["konokippu"], pic: "Mt Fuji bus window view", place: "Kawaguchiko Station",
-        how: [
-          "Mishima Station South Exit → bus stop for the Fujikyu bus to Kawaguchiko.",
-          "Show your highway-buses.jp QR (or pay on board if seats remain). ~1 h 30.",
-        ],
-        photo: "Sit on the right side heading north — Fuji fills the window around Lake Yamanaka.",
-      },
-      {
-        t: "14:30", title: "Fuji-Q Highland × My Hero Academia 🎢", quest: "💥 “My Hero Academia in Fuji-Q Highland” runs until Nov 8: Deku / Bakugo / Todoroki announcements on the rides, MHA music on Kirarinko, an attraction + mission stamp rally, MHA-wrapped trains and buses, collab food and merch.", ask: [{"jp": "フジヤマは今日動いていますか？", "ro": "Fujiyama wa kyō ugoite imasu ka?", "en": "Is FUJIYAMA running today?", "hear": "yesno"}], ll: [35.4873, 138.7799], say: ["photoplease", "kakkoii"], pic: "Fuji-Q FUJIYAMA roller coaster Mt Fuji", rx: "velvia", place: "Fuji-Q Highland, Fujiyoshida",
-        ride: [{"ln": "FJ", "from": "KWG", "to": "FQH", "dir": "大月方面 (toward Ōtsuki) — Kawaguchiko is the end, so any train", "type": "Every local stops at Fuji-Q Highland. Or walk ~20 min.", "min": 5, "exit": "The park gate is right at the station"}],
-        how: [
-          "The Fujikyu bus from Mishima may stop at 富士急ハイランド (Fuji-Q Highland) — ask the driver. Otherwise ride it to Kawaguchiko, leave your bag in a station locker, and take the train 1 stop back.",
-          "Entry is free; you pay per ride or buy a one-day pass (¥6,000–7,900 depending on the day). During the MHA collab (Sep 18–Nov 8) the pass comes with an original 3-piece rubber-band set. Look out for the MHA-wrapped Fujikyu trains and buses too.",
-          "Check fujiq.jp for Nov 4 hours: in autumn the park often closes around 5 PM, and closure days are irregular (usually Thursdays — Nov 4 is a Wednesday).",
-          "Thrill list: FUJIYAMA (MHA-themed classic with huge Fuji views), Eejanaika (spinning 4D coaster), Takabisha (beyond-vertical drop), Do-Dodonpa (launch coaster). Check which are running today.",
-        ],
-        photo: "Fuji behind the FUJIYAMA lift hill at golden hour — the coaster and the mountain in one frame.",
-        tip: "If Fuji-Q is closed: Oishi Park on the north shore for a Fuji-over-the-lake sunset (Kawaguchiko sightseeing bus, red line).",
-        snack: "MHA collab menu inside the park — order food for a random placemat, a side or drink for a random coaster. 🟢 Easy: counter service.",
-      },
-      {
-        t: "17:15", title: "Check in", fixed: true, ask: [{"jp": "温泉は何時まで入れますか？", "ro": "Onsen wa nanji made hairemasu ka?", "en": "Until what time is the hot spring open?", "hear": "time"}], say: ["checkin", "onsen"], place: "",
-        how: [
-          "Fujikyu train back 1 stop to Kawaguchiko (grab your bag from the locker), then check in at your Fuji hotel (add it in the Hotels tab once booked).",
-          "Grab your warm layer: Kawaguchiko gets cold after dark.",
+          "The Kodama is 3.5 hours, so grab lunch inside Shin-Osaka Station before the gates: konbini sandwiches and onigiri, or 551 Hōrai pork buns if you want them.",
+          "Get a drink too. Kodama trains may not have a cart service.",
         ],
       },
       {
-        t: "18:30", title: "🍲 Dinner: hōtō at Hōtokura Funari, then onsen", ll: [35.4925, 138.7755], say: ["hitori", "onsen", "gochisousama"], pic: "hoto noodles Kawaguchiko", place: "Hotokura Funari Kawaguchiko, 6931 Funatsu, Fujikawaguchiko, Yamanashi",
+        t: "10:54", title: "Kodama 820 to Shin-Yokohama (Car 14, seat 1-A)", fixed: true, ask: [{"jp": "こだま820号は何番線ですか？", "ro": "Kodama happyaku-nijū-gō wa nanbansen desu ka?", "en": "Which platform is Kodama 820?", "hear": "bansen"}], ll: [35.5075, 139.6176], say: ["nanban", "seki"], place: "Shin-Yokohama Station",
+        ride: [{"ln": "TKK", "from": "SHO", "to": "SYH", "dir": "東京方面 (toward Tokyo)", "type": "Kodama stops at every station.", "min": 215, "exit": "Shinkansen gates → follow signs for the taxi stand or the Blue Line subway"}],
         how: [
-          "🍽️ Dinner: hōtō, the local thick noodles stewed in miso with pumpkin, at Hōtokura Funari Kawaguchiko (ほうとう蔵 歩成 河口湖店, 6931 Funatsu — on Route 139 by the Funatsu-tozandō-iriguchi intersection, ~1.1 km / 15 min walk from Kawaguchiko Station; Google 4.2 from 3,400+ reviews). Open 11:00–21:00, last order 20:30. Skip Hōtō Fudō Higashikoiji (3.7).",
-          "Hot spring at the hotel (manners in the Manners tab).",
-          "Check the Fuji live camera, set an alarm for 5:30 AM, early night.",
+          "✅ Booked: KODAMA 820, Shin-Osaka 10:54 → Shin-Yokohama 14:29. Car 14, seat 1-A, with the oversized baggage area. Your suitcases go in the space by your seat.",
+          "Your Suica isn't linked: tap Display QR-Ticket in SmartEX and scan it at the shinkansen gate.",
+          "🗻 Mt. Fuji is on the other side of the train (the D–E side). Around the Shin-Fuji and Mishima stops, look out the windows across the aisle or by the doors.",
         ],
-        spicy: "Onsen: the one place where being naked in public is the dress code 😉 Wash fully before you get in, keep the little towel out of the water.",
+      },
+      {
+        t: "14:30", title: "Shin-Yokohama → APA Bay Tower", ask: [{"jp": "アパホテル横浜ベイタワーまでお願いします。", "ro": "Apa Hoteru Yokohama Bei Tawā made onegai shimasu.", "en": "To APA Hotel Yokohama Bay Tower, please.", "hear": "none"}], ll: [35.4517, 139.6386], say: ["taxi", "hotel"], place: "APA Hotel & Resort Yokohama Bay Tower, 5-25-3 Kaigandori, Naka-ku, Yokohama",
+        ride: [{"ln": "YB", "from": "B25", "to": "B18", "dir": "湘南台方面 (toward Shōnandai)", "type": "Every train. No transfer.", "wrong": "Next stop 北新横浜 Kita-Shin-Yokohama = wrong way.", "min": 15, "exit": "Sakuragichō → walk ~10 min east to the hotel (or take a taxi from here)"}],
+        how: [
+          "Easiest with two bags: taxi from the Shin-Yokohama station taxi stand (~20–25 min). Show the hotel card in Trip → Hotels. ⚠️ Fare not verified, roughly ¥3,000–4,000.",
+          "Cheaper: Blue Line subway straight to Sakuragichō (no transfer), then ~10 min walk.",
+        ],
+      },
+      {
+        t: "15:15", title: "Check in + rest ♨️", ask: [{"jp": "大浴場は何時までですか？", "ro": "Daiyokujō wa nanji made desu ka?", "en": "Until what time is the large bath open?", "hear": "time"}], ll: [35.4517, 139.6386], say: ["checkin", "onsen"], place: "APA Hotel & Resort Yokohama Bay Tower",
+        how: [
+          "✅ Booked (Expedia): Single room, 1 night. Confirmation 20261103269901077 · Expedia itinerary 73580024664297. Check-in from 3 PM.",
+          "The hotel has a large public bath with an open-air bath. Ask the front desk for the hours (manners in the Manners tab).",
+          "Bashamichi Station (Minatomirai Line) is ~2 min away.",
+        ],
+      },
+      {
+        t: "17:00", title: "⚡ Pokémon Center Yokohama (Sky Building 8F)", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center?", "hear": "kai"}], ll: [35.4646, 139.6245], say: ["menzei", "kore"], place: "Pokémon Center Yokohama, Yokohama Sky Building 8F, 2-19-12 Takashima, Nishi-ku, Yokohama",
+        ride: [{"ln": "MM", "from": "MM04", "to": "MM01", "dir": "横浜・渋谷方面 (toward Yokohama / Shibuya)", "type": "Every train. 3 stops.", "wrong": "Next stop 日本大通り Nihon-ōdōri = wrong way.", "min": 5, "exit": "East Exit (東口) → Yokohama Sky Building, ~5 min"}],
+        how: [
+          "Bashamichi → Minatomirai Line 3 stops to Yokohama, then the East Exit to the Yokohama Sky Building (the same building as YCAT, tomorrow's airport bus).",
+          "Open 10:30 AM–8:30 PM. Reviews say it sometimes uses 30-minute timed entry tickets, so you may get a time slot at the door.",
+          "Look for the Yokohama sailor Pikachu (reviews say it sells out, so grab it if you see it). Keep receipts for the Narita tax refund.",
+        ],
+      },
+      {
+        t: "17:50", title: "🍣 Dinner: Mawashizushi Katsu (conveyor sushi)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.4646, 139.6248], say: ["hitori", "itadakimasu", "gochisousama"], place: "Mawashizushi Katsu, Yokohama Sky Building 11F, 2-19-12 Takashima, Nishi-ku, Yokohama",
+        how: [
+          "Same building, 11F: Google 4.1 from 2,200+ reviews, open until 10:30 PM. Conveyor sushi like Himawari, with a tablet to order, so no new routine.",
+          "🟢 Easy: take a number from the waiting machine at the door, then order on the tablet or grab plates off the belt.",
+          "Want something even simpler? Sukiya gyūdon is all around the station.",
+        ],
+      },
+      {
+        t: "19:00", title: "⚡ Pokémon Center Yokohama Satellite (JOINUS 2F)", ll: [35.4652, 139.6206], say: ["menzei", "kore"], place: "Pokémon Center Yokohama Satellite, JOINUS 2F, 1-5-1 Minamisaiwai, Nishi-ku, Yokohama",
+        how: [
+          "Walk through Yokohama Station to the West Exit (西口), JOINUS 2F. Open until 9 PM.",
+          "Smaller than a full Pokémon Center, with different items, plus a big screen with Pokémon videos.",
+        ],
+      },
+      {
+        t: "19:30", title: "👕 UNIQLO Yodobashi Yokohama (optional)", ll: [35.4677, 139.6204], say: ["menzei", "kore"], place: "UNIQLO Yodobashi Yokohama, Yodobashi Yokohama 8F, 1-2-7 Kitasaiwai, Nishi-ku, Yokohama",
+        how: [
+          "Only if you still need UNIQLO: Yodobashi Yokohama 8F, West Exit, open until 10 PM. Big store, tax-free registers.",
+        ],
+      },
+      {
+        t: "20:30", title: "Back to the hotel: bath + pack", ll: [35.4517, 139.6386], say: ["onsen"], place: "APA Hotel & Resort Yokohama Bay Tower",
+        ride: [{"ln": "MM", "from": "MM01", "to": "MM04", "dir": "元町・中華街方面 (toward Motomachi-Chūkagai)", "type": "Every train. 3 stops.", "wrong": "Next stop 反町 Tammachi (Tōkyū Line) = wrong way.", "min": 5, "exit": "Bashamichi → ~2 min walk"}],
+        how: [
+          "Minatomirai Line 3 stops back to Bashamichi.",
+          "Online check-in for UA868. Pack tonight: tax-free sealed bags and liquids in the checked bag, passport + receipts in your backpack.",
+        ],
       },
     ],
   },
 
   /* ---------------- DAY 11 ---------------- */
   {
-    id: "d11", date: "2026-11-05", rain: "Cloudy sunrise? Skip the lakeshore, sleep an extra hour, and still try Chūreitō around 7 AM — mornings are Fuji's clearest window. Don't change the 9:30 bus.", cloudy: true, dow: "Thu", title: "Fuji sunrise → fly home", city: "Fuji → Narita",
-    theme: "sunrise", emoji: "🌅", deco: ["🌅", "🗻", "✈️", "💖", "🎒", "🏯"],
+    id: "d11", date: "2026-11-05", prep: ["Check out by 10 AM; ask the front desk to hold your bags", "Buy the YCAT → Narita bus ticket at the YCAT counter (¥4,000) — aim for the 1:00 PM bus", "Passport + tax-refund receipts + those goods together in your backpack", "Mobile Passport Control app ready for Chicago", "Spend leftover coins — they can't be exchanged back"], rain: "Dry forecast. The bus goes by road, so if traffic looks bad, take an earlier bus.", dow: "Thu", title: "Yokohama → fly home", city: "Yokohama → Narita",
+    theme: "sunrise", emoji: "✈️", deco: ["✈️", "⚓", "💖", "🎒", "⚡", "🌅"],
     kicker: "Day 11 · Sayonara (for now)",
-    tagline: "Sunrise on Fuji, a pagoda, and one last konbini run. You did Japan, birthday boy.",
-    sleep: null, wx: { lat: 35.51, lon: 138.76 },
+    tagline: "A slow morning, one bus to the airport, one last Pokémon Store. You did Japan, birthday boy.",
+    sleep: null, wx: { lat: 35.77, lon: 140.39 },
     phrases: ["arigatou", "gochisousama", "doko", "card", "mata"],
     steps: [
       {
-        t: "05:45", title: "Lakeshore sunrise", fixed: true, ll: [35.5245, 138.7462], say: ["ohayou", "kirei"], pic: "Kawaguchiko sunrise Fuji reflection", rx: "velvia", place: "Oishi Park, Fujikawaguchiko",
+        t: "09:00", title: "🍳 Breakfast + check out", ask: [{"jp": "荷物を預かってもらえますか？", "ro": "Nimotsu o azukatte moraemasu ka?", "en": "Could you hold my bags?", "hear": "yesno"}], ll: [35.4517, 139.6386], say: ["checkout", "azukeru"], place: "APA Hotel & Resort Yokohama Bay Tower",
         how: [
-          "Warm layer on. Head to the north shore (~6:00 AM sunrise).",
-          "Morning is Fuji's clearest window — clouds usually build by late morning.",
-        ],
-        photo: "Fuji reflected in still water: crouch low near the edge, or stand as a silhouette at the waterline.",
-      },
-      {
-        t: "07:00", title: "Chureito Pagoda", ask: [{"jp": "忠霊塔はどっちですか？", "ro": "Chūreitō wa dotchi desu ka?", "en": "Which way to Chūreitō Pagoda?", "hear": "dir"}], ll: [35.5013, 138.8019], say: ["photoplease"], pic: "Chureito Pagoda men photo", rx: "velvia", place: "Chureito Pagoda",
-        ride: [{"ln": "FJ", "from": "KWG", "to": "SYD", "dir": "大月方面 (toward Ōtsuki) — Kawaguchiko is the end, so any train", "type": "Local (普通) trains stop at Shimoyoshida; check the board for limited expresses.", "min": 15, "exit": "Walk up ~400 steps to the pagoda deck"}],
-        how: [
-          "Fujikyu train from Kawaguchiko to Shimoyoshida (~15 min).",
-          "Walk up ~400 steps to the viewing deck above the pagoda.",
-        ],
-        photo: "Stand at the right edge of the frame, back to camera or in profile, with the pagoda + Fuji behind you. 2–3x zoom. Then Honchō Street's Fuji view — sidewalk only.",
-      },
-      {
-        t: "09:00", title: "🍳 Breakfast: konbini at Kawaguchiko Station", ll: [35.4983, 138.7688], say: ["atatame", "fukuro"], place: "Kawaguchiko Station",
-        how: [
-          "🟢 Easy: onigiri + tamago sando + a hot drink for the bus, and a cup of oden from the hot counter if they have it (point at the pieces: daikon, egg, konnyaku). Grab regional KitKats or Fuji-shaped sweets as gifts while you're there.",
+          "Konbini breakfast (there's one in the hotel). Check out by 10 AM and leave your bags at the front desk.",
+          "Slow morning: rest, or wander the waterfront near the hotel.",
         ],
       },
       {
-        t: "09:30", title: "Highway bus to Shinjuku", fixed: true, ask: [{"jp": "新宿行きのバス乗り場はここですか？", "ro": "Shinjuku-iki no basu noriba wa koko desu ka?", "en": "Is this the stop for the bus to Shinjuku?", "hear": "yesno"}], ll: [35.4986, 138.7689], say: ["konokippu"], place: "Busta Shinjuku",
-        ride: [{"ln": "FJ", "from": "SYD", "to": "KWG", "dir": "河口湖方面 (toward Kawaguchiko)", "type": "Any train.", "wrong": "Next stop isn't 月江寺 Gekkōji = wrong way.", "min": 15, "exit": "Bus stops are outside Kawaguchiko Station"}],
+        t: "11:45", title: "Lunch + bags → YCAT", ask: [{"jp": "YCATまでお願いします。", "ro": "Wai-kyatto made onegai shimasu.", "en": "To YCAT, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["taxi", "gochisousama"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
         how: [
-          "Fujikyu train back to Kawaguchiko Station in time for the 9:30 bus — don't take a later one.",
-          "Show your highway-buses.jp QR. ~1 h 45 to Busta Shinjuku.",
+          "Collect your bags and take a taxi to YCAT, the airport bus terminal on 1F of the Yokohama Sky Building (~10 min). ⚠️ Fare not verified, roughly ¥1,000–1,500.",
+          "Buy your bus ticket at the YCAT counter (¥4,000), then have lunch in the same building: Mawashizushi Katsu (11F) opens at 11.",
         ],
       },
       {
-        t: "11:15", title: "🍜 Lunch: Fūunji tsukemen", ask: [{"jp": "特製つけめんを一つ。", "ro": "Tokusei tsukemen o hitotsu.", "en": "One special tsukemen.", "hear": "none"}], ll: [35.6857, 139.6985], say: ["oishii", "gochisousama"], place: "Fu-unji, 2-14-3 Yoyogi, Shibuya, Tokyo",
+        t: "13:00", title: "🚌 Limousine bus YCAT → Narita Terminal 1", ll: [35.7720, 140.3929], say: ["arigatou"], place: "Narita Airport Terminal 1",
         how: [
-          "Fūunji (風雲児), 2-14-3 Yoyogi: Google 4.3 from 5,300+ reviews, Tripadvisor 4.5. ~5 min walk from Busta Shinjuku / JR Shinjuku South Exit. Opens 11 AM.",
-          "🟢 Easy: buy a ticket at the machine; the special tsukemen (特製) adds pork belly and a soft egg. Pick 200g, 300g or 400g of noodles — same price.",
-          "Dip the thick cold noodles in the rich fish-and-chicken broth. At the end, ask for “soup wari” to thin the leftover broth and drink it.",
-          "⚠️ Flight day: if the line is longer than ~20 people, skip it and grab an ekiben instead. Be on a N'EX by about 12:45.",
-          "Coins: spend leftovers at a vending machine before the airport — coins can't be exchanged back.",
+          "The 1:00 PM bus from YCAT reaches Terminal 3 at 2:37, Terminal 2 at 2:40 and Terminal 1 at about 2:45. Staff load your suitcases under the bus.",
+          "Get off at Terminal 1 (the last stop). United is in Terminal 1, South Wing.",
+          "Takes ~1 hr 45 min. If traffic looks bad, take an earlier bus.",
         ],
       },
       {
-        t: "12:15", title: "Narita Express to the airport", fixed: true, ask: [{"jp": "成田エクスプレスの切符はどこで買えますか？", "ro": "Narita Ekusupuresu no kippu wa doko de kaemasu ka?", "en": "Where can I buy a Narita Express ticket?", "hear": "dir"}], ll: [35.6896, 139.7006], say: ["oshiete", "seki"], place: "JR Shinjuku Station",
-        ride: [{"ln": "NEX", "from": "SJK", "to": "NRT1", "dir": "成田空港方面 — every seat is reserved; your car + seat are on the ticket", "type": "At Tokyo the train joins another — just stay in your seat.", "wrong": "Get off at the LAST stop, 成田空港 Narita Airport (T1). 空港第2ビル is Terminal 2·3 — United is in T1.", "min": 80, "exit": "Terminal 1 → United check-in"}],
+        t: "14:45", title: "Narita: check in → tax refund → Pokémon Store", ll: [35.7720, 140.3929], say: ["passport", "menzei"], place: "Narita Airport Terminal 1 South Wing",
         how: [
-          "Walk back into JR Shinjuku and buy a Narita Express (N'EX) ticket at a JR machine for the next departure — every seat is reserved (~¥3,300). They run roughly every 30 minutes.",
-          "~1 h 20 to Narita Airport Terminal 1 (United is in T1).",
-        ],
-      },
-      {
-        t: "14:00", title: "Narita: bag → tax refund → check in", ask: [{"jp": "ヤマト運輸のカウンターはどこですか？", "ro": "Yamato Un'yu no kauntā wa doko desu ka?", "en": "Where's the Yamato luggage counter?", "hear": "dir"}, {"jp": "免税の手続きはどこですか？", "ro": "Menzei no tetsuzuki wa doko desu ka?", "en": "Where do I do the tax refund?", "hear": "dir"}], ll: [35.772, 140.3929], say: ["menzei", "arigatou"], place: "Narita Airport Terminal 1",
-        how: [
-          "Yamato counter in Terminal 1: pick up your suitcase.",
+          "Check in for UA868 (6:00 PM) and drop the checked bag. Make sure the tag shows your final airport.",
           "Tax-refund kiosk for anything bought from Nov 1 on (passport + purchases with you).",
-          "Check in for UA868 (6:00 PM) and drop the bag.",
-          "⚡ Last Pokémon stop: Pokémon Store Narita Airport is right in your terminal — Terminal 1, South Wing 4F (the departure level), open 9 AM–8 PM. Go after you check in. ⚠️ It should be before security; ask staff if you can't find it.",
+          "⚡ Last Pokémon stop: Pokémon Store Narita Airport is right in your terminal — Terminal 1, South Wing 4F (the departure level), open 9 AM–8 PM. ⚠️ It should be before security; ask staff if you can't find it.",
+          "Through security by ~4:30.",
         ],
       },
       {
-        t: "18:00", title: "Fly home 💖", fixed: true, say: ["mata", "arigatou"], place: "",
+        t: "18:00", title: "✈️ UA868 home", fixed: true, ll: [35.7720, 140.3929], say: ["arigatou", "mata"], place: "Narita Airport Terminal 1",
         how: [
-          "UA868 Narita → Chicago, landing 2:50 PM the same day.",
-          "In Chicago: Mobile Passport Control, re-check your bag, then UA1875 at 4:20 PM.",
-          "Land in Orlando 8:12 PM. Photo dump incoming.",
+          "At Chicago (ORD): passport control (Mobile Passport Control helps), collect your checked bag, customs, then drop it at the Connecting Bags belt right after customs.",
+          "Allow at least 2 hours for the connection. またね, Japan 💖",
         ],
       },
     ],
@@ -2320,6 +2315,12 @@ const LINES = {
     ["ITK", "五日市", "Itsukaichi"], ["HTK", "廿日市", "Hatsukaichi"], ["MKS", "宮内串戸", "Miyauchi-Kushido"], ["AJN", "阿品", "Ajina"], ["MYJ", "宮島口", "Miyajimaguchi"]] },
   FJ: { name: "Fujikyu Line", jp: "富士急行線", color: "#2b5fae", stops: [
     ["KWG", "河口湖", "Kawaguchiko"], ["FQH", "富士急ハイランド", "Fuji-Q Highland"], ["FJS", "富士山", "Fujisan"], ["GKJ", "月江寺", "Gekkōji"], ["SYD", "下吉田", "Shimoyoshida"]] },
+  TKK: { name: "Tokaido Shinkansen · Kodama", jp: "東海道新幹線 こだま", color: "#1a4fa0", stops: [
+    ["SHO", "新大阪", "Shin-Osaka"], ["KYT", "京都", "Kyoto"], ["MBR", "米原", "Maibara"], ["GFH", "岐阜羽島", "Gifu-Hashima"], ["NGY", "名古屋", "Nagoya"], ["MAJ", "三河安城", "Mikawa-Anjō"], ["TYH", "豊橋", "Toyohashi"], ["HMM", "浜松", "Hamamatsu"], ["KKG", "掛川", "Kakegawa"], ["SZK", "静岡", "Shizuoka"], ["SNF", "新富士", "Shin-Fuji"], ["MSM", "三島", "Mishima"], ["ATM", "熱海", "Atami"], ["ODW", "小田原", "Odawara"], ["SYH", "新横浜", "Shin-Yokohama"]] },
+  YB: { name: "Blue Line (Yokohama subway)", jp: "ブルーライン", color: "#0070c0", stops: [
+    ["B25", "新横浜", "Shin-Yokohama"], ["B24", "岸根公園", "Kishine-kōen"], ["B23", "片倉町", "Katakurachō"], ["B22", "三ッ沢上町", "Mitsuzawa-kamichō"], ["B21", "三ッ沢下町", "Mitsuzawa-shimochō"], ["B20", "横浜", "Yokohama"], ["B19", "高島町", "Takashimachō"], ["B18", "桜木町", "Sakuragichō"]] },
+  MM: { name: "Minatomirai Line", jp: "みなとみらい線", color: "#1d2088", stops: [
+    ["MM01", "横浜", "Yokohama"], ["MM02", "新高島", "Shin-Takashima"], ["MM03", "みなとみらい", "Minatomirai"], ["MM04", "馬車道", "Bashamichi"]] },
   NEX: { name: "Narita Express (N'EX)", jp: "成田エクスプレス", color: "#c8102e", stops: [
     ["SJK", "新宿", "Shinjuku"], ["SBY", "渋谷", "Shibuya (some trains)"], ["SGW", "品川", "Shinagawa"], ["TKY", "東京", "Tokyo"],
     ["NRT2", "空港第2ビル", "Narita Airport T2·3"], ["NRT1", "成田空港", "Narita Airport T1"]] },
