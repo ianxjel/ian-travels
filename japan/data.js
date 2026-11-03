@@ -1209,12 +1209,20 @@ const DAYS = [
         snack: "Hiroshima-style okonomiyaki is layered with noodles (soba or udon) — order “soba-iri” with an egg on top. Eat it straight off the griddle with the little spatula.",
       },
       {
+        t: "18:35", title: "⚡ Pokémon Center Hiroshima (ekie 2F)", ask: [{"jp": "ポケモンセンターはどこですか？", "ro": "Pokemon Sentā wa doko desu ka?", "en": "Where's the Pokémon Center?", "hear": "dir"}], ll: [34.3976, 132.4752], say: ["menzei", "kore"], place: "Pokémon Center Hiroshima, ekie 2F, 1-2 Matsubara-cho, Minami-ku, Hiroshima",
+        how: [
+          "Streetcar from Ebisu-chō to the Hiroshima Station stop (~10 min), then up to ekie 2F. It's inside the station, right next to the shinkansen ticket gates.",
+          "Open 10 AM–8 PM. Give it ~20 min: look for the Hiroshima-only Pikachu with the carp streamer and maple leaves.",
+          "Print your shinkansen ticket at a machine and be through the gates by ~7:00 for the 7:14 Nozomi.",
+          "Keep receipts — tax refunds are claimed at Narita.",
+        ],
+      },
+      {
         t: "19:14", title: "Nozomi 200 back to Osaka (Car 16, seat 5-E)", fixed: true, place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
         ride: [{"ln": "SYS", "from": "HIJ", "to": "SHO", "dir": "新大阪・東京方面 (eastbound)", "type": "Every Nozomi stops at Shin-Osaka.", "min": 85, "exit": "Follow JR Kyoto Line signs"}, {"ln": "JA", "from": "A46", "to": "A47", "dir": "大阪・神戸方面 (toward Osaka)", "type": "Any train.", "wrong": "Next stop 東淀川 Higashi-Yodogawa = wrong way.", "min": 4, "exit": "Midosuji South Exit → hotel"}],
         how: [
           "✅ Booked: NOZOMI 200, Hiroshima 19:14 → Shin-Osaka 20:37. Ordinary car 16, seat 5-E.",
           "Leave the okonomiyaki place by ~6:20: streetcar back to Hiroshima Station, then print the ticket at a shinkansen ticket machine (Visa or SmartEX QR) before the gate.",
-          "⚡ Pokémon Center Hiroshima: ekie 2F inside Hiroshima Station, next to the shinkansen gates, open 10 AM–8 PM. Give it ~15 min (Hiroshima-only Pikachu with a carp streamer and maple leaves), then through the gates by ~7:00.",
           "At Shin-Osaka: JR 1 stop to Osaka (~4 min), then ~10 min walk to Umeda Sky for the MHA collab (last entry 10 PM).",
         ],
       },
