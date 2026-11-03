@@ -1117,7 +1117,7 @@ const DAYS = [
 
   /* ---------------- DAY 9 ---------------- */
   {
-    id: "d9", date: "2026-11-03", prep: ["Shinkansen in SmartEX: Nozomi 13 at 10:17 (car 13, 9-A) out, Nozomi 200 at 19:14 (car 16, 5-E) back", "Your two suitcases arrive at the hotel today — remind the front desk", "Check MY NEIGHBOR's Instagram for holiday hours", "Umbrella in the backpack"], rain: "The Miyajima ferry runs in rain, and the torii looks dramatic in mist. If it pours: spend longer indoors at the Hiroshima Peace Memorial Museum and Okonomimura.", home: {"after": "19:00", "note": "Your Nozomi 200 leaves Hiroshima at 19:14 — be on the platform by 19:00. Missing it means rebooking in SmartEX."}, dow: "Tue", title: "Hiroshima + Miyajima", city: "Hiroshima",
+    id: "d9", date: "2026-11-03", prep: ["Shinkansen in SmartEX: Nozomi 13 at 10:17 (car 13, 9-A) out, Nozomi 50 at 17:43 back (QR-ticket)", "Your two suitcases arrive at the hotel today — remind the front desk", "Check MY NEIGHBOR's Instagram for holiday hours", "Umbrella in the backpack"], rain: "The Miyajima ferry runs in rain, and the torii looks dramatic in mist. If it pours: spend longer indoors at the Hiroshima Peace Memorial Museum and Okonomimura.", home: {"after": "17:30", "note": "Your Nozomi 50 leaves Hiroshima at 17:43. Missing it means rebooking in SmartEX."}, dow: "Tue", title: "Hiroshima + Miyajima", city: "Hiroshima",
     theme: "sea", emoji: "🦌", deco: ["🦌", "🌊", "⛩️", "🍁", "🕊️", "🦪"],
     kicker: "Day 9 · Culture Day holiday",
     tagline: "A floating torii, wild deer, grilled oysters, and a quiet hour of remembrance at the Peace Park.",
@@ -1199,55 +1199,59 @@ const DAYS = [
         tip: "Keep your voice low. Many visitors leave paper cranes at the Children's Peace Monument.",
       },
       {
-        t: "17:30", title: "🍽️ Dinner: Hiroshima okonomiyaki", ask: [{"jp": "一人ですが、座れますか？", "ro": "Hitori desu ga, suwaremasu ka?", "en": "Just me — can I sit?", "hear": "full"}], ll: [34.3918, 132.4659], say: ["hitori", "osusume", "gochisousama"], pic: "Hiroshima okonomiyaki griddle", rx: "reala", place: "Yagenbori Hassho, 10-6 Yagenbori, Naka-ku, Hiroshima",
+        t: "17:15", title: "⚡ Pokémon Center Hiroshima (ekie 2F) ✅", ask: [{"jp": "ポケモンセンターはどこですか？", "ro": "Pokemon Sentā wa doko desu ka?", "en": "Where's the Pokémon Center?", "hear": "dir"}], ll: [34.3976, 132.4752], say: ["menzei", "kore"], place: "Pokémon Center Hiroshima, ekie 2F, 1-2 Matsubara-cho, Minami-ku, Hiroshima",
         how: [
-          "Yagenbori Hassho (薬研堀 八昌): Google 4.2 from 1,700+ reviews, opens at 4 PM and Tuesday is open. A queue builds fast, so get in line by 5:30. From Kamiyachō-higashi, ride any eastbound streetcar 3 stops to Ebisu-chō, then walk ~5 min south (or walk ~20 min from Peace Park).",
-          "Today is a national holiday, so hours can shift. If it's closed, Nagataya by Peace Park (Google 4.4) is normally closed Tuesdays but may open for the holiday. Check Google Maps.",
-          "Leave by 18:20 for your 19:14 shinkansen: streetcar from Ebisu-chō to Hiroshima Station (~10 min). That leaves ~20 min for Pokémon Center Hiroshima, right by the shinkansen gates.",
-          "Sit at the counter and watch them build it.",
-        ],
-        snack: "Hiroshima-style okonomiyaki is layered with noodles (soba or udon) — order “soba-iri” with an egg on top. Eat it straight off the griddle with the little spatula.",
-      },
-      {
-        t: "18:35", title: "⚡ Pokémon Center Hiroshima (ekie 2F)", ask: [{"jp": "ポケモンセンターはどこですか？", "ro": "Pokemon Sentā wa doko desu ka?", "en": "Where's the Pokémon Center?", "hear": "dir"}], ll: [34.3976, 132.4752], say: ["menzei", "kore"], place: "Pokémon Center Hiroshima, ekie 2F, 1-2 Matsubara-cho, Minami-ku, Hiroshima",
-        how: [
-          "Streetcar from Ebisu-chō to the Hiroshima Station stop (~10 min), then up to ekie 2F. It's inside the station, right next to the shinkansen ticket gates.",
+          "✅ Done. Okonomiyaki skipped. It's on ekie 2F inside Hiroshima Station, right next to the shinkansen ticket gates.",
           "Open 10 AM–8 PM. Give it ~20 min: look for the Hiroshima-only Pikachu with the carp streamer and maple leaves.",
-          "Print your shinkansen ticket at a machine and be through the gates by ~7:00 for the 7:14 Nozomi.",
+          "Then straight through the gates for the 5:43 Nozomi.",
           "Keep receipts — tax refunds are claimed at Narita.",
         ],
       },
       {
-        t: "19:14", title: "Nozomi 200 back to Osaka (Car 16, seat 5-E)", fixed: true, place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
+        t: "17:43", title: "Nozomi 50 back to Osaka", fixed: true, place: "APA Hotel & Resort Osaka Umeda Eki Tower, 2-8-32 Sonezaki, Osaka",
         ride: [{"ln": "SYS", "from": "HIJ", "to": "SHO", "dir": "新大阪・東京方面 (eastbound)", "type": "Every Nozomi stops at Shin-Osaka.", "min": 85, "exit": "Follow JR Kyoto Line signs"}, {"ln": "JA", "from": "A46", "to": "A47", "dir": "大阪・神戸方面 (toward Osaka)", "type": "Any train.", "wrong": "Next stop 東淀川 Higashi-Yodogawa = wrong way.", "min": 4, "exit": "Midosuji South Exit → hotel"}],
         how: [
-          "✅ Booked: NOZOMI 200, Hiroshima 19:14 → Shin-Osaka 20:37. Ordinary car 16, seat 5-E.",
-          "Leave the okonomiyaki place by ~6:20: streetcar back to Hiroshima Station, then print the ticket at a shinkansen ticket machine (Visa or SmartEX QR) before the gate.",
-          "At Shin-Osaka: JR 1 stop to Osaka (~4 min), then ~10 min walk to Umeda Sky for the MHA collab (last entry 10 PM).",
+          "✅ Changed: NOZOMI 50, Hiroshima 17:43 → Shin-Osaka 19:04. Your Suica isn't linked, so tap Display QR-Ticket in SmartEX and scan it at the gate. Seat is on the QR-ticket screen.",
+          "At Shin-Osaka: JR Kyoto Line 1 stop to Osaka (~4 min).",
         ],
       },
       {
-        t: "21:00", title: "💥 MHA × Umeda Sky Building at night", ask: [{"jp": "ヒロアカのコラボチケットをお願いします。", "ro": "Hiroaka no korabo chiketto o onegai shimasu.", "en": "The My Hero Academia collab ticket, please.", "hear": "money"}], ll: [34.7053, 135.4903], say: ["kakkoii", "photoplease"], pic: "Umeda Sky Building Floating Garden night", rx: "neon", place: "Umeda Sky Building, 1-1-88 Oyodonaka, Osaka",
+        t: "19:20", title: "👕 UNIQLO UMEDA (LINKS Umeda)", ask: [{"jp": "免税でお願いします。", "ro": "Menzei de onegai shimasu.", "en": "Tax-free, please.", "hear": "yesno"}], ll: [34.7045, 135.4962], say: ["menzei", "kore"], place: "UNIQLO UMEDA, LINKS UMEDA 1F-2F, 1-1 Ofukacho, Kita-ku, Osaka",
         how: [
-          "From Osaka Station, walk ~10 min through the underpass to the Umeda Sky Building (about 15 min from your hotel).",
+          "From JR Osaka Station, walk ~5 min north to LINKS UMEDA (the Yodobashi Umeda tower). UNIQLO is on 1F–2F, open until 9 PM.",
+          "Big store with lots of tax-free registers: bring your passport (¥5,000+ per receipt).",
+        ],
+      },
+      {
+        t: "20:15", title: "💥 MHA × Umeda Sky Building at night", ask: [{"jp": "ヒロアカのコラボチケットをお願いします。", "ro": "Hiroaka no korabo chiketto o onegai shimasu.", "en": "The My Hero Academia collab ticket, please.", "hear": "money"}], ll: [34.7053, 135.4903], say: ["kakkoii", "photoplease"], pic: "Umeda Sky Building Floating Garden night", rx: "neon", place: "Umeda Sky Building, 1-1-88 Oyodonaka, Osaka",
+        how: [
+          "From LINKS UMEDA, walk ~10 min west through the underpass to the Umeda Sky Building.",
           "MHA collab ticket ¥2,800: 40F Floating Garden observatory, 2 random stickers and a stamp rally for a glass magnet. Open until 10:30 PM, last entry 10 PM.",
           "The open-air rooftop ring at night is one of Osaka's best views. Collab drink (¥880) at café SKY 40.",
         ],
         photo: "Open-air rooftop: lean on the railing with the city lights behind you. Then the escalator tubes from below.",
       },
       {
-        t: "22:20", title: "🥩 Late dinner: Kobe beef yakiniku", ask: [{"jp": "一人ですが、大丈夫ですか？", "ro": "Hitori desu ga, daijōbu desu ka?", "en": "It's just me. Is that OK?", "hear": "yesno"}], ll: [34.7005, 135.5017], say: ["hitori", "oishii"], place: "Otona-no-Kobegyu Yakiniku Umeda Ohatsutenjin, 2F 2-2-12 Sonezaki, Osaka",
+        t: "21:15", title: "🍔 Dinner: something familiar", ll: [34.7075, 135.4992], say: ["kore", "gochisousama"], place: "McDonald's Umeda Chayamachi, 15-5 Chayamachi, Kita-ku, Osaka",
         how: [
-          "Otona-no-Kobegyu Yakiniku Umeda Ohatsutenjin (2F, 2-2-12 Sonezaki): Google 4.7, open until 1 AM. ~10 min walk from the Umeda Sky Building, right next to Doyama-chō.",
-          "🟢 Easy: point at the photo menu. Start with tongue (タン) and kalbi (カルビ), then a Kobe beef plate — grill each slice a few seconds per side. Yakiniku crossed off ✅",
-          "Small place: if it's full, ask for the next opening time.",
+          "No new food tonight. McDonald's Umeda Chayamachi (15-5 Chayamachi) is open 24 hours with English self-order kiosks and table service. ~15 min walk east from the Sky Building.",
+          "Want a proper sit-down instead? Yakiniku no Watami (East Square Chayamachi 4F, Google 4.8, until 1 AM) is a couple of minutes away: English tablet, food comes on a conveyor.",
         ],
       },
       {
-        t: "24:30", title: "Last-night soak at Daikichi 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["kyukei"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
+        t: "22:15", title: "🎄 Don Quijote Umeda: Christmas lights + skincare", ask: [{"jp": "クリスマスのライトはどこですか？", "ro": "Kurisumasu no raito wa doko desu ka?", "en": "Where are the Christmas lights?", "hear": "dir"}, {"jp": "化粧水はどこですか？", "ro": "Keshōsui wa doko desu ka?", "en": "Where's the face lotion?", "hear": "dir"}], ll: [34.7032, 135.5009], say: ["menzei", "kore"], place: "Don Quijote Umeda Main Store, 4-16 Komatsubara-cho, Kita-ku, Osaka",
         how: [
-          "Daikichi is in the middle of Doyama-chō, a few minutes' walk from the yakiniku and your hotel.",
-          "Tomorrow you leave Osaka with both suitcases. Yokohama has no gay sauna, so make this one count.",
+          "~10 min walk from Chayamachi. Open 24 hours, tax-free with your passport.",
+          "🎄 Dad's lights: Japan is 100V, the US 120V. Buy battery- or USB-powered lights, or plug-in ones labeled 100–240V. ⚠️ Seasonal section not confirmed yet.",
+          "💄 Skincare for the women in the family: Hada Labo Gokujyun lotion (肌ラボ 極潤), Biore UV Aqua Rich sunscreen, Melano CC vitamin C serum, Senka Perfect Whip face wash, Lululun sheet masks.",
+          "Tax-free skincare gets sealed in a bag: don't open it in Japan, and pack liquids in your checked bag.",
+        ],
+      },
+      {
+        t: "23:15", title: "Last-night soak at Daikichi 🧖", night: true, ask: [{"jp": "外国人でも大丈夫ですか？", "ro": "Gaikokujin demo daijōbu desu ka?", "en": "Are foreigners OK?", "hear": "entry"}], ll: [34.7046, 135.5026], say: ["kyukei"], place: "Daikichi, 12-12 Doyamacho, Kita-ku, Osaka",
+        how: [
+          "Daikichi is in the middle of Doyama-chō, ~5 min from Don Quijote and your hotel. Optional if you're tired.",
+          "Tomorrow you leave Osaka around 8:30 with both suitcases, so be back at the hotel by ~12:30.",
         ],
         spicy: "Last sauna of the trip 🥲 Go big.",
       },
