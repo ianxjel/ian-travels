@@ -1288,7 +1288,7 @@ const DAYS = [
         ],
       },
       {
-        t: "10:54", title: "Kodama 820 to Shin-Yokohama (Car 14, seat 1-A)", fixed: true, ask: [{"jp": "こだま820号は何番線ですか？", "ro": "Kodama happyaku-nijū-gō wa nanbansen desu ka?", "en": "Which platform is Kodama 820?", "hear": "bansen"}], ll: [35.5075, 139.6176], say: ["nanban", "seki"], place: "Shin-Yokohama Station",
+        t: "10:54", title: "Kodama 820 to Shin-Yokohama (Car 14, seat 1-A)", fixed: true, ask: [{"jp": "こだまは何番線ですか？", "ro": "Kodama wa nanbansen desu ka?", "en": "Which platform is the Kodama?", "hear": "bansen"}], ll: [35.5075, 139.6176], say: ["nanban", "seki"], place: "Shin-Yokohama Station",
         ride: [{"ln": "TKK", "from": "SHO", "to": "SYH", "dir": "東京方面 (toward Tokyo)", "type": "Kodama stops at every station.", "min": 215, "exit": "Shinkansen gates → follow signs for the taxi stand or the Blue Line subway"}],
         how: [
           "✅ Booked: KODAMA 820, Shin-Osaka 10:54 → Shin-Yokohama 14:29. Car 14, seat 1-A, with the oversized baggage area. Your suitcases go in the space by your seat.",
@@ -1370,9 +1370,9 @@ const DAYS = [
         ],
       },
       {
-        t: "11:45", title: "Lunch + bags → YCAT", ask: [{"jp": "YCATまでお願いします。", "ro": "Wai-kyatto made onegai shimasu.", "en": "To YCAT, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["taxi", "gochisousama"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
+        t: "11:45", title: "Lunch + bags → YCAT", ask: [{"jp": "横浜スカイビルまでお願いします。", "ro": "Yokohama Sukai Biru made onegai shimasu.", "en": "To the Yokohama Sky Building, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["taxi", "gochisousama"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
         how: [
-          "Collect your bags and take a taxi to YCAT, the airport bus terminal on 1F of the Yokohama Sky Building (~10 min). ⚠️ Fare not verified, roughly ¥1,000–1,500.",
+          "Collect your bags and take a taxi to the Yokohama Sky Building (YCAT, the airport bus terminal, is on 1F, ~10 min). ⚠️ Fare not verified, roughly ¥1,000–1,500.",
           "Buy your bus ticket at the YCAT counter (¥4,000), then have lunch in the same building: Mawashizushi Katsu (11F) opens at 11.",
         ],
       },
