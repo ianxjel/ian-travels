@@ -1340,7 +1340,7 @@ const DAYS = [
         ],
       },
       {
-        t: "18:45", title: "🎫 Lock in tomorrow's ride to Narita", ask: [{"jp": "明日の成田空港行きのバスを一枚お願いします。", "ro": "Ashita no Narita Kūkō iki no basu o ichimai onegai shimasu.", "en": "One ticket for tomorrow's bus to Narita Airport, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["kore"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
+        t: "18:45", title: "🎫 Tomorrow's ride to Narita ✅ (N'EX 27)", ask: [{"jp": "明日の成田空港行きのバスを一枚お願いします。", "ro": "Ashita no Narita Kūkō iki no basu o ichimai onegai shimasu.", "en": "One ticket for tomorrow's bus to Narita Airport, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["kore"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
         how: [
           "Bus: the YCAT counter is on 1F of the Sky Building. Buy tomorrow's 1:00 PM bus to Narita Terminal 1 (~¥4,000 ⚠️) and ask if a reservation is needed: 予約は必要ですか？",
           "Or train: at a JR ticket machine in Yokohama Station, tap English → Reserved seat tickets → Narita Express, Nov 5, Yokohama → Narita Airport (¥4,480), arriving by ~3 PM. Every N'EX seat is reserved.",
@@ -1382,17 +1382,17 @@ const DAYS = [
 
   /* ---------------- DAY 11 ---------------- */
   {
-    id: "d11", date: "2026-11-05", prep: ["Check out by 10 AM; ask the front desk to hold your bags", "Buy the YCAT → Narita bus ticket at the YCAT counter (¥4,000) — aim for the 1:00 PM bus", "Passport + tax-refund receipts + those goods together in your backpack", "Mobile Passport Control app ready for Chicago", "Spend leftover coins — they can't be exchanged back"], rain: "Dry forecast. The bus goes by road, so if traffic looks bad, take an earlier bus.", dow: "Thu", title: "Yokohama → fly home", city: "Yokohama → Narita",
+    id: "d11", date: "2026-11-05", prep: ["Check out by 10 AM; ask the front desk to hold your bags", "✅ N'EX 27 booked: Yokohama 12:29 → Narita T1 13:57, car 10, seat 1-D. Keep ≥¥2,000 on Suica for the base fare", "Passport + tax-refund receipts + those goods together in your backpack", "Mobile Passport Control app ready for Chicago", "Spend leftover coins — they can't be exchanged back"], rain: "N'EX runs normally on Nov 5 (the N'EX cancellations are Nov 6–8).", dow: "Thu", title: "Yokohama → fly home", city: "Yokohama → Narita",
     theme: "sunrise", emoji: "✈️", deco: ["✈️", "⚓", "💖", "🎒", "⚡", "🌅"],
     kicker: "Day 11 · Sayonara (for now)",
-    tagline: "A slow morning, one bus to the airport, one last Pokémon Store. You did Japan, birthday boy.",
+    tagline: "A slow morning, one train to the airport, one last Pokémon Store. You did Japan, birthday boy.",
     sleep: null, wx: { lat: 35.77, lon: 140.39 },
     phrases: ["arigatou", "gochisousama", "doko", "card", "mata"],
     steps: [
       {
         t: "09:00", title: "🍳 Breakfast + check out", ask: [{"jp": "荷物を預かってもらえますか？", "ro": "Nimotsu o azukatte moraemasu ka?", "en": "Could you hold my bags?", "hear": "yesno"}], ll: [35.4517, 139.6386], say: ["checkout", "azukeru"], place: "APA Hotel & Resort Yokohama Bay Tower",
         how: [
-          "Konbini breakfast. Check out by 10 AM and leave your bags at the front desk.",
+          "Konbini breakfast (pay cash or card; keep ~¥2,000 on Suica for the train). Check out by 10 AM and leave your bags at the front desk.",
           "Slow morning: rest, or wander the waterfront near the hotel.",
         ],
       },
@@ -1401,27 +1401,28 @@ const DAYS = [
         how: [
           "2-3-4 Shinko, ~12–15 min walk from the hotel across the bridge ⚠️. Opens 10 AM (it was closed Wednesday). Adults ¥500. Keep it to about an hour.",
           "Ask right away about My CUPNOODLES Factory (design your own cup, extra fee). Going at opening gives the best chance.",
-          "Back to the hotel by ~11:30 for your bags.",
+          "Back to the hotel by ~11:15 for your bags.",
         ],
         photo: "The giant cup noodle wall and the instant-noodle history wall make good shots.",
       },
       {
-        t: "11:45", title: "Lunch + bags → YCAT", ask: [{"jp": "横浜スカイビルまでお願いします。", "ro": "Yokohama Sukai Biru made onegai shimasu.", "en": "To the Yokohama Sky Building, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["taxi", "gochisousama"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
+        t: "11:15", title: "🍙 Early lunch + bags → JR Yokohama", ask: [{"jp": "横浜駅までお願いします。", "ro": "Yokohama-eki made onegai shimasu.", "en": "To Yokohama Station, please.", "hear": "none"}], ll: [35.4658, 139.6223], say: ["taxi", "gochisousama"], place: "JR Yokohama Station",
         how: [
-          "Collect your bags and take a taxi to the Yokohama Sky Building (YCAT, the airport bus terminal, is on 1F, ~10 min). ⚠️ Fare not verified, roughly ¥1,000–1,500.",
-          "Buy your bus ticket at the YCAT counter (¥4,000), then have lunch in the same building: Mawashizushi Katsu (11F) opens at 11.",
+          "Quick lunch near the hotel or a konbini, then collect your bags from the front desk.",
+          "Taxi to JR Yokohama Station (~10 min). Be at the station by ~12:00 to find the N'EX platform without rushing.",
         ],
       },
       {
-        t: "13:00", title: "🚌 Limousine bus YCAT → Narita Terminal 1", ll: [35.7720, 140.3929], say: ["arigatou"], place: "Narita Airport Terminal 1",
+        t: "12:29", title: "🚄 N'EX 27 to Narita Terminal 1 (Car 10, seat 1-D)", fixed: true, ask: [{"jp": "成田エクスプレスは何番線ですか？", "ro": "Narita Ekusupuresu wa nanbansen desu ka?", "en": "Which platform is the Narita Express?", "hear": "bansen"}], ll: [35.7637, 140.3863], say: ["nanban", "seki"], place: "Narita Airport Terminal 1",
         how: [
-          "The 1:00 PM bus from YCAT reaches Terminal 3 at 2:37, Terminal 2 at 2:40 and Terminal 1 at about 2:45. Staff load your suitcases under the bus.",
-          "Get off at Terminal 1 (the last stop). United is in Terminal 1, South Wing.",
-          "Takes ~1 hr 45 min. If traffic looks bad, take an earlier bus.",
+          "✅ Booked: NARITA EXPRESS 27, Yokohama 12:29 → Narita Airport Terminal 1 13:57. Car 10, seat 1-D (front row, next to the luggage racks).",
+          "⚠️ Your paper ticket is only the reserved-seat/express part (特急券, ¥2,390). Pay the base fare by tapping Suica at the gate (keep ~¥2,000 on it), and keep the paper ticket with you for the conductor.",
+          "At Tokyo the train joins another N'EX — just stay in your seat.",
+          "Get off at the LAST stop, Narita Airport (Terminal 1), not Airport Terminal 2·3.",
         ],
       },
       {
-        t: "14:45", title: "Narita: check in → tax refund → Pokémon Store", ll: [35.7720, 140.3929], say: ["passport", "menzei"], place: "Narita Airport Terminal 1 South Wing",
+        t: "14:00", title: "Narita: check in → tax refund → Pokémon Store", ll: [35.7720, 140.3929], say: ["passport", "menzei"], place: "Narita Airport Terminal 1 South Wing",
         how: [
           "Check in for UA868 (6:00 PM) and drop the checked bag. Make sure the tag shows your final airport.",
           "Tax-refund kiosk for anything bought from Nov 1 on (passport + purchases with you).",
