@@ -1305,7 +1305,7 @@ const DAYS = [
         ],
       },
       {
-        t: "15:15", title: "Drop bags (check-in line too long)", ask: [{"jp": "大浴場は何時までですか？", "ro": "Daiyokujō wa nanji made desu ka?", "en": "Until what time is the large bath open?", "hear": "time"}], ll: [35.4517, 139.6386], say: ["checkin", "onsen"], place: "APA Hotel & Resort Yokohama Bay Tower",
+        t: "15:15", title: "Check in ✅", ask: [{"jp": "大浴場は何時までですか？", "ro": "Daiyokujō wa nanji made desu ka?", "en": "Until what time is the large bath open?", "hear": "time"}], ll: [35.4517, 139.6386], say: ["checkin", "onsen"], place: "APA Hotel & Resort Yokohama Bay Tower",
         how: [
           "✅ Booked (Expedia): Single room, 1 night. Confirmation 20261103269901077 · Expedia itinerary 73580024664297.",
           "The 3 PM check-in line was huge: leave the bags with luggage storage (荷物を預かってもらえますか？) and check in tonight when it's quiet. Try the automatic check-in machines first.",
@@ -1370,10 +1370,10 @@ const DAYS = [
         ],
       },
       {
-        t: "21:30", title: "Back to the hotel: check in, bath + pack", ll: [35.4517, 139.6386], say: ["onsen"], place: "APA Hotel & Resort Yokohama Bay Tower",
+        t: "21:30", title: "Back to the hotel: bath + pack", ll: [35.4517, 139.6386], say: ["onsen"], place: "APA Hotel & Resort Yokohama Bay Tower",
         ride: [{"ln": "MM", "from": "MM01", "to": "MM04", "dir": "元町・中華街方面 (toward Motomachi-Chūkagai)", "type": "Every train. 3 stops.", "wrong": "Next stop 反町 Tammachi (Tōkyū Line) = wrong way.", "min": 5, "exit": "Bashamichi → ~2 min walk"}],
         how: [
-          "Minatomirai Line 3 stops back to Bashamichi. Check in now (the line should be short), collect your bags.",
+          "Minatomirai Line 3 stops back to Bashamichi. You're already checked in, so no rush: Don Quijote is open 24 hours.",
           "Online check-in for UA868. Pack tonight: tax-free sealed bags and liquids in the checked bag, passport + receipts in your backpack.",
         ],
       },
