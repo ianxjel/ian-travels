@@ -1340,7 +1340,7 @@ const DAYS = [
         ],
       },
       {
-        t: "18:40", title: "🎫 Lock in tomorrow's ride to Narita", ask: [{"jp": "明日13時の成田空港第1ターミナル行きを一枚お願いします。", "ro": "Ashita jūsan-ji no Narita Kūkō Dai-ichi Tāminaru-iki o ichimai onegai shimasu.", "en": "One ticket for tomorrow's 1 PM bus to Narita Terminal 1, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["kore"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
+        t: "18:40", title: "🎫 Lock in tomorrow's ride to Narita", ask: [{"jp": "明日の成田空港行きのバスを一枚お願いします。", "ro": "Ashita no Narita Kūkō iki no basu o ichimai onegai shimasu.", "en": "One ticket for tomorrow's bus to Narita Airport, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["kore"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
         how: [
           "Bus: the YCAT counter is on 1F of the Sky Building. Buy tomorrow's 1:00 PM bus to Narita Terminal 1 (~¥4,000 ⚠️) and ask if a reservation is needed: 予約は必要ですか？",
           "Or train: at a JR ticket machine in Yokohama Station, tap English → Reserved seat tickets → Narita Express, Nov 5, Yokohama → Narita Airport (¥4,480), arriving by ~3 PM. Every N'EX seat is reserved.",
