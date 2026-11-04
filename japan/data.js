@@ -1314,25 +1314,16 @@ const DAYS = [
         ],
       },
       {
-        t: "16:00", title: "🍜 CUPNOODLES MUSEUM Yokohama", ask: [{"jp": "マイカップヌードルファクトリーはまだできますか？", "ro": "Mai Kappu Nūdoru Fakutorī wa mada dekimasu ka?", "en": "Can I still do My CUPNOODLES Factory?", "hear": "yesno"}], ll: [35.4553, 139.6380], say: ["kore", "photoplease"], place: "CUPNOODLES MUSEUM Yokohama, 2-3-4 Shinko, Naka-ku, Yokohama",
-        how: [
-          "2-3-4 Shinko, ~12–15 min walk from the hotel across the bridge ⚠️, or ~8 min from Minatomirai Station. Open until 6 PM, last entry 5 PM. Adults ¥500.",
-          "Ask right away about My CUPNOODLES Factory (design your own cup, extra fee) — late in the day it may be finished.",
-          "Then Minatomirai Station → 2 stops to Yokohama for the Pokémon Center.",
-        ],
-        photo: "The giant cup noodle wall and the instant-noodle history wall make good shots.",
-      },
-      {
-        t: "17:20", title: "⚡ Pokémon Center Yokohama (Sky Building 8F)", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center?", "hear": "kai"}], ll: [35.4646, 139.6245], say: ["menzei", "kore"], place: "Pokémon Center Yokohama, Yokohama Sky Building 8F, 2-19-12 Takashima, Nishi-ku, Yokohama",
+        t: "16:30", title: "⚡ Pokémon Center Yokohama (Sky Building 8F)", ask: [{"jp": "ポケモンセンターは何階ですか？", "ro": "Pokemon Sentā wa nankai desu ka?", "en": "What floor is the Pokémon Center?", "hear": "kai"}], ll: [35.4646, 139.6245], say: ["menzei", "kore"], place: "Pokémon Center Yokohama, Yokohama Sky Building 8F, 2-19-12 Takashima, Nishi-ku, Yokohama",
         ride: [{"ln": "MM", "from": "MM04", "to": "MM01", "dir": "横浜・渋谷方面 (toward Yokohama / Shibuya)", "type": "Every train. 3 stops.", "wrong": "Next stop 日本大通り Nihon-ōdōri = wrong way.", "min": 5, "exit": "East Exit (東口) → Yokohama Sky Building, ~5 min"}],
         how: [
-          "Bashamichi → Minatomirai Line 3 stops to Yokohama, then the East Exit to the Yokohama Sky Building (the same building as YCAT, tomorrow's airport bus).",
+          "Cup Noodles Museum was closed today (it closes the day after a holiday Tuesday). From there, walk ~8 min to Minatomirai Station, 2 stops to Yokohama, then the East Exit to the Yokohama Sky Building (the same building as YCAT).",
           "Open 10:30 AM–8:30 PM. Reviews say it sometimes uses 30-minute timed entry tickets, so you may get a time slot at the door.",
           "Look for the Yokohama sailor Pikachu (reviews say it sells out, so grab it if you see it). Keep receipts for the Narita tax refund.",
         ],
       },
       {
-        t: "18:10", title: "🎄 Yokohama LOFT: Christmas lights + skincare", ask: [{"jp": "クリスマスのライトはどこですか？", "ro": "Kurisumasu no raito wa doko desu ka?", "en": "Where are the Christmas lights?", "hear": "dir"}], ll: [35.4654, 139.6251], say: ["menzei", "kore"], place: "Yokohama LOFT, Sogo Yokohama 7F, 2-18-1 Takashima, Nishi-ku, Yokohama",
+        t: "17:20", title: "🎄 Yokohama LOFT: Christmas lights + skincare", ask: [{"jp": "クリスマスのライトはどこですか？", "ro": "Kurisumasu no raito wa doko desu ka?", "en": "Where are the Christmas lights?", "hear": "dir"}], ll: [35.4654, 139.6251], say: ["menzei", "kore"], place: "Yokohama LOFT, Sogo Yokohama 7F, 2-18-1 Takashima, Nishi-ku, Yokohama",
         how: [
           "Next door to the Sky Building: Sogo Yokohama 7F (reviews say there's a bridge between Sogo and the Pokémon Center floor). Open until 8 PM, tax-free.",
           "🎄 Dad's lights: Japan is 100V, the US 120V. Buy battery- or USB-powered lights, or plug-in ones labeled 100–240V. ⚠️ Christmas section not confirmed.",
@@ -1341,7 +1332,7 @@ const DAYS = [
         ],
       },
       {
-        t: "19:00", title: "🍣 Dinner: Mawashizushi Katsu (conveyor sushi)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.4646, 139.6248], say: ["hitori", "itadakimasu", "gochisousama"], place: "Mawashizushi Katsu, Yokohama Sky Building 11F, 2-19-12 Takashima, Nishi-ku, Yokohama",
+        t: "18:15", title: "🍣 Dinner: Mawashizushi Katsu (conveyor sushi)", ask: [{"jp": "一人です。", "ro": "Hitori desu.", "en": "Just one.", "hear": "full"}], ll: [35.4646, 139.6248], say: ["hitori", "itadakimasu", "gochisousama"], place: "Mawashizushi Katsu, Yokohama Sky Building 11F, 2-19-12 Takashima, Nishi-ku, Yokohama",
         how: [
           "Back in the Sky Building, 11F: Google 4.1 from 2,200+ reviews, open until 10:30 PM. Conveyor sushi like Himawari, with a tablet to order. Take a number from the waiting machine; there may be a short queue at dinner time.",
           "🟢 Easy: take a number from the waiting machine at the door, then order on the tablet or grab plates off the belt.",
@@ -1349,28 +1340,28 @@ const DAYS = [
         ],
       },
       {
-        t: "19:50", title: "🎫 Lock in tomorrow's ride to Narita", ask: [{"jp": "明日の成田空港行きのバスを一枚お願いします。", "ro": "Ashita no Narita Kūkō iki no basu o ichimai onegai shimasu.", "en": "One ticket for tomorrow's bus to Narita Airport, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["kore"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
+        t: "19:15", title: "🎫 Lock in tomorrow's ride to Narita", ask: [{"jp": "明日の成田空港行きのバスを一枚お願いします。", "ro": "Ashita no Narita Kūkō iki no basu o ichimai onegai shimasu.", "en": "One ticket for tomorrow's bus to Narita Airport, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["kore"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
         how: [
           "Bus: the YCAT counter is on 1F of the Sky Building. Buy tomorrow's 1:00 PM bus to Narita Terminal 1 (~¥4,000 ⚠️) and ask if a reservation is needed: 予約は必要ですか？",
           "Or train: at a JR ticket machine in Yokohama Station, tap English → Reserved seat tickets → Narita Express, Nov 5, Yokohama → Narita Airport (¥4,480), arriving by ~3 PM. Every N'EX seat is reserved.",
         ],
       },
       {
-        t: "20:05", title: "⚡ Pokémon Center Yokohama Satellite (JOINUS 2F)", ll: [35.4652, 139.6206], say: ["menzei", "kore"], place: "Pokémon Center Yokohama Satellite, JOINUS 2F, 1-5-1 Minamisaiwai, Nishi-ku, Yokohama",
+        t: "19:30", title: "⚡ Pokémon Center Yokohama Satellite (JOINUS 2F)", ll: [35.4652, 139.6206], say: ["menzei", "kore"], place: "Pokémon Center Yokohama Satellite, JOINUS 2F, 1-5-1 Minamisaiwai, Nishi-ku, Yokohama",
         how: [
           "Walk through Yokohama Station to the West Exit (西口), JOINUS 2F. Open until 9 PM, so don't linger at dinner.",
           "Smaller than a full Pokémon Center, with different items, plus a big screen with Pokémon videos.",
         ],
       },
       {
-        t: "20:35", title: "🎄 Don Quijote Yokohama West Exit (backup + deals)", ask: [{"jp": "化粧水はどこですか？", "ro": "Keshōsui wa doko desu ka?", "en": "Where's the face lotion?", "hear": "dir"}], ll: [35.4646, 139.6184], say: ["menzei", "kore"], place: "Don Quijote Yokohama West Exit, 2-15-5 Minamisaiwai, Nishi-ku, Yokohama",
+        t: "20:00", title: "🎄 Don Quijote Yokohama West Exit (backup + deals)", ask: [{"jp": "化粧水はどこですか？", "ro": "Keshōsui wa doko desu ka?", "en": "Where's the face lotion?", "hear": "dir"}], ll: [35.4646, 139.6184], say: ["menzei", "kore"], place: "Don Quijote Yokohama West Exit, 2-15-5 Minamisaiwai, Nishi-ku, Yokohama",
         how: [
           "~5 min walk from JOINUS. Open 24 hours. Whatever Loft didn't have: Christmas lights and the skincare list.",
           "The tax-free checkout is on 4F (bring your passport).",
         ],
       },
       {
-        t: "21:30", title: "Back to the hotel: bath + pack", ll: [35.4517, 139.6386], say: ["onsen"], place: "APA Hotel & Resort Yokohama Bay Tower",
+        t: "21:00", title: "Back to the hotel: bath + pack", ll: [35.4517, 139.6386], say: ["onsen"], place: "APA Hotel & Resort Yokohama Bay Tower",
         ride: [{"ln": "MM", "from": "MM01", "to": "MM04", "dir": "元町・中華街方面 (toward Motomachi-Chūkagai)", "type": "Every train. 3 stops.", "wrong": "Next stop 反町 Tammachi (Tōkyū Line) = wrong way.", "min": 5, "exit": "Bashamichi → ~2 min walk"}],
         how: [
           "Minatomirai Line 3 stops back to Bashamichi. You're already checked in, so no rush: Don Quijote is open 24 hours.",
@@ -1392,9 +1383,18 @@ const DAYS = [
       {
         t: "09:00", title: "🍳 Breakfast + check out", ask: [{"jp": "荷物を預かってもらえますか？", "ro": "Nimotsu o azukatte moraemasu ka?", "en": "Could you hold my bags?", "hear": "yesno"}], ll: [35.4517, 139.6386], say: ["checkout", "azukeru"], place: "APA Hotel & Resort Yokohama Bay Tower",
         how: [
-          "Konbini breakfast (there's one in the hotel). Check out by 10 AM and leave your bags at the front desk.",
+          "Konbini breakfast. Check out by 10 AM and leave your bags at the front desk.",
           "Slow morning: rest, or wander the waterfront near the hotel.",
         ],
+      },
+      {
+        t: "10:00", title: "🍜 CUPNOODLES MUSEUM Yokohama (optional)", ask: [{"jp": "マイカップヌードルファクトリーはまだできますか？", "ro": "Mai Kappu Nūdoru Fakutorī wa mada dekimasu ka?", "en": "Can I still do My CUPNOODLES Factory?", "hear": "yesno"}], ll: [35.4553, 139.6380], say: ["kore", "photoplease"], place: "CUPNOODLES MUSEUM Yokohama, 2-3-4 Shinko, Naka-ku, Yokohama",
+        how: [
+          "2-3-4 Shinko, ~12–15 min walk from the hotel across the bridge ⚠️. Opens 10 AM (it was closed Wednesday). Adults ¥500. Keep it to about an hour.",
+          "Ask right away about My CUPNOODLES Factory (design your own cup, extra fee). Going at opening gives the best chance.",
+          "Back to the hotel by ~11:30 for your bags.",
+        ],
+        photo: "The giant cup noodle wall and the instant-noodle history wall make good shots.",
       },
       {
         t: "11:45", title: "Lunch + bags → YCAT", ask: [{"jp": "横浜スカイビルまでお願いします。", "ro": "Yokohama Sukai Biru made onegai shimasu.", "en": "To the Yokohama Sky Building, please.", "hear": "none"}], ll: [35.4646, 139.6245], say: ["taxi", "gochisousama"], place: "YCAT Yokohama City Air Terminal, Yokohama Sky Building 1F",
