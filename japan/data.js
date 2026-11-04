@@ -1422,10 +1422,11 @@ const DAYS = [
         ],
       },
       {
-        t: "14:00", title: "Narita: check in → tax refund → Pokémon Store", ll: [35.7720, 140.3929], say: ["passport", "menzei"], place: "Narita Airport Terminal 1 South Wing",
+        t: "14:00", title: "Narita: tax-free customs check → check in → Pokémon Store", ll: [35.7720, 140.3929], say: ["passport", "menzei"], place: "Narita Airport Terminal 1 South Wing",
         how: [
-          "Check in for UA868 (6:00 PM) and drop the checked bag. Make sure the tag shows your final airport.",
-          "Tax-refund kiosk for anything bought from Nov 1 on (passport + purchases with you).",
+          "⚠️ Tax refund FIRST, before checking your bag: your tax-free items are in the checked bag, and customs must be able to inspect them. Go to the tax-free kiosks in the international departures area with your passport; have the items ready to show if asked.",
+          "Before that (on the train): scan the QR code on the back of each tax-free receipt and check your purchases show correctly in J-TaxRefund. Choose a card refund (cash at the airport has a fee). Refunds must be completed within 180 days.",
+          "Then check in for UA868 (6:00 PM) and drop the checked bag. Make sure the tag shows your final airport.",
           "⚡ Last Pokémon stop: Pokémon Store Narita Airport is right in your terminal — Terminal 1, South Wing 4F (the departure level), open 9 AM–8 PM. ⚠️ It should be before security; ask staff if you can't find it.",
           "Through security by ~4:30.",
         ],
