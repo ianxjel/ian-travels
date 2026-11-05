@@ -8,6 +8,12 @@ step-by-step days, photo spots, snack stops, phrases (yes, including flirting �
 | Trip | Guide |
 |---|---|
 | 🇯🇵 Japan · Oct 26 – Nov 5, 2026 | [`/japan/`](japan/) |
+| 🇪🇺 Europe → London (Pokémon EUIC) · ~Feb 13 – 21, 2027 · ✏️ *in planning* | [`/europe/`](europe/) (draft plan) |
+
+## Trips in planning
+A trip that isn't booked yet gets `status: "planning"` in `trips.js`. It shows in its own "In planning" section on the
+homepage with dashed edges and "(tentative)" dates, and it doesn't count toward the passport stats. Its folder holds a
+simple plan page until the route is set. Once it's booked, build the full guide (steps below) and delete the `status` line.
 
 ## Add a new country
 1. Copy `japan/` to a new folder (e.g. `mexico/`) and rewrite its `data.js` (days, phrases, manners, hotels, SOS).

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#121a4a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ian × Europe" />
+  <title>Ian × Europe 2027</title>
+  <link rel="icon" href="../icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #121a4a; --bg2: #1d2a8f; --card: #1c2563; --ink: #f7f8ff; --muted: #b3bbe6;
+      --gold: #ffcb05; --red: #e3354b; --blue: #3d7bff; --line: rgba(255,255,255,.12);
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) { --bg: #f4f6ff; --bg2: #dde4ff; --card: #ffffff; --ink: #18204a; --muted: #5d668f; --line: rgba(20,30,80,.12); }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+      font: 16px/1.5 "Nunito", system-ui, sans-serif;
+      background-image: radial-gradient(90% 45% at 50% 0%, var(--bg2), transparent 70%); background-repeat: no-repeat;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: calc(env(safe-area-inset-top, 0px) + 14px) 16px 48px; }
+    a { color: inherit; }
+    .back { display: inline-block; margin-bottom: 12px; padding: 7px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); text-decoration: none; font-weight: 800; font-size: 14px; }
+
+    .hero {
+      position: relative; overflow: hidden; border-radius: 26px; padding: 22px 20px; color: #fff; isolation: isolate;
+      background: linear-gradient(150deg, #3d7bff 0%, #1d2a8f 48%, #c8102e 100%);
+      box-shadow: 0 18px 40px rgba(0,0,0,.3); outline: 2px dashed rgba(255,255,255,.5); outline-offset: -9px;
+    }
+    .hero .tag { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #fff; color: #1d2a8f; font: 800 11px/1.2 "Nunito", sans-serif; letter-spacing: .6px; text-transform: uppercase; }
+    .hero h1 { margin: 12px 0 4px; font: 700 clamp(32px, 9vw, 44px)/1.05 "Fredoka", sans-serif; }
+    .hero p { margin: 6px 0 0; opacity: .95; max-width: 32em; }
+    .hero .ball { position: absolute; right: -30px; top: -30px; font-size: 140px; opacity: .14; z-index: -1; }
+
+    h2 { margin: 28px 2px 10px; font: 700 21px/1.15 "Fredoka", sans-serif; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 16px; }
+    .card + .card { margin-top: 10px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 13.5px; }
+
+    .event { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; }
+    .event .big { font-size: 46px; line-height: 1; }
+    .event b { font: 700 19px/1.2 "Fredoka", sans-serif; display: block; }
+    .chip { display: inline-block; margin: 6px 6px 0 0; padding: 4px 10px; border-radius: 999px; font: 800 12px/1.3 "Nunito", sans-serif; }
+    .chip.ok { background: #7cf2c4; color: #0b3326; }
+    .chip.tbd { background: var(--gold); color: #3a2800; }
+
+    .days { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+    .day { border-radius: 16px; padding: 10px; border: 2px dashed var(--line); min-height: 92px; }
+    .day .d { font: 800 11px/1.2 "Nunito", sans-serif; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+    .day .n { font: 700 15px/1.2 "Fredoka", sans-serif; margin-top: 4px; }
+    .day .e { font-size: 20px; margin-top: 4px; }
+    .day.locked { border-style: solid; border-color: transparent; background: linear-gradient(160deg, #ffcb05, #ff8a3d); color: #2a1a00; }
+    .day.locked .d { color: #5a3a00; }
+    .day.move { border-style: solid; border-color: var(--blue); }
+
+    .route h3 { margin: 0; font: 700 18px/1.2 "Fredoka", sans-serif; }
+    .route .path { margin-top: 4px; font-weight: 800; color: var(--muted); font-size: 14px; }
+    .route ul { margin: 8px 0 0; padding-left: 18px; }
+    .route li { margin: 3px 0; }
+
+    .todo { list-style: none; margin: 0; padding: 0; }
+    .todo li { display: flex; gap: 10px; padding: 10px 2px; border-top: 1px solid var(--line); }
+    .todo li:first-child { border-top: 0; }
+    .todo .box { flex: none; width: 20px; height: 20px; margin-top: 2px; border-radius: 6px; border: 2px solid var(--muted); }
+    .foot { margin-top: 30px; text-align: center; color: var(--muted); font-size: 12.5px; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../">‹ All trips</a>
+
+    <section class="hero">
+      <span class="ball" aria-hidden="true">⚡</span>
+      <span class="tag">✏️ In planning · not booked</span>
+      <h1>🇪🇺 Europe → 🇬🇧 London</h1>
+      <p>9 days in Europe, building up to the Pokémon Europe International Championships in London. The full step-by-step guide gets built once the route is picked.</p>
+    </section>
+
+    <h2>🏆 The finale (locked in)</h2>
+    <div class="card event">
+      <div class="big" aria-hidden="true">🏆</div>
+      <div>
+        <b>Pokémon Europe International Championships 2027</b>
+        <div>Fri Feb 19 – Sun Feb 21, 2027 · London</div>
+        <span class="chip ok">Dates announced</span><span class="chip tbd">Venue TBA</span>
+        <div class="small muted" style="margin-top:8px">The 2024–2026 EUICs were all at ExCeL London, but the 2027 venue hasn't been named yet. Dates from the Play! Pokémon 2027 schedule.</div>
+      </div>
+    </div>
+
+    <h2>🗓️ Draft 9 days</h2>
+    <p class="small muted" style="margin:-4px 2px 10px">Tentative: Sat Feb 13 → Sun Feb 21, fly home Mon Feb 22. Days 1–6 are open for the route.</p>
+    <div class="days" id="days"></div>
+
+    <h2>🗺️ Route ideas for days 1–6</h2>
+    <div class="card route">
+      <h3>🏰 Disney + Paris → London</h3>
+      <div class="path">Disneyland Paris · Paris · Eurostar → London</div>
+      <ul>
+        <li>A Disney park day to kick things off</li>
+        <li>Paris for photos, food and the Marais at night</li>
+        <li>Eurostar goes straight into London St Pancras, so it's train-only, no extra flight</li>
+      </ul>
+    </div>
+    <div class="card route">
+      <h3>🚲 Amsterdam → Paris → London</h3>
+      <div class="path">Amsterdam · Paris · Eurostar → London</div>
+      <ul>
+        <li>Canals and architecture for the camera</li>
+        <li>Two big nightlife cities before the tournament</li>
+        <li>All by train once you land</li>
+      </ul>
+    </div>
+    <div class="card route">
+      <h3>🪩 Berlin → Amsterdam → London</h3>
+      <div class="path">Berlin · Amsterdam · → London</div>
+      <ul>
+        <li>The most party-heavy option: Berlin's club scene, then Amsterdam</li>
+        <li>Longer hops: Berlin → Amsterdam is a long train day or a short flight</li>
+      </ul>
+    </div>
+
+    <h2>✅ To decide / book</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="box"></span><span><b>Pick the route</b> for days 1–6 (or a mix of the ideas above)</span></li>
+        <li><span class="box"></span><span><b>Lock the dates</b>: arrive Sat Feb 13? Fly home Mon Feb 22?</span></li>
+        <li><span class="box"></span><span><b>Flights</b>: open-jaw out of IAD into city #1, home from London</span></li>
+        <li><span class="box"></span><span><b>EUIC</b>: watching or competing? Grab spectator/player registration once Play! Pokémon opens it</span></li>
+        <li><span class="box"></span><span><b>London hotel</b>: walking distance to the Soho gay bars, easy transit to the venue</span></li>
+        <li><span class="box"></span><span><b>Entry paperwork</b>: UK ETA (required for US passport holders); check whether the EU's new ETIAS has started</span></li>
+        <li><span class="box"></span><span><b>Pack for February</b>: cold, wet and early sunsets everywhere on this route</span></li>
+      </ul>
+    </div>
+
+    <p class="foot">Draft plan · nothing here is booked yet</p>
+  </main>
+
+  <script>
+    (() => {
+      const plan = [
+        { n: "Arrive", e: "🛬", k: "" },
+        { n: "City #1", e: "📍", k: "" },
+        { n: "City #1", e: "📍", k: "" },
+        { n: "City #2", e: "📍", k: "" },
+        { n: "City #2", e: "📍", k: "" },
+        { n: "Into London", e: "🚄", k: "move" },
+        { n: "EUIC day 1", e: "⚡", k: "locked" },
+        { n: "EUIC day 2", e: "⚡", k: "locked" },
+        { n: "EUIC finals", e: "🏆", k: "locked" },
+      ];
+      const wd = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const start = Date.UTC(2027, 1, 13);
+      document.getElementById("days").innerHTML = plan.map((p, i) => {
+        const d = new Date(start + i * 864e5);
+        return `<div class="day ${p.k}"><div class="d">Day ${i + 1} · ${wd[d.getUTCDay()]} ${d.getUTCDate()}</div><div class="e">${p.e}</div><div class="n">${p.n}</div></div>`;
+      }).join("");
+    })();
+  </script>
+</body>
+</html>
