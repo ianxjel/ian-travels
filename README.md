@@ -8,7 +8,7 @@ step-by-step days, photo spots, snack stops, phrases (yes, including flirting �
 | Trip | Guide |
 |---|---|
 | 🇯🇵 Japan · Oct 26 – Nov 5, 2026 | [`/japan/`](japan/) |
-| 🇪🇺 Europe → London (Pokémon EUIC) · ~Feb 13 – 21, 2027 · ✏️ *in planning* | [`/europe/`](europe/) (draft plan) |
+| 🇪🇺 Berlin → Amsterdam → London (Pokémon EUIC) · ~Feb 12 – 21, 2027 · ✏️ *in planning* | [`/europe/`](europe/) (draft plan) |
 
 ## Trips in planning
 A trip that isn't booked yet gets `status: "planning"` in `trips.js`. It shows in its own "In planning" section on the
