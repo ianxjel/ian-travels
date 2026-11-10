@@ -8,19 +8,19 @@
    stat counts this instead of the big title in `country`. */
 const TRIPS = [
   {
-    slug: "colorado/",
+    slug: "denver-dallas/",
     status: "planning",
-    country: "Colorado",
+    country: "Denver",
     nation: "USA",
-    local: "Mile High",
+    local: "→ Dallas",
     flag: "🇺🇸",
-    title: "Red Rocks trip",
+    title: "Red Rocks + TBRU trip",
     start: "2027-03-24",
     end: "2027-03-28",
-    cities: ["Denver", "Red Rocks 🎧", "Winter Park"],
-    vibes: ["🎧 Porter b2b Ninajirachi", "🌄 Red Rocks", "🤠 Charlie's", "🚂 Ski train"],
-    cover: "linear-gradient(150deg, #ffb347 0%, #e0552f 38%, #6b2a7a 72%, #1e1650 100%)",
-    emoji: ["🎧", "🌄", "⭐", "🏔️"],
+    cities: ["Denver", "Red Rocks 🎧", "Dallas 🐻"],
+    vibes: ["🎧 Porter b2b Ninajirachi", "🌄 Red Rocks", "🐻 TBRU", "♈ Bears of the Zodiac"],
+    cover: "linear-gradient(150deg, #ffb347 0%, #e0552f 34%, #6b2a7a 66%, #0f2f4a 100%)",
+    emoji: ["🎧", "🌄", "🐻", "♈"],
   },
   {
     slug: "europe/",

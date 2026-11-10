@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1e1650" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ian × Denver → Dallas" />
+  <title>Denver → Dallas 2027</title>
+  <link rel="icon" href="../icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1e1650; --bg2: #5a2470; --card: #2a2063; --ink: #fff7f2; --muted: #c9bde6;
+      --rock: #e0552f; --sun: #ffb347; --star: #ffe27a; --line: rgba(255,255,255,.12);
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) { --bg: #fff6ef; --bg2: #ffd9c2; --card: #ffffff; --ink: #2a1636; --muted: #7a6380; --line: rgba(60,20,40,.12); }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+      font: 16px/1.5 "Nunito", system-ui, sans-serif;
+      background-image: radial-gradient(90% 45% at 50% 0%, var(--bg2), transparent 70%); background-repeat: no-repeat;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: calc(env(safe-area-inset-top, 0px) + 14px) 16px 48px; }
+    a { color: inherit; }
+    .back { display: inline-block; margin-bottom: 12px; padding: 7px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); text-decoration: none; font-weight: 800; font-size: 14px; }
+
+    /* hero: Red Rocks at sunset, wish stars on top */
+    .hero {
+      position: relative; overflow: hidden; border-radius: 26px; padding: 22px 20px 26px; color: #fff; isolation: isolate;
+      background: linear-gradient(180deg, #0f2f4a 0%, #4a2470 40%, #e0552f 78%, #ffb347 100%);
+      box-shadow: 0 18px 40px rgba(0,0,0,.3); outline: 2px dashed rgba(255,255,255,.5); outline-offset: -9px;
+    }
+    .hero .tag { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #fff; color: #6b2a7a; font: 800 11px/1.2 "Nunito", sans-serif; letter-spacing: .6px; text-transform: uppercase; }
+    .hero h1 { margin: 12px 0 4px; font: 700 clamp(32px, 9vw, 44px)/1.05 "Fredoka", sans-serif; text-shadow: 0 2px 12px rgba(0,0,0,.25); }
+    .hero p { margin: 6px 0 0; opacity: .95; max-width: 32em; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
+    .hero .count { display: inline-block; margin-top: 12px; padding: 6px 12px; border-radius: 999px; background: rgba(0,0,0,.28); font: 800 13px/1.2 "Nunito", sans-serif; }
+    .hero .rocks { position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: -1; opacity: .55; }
+    .hero .stars span { position: absolute; z-index: -1; color: var(--star); animation: twinkle 3s ease-in-out infinite; }
+    @keyframes twinkle { 50% { opacity: .25; transform: scale(.8); } }
+
+    h2 { margin: 28px 2px 10px; font: 700 21px/1.15 "Fredoka", sans-serif; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 16px; }
+    .card + .card { margin-top: 10px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 13.5px; }
+
+    .event { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; }
+    .event .big { font-size: 46px; line-height: 1; }
+    .event b { font: 700 19px/1.2 "Fredoka", sans-serif; display: block; }
+    .chip { display: inline-block; margin: 6px 6px 0 0; padding: 4px 10px; border-radius: 999px; font: 800 12px/1.3 "Nunito", sans-serif; }
+    .chip.ok { background: #7cf2c4; color: #0b3326; }
+    .chip.tbd { background: var(--sun); color: #3a1a00; }
+
+    .days { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; }
+    .day { border-radius: 16px; padding: 10px; border: 2px dashed var(--line); min-height: 92px; }
+    .day .d { font: 800 11px/1.2 "Nunito", sans-serif; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+    .day .n { font: 700 15px/1.2 "Fredoka", sans-serif; margin-top: 4px; }
+    .day .e { font-size: 20px; margin-top: 4px; }
+    .day.locked { border-style: solid; border-color: transparent; background: linear-gradient(160deg, #ffb347, #e0552f); color: #2a0f00; }
+    .day.locked .d { color: #5a2400; }
+    .day.move { border-style: solid; border-color: var(--rock); }
+
+    details.plan { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 12px 16px; }
+    details.plan + details.plan { margin-top: 8px; }
+    details.plan summary { cursor: pointer; font: 700 17px/1.3 "Fredoka", sans-serif; list-style: none; }
+    details.plan summary::-webkit-details-marker { display: none; }
+    details.plan summary::after { content: "＋"; float: right; color: var(--muted); }
+    details.plan[open] summary::after { content: "－"; }
+    details.plan ol { margin: 10px 0 2px; padding-left: 22px; }
+    details.plan li { margin: 5px 0; }
+
+    .todo { list-style: none; margin: 0; padding: 0; }
+    .todo li { display: flex; gap: 10px; padding: 10px 2px; border-top: 1px solid var(--line); }
+    .todo li:first-child { border-top: 0; }
+    .todo .box { flex: none; width: 20px; height: 20px; margin-top: 2px; border-radius: 6px; border: 2px solid var(--muted); }
+    .todo .ico { flex: none; width: 22px; text-align: center; }
+    .foot { margin-top: 30px; text-align: center; color: var(--muted); font-size: 12.5px; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    .leg { display: flex; align-items: center; gap: 10px; margin: 34px 2px 0; font: 800 12px/1.2 "Nunito", sans-serif; letter-spacing: .8px; text-transform: uppercase; color: var(--muted); }
+    .leg::after { content: ""; flex: 1; height: 2px; background: var(--line); border-radius: 2px; }
+    .event.bear .big { filter: drop-shadow(0 4px 10px rgba(0,0,0,.25)); }
+    .chip.zod { background: #b9a4ff; color: #1d0f4a; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../">‹ All trips</a>
+
+    <section class="hero">
+      <div class="stars" aria-hidden="true">
+        <span style="left:8%;top:14%;font-size:14px">✦</span>
+        <span style="left:80%;top:22%;font-size:18px;animation-delay:-1s">♈</span>
+        <span style="left:90%;top:9%;font-size:12px;animation-delay:-2s">✦</span>
+        <span style="left:68%;top:30%;font-size:10px;animation-delay:-.5s">✦</span>
+      </div>
+      <svg class="rocks" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 64 L0 30 L30 18 L58 26 L70 8 L96 14 L112 40 L140 44 L150 64 Z" fill="#7a1f12" />
+        <path d="M250 64 L262 40 L290 36 L304 10 L330 4 L352 20 L376 16 L400 34 L400 64 Z" fill="#7a1f12" />
+      </svg>
+      <span class="tag">✏️ In planning · show ticket ✓</span>
+      <h1>🏔️ Denver →<br />🐻&nbsp;Dallas</h1>
+      <p>Porter Robinson b2b Ninajirachi at Red Rocks, then straight to Texas Bear Round-Up for the weekend. Wed Mar 24 – Sun Mar 28, 2027. The full step-by-step guide gets built once everything's booked.</p>
+      <span class="count" id="count"></span>
+    </section>
+
+    <h2>🎟️ The two big things</h2>
+    <div class="card event">
+      <div class="big" aria-hidden="true">🎧</div>
+      <div>
+        <b>Porter Robinson b2b Ninajirachi</b>
+        <div>Thu Mar 25 · doors 6:00 PM MDT · Red Rocks Amphitheatre, Morrison</div>
+        <div class="small muted">with Frost Children (DJ set) and 10cust</div>
+        <span class="chip ok">Ticket in AXS ✓</span><span class="chip tbd">Ride there not booked</span>
+        <div class="small muted" style="margin-top:8px">Sunset is around 7:15 PM, so the openers play while the rocks glow 📸</div>
+      </div>
+    </div>
+    <div class="card event bear">
+      <div class="big" aria-hidden="true">🐻</div>
+      <div>
+        <b>TBRU 31 · Bears of the Zodiac</b>
+        <div>Thu Mar 25 – Sun Mar 28 · Hyatt Regency Dallas, 300 Reunion Blvd</div>
+        <div class="small muted">You're there Fri–Sun (Thursday is Red Rocks)</div>
+        <span class="chip tbd">Not registered yet</span><span class="chip zod">♈ zodiac fit?</span>
+        <div class="small muted" style="margin-top:8px">Register first: the Hyatt rooms only open to registered attendees through TBRU's housing desk. BearDance and the Saturday show have been paid add-ons in past years.</div>
+      </div>
+    </div>
+
+    <h2>🗓️ Draft days</h2>
+    <p class="small muted" style="margin:-4px 2px 10px">The 2027 TBRU schedule isn't posted yet, so the Dallas days follow how recent years ran. Meal stops (4★+ on Google, Yelp and Apple Maps) get added in the full guide.</p>
+    <div class="days" id="days"></div>
+
+    <div class="leg">🏔️ Denver</div>
+    <div style="margin-top:10px">
+      <details class="plan" open>
+        <summary>Wed 24 · 🛬 Land + Capitol Hill</summary>
+        <ol>
+          <li>✈️ Frontier DCA 7:00 AM → Denver 9:16 AM</li>
+          <li>🚆 A Line train DEN → Union Station (~37 min)</li>
+          <li>🚌 Free 16th Street FreeRide to Civic Center, walk to the hotel</li>
+          <li>📸 Golden hour at the State Capitol: find the mile-high step on the west stairs</li>
+          <li>🤠 Charlie's: free line-dance lessons from 8 PM</li>
+        </ol>
+      </details>
+      <details class="plan">
+        <summary>Thu 25 · 🎧 Red Rocks night</summary>
+        <ol>
+          <li>😴 Sleep in, then a big lunch (you'll be on your feet all night)</li>
+          <li>📸 Union Station + Larimer Square photo walk</li>
+          <li>🧳 Pack tonight: it's an early-ish flight tomorrow</li>
+          <li>🚌 ~5:15 PM shuttle from the Union Station flagpole (confirm in their day-before email)</li>
+          <li>🌄 Grab a spot, shoot the rocks at sunset (~7:15 PM)</li>
+          <li>🎧 Frost Children → 10cust → Porter Robinson b2b Ninajirachi</li>
+          <li>🚌 Shuttle back 30 min after the last song</li>
+        </ol>
+      </details>
+    </div>
+
+    <div class="leg">🐻 Dallas · TBRU</div>
+    <div style="margin-top:10px">
+      <details class="plan">
+        <summary>Fri 26 · ✈️ Fly to Dallas + BearDance</summary>
+        <ol>
+          <li>🚆 ~8:00 AM A Line Union Station → DEN</li>
+          <li>✈️ Frontier 10:34 AM → DFW 1:37 PM</li>
+          <li>🚈 DART Orange Line from DFW Terminal A → West End, switch to Red or Blue → Union Station, then the underground walkway into the Hyatt</li>
+          <li>🪪 Badge pickup, check in, vendor market</li>
+          <li>🚌 TBRU shuttle from the Hyatt (starts 7 PM) → BearDance at S4 on Cedar Springs</li>
+          <li>🚌 Extra BearDance bus back at 3 AM</li>
+        </ol>
+      </details>
+      <details class="plan">
+        <summary>Sat 27 · 🏆 Mr. TBRU night</summary>
+        <ol>
+          <li>😴 Sleep in</li>
+          <li>🐻 Daytime events at the Hyatt</li>
+          <li>🍽️ Family Dinner + the Mr. TBRU contest</li>
+          <li>🚌 Shuttle to the Cedar Springs bars (starts 7:30 PM), last bus back 2:30 AM</li>
+        </ol>
+      </details>
+      <details class="plan">
+        <summary>Sun 28 · 🤠 BBQ + home</summary>
+        <ol>
+          <li>🤠 Farewell Texas BBQ at the Round-Up Saloon if the 2027 time fits (Sunday shuttles start 11:30 AM)</li>
+          <li>🚈 Leave the Hyatt by ~12:45 PM: Red/Blue → West End → Orange Line to DFW (~1 h)</li>
+          <li>🛫 Frontier DFW 3:37 PM → IAD 7:33 PM</li>
+        </ol>
+      </details>
+    </div>
+
+    <h2>✈️ Flights: three one-ways, ~$406 total</h2>
+    <div class="card">
+      <div class="small muted" style="margin-bottom:6px">Expedia prices seen Nov 10, 2026 · Frontier's cheapest fare is personal item only, $149 to change · will change</div>
+      <ul class="todo">
+        <li><span class="box"></span><span><b>Wed 24 · Frontier DCA → DEN · $178</b><br>7:00 AM → 9:16 AM (or 1:20 PM → 3:29 PM)</span></li>
+        <li><span class="box"></span><span><b>Fri 26 · Frontier DEN → DFW · $54</b><br>10:34 AM → 1:37 PM. Sleep-in option: 4:17 PM → 7:23 PM, same price</span></li>
+        <li><span class="box"></span><span><b>Sun 28 · Frontier DFW → IAD · $174</b><br>3:37 PM → 7:33 PM</span></li>
+      </ul>
+      <div class="small muted" style="margin-top:6px">Three separate tickets, so a delay on one won't get you rebooked on the next. With a full day between flights that's low risk.</div>
+    </div>
+
+    <h2>🌄 Red Rocks survival kit</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="ico">🚌</span><span><b>No car, no taxi:</b> Red Rocks Shuttle from the flagpole outside Union Station (by the Crawford Hotel, 1701 Wynkoop St). Leaves 45 min before doors, so about <b>5:15 PM</b>. $65 round trip, back 30 min after the music ends from the Upper North Lot. Full refund if you cancel 24 h+ ahead.</span></li>
+        <li><span class="ico">🚍</span><span><b>Cheaper backup:</b> Bus to Show, a nonprofit that says it runs to every Red Rocks show. Rides post on bustoshow.org. After the show its buses wait in Lower South Lot 2.</span></li>
+        <li><span class="ico">⛰️</span><span><b>Altitude:</b> Red Rocks sits at 6,450 ft (Denver is 5,280). Drink lots of water and take the stairs slow. You can bring an empty reusable bottle up to 32 oz.</span></li>
+        <li><span class="ico">🎒</span><span><b>Bag:</b> one-pocket bag up to 13 × 15 × 8 in, or a fanny pack up to 6 × 9 in. Multi-pocket bags get turned away.</span></li>
+        <li><span class="ico">📷</span><span><b>Camera:</b> fixed-lens cameras are fine. No removable-lens cameras, GoPros or selfie sticks.</span></li>
+        <li><span class="ico">🚫</span><span>Also banned: glitter, flow toys, umbrellas, gum.</span></li>
+        <li><span class="ico">🧤</span><span><b>Weather:</b> shows go on in wind and snow. Layers, warm hat, gloves, a poncho and shoes for the uphill walk. Text <b>RRWEATHER</b> to 67283 for day-of alerts.</span></li>
+      </ul>
+    </div>
+
+    <h2>🚆 Getting around (no taxis)</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="ico">🏔️</span><span><b>Denver A Line</b> DEN ⇄ Union Station: ~37 min, every 15 min from 5 AM–8 PM. Board next to the Westin at the airport. $10 Airport Day Pass: tap your card or Apple Pay on the validator.</span></li>
+        <li><span class="ico">🚌</span><span><b>16th Street FreeRide</b>: free bus between Union Station and Civic Center Station, ~15 min.</span></li>
+        <li><span class="ico">🚈</span><span><b>Dallas DART</b>: Orange Line from DFW Terminal A (~50 min to West End), then Red/Blue one stop to Union Station, which connects underground to the Hyatt. Day Pass $6 in the GoPass app. Landing at another terminal? Ride Skylink to A.</span></li>
+        <li><span class="ico">🐻</span><span><b>TBRU shuttles</b> leave the Hyatt for the bar crawl: from 7 PM Thu–Fri, 7:30 PM Sat, 11:30 AM Sun. Last bus back 2:30 AM (midnight Sunday). Pickup: follow the "Trinity Crossing" signs to the outdoor patio.</span></li>
+      </ul>
+    </div>
+
+    <h2>🏨 Hotels</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="box"></span><span><b>Denver · Warwick Denver</b> · 1776 Grant St · Wed–Fri ~$386 total · 8.2/10 · heated rooftop pool<br><span class="small muted">~10 min walk to X Bar, ~15 to Charlie's, short walk to the free FreeRide</span></span></li>
+        <li><span class="box"></span><span><b>Dallas · Hyatt Regency Dallas</b> (host hotel) · Fri–Sun<br><span class="small muted">Booked only through TBRU's housing desk once you're registered (TBRU@connectionshousing.com). Booking.com shows it sold out. The bar shuttles leave from here</span></span></li>
+        <li><span class="box"></span><span><b>Dallas backup · Warwick Melrose</b> · 3015 Oak Lawn Ave · ~$700 for 2 nights · 8.7/10<br><span class="small muted">Short walk to the Cedar Springs bars, but far from the Hyatt events</span></span></li>
+      </ul>
+    </div>
+
+    <h2>🪩 Nights out</h2>
+    <div class="card">
+      <div class="small muted" style="margin-bottom:4px">🏔️ Denver · Capitol Hill, walkable from the Warwick</div>
+      <ul class="todo">
+        <li><span class="ico">🤠</span><span><b>Charlie's</b> · 900 E Colfax · country bar with line dancing. Free lessons Wed + Thu from 8 PM</span></li>
+        <li><span class="ico">💃</span><span><b>X Bar</b> · 629 E Colfax · big patio, drag</span></li>
+        <li><span class="ico">🪩</span><span><b>Lucid</b> · 600 E Colfax · disco lounge upstairs from Kyu Ramen</span></li>
+        <li><span class="ico">🏈</span><span><b>Tight End</b> · 1501 E Colfax · gay sports bar with a patio</span></li>
+      </ul>
+      <div class="small muted" style="margin:12px 0 4px">🐻 Dallas · TBRU shuttle stops</div>
+      <ul class="todo">
+        <li><span class="ico">🤠</span><span><b>Round-Up Saloon</b> · 3912 Cedar Springs Rd · country bar, Sunday's farewell BBQ</span></li>
+        <li><span class="ico">🪩</span><span><b>S4 / The Rose Room</b> · Cedar Springs · BearDance on Friday</span></li>
+        <li><span class="ico">🍻</span><span><b>JR.'s Bar &amp; Grill</b> · <b>TMC</b> · <b>Hidden Door</b> · <b>Dallas Eagle</b></span></li>
+      </ul>
+    </div>
+
+    <h2>✅ To book, in this order</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="box"></span><span><b>TBRU registration</b> at tbru.org (price isn't shown publicly)</span></li>
+        <li><span class="box"></span><span><b>Hyatt Regency room</b> through TBRU housing (only after registering)</span></li>
+        <li><span class="box"></span><span><b>3 Frontier flights</b>: DCA → DEN, DEN → DFW, DFW → IAD</span></li>
+        <li><span class="box"></span><span><b>Warwick Denver</b>, 2 nights</span></li>
+        <li><span class="box"></span><span><b>Red Rocks shuttle</b>: book once the date is listed (or Bus to Show)</span></li>
+        <li><span class="box"></span><span><b>Pack</b>: Red Rocks layers + a one-pocket bag, BearDance outfit, something for the zodiac theme ♈</span></li>
+      </ul>
+    </div>
+
+    <p class="foot">Draft plan · only the show ticket is locked in 🐻⭐</p>
+  </main>
+
+  <script>
+    (() => {
+      const plan = [
+        { n: "Land + Capitol Hill", e: "🛬", k: "move" },
+        { n: "Red Rocks!", e: "🎧", k: "locked" },
+        { n: "Fly to Dallas + BearDance", e: "🐻", k: "move" },
+        { n: "Mr. TBRU night", e: "🏆", k: "" },
+        { n: "BBQ + home", e: "🛫", k: "move" },
+      ];
+      const wd = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const start = Date.UTC(2027, 2, 24);
+      document.getElementById("days").innerHTML = plan.map((p, i) => {
+        const d = new Date(start + i * 864e5);
+        return `<div class="day ${p.k}"><div class="d">${wd[d.getUTCDay()]} Mar ${d.getUTCDate()}</div><div class="e">${p.e}</div><div class="n">${p.n}</div></div>`;
+      }).join("");
+
+      const now = new Date();
+      const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+      const n = Math.round((Date.UTC(2027, 2, 25) - today) / 864e5);
+      document.getElementById("count").textContent =
+        n > 1 ? `⏳ ${n} days to Red Rocks` : n === 1 ? "⏳ Red Rocks is tomorrow!" : n === 0 ? "🎧 Show day!!" : "🐻 Woof, it happened";
+    })();
+  </script>
+</body>
+</html>
