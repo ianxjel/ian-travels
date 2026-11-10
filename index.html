@@ -130,7 +130,7 @@
     <p class="foot">Made with love for Ian · Add to Home Screen for one-tap access</p>
   </main>
 
-  <script src="trips.js?v=3"></script>
+  <script src="trips.js?v=4"></script>
   <script>
     (() => {
       const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -144,7 +144,7 @@
       const planned = TRIPS.filter(t => t.status === "planning").sort((a, b) => a.start.localeCompare(b.start));
       const trips = [...booked].sort((a, b) => b.start.localeCompare(a.start));
       const days = booked.reduce((t, x) => t + Math.round((day(x.end) - day(x.start)) / 864e5) + 1, 0);
-      const countries = new Set(booked.map(t => t.country)).size;
+      const countries = new Set(booked.map(t => t.nation || t.country)).size;
       document.getElementById("stats").innerHTML =
         `<div class="stat"><b>${countries}</b><span>Countr${countries === 1 ? "y" : "ies"}</span></div>
          <div class="stat"><b>${booked.length}</b><span>Trip${booked.length === 1 ? "" : "s"}</span></div>

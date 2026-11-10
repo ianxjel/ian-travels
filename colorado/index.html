@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1e1650" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ian × Red Rocks" />
+  <title>Ian × Red Rocks 2027</title>
+  <link rel="icon" href="../icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1e1650; --bg2: #5a2470; --card: #2a2063; --ink: #fff7f2; --muted: #c9bde6;
+      --rock: #e0552f; --sun: #ffb347; --star: #ffe27a; --line: rgba(255,255,255,.12);
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) { --bg: #fff6ef; --bg2: #ffd9c2; --card: #ffffff; --ink: #2a1636; --muted: #7a6380; --line: rgba(60,20,40,.12); }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+      font: 16px/1.5 "Nunito", system-ui, sans-serif;
+      background-image: radial-gradient(90% 45% at 50% 0%, var(--bg2), transparent 70%); background-repeat: no-repeat;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: calc(env(safe-area-inset-top, 0px) + 14px) 16px 48px; }
+    a { color: inherit; }
+    .back { display: inline-block; margin-bottom: 12px; padding: 7px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); text-decoration: none; font-weight: 800; font-size: 14px; }
+
+    /* hero: Red Rocks at sunset, wish stars on top */
+    .hero {
+      position: relative; overflow: hidden; border-radius: 26px; padding: 22px 20px 26px; color: #fff; isolation: isolate;
+      background: linear-gradient(180deg, #1e1650 0%, #6b2a7a 42%, #e0552f 78%, #ffb347 100%);
+      box-shadow: 0 18px 40px rgba(0,0,0,.3); outline: 2px dashed rgba(255,255,255,.5); outline-offset: -9px;
+    }
+    .hero .tag { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #fff; color: #6b2a7a; font: 800 11px/1.2 "Nunito", sans-serif; letter-spacing: .6px; text-transform: uppercase; }
+    .hero h1 { margin: 12px 0 4px; font: 700 clamp(32px, 9vw, 44px)/1.05 "Fredoka", sans-serif; text-shadow: 0 2px 12px rgba(0,0,0,.25); }
+    .hero p { margin: 6px 0 0; opacity: .95; max-width: 32em; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
+    .hero .count { display: inline-block; margin-top: 12px; padding: 6px 12px; border-radius: 999px; background: rgba(0,0,0,.28); font: 800 13px/1.2 "Nunito", sans-serif; }
+    .hero .rocks { position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: -1; opacity: .55; }
+    .hero .stars span { position: absolute; z-index: -1; color: var(--star); animation: twinkle 3s ease-in-out infinite; }
+    @keyframes twinkle { 50% { opacity: .25; transform: scale(.8); } }
+
+    h2 { margin: 28px 2px 10px; font: 700 21px/1.15 "Fredoka", sans-serif; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 16px; }
+    .card + .card { margin-top: 10px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 13.5px; }
+
+    .event { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; }
+    .event .big { font-size: 46px; line-height: 1; }
+    .event b { font: 700 19px/1.2 "Fredoka", sans-serif; display: block; }
+    .chip { display: inline-block; margin: 6px 6px 0 0; padding: 4px 10px; border-radius: 999px; font: 800 12px/1.3 "Nunito", sans-serif; }
+    .chip.ok { background: #7cf2c4; color: #0b3326; }
+    .chip.tbd { background: var(--sun); color: #3a1a00; }
+
+    .days { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; }
+    .day { border-radius: 16px; padding: 10px; border: 2px dashed var(--line); min-height: 92px; }
+    .day .d { font: 800 11px/1.2 "Nunito", sans-serif; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+    .day .n { font: 700 15px/1.2 "Fredoka", sans-serif; margin-top: 4px; }
+    .day .e { font-size: 20px; margin-top: 4px; }
+    .day.locked { border-style: solid; border-color: transparent; background: linear-gradient(160deg, #ffb347, #e0552f); color: #2a0f00; }
+    .day.locked .d { color: #5a2400; }
+    .day.move { border-style: solid; border-color: var(--rock); }
+
+    details.plan { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 12px 16px; }
+    details.plan + details.plan { margin-top: 8px; }
+    details.plan summary { cursor: pointer; font: 700 17px/1.3 "Fredoka", sans-serif; list-style: none; }
+    details.plan summary::-webkit-details-marker { display: none; }
+    details.plan summary::after { content: "＋"; float: right; color: var(--muted); }
+    details.plan[open] summary::after { content: "－"; }
+    details.plan ol { margin: 10px 0 2px; padding-left: 22px; }
+    details.plan li { margin: 5px 0; }
+
+    .todo { list-style: none; margin: 0; padding: 0; }
+    .todo li { display: flex; gap: 10px; padding: 10px 2px; border-top: 1px solid var(--line); }
+    .todo li:first-child { border-top: 0; }
+    .todo .box { flex: none; width: 20px; height: 20px; margin-top: 2px; border-radius: 6px; border: 2px solid var(--muted); }
+    .todo .ico { flex: none; width: 22px; text-align: center; }
+    .foot { margin-top: 30px; text-align: center; color: var(--muted); font-size: 12.5px; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../">‹ All trips</a>
+
+    <section class="hero">
+      <div class="stars" aria-hidden="true">
+        <span style="left:8%;top:14%;font-size:14px">✦</span>
+        <span style="left:70%;top:10%;font-size:18px;animation-delay:-1s">⭐</span>
+        <span style="left:86%;top:30%;font-size:12px;animation-delay:-2s">✦</span>
+        <span style="left:52%;top:22%;font-size:10px;animation-delay:-.5s">✦</span>
+      </div>
+      <svg class="rocks" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 64 L0 30 L30 18 L58 26 L70 8 L96 14 L112 40 L140 44 L150 64 Z" fill="#7a1f12" />
+        <path d="M250 64 L262 40 L290 36 L304 10 L330 4 L352 20 L376 16 L400 34 L400 64 Z" fill="#7a1f12" />
+      </svg>
+      <span class="tag">✏️ In planning · show ticket ✓</span>
+      <h1>🏔️ Denver × Red Rocks</h1>
+      <p>Porter Robinson b2b Ninajirachi at Red Rocks, wrapped in four nights in Denver. The full step-by-step guide gets built once flights and the hotel are booked.</p>
+      <span class="count" id="count"></span>
+    </section>
+
+    <h2>🎧 The show (locked in)</h2>
+    <div class="card event">
+      <div class="big" aria-hidden="true">🎧</div>
+      <div>
+        <b>Porter Robinson b2b Ninajirachi</b>
+        <div>Thu Mar 25, 2027 · doors 6:00 PM MDT · Red Rocks Amphitheatre, Morrison</div>
+        <div class="small muted">with Frost Children (DJ set) and 10cust</div>
+        <span class="chip ok">Ticket in AXS ✓</span><span class="chip tbd">Ride there not booked</span>
+        <div class="small muted" style="margin-top:8px">Sunset is around 7:15 PM, so the openers play while the rocks glow. Have the camera out early 📸</div>
+      </div>
+    </div>
+
+    <h2>🌄 Show-night survival kit</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="ico">🚌</span><span><b>No car, no taxi:</b> Red Rocks Shuttle from the flagpole outside Union Station (by the Crawford Hotel, 1701 Wynkoop St). Leaves 45 min before doors, so about <b>5:15 PM</b>. $65 round trip, back 30 min after the music ends from the Upper North Lot. Full refund if you cancel 24 h+ ahead.</span></li>
+        <li><span class="ico">🚍</span><span><b>Cheaper backup:</b> Bus to Show, a nonprofit that says it runs to every Red Rocks show. Rides post on bustoshow.org. After the show its buses wait in Lower South Lot 2.</span></li>
+        <li><span class="ico">⛰️</span><span><b>Altitude:</b> Red Rocks sits at 6,450 ft (Denver is 5,280). Drink lots of water and take the stairs slow. You can bring an empty reusable bottle up to 32 oz.</span></li>
+        <li><span class="ico">🎒</span><span><b>Bag:</b> one-pocket bag up to 13 × 15 × 8 in, or a fanny pack up to 6 × 9 in. Multi-pocket bags get turned away.</span></li>
+        <li><span class="ico">📷</span><span><b>Camera:</b> fixed-lens cameras are fine. No removable-lens cameras, GoPros or selfie sticks.</span></li>
+        <li><span class="ico">🚫</span><span>Also banned: glitter, flow toys, umbrellas, gum.</span></li>
+        <li><span class="ico">🧤</span><span><b>Weather:</b> shows go on in wind and snow. Layers, warm hat, gloves, a poncho and shoes for the uphill walk. Text <b>RRWEATHER</b> to 67283 for day-of alerts.</span></li>
+      </ul>
+    </div>
+
+    <h2>🗓️ Draft days</h2>
+    <p class="small muted" style="margin:-4px 2px 10px">Tentative: fly in Wed Mar 24, home Sun Mar 28. Meal stops (4★+ on Google, Yelp and Apple Maps) get added in the full guide.</p>
+    <div class="days" id="days"></div>
+
+    <div style="margin-top:12px">
+      <details class="plan" open>
+        <summary>Wed 24 · 🛬 Land + Capitol Hill</summary>
+        <ol>
+          <li>✈️ Fly to Denver (early flight = a full first day)</li>
+          <li>🚆 A Line train DEN → Union Station (~37 min)</li>
+          <li>🚌 Free 16th Street FreeRide to Civic Center, walk to the hotel</li>
+          <li>📸 Golden hour at the State Capitol: find the mile-high step on the west stairs</li>
+          <li>🤠 Charlie's: free line-dance lessons from 8 PM</li>
+        </ol>
+      </details>
+      <details class="plan">
+        <summary>Thu 25 · 🎧 Red Rocks night</summary>
+        <ol>
+          <li>😴 Sleep in, then a big lunch (you'll be on your feet all night)</li>
+          <li>📸 Union Station + Larimer Square photo walk</li>
+          <li>🚌 ~5:15 PM shuttle from the Union Station flagpole (confirm the time in their day-before email)</li>
+          <li>🌄 Grab a spot, shoot the rocks at sunset (~7:15 PM)</li>
+          <li>🎧 Frost Children → 10cust → Porter Robinson b2b Ninajirachi</li>
+          <li>🚌 Shuttle back 30 min after the last song</li>
+        </ol>
+      </details>
+      <details class="plan">
+        <summary>Fri 26 · 🚂 Ski train + X Bar</summary>
+        <ol>
+          <li>🚂 7:00 AM Winter Park Express from Union Station → Winter Park Resort 9:15 AM</li>
+          <li>🏔️ Snow day: ski/board or just mountain photos. The train passes through the 6.2-mile Moffat Tunnel under the Continental Divide</li>
+          <li>🚂 4:35 PM train back → Union Station 7:05 PM</li>
+          <li>🪩 X Bar: Friday is its all-night dance party</li>
+        </ol>
+      </details>
+      <details class="plan">
+        <summary>Sat 27 · 🌀 Meow Wolf + Tracks</summary>
+        <ol>
+          <li>😴 Sleep in</li>
+          <li>🚈 E or W light rail from Union Station → Empower Field at Mile High station, ~6-min walk</li>
+          <li>🌀 Meow Wolf Convergence Station (timed ticket, from $37). Wildly photogenic</li>
+          <li>🚆 A Line one stop from Union Station → 38th &amp; Blake, ~5-min walk</li>
+          <li>🪩 Tracks: Saturday is the big night (21+), peaks after midnight</li>
+        </ol>
+      </details>
+      <details class="plan">
+        <summary>Sun 28 · 🛫 Home</summary>
+        <ol>
+          <li>🥞 Brunch + pack</li>
+          <li>🚆 A Line back to DEN (leave Union Station ~2.5 h before your flight)</li>
+          <li>🛫 Fly home</li>
+        </ol>
+      </details>
+    </div>
+
+    <h2>✈️ Nonstop flights</h2>
+    <div class="card">
+      <div class="small muted" style="margin-bottom:6px">Expedia round-trip prices seen Nov 10, 2026 · cheapest fares are personal item only · will change</div>
+      <ul class="todo">
+        <li><span class="box"></span><span><b>Frontier · DCA ⇄ DEN · ~$448</b><br>Out Wed 7:00 AM → 9:16 AM or 1:20 PM → 3:29 PM<br>Back Sun 4:40 PM → 9:59 PM (keeps your whole Sunday morning) or 7:00 AM → 12:25 PM</span></li>
+        <li><span class="box"></span><span><b>United · IAD ⇄ DEN · ~$481</b><br>Out Wed 6:23 AM → 8:34 AM, 2:25 PM → 4:23 PM or 4:08 PM → 5:53 PM<br>Back Sun 11:50 PM → 5:08 AM Mon (red-eye), or Sun 6:00 AM → 11:14 AM for ~$509</span></li>
+      </ul>
+    </div>
+
+    <h2>🚆 Getting around (no taxis)</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="ico">🚆</span><span><b>A Line</b> DEN ⇄ Union Station: ~37 min, every 15 min from 5 AM–8 PM, every 30 min otherwise. Board next to the Westin at the airport. $10 Airport Day Pass: tap your card or Apple Pay on the validator.</span></li>
+        <li><span class="ico">🚌</span><span><b>16th Street FreeRide</b>: free bus between Union Station and Civic Center Station, ~15 min end to end.</span></li>
+        <li><span class="ico">🚈</span><span><b>Light rail</b> E/W lines from Union Station for Meow Wolf. A Line one stop to 38th &amp; Blake for Tracks.</span></li>
+      </ul>
+    </div>
+
+    <h2>🏨 Hotels walkable to the Colfax bars</h2>
+    <div class="card">
+      <div class="small muted" style="margin-bottom:6px">Booking.com totals for 4 nights (Wed–Sun), seen Nov 10, 2026</div>
+      <ul class="todo">
+        <li><span class="box"></span><span><b>Warwick Denver</b> · 1776 Grant St · ~$652 · 8.2/10 · heated rooftop pool<br><span class="small muted">~10 min walk to X Bar, ~15 to Charlie's</span></span></li>
+        <li><span class="box"></span><span><b>Hampton Inn &amp; Suites Denver-Downtown</b> · 1845 Sherman St · ~$476 · 8.0/10 · indoor pool<br><span class="small muted">~12 min walk to X Bar, ~17 to Charlie's</span></span></li>
+      </ul>
+      <div class="small muted" style="margin-top:6px">Both are a short walk from Civic Center Station, so the free FreeRide gets you to Union Station for the airport train, the ski train and the Red Rocks shuttle.</div>
+    </div>
+
+    <h2>🪩 Nights out</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="ico">🤠</span><span><b>Charlie's</b> · 900 E Colfax · country bar with line dancing, mixed crowd incl. bears. Free lessons Wed + Thu from 8 PM</span></li>
+        <li><span class="ico">💃</span><span><b>X Bar</b> · 629 E Colfax · big patio, drag, Friday dance night</span></li>
+        <li><span class="ico">🪩</span><span><b>Lucid</b> · 600 E Colfax · disco lounge upstairs from Kyu Ramen</span></li>
+        <li><span class="ico">🏈</span><span><b>Tight End</b> · 1501 E Colfax · gay sports bar with a patio</span></li>
+        <li><span class="ico">🔊</span><span><b>Tracks</b> · 3500 Walnut St, RiNo · the big club. Saturday 21+, Thursday 18+. Train, not walkable from Colfax</span></li>
+        <li><span class="ico">🖤</span><span><b>Denver Eagle</b> · 5110 W Colfax · leather bar, far west of downtown</span></li>
+      </ul>
+    </div>
+
+    <h2>✅ To decide / book</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="box"></span><span><b>Flights</b>: Frontier from DCA (cheaper, Sunday-evening return) or United from IAD</span></li>
+        <li><span class="box"></span><span><b>Hotel</b>: Warwick or Hampton</span></li>
+        <li><span class="box"></span><span><b>Red Rocks shuttle</b>: book once the date is listed (or Bus to Show)</span></li>
+        <li><span class="box"></span><span><b>Winter Park Express</b> on Amtrak: runs Thu–Sun through Apr 4, 2027, fares from $9</span></li>
+        <li><span class="box"></span><span><b>Meow Wolf</b> timed ticket</span></li>
+        <li><span class="box"></span><span><b>Pack for late March</b>: cold nights, possible snow, a one-pocket bag for Red Rocks</span></li>
+      </ul>
+    </div>
+
+    <p class="foot">Draft plan · only the show ticket is locked in ⭐</p>
+  </main>
+
+  <script>
+    (() => {
+      const plan = [
+        { n: "Land + Capitol Hill", e: "🛬", k: "move" },
+        { n: "Red Rocks!", e: "🎧", k: "locked" },
+        { n: "Ski train + X Bar", e: "🚂", k: "" },
+        { n: "Meow Wolf + Tracks", e: "🌀", k: "" },
+        { n: "Fly home", e: "🛫", k: "move" },
+      ];
+      const wd = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const start = Date.UTC(2027, 2, 24);
+      document.getElementById("days").innerHTML = plan.map((p, i) => {
+        const d = new Date(start + i * 864e5);
+        return `<div class="day ${p.k}"><div class="d">${wd[d.getUTCDay()]} Mar ${d.getUTCDate()}</div><div class="e">${p.e}</div><div class="n">${p.n}</div></div>`;
+      }).join("");
+
+      // countdown to the show (Thu Mar 25, 2027)
+      const now = new Date();
+      const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+      const n = Math.round((Date.UTC(2027, 2, 25) - today) / 864e5);
+      document.getElementById("count").textContent =
+        n > 1 ? `⏳ ${n} days to Red Rocks` : n === 1 ? "⏳ Red Rocks is tomorrow!" : n === 0 ? "🎧 Show day!!" : "⭐ Wish granted";
+    })();
+  </script>
+</body>
+</html>
