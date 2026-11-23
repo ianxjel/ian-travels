@@ -9,7 +9,7 @@ step-by-step days, photo spots, snack stops, phrases (yes, including flirting �
 |---|---|
 | 🇯🇵 Japan · Oct 26 – Nov 5, 2026 | [`/japan/`](japan/) |
 | 🇪🇺 Berlin → Amsterdam → London (Pokémon EUIC) · ~Feb 12 – 21, 2027 · ✏️ *in planning* | [`/europe/`](europe/) (draft plan) |
-| 🇺🇸 Denver → Dallas: Red Rocks (Porter Robinson b2b Ninajirachi) + TBRU · ~Mar 24 – 28, 2027 · ✏️ *in planning* | [`/denver-dallas/`](denver-dallas/) (draft plan; `/colorado/` redirects here) |
+| 🇺🇸 Denver → Dallas: 2 nights of Porter Robinson & Ninajirachi at Red Rocks + TBRU · Mar 23 – 28, 2027 · ✏️ *in planning* | [`/denver-dallas/`](denver-dallas/) (step-by-step guide; `/colorado/` redirects here) |
 
 ## Trips in planning
 A trip that isn't booked yet gets `status: "planning"` in `trips.js`. It shows in its own "In planning" section on the

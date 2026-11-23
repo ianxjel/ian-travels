@@ -88,6 +88,45 @@
     .leg::after { content: ""; flex: 1; height: 2px; background: var(--line); border-radius: 2px; }
     .event.bear .big { filter: drop-shadow(0 4px 10px rgba(0,0,0,.25)); }
     .chip.zod { background: #b9a4ff; color: #1d0f4a; }
+  
+    /* step-by-step guide */
+    .daynav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    @media (min-width: 560px) { .daynav { grid-template-columns: repeat(6, 1fr); } }
+    .daynav a { text-decoration: none; }
+    .day { border-radius: 16px; padding: 10px; border: 2px dashed var(--line); min-height: 92px; display: block; }
+    .day.show { border-style: solid; border-color: transparent; background: linear-gradient(160deg, #ffb347, #e0552f); color: #2a0f00; }
+    .day.show .d { color: #5a2400; }
+    .day.bear { border-style: solid; border-color: transparent; background: linear-gradient(160deg, #b9a4ff, #6b2a7a); color: #fff; }
+    .day.bear .d { color: #efe6ff; }
+
+    details.plan { scroll-margin-top: 12px; }
+    details.plan summary { position: relative; padding-right: 26px; }
+    details.plan summary::after { float: none; position: absolute; right: 0; top: 0; }
+    details.plan summary .sub { display: block; font: 700 13px/1.35 "Nunito", sans-serif; color: var(--muted); margin-top: 3px; }
+    details.plan .zone { display: inline-block; margin-top: 8px; padding: 3px 9px; border-radius: 999px; background: rgba(255,179,71,.16); color: var(--sun); font: 800 11.5px/1.3 "Nunito", sans-serif; }
+    .steps { list-style: none; margin: 8px 0 2px; padding: 0; }
+    .step { display: grid; grid-template-columns: 58px 1fr; gap: 10px; padding: 13px 0; border-top: 1px dashed var(--line); }
+    .step:first-child { border-top: 0; }
+    .step .tm { text-align: right; padding-top: 2px; font: 800 12.5px/1.25 "Nunito", sans-serif; color: var(--sun); }
+    .step .tm small { display: block; font-size: 10.5px; color: var(--muted); }
+    .step h3 { margin: 0; font: 700 16.5px/1.25 "Fredoka", sans-serif; }
+    .step .meal { display: inline-block; margin-top: 5px; padding: 2px 9px; border-radius: 999px; background: rgba(124,242,196,.15); color: #7cf2c4; font: 800 11.5px/1.45 "Nunito", sans-serif; }
+    .step ol.how { margin: 7px 0 0; padding-left: 19px; font-size: 14.5px; }
+    .step ol.how li { margin: 3px 0; }
+    .step .note { margin-top: 7px; padding: 7px 10px; border-radius: 12px; background: rgba(255,255,255,.06); font-size: 13.5px; }
+    .step .act { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 9px; }
+    .btn { display: inline-block; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: inherit; font: 800 12.5px/1.3 "Nunito", sans-serif; text-decoration: none; cursor: pointer; }
+    .btn.go { background: var(--rock); border-color: var(--rock); color: #fff; }
+    .step.done { opacity: .5; }
+    .step.done h3 { text-decoration: line-through; }
+    .step.done .btn.tick { background: #7cf2c4; border-color: #7cf2c4; color: #0b3326; }
+    .cost { display: flex; justify-content: space-between; gap: 10px; padding-top: 10px; margin-top: 4px; border-top: 1px solid var(--line); font-weight: 800; }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) .step .meal { background: #dcf8ec; color: #0b6b47; }
+      :root:not([data-theme="dark"]) .step .tm { color: #c2410c; }
+      :root:not([data-theme="dark"]) .step .note { background: #fff1e6; }
+      :root:not([data-theme="dark"]) details.plan .zone { background: #ffe8cc; color: #9a3412; }
+    }
   </style>
 </head>
 <body>
@@ -97,7 +136,7 @@
     <section class="hero">
       <div class="stars" aria-hidden="true">
         <span style="left:8%;top:14%;font-size:14px">✦</span>
-        <span style="left:80%;top:22%;font-size:18px;animation-delay:-1s">♈</span>
+        <span style="left:80%;top:22%;font-size:18px;animation-delay:-1s">♏</span>
         <span style="left:90%;top:9%;font-size:12px;animation-delay:-2s">✦</span>
         <span style="left:68%;top:30%;font-size:10px;animation-delay:-.5s">✦</span>
       </div>
@@ -105,21 +144,30 @@
         <path d="M0 64 L0 30 L30 18 L58 26 L70 8 L96 14 L112 40 L140 44 L150 64 Z" fill="#7a1f12" />
         <path d="M250 64 L262 40 L290 36 L304 10 L330 4 L352 20 L376 16 L400 34 L400 64 Z" fill="#7a1f12" />
       </svg>
-      <span class="tag">✏️ In planning · show ticket ✓</span>
+      <span class="tag">✏️ In planning · 3 show tickets ✓</span>
       <h1>🏔️ Denver →<br />🐻&nbsp;Dallas</h1>
-      <p>Porter Robinson b2b Ninajirachi at Red Rocks, then straight to Texas Bear Round-Up for the weekend. Wed Mar 24 – Sun Mar 28, 2027. The full step-by-step guide gets built once everything's booked.</p>
+      <p>Two nights of Porter Robinson &amp; Ninajirachi at Red Rocks, then Texas Bear Round-Up for the weekend. Tue Mar 23 – Sun Mar 28, 2027.</p>
       <span class="count" id="count"></span>
     </section>
 
-    <h2>🎟️ The two big things</h2>
+    <h2>🎟️ The three big things</h2>
+    <div class="card event">
+      <div class="big" aria-hidden="true">🌄</div>
+      <div>
+        <b>Night 1 · Porter Robinson &amp; Ninajirachi</b>
+        <div>Wed Mar 24 · 6:00 PM MDT · Red Rocks Amphitheatre</div>
+        <div class="small muted">with Dylan Brady</div>
+        <span class="chip ok">2 tickets in AXS ✓</span><span class="chip tbd">Spare ticket: Denver friend or transfer it</span>
+        <div class="small muted" style="margin-top:8px">If a friend takes the spare, book them a seat on the same shuttle. Otherwise send it to a buyer through the AXS app's transfer.</div>
+      </div>
+    </div>
     <div class="card event">
       <div class="big" aria-hidden="true">🎧</div>
       <div>
-        <b>Porter Robinson b2b Ninajirachi</b>
-        <div>Thu Mar 25 · doors 6:00 PM MDT · Red Rocks Amphitheatre, Morrison</div>
+        <b>Night 2 · Porter Robinson &amp; Ninajirachi</b>
+        <div>Thu Mar 25 · 6:00 PM MDT · Red Rocks Amphitheatre</div>
         <div class="small muted">with Frost Children (DJ set) and 10cust</div>
-        <span class="chip ok">Ticket in AXS ✓</span><span class="chip tbd">Ride there not booked</span>
-        <div class="small muted" style="margin-top:8px">Sunset is around 7:15 PM, so the openers play while the rocks glow 📸</div>
+        <span class="chip ok">1 ticket in AXS ✓</span><span class="chip tbd">Shuttles not booked</span>
       </div>
     </div>
     <div class="card event bear">
@@ -127,90 +175,46 @@
       <div>
         <b>TBRU 31 · Bears of the Zodiac</b>
         <div>Thu Mar 25 – Sun Mar 28 · Hyatt Regency Dallas, 300 Reunion Blvd</div>
-        <div class="small muted">You're there Fri–Sun (Thursday is Red Rocks)</div>
-        <span class="chip tbd">Not registered yet</span><span class="chip zod">♈ zodiac fit?</span>
-        <div class="small muted" style="margin-top:8px">Register first: the Hyatt rooms only open to registered attendees through TBRU's housing desk. BearDance and the Saturday show have been paid add-ons in past years.</div>
+        <div class="small muted">You're there Fri–Sun (Thursday is Red Rocks night 2)</div>
+        <span class="chip tbd">Not registered yet</span><span class="chip zod">♏ Scorpio fit</span>
+        <div class="small muted" style="margin-top:8px">Register first: Hyatt rooms only open to registered attendees through TBRU's housing desk. BearDance and the Saturday show have been paid add-ons in past years. The 2027 schedule isn't posted yet, so the Dallas times below follow how 2026 ran.</div>
       </div>
     </div>
 
-    <h2>🗓️ Draft days</h2>
-    <p class="small muted" style="margin:-4px 2px 10px">The 2027 TBRU schedule isn't posted yet, so the Dallas days follow how recent years ran. Meal stops (4★+ on Google, Yelp and Apple Maps) get added in the full guide.</p>
-    <div class="days" id="days"></div>
+    <h2>🗓️ Six days</h2>
+    <p class="small muted" style="margin:-4px 2px 10px">Tap a day to jump to it. Each stop has directions, a Maps button and a ✓ to tick it off as you go (saved on this phone).</p>
+    <nav class="daynav" id="daynav"></nav>
 
-    <div class="leg">🏔️ Denver</div>
-    <div style="margin-top:10px">
-      <details class="plan" open>
-        <summary>Wed 24 · 🛬 Land + Capitol Hill</summary>
-        <ol>
-          <li>✈️ Frontier DCA 7:00 AM → Denver 9:16 AM</li>
-          <li>🚆 A Line train DEN → Union Station (~37 min)</li>
-          <li>🚌 Free 16th Street FreeRide to Civic Center, walk to the hotel</li>
-          <li>📸 Golden hour at the State Capitol: find the mile-high step on the west stairs</li>
-          <li>🤠 Charlie's: free line-dance lessons from 8 PM</li>
-        </ol>
-      </details>
-      <details class="plan">
-        <summary>Thu 25 · 🎧 Red Rocks night</summary>
-        <ol>
-          <li>😴 Sleep in, then a big lunch (you'll be on your feet all night)</li>
-          <li>📸 Union Station + Larimer Square photo walk</li>
-          <li>🧳 Pack tonight: it's an early-ish flight tomorrow</li>
-          <li>🚌 ~5:15 PM shuttle from the Union Station flagpole (confirm in their day-before email)</li>
-          <li>🌄 Grab a spot, shoot the rocks at sunset (~7:15 PM)</li>
-          <li>🎧 Frost Children → 10cust → Porter Robinson b2b Ninajirachi</li>
-          <li>🚌 Shuttle back 30 min after the last song</li>
-        </ol>
-      </details>
-    </div>
+    <div id="plan"></div>
 
-    <div class="leg">🐻 Dallas · TBRU</div>
-    <div style="margin-top:10px">
-      <details class="plan">
-        <summary>Fri 26 · ✈️ Fly to Dallas + BearDance</summary>
-        <ol>
-          <li>🚆 ~8:00 AM A Line Union Station → DEN</li>
-          <li>✈️ Frontier 10:34 AM → DFW 1:37 PM</li>
-          <li>🚈 DART Orange Line from DFW Terminal A → West End, switch to Red or Blue → Union Station, then the underground walkway into the Hyatt</li>
-          <li>🪪 Badge pickup, check in, vendor market</li>
-          <li>🚌 TBRU shuttle from the Hyatt (starts 7 PM) → BearDance at S4 on Cedar Springs</li>
-          <li>🚌 Extra BearDance bus back at 3 AM</li>
-        </ol>
-      </details>
-      <details class="plan">
-        <summary>Sat 27 · 🏆 Mr. TBRU night</summary>
-        <ol>
-          <li>😴 Sleep in</li>
-          <li>🐻 Daytime events at the Hyatt</li>
-          <li>🍽️ Family Dinner + the Mr. TBRU contest</li>
-          <li>🚌 Shuttle to the Cedar Springs bars (starts 7:30 PM), last bus back 2:30 AM</li>
-        </ol>
-      </details>
-      <details class="plan">
-        <summary>Sun 28 · 🤠 BBQ + home</summary>
-        <ol>
-          <li>🤠 Farewell Texas BBQ at the Round-Up Saloon if the 2027 time fits (Sunday shuttles start 11:30 AM)</li>
-          <li>🚈 Leave the Hyatt by ~12:45 PM: Red/Blue → West End → Orange Line to DFW (~1 h)</li>
-          <li>🛫 Frontier DFW 3:37 PM → IAD 7:33 PM</li>
-        </ol>
-      </details>
-    </div>
-
-    <h2>✈️ Flights: three one-ways, ~$406 total</h2>
+    <h2>✈️ Flights: three one-ways, ~$395</h2>
     <div class="card">
-      <div class="small muted" style="margin-bottom:6px">Expedia prices seen Nov 10, 2026 · Frontier's cheapest fare is personal item only, $149 to change · will change</div>
+      <div class="small muted" style="margin-bottom:6px">Expedia prices seen Nov 22, 2026 · Frontier's cheapest fare is one personal item (14 × 18 × 8 in), $149 to change · prices will move</div>
       <ul class="todo">
-        <li><span class="box"></span><span><b>Wed 24 · Frontier DCA → DEN · $178</b><br>7:00 AM → 9:16 AM (or 1:20 PM → 3:29 PM)</span></li>
-        <li><span class="box"></span><span><b>Fri 26 · Frontier DEN → DFW · $54</b><br>10:34 AM → 1:37 PM. Sleep-in option: 4:17 PM → 7:23 PM, same price</span></li>
-        <li><span class="box"></span><span><b>Sun 28 · Frontier DFW → IAD · $174</b><br>3:37 PM → 7:33 PM</span></li>
+        <li><span class="box"></span><span><b>Tue Mar 23 · Frontier DCA → DEN · $178</b><br>6:00 PM ET → 8:20 PM MDT</span></li>
+        <li><span class="box"></span><span><b>Fri Mar 26 · Frontier DEN → DFW · $38</b><br>10:34 AM MDT → 1:37 PM CDT · Concourse A → Terminal E</span></li>
+        <li><span class="box"></span><span><b>Sun Mar 28 · Frontier DFW → IAD · $179</b><br>3:37 PM CDT → 7:33 PM ET · lands at Dulles, right on the Silver Line</span></li>
       </ul>
-      <div class="small muted" style="margin-top:6px">Three separate tickets, so a delay on one won't get you rebooked on the next. With a full day between flights that's low risk.</div>
+      <div class="small muted" style="margin-top:6px">💡 Add a carry-on when you book: six days of Red Rocks layers plus a BearDance outfit won't fit in a personal item. Three separate tickets means a delay on one won't rebook the next, but there's a full day between each.</div>
+    </div>
+
+    <h2>🏨 Hotels</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="box"></span><span><b>Denver · Warwick Denver</b> · 1776 Grant St · Tue Mar 23 → Fri Mar 26 · 3 nights · $559 on Booking.com · 8.2/10 · heated rooftop pool<br><span class="small muted">Walks: Steuben's 4 min · X Bar 10 · Cheba Hut 10 · Wade Blank Civic Center Station (FreeRide) 10 · Charlie's 13</span></span></li>
+        <li><span class="box"></span><span><b>Dallas · Hyatt Regency Dallas</b> (TBRU host hotel) · 300 Reunion Blvd · Fri Mar 26 → Sun Mar 28 · 2 nights<br><span class="small muted">Booked only through TBRU's housing desk once you're registered (TBRU@connectionshousing.com). Underground walkway to DART's Union Station. TBRU bar shuttles leave from here</span></span></li>
+        <li><span class="box"></span><span><b>Dallas backup · Warwick Melrose</b> · 3015 Oak Lawn Ave · ~$700 for 2 nights · 8.7/10<br><span class="small muted">Short walk to the Cedar Springs bars, but far from the Hyatt events</span></span></li>
+      </ul>
+      <div class="cost"><span>Known so far: flights + Warwick + 2 shuttles</span><span>~$1,085</span></div>
+      <div class="small muted" style="margin-top:4px">Plus TBRU registration, the Hyatt, Meow Wolf, Reunion Tower and food.</div>
     </div>
 
     <h2>🌄 Red Rocks survival kit</h2>
     <div class="card">
       <ul class="todo">
-        <li><span class="ico">🚌</span><span><b>No car, no taxi:</b> Red Rocks Shuttle from the flagpole outside Union Station (by the Crawford Hotel, 1701 Wynkoop St). Leaves 45 min before doors, so about <b>5:15 PM</b>. $65 round trip, back 30 min after the music ends from the Upper North Lot. Full refund if you cancel 24 h+ ahead.</span></li>
-        <li><span class="ico">🚍</span><span><b>Cheaper backup:</b> Bus to Show, a nonprofit that says it runs to every Red Rocks show. Rides post on bustoshow.org. After the show its buses wait in Lower South Lot 2.</span></li>
+        <li><span class="ico">🚌</span><span><b>The plan: Red Rocks Shuttle</b> from the flagpole outside Union Station (by The Crawford Hotel, 1701 Wynkoop St). Leaves 45 min before doors, so about <b>5:15 PM</b>. $65 round trip, back 30 min after the music ends from the Upper North Lot. Full refund if you cancel 24 h+ ahead. Book both nights once the dates are listed.</span></li>
+        <li><span class="ico">🎫</span><span><b>Backup 1: AXS "Shuttles to Red Rocks" add-on</b> (On Location). At other AEG shows it's $70 from Thirsty Lion at Union Station (1605 Wynkoop St), check-in opens 1½ h before doors, all sales final, photo ID. Not listed for these two shows yet.</span></li>
+        <li><span class="ico">🚍</span><span><b>Backup 2: Bus to Show</b>, a nonprofit that runs to Red Rocks shows. Rides post on bustoshow.org. After the show its buses wait in Lower South Lot 2.</span></li>
         <li><span class="ico">⛰️</span><span><b>Altitude:</b> Red Rocks sits at 6,450 ft (Denver is 5,280). Drink lots of water and take the stairs slow. You can bring an empty reusable bottle up to 32 oz.</span></li>
         <li><span class="ico">🎒</span><span><b>Bag:</b> one-pocket bag up to 13 × 15 × 8 in, or a fanny pack up to 6 × 9 in. Multi-pocket bags get turned away.</span></li>
         <li><span class="ico">📷</span><span><b>Camera:</b> fixed-lens cameras are fine. No removable-lens cameras, GoPros or selfie sticks.</span></li>
@@ -222,19 +226,12 @@
     <h2>🚆 Getting around (no taxis)</h2>
     <div class="card">
       <ul class="todo">
-        <li><span class="ico">🏔️</span><span><b>Denver A Line</b> DEN ⇄ Union Station: ~37 min, every 15 min from 5 AM–8 PM. Board next to the Westin at the airport. $10 Airport Day Pass: tap your card or Apple Pay on the validator.</span></li>
-        <li><span class="ico">🚌</span><span><b>16th Street FreeRide</b>: free bus between Union Station and Civic Center Station, ~15 min.</span></li>
-        <li><span class="ico">🚈</span><span><b>Dallas DART</b>: Orange Line from DFW Terminal A (~50 min to West End), then Red/Blue one stop to Union Station, which connects underground to the Hyatt. Day Pass $6 in the GoPass app. Landing at another terminal? Ride Skylink to A.</span></li>
-        <li><span class="ico">🐻</span><span><b>TBRU shuttles</b> leave the Hyatt for the bar crawl: from 7 PM Thu–Fri, 7:30 PM Sat, 11:30 AM Sun. Last bus back 2:30 AM (midnight Sunday). Pickup: follow the "Trinity Crossing" signs to the outdoor patio.</span></li>
-      </ul>
-    </div>
-
-    <h2>🏨 Hotels</h2>
-    <div class="card">
-      <ul class="todo">
-        <li><span class="box"></span><span><b>Denver · Warwick Denver</b> · 1776 Grant St · Wed–Fri ~$386 total · 8.2/10 · heated rooftop pool<br><span class="small muted">~10 min walk to X Bar, ~15 to Charlie's, short walk to the free FreeRide</span></span></li>
-        <li><span class="box"></span><span><b>Dallas · Hyatt Regency Dallas</b> (host hotel) · Fri–Sun<br><span class="small muted">Booked only through TBRU's housing desk once you're registered (TBRU@connectionshousing.com). Booking.com shows it sold out. The bar shuttles leave from here</span></span></li>
-        <li><span class="box"></span><span><b>Dallas backup · Warwick Melrose</b> · 3015 Oak Lawn Ave · ~$700 for 2 nights · 8.7/10<br><span class="small muted">Short walk to the Cedar Springs bars, but far from the Hyatt events</span></span></li>
+        <li><span class="ico">🚇</span><span><b>DC Metro</b>: Silver Line + Blue Line to Reagan National on the way out. Dulles is on the Silver Line, so the ride home is one train.</span></li>
+        <li><span class="ico">🏔️</span><span><b>Denver A Line</b> DEN ⇄ Union Station: ~37 min, every 15 min, every 30 min in the evening. $10 Airport Day Pass covers every RTD bus and train for the rest of that day (RTD has floated raising it). Buy in the MyRide app or tap your card or phone on the validator.</span></li>
+        <li><span class="ico">🚌</span><span><b>16th Street FreeRide</b>: free bus every 4–12 min between Union Station and Wade Blank Civic Center Station, ~15 min end to end, early morning to late night. RTD's 2027 budget options included cutting it by mid-2027, so check it's still running before you go.</span></li>
+        <li><span class="ico">🚈</span><span><b>Denver light rail</b> (Meow Wolf day): E or W Line from Union Station one stop to Empower Field at Mile High. $5.50 Day Pass in MyRide ($2.75 for 3 hours).</span></li>
+        <li><span class="ico">🤠</span><span><b>Dallas DART</b>: Orange Line DFW Airport (Terminal A) ⇄ West End, ~50 min. Red/Blue one stop West End ⇄ Union Station, which connects underground to the Hyatt. Green Line to Deep Ellum. $6 Day Pass or $3 for 3 hours in the GoPass app. Skylink between DFW terminals is inside security.</span></li>
+        <li><span class="ico">🐻</span><span><b>TBRU shuttles</b> (2026 times): from the Hyatt from 7 PM Thu–Fri and 7:30 PM Sat, last bus back 2:30 AM, plus a 3 AM bus after BearDance. Pickup: follow the "Trinity Crossing" signs to the outdoor patio.</span></li>
       </ul>
     </div>
 
@@ -242,14 +239,14 @@
     <div class="card">
       <div class="small muted" style="margin-bottom:4px">🏔️ Denver · Capitol Hill, walkable from the Warwick</div>
       <ul class="todo">
-        <li><span class="ico">🤠</span><span><b>Charlie's</b> · 900 E Colfax · country bar with line dancing. Free lessons Wed + Thu from 8 PM</span></li>
-        <li><span class="ico">💃</span><span><b>X Bar</b> · 629 E Colfax · big patio, drag</span></li>
+        <li><span class="ico">🤠</span><span><b>Charlie's</b> · 900 E Colfax · country bar with line dancing, open till 2 AM. Free lessons Wed + Thu from 8 PM (you'll be at Red Rocks)</span></li>
+        <li><span class="ico">💃</span><span><b>X Bar</b> · 629 E Colfax · big patio, drag, open till 2 AM</span></li>
         <li><span class="ico">🪩</span><span><b>Lucid</b> · 600 E Colfax · disco lounge upstairs from Kyu Ramen</span></li>
         <li><span class="ico">🏈</span><span><b>Tight End</b> · 1501 E Colfax · gay sports bar with a patio</span></li>
       </ul>
       <div class="small muted" style="margin:12px 0 4px">🐻 Dallas · TBRU shuttle stops</div>
       <ul class="todo">
-        <li><span class="ico">🤠</span><span><b>Round-Up Saloon</b> · 3912 Cedar Springs Rd · country bar, Sunday's farewell BBQ</span></li>
+        <li><span class="ico">🤠</span><span><b>Round-Up Saloon</b> · 3912 Cedar Springs Rd · country bar, two-stepping. Sunday's farewell BBQ happens here (you'll be flying)</span></li>
         <li><span class="ico">🪩</span><span><b>S4 / The Rose Room</b> · Cedar Springs · BearDance on Friday</span></li>
         <li><span class="ico">🍻</span><span><b>JR.'s Bar &amp; Grill</b> · <b>TMC</b> · <b>Hidden Door</b> · <b>Dallas Eagle</b></span></li>
       </ul>
@@ -258,39 +255,303 @@
     <h2>✅ To book, in this order</h2>
     <div class="card">
       <ul class="todo">
-        <li><span class="box"></span><span><b>TBRU registration</b> at tbru.org (price isn't shown publicly)</span></li>
-        <li><span class="box"></span><span><b>Hyatt Regency room</b> through TBRU housing (only after registering)</span></li>
-        <li><span class="box"></span><span><b>3 Frontier flights</b>: DCA → DEN, DEN → DFW, DFW → IAD</span></li>
-        <li><span class="box"></span><span><b>Warwick Denver</b>, 2 nights</span></li>
-        <li><span class="box"></span><span><b>Red Rocks shuttle</b>: book once the date is listed (or Bus to Show)</span></li>
-        <li><span class="box"></span><span><b>Pack</b>: Red Rocks layers + a one-pocket bag, BearDance outfit, something for the zodiac theme ♈</span></li>
+        <li><span class="box"></span><span><b>TBRU registration</b> at tbru.org, plus BearDance + the Saturday show if they're add-ons again</span></li>
+        <li><span class="box"></span><span><b>Hyatt Regency</b>, Fri–Sun, through TBRU housing (only after registering)</span></li>
+        <li><span class="box"></span><span><b>3 Frontier flights</b> + a carry-on</span></li>
+        <li><span class="box"></span><span><b>Warwick Denver</b>, Tue–Fri (3 nights)</span></li>
+        <li><span class="box"></span><span><b>Red Rocks Shuttle</b>, Wed + Thu (a 2nd Wed seat if a friend takes the spare)</span></li>
+        <li><span class="box"></span><span><b>Meow Wolf</b> timed ticket, Thu Mar 25, 10:30 AM</span></li>
+        <li><span class="box"></span><span><b>Tables:</b> Tavernetta Wed 4:00 PM · Ultreia Thu 4:15 PM</span></li>
+        <li><span class="box"></span><span><b>Reunion Tower</b> GeO-Deck, Fri Mar 26 ~5:45 PM (no refunds, exchanges only)</span></li>
+        <li><span class="box"></span><span><b>Spare Wed ticket</b>: line up a Denver friend or transfer it in AXS</span></li>
       </ul>
     </div>
 
-    <p class="foot">Draft plan · only the show ticket is locked in 🐻⭐</p>
+    <h2>🎒 Pack</h2>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="box"></span><span>Warm layers, beanie, gloves, poncho, comfy shoes for the Red Rocks stairs</span></li>
+        <li><span class="box"></span><span>One-pocket show bag or small fanny pack + empty water bottle (≤ 32 oz)</span></li>
+        <li><span class="box"></span><span>Battery pack and charging cable</span></li>
+        <li><span class="box"></span><span>BearDance outfit + a ♏ Scorpio look for Bears of the Zodiac</span></li>
+        <li><span class="box"></span><span>Photo ID (flights, shuttles, TBRU badge pickup)</span></li>
+      </ul>
+    </div>
+
+    <p class="foot">Plan built Nov 22, 2026 · meals are 4★+ on Google and Yelp (Apple Maps still to check) · TBRU 2027 schedule not posted yet 🐻⭐</p>
   </main>
 
   <script>
     (() => {
-      const plan = [
-        { n: "Land + Capitol Hill", e: "🛬", k: "move" },
-        { n: "Red Rocks!", e: "🎧", k: "locked" },
-        { n: "Fly to Dallas + BearDance", e: "🐻", k: "move" },
-        { n: "Mr. TBRU night", e: "🏆", k: "" },
-        { n: "BBQ + home", e: "🛫", k: "move" },
+      const maps = (place, mode) =>
+        "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(place) + "&travelmode=" + (mode || "walking");
+
+      const DAYS = [
+        {
+          id: "d1", date: [2027, 2, 23], e: "🛫", k: "", nav: "Fly out", leg: "🏔️ Denver",
+          title: "Wheels up, Mile High hello",
+          sub: "Work from home, evening flight, first taste of Colfax.",
+          zone: "DC (ET) → Denver (MDT, 2 hours behind)",
+          steps: [
+            { t: "8:30 AM", z: "ET", e: "🥣", title: "Breakfast at home", how: ["Usual WFH morning"] },
+            { t: "12:30 PM", z: "ET", e: "🥪", title: "Lunch at home",
+              how: ["Eat, then finish packing: Red Rocks layers, show bag, BearDance outfit"],
+              tip: "Frontier's basic fare is one personal item (14 × 18 × 8 in). If you added a carry-on, check it's on the booking." },
+            { t: "3:45 PM", z: "ET", e: "🚇", title: "Metro to Reagan National (DCA)", place: "Ronald Reagan Washington National Airport", mode: "transit",
+              how: ["Silver Line from your Tysons stop toward Downtown Largo", "Change at Rosslyn to a Blue Line train toward Franconia-Springfield", "Ride to Ronald Reagan Washington National Airport"],
+              tip: "Aim to be at the airport by ~4:45 PM. Google Maps shows the live Metro time." },
+            { t: "6:00 PM", z: "ET", e: "✈️", title: "Frontier DCA → Denver",
+              how: ["Gate is in the Frontier app", "Lands 8:20 PM Denver time"] },
+            { t: "8:20 PM", e: "🚆", title: "A Line train to Union Station", place: "Denver Union Station", mode: "transit",
+              how: ["Frontier uses Concourse A: head to the main terminal (train or the walkway bridge)", "Follow the A Line signs to the train station at the south end, next to the Westin", "Get a $10 Airport Day Pass in the RTD MyRide app, or tap your card or phone on the validator", "Ride ~37 min to the last stop, Union Station"],
+              tip: "Evening trains run every 30 min. The $10 pass covers every RTD bus and train for the rest of today." },
+            { t: "~9:15 PM", e: "🚌", title: "Free bus to Civic Center", place: "Wade Blank Civic Center Station, Denver", mode: "transit",
+              how: ["Follow the signs for the 16th Street FreeRide (free, no ticket)", "Ride ~15 min to the last stop, Wade Blank Civic Center Station"],
+              photo: "Union Station's neon \"Travel by Train\" sign, lit up at night." },
+            { t: "~9:40 PM", e: "🏨", title: "Check in · Warwick Denver", place: "Warwick Denver, 1776 Grant St, Denver, CO",
+              how: ["Walk ~10 min to 1776 Grant St"], tip: "Heated rooftop pool, if you want a soak at some point." },
+            { t: "~10:00 PM", e: "🌯", title: "Dinner · Cheba Hut", meal: "Google 4.7 · Yelp 4.1 · open till midnight", place: "Cheba Hut, 638 E Colfax Ave, Denver, CO",
+              how: ["Walk ~10 min to 638 E Colfax Ave"], tip: "Toasted subs. Late dinner tonight: it's midnight back home." },
+            { t: "~10:45 PM", e: "🤠", title: "Nightcap · Charlie's", place: "Charlie's Denver, 900 E Colfax Ave, Denver, CO",
+              how: ["Walk ~5 min east on Colfax to 900 E Colfax Ave", "Walk ~13 min back to the Warwick"],
+              spicy: "Country bar with a dance floor, open till 2 AM. Keep it to a drink or two: two show nights ahead." },
+          ],
+        },
+        {
+          id: "d2", date: [2027, 2, 24], e: "🌄", k: "show", nav: "Red Rocks #1",
+          title: "Red Rocks night one",
+          sub: "Gold dome in the morning, glowing rocks at sunset. Dylan Brady opens.",
+          zone: "Denver · MDT",
+          steps: [
+            { t: "8:30 AM", e: "🍳", title: "Breakfast · Onefold Uptown", meal: "Google 4.5 · Yelp 4.3 · 7 AM–3 PM", place: "Onefold Uptown, 1420 E 18th Ave, Denver, CO",
+              how: ["Walk ~18 min to 1420 E 18th Ave"], tip: "Known for its breakfast fried rice." },
+            { t: "9:45 AM", e: "🏛️", title: "Free Capitol tour + gold dome", place: "Colorado State Capitol, 200 E Colfax Ave, Denver, CO",
+              how: ["Walk ~20 min to the Capitol", "Use the public entrance on the Colfax Ave (north) side and go through security", "Check in at the tour desk for the 10:00 AM tour", "About an hour, including the 99-step climb to the dome's lookout"],
+              tip: "Free and first come, first served (max 30 per tour). You can't go up the dome without the tour.",
+              photo: "The 13th step on the west stairs is engraved \"One Mile Above Sea Level\". Selfie on it." },
+            { t: "11:00 AM", e: "📸", title: "Civic Center Park + art museum photo walk", place: "Denver Art Museum, 100 W 14th Ave Pkwy, Denver, CO",
+              how: ["Walk down the west steps and across Civic Center Park (~7 min)", "Shoot the Denver Art Museum's jagged titanium Hamilton Building from the plaza"],
+              tip: "The museum is closed on Wednesdays, so this is an outside-only stop." },
+            { t: "12:00 PM", e: "🍔", title: "Lunch · Steuben's Uptown", meal: "Google 4.4 · Yelp 4.0 · 11 AM–10 PM", place: "Steuben's Uptown, 523 E 17th Ave, Denver, CO",
+              how: ["Walk ~17 min to 523 E 17th Ave"], tip: "Retro American comfort food, 4 min from the hotel. Eat a real meal: long night ahead." },
+            { t: "1:00 PM", e: "😴", title: "Rest at the Warwick",
+              how: ["Walk ~4 min back to the hotel", "Nap, drink lots of water (altitude!), charge your phone and battery pack", "Lay out tonight's layers: March nights at Red Rocks can drop near freezing"] },
+            { t: "4:00 PM", e: "🍝", title: "Early dinner · Tavernetta", meal: "Google 4.6 · Yelp 4.5 · 11:30 AM–10 PM", place: "Tavernetta, 1889 16th St, Denver, CO", mode: "transit",
+              how: ["Leave the hotel ~3:20 PM", "Walk ~10 min to Wade Blank Civic Center Station", "FreeRide to the Union Station end (~15 min)", "Tavernetta is right behind Union Station at 1889 16th St"],
+              tip: "Italian. Reserve a 4:00 PM table." },
+            { t: "5:00 PM", e: "🚩", title: "Red Rocks Shuttle pickup", place: "Denver Union Station, 1701 Wynkoop St, Denver, CO",
+              how: ["Walk ~3 min to the flagpole outside Union Station, by The Crawford Hotel", "Shuttle leaves ~5:15 PM (45 min before doors)"],
+              tip: "The shuttle's day-before email confirms the exact time." },
+            { t: "6:00 PM", e: "🌄", title: "Doors at Red Rocks",
+              how: ["Note where the shuttle parks: it picks up from the Upper North Lot after the show", "Walk up slowly: you're at 6,450 ft", "One-pocket bag or small fanny pack only"] },
+            { t: "7:16 PM", e: "🌅", title: "Sunset over the rocks",
+              how: ["Be in your spot by ~7 PM: the rocks glow orange right around sunset"],
+              photo: "Wide shot of the stage between Ship Rock and Creation Rock as the sky turns pink." },
+            { t: "Night", e: "🎧", title: "Porter Robinson & Ninajirachi",
+              how: ["Dylan Brady opens", "Check set times on show day"],
+              tip: "Dinner was early, so grab a snack at the concessions." },
+            { t: "~11:30 PM", e: "🚌", title: "Shuttle back to Union Station",
+              how: ["Shuttle leaves the Upper North Lot ~30 min after the music ends", "About 30–40 min to Union Station", "FreeRide to Wade Blank Civic Center Station"] },
+            { t: "~12:30 AM", e: "🪩", title: "After-party · X Bar", place: "X Bar, 629 E Colfax Ave, Denver, CO",
+              how: ["Walk ~11 min from the station to 629 E Colfax Ave", "~10 min walk home"],
+              spicy: "Big patio, drag, open till 2 AM. One drink, then bed: you do it all again tomorrow." },
+          ],
+        },
+        {
+          id: "d3", date: [2027, 2, 25], e: "🌀", k: "show", nav: "Red Rocks #2",
+          title: "Meow Wolf + night two",
+          sub: "Get lost in a portal maze, then Red Rocks again with Frost Children (DJ set) and 10cust.",
+          zone: "Denver · MDT",
+          steps: [
+            { t: "8:15 AM", e: "☕", title: "Breakfast · Café Miriam Uptown", meal: "Google 4.9 · Yelp 4.7 · 7:30 AM–2 PM", place: "Café Miriam Uptown, 1707 Lafayette St, Denver, CO",
+              how: ["Walk ~15 min to 1707 Lafayette St"], tip: "Highest-rated breakfast on this trip. Closed Mondays, open today." },
+            { t: "10:30 AM", e: "🌀", title: "Meow Wolf Convergence Station", place: "Meow Wolf Denver Convergence Station, 1338 1st St, Denver, CO", mode: "transit",
+              how: ["Leave Café Miriam ~9:15 AM", "Walk ~20 min to Wade Blank Civic Center Station", "FreeRide to Union Station (~15 min)", "Get a $5.50 RTD Day Pass in the MyRide app", "E or W Line light rail one stop to Empower Field at Mile High", "Walk ~8 min to 1338 1st St"],
+              tip: "Book a 10:30 AM timed ticket. Most people spend 1½–2 hours inside, and it's hands-on: open the drawers, crawl through things.",
+              photo: "Every room is a photo. Go wide in the Ice World." },
+            { t: "12:45 PM", e: "🍜", title: "Lunch · JINYA Ramen Bar", meal: "Google 4.9 · Yelp 4.5 · 11 AM–10 PM", place: "JINYA Ramen Bar Union Station, 1710 Wynkoop St, Denver, CO", mode: "transit",
+              how: ["Walk ~8 min back to Empower Field at Mile High Station", "E or W Line one stop back to Union Station", "JINYA is across Wynkoop St from Union Station"] },
+            { t: "1:45 PM", e: "🧳", title: "Rest + pack at the Warwick", place: "Warwick Denver, 1776 Grant St, Denver, CO", mode: "transit",
+              how: ["FreeRide to Wade Blank Civic Center Station, walk ~10 min", "Pack everything for tomorrow's 6:45 AM checkout", "Nap, water, charge everything"] },
+            { t: "4:15 PM", e: "🥘", title: "Early dinner · Ultreia", meal: "Google 4.4 · Yelp 4.1 · 11 AM–10 PM", place: "Ultreia, 1701 Wynkoop St, Denver, CO", mode: "transit",
+              how: ["Leave the hotel ~3:40 PM", "Walk to Wade Blank Civic Center Station, FreeRide to Union Station", "Ultreia is inside Union Station"],
+              tip: "Spanish and Portuguese tapas. Reserve a 4:15 PM table." },
+            { t: "5:00 PM", e: "🚩", title: "Red Rocks Shuttle pickup", place: "Denver Union Station, 1701 Wynkoop St, Denver, CO",
+              how: ["Out to the flagpole outside Union Station", "Shuttle leaves ~5:15 PM"] },
+            { t: "6:00 PM", e: "🌄", title: "Doors at Red Rocks",
+              how: ["Note the shuttle's spot in the Upper North Lot", "Walk up slowly and keep drinking water"] },
+            { t: "7:17 PM", e: "🌅", title: "Sunset, round two",
+              how: ["Try a spot higher up than last night"],
+              photo: "From the top rows you get the whole amphitheater with Denver's lights in the distance." },
+            { t: "Night", e: "🎧", title: "Porter Robinson & Ninajirachi, night two",
+              how: ["Frost Children (DJ set) and 10cust open", "Check set times on show day"],
+              tip: "One ticket tonight, so it's just you. Compare the set with last night's." },
+            { t: "~11:30 PM", e: "🚌", title: "Shuttle back + bed",
+              how: ["Shuttle leaves ~30 min after the music ends", "FreeRide + short walk to the hotel", "Alarm for 6:15 AM"] },
+          ],
+        },
+        {
+          id: "d4", date: [2027, 2, 26], e: "🐻", k: "bear", nav: "Dallas + BearDance", leg: "🐻 Dallas · TBRU",
+          title: "Woof, Dallas",
+          sub: "Mountains to Texas. Tower views, fried chicken, then BearDance on Cedar Springs.",
+          zone: "Denver (MDT) → Dallas (CDT, 1 hour ahead)",
+          steps: [
+            { t: "6:45 AM", z: "MDT", e: "🧳", title: "Check out of the Warwick", place: "Denver Union Station, 1701 Wynkoop St, Denver, CO", mode: "transit",
+              how: ["Walk ~10 min to Wade Blank Civic Center Station", "FreeRide to Union Station (~15 min)"] },
+            { t: "7:10 AM", z: "MDT", e: "🥞", title: "Breakfast · Snooze Union Station", meal: "Google 4.5 · Yelp 4.3 · 6 AM–3 PM", place: "Snooze an A.M. Eatery Union Station, Denver, CO",
+              how: ["Snooze is at Union Station", "Be done by ~7:50"], tip: "Get a pancake flight to try a few." },
+            { t: "8:00 AM", z: "MDT", e: "🚆", title: "A Line to the airport", place: "Denver International Airport", mode: "transit",
+              how: ["Get another $10 Airport Day Pass", "A Line from the train platforms behind Union Station, ~37 min to the airport"],
+              tip: "Morning trains run every 15 min." },
+            { t: "8:40 AM", z: "MDT", e: "🛂", title: "Security → Concourse A",
+              how: ["Clear security, then the train or walkway bridge to Concourse A (Frontier)"] },
+            { t: "10:34 AM", z: "MDT", e: "✈️", title: "Frontier Denver → Dallas (DFW)",
+              how: ["Lands 1:37 PM Dallas time at Terminal E"] },
+            { t: "1:37 PM", z: "CDT", e: "🚈", title: "Skylink + DART to downtown", place: "West End Station, Dallas, TX", mode: "transit",
+              how: ["Stay inside security and ride Skylink to Terminal A", "Exit at Terminal A and follow the DART signs to DFW Airport Station", "Get a $6 Day Pass in the GoPass app", "Orange Line toward downtown, ~50 min to West End Station"] },
+            { t: "~3:00 PM", e: "🥩", title: "Lunch · 3Eleven Kitchen & Cocktails", meal: "Google 4.8 · Yelp 4.0 · 11 AM–11 PM Fri", place: "3Eleven Kitchen and Cocktails, 311 N Market St, Dallas, TX",
+              how: ["Short walk from West End Station to 311 N Market St"] },
+            { t: "~4:15 PM", e: "🏨", title: "Hyatt check-in + TBRU badge", place: "Hyatt Regency Dallas, 300 Reunion Blvd, Dallas, TX", mode: "transit",
+              how: ["Back to West End Station: Red or Blue Line one stop to Union Station", "Underground walkway from Union Station into the Hyatt", "Check in, then pick up your TBRU badge (desk hours in the TBRU app)"] },
+            { t: "5:45 PM", e: "🗼", title: "Reunion Tower GeO-Deck", place: "Reunion Tower, 300 Reunion Blvd E, Dallas, TX",
+              how: ["Walk over from the Hyatt: it's next door", "Timed ticket, and hours change day to day"],
+              tip: "Tickets can't be refunded, only exchanged.",
+              photo: "360° Dallas skyline from the deck, golden-hour light." },
+            { t: "7:00 PM", e: "🚌", title: "TBRU shuttle to Cedar Springs",
+              how: ["Follow the \"Trinity Crossing\" signs to the outdoor patio", "Shuttles started at 7 PM on Friday in 2026: confirm in the TBRU app"] },
+            { t: "7:20 PM", e: "🍗", title: "Dinner · Street's Fine Chicken", meal: "Google 4.5 · Yelp 4.2 · 11 AM–9 PM", place: "Street's Fine Chicken, 3857 Cedar Springs Rd, Dallas, TX",
+              how: ["On the Cedar Springs strip at 3857 Cedar Springs Rd"], tip: "Southern fried chicken. Kitchen closes at 9 PM." },
+            { t: "8:30 PM", e: "🪩", title: "BearDance · S4", place: "S4 Station 4, Cedar Springs Rd, Dallas, TX",
+              how: ["A short walk up Cedar Springs"],
+              spicy: "Bears of the Zodiac night: wear the ♏ Scorpio fit. BearDance started at 8 PM in 2026 and has been a paid add-on." },
+            { t: "3:00 AM", e: "🚌", title: "BearDance bus back to the Hyatt",
+              how: ["Extra late bus after BearDance (3 AM in 2026: confirm)"] },
+          ],
+        },
+        {
+          id: "d5", date: [2027, 2, 27], e: "🏆", k: "bear", nav: "Mr. TBRU",
+          title: "Mr. TBRU Saturday",
+          sub: "Slow morning, real Texas brisket, then the big night.",
+          zone: "Dallas · CDT",
+          steps: [
+            { t: "10:00 AM", e: "🥐", title: "Breakfast · Little Daisy", meal: "Google 4.6 · Yelp 4.3 · from 7 AM", place: "Little Daisy, 1401 Elm St, Dallas, TX",
+              how: ["Walk ~16 min to 1401 Elm St", "It's up on Floor 9"] },
+            { t: "11:30 AM", e: "🛍️", title: "TBRU vendor market + hangouts",
+              how: ["Back at the Hyatt: times are in the TBRU app"] },
+            { t: "1:30 PM", e: "🍖", title: "Lunch · Terry Black's Barbecue", meal: "Google 4.7 · Yelp 4.6 · 10:30 AM–10 PM", place: "Terry Black's Barbecue, 3025 Main St, Dallas, TX", mode: "transit",
+              how: ["Underground walkway to Union Station", "Red or Blue Line one stop to West End", "Change to the Green Line toward Buckner, 4 stops to Deep Ellum", "Walk ~12 min east to 3025 Main St"],
+              tip: "Order in the counter line: brisket plus a beef rib. A $6 DART Day Pass covers today." },
+            { t: "3:00 PM", e: "😴", title: "Nap at the Hyatt",
+              how: ["Same trains back: Green Line to West End, Red or Blue to Union Station", "Nap: tonight's a late one"] },
+            { t: "6:00 PM", e: "🌶️", title: "Dinner · Texas Spice", meal: "Google 4.3 · Yelp 4.0 · till 10 PM", place: "Texas Spice, Omni Dallas Hotel, 555 S Lamar St, Dallas, TX",
+              how: ["Walk ~6 min to the Omni Dallas, 555 S Lamar St"] },
+            { t: "7:30 PM", e: "🏆", title: "TBRU's big Saturday show",
+              how: ["Mr. TBRU / the Saturday show: time and ticket are in the 2027 schedule"] },
+            { t: "~10:00 PM", e: "🤠", title: "Cedar Springs bar crawl",
+              how: ["TBRU shuttle from the Hyatt patio (from 7:30 PM in 2026)", "Last bus back 2:30 AM"],
+              spicy: "Round-Up Saloon for two-stepping, then JR.'s, TMC, Hidden Door and the Dallas Eagle are all shuttle stops." },
+          ],
+        },
+        {
+          id: "d6", date: [2027, 2, 28], e: "🛫", k: "", nav: "Home",
+          title: "Deli, DART, home",
+          sub: "Big breakfast, train to DFW, Cajun lunch, home by dinner.",
+          zone: "Dallas (CDT) → DC (ET)",
+          steps: [
+            { t: "9:30 AM", z: "CDT", e: "🥯", title: "Breakfast · Cindi's NY Deli", meal: "Google 4.6 · Yelp 4.2 · 7 AM–2 PM", place: "Cindi's NY Deli, 306 S Houston St, Dallas, TX",
+              how: ["Walk ~4 min to 306 S Houston St"] },
+            { t: "11:15 AM", e: "🧳", title: "Check out of the Hyatt", how: ["Grab everything, badge included as a souvenir"] },
+            { t: "11:45 AM", e: "🚈", title: "DART to DFW Airport", place: "DFW Airport Station, Terminal A", mode: "transit",
+              how: ["Underground walkway to Union Station", "Red or Blue Line one stop to West End", "Orange Line to DFW Airport, the last stop (~50 min)", "$3 for 3 hours or $6 Day Pass in GoPass"],
+              tip: "Sunday trains run less often: check GoPass for the next Orange Line before you leave." },
+            { t: "~1:00 PM", e: "🛂", title: "Security at Terminal A",
+              how: ["Clear security right at Terminal A: Skylink links every terminal inside security"] },
+            { t: "1:15 PM", e: "🦐", title: "Lunch · Pappadeaux Seafood Kitchen", meal: "Google 4.6 · Yelp 4.3 · 9 AM–9 PM", place: "Pappadeaux Seafood Kitchen, DFW Terminal A Gate 25",
+              how: ["Terminal A, near Gate A25"], tip: "Cajun seafood: last taste of Texas." },
+            { t: "2:30 PM", e: "🚝", title: "Skylink to Terminal E",
+              how: ["Ride Skylink to Terminal E for Frontier"] },
+            { t: "3:37 PM", z: "CDT", e: "✈️", title: "Frontier Dallas → Dulles (IAD)",
+              how: ["Lands 7:33 PM DC time"] },
+            { t: "7:45 PM", z: "ET", e: "🚇", title: "Silver Line home", place: "Tysons, VA", mode: "transit",
+              how: ["Follow the Metro signs to Washington Dulles International Airport station", "Silver Line toward Downtown Largo to your Tysons stop (~30 min)"] },
+            { t: "8:45 PM", z: "ET", e: "🍽️", title: "Dinner at home",
+              how: ["Order in, unpack, sleep 💤"] },
+          ],
+        },
       ];
+
+      // done ticks, saved on this phone
+      let done = {};
+      try { done = JSON.parse(localStorage.getItem("dd27-done") || "{}") || {}; } catch (e) { done = {}; }
+      const save = () => { try { localStorage.setItem("dd27-done", JSON.stringify(done)); } catch (e) {} };
+
       const wd = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-      const start = Date.UTC(2027, 2, 24);
-      document.getElementById("days").innerHTML = plan.map((p, i) => {
-        const d = new Date(start + i * 864e5);
-        return `<div class="day ${p.k}"><div class="d">${wd[d.getUTCDay()]} Mar ${d.getUTCDate()}</div><div class="e">${p.e}</div><div class="n">${p.n}</div></div>`;
+      const now = new Date();
+      const todayKey = [now.getFullYear(), now.getMonth(), now.getDate()].join("-");
+      let opened = false;
+
+      document.getElementById("daynav").innerHTML = DAYS.map(d => {
+        const dt = new Date(Date.UTC(...d.date));
+        return `<a class="day ${d.k}" href="#${d.id}" data-go="${d.id}"><div class="d">${wd[dt.getUTCDay()]} Mar ${dt.getUTCDate()}</div><div class="e">${d.e}</div><div class="n">${d.nav}</div></a>`;
       }).join("");
 
-      const now = new Date();
+      document.getElementById("plan").innerHTML = DAYS.map((d, i) => {
+        const dt = new Date(Date.UTC(...d.date));
+        const isToday = d.date.join("-") === todayKey;
+        if (isToday) opened = true;
+        const steps = d.steps.map((s, j) => {
+          const key = d.id + "-" + j;
+          const notes = [
+            s.tip ? `<div class="note">💡 ${s.tip}</div>` : "",
+            s.photo ? `<div class="note">📸 ${s.photo}</div>` : "",
+            s.spicy ? `<div class="note">🔥 ${s.spicy}</div>` : "",
+          ].join("");
+          return `<li class="step${done[key] ? " done" : ""}" data-key="${key}">
+            <div class="tm">${s.t}${s.z ? `<small>${s.z}</small>` : ""}</div>
+            <div>
+              <h3>${s.e} ${s.title}</h3>
+              ${s.meal ? `<span class="meal">⭐ ${s.meal}</span>` : ""}
+              <ol class="how">${s.how.map(h => `<li>${h}</li>`).join("")}</ol>
+              ${notes}
+              <div class="act">
+                ${s.place ? `<a class="btn go" href="${maps(s.place, s.mode)}" target="_blank" rel="noopener">🗺️ Maps</a>` : ""}
+                <button class="btn tick" type="button">✓ Done</button>
+              </div>
+            </div>
+          </li>`;
+        }).join("");
+        return `${d.leg ? `<div class="leg">${d.leg}</div><div style="height:10px"></div>` : ""}
+          <details class="plan" id="${d.id}"${isToday ? " open" : ""}>
+            <summary>${wd[dt.getUTCDay()]} ${dt.getUTCDate()} · ${d.e} ${d.title}<span class="sub">${d.sub}</span></summary>
+            <span class="zone">🕒 ${d.zone}</span>
+            <ol class="steps">${steps}</ol>
+          </details>`;
+      }).join("");
+
+      if (!opened) document.getElementById("d1").open = true;
+
+      document.getElementById("plan").addEventListener("click", ev => {
+        const b = ev.target.closest(".btn.tick");
+        if (!b) return;
+        const li = b.closest(".step");
+        const key = li.dataset.key;
+        done[key] = !done[key];
+        if (!done[key]) delete done[key];
+        li.classList.toggle("done", !!done[key]);
+        save();
+      });
+
+      document.getElementById("daynav").addEventListener("click", ev => {
+        const a = ev.target.closest("a[data-go]");
+        if (!a) return;
+        const el = document.getElementById(a.dataset.go);
+        if (el) el.open = true;
+      });
+
       const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
-      const n = Math.round((Date.UTC(2027, 2, 25) - today) / 864e5);
+      const n = Math.round((Date.UTC(2027, 2, 24) - today) / 864e5);
       document.getElementById("count").textContent =
-        n > 1 ? `⏳ ${n} days to Red Rocks` : n === 1 ? "⏳ Red Rocks is tomorrow!" : n === 0 ? "🎧 Show day!!" : "🐻 Woof, it happened";
+        n > 1 ? `⏳ ${n} days to Red Rocks` : n === 1 ? "⏳ Red Rocks is tomorrow!" : n === 0 || n === -1 ? "🎧 Show day!!" : n >= -4 ? "🐻 Woof, it's TBRU weekend" : "🐻 Woof, it happened";
     })();
   </script>
 </body>
