@@ -5,6 +5,8 @@ step-by-step days, photo spots, snack stops, phrases (yes, including flirting �
 
 **Live:** https://ianxjel.github.io/ian-travels/
 
+> GitHub Pages publishes from the **`gh-pages`** branch, not `main`. After pushing to `main`, also run `git push origin main:gh-pages` or the live site won't change.
+
 | Trip | Guide |
 |---|---|
 | 🇯🇵 Japan · Oct 26 – Nov 5, 2026 | [`/japan/`](japan/) |
